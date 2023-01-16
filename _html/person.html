@@ -1,0 +1,80 @@
+<script type="application/ld+json">
+  {
+  "@context": "http://www.schema.org",
+  "@type": "Person",
+   "@id": "{{< var personId >}}",
+  "name": "{{< var personName >}}",
+  "nationality": "{{< var nationality >}}",
+  "birthPlace" : {
+      "@type": "Place",
+      "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "{{< var birthPlaceaddressLocality >}}",
+          "addressRegion": "{{< var birthPlaceaddressRegion >}}",
+          "addressCountry": "{{< var birthPlaceaddressCountry >}}"
+      }
+  },
+  "alumniOf": [
+      {
+       "@type": "{{< var alumniOfType >}}",
+       "name": "{{< var alumniOfName >}}",
+       "sameAs": "{{< var alumniOfSameAs >}}"
+      }
+  ],
+  "gender": "Male",
+  "Description": "{{< var personDescription >}}",
+  "disambiguatingDescription": "{{< var disambiguatingDescription >}}",
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "educationalLevel": "Bachelors of Science",
+      "dateCreated": "1996-12",
+      "about": {
+        "@type": "EducationalOccupationalProgram",
+        "name": "Mathematics"
+      },
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "{{< var alumniOfName >}}",
+        "sameAs": "{{< var alumniOfSameAs >}}"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "educationalLevel": "Masters of Science",
+      "dateCreated": "2000-05",
+      "about": {
+        "@type": "EducationalOccupationalProgram",
+        "name": "Mathematics"
+      },
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "{{< var alumniOfName >}}",
+        "sameAs": "{{< var alumniOfSameAs >}}"
+      }
+    }
+  ],
+  "jobTitle": "{{< var jobTitle >}}",
+  "worksFor": [
+      {
+          "@type": "Organization",
+          "name": "{{< var worksForName >}}",
+          "sameAs": "{{< var worksForSameAs >}}"
+      }
+  ],
+  "url": "{{< var personURL >}}",
+  "image": "{{< var personImage >}}",
+  "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{< var personAddressLocality >}}",
+      "addressRegion": "{{< var personAddressRegion >}}",
+      "addressCountry": "{{< var personAddressCountry >}}"
+  },
+  "sameAs": [
+      "{{< var personSameAsGitHub >}}",
+      "https://youtube.com/@directknowledge"
+      ]
+  }
+  </script>

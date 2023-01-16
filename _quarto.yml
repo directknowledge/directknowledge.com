@@ -1,22 +1,64 @@
+# Direct Knowledge (2023 version)
+# python -m http.server 8000
+
 project:
   type: website
-  render:
-    - "!basicsettheory/"
-    - "*.qmd"
+  resources: 
+    - assets
+    - images
+  post-render: 
+    #- _webtools/html_revise.py
+    - _webtools/render-books.py
+
 
 website:
-  title: "directknowledge"
+  title: "Direct Knowledge"
+  site-url: https://directknowledge.com
+  search: false
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+    title: "Direct Knowledge"
+    background: light
+    foreground: dark
+    logo: assets/directknowledge-logo.svg
+    logo-alt: Direct Knowledge Logo
+    right: 
+      - text: "Books"
+        menu: 
+          - text: "Basic Set Theory"
+            href: https://directknowledge.com/basic-set-theory/
+            icon: book
+            aria-label: Basic Set Theory Book
+      - href: http://directknowledge.com/about.html
+        text: "About"
+      - href: https://youtube.com/@directknowledge
+        icon: youtube
+        aria-label: YouTube
+      - href: https://github.com/directknowledge
+        icon: github
+        aria-label: GitHub
+  description: "Learn mathematics, computer science, and how to code with interactive, programmable tutorials."
+  favicon: assets/favicon.ico
+  open-graph: true
+  page-footer:
+    center: 
+      - text: "&copy; Copyright 2023, All Rights Reserved. DirectKnowledge.com"
+        href: index.qmd
+
+
+
 
 format:
   html:
     theme: cosmo
-    css: styles.css
-    toc: true
-
-
+    anchor-sections: true
+    link-external-icon: false
+    link-external-newwindow: true
+    smooth-scroll: true
+    include-in-header: 
+      - _html/head.html
+    include-after-body: 
+      - _html/organization.html
+      - _html/website.html
+      - _html/mathjax.html
+      #- _html/analytics.html
 

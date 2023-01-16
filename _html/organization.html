@@ -1,0 +1,34 @@
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{< var name >}}",
+    "url": "{{< var siteurl >}}",
+    "logo": "{{< var siteLogo >}}",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "{{< var alternateName >}}"
+    },
+    {
+    "@type": "Person",
+    "name": "{{< var personName >}}"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{< var personAddressLocality >}}",
+    "addressRegion": "{{< var personAddressRegion >}}",
+    "addressCountry": "{{< var personAddressCountry >}}"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "{{< var personSameAsGitHub >}}"
+    ]
+    }
+</script>

@@ -1,5 +1,45 @@
 ---
 title: "About"
+sidebar: false
+image: assets/dave-profile.png
+about:
+  template: trestles
+  image-width: 200px
+  image-shape: round
+  links:
+    - icon: youtube
+      text: YouTube
+      href: https://youtube.com/@directknowledge
+    - icon: github
+      text: Github
+      href: https://github.com/directknowledge
+    - icon: inbox
+      text: Email
+      href: mailto:contact@directknowledge.com
+format:
+  html:
+    include-in-header: _html/person.html
+
 ---
 
-About Direct Knowledge
+Direct Knowledge is a company founded by David A. Smith, a retired mathematics professor with over 15 years of experience educating students at the University of Texas at Arlington. David is passionate about learning both mathematics and computer science, and advancing knowledge in these areas. His mission is to make it accessible for people everywhere to learn in these subjects, whenever they want, and however they want. We are doing this by building the world’s first online education platform that offers everyone free access to expert-led courses using articles, videos, and especially, interactive tutorials and live streaming. 
+
+## Education
+
+University of Texas at Arlington | Arlington, TX
+Masters of Science in Mathematics | December 2000
+
+University of Texas at Arlington | Arlington, TX
+Bachelor of Science in Mathematics | December 1996
+
+## Experience
+
+Direct Knowledge | CEO & Founder | November 10, 2017 - present
+
+Tarrant County College | Mathematics Lecturer
+2016 – 2018
+
+University of Texas at Arlington | Mathematics Lecturer | 2002 - 2015
+
+University of Texas at Arlington | Graduate Teaching Assistant | 1997 - 2000
+

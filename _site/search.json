@@ -1,9 +1,30 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Direct Knowledge",
+    "section": "",
+    "text": "Direct Knowledge\n    \n        Learn faster, explore deeper\n    \n    \n        \n            Learn mathematics and computer science from anywhere in the world.\n            Instead of buttons on a calculator, learn mathematics and how to code.\n            Get step-by-step explanations with interactive, programmable tutorials.\n            Watch, listen, and receive instant feedback with videos and live streams.\n        \n    \n    \n        Get Started\n        About\n    \n    \n      \n        \n      \n    \n  \n\n\n\n\nEducation sure has come along ways\nDirect Knowledge brings technology together so you can learn faster.\n\n\n\n\n\n\n    Learn. Progress. Explore deeper with Direct Knowledge.\n    Get Started"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About Direct Knowledge"
+    "text": "Direct Knowledge is a company founded by David A. Smith, a retired mathematics professor with over 15 years of experience educating students at the University of Texas at Arlington. David is passionate about learning both mathematics and computer science, and advancing knowledge in these areas. His mission is to make it accessible for people everywhere to learn in these subjects, whenever they want, and however they want. We are doing this by building the world’s first online education platform that offers everyone free access to expert-led courses using articles, videos, and especially, interactive tutorials and live streaming."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\nUniversity of Texas at Arlington | Arlington, TX Masters of Science in Mathematics | December 2000\nUniversity of Texas at Arlington | Arlington, TX Bachelor of Science in Mathematics | December 1996"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About",
+    "section": "Experience",
+    "text": "Experience\nDirect Knowledge | CEO & Founder | November 10, 2017 - present\nTarrant County College | Mathematics Lecturer 2016 – 2018\nUniversity of Texas at Arlington | Mathematics Lecturer | 2002 - 2015\nUniversity of Texas at Arlington | Graduate Teaching Assistant | 1997 - 2000"
   }
 ]

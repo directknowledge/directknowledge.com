@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.280">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="description" content="Basic Set Theory">
-
 <title>Propositional Logic - Basic Set Theory</title>
 <style>
 code{white-space: pre-wrap;}
@@ -22,34 +18,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
 <link href="./predicate-logic.html" rel="next">
 <link href="./index.html" rel="prev">
-<link href="./assets/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -64,43 +35,98 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-.navbar-title, #quarto-search svg {
-    color: #800000!important;
-}
 @media screen and (max-width: 440px) {
-    .navbar-toggler-icon, .navbar-toggle, .navbar-title {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
         display:none!important;
     }
-    .navbar-brand-logo::after {
-        content: 'BST'!important;
-        margin-top: -4px!important;
-        color: #800000;
-    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
 }
 </style>
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
-
+<style>
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+}
+.book-title, #quarto-search svg {
+    color: #800000!important;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+</style>
+  
 <meta property="og:title" content="Propositional Logic - Basic Set Theory">
 <meta property="og:description" content="Basic Set Theory">
 <meta property="og:site-name" content="Basic Set Theory">
 </head>
-
 <body class="nav-sidebar floating nav-fixed">
-
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/basic-set-theory-logo.svg" alt="Basic Set Theory Logo" class="navbar-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Basic Set Theory</span>
+    <a aria-label="Basic Set Theory" class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Direct Knowledge</span>
     </a>
   </div>
-          <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -116,6 +142,11 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="book-title">Basic Set Theory</div><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -173,8 +204,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/basic-set-theory/"><picture><source type="image/webp" srcset="../../assets/basic-set-theory-cover.webp"><source type="image/webp" srcset="../../assets/basic-set-theory-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/basic-set-theory-cover.png" alt="Basic Set Theory Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
    
   <ul>
   <li><a href="#logical-connectives" id="toc-logical-connectives" class="nav-link active" data-scroll-target="#logical-connectives"><span class="toc-section-number">1.1</span>  Logical Connectives</a></li>
@@ -190,12 +221,9 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-
 <header id="title-block-header">
 <h1 class="title d-none d-lg-block display-7"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Propositional Logic</span></h1>
-
 </header>
-
 <p>Logic is the study of correct reasoning. It can be used to figure out whether an argument is valid, to find flaws in arguments, and to construct new arguments. In mathematics, logic is used to develop proofs – short, convincing arguments that something is true. A proof is like a puzzle: each piece (or step) fits together until the whole picture is complete.</p>
 <p>By a <strong>mathematical statement</strong> (or <strong>statement</strong>, or <strong>proposition</strong>) we mean a declarative sentence that can be classified as either true or false, but not both. For example, the sentences</p>
 <ul>
@@ -1258,11 +1286,50 @@ p\rightarrow q \equiv \neg p \rightarrow \neg q. \]</span></li>
 <div id="exr-tautsub" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1.22 </strong></span>Prove <a href="#thm-tautsub">Theorem&nbsp;<span>1.4</span></a>.</p>
 </div>
-
-
 </section>
-
 </main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "?var:name",
+    "url": "?var:siteurl",
+    "logo": "?var:siteLogo",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "?var:alternateName"
+    },
+    {
+    "@type": "Person",
+    "name": "?var:personName"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "?var:personAddressLocality",
+    "addressRegion": "?var:personAddressRegion",
+    "addressCountry": "?var:personAddressCountry"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "?var:personSameAsGitHub"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Basic Set Theory",
+        "url": "https://directknowledge.com/basic-set-theory/"
+    }
+</script>
 <script>
 MathJax = {
   tex: {
@@ -1288,7 +1355,6 @@ console.log("MaxJax Initalizing");
 <script>
 var xtimes = 1;
 console.log(xtimes);
-
 ActiveMaxJax = function() {
   if( xtimes == 1 ) {
     var script = document.createElement('script');
@@ -1299,7 +1365,6 @@ ActiveMaxJax = function() {
     console.log(xtimes);
   } 
 };
-
 window.addEventListener("scroll", function() { ActiveMaxJax(); });
 window.addEventListener("click", function() { ActiveMaxJax(); });
 window.addEventListener("mousemove", function() { ActiveMaxJax(); });
@@ -1307,7 +1372,6 @@ window.addEventListener("keydown", function() { ActiveMaxJax(); });
 window.addEventListener("touchstart", function() { ActiveMaxJax(); });
 window.addEventListener("keydown", function() { ActiveMaxJax(); });
 console.log("MaxJax Initialization Complete");
-
 </script>
 <style>
     .theorem {
@@ -1367,52 +1431,7 @@ console.log("MaxJax Initialization Complete");
         color:#000000!important;
         font-weight: 700!important;
      }
-
-
 </style>
-<script>
-// Load the script after the user scrolls, moves the mouse, or touches the screen
-document.addEventListener('scroll', initGTMOnEvent);
-document.addEventListener('mousemove', initGTMOnEvent);
-document.addEventListener('touchstart', initGTMOnEvent);
-
-// Or, load the script after 2 seconds
-document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
-
-// Initializes Google Tag Manager in response to an event
-function initGTMOnEvent (event) {
-	initGTM();
-	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
-}
-
-// Initializes Google Tag Manager
-function initGTM () {
-	if (window.gtmDidInit) {
-	  // Don't load again
-	  return false;
-	}
-
-	window.gtmDidInit = true;
-	
-	// Create the script
-	const script = document.createElement('script');
-	script.type = 'text/javascript';
-	script.onload = () => { 
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){ dataLayer.push(arguments); }
-	  gtag('js', new Date());
-	  gtag('config', 'G-5QFN2LRJNN');
-	}
-	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-5QFN2LRJNN';
-	
-	// We are still deferring the script
-	script.defer = true;
-	
-	// Append the script to the body of the document
-	document.getElementsByTagName('body')[0].appendChild(script);
-}
-</script>
-
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1545,7 +1564,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/basicsettheory\.com/);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/basic-set-theory\//);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -1575,33 +1594,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">
-      <ul class="footer-items list-unstyled">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">© Copyright 2023, David A. Smith, All Rights Reserved.</a>
+    <a class="nav-link active" href="./index.html" aria-current="page">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
   </li>  
 </ul>
-    </div>   
-    <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/davedoesmath/">
-      <i class="bi bi-github" role="img" aria-label="GitHub">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/">
-      <i class="bi bi-youtube" role="img" aria-label="YouTube">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
+      </div>
   </div>
 </footer>
-
-
-
 <script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 </body></html>
