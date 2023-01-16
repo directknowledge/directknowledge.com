@@ -52,7 +52,7 @@ book:
       - href: https://github.com/directknowledge
         icon: github
         aria-label: GitHub
-  favicon: https://directknowledge.com/assets/favicon.ico
+  favicon: "../assets/favicon.ico"
   open-graph: true
   page-footer:
     center: 
