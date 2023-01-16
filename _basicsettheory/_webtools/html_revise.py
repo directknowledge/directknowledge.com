@@ -85,7 +85,7 @@ def html_revise():
             newText = f.read()
             # navbar 
             newText = newText.replace('class="navbar-brand" href="./index.html"', 'aria-label="Basic Set Theory" class="navbar-brand" href="https://directknowledge.com"')
-            newText = newText.replace('-logo.svg"', '-logo.svg" width="28" height="24" ')
+            newText = newText.replace('-logo.svg" alt="Direct Knowledge Logo"', '-logo.svg" alt="Direct Knowledge Logo" width="28" height="24" ')
             # sidebar 
             newText = newText.replace(book_search, book_title_search)
             # sidebar 
