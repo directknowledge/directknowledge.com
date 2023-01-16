@@ -37,5 +37,38 @@
   },
   "basicsettheory.com/references.qmd": {
     "references.html": "d659b0d2"
+  },
+  "basicsettheory/404.qmd": {
+    "404.html": "dad9e526"
+  },
+  "basicsettheory/propositional-logic.qmd": {
+    "propositional-logic.html": "15b6c173"
+  },
+  "basicsettheory/functions-and-relations.qmd": {
+    "functions-and-relations.html": "38190a76"
+  },
+  "basicsettheory/index.qmd": {
+    "index.html": "0082ead2"
+  },
+  "basicsettheory/well-founded-confluence.qmd": {
+    "well-founded-confluence.html": "f190d71c"
+  },
+  "basicsettheory/set-theory.qmd": {
+    "set-theory.html": "d8c5e274"
+  },
+  "basicsettheory/connect-everything.qmd": {
+    "connect-everything.html": "a2ed8641"
+  },
+  "basicsettheory/predicate-logic.qmd": {
+    "predicate-logic.html": "854fdadc"
+  },
+  "basicsettheory/mathematical-proofs.qmd": {
+    "mathematical-proofs.html": "5be5ba6b"
+  },
+  "basicsettheory/concept-theory.qmd": {
+    "concept-theory.html": "a4cdf367"
+  },
+  "basicsettheory/references.qmd": {
+    "references.html": "2da1d8f2"
   }
 }
