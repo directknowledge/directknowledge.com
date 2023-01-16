@@ -32,7 +32,7 @@ book:
     search: true
   navbar:
     title: "Direct Knowledge"
-    #site-url: https://directknowledge.com/basic-set-theory/
+    site-url: https://directknowledge.com/basic-set-theory/
     background: light
     foreground: dark
     logo: ../assets/directknowledge-logo.svg
