@@ -11,8 +11,7 @@ project:
 
 book:
   title: "Basic Set Theory"
-  search: false
-  section: "Basic Set Theory"
+  #section: "Basic Set Theory"
   chapters:
     - index.qmd
     - propositional-logic.qmd
@@ -25,6 +24,7 @@ book:
     - concept-theory.qmd
     - references.qmd
   page-navigation: true
+  search: false
   sidebar:
     title: "Basic Set Theory"
     style: "floating"
