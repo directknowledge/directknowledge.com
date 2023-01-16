@@ -4,5 +4,38 @@
   },
   "about.qmd": {
     "about.html": "40c591b3"
+  },
+  "basicsettheory.com/404.qmd": {
+    "404.html": "2a073581"
+  },
+  "basicsettheory.com/propositional-logic.qmd": {
+    "propositional-logic.html": "ae2f7789"
+  },
+  "basicsettheory.com/functions-and-relations.qmd": {
+    "functions-and-relations.html": "856fd166"
+  },
+  "basicsettheory.com/index.qmd": {
+    "index.html": "e7ae5a09"
+  },
+  "basicsettheory.com/well-founded-confluence.qmd": {
+    "well-founded-confluence.html": "b07ae494"
+  },
+  "basicsettheory.com/set-theory.qmd": {
+    "set-theory.html": "b6629010"
+  },
+  "basicsettheory.com/connect-everything.qmd": {
+    "connect-everything.html": "bf56dc11"
+  },
+  "basicsettheory.com/predicate-logic.qmd": {
+    "predicate-logic.html": "66abd0a4"
+  },
+  "basicsettheory.com/mathematical-proofs.qmd": {
+    "mathematical-proofs.html": "1351e528"
+  },
+  "basicsettheory.com/concept-theory.qmd": {
+    "concept-theory.html": "f1ec835a"
+  },
+  "basicsettheory.com/references.qmd": {
+    "references.html": "d659b0d2"
   }
 }

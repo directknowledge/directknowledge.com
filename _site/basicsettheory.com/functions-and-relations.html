@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Relations - Basic Set Theory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">directknowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#functions-and-relations" id="toc-functions-and-relations" class="nav-link active" data-scroll-target="#functions-and-relations">Functions and Relations</a>
+  <ul class="collapse">
+  <li><a href="#domain-and-codomain" id="toc-domain-and-codomain" class="nav-link" data-scroll-target="#domain-and-codomain">Domain and Codomain</a></li>
+  <li><a href="#image-and-preimage" id="toc-image-and-preimage" class="nav-link" data-scroll-target="#image-and-preimage">Image and Preimage</a></li>
+  <li><a href="#injective-and-surjective" id="toc-injective-and-surjective" class="nav-link" data-scroll-target="#injective-and-surjective">Injective and Surjective</a></li>
+  <li><a href="#composition-and-inverse" id="toc-composition-and-inverse" class="nav-link" data-scroll-target="#composition-and-inverse">Composition and Inverse</a></li>
+  <li><a href="#relations" id="toc-relations" class="nav-link" data-scroll-target="#relations">Relations</a>
+  <ul class="collapse">
+  <li><a href="#union-intersection-and-complement-of-relations" id="toc-union-intersection-and-complement-of-relations" class="nav-link" data-scroll-target="#union-intersection-and-complement-of-relations">Union, Intersection, and Complement of Relations</a></li>
+  <li><a href="#relative-complement-and-symmetric-difference" id="toc-relative-complement-and-symmetric-difference" class="nav-link" data-scroll-target="#relative-complement-and-symmetric-difference">Relative Complement and Symmetric Difference</a></li>
+  <li><a href="#composition-and-inverse-relations" id="toc-composition-and-inverse-relations" class="nav-link" data-scroll-target="#composition-and-inverse-relations">Composition and Inverse Relations</a></li>
+  <li><a href="#families-of-relations" id="toc-families-of-relations" class="nav-link" data-scroll-target="#families-of-relations">Families of Relations</a></li>
+  <li><a href="#the-powers-of-a-relation" id="toc-the-powers-of-a-relation" class="nav-link" data-scroll-target="#the-powers-of-a-relation">The Powers of a Relation</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="functions-and-relations" class="level1">
+<h1>Functions and Relations</h1>
+<p>The set theory of functions is a powerful tool for solving mathematical problems, as it allows us to represent relationships between variables in a concise and exact way. It also provides a way to reason about these relationships and to prove results about them. Further, the set theory of functions is a fundamental tool in many branches of mathematics, including algebra, analysis, and topology. It is also used in physics and engineering, and in the study of computer algorithms.</p>
+<p>First we need to understand the basic concepts related to functions. In particular, we need to know what a function is, and what its domain, codmain, and range are. So in other words, a function is a set of ordered pairs <span class="math inline">\((x, y)\)</span> such that each x corresponds to a unique <span class="math inline">\(y.\)</span> The set of all x-values is called the domain, and the set of all y-values is called the codomain.&nbsp;However, not every element in the codomain will be paired with an element in the domain.&nbsp;</p>
+<p>It is important to note that a function does not have to be a mathematical formula. Any relationship between two sets can be considered a function. For example, we could define a function between the set of all countries and the set of all languages as follows:</p>
+<p><span class="math display">\[
+f(x) = \{y \mid y \text{ is a language spoken in country } x\}.
+\]</span></p>
+<p>In this function, every country corresponds to a set of languages spoken in that country. This shows that functions can be very general relationships between two sets.</p>
+<p>In fact, the notion of a set function is simply a generalization of the concept of a family of sets. Given any set <span class="math inline">\(X\)</span>, we can create a family of sets by taking any collection of subsets of <span class="math inline">\(X\)</span>, where each subset is considered to be a member set. Conversely, given any family <span class="math inline">\(F\)</span> of sets, we can define a set function <span class="math inline">\(f : F \to X\)</span> by letting <span class="math inline">\(f(S)\)</span> be the union of all the members of <span class="math inline">\(S\)</span>. This shows that the concepts of a family of sets and a set function are intimately related.</p>
+<section id="domain-and-codomain" class="level2">
+<h2 class="anchored" data-anchor-id="domain-and-codomain">Domain and Codomain</h2>
+<p>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be sets, we say <span class="math inline">\(f\)</span> is a <strong>function</strong> from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span> if <span class="math inline">\(f\)</span> is a subset of <span class="math inline">\(X\times Y\)</span> such that the domain of <span class="math inline">\(f\)</span> is <span class="math inline">\(X\)</span> and <span class="math inline">\(f\)</span> has the property: if <span class="math inline">\((x,y)\in f\)</span> and <span class="math inline">\((x,z)\in f\)</span> then <span class="math inline">\(x=z\)</span>. For each <span class="math inline">\(x\in X\)</span>, the unique <span class="math inline">\(y\in Y\)</span> such that <span class="math inline">\((x,y)\in f\)</span> is denoted by <span class="math inline">\(f(x)\)</span>. The element <span class="math inline">\(y\)</span> is called the <strong>value</strong> of <span class="math inline">\(f\)</span> at the <strong>argument</strong> <span class="math inline">\(x\)</span>.</p>
+<p>If we do not specify a function with the notation <span class="math inline">\(f:X\to Y\)</span> we will use <span class="math inline">\(D(f)\)</span> and <span class="math inline">\(R(f)\)</span> to denote the domain and range of <span class="math inline">\(f\)</span>, respectively.</p>
+</section>
+<section id="image-and-preimage" class="level2">
+<h2 class="anchored" data-anchor-id="image-and-preimage">Image and Preimage</h2>
+<div id="def-image" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be sets. The <strong>image</strong> of <span class="math inline">\(A\subseteq X\)</span> is the set <span class="math display">\[f(A) = \{y\in Y : \exists x\in A, y=f(x)\}.\]</span></p>
+</div>
+<div id="thm-function-subseteq" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(A_1, A_2\subseteq X\)</span>, then <span class="math display">\[
+f(A_1)\cup f(A_2)=f(A_1\cup A_2).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(f(A_1)\cup f(A_2)=f(A_1\cup A_2)\)</span>: <span class="math display">\[\begin{align*}
+&amp; y\in f(A_1)\cup f(A_2)
+\Leftrightarrow y\in f(A_1) \lor y\in f(A_2)
+\\&amp; \qquad
+\Leftrightarrow \exists x_1\in A_1, y=f(x_1) \lor \exists x_2\in A_2, y=f(x_2)
+\\&amp; \qquad
+\Leftrightarrow \exists x\in X, (x\in A_1 \lor x\in A_2) \land y=f(x)
+\\&amp; \qquad
+\Leftrightarrow \exists x \in A_1 \cup A_2, y=f(x)
+\Leftrightarrow y\in f(A_1\cup A_2)
+\end{align*}\]</span></p>
+</div>
+<div id="thm-function-cap" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(A_1, A_2\subseteq X\)</span>, then <span class="math display">\[
+f(A_1\cap A_2) \subseteq f(A_1)\cap f(A_2).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(f(A_1\cap A_2) \subseteq f(A_1)\cap f(A_2)\)</span> <span class="math display">\[\begin{align*}
+&amp; y\in f(A_1 \cap  A_2)
+\Longrightarrow \exists x\in A_1 \cap A_2, y=f(x)
+\\&amp; \qquad
+\Longrightarrow  \exists x\in A_1, y=f(x) \land \exists x\in A_2, y=f(x)
+\\&amp; \qquad
+\Longrightarrow  y\in f(A_1)\land y\in f(A_2)
+\Longrightarrow  y\in f(A_1)\cap f(A_2)
+\end{align*}\]</span></p>
+</div>
+<div id="thm-function-setminus" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(A_1, A_2\subseteq X\)</span>, then <span class="math display">\[
+f(A_2)\setminus f(A_1) \subseteq f(A_2\setminus A_1).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(f(A_2)\setminus f(A_1) \subseteq f(A_2\setminus A_1)\)</span> <span class="math display">\[\begin{align*}
+&amp; y\in f(A_2)\setminus f(A_1) \Leftrightarrow y\in f(A_2) \land y\notin f(A_1) \\
+&amp; \qquad \Leftrightarrow (\exists x\in A_2, y=f(x) )\land \neg (y\in f(A)) \\
+&amp; \qquad \Leftrightarrow (\exists x\in A_2, y=f(x) )\land \neg (\exists z\in A_1, y=f(z)) \\
+&amp; \qquad \Leftrightarrow (\exists x\in A_2, y=f(x) )\land (\forall z\in A_1, y\neq f(z)) \\
+&amp; \qquad \Longrightarrow \exists x\in A_2\setminus A_1, y=f(x) \Leftrightarrow y\in f(A_2\setminus A_1)
+\end{align*}\]</span></p>
+</div>
+<div id="def-preimage" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be sets. The <strong>preimage</strong> of <span class="math inline">\(B\subseteq Y\)</span> is the set <span class="math display">\[
+f^{-1}(B)=\{x\in X : f(x)\in B\}.
+\]</span></p>
+</div>
+<div id="thm-function-cup" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(B_1, B_2\subseteq Y\)</span>, then <span class="math display">\[
+f^{-1}(B_1\cup B_2)=f^{-1}(B_1)\cup f^{-1}(B_2).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(f^{-1}(B_1\cup B_2)=f^{-1}(B_1)\cup f^{-1}(B_2)\)</span> <span class="math display">\[\begin{align*}
+&amp; x\in f^{-1}(B_1\cup B_2) \Leftrightarrow   f(x)\in B_1 \cup B_2  \\
+&amp; \qquad \Leftrightarrow f(x) \in B_1 \lor f(x)\in B_2 \\
+&amp; \qquad \Leftrightarrow x\in f^{-1}(B_1) \lor x\in f^{-1}(B_2)  \\
+&amp; \qquad \Leftrightarrow x\in f^{-1}(B_1)\cup f^{-1}(B_2)
+\end{align*}\]</span></p>
+</div>
+<div id="thm-function-cap-subseteq" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(B_1, B_2\subseteq Y\)</span>, then <span class="math display">\[
+f^{-1}(B_1\cap B_2)=f^{-1}(B_1)\cap f^{-1}(B_2).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(f^{-1}(B_1\cap B_2)=f^{-1}(B_1)\cap f^{-1}(B_2)\)</span> <span class="math display">\[\begin{align*}
+&amp; x\in f^{-1}(B_1\cup B_2) \Leftrightarrow f(x)\in B_1\cup B_2 \\
+&amp; \qquad \Leftrightarrow f(x)\in B_1 \land f(x)\in B_2 \\
+&amp; \qquad \Leftrightarrow f(x)\in B_1 \land f(x)\in B_2 \\
+&amp; \qquad \Leftrightarrow x\in f^{-1}(B_1) \land x\in f^{-1}(B_2) \\
+&amp; \qquad \Leftrightarrow x\in f^{-1}(B_1)\cap f^{-1}(B_2)
+\end{align*}\]</span></p>
+</div>
+<div id="thm-function-setminus-subseteq" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(B_1, B_2\subseteq Y\)</span>, then <span class="math display">\[
+f^{-1}(B_2\setminus B_1)=f^{-1}(B_2)\setminus f^{-1}(B_1).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(f^{-1}(B_2\setminus B_1)=f^{-1}(B_2)\setminus f^{-1}(B_1)\)</span> <span class="math display">\[\begin{align*}
+&amp; x\in f^{-1}(B_2\setminus B_1)
+\Leftrightarrow   f(x)\in B_2\setminus B_1
+\\ &amp; \qquad
+\Leftrightarrow  f(x)\in B_2 \land \neg(f(x)\in B_1)
+%\\ &amp; \qquad
+\Leftrightarrow   x\in f^{-1}(B_2) \land \neg (x\in f^{-1}(B_1))
+\\ &amp; \qquad
+\Leftrightarrow   x\in f^{-1}(B_2) \land x\not\in f^{-1}(B_1)
+%\\ &amp; \qquad
+\Leftrightarrow   x\in f^{-1}(B_2) \setminus f^{-1}(B_1)
+\end{align*}\]</span></p>
+</div>
+<div id="thm-subseteq-implies" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 7 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math display">\[
+A_1\subseteq A_2\subseteq X\implies f(A_1)\subseteq f(A_2).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(A_1\subseteq A_2\implies f(A_1)\subseteq f(A_2)\)</span> <span class="math display">\[\begin{align*}
+&amp; y\in f(A_1) \Leftrightarrow \exists x\in A_1, y=f(x)
+\\ &amp; \qquad
+\implies \exists x\in A_2, y=f(x) \implies y\in f(A_2)
+\end{align*}\]</span></p>
+</div>
+<div id="thm-subseteq-subseteq-implies" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 8 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math display">\[
+A_1\subseteq A_2\subseteq X\implies f(A_1)\subseteq f(A_2).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(B_1\subseteq B_2\implies f^{-1}(B_1)\subseteq f^{-1}(B_2)\)</span> <span class="math display">\[\begin{align*}
+x\in f^{-1}(B_1)
+\Leftrightarrow   f(x)\in B_1
+\Longrightarrow   f(x)\in B_2
+\Leftrightarrow   x\in f^{-1}(B_2)
+\end{align*}\]</span></p>
+</div>
+<div id="thm-preimage-subseteq" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 9 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math display">\[
+B\subseteq Y  \implies  f(f^{-1}(B))\subseteq B
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(B\subseteq Y \implies f(f^{-1}(B))\subseteq B\)</span> <span class="math display">\[\begin{align*}
+&amp; y\in f(f^{-1}(B))
+\Leftrightarrow   \exists x\in f^{-1}(B), y=f(x)
+\\ &amp; \qquad
+\Longrightarrow   \exists x\in X, f(x)\in B \land y=f(x)
+\Longrightarrow  y\in B
+\end{align*}\]</span></p>
+</div>
+<div id="thm-subseteq-preimage" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 10 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math display">\[
+A\subseteq X \implies A\subseteq f^{-1}(f(A)).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(A\subseteq X \implies A\subseteq f^{-1}(f(A))\)</span> <span class="math display">\[\begin{align*}
+x\in A \implies \exists y\in Y, y=f(x) \Leftrightarrow y\in f(A) \implies x\in f^{-1}(f(A))
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="injective-and-surjective" class="level2">
+<h2 class="anchored" data-anchor-id="injective-and-surjective">Injective and Surjective</h2>
+<p>A one-to-one function is a function in which each element in the domain corresponds to a unique element in the codomain. In other words, no two elements in the domain have the same image. An onto function is a function in which each element in the codomain has at least one pre-image. In other words, for every element in the codomain, there is at least one element in the domain that maps to it. One-to-one and onto functions are important because they allow us to uniquely identify each element in the domain, and to know that every element in the codomain has a pre-image.</p>
+<div id="def-injective-functions" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be sets. A function <span class="math inline">\(f:X\to Y\)</span> is called <strong>injective</strong> if <span class="math display">\[
+\forall x_1,x_2\in X, f(x_1)=f(x_2)\implies x_1=x_2.
+\]</span></p>
+</div>
+<div id="thm-injective-restriction" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 11 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(f\)</span> is injective and <span class="math inline">\(A\subseteq X\)</span>, then <span class="math inline">\(f|_A\)</span> is injective.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x_1, x_2\in A\)</span>. Then <span class="math display">\[
+f|_A(x_1)=f|_A(x_2)
+\Longrightarrow f(x_1)=f(x_2)
+\Longrightarrow x_1=x_2
+\]</span> shows that <span class="math inline">\(f|_A\)</span> is injective.</p>
+</div>
+<div id="thm-injective-if-and-only-if" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 12 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math inline">\(f\)</span> is injective if and only if <span class="math inline">\(f(A_1\cap A_2) = f(A_1)\cap f(A_2)\)</span> for all <span class="math inline">\(A_1, A_2\subseteq X.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(f\)</span> is injective. It suffices to show <span class="math inline">\(f(A_1)\cap f(A_2)\subseteq f(A_1\cap A_2)\)</span> for all <span class="math inline">\(A_1, A_2\subseteq X\)</span>. Let <span class="math inline">\(A_1, A_2\subseteq X\)</span>. Then <span class="math display">\[\begin{align*}
+&amp; y\in f(A_1)\cap f(A_2) \Leftrightarrow y\in f(A_1)\land y\in f(A_2) \\
+&amp; \qquad \Leftrightarrow [\exists x\in A_1, y=f(x)] \land [\exists z\in A_2, y=f(z)] \\
+&amp; \qquad \Longrightarrow \exists x\in A_1, \exists z\in A_2, f(x)=y=f(z) \\
+&amp; \qquad \Longrightarrow \exists x\in A_1, \exists z\in A_2, x=z, y=f(x)  \\
+&amp; \qquad \Longrightarrow \exists x\in A_1\cap A_2, y=f(x) \Longrightarrow  y\in f(A_1\cap A_2)
+\end{align*}\]</span></p>
+<p>Conversely, assume <span class="math inline">\(f(A_1\cap A_2)=f(A_1)\cap f(A_2)\)</span>, for all <span class="math inline">\(A_1, A_2\subseteq X\)</span>. Let <span class="math inline">\(x_1, x_2\in X\)</span> and assume <span class="math inline">\(x_1\neq x_2\)</span>. Then <span class="math inline">\(\{x_1\}\cap \{x_2\}=\emptyset\)</span>. Then <span class="math display">\[
+f(\{x_1\}\cap \{x_2\})=\emptyset=f(\{x_1\})\cap f(\{x_2\}).
+\]</span> If <span class="math inline">\(f(x_1)=f(x_2)\)</span>, then <span class="math inline">\(f(x_2)\in f(\{x_1\})\)</span> and <span class="math inline">\(f(x_1)\in f(\{x_2\})\)</span>, and so <span class="math inline">\(f(\{x_1\})\cap f(\{x_2\}) \neq \emptyset.\)</span> Thus, <span class="math inline">\(f(x_1)\neq f(x_2)\)</span> and so <span class="math inline">\(f\)</span> is injective.</p>
+</div>
+<div id="thm-setminus-injective" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 13 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math inline">\(f\)</span> is injective if and only if <span class="math inline">\(f(A_2\setminus A_1)=f(A_2)\setminus f(A_1)\)</span> for all <span class="math inline">\(A_1, A_2\subseteq X.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(f\)</span> is injective. Let <span class="math inline">\(A_1, A_2\subseteq X\)</span>. It suffices to show <span class="math inline">\(f(A_2\setminus A_1)\subseteq f(A_2)\setminus f(A_1)\)</span>. Assume <span class="math inline">\(y\in f(A_2\setminus A_1)\)</span>. Then <span class="math inline">\(y=f(x)\)</span> for some <span class="math inline">\(x\in A_2\setminus A_1\)</span>. Thus, <span class="math inline">\(x\in A_2\)</span> and so <span class="math inline">\(y\in f(A_2)\)</span>. We claim <span class="math inline">\(y\not\in f(A_1)\)</span>. Suppose <span class="math inline">\(y\in f(A_1)\)</span>. Then, there exists <span class="math inline">\(z\in A_1\)</span> such that <span class="math inline">\(f(z)=y\)</span>. Since <span class="math inline">\(f\)</span> is injective, <span class="math inline">\(x=z\)</span>. However, <span class="math inline">\(x\not\in A_1\)</span>, and so the claim follows. Thus, <span class="math inline">\(y\in f(A_2)\setminus f(A_1)\)</span> as desired.</p>
+<p>Conversely, assume <span class="math inline">\(f(A_2\setminus A_1)=f(A_2)\setminus f(A_1)\)</span> holds for all <span class="math inline">\(A_1, A_2\in X\)</span>. Let <span class="math inline">\(x_1, x_2\in X\)</span> and assume <span class="math inline">\(x_1\neq x_2\)</span>. Then <span class="math inline">\(\{x_2\}\setminus \{x_1\}=\{x_2\}\)</span> and so <span class="math display">\[
+f(\{x_2\}\setminus \{x_1\})=f(\{x_2\})=f(\{x_2\})\setminus f(\{x_1\}).
+\]</span> If <span class="math inline">\(f(x_1)=f(x_2)\)</span>, then <span class="math inline">\(f(\{x_2\})\setminus f(\{x_1\})=\emptyset\)</span>, contrary to <span class="math inline">\(f(\{x_2\})\setminus f(\{x_1\})=f(\{x_2\})\)</span>. Thus <span class="math inline">\(f(x_1)\neq f(x_2)\)</span> and so <span class="math inline">\(f\)</span> is injective.</p>
+</div>
+<div id="thm-injective-if-if" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 14 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math inline">\(f\)</span> is injective if and only if <span class="math inline">\(f(A_1)\cap f(A_2)=\emptyset\)</span> for all <span class="math inline">\(A_1, A_2\subseteq X\)</span> such that <span class="math inline">\(A_1\cap A_2=\emptyset\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(f\)</span> is injective. Let <span class="math inline">\(A_1, A_2\in X\)</span> with <span class="math inline">\(A_1\cap A_2=\emptyset\)</span>. Assume <span class="math inline">\(y\in f(A_1)\cap f(A_2)\)</span>. Then there exists <span class="math inline">\(x_1\in A_1\)</span> and <span class="math inline">\(x_2\in A_2\)</span> such that <span class="math inline">\(y=f(x_1)\)</span> and <span class="math inline">\(y=f(x_2)\)</span>. Since <span class="math inline">\(f\)</span> is injective, <span class="math inline">\(x_1=x_2\)</span>. Thus, <span class="math inline">\(A_1\cap A_2\neq \emptyset\)</span> contrary to hypothesis. Thus, <span class="math inline">\(f(A_1)\cap f(A_2)\)</span> is empty. Conversely, assume <span class="math inline">\(f(A_1)\cap f(A_2)=\emptyset\)</span> for all <span class="math inline">\(A_1, A_2\subseteq X\)</span> with <span class="math inline">\(A_1\cap A_2=\emptyset\)</span>. Let <span class="math inline">\(x_1, x_2\in X\)</span> and assume <span class="math inline">\(x_1\neq x_2\)</span>. Then <span class="math inline">\(\{x_1\}\cap \{x_2\}=\emptyset\)</span>. By hypothesis, <span class="math inline">\(f(\{x_1\})\cap f(\{x_2\})=\emptyset\)</span>. Thus <span class="math inline">\(f(x_1)\neq f(x_2)\)</span> and so <span class="math inline">\(f\)</span> is injective.</p>
+</div>
+<div id="thm-injective-preimage" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 15 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math inline">\(f\)</span> is injective if and only if <span class="math inline">\(A=f^{-1}(f(A))\)</span> for all <span class="math inline">\(A\subseteq X\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(f\)</span> is injective. Let <span class="math inline">\(A\subseteq X\)</span>. It suffices to show <span class="math inline">\(f^{-1}(f(A))\)</span>. Let <span class="math inline">\(x\in f^{-1}(f(A))\)</span>. Then <span class="math inline">\(f(x)\in f(A)\)</span>. Then there exists <span class="math inline">\(x_1\in A\)</span> such that <span class="math inline">\(f(x_1)=f(x)\)</span>. Since <span class="math inline">\(f\)</span> is injective, <span class="math inline">\(x_1=x\)</span> and so <span class="math inline">\(x\in A\)</span>. Conversely, assume <span class="math inline">\(A=f^{-1}(f(A))\)</span> for all <span class="math inline">\(A\subseteq X\)</span>. Let <span class="math inline">\(x_1, x_2\in X\)</span>. Assume <span class="math inline">\(f(x)1=f(x_2)\)</span>. Then <span class="math display">\[
+\{x_1\}=f^{-1}(f(\{x_1\}))=f^{-1}(f(\{x_2\}))=\{x_2\}
+\]</span> implies <span class="math inline">\(x_1=x_2\)</span> and so <span class="math inline">\(f\)</span> is injective.</p>
+</div>
+<div id="def-surjective-functions" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be sets. A function <span class="math inline">\(f:X\to Y\)</span> is called <strong>surjective</strong> if <span class="math display">\[
+\forall y\in Y, \exists x\in X, y=f(x).
+\]</span></p>
+</div>
+<div id="thm-surjective-supseteq" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 16 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(f\)</span> is surjective and <span class="math inline">\(A\supseteq X,\)</span> then <span class="math inline">\(f|^A\)</span> is surjective.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(t\in Y\)</span>. Since <span class="math inline">\(f\)</span> is surjective there exists <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(f(x)=y\)</span>. Since <span class="math inline">\(X\subseteq A\)</span>, <span class="math inline">\(x\in A\)</span> and so <span class="math inline">\(f(x)=y\)</span> with <span class="math inline">\(x\in A\)</span> implies <span class="math inline">\(f|^A\)</span> is surjective.</p>
+</div>
+<div id="thm-surjective-if-and-only-if" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 17 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math inline">\(f\)</span> is surjective if and only if <span class="math inline">\(B=f(f^{-1}(B))\)</span> for all <span class="math inline">\(B\subseteq Y.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(f\)</span> is surjective. It suffices to show <span class="math inline">\(B\subseteq f(f^{-1}(B))\)</span>. Let <span class="math inline">\(y\in B\)</span>. Since <span class="math inline">\(f\)</span> is surjective. there exists <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(y=f(x)\)</span>. Since <span class="math inline">\(f(x)\in B\)</span> we have <span class="math inline">\(x\in f^{-1}(B)\)</span>. It follows <span class="math inline">\(y=f(x)\in f(f^{-1}(B)).\)</span></p>
+<p>Conversely, assume <span class="math inline">\(B=f(f^{-1}(B))\)</span> for all <span class="math inline">\(B\subseteq Y\)</span>. Since <span class="math inline">\(\{y\}=f(f^{-1}(\{y\}))\)</span>, it follows <span class="math inline">\(y=f(x)\)</span> for some <span class="math inline">\(x\in f^{-1}(\{y\})\)</span>. Let <span class="math inline">\(y\in Y\)</span>. Thus, <span class="math inline">\(f\)</span> is surjective.</p>
+</div>
+<div id="thm-not-surjective" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 18 </strong></span>If <span class="math inline">\(f:X\rightarrow P(X)\)</span> is a function, then <span class="math inline">\(f\)</span> is not surjective.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(A=\{x\in X : x\notin f(x)\}\)</span>. Assume for a contradiction that <span class="math inline">\(f\)</span> is onto. Then there exists <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(f(x)=A\)</span>. Consider both cases <span class="math inline">\(x\in f(x)\)</span> and <span class="math inline">\(x\not\in f(x)\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+&amp; x\in f(x) \implies x\in A \implies x\not\in f(x)
+\implies\Longleftarrow \\
+&amp; x\notin f(x) \implies x\in A=f(x) \implies x\not\in f(x)
+\implies\Longleftarrow
+\end{align*}\]</span></p>
+<p>Thus, <span class="math inline">\(x\)</span> can not exist with <span class="math inline">\(f(x)=A\)</span>. Therefore, no <span class="math inline">\(f:X\rightarrow P(X)\)</span> is onto.</p>
+</div>
+</section>
+<section id="composition-and-inverse" class="level2">
+<h2 class="anchored" data-anchor-id="composition-and-inverse">Composition and Inverse</h2>
+<p>The composition of functions is a way to combine two or more functions into a single function. This can be done by combining the domain and range of the functions, or by using the functions to compute new outputs. The composition of functions is a powerful tool that can be used to simplify complex problems. It is also a useful way to create new functions from existing functions. To compose two functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>, we apply f to the output of <span class="math inline">\(g.\)</span> That is, we first apply <span class="math inline">\(g\)</span> to its input, and then apply <span class="math inline">\(f\)</span> to the resulting output. The composition of functions is denoted by <span class="math inline">\(f \circ g\)</span>.</p>
+<p>The inverse of a function is a function that “undoes” the original function. In other words, it is a function that maps each element in the codomain back to its corresponding element in the domain. It’s important to note that not all functions have inverse functions. For example, the function that takes in an age and outputs whether or not the person is tall has no inverse. This is because there are many people who are the same age but have different heights. So, there is no way to take in a height and produce an age. However, functions like this are still useful; they just can’t be “undone”.</p>
+<div id="thm-composition" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 19 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(g:Y\to Z\)</span> and <span class="math inline">\(g\circ f\)</span> is injective, then <span class="math inline">\(f\)</span> is injective.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x_1, x_2\in X.\)</span> Then <span class="math display">\[
+f(x_1)=f(x_2) \Longrightarrow (g\circ f)(x_1)=(g\circ f)(x_2) \Longrightarrow x_1=x_2
+\]</span> shows that <span class="math inline">\(f\)</span> is injective.</p>
+</div>
+<div id="thm-left-inverse" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 20 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then following are equivalent.</p>
+<ol type="1">
+<li>given any functions <span class="math inline">\(g,h:Y\to X\)</span>, if <span class="math inline">\(f\circ g=f\circ h\)</span>, then <span class="math inline">\(g=h\)</span></li>
+<li>there exists a function <span class="math inline">\(g:Y\to X\)</span> with <span class="math inline">\(g\circ f=I_X\)</span> (<span class="math inline">\(f\)</span> has a left inverse)</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(1)<span class="math inline">\(\Leftrightarrow\)</span>(2): Assume <span class="math inline">\(f\)</span> is injective. Let <span class="math inline">\(g,h:Y\to X\)</span> and assume <span class="math inline">\(f\circ g= f\circ h\)</span>. Let <span class="math inline">\(y\in Y\)</span>. Then <span class="math inline">\((f\circ g)(y)=(f\circ h)(y)\)</span>. Since <span class="math inline">\(f\)</span> is injective it follows <span class="math inline">\(g(y)=h(y)\)</span> for all <span class="math inline">\(y\in Y.\)</span> Conversely, assume <span class="math inline">\(g,h:Y\to X\)</span>, <span class="math inline">\(f\circ g=f\circ h \implies g=h\)</span> holds. Let <span class="math inline">\(x_1, x_2\in X\)</span> and assume <span class="math inline">\(x_1\neq x_2\)</span>. Assume, for a contradiction, <span class="math inline">\(f(x_1)=f(x_2)\)</span>. Let <span class="math inline">\(g:Y\to X\)</span> be defined by <span class="math inline">\(g(y)=x_1\)</span> for all <span class="math inline">\(y\in Y\)</span>. Let <span class="math inline">\(h:Y\to X\)</span> be defined by <span class="math inline">\(h(y)=x_2\)</span> for all <span class="math inline">\(y\in Y\)</span>. Notice <span class="math display">\[
+(f\circ g)(y)=f(g(y))=f(x_1)=f(x_2)=(f\circ h)(y)
+\]</span> for all <span class="math inline">\(y\in Y\)</span>. Thus, <span class="math inline">\(f\circ g=f\circ h\)</span>, yet <span class="math inline">\(g\neq h\)</span> since <span class="math inline">\(g(y)=x_1\neq x_2=h(y)\)</span>. Therefore, <span class="math inline">\(f(x_1)\neq f(x_2)\)</span> and so <span class="math inline">\(f\)</span> is injective.</p>
+<p>(2)<span class="math inline">\(\Leftrightarrow\)</span>(1): Assume <span class="math inline">\(X\neq \emptyset\)</span> and also assume <span class="math inline">\(f:X\to Y\)</span> is injective. Let <span class="math inline">\(y\in Y\)</span>. Either <span class="math inline">\(y\in f(X)\)</span> or <span class="math inline">\(y\notin f(X)\)</span>. Define <span class="math inline">\(g:Y\to X\)</span> as follows <span class="math display">\[\begin{equation}
+g(y)=
+\begin{cases}
+x &amp; y\in f(X) \text{ and } f(x)=y \\
+x_0 &amp; y \notin f(X)
+\end{cases}
+\end{equation}\]</span> where <span class="math inline">\(x_0\)</span> is a fixed element of <span class="math inline">\(X\neq \emptyset\)</span>. Then <span class="math inline">\(g\)</span> is defined for all <span class="math inline">\(y\in Y\)</span>. If <span class="math inline">\(y'\in Y\)</span> with <span class="math inline">\(x_1=g(y')\neq g(y')=x_2\)</span>, then <span class="math inline">\(y'=f(x_1)\neq f(x_2)=y'\)</span>, since <span class="math inline">\(f\)</span> is injective. Thus, <span class="math inline">\(f\)</span> is injective implies <span class="math inline">\(g\)</span> is a function. If <span class="math inline">\(x\in X\)</span>, then <span class="math display">\[
+(g\circ f)(x)=g(f(x))=g(y)=x, \qquad \text{ for some $y\in f(X)$}
+\]</span> which shows <span class="math inline">\(g\circ f=I_X\)</span>. Conversely, assume <span class="math inline">\(f:X\to Y\)</span> and there exists <span class="math inline">\(g:Y\to X\)</span> such that <span class="math inline">\(g\circ f=I_X\)</span>. Let <span class="math inline">\(x_1,x_2\in X\)</span> and assume <span class="math inline">\(f(x_1)=f(x_2)\)</span>. Then <span class="math display">\[
+x_1=(g\circ f)(x_1)=g(f(x_1))=g(f(x_2))=(g\circ f)(x_2)=x_2
+\]</span> which shows <span class="math inline">\(f\)</span> is injective.</p>
+</div>
+<div id="thm-injective-then" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 21 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(f\)</span> is injective and <span class="math inline">\(g:Y\to Z\)</span> is injective, then <span class="math inline">\(g\circ f\)</span> is injective.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x_1, x_2\in X\)</span>. Then <span class="math display">\[
+(g\circ f)(x_1)=(g\circ f)(x_2)
+\Longrightarrow f(x_1)=f(x_2)
+\Longrightarrow x_1= x_2
+\]</span> shows that <span class="math inline">\(g\circ f\)</span> is injective.</p>
+</div>
+<div id="thm-circ-surjective" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 22 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(g:Y\to Z\)</span> and <span class="math inline">\(g\circ f\)</span> is surjective, then <span class="math inline">\(g\)</span> is surjective.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(z\in Z\)</span>. Then there exists <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\((g\circ f)(x)=z\)</span>. Thus it follows <span class="math inline">\(g(f(x))=z\)</span> shows, for all <span class="math inline">\(z\in Z\)</span> there exists <span class="math inline">\(y\)</span> (namely <span class="math inline">\(y=f(x)\)</span>) such that <span class="math inline">\(g(y)=z\)</span> and so <span class="math inline">\(g\)</span> is surjective.</p>
+</div>
+<div id="thm-surjective" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 23 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(f\)</span> is surjective and <span class="math inline">\(g:Y\to Z\)</span> is surjective, then <span class="math inline">\(g\circ f\)</span> is surjective.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(z\in Z\)</span>. Since <span class="math inline">\(g\)</span> is surjective there exists <span class="math inline">\(y\in Y\)</span> such that <span class="math inline">\(g(y)=z\)</span>. Since <span class="math inline">\(f\)</span> is surjective there exists <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(f(x)=y\)</span>. Thus <span class="math inline">\((g\circ f)(x)=z\)</span> and so <span class="math inline">\(g\circ f\)</span> is surjective.</p>
+</div>
+<div id="thm-surjective-iff" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 24 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math inline">\(f\)</span> is surjective if and only if given any functions <span class="math inline">\(g,h:Y\to X\)</span>, if <span class="math inline">\(g\circ f=h\circ f\)</span>, then <span class="math inline">\(g=h\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(f\)</span> is surjective and let <span class="math inline">\(g:Y\to Z\)</span> and <span class="math inline">\(h:Y\to Z\)</span> be functions such that <span class="math inline">\(g\circ f=h\circ f\)</span>. Let <span class="math inline">\(y\in Y\)</span>. Since <span class="math inline">\(f\)</span> is surjective, there exists <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(y=f(x)\)</span>. Then <span class="math inline">\(g(y)=g(f(X))=h(f(x))=h(y)\)</span> as needed to show <span class="math inline">\(g=h\)</span>.</p>
+<p>Conversely, and for contrapositive, suppose <span class="math inline">\(f\)</span> is not surjective. Then there exists <span class="math inline">\(y_1\in Y\)</span> such that <span class="math inline">\(y_1=f(x)\)</span> does not hold for all <span class="math inline">\(x\in X\)</span>. Let <span class="math inline">\(Z=\{a,b\}\)</span> and let <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> be defined by <span class="math inline">\(g(y)=a\)</span> for all <span class="math inline">\(a\in Y\)</span> and <span class="math display">\[
+h(y)=\begin{cases}
+a &amp; \text{ if } y\neq y_1 \\
+b &amp; \text{ if } y=y_1.
+\end{cases}
+\]</span> Then we have <span class="math inline">\(g\neq h\)</span> such that <span class="math inline">\(g\circ f=h\circ f\)</span>. Thus <span class="math inline">\(f\)</span> is not right cancelable.</p>
+</div>
+<div id="thm-surjective-right-inverse" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 25 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math inline">\(f\)</span> is surjective if and only if there exists a function <span class="math inline">\(h:Y\to X\)</span> with <span class="math inline">\(f\circ h = I_Y\)</span> (<span class="math inline">\(f\)</span> has a right inverse).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Then <span class="math inline">\(f\)</span> is surjective if and only if there exists a function <span class="math inline">\(h:Y \to X\)</span> with <span class="math inline">\(f \circ h = I_Y.\)</span> Assume there exist <span class="math inline">\(h:Y\to X\)</span> with <span class="math inline">\(f \circ h=I_Y\)</span>. Let <span class="math inline">\(b\in Y\)</span>. Then <span class="math inline">\(b=(f\circ h)(b)=f(h(b))=f(a)\)</span> where <span class="math inline">\(a\in X\)</span>, shows <span class="math inline">\(f\)</span> is surjective.</p>
+<p>Conversely, follows using the <strong>Axiom of Choice</strong>. Suppose <span class="math inline">\(f\)</span> is surjective. Then <span class="math inline">\(f^{-1}(b)\subseteq X\)</span> is a nonempty set for every <span class="math inline">\(b\in Y\)</span>. For each <span class="math inline">\(b\in Y\)</span> choose <span class="math inline">\(a_b\in f^{-1}(b)\)</span>. Then the map <span class="math inline">\(h:Y\to X\)</span> defined by <span class="math inline">\(h(b)=a_b\)</span> is such that <span class="math inline">\(f\circ h=I_Y\)</span> since <span class="math inline">\((f\circ h)(y)=f(h(y))=f(a_y)=y\)</span>.</p>
+</div>
+<p>If the inverse relation <span class="math inline">\(f^{-1}\)</span> is also a function, then we say <span class="math inline">\(f\)</span> is an <strong>invertible function</strong>, or just <strong>invertible function</strong>.</p>
+<div id="thm-invertible-function" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 26 </strong></span>A function <span class="math inline">\(f:X\to Y\)</span> is invertible if and only if it is injective. If <span class="math inline">\(f\)</span> is invertible then <span class="math inline">\(f^{-1}\)</span> is also invertible and <span class="math inline">\((f^{-1})^{-1}=f\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(f\)</span> be invertible, then <span class="math inline">\(f^{-1}\)</span> is a function. It follows that <span class="math inline">\(f^{-1}(f(x))=x\)</span> for all <span class="math inline">\(x\in X\)</span>. If <span class="math inline">\(x_1, x_2\in X\)</span> and <span class="math inline">\(f(x_1)=f(x_2)\)</span>, we get <span class="math inline">\(f^{-1}(f(x_1))=f^{-1}(f(x_2))\)</span> and <span class="math inline">\(x_1=x_2\)</span>. So <span class="math inline">\(f\)</span> is injective. Let <span class="math inline">\(f\)</span> be injective. If <span class="math inline">\(a=f^{-1}(y_1)\)</span> and <span class="math inline">\(a=f^{-1}(y_2)\)</span> we have <span class="math inline">\(y_1 = f(a)\)</span> and <span class="math inline">\(y_2 =f(a)\)</span>. Therefore, <span class="math inline">\(y_1=y_2\)</span> and we have proven that <span class="math inline">\(f^{-1}\)</span> is a function. We know that <span class="math inline">\((f^{-1})^{-1}=f\)</span> by previous theorem and so <span class="math inline">\(f^{-1}\)</span> is also invertible.</p>
+</div>
+<div id="def-bijective" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be sets. A function <span class="math inline">\(f\)</span> is called <strong>bijective</strong>, if <span class="math inline">\(f\)</span> is both injective and surjective.</p>
+</div>
+<div id="thm-bijective-unique-function" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 27 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. Then <span class="math inline">\(f\)</span> is bijective if and only if there exists a unique function <span class="math inline">\(f':Y\to X\)</span> such that both <span class="math inline">\(f'\circ f=I_X\)</span> and <span class="math inline">\(f \circ f' = I_Y.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(f\)</span> is bijective, then <span class="math inline">\(f\)</span> is injective and surjective; and thus there exists functions <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> such that <span class="math inline">\(g\circ f=I_X\)</span> and <span class="math inline">\(f \circ h = I_Y.\)</span> Notice <span class="math display">\[
+g=g \circ I_Y=g \circ (f \circ h)=(g\circ f)\circ h=I_X\circ h=h
+\]</span> showing <span class="math inline">\(f':=g=h\)</span> as needed. Conversely, follows from the statements above.</p>
+</div>
+<div id="thm-bijections" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 28 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(f\)</span> and <span class="math inline">\(g:Y\to Z\)</span> are bijections, then <span class="math inline">\(g\circ f\)</span> is a bijection and <span class="math display">\[
+(g\circ f)^{-1}=f^{-1}\circ g^{-1}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(f\)</span> and <span class="math inline">\(f\)</span> are bijections, then <span class="math inline">\(g\circ f\)</span> is a bijection and <span class="math inline">\((g\circ f)^{-1}=f^{-1}\circ g^{-1}\)</span>. Therefore, the inverse of a function <span class="math inline">\(f:X\to Y\)</span> is a function <span class="math inline">\(f^{-1}:Y\to X\)</span> if and only if <span class="math inline">\(f\)</span> is a bijection. Since <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are bijections, <span class="math inline">\(f^{-1}:Y\to X\)</span> and <span class="math inline">\(g^{-1}:Z\to Y\)</span> are functions. Hence, <span class="math inline">\(f^{-1}\circ g^{-1}:Z\to X\)</span> is a function. It follows that, <span class="math inline">\(g\circ f\)</span> is injective and surjective, and so a bijection. Thus <span class="math inline">\((g\circ f)^{-1}:Z\to X\)</span> is also a function. Let <span class="math inline">\(z\in Z\)</span>. Since <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are surjections there exists <span class="math inline">\(x\in X\)</span> and <span class="math inline">\(y\in Y\)</span> such that</p>
+<p><span class="math display">\[\begin{equation}
+\label{surjcomp}
+g(y)=z
+\qquad \text{and} \qquad
+f(x)=y,
+\end{equation}\]</span></p>
+<p>respectively. Written in inverse function notation, <span class="math inline">\(y=g^{-1}(z)\)</span> and <span class="math inline">\(x=f^{-1}(y)\)</span>. By substitution, <span class="math inline">\(x=f^{-1}(g^{-1}(z))=(f^{-1}\circ g^{-1})(z)\)</span>. Notice it also follows from <span class="math inline">\(\eqref{surjcomp}\)</span> that <span class="math inline">\((g\circ f)(x)=g(f(x))=g(y)=z\)</span>. Written in inverse function notation we obtain <span class="math inline">\((g\circ f)^{-1}(z)=x\)</span>.</p>
+</div>
+</section>
+<section id="relations" class="level2">
+<h2 class="anchored" data-anchor-id="relations">Relations</h2>
+<p>Binary relations are defined as a set of ordered pairs, where each element in the pair is from a set. In other words, binary relations involve set(s) of elements, which we will call the <em>left</em> set and the <em>right</em> set. The relationship between the two elements in each ordered pair is what we call the <strong>relation</strong>.</p>
+<p>Binary relations allow us to study the relationships between sets.</p>
+<p>For example, let’s say we have a set of all the countries in the world, which we will call C, and a set of all the capitals of those countries, which we will call P. We can then define a binary relation R between C and P as follows:</p>
+<p><span class="math display">\[
+R = \{(c,p) \mid c \in C \text{ and } p \in P \text{ and $c$ is the capital of $p$}\}.
+\]</span></p>
+<p>In other words, <span class="math inline">\(R\)</span> is the set of all ordered pairs <span class="math inline">\((c,p)\)</span> such that <span class="math inline">\(c\)</span> is a country and <span class="math inline">\(p\)</span> is its capital.</p>
+<p>Binary relations can be classified according to various properties. The most common properties are composition, inverse, image, and preimage.</p>
+<p><strong>Image</strong>. Given a relation <span class="math inline">\(R\)</span> and a set <span class="math inline">\(A\)</span>, the image of <span class="math inline">\(A\)</span> under <span class="math inline">\(R\)</span> is the set <span class="math display">\[
+\{y \mid \exists x\in A \text{ such that } (x,y)\in R\}.
+\]</span></p>
+<p><strong>Preimage</strong>. Given a relation <span class="math inline">\(R\)</span> and a set <span class="math inline">\(B\)</span>, the preimage of <span class="math inline">\(B\)</span> under <span class="math inline">\(R\)</span> is the set <span class="math display">\[
+\{x \mid \exists y\in B \text{ such that } (x,y)\in R\}.
+\]</span></p>
+<p><strong>Composition</strong>. Given two relations <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span>, their composition <span class="math inline">\(RS\)</span> is the relation that consists of all ordered pairs <span class="math inline">\((x,z)\)</span> such that there exists a <span class="math inline">\(y\)</span> such that <span class="math inline">\((x,y)\in R\)</span> and <span class="math inline">\((y,z)\in S\)</span>.</p>
+<p><strong>Inverse</strong>. Given a relation <span class="math inline">\(R\)</span>, the inverse of <span class="math inline">\(R\)</span> is the relation that consists of all ordered pairs <span class="math inline">\((y,x)\)</span> such that <span class="math inline">\((x,y)\in R\)</span>.</p>
+<p>Binary relations can be represented in various ways, such as tables, graphs, and sets of ordered pairs. In order to understand binary relations, it is important to be familiar with all the different representations.</p>
+<p><strong>Tables</strong>. A binary relation can be represented using a table with two columns, where the left column represents the left set and the right column represents the right set. The entries in the table are the ordered pairs that make up the relation.</p>
+<p><strong>Graphs</strong>. A binary relation can also be represented using a graph, where the left set is represented by the vertices and the right set is represented by the edges. The edges are labeled with the elements of the right set, and each edge goes from the vertex that represents the left element of the ordered pair to the vertex that represents the right element.</p>
+<p><strong>Sets of ordered pairs</strong>. Finally, a binary relation can also be represented as a set of ordered pairs. This is the most common way to represent a binary relation, and it is the representation we will use most often in this book.</p>
+<p>Binary relations are a fundamental concept in mathematics, and they can be used to model many different situations. For example, in computer science, binary relations are used to represent many different types of relationships. They can be used to represent the relationship between two pieces of <em>data</em>, or the relationship between two <em>nodes in a graph</em>. They can also be used to represent the relationship between two <em>points in space</em>, or the relationship between two people in a <em>social network</em>. Binary relations are also used in physics to represent the interactions between particles. For example, the <em>gravitational force</em> between two masses is a binary relation.</p>
+<p>Now it’s time to become familiar with the basic terminology and notation.</p>
+<p>Let <span class="math inline">\(X\)</span> be a set and let <span class="math inline">\(X\times X=\{(a,b): a,b \in X\}.\)</span> A (binary) relation <strong>relation</strong> <span class="math inline">\(R\)</span> is a subset of <span class="math inline">\(X\times X\)</span>. If <span class="math inline">\((a,b)\in R\)</span>, then we say <span class="math inline">\(a\)</span> is <strong>related</strong> to <span class="math inline">\(b\)</span> by <span class="math inline">\(R\)</span>. It is possible to have both <span class="math inline">\((a,b)\in R\)</span> and <span class="math inline">\((a,b')\in R\)</span> where <span class="math inline">\(b'\neq b\)</span>; that is any element in <span class="math inline">\(X\)</span> could be related to any number of other elements of <span class="math inline">\(X\)</span>. It is also possible to have some element that is not related to any element in <span class="math inline">\(X\)</span> at all. We say a relation <span class="math inline">\(S\)</span> is an <strong>extension</strong> of a relation <span class="math inline">\(R\)</span>, denoted by <span class="math inline">\(R\subseteq S\)</span>, whenever <span class="math inline">\(aRb\)</span> implies <span class="math inline">\(aSb\)</span>, for all <span class="math inline">\(a,b\in X\)</span>. Just as we would with sets, we say relations <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are equal whenever <span class="math inline">\(R\subseteq S\)</span> and <span class="math inline">\(S\subseteq R\)</span>.</p>
+<div id="def-basic-terminology-notation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be relations on <span class="math inline">\(X\)</span>.</p>
+<ol type="1">
+<li>The <strong>image</strong> of <span class="math inline">\(A\subseteq X\)</span> under <span class="math inline">\(R\)</span> is the set <span class="math display">\[R(A)=\{y\in X : \exists \, x\in A, (x,y)\in R\}.\]</span></li>
+<li>The <strong>preimage</strong> of <span class="math inline">\(B\subseteq X\)</span> under <span class="math inline">\(R\)</span> is the set <span class="math display">\[R^{-1}(B)=\{x\in X : \exists \, y\in B, (x,y)\in R\}.\]</span></li>
+<li>The <strong>composition</strong> of <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> is the relation <span class="math display">\[S\circ R = \{(a,c)\in X\times X : \exists \, b\in X, (a,b)\in R \land (b,c)\in S\}.\]</span></li>
+<li>The <strong>inverse</strong> of <span class="math inline">\(R\)</span> is the relation <span class="math display">\[R^{-1}=\{(b,a)\in X\times X : (a,b)\in R\}.\]</span></li>
+</ol>
+</div>
+<section id="union-intersection-and-complement-of-relations" class="level3">
+<h3 class="anchored" data-anchor-id="union-intersection-and-complement-of-relations">Union, Intersection, and Complement of Relations</h3>
+<p>We define the union, intersection, and complement of two relations just as one would expect knowing elementary set theory. So the union of two relations consists of those ordered pairs of elements that are related under at least one of the two relations, and the intersection of two relations consists of those ordered pairs of elements which are related under both relations.</p>
+<div id="def-relations-union-intersection" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be relations on a set <span class="math inline">\(X\)</span>.The <strong>union</strong> and <strong>intersection</strong> of <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are the relations prescribed (respectively) by <span class="math display">\[
+R\cup S  = \{(a,b) : aRb \text{ or } aSb\}
+\quad \text{and} \quad
+R\cap S  = \{(a,b) :  aRb \text{ and } aSb\}.
+\]</span> The of <span class="math inline">\(R\)</span> is the relation prescribed by <span class="math inline">\(R^c = \{(a,b): \neg (aRb)\}\)</span>.</p>
+</div>
+We now demonstrate one way of proving a proposition holds using elementary set theory. Suppose we wish to show that <span class="math display">\[\begin{equation}
+\label{subeq}
+R\subseteq S
+\Leftrightarrow
+R\cap S=R
+\end{equation}\]</span> for relations <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> defined on a set <span class="math inline">\(X\)</span>. To do so, we will prove that <span class="math inline">\(R\subseteq S\)</span> implies <span class="math inline">\(R\cap S=R\)</span>, and conversely that <span class="math inline">\(R\cap S=R\)</span> implies <span class="math inline">\(R\subseteq S\)</span>.<br>
+
+<p>This type of reasoning illustrates the process of using basic logic and unwrapping definitions.</p>
+<div id="thm-boonalg" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 29 </strong></span>If <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(T\)</span> be relations on a set <span class="math inline">\(X\)</span>, there holds</p>
+<ol type="1">
+<li><span class="math inline">\({R\cup(S\cup T)=(R\cup S)\cup T}\)</span></li>
+<li><span class="math inline">\(R \cup S = S \cup R\)</span></li>
+<li><span class="math inline">\(R \cup (R \cap S) = R\)</span></li>
+<li><span class="math inline">\(R \cup \emptyset = R\)</span></li>
+<li><span class="math inline">\({R \cup (S \cap T) = (R \cup S) \cap (R \cup T)}\)</span></li>
+<li><span class="math inline">\(R \cup R^c = X\times X\)</span></li>
+<li><span class="math inline">\(R\cap(S\cap T)=(R\cap S)\cap T\)</span></li>
+<li><span class="math inline">\(R \cap S = S \cap R\)</span></li>
+<li><span class="math inline">\(R \cap (R \cup S) = R\)</span></li>
+<li><span class="math inline">\(R \cap \, (X\times X) = R\)</span></li>
+<li><span class="math inline">\({R \cap (S \cup T) = (R \cap S) \cup (R \cap T)}\)</span></li>
+<li><span class="math inline">\(R \cap R^c = \emptyset\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For the first statement, let <span class="math inline">\((x,y)\)</span> be an arbitrary element of <span class="math inline">\(X\times X\)</span>, then <span class="math display">\[\begin{align*}
+x\big(R\cup(S\cup T)\big)y &amp; \Leftrightarrow xRy \lor x(S\cup T)y  \Leftrightarrow x Ry \lor \Big(xSy \lor xTy \Big) \\
+&amp; \Leftrightarrow \Big( xRy \lor xSy \Big) \lor xTy  \Leftrightarrow x(R\cup S)y \lor xTy  \Leftrightarrow x\big(( R\cup S) \cup T\big)y.
+\end{align*}\]</span> We leave the remainder of the proof for <a href="#exr-boonalg">Exercise&nbsp;1</a>.</p>
+</div>
+</section>
+<section id="relative-complement-and-symmetric-difference" class="level3">
+<h3 class="anchored" data-anchor-id="relative-complement-and-symmetric-difference">Relative Complement and Symmetric Difference</h3>
+<p>Other operations on <span class="math inline">\(\mathcal{X\times X}\)</span> can be defined using logical connectives. For example, let <span class="math inline">\(\oplus\)</span> denote the logical XOR symbol (defined by <span class="math inline">\(p\oplus q\)</span> is true if and only if <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> have different truth values), then <span class="math inline">\(R\bigtriangleup S = \{(a,b) : aRb \oplus aSb\}\)</span> prescribes the symmetric difference of relations <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> defined on a set <span class="math inline">\(X\)</span>.</p>
+<div id="def-relations-symmetric-difference" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be relations on a set <span class="math inline">\(X\)</span>. The <strong>relative complement</strong> and <strong>symmetric difference</strong> of <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are the relations prescribed (respectively) by <span class="math display">\[
+R - S = R\cap S^c \qquad \text{and} \qquad R\bigtriangleup S = (R-S)\cup (S-R).
+\]</span></p>
+</div>
+<p>There are several equivalent formulations of the symmetric difference, some of which will be seen in the exercises.</p>
+<div id="thm-symdiff" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 30 </strong></span>For any relations <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(T\)</span> on a set <span class="math inline">\(X\)</span>, there holds 1. <span class="math inline">\(R\bigtriangleup S = S\bigtriangleup R\)</span> 2. <span class="math inline">\(R\bigtriangleup (S\bigtriangleup T)=(R\bigtriangleup S)\bigtriangleup T\)</span> 3. <span class="math inline">\(R\bigtriangleup \emptyset = R\)</span> 4. <span class="math inline">\(R\bigtriangleup R=\emptyset\)</span> 5. <span class="math inline">\(R\cap (S\bigtriangleup T)=(R\cap S)\bigtriangleup (R\cap T)\)</span> 6. <span class="math inline">\((S\bigtriangleup T)\cap R=(S\cap R)\bigtriangleup (T\cap R)\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>When we consider the triple <span class="math inline">\((\mathcal{X\times X},\bigtriangleup,\cap)\)</span> as an algebraic structure, it is an example of a Boolean ring with identity . More precisely, <span class="math inline">\((\mathcal{X},\bigtriangleup)\)</span> is an abelian group with identity <span class="math inline">\(\emptyset\)</span> and <span class="math inline">\((\mathcal{X\times X},\bigtriangleup,\cap)\)</span> is a commutative ring with identity that is Boolean.</p>
+</div>
+<div id="thm-symdifftwo" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 31 </strong></span>For any relations <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(T\)</span> on a set <span class="math inline">\(X\)</span>, there holds</p>
+<ol type="1">
+<li><span class="math inline">\(R\bigtriangleup S\subseteq R\cup S\)</span>,</li>
+<li><span class="math inline">\(R\cap S=\emptyset\)</span> if and only if <span class="math inline">\(R\cup S=R\bigtriangleup S\)</span>, and</li>
+<li><span class="math inline">\((R\bigtriangleup S)\bigtriangleup (S\bigtriangleup T)=R\bigtriangleup T\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(1): Since <span class="math inline">\(R-S\subseteq R\)</span> and <span class="math inline">\(S-R\subseteq S\)</span>, we have <span class="math inline">\(R\bigtriangleup S \subseteq R\cup S\)</span>.</p>
+<p>(2): If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are disjoint, then <span class="math inline">\(R=R-S\)</span> and <span class="math inline">\(S=S-R\)</span> and so <span class="math inline">\(R\bigtriangleup S = R\cup S\)</span>. Conversely, assume that <span class="math inline">\(R\bigtriangleup S = R\cup S\)</span>. If <span class="math inline">\({R\cap S\neq \emptyset}\)</span>, then both <span class="math inline">\({R-S\subset R}\)</span> and <span class="math inline">\({S-R\subset S}\)</span> (proper containment); whence <span class="math inline">\(R\bigtriangleup S \neq R\cup S\)</span> contrary to hypothesis.</p>
+<p>(3):By <a href="#thm-symdiff">Theorem&nbsp;30</a> we have <span class="math display">\[\begin{equation}
+{(R\bigtriangleup S)\bigtriangleup (S\bigtriangleup T)} = {R\bigtriangleup S\bigtriangleup S\bigtriangleup T}
+= {R\bigtriangleup \emptyset \bigtriangleup T} = {R \bigtriangleup T}
+\end{equation}\]</span> as needed.</p>
+</div>
+</section>
+<section id="composition-and-inverse-relations" class="level3">
+<h3 class="anchored" data-anchor-id="composition-and-inverse-relations">Composition and Inverse Relations</h3>
+<p>In particular, relations are sets and, so are the image and preimage of a relation. Here are some basic properties of relations on a set regarding image, union, intersection, and compositon.</p>
+<div id="thm-relations-composition" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 32 </strong></span>Let <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span> and <span class="math inline">\(T\)</span> be relations on <span class="math inline">\(X\)</span>. Then the following hold.</p>
+<ol type="1">
+<li><span class="math inline">\(R\circ (S\circ T)=(R\circ S)\circ T\)</span></li>
+<li><span class="math inline">\(R\circ (S\cup T)=(R\circ S)\cup (R\circ T)\)</span></li>
+<li><span class="math inline">\((S\cup T)\circ R=(S\circ R)\cup (T\circ R)\)</span></li>
+<li><span class="math inline">\(R\circ (S\cap T) \subseteq (R\circ S)\cap (R\circ T)\)</span></li>
+<li><span class="math inline">\(R\subseteq S \implies R\circ T \subseteq S\circ T\)</span></li>
+<li><span class="math inline">\(R\subseteq S \implies T\circ R \subseteq T\circ S\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of each part follows.</p>
+<ol type="1">
+<li><p><span class="math inline">\(R\circ (S\circ T)=(R\circ S)\circ T\)</span>: <span class="math display">\[\begin{align*}
+(x,y)\in &amp; R\circ (S\circ T) \\
+&amp; \Longleftrightarrow \exists z\in X, (x,z)\in S\circ T \land (z,y)\in R\\
+&amp; \Longleftrightarrow \exists z\in X, [ \exists w\in X, (x,w)\in T \land (w,z)\in S ] \land  (z,y)\in R \\
+&amp; \Longleftrightarrow \exists w, z\in X, (x,w)\in T \land (w,z)\in S \land (z,y)\in R\\
+&amp; \Longleftrightarrow \exists w\in X, [\exists z\in X, (w,z)\in S \land (z,y)\in R] \land (x,w)\in T\\
+&amp; \Longleftrightarrow \exists w\in X, (x,w)\in T \land (w,y)\in R\circ S \\
+&amp; \Longleftrightarrow (x,y)\in (R\circ S) \circ T
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R\circ (S\cup T)=(R\circ S)\cup (R\circ T)\)</span>: <span class="math display">\[\begin{align*}
+(x,y) &amp; \in R\circ (S\cup T) \\
+&amp; \Longleftrightarrow \exists z\in X, (x,z)\in S \cup T \land (z,y)\in R \\
+&amp; \Longleftrightarrow \exists z\in X, [(x,z)\in S \lor (x,z)\in T ]  \land (z,y)\in R \\
+&amp; \Longleftrightarrow \exists z\in X, [(x,z)\in S \land (z,y)\in R] \lor [(x,z)\in T \land (z,y)\in R]\\
+&amp; \Longleftrightarrow (x,y)\in R\circ S \lor (x,y)\in R\circ T\\
+&amp; \Longleftrightarrow (x,y)\in (R\circ S)\cup (R \circ T)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\((S\cup T)\circ R=(S\circ R)\cup (T\circ R)\)</span>: <span class="math display">\[\begin{align*}
+(x,y) &amp; \in (S\cup T)\circ R \\
+&amp; \Longleftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in S\cup T\\
+&amp; \Longleftrightarrow \exists z\in X, (x,z)\in R \land [(z,y)\in S\lor (z,y)\in T] \\
+&amp; \Longleftrightarrow \exists z\in X, [(x,z)\in R \land (z,y)\in S] \lor  [(x,z)\in R \land (z,y)\in T] \\
+&amp; \Longleftrightarrow (x,y)\in (S\circ R) \lor (x,y)\in (T\circ R)\\
+&amp; \Longleftrightarrow (x,y)\in (S\circ R)\cup (T\circ R)
+\end{align*}\]</span></p></li>
+<li><p>)<span class="math inline">\(R\circ (S\cap T) \subseteq (R\circ S)\cap (R\circ T)\)</span>: <span class="math display">\[\begin{align*}
+\qquad \quad  &amp; (x,y) \in R\circ (S\cap T)  \\
+&amp; \qquad \Longleftrightarrow \exists z\in X, (x,z)\in S\cap T \land (z,y)\in R \\
+&amp; \qquad \Longleftrightarrow \exists z\in X, [(x,z)\in S \land (x,z)\in T] \land (z,y)\in R \\
+&amp; \qquad \Longleftrightarrow \exists z\in X, [(x,z)\in S \land (z,y)\in R] \land (x,z)\in T\\
+&amp; \qquad \Longleftrightarrow \exists z\in X, [(x,z)\in S \land (z,y)\in R] \land [(x,z)\in T \land (z,y)\in R] \\
+&amp; \qquad \Longrightarrow [\exists z\in X, [(x,z)\in S \land (z,y)\in R] \land [ \exists w\in X, (x,w)\in T \land (w,y)\in R]\\
+&amp; \qquad \Longleftrightarrow (x,y)\in R\circ S \land (x,y)\in R\circ T \\
+&amp; \qquad \Longleftrightarrow (x,y)\in (R\circ S) \cap (R\circ T)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R\subseteq S \implies R\circ T \subseteq S\circ T\)</span>: <span class="math display">\[\begin{align*}
+&amp; (x,y)\in R\circ T \Longleftrightarrow \exists z\in X, (x,z)\in T \land (z,y)\in R \\
+&amp; \qquad \Longrightarrow \exists z\in X, (x,z)\in T \land (z,y)\in S \Longleftrightarrow (x,y)\in S\circ T
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R\subseteq S \implies T\circ R \subseteq T\circ S\)</span>: <span class="math display">\[\begin{align*}
+&amp; (x,y)\in T\circ R \Longleftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in T \\
+&amp; \qquad \Longrightarrow \exists z\in X, (x,z)\in S \land (z,y)\in T \Longleftrightarrow (x,y)\in T\circ S
+\end{align*}\]</span> The proof is now complete.</p></li>
+</ol>
+</div>
+<p>Here are some basic properties of relations on a set regarding preimage, union, intersection, set difference, and compositon.</p>
+<div id="thm-relations-image-preimage" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 33 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be relations on <span class="math inline">\(X\)</span>. Then the following hold.</p>
+<ol type="1">
+<li><span class="math inline">\((R^{-1})^{-1}=R\)</span></li>
+<li><span class="math inline">\((R\cup S)^{-1}=R^{-1}\cup S^{-1}\)</span></li>
+<li><span class="math inline">\((R\cap S)^{-1}=R^{-1}\cap S^{-1}\)</span></li>
+<li><span class="math inline">\((R\circ S)^{-1}=S^{-1}\circ R^{-1}\)</span></li>
+<li><span class="math inline">\(R\subseteq S \implies R^{-1}\subseteq S^{-1}\)</span>.</li>
+<li><span class="math inline">\((R^c)^{-1}=(R^{-1})^c\)</span></li>
+<li><span class="math inline">\((R\setminus S)^{-1}=R^{-1}\setminus S^{-1}\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of each part follows.</p>
+<ol type="1">
+<li><p><span class="math inline">\((R^{-1})^{-1}=R\)</span>: <span class="math display">\[
+(x,y)\in (R^{-1})^{-1} \Longleftrightarrow (y,x)\in R^{-1} \Longleftrightarrow (x,y)\in R
+\]</span></p></li>
+<li><p><span class="math inline">\((R\cup S)^{-1}=R^{-1}\cup S^{-1}\)</span>: <span class="math display">\[\begin{align*}
+&amp; (x,y)\in (R\cup S)^{-1}  \Longleftrightarrow (y,x)\in R\cup S \Longleftrightarrow (y,x)\in R \lor (y,x)\in S \\
+&amp; \qquad \Longleftrightarrow (x,y)\in R^{-1} \lor (x,y)\in S^{-1} \Longleftrightarrow (x,y)\in R^{-1}\cup S^{-1}
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\((R\cap S)^{-1}=R^{-1}\cap S^{-1}\)</span>: <span class="math display">\[\begin{align*}
+&amp; (x,y)\in (R\cap S)^{-1}  \Longleftrightarrow (y,x)\in R\cap S \Longleftrightarrow (y,x)\in R \land (y,x)\in S\\
+&amp;  \qquad \Longleftrightarrow (x,y)\in R^{-1} \land (x,y)\in S^{-1} \Longleftrightarrow (x,y)\in R^{-1}\cap S^{-1}
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\((R\circ S)^{-1}=S^{-1}\circ R^{-1}\)</span>: <span class="math display">\[\begin{align*}
+&amp; (x,y)\in (R\circ S)^{-1} \Longleftrightarrow (y,x)\in R\circ S\\
+&amp; \qquad \Longleftrightarrow \exists z\in X, (y,z)\in S \land (z,x)\in R\\
+&amp;  \qquad \Longleftrightarrow \exists z\in X, (z,y)\in S^{-1} \land (x,z)\in R^{-1}\\
+&amp; \qquad \Longleftrightarrow \exists z\in X, (x,z)\in R^{-1} \land (z,y)\in S^{-1} \\
+&amp;  \qquad \Longleftrightarrow (x,y)\in S^{-1} \circ R^{-1}
+\end{align*}\]</span></p></li>
+<li><p>If <span class="math inline">\(R\subseteq S\)</span>, then <span class="math inline">\(R^{-1}\subseteq S^{-1}\)</span>: <span class="math display">\[\begin{align*}
+(x,y)\in &amp; R^{-1} \Longleftrightarrow (y,x)\in R \Longrightarrow (y,x)\in S \Longleftrightarrow (x,y) \in S^{-1}
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\((R^c)^{-1}=(R^{-1})^c\)</span>: <span class="math display">\[\begin{align*}
+&amp; (x,y)\in (R^c)^{-1} \Longleftrightarrow (y,x)\in R^c \Longleftrightarrow (y,x)\in X\times X \land (y,x)\notin R\\
+&amp; \qquad \Longleftrightarrow (x,y)\in X\times X \land (x,y)\notin R^{-1} \Longleftrightarrow (x,y)\in (R^{-1})^c
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\((R\setminus S)^{-1}=R^{-1}\setminus S^{-1}\)</span> <span class="math display">\[\begin{align*}
+&amp; (x,y)\in (R\setminus S)^{-1} \Longleftrightarrow (y,x)\in R\setminus S \Longleftrightarrow (y,x)\in R \land (y,x)\notin S\\
+&amp; \qquad \Longleftrightarrow (x,y)\in R^{-1} \land (y,x)\notin S \Longleftrightarrow (x,y)\in R^{-1} \land (x,y)\notin S^{-1} \\
+&amp; \qquad \Longleftrightarrow (x,y)\in R^{-1}\setminus S^{-1}
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+<p>In the next two theorems we have basic properties involving the image, union, intersection, and set difference. And exactly when two relations are equal.</p>
+<div id="thm-relations-subseteq" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 34 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be a relations on <span class="math inline">\(X\)</span> and <span class="math inline">\(A, B\subseteq X\)</span>. Then the following hold.</p>
+<ol type="1">
+<li><span class="math inline">\(A\subseteq B \implies R(A)\subseteq R(B)\)</span></li>
+<li><span class="math inline">\(R(A\cup B)=R(A)\cup R(B)\)</span></li>
+<li><span class="math inline">\(R(A\cap B)\subseteq R(A)\cap R(B)\)</span></li>
+<li><span class="math inline">\(R(A)\setminus R(B)\subseteq R(A\setminus B)\)</span></li>
+<li>If <span class="math inline">\(R(x)=S(x)\)</span> for all <span class="math inline">\(x\in X\)</span>, then <span class="math inline">\(R=S\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of each part follows.</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(A\subseteq B\)</span>, then <span class="math inline">\(R(A)\subseteq R(B)\)</span>: <span class="math display">\[\begin{align*}
+\qquad y\in R(A) \Longleftrightarrow \exists x\in A, (x,y)\in R \implies \exists x\in B, (x,y)\in R \Longleftrightarrow y\in R(B)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R(A\cup B)=R(A)\cup R(B)\)</span>: <span class="math display">\[\begin{align*}
+\qquad &amp; y\in R(A\cup B) \Longleftrightarrow \exists x\in X, x\in A\cup B \land (x,y)\in R  \\
+&amp; \qquad \Longleftrightarrow  \exists x\in X, (x\in A \lor x\in B) \land (x,y)\in R \\
+&amp; \qquad \Longleftrightarrow  \exists x\in A, (x,y)\in R \lor \exists x\in B, (x,y)\in R \Longleftrightarrow  y\in R(A) \cup R(B)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R(A\cap B)\subseteq R(A)\cap R(B)\)</span>: <span class="math display">\[\begin{align*}
+\qquad &amp; y\in R(A\cap B) \Longleftrightarrow \exists x\in X, x\in A\cap B \land (x,y)\in R \\
+&amp; \qquad \Longleftrightarrow  \exists x\in X, (x\in A \land x\in B) \land (x,y)\in R \\
+&amp; \qquad \Longrightarrow  \exists x\in A, (x,y)\in R \land \exists x\in B, (x,y)\in R \Longleftrightarrow  y\in R(A) \cap R(B)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R(A)\setminus R(B)\subseteq R(A\setminus B)\)</span>: <span class="math display">\[\begin{align*}
+y\in R(A)\setminus R(B) &amp; \Longleftrightarrow y\in R(A)\land y\not\in R(B) \\
+&amp; \Longleftrightarrow \exists x\in A, (x,y)\in R \land \forall z\in B, (z,y)\not\in R \\
+&amp; \Longleftrightarrow \exists x\in A\setminus B, (x,y)\in R \Longleftrightarrow y\in R(A\setminus B)
+\end{align*}\]</span></p></li>
+<li><p>Assume <span class="math inline">\(R(x)=S(x)\)</span> for all <span class="math inline">\(x\in X\)</span>, then <span class="math display">\[
+(x,y)\in R \Longleftrightarrow y\in R(x)  \Longleftrightarrow y\in S(x)  \Longleftrightarrow (x,y)\in S
+\]</span> which completes the proof.</p></li>
+</ol>
+</div>
+<p>Why is there not a part (5) to the next theorem? Can you state and prove a part (5)? If not, can you provide a counterexample?</p>
+<div id="thm-relations-preimage" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 35 </strong></span>Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X\)</span> with <span class="math inline">\(A, B\subseteq X\)</span>. Then the following hold.</p>
+<ol type="1">
+<li><span class="math inline">\(A\subseteq B \implies R^{-1}(A)\subseteq R^{1-}(B)\)</span></li>
+<li><span class="math inline">\(R^{-1}(A\cup B)=R^{-1}(A)\cup R^{-1}(B)\)</span></li>
+<li><span class="math inline">\(R^{-1}(A\cap B)\subseteq R^{-1}(A)\cap R^{-1}(B)\)</span></li>
+<li><span class="math inline">\(R^{-1}(A)\setminus R^{-1}(B)\subseteq R^{-1}(A\setminus B)\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of each part follows.</p>
+<ol type="1">
+<li><p><span class="math inline">\(A\subseteq B \implies R^{-1}(A)\subseteq R^{-1}(B)\)</span>: <span class="math display">\[\begin{align*}
+x\in R^{-1}(A) &amp; \Longleftrightarrow \exists y\in A, (x,y)\in R \\
+&amp; \implies \exists y\in B, (x,y)\in R  \Longleftrightarrow x\in R^{-1}(B)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R^{-1}(A\cup B)=R^{-1}(A)\cup R^{-1}(B)\)</span>: <span class="math display">\[\begin{align*}
+&amp; x\in R^{-1}(A\cup B)  \Longleftrightarrow \exists y \in A\cup B, (x,y)\in R \\
+&amp; \qquad \Longleftrightarrow \exists y\in A, (x,y)\in R \lor \exists y\in B, (x,y)\in R \\
+&amp; \qquad  \Longleftrightarrow x\in R^{-1}(A)\lor R^{-1}(B) \Longleftrightarrow x\in R^{-1}(A)\cup R^{-1}(B)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R^{-1}(A\cap B)\subseteq R^{-1}(A)\cap R^{-1}(B)\)</span>: <span class="math display">\[\begin{align*}
+&amp; x\in R^{-1}(A\cap B) \Longleftrightarrow \exists y\in A \cap B, (x,y)\in R \\
+&amp; \qquad \Longleftrightarrow \exists y\in X, y\in A \land y\in B \land (x,y)\in R \\
+&amp; \qquad \Longrightarrow  x\in R^{-1}(A) \land x\in R^{-1}(B) \Longleftrightarrow x\in R^{-1}(A) \cap x\in R^{-1}(B)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R^{-1}(A)\setminus R^{-1}(B)\subseteq R^{-1}(A\setminus B)\)</span>: <span class="math display">\[\begin{align*}
+&amp; x\in R^{-1}(A)\setminus R^{-1}(B) \Longleftrightarrow  x\in R^{-1}(A) \land \neg(x\in R^{-1}(B)) \\
+&amp; \qquad \Longleftrightarrow  x\in R^{-1}(A)\land [\forall y\in B, (x,y)\not\in R] \\
+&amp; \qquad \Longleftrightarrow  \exists y\in A, (x,y)\in R \land [\forall y\in B, (x,y)\not\in R] \\
+&amp; \qquad \Longrightarrow \exists y\in A\setminus B, (x,y)\in R \Longleftrightarrow x\in R^{-1}(A\setminus B)
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+</section>
+<section id="families-of-relations" class="level3">
+<h3 class="anchored" data-anchor-id="families-of-relations">Families of Relations</h3>
+<p>In the next theorem we have a family of relations and we see how they interact with composition.</p>
+<div id="thm-relations-indexed" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 36 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(R_i\)</span> be relations on <span class="math inline">\(X\)</span> for <span class="math inline">\(i\in I\)</span> where <span class="math inline">\(I\)</span> is an indexed set. Then the following hold.</p>
+<ol type="1">
+<li><span class="math inline">\(R\circ \left(\bigcup_{i\in I} R_i\right)=\bigcup_{i\in I}(R\circ R_i)\)</span></li>
+<li><span class="math inline">\(\left(\bigcup_{i\in I} R_i\right)\circ R=\bigcup_{i\in I}(R_i\circ R)\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of each part follows.</p>
+<ol type="1">
+<li><p><span class="math inline">\(R\circ \left(\bigcup_{i\in I} R_i\right)=\bigcup_{i\in I}(R\circ R_i)\)</span> <span class="math display">\[\begin{align*}
+(x,y)\in R\circ \left(\bigcup_{i\in I} R_i\right) &amp; \Longleftrightarrow \exists z\in X, (x,z)\in \bigcup_{i\in I} R_i \land (z,y)\in R \\
+&amp; \Longleftrightarrow \exists z\in X, \exists i\in I, (x,z)\in R_i \land (z,y)\in R \\
+&amp; \Longleftrightarrow \exists i\in I, (x,y)\in R\circ R_i  \\
+&amp; \Longleftrightarrow (x,y) \in \bigcup_{i\in I}(R\circ R_i)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(\left(\bigcup_{i\in I} R_i\right)\circ R=\bigcup_{i\in I}(R_i\circ R)\)</span>: <span class="math display">\[\begin{align*}
+(x,y)\in \left(\bigcup_{i\in I} R_i\right)\circ R
+&amp; \Longleftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in \bigcup_{i\in I} R_i \\
+&amp; \Longleftrightarrow \exists z\in X, \exists i\in I, (x,z)\in R \land (z,y)\in R_i \\
+&amp; \Longleftrightarrow (x,y)\in \bigcup_{i\in I}(R_i\circ R)
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+</section>
+<section id="the-powers-of-a-relation" class="level3">
+<h3 class="anchored" data-anchor-id="the-powers-of-a-relation">The Powers of a Relation</h3>
+<p>In the next theorem we see how powers of a relation interacts with preimage and unions.</p>
+<div id="thm-relation-powers-inverse" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 37 </strong></span>Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X\)</span>. Then the following hold.</p>
+<ol type="1">
+<li><span class="math inline">\((R^n)^{-1}=(R^{-1})^n\)</span> for all <span class="math inline">\(n\geq 1\)</span></li>
+<li><span class="math inline">\(R^n \cup S^n\subseteq (R\cup S)^n\)</span> for all <span class="math inline">\(n\geq 1\)</span></li>
+<li><span class="math inline">\(\left( \bigcup_{n\geq 1} R^n \right)^{-1} = \bigcup_{n\geq 1} (R^{-1})^{n}\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of each part follows.</p>
+<ol type="1">
+<li><p>By induction. The basis step is obvious: <span class="math inline">\((R^{1})^{-1}=(R^{-1})^1\)</span>. In fact, <span class="math display">\[
+(R^2)^{-1} = (R\circ R)^{-1} = R^{-1}\circ R^{-1} = (R^{-1})^2.
+\]</span> The induction step is <span class="math display">\[
+(R^n)^{-1}=(R^{-1})^n\implies (R^{n+1})^{-1}=(R^{-1})^{n+1}.
+\]</span> The result now follows from the argument: <span class="math display">\[\begin{align*}
+(x,y)\in (R^{n+1})^{-1}
+&amp; \Longleftrightarrow (y,x)\in R^{n+1} \\
+&amp; \Longleftrightarrow \exists z\in X, (y,z)\in R \land (z,x)\in R^n \\
+&amp; \Longleftrightarrow \exists z\in X, (z,y)\in R^{-1} \land (x,z)\in (R^n)^{-1}\\
+&amp; \Longleftrightarrow \exists z\in X, (x,z)\in (R^n)^{-1} \land (z,y)\in R^{-1}\\
+&amp; \Longleftrightarrow \exists z\in X, (x,z)\in (R^{-1})^n \land (z,y)\in R^{-1} \\
+&amp; \Longleftrightarrow (x,y)\in (R^{-1})^{n+1}
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(\left( \bigcup_{n\geq 1} R^n \right)^{-1} = \bigcup_{n\geq 1} (R^{-1})^{n}\)</span> <span class="math display">\[\begin{align*}
+(x,y)\in &amp; \left( \bigcup_{n\geq 1} R^n \right)^{-1}
+\Longleftrightarrow (y,x)\in \bigcup_{n\geq 1} R^n \\
+&amp; \Longleftrightarrow \exists n\geq 1, (y,x)\in R^n =R^{n-1}\circ R \\
+&amp; \Longleftrightarrow \exists n\geq 1, \exists z\in X, (y,z)\in R \land (z,x)\in R^{n-1} \\
+&amp; \Longleftrightarrow \exists n\geq 1, \exists z\in X, (z,y)\in R^{-1} \land (x,z)\in (R^{n-1})^{-1}\\
+&amp; \Longleftrightarrow \exists n\geq 1, \exists z\in X, (x,z)\in (R^{n-1})^{-1} \land (z,y)\in R^{-1}  \\
+&amp; \Longleftrightarrow \exists n\geq 1, \exists z\in X, (x,z)\in (R^{-1})^{n-1} \land (z,y)\in R^{-1} \\
+&amp; \Longleftrightarrow \exists n\geq 1, (x,y)\in (R^{-1})^n \Longleftrightarrow (x,y)\in \bigcup_{n\geq 1}(R^{-1})^n
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(R^n \cup S^n\subseteq (R\cup S)^n\)</span> for all <span class="math inline">\(n\geq 1.\)</span> The basis step is obvious. The induction step is: <span class="math display">\[
+R^n \cup S^n\subseteq (R\cup S)^n \implies R^{n+1} \cup S^{n+1}\subseteq (R\cup S)^{n+1}
+\]</span> The result holds by <span class="math display">\[\begin{align*}
+(R\cup S)^{n+1} &amp; =(R\cup S)^n\circ (R\cup S)  \\
+&amp; \supseteq (R^n\cup S^n) \circ (R \cup S) \\
+&amp; = [(R^n\cup S^n)\circ R] \cup (R^n\cup S^n) \circ S \\
+&amp; = R^{n+1} \cup (S^n \circ R) \cup (R^n\circ S) \cup S^{n+1}  \\
+&amp; \supseteq R^{n+1}\cup S^{n+1}.
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+<p>The next theorem will be very useful when we discuss transtive relations.</p>
+<div id="thm-powers" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 38 </strong></span>Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X\)</span>. Then <span class="math inline">\((x,y)\in R^n\)</span> if and only if there exists <span class="math inline">\(x_1, x_2, x_3, \ldots, x_{n-1}\in X\)</span> such that <span class="math inline">\((x,x_1)\in R, (x_1,x_2)\in R , ...., (x_{n-1},y)\in R\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Bases case, <span class="math inline">\(i=1\)</span> is obvious. We assume the claim is true for <span class="math inline">\(j\)</span>. Then <span class="math display">\[\begin{align*}
+&amp; (x,y)\in R^{j+1} \Longleftrightarrow (x,y)\in R^j\circ R \\
+&amp; \Longleftrightarrow \exists x_1\in X, (x,x_1)\in R \land (x_1,y)\in R^j \\
+&amp; \Longleftrightarrow \exists x_1\in X, (x,x_1)\in R \land \exists x_2, ..., x_{j-1}\in X, (x_2, x_3), ..., (x_{j-1},y)\in R \\
+&amp; \Longleftrightarrow  \exists x_1\in X, x_2, ..., x_{j-1}\in X, (x,x_1), (x_2, x_3), ..., (x_{j-1},y)\in R
+\end{align*}\]</span> as needed to complete induction.</p>
+</div>
+</section>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<div id="exr-boonalg" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 </strong></span>Finish proving <a href="#thm-boonalg">Theorem&nbsp;29</a>.</p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

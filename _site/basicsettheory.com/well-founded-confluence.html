@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Well-founded Confluence - Basic Set Theory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">directknowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#well-founded-confluence" id="toc-well-founded-confluence" class="nav-link active" data-scroll-target="#well-founded-confluence">Well-founded Confluence</a>
+  <ul class="collapse">
+  <li><a href="#well-founded-relations" id="toc-well-founded-relations" class="nav-link" data-scroll-target="#well-founded-relations">Well-Founded Relations</a>
+  <ul class="collapse">
+  <li><a href="#well-founded-induction" id="toc-well-founded-induction" class="nav-link" data-scroll-target="#well-founded-induction">Well-Founded Induction</a></li>
+  <li><a href="#well-founded-recursion" id="toc-well-founded-recursion" class="nav-link" data-scroll-target="#well-founded-recursion">Well-Founded Recursion</a></li>
+  <li><a href="#chains" id="toc-chains" class="nav-link" data-scroll-target="#chains">Chains</a></li>
+  </ul></li>
+  <li><a href="#confluent-relations" id="toc-confluent-relations" class="nav-link" data-scroll-target="#confluent-relations">Confluent Relations</a>
+  <ul class="collapse">
+  <li><a href="#reduction-relation" id="toc-reduction-relation" class="nav-link" data-scroll-target="#reduction-relation">Reduction Relation</a></li>
+  <li><a href="#confluence" id="toc-confluence" class="nav-link" data-scroll-target="#confluence">Confluence</a></li>
+  <li><a href="#newmans-lemma" id="toc-newmans-lemma" class="nav-link" data-scroll-target="#newmans-lemma">Newman’s Lemma</a></li>
+  <li><a href="#connected-below" id="toc-connected-below" class="nav-link" data-scroll-target="#connected-below">Connected Below</a></li>
+  <li><a href="#terminating" id="toc-terminating" class="nav-link" data-scroll-target="#terminating">Terminating</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="well-founded-confluence" class="level1">
+<h1>Well-founded Confluence</h1>
+<p>For example, the relation “is less than” is well-founded on the natural numbers, because there is no sequence of natural numbers that go from a smaller number to a larger number. On the other hand, the relation “is taller than” is not well-founded, because there is an infinite sequence of people (starting with someone who is very short) who are all taller than each other. Well-founded relations can be used to solve problems in a variety of fields, including economics, computer science, and physics.</p>
+<p>In mathematics, a well-founded relation is a binary relation that satisfies the descending chain condition. In other words, it contains no infinite descending chains. In fact, these two conditions are equivalent, assuming the axiom of dependent choice.</p>
+<p>In mathematics and computer science, recursion is a method of defining functions in which the function being defined is applied within its own definition. The most common form of recursion is fractional recursion, in which a function is defined in terms of itself divided by some well-founded relation.</p>
+<p>In computers, recursion is used to implement procedures that iterate over data structures or perform computations on infinite sets of data. Recursive programming techniques can be used to solve problems that would be difficult or impossible to solve using other programming paradigms. However, they can also introduce errors that are difficult to debug, and they can be computationally expensive. As a result, care must be taken to use recursion judiciously. When used properly, it can be an immensely powerful tool for solving complex problems.</p>
+<p>The well-foundedness condition is what makes recursion possible. Without it, we would not be able to define functions by recursion, and many of the things we take for granted in computer science would not be possible.</p>
+<section id="well-founded-relations" class="level2">
+<h2 class="anchored" data-anchor-id="well-founded-relations">Well-Founded Relations</h2>
+<div id="def-irreflexive-asymmetric-antisymmetric" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>Let <span class="math inline">\(X\)</span> be a set.</p>
+<ol type="1">
+<li>A relation <span class="math inline">\(R\)</span> on <span class="math inline">\(X\)</span> is called <strong>irreflexive</strong> if it satisfies the property <span class="math display">\[\forall a\in X, (a,a)\notin R.\]</span></li>
+<li>A relation <span class="math inline">\(R\)</span> on <span class="math inline">\(X\)</span> is called <strong>asymmetric</strong> if it satisfies the property <span class="math display">\[\forall a,b\in X, (a,b)\in R \implies (b,a)\notin R.\]</span></li>
+<li>A relation <span class="math inline">\(R\)</span> on <span class="math inline">\(X\)</span> is called <strong>antisymmetric</strong> if it satisfies the property <span class="math display">\[
+\forall a,b\in X, (a,b)\in R \land (b,a)\in R\implies a=b.\]</span></li>
+</ol>
+</div>
+<p>A <span class="math inline">\(\longrightarrow\)</span>-minimal element need not be smaller than the other elements of <span class="math inline">\(X.\)</span> For example, singleton sets of <span class="math inline">\(X\)</span> all have <span class="math inline">\(\longrightarrow\)</span>-minimal elements, namely <span class="math inline">\(a\)</span> is a <span class="math inline">\(\longrightarrow\)</span>-minimal element of <span class="math inline">\(\{a\}\subseteq X\)</span> since there does not exist <span class="math inline">\(b\in\{a\}\)</span> such that <span class="math inline">\(a\longrightarrow b\)</span> whenever <span class="math inline">\(\longrightarrow\)</span> is irreflexive.</p>
+<div id="lem-well-founded-irreflexive-antisymmetric" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1 </strong></span>If <span class="math inline">\(\longrightarrow\)</span> is a well-founded relation on <span class="math inline">\(X,\)</span> then <span class="math inline">\(\longrightarrow\)</span> is irreflexive and antisymmetric; and hence also asymmetric.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(\longrightarrow\)</span> is a well-founded relation on <span class="math inline">\(X.\)</span> If <span class="math inline">\(a\longrightarrow a,\)</span> then <span class="math inline">\(A=\{a\}\neq\emptyset\)</span> does not have an <span class="math inline">\(\longrightarrow\)</span>-minimal element, country to hypothesis. If <span class="math inline">\(a\longrightarrow b\)</span> and <span class="math inline">\(b\longrightarrow a,\)</span> then <span class="math inline">\(X=\{a,b\}\neq\emptyset\)</span> does not have a <span class="math inline">\(\longrightarrow\)</span>-minimal element, contrary to hypothesis. Thus, if <span class="math inline">\(\longrightarrow\)</span> is well-founded and <span class="math inline">\(a\longrightarrow b,\)</span> then <span class="math inline">\(b\longrightarrow a\)</span> can not hold and so <span class="math inline">\(\longrightarrow\)</span> is asymmetric. A relation is asymmetric if and only if it is both antisymmetric and irreflexive.</p>
+</div>
+<div id="lem-well-founded-subrelation" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2 </strong></span>If <span class="math inline">\(\longrightarrow\)</span> is a well-founded relation on <span class="math inline">\(X\)</span> and <span class="math inline">\(\longrightarrow'\)</span> is a subrelation of <span class="math inline">\(\longrightarrow,\)</span> then <span class="math inline">\(\longrightarrow'\)</span> is well-founded on <span class="math inline">\(X.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(\longrightarrow\)</span> is well-founded on <span class="math inline">\(X\)</span> and let <span class="math inline">\(\longrightarrow'\)</span> be a subrelation of <span class="math inline">\(\longrightarrow.\)</span> Let <span class="math inline">\(A\neq\emptyset\)</span> be a subset of <span class="math inline">\(X.\)</span> Suppose <span class="math inline">\(A\)</span> does not have a <span class="math inline">\(\longrightarrow'\)</span>-minimal element. Thus for all <span class="math inline">\(a\in A\)</span> there exists <span class="math inline">\(b\in A\)</span> that <span class="math inline">\(a\longrightarrow' b\)</span> holds. Since <span class="math inline">\(\longrightarrow'\)</span> is a subrelation of <span class="math inline">\(\longrightarrow,\)</span> it follows that for all <span class="math inline">\(a\in A\)</span> there exists <span class="math inline">\(b\in A\)</span> such that <span class="math inline">\(a\longrightarrow b.\)</span> Thus <span class="math inline">\(A\)</span> does not have a <span class="math inline">\(\longrightarrow\)</span>-minimal element, contrary to hypothesis.</p>
+</div>
+<div id="def-well-founded-relation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 </strong></span>Let <span class="math inline">\(\longrightarrow\)</span> be a relation on <span class="math inline">\(X.\)</span></p>
+<ol type="1">
+<li>If <span class="math inline">\(A\subseteq X\)</span> and <span class="math inline">\(a\in A,\)</span> then <span class="math inline">\(a\)</span> is called a <span class="math inline">\(\longrightarrow\)</span>- <strong>minimal element</strong> of <span class="math inline">\(A\)</span> if there does not exist <span class="math inline">\(b\in A\)</span> such that <span class="math inline">\(a\longrightarrow b.\)</span></li>
+<li>If each nonempty subset of <span class="math inline">\(X\)</span> has a <span class="math inline">\(\longrightarrow\)</span>-minimal element, then <span class="math inline">\(\longrightarrow\)</span> is called a <strong>well-founded relation</strong> on <span class="math inline">\(X.\)</span></li>
+<li>If <span class="math inline">\(x\in X,\)</span> then the set <span class="math display">\[\overrightarrow{x\,}=\{y\in X : x\longrightarrow y \land x\neq y\}\]</span> is called the <strong>initial segment</strong> of <span class="math inline">\(x.\)</span></li>
+</ol>
+</div>
+<p>Clearly, <span class="math inline">\(b\)</span> is a <span class="math inline">\(\longrightarrow\)</span>-minimal element of <span class="math inline">\(A\)</span> if and only if <span class="math inline">\(\overrightarrow{b\,}\cap A=\emptyset.\)</span></p>
+<section id="well-founded-induction" class="level3">
+<h3 class="anchored" data-anchor-id="well-founded-induction">Well-Founded Induction</h3>
+<div id="lem-well-founded-nduction" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 3 </strong></span>A relation <span class="math inline">\(\longrightarrow\)</span> on <span class="math inline">\(X\)</span> is well-founded if and only if the principle of <span class="math inline">\(\longrightarrow\)</span>-induction holds: <span class="math display">\[
+\forall \, A\subseteq X,
+\forall x\in X, (\overrightarrow{x\,}\subseteq A \implies x\in A)
+\implies  A=X.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(\longrightarrow\)</span> is well-founded on <span class="math inline">\(X.\)</span> Let <span class="math inline">\(A\subseteq X\)</span> and assume the following holds <span class="math display">\[\begin{equation}
+\label{wellfind}
+\forall x\in X, \overrightarrow{x\,}\subseteq A \implies x\in A
+\end{equation}\]</span> Assume for a contradiction that <span class="math inline">\(X\setminus A\)</span> is nonempty with <span class="math inline">\(\longrightarrow\)</span>-minimial element <span class="math inline">\(b.\)</span> Thus <span class="math inline">\(\overrightarrow{b\,}\cap X\setminus A=\emptyset\)</span> and so it follows <span class="math inline">\(\overrightarrow{b\,}\subseteq A.\)</span> By <span class="math inline">\(\eqref{wellfind}\)</span> we have <span class="math inline">\(b\in A\)</span> and thus <span class="math inline">\(X\setminus A\)</span> is empty. Hence <span class="math inline">\(A=X.\)</span></p>
+<p>Conversely, assume the principle of induction holds and suppose <span class="math inline">\(A\)</span> is a nonempty subset of <span class="math inline">\(X\)</span> with no <span class="math inline">\(\longrightarrow\)</span>-minimal element. We will apply the principle of <span class="math inline">\(\longrightarrow\)</span> induction to the set <span class="math inline">\(X\setminus A.\)</span> Let <span class="math inline">\(x\in X\)</span> and assume <span class="math inline">\(\overrightarrow{x\,}\subseteq X\setminus A.\)</span> Suppose <span class="math inline">\(x\in A.\)</span> Since <span class="math inline">\(\overrightarrow{x\,}\cap A=\emptyset\)</span> it follows <span class="math inline">\(x\)</span> is a <span class="math inline">\(\longrightarrow\)</span>-minimal element of <span class="math inline">\(A\)</span> contrary to hypothesis. Thus, it follows <span class="math inline">\(x\not\in A\)</span> and so <span class="math inline">\(x\in X\setminus A.\)</span> We have shown <span class="math display">\[
+\forall x\in X, \overrightarrow{x\,}\subseteq X\setminus A \implies x\in X\setminus A
+\]</span> By the principle of <span class="math inline">\(\longrightarrow\)</span>-induction it follows <span class="math inline">\(X\setminus A=X.\)</span> Therefore, <span class="math inline">\(A\)</span> is empty as desired.</p>
+</div>
+</section>
+<section id="well-founded-recursion" class="level3">
+<h3 class="anchored" data-anchor-id="well-founded-recursion">Well-Founded Recursion</h3>
+<div id="def-recursively-defined-function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 </strong></span>Let <span class="math inline">\(Y\)</span> be a set and let <span class="math inline">\(h:X\times P(Y)\to Y\)</span> be a function. We call a function <span class="math inline">\(f:X\to Y\)</span> a <span class="math inline">\(\longrightarrow\)</span>- <strong>recursively defined function</strong> if <span class="math display">\[\begin{equation}
+f(x)=h(x,f(\overrightarrow{x\,}))
+\end{equation}\]</span> for all <span class="math inline">\(x\in X.\)</span></p>
+</div>
+<div id="lem-well-founded-recursion" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 4 (Well-Founded Recursion) </strong></span>Let <span class="math inline">\(\longrightarrow\)</span> be a relation on <span class="math inline">\(X.\)</span> Then the following are equivalent. 1. <span class="math inline">\(\longrightarrow\)</span> is well founded on <span class="math inline">\(X\)</span> 2. for every set <span class="math inline">\(Y,\)</span> there exists <span class="math inline">\(\longrightarrow\)</span>-recursively defined functions from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span> 3. <span class="math inline">\(\longrightarrow\)</span>-recursively defined functions on <span class="math inline">\(X\)</span> are unique</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>This proof is not completely rigorous not finished.</p>
+<p><span class="math inline">\((1)\Leftrightarrow(2)\)</span>: Assume <span class="math inline">\(\longrightarrow\)</span> is well-founded on <span class="math inline">\(X.\)</span> Let <span class="math inline">\(Y\)</span> be a set and let <span class="math inline">\(h:X\times P(Y)\to Y.\)</span> Consider functions <span class="math inline">\(g\)</span> defined on subsets of <span class="math inline">\(X\)</span> with values in <span class="math inline">\(Y.\)</span> We say <span class="math inline">\(R(g)\)</span> holds if both conditions are satisfied:</p>
+<ul>
+<li>for all <span class="math inline">\(x\in D(g),\)</span> <span class="math inline">\(\overrightarrow{x\,} \subseteq D(g)\)</span></li>
+<li>for all <span class="math inline">\(x\in D(g),\)</span> <span class="math inline">\(g(x)=h(x,g(\overrightarrow{x\,}))\)</span></li>
+</ul>
+<p>Claim: If <span class="math inline">\(R(g_1)\)</span> and <span class="math inline">\(R(g_2)\)</span> hold, then <span class="math inline">\(x\in D(g_1)\cap D(g_2)\)</span> implies <span class="math inline">\(g_1(x)=g_2(x).\)</span> The proof of this claim follows by <span class="math inline">\(\longrightarrow\)</span>-induction.</p>
+<p>Claim: Let <span class="math inline">\(f=\cup \{g : R(g) \text{ holds}\}.\)</span> Clearly <span class="math inline">\(f\)</span> is a relation with domain included in <span class="math inline">\(X.\)</span> We claim <span class="math inline">\(f\)</span> is a function. To prove this we have to show that if <span class="math inline">\(g_1,g_2\in \{g : R(g) \text{ holds}\}\)</span> and <span class="math inline">\(x\in D(g_1)\cap D(g_2),\)</span> then <span class="math inline">\(g_1(x)=g_2(x).\)</span> Now <span class="math inline">\(Z=D(g_1)\cap D(g_2)\)</span> is an initial segment of <span class="math inline">\(\longrightarrow\)</span> and <span class="math inline">\(\longrightarrow'=\longrightarrow\cap(Z\times Z)\)</span> is well-founded on <span class="math inline">\(Z.\)</span> It follows by induction on <span class="math inline">\(\longrightarrow'\)</span> that if <span class="math inline">\(x\in Z,\)</span> then <span class="math inline">\(g_1(x)=g_2(x).\)</span></p>
+<p>Claim: <span class="math inline">\(f\)</span> is maximal such that <span class="math inline">\(R(f)\)</span> holds. Next we claim that <span class="math display">\[\begin{equation}
+\label{fmaxp}
+x\in D(f) \implies f(x)=g(x,f(\overrightarrow{x\,})).
+\end{equation}\]</span> To prove <span class="math inline">\(\eqref{fmaxp}\)</span> assume <span class="math inline">\(x\in D(f).\)</span> Then <span class="math inline">\(x\in D(g)\)</span> for some <span class="math inline">\(g\)</span> such that <span class="math inline">\(R(g)\)</span> holds. It follows that <span class="math display">\[
+f(x)=g(x)=h(x,\{g(\overrightarrow{x\,}))=h(x,\{f(\overrightarrow{x\,})\}).
+\]</span></p>
+<p>Claim: <span class="math inline">\(D(f)=X.\)</span> The proof of this claim follows by <span class="math inline">\(\longrightarrow\)</span>-induction. Let <span class="math inline">\(x\)</span> be such that <span class="math inline">\(\overrightarrow{x\,}\subseteq D(f).\)</span> Since <span class="math inline">\(D(f)\)</span> is an initial segment of <span class="math inline">\(\longrightarrow,\)</span> so is <span class="math inline">\(D(f)\cup \{x\}.\)</span> Let <span class="math display">\[
+f'=f\cup \{x,g(x,f(\overrightarrow{x\,}))\}.
+\]</span> Then <span class="math inline">\(R(f')\)</span> holds and hence <span class="math inline">\(x\in D(f).\)</span></p>
+Conversely, we assume the principle of definition of recursion to hold. We define a rank function <span class="math display">\[
+\mathop{rk}(x)=\mathop{sup}_{x\longrightarrow y} \mathop{rk}(y).
+\]</span> It then follows that <span class="math inline">\(\longrightarrow\)</span> is well-founded since <span class="math display">\[
+x\longrightarrow y \Leftrightarrow \mathop{rk} (y)\in \mathop{rk}(x).
+\]</span> Alternatively, we can simplify the proof by assuming <span class="math inline">\(\longrightarrow\)</span> is transitive. Suppose <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(X\)</span> that has no minimal element, and define (by recursion applied to the characteristic function of <span class="math inline">\(M\)</span>): <span class="math display">\[
+\textrm{
+$x$ belongs to $M$ if and only if for every $x\longrightarrow y,$ if $y$ is in $A$ then $y$ is not in $M.$
+}
+\]</span> Then for <span class="math inline">\(x\)</span> in <span class="math inline">\(A,\)</span> if <span class="math inline">\(x\)</span> is in <span class="math inline">\(M\)</span> there is a <span class="math inline">\(x\longrightarrow y\)</span> in <span class="math inline">\(A\)</span> (since <span class="math inline">\(A\)</span> has no minimal element) which is not in <span class="math inline">\(M.\)</span> But then there is a <span class="math inline">\(y\longrightarrow z\)</span> in <span class="math inline">\(A\)</span> which is in <span class="math inline">\(M,\)</span> and since <span class="math inline">\(x\longrightarrow z\)</span> we have a contradiction. So no <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span> is in <span class="math inline">\(M.\)</span> But then every <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span> is in <span class="math inline">\(M,\)</span> so <span class="math inline">\(A\)</span> must be empty. We thus see that given the defining property of <span class="math inline">\(M,\)</span> the assumption that <span class="math inline">\(A\)</span> has no minimal element, and the transitivity of <span class="math inline">\(\longrightarrow,\)</span> logical manipulation allows us to conclude that <span class="math inline">\(A\)</span> is empty.
+<p><span class="math inline">\((1)\Leftrightarrow(3)\)</span>: Assume <span class="math inline">\(\longrightarrow\)</span> is well-founded on <span class="math inline">\(X.\)</span> We say that <span class="math inline">\(\phi:Z\to Y\)</span> is an attempt if <span class="math inline">\(Z\)</span> is an initial segment of <span class="math inline">\(X,\)</span> and <span class="math display">\[
+\phi(x)=g(x,\{\phi(z):x \longrightarrow z\}) \quad \text{for all $x\in Z.$}
+\]</span> If <span class="math inline">\(\phi_1:Z_1\to Y\)</span> and <span class="math inline">\(\phi_2: Z_2\to Y\)</span> are two attempts, they agree on <span class="math inline">\(Z_1\cap Z_2\)</span> namely <span class="math inline">\(\phi_1|_{Z_1 \cap Z_2}=\phi_2|_{Z_1 \cap Z_2}.\)</span> Because <span class="math inline">\(X_1\cap X_2\)</span> is clearly an initial segment of <span class="math inline">\(X\)</span> and if as attempts that do not agree there is some <span class="math inline">\(x_0\)</span> which is <span class="math inline">\(\longrightarrow\)</span>-minimal in <span class="math inline">\(\{x\in Z_1 \cap Z_2 : \phi_1(x)\neq \phi_2(x)\}.\)</span> But in that case we have <span class="math display">\[
+\phi_1(x_0)
+=g(x_0,\{\phi_0(x) : x_0\longrightarrow x\})
+=g(x_0, \{\phi_1(x) | x_0\longrightarrow x\})
+\]</span> a contradiction.</p>
+<p>Conversely, we will show uniqueness implies well-foundedness. Assume <span class="math inline">\(X\)</span> is nontrivial by having two elements, say <span class="math inline">\(a_0\)</span> and <span class="math inline">\(a_1.\)</span></p>
+</div>
+</section>
+<section id="chains" class="level3">
+<h3 class="anchored" data-anchor-id="chains">Chains</h3>
+<p>The next proposition asserts that every relation <span class="math inline">\(\longrightarrow\)</span> on <span class="math inline">\(X\)</span> is well-founded if and only if every <span class="math inline">\(\longrightarrow\)</span>-chain in <span class="math inline">\(X\)</span> is finite.</p>
+<div id="lem-infinitely-descending-chains" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 5 </strong></span>Let <span class="math inline">\(\longrightarrow\)</span> be a relation on <span class="math inline">\(X.\)</span> Then <span class="math inline">\(\longrightarrow\)</span> is well-founded if and only there are no infinitely descending <span class="math inline">\(\longrightarrow\)</span>-chains.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume there exists an infinite descending <span class="math inline">\(\longrightarrow\)</span>-chain <span class="math inline">\(B.\)</span> Then <span class="math inline">\(B\subseteq A\)</span> has no <span class="math inline">\(\longrightarrow\)</span>-minimal element and thus <span class="math inline">\(\longrightarrow\)</span> is not well-founded. The result follows by contrapositive.</p>
+<p>Conversely, assume for a contradiction that <span class="math inline">\(B\)</span> is a nonempty subset of <span class="math inline">\(X\)</span> with no <span class="math inline">\(\longrightarrow\)</span>-minimal element. Then the set <span class="math inline">\(A_a=\{b\in B : b \longrightarrow a\}\)</span> is nonempty for each <span class="math inline">\(a\in B,\)</span> for otherwise <span class="math inline">\(a\)</span> would be an <span class="math inline">\(\longrightarrow\)</span>-minimal element of <span class="math inline">\(B.\)</span> The principle of choice, applied to the family <span class="math inline">\(\{A_a\}_{a\in B},\)</span> provides a function <span class="math display">\[
+f: B\longrightarrow \bigcup_{a\in B} A_a\subseteq B \text{ with } f(a) \longrightarrow a,  \text{ for all } a\in B.
+\]</span> Since <span class="math inline">\(B\)</span> is nonempty, fix <span class="math inline">\(a_0\in B.\)</span> Define the sequence <span class="math inline">\(\{a_n\}_{n\in \mathbb{N}}\)</span> recursively by <span class="math inline">\(a_{n+1}=f(a_n)\)</span> and notice this sequence forms a strictly descending <span class="math inline">\(\longrightarrow\)</span>-chain. This contradicts the assumption that there are no strictly descending <span class="math inline">\(\longrightarrow\)</span>-chains in <span class="math inline">\(X.\)</span> Thus every nonempty subset of <span class="math inline">\(B\)</span> must have a <span class="math inline">\(\longrightarrow\)</span>-minimal element.</p>
+</div>
+<p>::: {#lem-well-founded-relation-unique function } Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be sets. Let <span class="math inline">\(\longrightarrow\)</span> be a well-founded relation on <span class="math inline">\(X,\)</span> and let <span class="math inline">\(g:X\times P(Y)\to Y\)</span> be a function. Then there exists a unique function <span class="math inline">\(f:X\to Y\)</span> such that <span class="math display">\[
+f(x)=g(x,\{f(z): x\longrightarrow z\})
+\]</span> for all <span class="math inline">\(x\in X.\)</span> :::</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We say that <span class="math inline">\(\phi:Z\to Y\)</span> is an attempt if <span class="math inline">\(Z\)</span> is an initial segment of <span class="math inline">\(X,\)</span> and <span class="math display">\[
+\phi(x)=g(x,\{\phi(z):x \longrightarrow z\}) \quad \text{for all $x\in Z.$}
+\]</span> If <span class="math inline">\(\phi_1:Z_1\to Y\)</span> and <span class="math inline">\(\phi_2: Z_2\to Y\)</span> are two attempts, they agree on <span class="math inline">\(Z_1\cap Z_2\)</span> namely <span class="math inline">\(\phi_1|_{Z_1 \cap Z_2}=\phi_2|_{Z_1 \cap Z_2}.\)</span> Because <span class="math inline">\(X_1\cap X_2\)</span> is clearly an initial segment of <span class="math inline">\(X\)</span> and if as attempts that do not agree there is some <span class="math inline">\(x_0\)</span> which is <span class="math inline">\(\longrightarrow\)</span>-minimal in <span class="math inline">\(\{x\in Z_1 \cap Z_2 : \phi_1(x)\neq \phi_2(x)\}.\)</span> But in that case we have <span class="math display">\[
+\phi_1(x_0)
+=g(x_0,\{\phi_0(x) : x_0\longrightarrow x\})
+=g(x_0, \{\phi_1(x) | x_0\longrightarrow x\})
+\]</span> a contradiction.</p>
+<p>Now let <span class="math inline">\(f=\cup \{\phi : \phi \text{ is an attempt}\},\)</span> so <span class="math inline">\(f(x)=\phi(x)\)</span> if there is an attempt <span class="math inline">\(\phi\)</span> with <span class="math inline">\(x\in D(\phi).\)</span> It is clear that <span class="math inline">\(D(f)=\cup \{D(\phi) : \phi \text{ is an attempt} \}\)</span> is an initial segment of <span class="math inline">\(X,\)</span> and that <span class="math inline">\(f\)</span> satisfies <span class="math inline">\(f(x)=g(x,f(z)|x \longrightarrow z)\}\)</span> for all <span class="math inline">\(x\in D(f).\)</span> So all that remains to be shown is that <span class="math inline">\(D(f)=X.\)</span></p>
+<p>But if <span class="math inline">\(D(f)\neq X\)</span> there is some <span class="math inline">\(x_0\)</span> that is <span class="math inline">\(\longrightarrow\)</span> minimal in <span class="math inline">\(\{x\in X : x\not\in D(f)\}.\)</span> For such an <span class="math inline">\(x\)</span> define <span class="math inline">\(\overline{f}:D(f)\cup \{x_0\}\to Y\)</span> by <span class="math display">\[
+\overline{f}(x)=
+\begin{cases}
+f(x) &amp; \text{ if } x\in D(f) \\
+g(x_0,\{f(x) : x_0 \longrightarrow x\}) &amp; \text{ if } x=x_0.
+\end{cases}
+\]</span> Then one would clearly have that <span class="math inline">\(\overline{f}\)</span> is an attempt, but is not a subset of <span class="math inline">\(f.\)</span> Hence a contradiction and so <span class="math inline">\(f:X\to Y\)</span> as desired.</p>
+</div>
+<div id="lem-infinite-descending" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 6 </strong></span>Let <span class="math inline">\(f:X\to Y\)</span> be a function. If <span class="math inline">\(\longrightarrow_Y\)</span> is a well-founded relation on <span class="math inline">\(Y,\)</span> then the relation defined on <span class="math inline">\(X\)</span> by <span class="math inline">\(x \longrightarrow_X y \Leftrightarrow f(x)\longrightarrow_Y f(y)\)</span> is well-founded.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Any infinite descending <span class="math inline">\(\longrightarrow_X\)</span>-chain leads to an infinite descending <span class="math inline">\(\longrightarrow_Y\)</span>-chain.</p>
+</div>
+<div id="lem-well-founded-char" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 7 </strong></span>Let <span class="math inline">\(\longrightarrow\)</span> be a relation on <span class="math inline">\(X.\)</span> Then <span class="math inline">\(\longrightarrow\)</span> is well-founded if and only if <span class="math inline">\(\longrightarrow^+\)</span> is well-founded.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Clearly any infinite descending chain <span class="math display">\[
+x_0 \longrightarrow^+ x_1 \longrightarrow^+ x_2 \longrightarrow^+ \cdots
+\]</span> would induce an infinite descending chain with respect to <span class="math inline">\(\longrightarrow.\)</span> This follows easily since <span class="math inline">\(\longrightarrow\subseteq \longrightarrow^+\)</span> and that any subrelation of a well-founded relation is a well-founded relation. Conversely, in order to show <span class="math inline">\(\longrightarrow^+\)</span> is well-founded, assume <span class="math display">\[
+x_1 \longrightarrow^+ x_2 \longrightarrow^+ x_3  \longrightarrow^+\cdots
+\]</span> is an infinite descending <span class="math inline">\(\longrightarrow^+\)</span>-chain. Then there exists <span class="math inline">\(i_j\geq 1\)</span> such that <span class="math inline">\(x_j\longrightarrow^{i_j} x_{j+1}\)</span> for all <span class="math inline">\(j\geq 1.\)</span> This implies that <span class="math display">\[
+x_1 \longrightarrow^{i_1} x_2 \longrightarrow^{i_2} x_3 \longrightarrow^{i_3} \cdots
+\]</span> is an infinite <span class="math inline">\(\longrightarrow\)</span>-chain. But this contradicts the well-foundedness of <span class="math inline">\(\longrightarrow.\)</span></p>
+</div>
+</section>
+</section>
+<section id="confluent-relations" class="level2">
+<h2 class="anchored" data-anchor-id="confluent-relations">Confluent Relations</h2>
+<p>This chapter is covers reduction relations, Newmann’s Lemma, Buchberger-Winkler’s Property, and more.</p>
+<section id="reduction-relation" class="level3">
+<h3 class="anchored" data-anchor-id="reduction-relation">Reduction Relation</h3>
+<p>A <strong>reduction relation</strong> is a binary relation with additional properties that allow us to model the idea of <em>reduction</em>. In particular, we will consider well-founded relations as a starting point. Moreover, since the transitive closure of a well-founded relation is also well-founded relation, we will also study partial order relations.</p>
+<p>A conﬂuent relation is a binary relation that is both left-conﬂuent and right-conﬂuent. In other words, for every element in the relation, there is a unique element that it can be reduced to on the left side and a unique element that it can be reduced to on the right side.</p>
+<p>Conﬂuent relations are used in a variety of different contexts, including computer science, mathematics, and physics. In computer science, they are used to define algorithms; in mathematics, they are used to study equations and systems of equations; in physics, they are used to model physical phenomena. Further, they are used in the study of abstract data types, formal language theory, automata theory, and compiler design.</p>
+<p>Newman’s lemma is a result in confluent relations that suggests a local confluence and confluence are equivalent whenever the relation is well-founded. The lemma is named for Max Newmann, who proved the result in 1936.</p>
+<p>A confluent relation is one in which every pair of connected elements can be brought into a common cluster. In other words, if you have two elements that are related by the confluent relation, there must be a third element that is related to both of them. Local confluence is a weaker form of confluence that only requires every pair of connected elements to be brought into a common cluster if they share a certain property.</p>
+<p>The lemma has important implications for confluent relations, as it provides a way to check whether a given relation is confluent or not.</p>
+<p>Newmann’s lemma has many applications in different areas of mathematics and computer science. In particular, it is used in the study of abstract data types, formal language theory, automata theory, and compiler design.</p>
+<p>In this chapter, you’ll learn about the Buchberger-Winkler Property (also called the generalized Newman’s Lemma) and about abstract reduction systems.</p>
+<p>In short, under well-foundedness, confluent means that given any two “paths” emanating from some element in the set, there is always a unique way to combine those paths so as to get back to the original element. Moreover, an abstract reduction system is simply a confluent and well-founded reduction relation on some set. The importance of abstract reduction systems lies in the fact that they can be used to model a wide variety of systems, ranging from computational systems to biological systems.</p>
+</section>
+<section id="confluence" class="level3">
+<h3 class="anchored" data-anchor-id="confluence">Confluence</h3>
+<p>Confluent relations are important in the study of rewriting systems, as they ensure that any two equivalent elements can be transformed into each other by repeatedly applying the rules of the system. Moreover, confluent relations have the property that any two elements that are related by R can be “reached” from each other by following a path through the relation. As a result, confluent relations play an important role in the study of rewriting systems.</p>
+<p>We discuss confluent relations; in particular, we prove Newman’s Lemma: that local confluence, confluence, the Church-Rosser property, and the unique normal forms property are all equivalent for a well-founded relation. We also give a generalization of Newman’s lemma based on the Buchberger-Winkler’s Property.</p>
+<p>Let <span class="math inline">\(\longrightarrow\)</span> be a relation on <span class="math inline">\(X.\)</span> If there exists <span class="math inline">\(c\in X\)</span> such that <span class="math inline">\(a\stackrel{*}{\longrightarrow} c\)</span> and <span class="math inline">\(b\stackrel{*}{\longrightarrow} c,\)</span> then <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are said to have a <strong>common successor</strong>, denoted by <span class="math inline">\(a \downarrow b.\)</span> If there does not exist <span class="math inline">\(b\in X\)</span> such that <span class="math inline">\(a\longrightarrow b,\)</span> then <span class="math inline">\(a\)</span> is called a normal form of <span class="math inline">\(\longrightarrow.\)</span> If <span class="math inline">\(a\stackrel{*}{\longrightarrow} b\)</span> and <span class="math inline">\(b\)</span> is a normal form, then <span class="math inline">\(b\)</span> is called a <strong>normal form</strong> of <span class="math inline">\(X.\)</span></p>
+<div id="thm-well-founded-normal-form" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 </strong></span>Well-founded implies every element has a normal form.</p>
+</div>
+<div id="def-confluence" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 </strong></span>Let <span class="math inline">\(\longrightarrow\)</span> be a relation on <span class="math inline">\(X.\)</span></p>
+<ol type="1">
+<li>A relation <span class="math inline">\(\longrightarrow\)</span> is called <strong>locally confluent</strong> whenever <span class="math inline">\(a \longrightarrow b\)</span> and <span class="math inline">\(a \longrightarrow c\)</span> implies <span class="math inline">\(b \downarrow c,\)</span> for all <span class="math inline">\(a,b,c\in X.\)</span></li>
+<li>A relation <span class="math inline">\(\longrightarrow\)</span> is called <strong>confluent</strong> whenever <span class="math inline">\(a \stackrel{*}{\longrightarrow} b\)</span> and <span class="math inline">\(a \stackrel{*}{\longrightarrow} c\)</span> implies <span class="math inline">\(b \downarrow c,\)</span> for all <span class="math inline">\(a,b,c\in X.\)</span></li>
+<li>A relation <span class="math inline">\(\longrightarrow\)</span> is said to satisfy the <strong>unique normal forms property</strong> if <span class="math inline">\(a \stackrel{*}{\longrightarrow} b\)</span> and <span class="math inline">\(a \stackrel{*}{\longrightarrow} c\)</span> with <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> in <span class="math inline">\(\longrightarrow\)</span>-normal form implies <span class="math inline">\(b=c,\)</span> for all <span class="math inline">\(a,b,c\in X.\)</span></li>
+<li>A relation <span class="math inline">\(\longrightarrow\)</span> is said to have the <strong>Church-Rosser property</strong> whenever <span class="math inline">\(b\stackrel{*}{\longleftrightarrow} c\)</span> implies <span class="math inline">\(b\downarrow c,\)</span> for all <span class="math inline">\(a,b,c\in X.\)</span><br>
+</li>
+</ol>
+</div>
+</section>
+<section id="newmans-lemma" class="level3">
+<h3 class="anchored" data-anchor-id="newmans-lemma">Newman’s Lemma</h3>
+<div id="thm-Newman" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 </strong></span>Let <span class="math inline">\(\longrightarrow\)</span> be a well-founded relation on <span class="math inline">\(X.\)</span> Then the following properties are equivalent.</p>
+<ol type="1">
+<li>local confluence</li>
+<li>confluence</li>
+<li>unique normal forms</li>
+<li>Church-Rosser property</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\((1)\Rightarrow(2)\)</span>: Assume for a contradiction that <span class="math inline">\(\longrightarrow\)</span> is locally confluent but that the set <span class="math display">\[
+T=\left\{ a \in X  : \exists \, \, b, c \in X \text{ with } a \stackrel{*}{\longrightarrow} b \text{ and } a \stackrel{*}{\longrightarrow} c \text{ but not } b \downarrow c\right \}
+\]</span> is non-empty. Since <span class="math inline">\(\longrightarrow\)</span> is well-founded, <span class="math inline">\(T\)</span> has a <span class="math inline">\(\longrightarrow\)</span>-minimial element <span class="math inline">\(a.\)</span> Let <span class="math inline">\(b,c \in X\)</span> with <span class="math inline">\(a \stackrel{*}{\longrightarrow} b\)</span> and <span class="math inline">\(a \stackrel{*}{\longrightarrow} c,\)</span> but not <span class="math inline">\(b \downarrow c.\)</span> If <span class="math inline">\(a=b\)</span> or <span class="math inline">\(a=c,\)</span> then it trivially follows <span class="math inline">\(b \downarrow c.\)</span> Otherwise there must exist <span class="math inline">\(b', c'\in X\)</span> (possibly <span class="math inline">\(b'=b\)</span> or <span class="math inline">\(c'=c\)</span>) with <span class="math display">\[
+a \longrightarrow b' \stackrel{*}{\longrightarrow} b
+\quad \text{and} \quad
+a \longrightarrow c' \stackrel{*}{\longrightarrow} c.
+\]</span> By the local confluence of <span class="math inline">\(\longrightarrow,\)</span> there exists <span class="math inline">\(d\in X\)</span> with <span class="math display">\[
+a \longrightarrow b' \stackrel{*}{\longrightarrow} d
+\quad \text{and} \quad
+a \longrightarrow c' \stackrel{*}{\longrightarrow} d.
+\]</span> By the minimality of <span class="math inline">\(a\)</span> in <span class="math inline">\(T\)</span> it follows <span class="math inline">\(b'\not\in T,\)</span> and so there exists <span class="math inline">\(e\in X\)</span> with <span class="math display">\[
+a\longrightarrow b' \stackrel{*}{\longrightarrow} b \stackrel{*}{\longrightarrow} e
+\quad \text{and} \quad
+a\longrightarrow b' \stackrel{*}{\longrightarrow} d \stackrel{*}{\longrightarrow} e.
+\]</span> Then <span class="math inline">\(a\longrightarrow c' \stackrel{*}{\longrightarrow} d \stackrel{*}{\longrightarrow} e\)</span> and again by the minimality of <span class="math inline">\(a\)</span> in <span class="math inline">\(T\)</span> it follows <span class="math inline">\(c'\not\in T.\)</span> Thus there exists <span class="math inline">\(f \in X\)</span> with <span class="math display">\[
+a \longrightarrow c' \stackrel{*}{\longrightarrow} d \stackrel{*}{\longrightarrow} e \stackrel{*}{\longrightarrow} f
+\quad \text{and} \quad
+a \longrightarrow c' \stackrel{*}{\longrightarrow} c \stackrel{*}{\longrightarrow} f.
+\]</span> Therefore we have shown <span class="math display">\[
+a \longrightarrow b' \stackrel{*}{\longrightarrow} b \stackrel{*}{\longrightarrow} e \stackrel{*}{\longrightarrow} f
+\quad \text{and} \quad
+a \longrightarrow c' \stackrel{*}{\longrightarrow} c \stackrel{*}{\longrightarrow} f.
+\]</span> and so <span class="math inline">\(b \downarrow c\)</span> which is contrary to assumption.</p>
+<span class="math inline">\((2)\Rightarrow(3)\)</span>: Let <span class="math inline">\(a \stackrel{*}{\longrightarrow} b\)</span> and <span class="math inline">\(a \stackrel{*}{\longrightarrow} c,\)</span> and suppose <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are in <span class="math inline">\(\longrightarrow\)</span>-normal form. There exists <span class="math inline">\(d \in X\)</span> with <span class="math inline">\(b \stackrel{*}{\longrightarrow} d\)</span> and <span class="math inline">\(c \stackrel{*}{\longrightarrow} d,\)</span> and thus <span class="math inline">\(b=d=c.\)</span>
+<p><span class="math inline">\((3)\Rightarrow(4)\)</span>: Claim: by induction on <span class="math inline">\(k\in \mathbb{N}\)</span> that for all <span class="math inline">\(a, b \in X\)</span> with <span class="math inline">\(a \stackrel{k}{\longleftrightarrow} b\)</span> it follows that <span class="math inline">\(a \downarrow b.\)</span> The case <span class="math inline">\(k=0\)</span> is trivial. Now let <span class="math inline">\(a \stackrel{k+1}{\longleftrightarrow} b,\)</span> say <span class="math inline">\(a \stackrel{k}{\longleftrightarrow} c \longleftrightarrow b.\)</span> Then by induction hypothesis there exists <span class="math inline">\(d \in X\)</span> with <span class="math inline">\(a \stackrel{*}{\longrightarrow} d\)</span> and <span class="math inline">\(c \stackrel{*}{\longrightarrow} d.\)</span> If <span class="math inline">\(b \longrightarrow c,\)</span> then <span class="math inline">\(a \stackrel{*}{\longrightarrow} d\)</span> and <span class="math inline">\(b \stackrel{*}{\longrightarrow} d\)</span> and so <span class="math inline">\(a \downarrow b.\)</span><br>
+For the other case, assume <span class="math inline">\(c \longrightarrow b.\)</span> Let <span class="math inline">\(d'\)</span> be a normal form of <span class="math inline">\(d\)</span> and let <span class="math inline">\(b'\)</span> be a normal form of <span class="math inline">\(b\)</span> with respect to <span class="math inline">\(\longrightarrow.\)</span> Then <span class="math inline">\(c \stackrel{*}{\longrightarrow} b'\)</span> and <span class="math inline">\(c \stackrel{*}{\longrightarrow} d',\)</span> and so <span class="math inline">\(d'\)</span> and <span class="math inline">\(b'\)</span> are normal forms of <span class="math inline">\(c\)</span> and hence equal. Thus we have <span class="math inline">\(a \stackrel{*}{\longrightarrow} d'\)</span> and <span class="math inline">\(b \stackrel{*}{\longrightarrow} d',\)</span> which means <span class="math inline">\(a \downarrow b.\)</span></p>
+<p><span class="math inline">\((4)\Rightarrow(1)\)</span>: If <span class="math inline">\(a \longrightarrow b\)</span> and <span class="math inline">\(a \longrightarrow c,\)</span> then <span class="math inline">\(b \stackrel{*}{\longleftrightarrow} c,\)</span> and so it follows <span class="math inline">\(b \downarrow c.\)</span></p>
+</div>
+<div id="cor-normal-form-confluent" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 1 </strong></span>If <span class="math inline">\(\longrightarrow\)</span> is confluent and <span class="math inline">\(a\stackrel{*}{\longleftrightarrow} b,\)</span> then</p>
+<ol type="1">
+<li>if <span class="math inline">\(b\)</span> is in normal form, then <span class="math inline">\(a\stackrel{*}{\longrightarrow} b,\)</span> and</li>
+<li>if <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are in normal form, then <span class="math inline">\(a=b.\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>This proof is left as an exercise.</p>
+</div>
+<p>Thus we know that for confluent relations, two elements are equivalent if and only if they have a common successor.</p>
+</section>
+<section id="connected-below" class="level3">
+<h3 class="anchored" data-anchor-id="connected-below">Connected Below</h3>
+<p>In this part we follows the ideas in buchberger1983criterion.</p>
+<div id="def-connected-below-buchberger-Winkler" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 </strong></span>Let <span class="math inline">\(\longrightarrow\)</span> be a relation on <span class="math inline">\(X.\)</span></p>
+<ol type="1">
+<li>If there exists <span class="math inline">\(c_1,c_2,\ldots,c_n\in X\)</span> such that <span class="math display">\[b_1=c_1\longleftrightarrow c_2\longleftrightarrow \cdots \longleftrightarrow c_n=b_2\]</span> and <span class="math inline">\(a\longrightarrow^+ c_i\)</span> for <span class="math inline">\(i=1,2,\ldots,n,\)</span> then <span class="math inline">\(b_1\)</span> and <span class="math inline">\(b_2\)</span> are said to be <em>connected below</em> <span class="math inline">\(a,\)</span> denoted by <span class="math inline">\(b_1 \stackrel{a}{\longleftrightarrow} b_2.\)</span></li>
+<li>A relation <span class="math inline">\(\longrightarrow\)</span> on <span class="math inline">\(X\)</span> is said to have the <strong>Buchberger-Winkler property</strong> whenever <span class="math inline">\(a\longrightarrow b\)</span> and <span class="math inline">\(a\longrightarrow c\)</span> implies <span class="math inline">\(b \stackrel{a}{\longleftrightarrow} c\)</span> for all <span class="math inline">\(a,b,c\in X.\)</span></li>
+</ol>
+</div>
+<div id="thm-buchberger-winkler-property" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 </strong></span>Let <span class="math inline">\(\longrightarrow\)</span> be a well-founded relation on <span class="math inline">\(X.\)</span> Then <span class="math inline">\(\longrightarrow\)</span> is confluent if and only if the Buchberger-Winkler property holds.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(\longrightarrow\)</span> is confluent and <span class="math inline">\(a \longrightarrow b\)</span> and <span class="math inline">\(a \longrightarrow c\)</span> for <span class="math inline">\(a, b, c \in X.\)</span> Then there exists <span class="math inline">\(d\)</span> such that <span class="math inline">\(b\stackrel{*}{\longrightarrow} d\)</span> and <span class="math inline">\(c\stackrel{*}{\longrightarrow} d.\)</span> It follows that <span class="math inline">\(b \stackrel{a}{\longleftrightarrow} c.\)</span></p>
+<p>Conversely, assume <span class="math inline">\(a, b, c\)</span> are arbitrary, but fixed such that <span class="math inline">\(a \stackrel{*}{\longrightarrow} b\)</span> and <span class="math inline">\(a \stackrel{*}{\longrightarrow} c.\)</span> The proof follows by induction on <span class="math inline">\(\longrightarrow.\)</span> The first induction hypothesis is:<br>
+<span class="math display">\[
+\forall \, a' \, (a\longrightarrow^+ a'), \forall \, b', c' \, (\text{if }  a' \stackrel{*}{\longrightarrow} c'  \text{ and } a' \stackrel{*}{\longrightarrow} b'  \text{, then } b' \downarrow c').
+\]</span> It is required to show <span class="math inline">\(b \downarrow c,\)</span> that is <span class="math inline">\(b \stackrel{*}{\longrightarrow} d\)</span> and <span class="math inline">\(c \stackrel{*}{\longrightarrow} d\)</span> for some <span class="math inline">\(d.\)</span> The cases <span class="math inline">\(a=b\)</span> or <span class="math inline">\(a=c\)</span> are trivial. Assume <span class="math inline">\(a \neq b\)</span> and <span class="math inline">\(a \neq c.\)</span> Then there exist <span class="math inline">\(b_1\)</span> and <span class="math inline">\(c_1\)</span> such that <span class="math inline">\(a \longrightarrow b_1 \stackrel{*}{\longrightarrow} b\)</span> and <span class="math inline">\(a \longrightarrow c_1 \stackrel{*}{\longrightarrow} c.\)</span> By assuming <span class="math inline">\(\longrightarrow\)</span> has the Buchberger property, there exists <span class="math inline">\(e_1, e_2, \ldots , e_n\)</span> such that <span class="math inline">\(b_1=e_1 \longleftrightarrow e_2 \longleftrightarrow \cdots \longleftrightarrow e_n=c_1\)</span> and <span class="math inline">\(a\longrightarrow^+ e_i.\)</span> we will proceed by induction on <span class="math inline">\(n\)</span> and show: for all <span class="math inline">\(n,\)</span> for all <span class="math inline">\(e_1, e_2, \ldots,e_n\)</span>:</p>
+<p><span class="math display">\[\begin{equation}
+\label{conflutwo}
+\text{if} \quad  e_1 \longleftrightarrow e_2 \longleftrightarrow \cdots  \longleftrightarrow e_n \quad \text{with} \quad   a\longrightarrow^+ e_i , \qquad \text{then } \qquad e_1\downarrow e_n.
+\tag{*}
+\end{equation}\]</span></p>
+<p>Notice <span class="math inline">\(\eqref{conflutwo}\)</span> is clear for <span class="math inline">\(n=1.\)</span> Our second induction hypothesis is: <span class="math inline">\(\eqref{conflutwo}\)</span> is true for some <span class="math inline">\(n.\)</span> Assume <span class="math inline">\(e_1\longleftrightarrow e_2 \longleftrightarrow \cdots \longleftrightarrow e_n \longleftrightarrow e_{n+1}\)</span> and <span class="math inline">\(a\longrightarrow^+ e_i\)</span> for <span class="math inline">\(i=1, 2, \ldots,n+1.\)</span> By induction hypothesis 2, there exists <span class="math inline">\(d_1\)</span> such that <span class="math inline">\(e_1\stackrel{*}{\longrightarrow} d_1\)</span> and <span class="math inline">\(e_n\stackrel{*}{\longrightarrow} d_1.\)</span> If <span class="math inline">\(e_{n+1}\longrightarrow e_n\)</span> then <span class="math inline">\(e_{n+1} \stackrel{*}{\longrightarrow} d_1\)</span> and so <span class="math inline">\(e_1\downarrow e_{n+1}.\)</span> If <span class="math inline">\(e_n \longrightarrow e_{n+1},\)</span> then by induction hypothesis 1, there exists <span class="math inline">\(d_1'\)</span> such that <span class="math inline">\(d_1\stackrel{*}{\longrightarrow} d_1'\)</span> and <span class="math inline">\(e_{n+1} \stackrel{*}{\longrightarrow} d_1'.\)</span> Thus, it follows <span class="math inline">\(e_1\downarrow e_{n+1}\)</span> in this case as well. Therefore, <span class="math inline">\(\eqref{conflutwo}\)</span> is proven by induction and so <span class="math inline">\(d_1\)</span> exists such that <span class="math inline">\(e_1\stackrel{*}{\longrightarrow} d_1\)</span> and <span class="math inline">\(e_n\stackrel{*}{\longrightarrow} d_1\)</span> for all <span class="math inline">\(n.\)</span> Then, <span class="math inline">\(b_1 \stackrel{*}{\longrightarrow} d_1,\)</span> <span class="math inline">\(b_1 \stackrel{*}{\longrightarrow} b,\)</span> and <span class="math inline">\(a\longrightarrow b_1\)</span> implies, by induction hypothesis 1, that there exists <span class="math inline">\(f\)</span> such that <span class="math inline">\(b \stackrel{*}{\longrightarrow} f\)</span> and <span class="math inline">\(d_1 \stackrel{*}{\longrightarrow} f.\)</span> It follows that, <span class="math inline">\(c_1 \stackrel{*}{\longrightarrow} c\)</span> and <span class="math inline">\(c_1 \stackrel{*}{\longrightarrow} f.\)</span> Again by induction hypothesis 1, there exists <span class="math inline">\(d\)</span> such that <span class="math inline">\(f \stackrel{*}{\longrightarrow} d\)</span> and <span class="math inline">\(c \stackrel{*}{\longrightarrow} d.\)</span> Therefore, it follows <span class="math inline">\(b \stackrel{*}{\longrightarrow} d\)</span> and <span class="math inline">\(c \stackrel{*}{\longrightarrow} d.\)</span></p>
+</div>
+</section>
+<section id="terminating" class="level3">
+<h3 class="anchored" data-anchor-id="terminating">Terminating</h3>
+<p>Let <span class="math inline">\(X\)</span> be a set and <span class="math inline">\(\to\)</span> a reduction (binary relation) on <span class="math inline">\(X.\)</span> A <strong>chain</strong> with respect to <span class="math inline">\(\to\)</span> is a sequence of elements <span class="math inline">\(x_1,x_2,x_3,\ldots\)</span> in <span class="math inline">\(X\)</span> such that <span class="math inline">\(x_1\to x_2,\)</span> <span class="math inline">\(x_2\to x_3,\)</span> etc. A chain with respect to <span class="math inline">\(\to\)</span> is usually written <span class="math display">\[x_1\to x_2 \to x_3 \to \cdots \to x_n \to \cdots.\]</span> The length of a chain is the cardinality of its underlying sequence. A chain is finite if its length is finite. Otherwise, it is infinite.</p>
+<div id="def-terminating" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 </strong></span>A reduction <span class="math inline">\(\to\)</span> on a set <span class="math inline">\(X\)</span> is said to be <strong>terminating</strong> if it has no infinite chains. In other words, every chain <strong>terminates</strong>.</p>
+</div>
+<p>Here are a few examples.</p>
+<ul>
+<li>If <span class="math inline">\(\to\)</span> is reflexive, or non-trivial symmetric, then it is never terminating.</li>
+<li>Let <span class="math inline">\(X\)</span> be the set of all positive integers greater than <span class="math inline">\(1.\)</span> Define <span class="math inline">\(\to\)</span> on <span class="math inline">\(X\)</span> so that <span class="math inline">\(a\to b\)</span> means that <span class="math inline">\(a=bc\)</span> for some <span class="math inline">\(c\in X.\)</span> Then <span class="math inline">\(\to\)</span> is a terminating reduction. By the way, <span class="math inline">\(\to\)</span> is also a normalizing reduction.</li>
+<li>In fact, it is easy to see that a terminating reduction is normalizing: if <span class="math inline">\(a\)</span> has no normal form, then we may form an infinite chain starting from <span class="math inline">\(a.\)</span></li>
+<li>On the other hand, not all normalizing reduction is terminating. A canonical example is the set of all non-negative integers with the reduction <span class="math inline">\(\to\)</span> defined by <span class="math inline">\(a\to b\)</span> if and only if either <span class="math inline">\(a,b\ne 0,\)</span> <span class="math inline">\(a\ne b,\)</span> and <span class="math inline">\(aj,\)</span> and <span class="math inline">\(j\)</span> arbitrary.</li>
+<li>The reflexive transitive closure of a terminating relation is a partial order.</li>
+</ul>
+<p>A closely related concept is the descending chain condition (DCC). A reduction <span class="math inline">\(\to\)</span> on <span class="math inline">\(X\)</span> is said to satisfy the <strong>descending chain condition (DCC)</strong> if the only infinite chains on <span class="math inline">\(X\)</span> are those that are eventually constant. A chain <span class="math inline">\(x_1\to x_2 \to x_3 \to \cdots\)</span> is eventually constant if there is a positive integer <span class="math inline">\(N\)</span> such that for all <span class="math inline">\(n\ge N,\)</span> <span class="math inline">\(x_n=x_N.\)</span> Every terminating relation satisfies DCC. The converse is obviously not true, as a reflexive reduction illustrates.</p>
+<p>Another related concept is acyclicity. Let <span class="math inline">\(\to\)</span> be a reduction on <span class="math inline">\(X.\)</span> A chain <span class="math inline">\(x_0\to x_1 \to \cdots x_n\)</span> is said to be cyclic if <span class="math inline">\(x_i=x_j\)</span> for some <span class="math inline">\(0\le i &lt; j\le n.\)</span> This means that there is a “closed loop’’ in the chain. The reduction <span class="math inline">\(\to\)</span> is said to be <strong>acyclic</strong> if there are no cyclic chains with respect to <span class="math inline">\(\to.\)</span> Every terminating relation is acyclic, but not conversely. The usual strict inequality relation on the set of positive integers is an example of an acyclic but non-terminating relation.</p>
+</section>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

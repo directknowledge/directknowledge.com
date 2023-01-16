@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Connect Everything - Basic Set Theory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">directknowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#connect-everything" id="toc-connect-everything" class="nav-link active" data-scroll-target="#connect-everything">Connect Everything</a>
+  <ul class="collapse">
+  <li><a href="#preorders" id="toc-preorders" class="nav-link" data-scroll-target="#preorders">Preorders</a></li>
+  <li><a href="#equivalence-relations" id="toc-equivalence-relations" class="nav-link" data-scroll-target="#equivalence-relations">Equivalence Relations</a>
+  <ul class="collapse">
+  <li><a href="#the-reflexive-symmetric-and-transitive-properties" id="toc-the-reflexive-symmetric-and-transitive-properties" class="nav-link" data-scroll-target="#the-reflexive-symmetric-and-transitive-properties">The Reflexive, Symmetric, and Transitive Properties</a></li>
+  </ul></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  <li><a href="#reflexive-closure" id="toc-reflexive-closure" class="nav-link" data-scroll-target="#reflexive-closure">Reflexive Closure</a></li>
+  <li><a href="#symmetric-closure" id="toc-symmetric-closure" class="nav-link" data-scroll-target="#symmetric-closure">Symmetric Closure</a></li>
+  <li><a href="#reflexive-transitive" id="toc-reflexive-transitive" class="nav-link" data-scroll-target="#reflexive-transitive">Reflexive Transitive</a></li>
+  <li><a href="#transitive-closure" id="toc-transitive-closure" class="nav-link" data-scroll-target="#transitive-closure">Transitive Closure</a></li>
+  <li><a href="#equivalence-relation-characterization" id="toc-equivalence-relation-characterization" class="nav-link" data-scroll-target="#equivalence-relation-characterization">Equivalence Relation Characterization</a></li>
+  <li><a href="#the-kernel-and-image-of-a-function" id="toc-the-kernel-and-image-of-a-function" class="nav-link" data-scroll-target="#the-kernel-and-image-of-a-function">The Kernel and Image of a Function</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#up-sets-and-down-sets" id="toc-up-sets-and-down-sets" class="nav-link" data-scroll-target="#up-sets-and-down-sets">Up-sets and Down-sets</a></li>
+  <li><a href="#monotone-mappings" id="toc-monotone-mappings" class="nav-link" data-scroll-target="#monotone-mappings">Monotone Mappings</a></li>
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1">Exercises</a></li>
+  <li><a href="#residuated-mappings" id="toc-residuated-mappings" class="nav-link" data-scroll-target="#residuated-mappings">Residuated Mappings</a></li>
+  <li><a href="#closure-operators" id="toc-closure-operators" class="nav-link" data-scroll-target="#closure-operators">Closure Operators</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="connect-everything" class="level1">
+<h1>Connect Everything</h1>
+<section id="preorders" class="level2">
+<h2 class="anchored" data-anchor-id="preorders">Preorders</h2>
+</section>
+<section id="equivalence-relations" class="level2">
+<h2 class="anchored" data-anchor-id="equivalence-relations">Equivalence Relations</h2>
+<section id="the-reflexive-symmetric-and-transitive-properties" class="level3">
+<h3 class="anchored" data-anchor-id="the-reflexive-symmetric-and-transitive-properties">The Reflexive, Symmetric, and Transitive Properties</h3>
+<div id="def-reflexive-symmetric-transitive" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>Let <span class="math inline">\(X\)</span> be a set.</p>
+<ol type="1">
+<li>A relation <span class="math inline">\(R\)</span> on <span class="math inline">\(X\)</span> is called <strong>reflexive</strong> if it satisfies the property <span class="math display">\[\forall a\in X, (a,a)\in R.\]</span></li>
+<li>A relation <span class="math inline">\(R\)</span> on <span class="math inline">\(X\)</span> is called <strong>symmetric</strong> if it satisfies the property <span class="math display">\[ \forall a,b \in X, (a,b)\in R \implies (b,a)\in R. \]</span></li>
+<li>A relation <span class="math inline">\(R\)</span> on <span class="math inline">\(X\)</span> is called <strong>transitive</strong> if it satisfies the property <span class="math display">\[\forall a,b,c\in X, ((a,b)\in R \land (b,c)\in R) \implies (a,c)\in R.\]</span></li>
+</ol>
+</div>
+<div id="thm-reflexive-symmetric-transitive" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be relations on <span class="math inline">\(X\)</span> and let <span class="math inline">\(A\subseteq X.\)</span></p>
+<ol type="1">
+<li>A relation <span class="math inline">\(R\)</span> is reflexive if and only if <span class="math inline">\(I \subseteq R.\)</span></li>
+<li>A relation <span class="math inline">\(R\)</span> is symmetric if and only if <span class="math inline">\(R^{-1}\subseteq R.\)</span><br>
+</li>
+<li>A relation <span class="math inline">\(R\)</span> is transitive if and only if <span class="math inline">\(R\circ R\subseteq R.\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of each part follows.</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(R\)</span> is reflexive, then <span class="math inline">\(I\subseteq R.\)</span> <span class="math display">\[
+(x,y)\in I \Leftrightarrow y=x \implies (x,y)\in R
+\]</span> Conversely, if <span class="math inline">\(I\subseteq R\)</span>, then <span class="math inline">\(R\)</span> is reflexive. <span class="math display">\[
+x\in X \implies (x,x)\in I \implies (x,x)\in R
+\]</span></p></li>
+<li><p>If <span class="math inline">\(R\)</span> is symmetric, then <span class="math inline">\(R^{-1}\subseteq R.\)</span> <span class="math display">\[
+(x,y)\in R^{-1}\Leftrightarrow (y,x)\in R \implies (x,y)\in R
+\]</span> Conversely, if <span class="math inline">\(R^{-1}\subseteq R\)</span>, then <span class="math inline">\(R\)</span> is symmetric. <span class="math display">\[
+(x,y)\in R \implies (y,x)\in R^{-1} \implies (y,x)\in R
+\]</span></p></li>
+<li><p>If <span class="math inline">\(R\)</span> is transitive, then <span class="math inline">\(R\circ R\subseteq R.\)</span> <span class="math display">\[
+(x,y)\in R\circ R \Leftrightarrow \exists x\in X, (x,z)\in R \land (z,y)\in R \implies (x,y)\in R
+\]</span> Conversely, if <span class="math inline">\(R\circ R\subseteq R\)</span>, then <span class="math inline">\(R\)</span> is transitive. <span class="math display">\[
+(x,y)\in R \land (y,z)\in R \implies (x,z)\in R\circ R \implies (x,z)\in R.
+\]</span> The proof is now complete.</p></li>
+</ol>
+</div>
+<div id="thm-reflexive" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 </strong></span>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are reflexive, then <span class="math inline">\(R|_A\)</span>, <span class="math inline">\(R^{-1}\)</span>, <span class="math inline">\(S\circ R\)</span>, <span class="math inline">\(R\cup S\)</span>, and <span class="math inline">\(R\cap S\)</span> are also reflexive, while <span class="math inline">\(R^c\)</span> is not reflexive.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We find that <span class="math inline">\(R|_A\)</span>, <span class="math inline">\(R^{-1}\)</span>, <span class="math inline">\(S\circ R\)</span>, <span class="math inline">\(R\cup S\)</span>, and <span class="math inline">\(R\cap S\)</span> are reflexive, whenever <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are reflexive by the following arguments, respectively.</p>
+<ul>
+<li><span class="math inline">\((x,x)\in R \land A\subseteq X \implies (x,x)\in R|_{A}\)</span></li>
+<li><span class="math inline">\((x,x)\in R \implies (x,x)\in R^{-1}\)</span></li>
+<li><span class="math inline">\((x,x)\in R \land (x,x)\in S \implies (x,x)\in S\circ R\)</span></li>
+<li><span class="math inline">\((x,x)\in R \land (x,x)\in S \implies (x,x)\in R\cup S\)</span></li>
+<li><span class="math inline">\((x,x)\in R \land (x,x)\in S \implies (x,x)\in R\cap S\)</span></li>
+</ul>
+<p>Notice that <span class="math inline">\(R^c\)</span> is not reflexive because <span class="math inline">\(I\subseteq R\implies I\not\subseteq R^c.\)</span></p>
+</div>
+<div id="thm-symmetric" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 </strong></span>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are symmetric, then <span class="math inline">\(R|_A\)</span>, <span class="math inline">\(R^c\)</span>, <span class="math inline">\(R^{-1}\)</span>, <span class="math inline">\(R^{-1}\circ R\)</span>, <span class="math inline">\(R\cup S\)</span>, and <span class="math inline">\(R\cap S\)</span> are also symmetric.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(R\)</span> is symmetric, then <span class="math inline">\(R|_{A}\)</span> is symmetric. <span class="math display">\[\begin{align*}
+\qquad \qquad&amp; (x,y)\in R|_A \Longleftrightarrow (x,y) \in (A\times A) \cap R  \\
+&amp; \qquad \Longleftrightarrow (x,y)\in A\times A \land (x,y)\in R \Longleftrightarrow (y,x)\in A\times A \land (y,x)\in R \\
+&amp; \qquad \Longleftrightarrow (y,x) \in (A\times A) \cap R  \Longleftrightarrow (x,y)\in R|_A
+\end{align*}\]</span></p>
+<p>If <span class="math inline">\(R\)</span> is symmetric, then <span class="math inline">\(R^c\)</span> is symmetric. <span class="math display">\[\begin{align*}
+&amp; (x,y)\in R^c \Longleftrightarrow (x,y)\notin R \Longleftrightarrow \neg ((x,y)\in R)  \\
+&amp; \qquad \Longleftrightarrow \neg( (y,x)\in R) \Longleftrightarrow (y,x)\notin R \Longleftrightarrow (y,x)\in R^c
+\end{align*}\]</span></p>
+<p>If <span class="math inline">\(R\)</span> is symmetric, then <span class="math inline">\(R^{-1}\)</span> is symmetric. <span class="math display">\[\begin{align*}
+\qquad (x,y)\in R^{-1} \Longleftrightarrow (y,x)\in R \Longleftrightarrow (x,y)\in R \Longleftrightarrow (y,x)\in R^{-1}
+\end{align*}\]</span></p>
+<p>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are symmetric, then <span class="math inline">\(R\cup S\)</span> is symmetric. <span class="math display">\[\begin{align*}
+\qquad &amp; (x,y)\in R\cup S \Longleftrightarrow (x,y)\in R \lor (x,y)\in S \\
+&amp; \qquad \Longleftrightarrow (y,x)\in R \lor (y,x)\in S \Longleftrightarrow (y,x)\in R\cup S
+\end{align*}\]</span></p>
+<p>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are symmetric then the relation <span class="math inline">\(R\cap S\)</span> is symmetric. <span class="math display">\[\begin{align*}
+\qquad &amp; (x,y)\in R\cap S \Longleftrightarrow (x,y)\in R \land (x,y)\in S\\
+&amp; \qquad \Longleftrightarrow (y,x)\in R \land (y,x)\in S \Longleftrightarrow (y,x)\in R\cap S
+\end{align*}\]</span></p>
+<p>If <span class="math inline">\(R\)</span> is symmetric, then <span class="math inline">\(R^{-1}\circ R\)</span> is symmetric. <span class="math display">\[\begin{align*}
+\qquad \qquad &amp; (x,y)\in R^{-1}\circ R \Longleftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in R^{-1} \\
+&amp; \qquad \Longleftrightarrow \exists z\in X, (z,x)\in R^{-1} \land (y,z)\in R \\
+&amp; \qquad \Longleftrightarrow \exists z\in X,  (y,z)\in R \land (z,x)\in R^{-1} \Longleftrightarrow (y,x)\in R^{-1}\circ R
+\end{align*}\]</span></p>
+<p>The proof is now complete.</p>
+</div>
+<div id="thm-transitive" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be relations on <span class="math inline">\(X\)</span> and let <span class="math inline">\(A\subseteq X.\)</span> If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are transitive, then <span class="math inline">\(R|_A\)</span>, <span class="math inline">\(R^{-1}\)</span>, <span class="math inline">\(R^2\)</span>, and <span class="math inline">\(R\cap S\)</span> are also transitive, while <span class="math inline">\(R^c\)</span> and <span class="math inline">\(R\cup S\)</span> are not transitive.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(R\)</span> is transitive, then <span class="math inline">\(R|_{A}\)</span> is transitive. <span class="math display">\[\begin{align*}
+\qquad \qquad &amp; (x,y)\in  R|_A \land (y,z)\in R|_A \\
+&amp; \qquad \Longleftrightarrow [(x,y)\in A\times A \land (x,y)\in R] \land [(y,z)\in A\times A \land (y,z)\in R]\\
+&amp; \qquad \Longleftrightarrow (x,z)\in A\times A \land (x,z)\in R \\
+&amp; \qquad \Longleftrightarrow (x,z)\in (A\times A) \cap R \Longleftrightarrow (x,z)\in R|_A
+\end{align*}\]</span></p>
+<p>If <span class="math inline">\(R\)</span> is transitive, then <span class="math inline">\(R^{-1}\)</span> is transitive. <span class="math display">\[\begin{align*}
+\qquad \qquad &amp; (x,y)\in R^{-1} \land (y,z)\in R^{-1} \Longleftrightarrow (y,x)\in R \land (z,y)\in R \\
+&amp; \qquad \Longleftrightarrow (z,y)\in R \land (y,x) \in R  \Longleftrightarrow (z,x)\in R \Longleftrightarrow (x,z)\in R^{-1}
+\end{align*}\]</span></p>
+<p>If <span class="math inline">\(R\)</span> is transitive, then <span class="math inline">\(R^2\)</span> is transitive. <span class="math display">\[\begin{align*}
+\quad \qquad \qquad &amp; (x,y)\in R^2 \land (y,z)\in R^2 \\
+&amp; \Longleftrightarrow [\exists s\in X, (x,s)\in R \land (s,y)\in R] \land [\exists t\in X, (y,t)\in R \land (t,z)\in R] \\
+&amp; \Longleftrightarrow \exists s,t\in X, (x,s)\in R \land (s,y)\in R \land (y,t)\in R \land (t,z)\in R\\
+&amp; \Longleftrightarrow \exists s,t\in X, (x,s)\in R\land (s,t)\in R \land (t,z)\in R \\
+&amp; \Longleftrightarrow (x,t) \in R \land (t,z)\in R \Longleftrightarrow (x,z)\in R^2
+\end{align*}\]</span></p>
+<p>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are transitive then the relation <span class="math inline">\(R\cap S\)</span> is transitive. <span class="math display">\[\begin{align*}
+&amp; (x,y)\in R\cap S \land (y,z)\in R\cap S\\
+&amp; \qquad \Longleftrightarrow (x,y)\in R \land (x,y)\in S \land (y,z)\in R \land (y,z)\in S \\
+&amp; \qquad \Longleftrightarrow (x,z)\in R \land (x,z)\in S \Longleftrightarrow (x,z)\in R\cap S
+\end{align*}\]</span></p>
+<p>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are transitive then the relation <span class="math inline">\(R\cup S\)</span> is not necessarily transitive. To see this let <span class="math inline">\(X=\{a,b,c\}\)</span>, <span class="math inline">\(R=\{(a,b),(b,c),(a,c)\}\)</span> and <span class="math inline">\(S=\{(b,c),(c,d),(b,d)\}.\)</span> Then <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are transitive, however, <span class="math inline">\(R\cup S\)</span> is not transitive since <span class="math inline">\((a,b), (b,d)\in R\cup S\)</span> yet <span class="math inline">\((a,d)\notin R\cup S.\)</span> If <span class="math inline">\(R\)</span> is transitive then <span class="math inline">\(R^c\)</span> is not necessarily transitive. To see this let <span class="math inline">\(X=\{a,b\}\)</span> and <span class="math inline">\(R=I.\)</span> The <span class="math inline">\(R\)</span> is transitive and <span class="math inline">\(R^c=\{(a,b),(b,a)\}\)</span> which is not transitive.</p>
+</div>
+<div id="def-equivalence-relation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 </strong></span>If a relation is reflexive, symmetric, and transitive, then it is called an <strong>equivalence relation</strong>.</p>
+</div>
+<div id="thm-equivalence-relation" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be equivalence relations on <span class="math inline">\(X\)</span> and let <span class="math inline">\(A\subseteq X.\)</span> Then <span class="math inline">\(R|_A\)</span>, <span class="math inline">\(R^{-1}\)</span>, <span class="math inline">\(R^2\)</span>, and <span class="math inline">\(R\cap S\)</span> are also equivalence relations.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof is left as <a href="#exr-equivalence-relation">Exercise&nbsp;1</a>.</p>
+</div>
+<div id="thm-equivalence-relations-composition" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be relations on <span class="math inline">\(X\)</span> and let <span class="math inline">\(A\subseteq X.\)</span></p>
+<ol type="1">
+<li>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are symmetric, then <span class="math inline">\(S\circ R\)</span> is symmetric if and only if <span class="math inline">\(R\circ S\subseteq S\circ R.\)</span></li>
+<li>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are transitive and <span class="math inline">\(R\circ S\subseteq S\circ R\)</span>, then <span class="math inline">\(S\circ R\)</span> is transitive, but not conversely.</li>
+<li>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are equivalence relations, then <span class="math inline">\(S\circ R\)</span> is an equivalence relation if and only if <span class="math inline">\(R\circ S\subseteq S\circ R.\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of each part follows.</p>
+<ol type="1">
+<li>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are symmetric and <span class="math inline">\(R\circ S\subseteq S\circ R\)</span>, then <span class="math inline">\(S\circ R\)</span> is symmetric. <span class="math display">\[\begin{align*}
+\qquad  &amp; (x,y)\in S\circ R \Longleftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in S \\
+&amp; \qquad \Longleftrightarrow \exists z\in X, (z,x)\in R \land (y,z)\in S \\
+&amp; \qquad \Longleftrightarrow \exists z\in X, (y,z)\in S \land (z,x)\in R \Longleftrightarrow (y,x)\in R\circ S\\
+&amp; \qquad \Longleftrightarrow (y,x)\in S\circ R
+\end{align*}\]</span></li>
+</ol>
+<p>Conversely, assume <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(S\circ R\)</span> are symmetric, then <span class="math inline">\(S\circ R=R\circ S.\)</span> <span class="math display">\[\begin{align*}
+\qquad  &amp; (x,y)\in S\circ R \Longleftrightarrow (y,x)\in S\circ R \\
+&amp; \qquad \Longleftrightarrow \exists z\in X, (y,z)\in R \land (z,x)\in S \\
+&amp; \qquad \Longleftrightarrow \exists z\in X, (z,y)\in R \land (x,z)\in S \\
+&amp; \qquad \Longleftrightarrow \exists z\in X, (x,z)\in S \land (z,y)\in R \Longleftrightarrow (x,y)\in R\circ S
+\end{align*}\]</span></p>
+<ol start="2" type="1">
+<li>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are transitive and <span class="math inline">\(R\circ S\subseteq S\circ R\)</span>, then <span class="math inline">\(S\circ R\)</span> is transitive. <span class="math display">\[\begin{align*}
+&amp; (x,y)\in S\circ R \land (y,z)\in S\circ R \\ &amp; \Longleftrightarrow [\exists s\in X, (x,s)\in R\land (s,y)\in S] \land [\exists t\in X, (y,t)\in R \land (t,z)\in S] \\
+&amp; \Longleftrightarrow \exists s,t\in X, (x,s)\in R \land (s,y)\in S \land (y,t)\in R \land (t,z)\in S \\
+&amp; \Longleftrightarrow \exists s,t,\in X, (x,s)\in R \land (s,t)\in R\circ S \land (t,z)\in S  \\
+&amp;  \Longleftrightarrow \exists s,t\in X, (x,s)\in R \land (s,t)\in S\circ R \land (t,z)\in S  \\
+&amp;  \Longleftrightarrow \exists s,t,w\in X, (x,s)\in R \land (s,w)\in R \land (w,t)\in S \land (t,z)\in S  \\
+&amp; \Longleftrightarrow \exists w\in X, (x,w)\in R \land (w,z)\in S \Longleftrightarrow (x,z)\in S\circ R
+\end{align*}\]</span></li>
+</ol>
+<p>Let <span class="math inline">\(X=\{a,b,c\}\)</span>, <span class="math inline">\(R=\{(a,a), (a,b)\}\)</span>, and <span class="math inline">\(S=\{(b,b),(b,c)\}.\)</span> Then <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are transitive and so is <span class="math inline">\(S\circ R=\{(a,b),(a,c)\}.\)</span> However, <span class="math inline">\(R\circ S=\emptyset.\)</span></p>
+<ol start="3" type="1">
+<li>If <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(S\circ R\)</span> are equivalence relations on <span class="math inline">\(X\)</span>, then <span class="math inline">\(R\circ S \subseteq S\circ R.\)</span> <span class="math display">\[\begin{align*}
+\qquad S\circ R &amp; \textrm{ is an equivalence relation} \\
+&amp; \Longleftrightarrow S\circ R \textrm{ is reflexive, symmetric, and transitive} \\
+&amp; \Longrightarrow S\circ R \textrm{ is symmetric } \Longleftrightarrow R\circ S \subseteq S\circ R
+\end{align*}\]</span></li>
+</ol>
+<p>Conversely, if <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are equivalence relations and <span class="math inline">\(R\circ S\subseteq S\circ R\)</span>, then <span class="math inline">\(S\circ R\)</span> is an equivalence relation. <span class="math display">\[\begin{align*}
+\qquad &amp; R\circ S \subseteq S\circ R \land S, R \textrm{ are equivalence relations} \\
+&amp; \qquad \Longrightarrow S\circ R \textrm{ is reflexive, symmetric, and transitive } \\
+&amp; \qquad \Longleftrightarrow S\circ R \textrm{ is an equivalence relation }
+\end{align*}\]</span> which completes the proof.</p>
+</div>
+<p>A beautiful concise characterization of equivalence relation is here in the next theorem.</p>
+<p>::: {#thm-understanding-of-equivalence relation } Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X.\)</span> Then <span class="math inline">\(R\)</span> is an equivalence relation if and only if <span class="math display">\[
+R=I\cup R^{-1} \cup R^2.
+\]</span> :::</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X.\)</span> If <span class="math inline">\(R\)</span> is reflexive, symmetric, and transitive it follows <span class="math inline">\(I\subseteq R\)</span>, <span class="math inline">\(R^{-1} =R\)</span>, and <span class="math inline">\(R^2=R\)</span>; and thus <span class="math inline">\(I\cup R^{-1}\cup R^2=R.\)</span> Conversely, assume <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X.\)</span> If <span class="math inline">\(I\cup R^{-1}\cup R^2=R\)</span>, then <span class="math inline">\(I\subseteq R\)</span>, <span class="math inline">\(R^{-1} \subseteq R\)</span>, and <span class="math inline">\(R^2\subseteq R\)</span>; and therefore <span class="math inline">\(R\)</span> is an equivalence relation.</p>
+</div>
+<p>Another characterization of equivalence relation is here in the next theorem.</p>
+<div id="thm-equivalence-relation-if-and-only-if-property" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 7 </strong></span>Let <span class="math inline">\(\sim\)</span> be a relation on <span class="math inline">\(X.\)</span> Then <span class="math inline">\(\sim\)</span> is an equivalence relation if and only if the following property holds: <span class="math display">\[\begin{equation}
+\forall \, a,b\in X, a\sim b  \Leftrightarrow \forall \, c\in X, a\sim c \Leftrightarrow b\sim c.
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(\sim\)</span> is an equivalence relation on <span class="math inline">\(X.\)</span> Assume <span class="math inline">\(a\sim b\)</span> for arbitrary <span class="math inline">\(a,b\in X.\)</span> Let <span class="math inline">\(c\in X.\)</span> By symmetry and transitivity it follows that <span class="math display">\[
+a\sim c \implies c\sim a \implies c\sim b \implies b\sim c
+\]</span> and conversely, <span class="math inline">\(b\sim c \implies a\sim c\)</span> follows by transitivity. Therefore, by symmetry and transitivity we have <span class="math display">\[
+\forall a,b \in X, a\sim b \implies \forall c\in X, a\sim c \Leftrightarrow b\sim c.
+\]</span> Assume for all <span class="math inline">\(c\in X\)</span> that <span class="math inline">\(a\sim c \Leftrightarrow b\sim c.\)</span> Let <span class="math inline">\(c=a.\)</span> Then we have <span class="math inline">\(a\sim a \Leftrightarrow b\sim a.\)</span> Since <span class="math inline">\(\sim\)</span> is reflexive, <span class="math inline">\(a\sim b\)</span> must hold. Whence, <span class="math display">\[
+\forall c\in X, (a\sim c \Leftrightarrow b\sim c) \implies a\sim b
+\]</span> as desired.</p>
+<p>Conversely, assume the given property holds. To show reflexivity, let <span class="math inline">\(a\in X.\)</span> Since, <span class="math inline">\(a\sim a\)</span> if and only if <span class="math inline">\(a\sim a\)</span>, obviously holds, it follows <span class="math inline">\(a\sim a\)</span> is valid. To prove the symmetric property holds, assume <span class="math inline">\(a\sim b.\)</span> Therefore the following holds, <span class="math inline">\(\forall c\in X, a\sim c \Leftrightarrow b\sim c.\)</span> Equivalently, the following holds <span class="math inline">\(\forall c\in X, b\sim c \Leftrightarrow a\sim c.\)</span> Thus is it obvious that, <span class="math inline">\(a\sim b \implies b\sim a\)</span> holds; and therefore <span class="math inline">\(\sim\)</span> is also symmetric. To show transitivity, let <span class="math inline">\(a,b,c\in X\)</span> and assume <span class="math inline">\(a\sim b\)</span> and <span class="math inline">\(b\sim c.\)</span> Therefore the following holds, <span class="math display">\[
+[\forall c\in X, a\sim c \Leftrightarrow b \sim c]
+\land
+[\forall d\in X, b\sim d \Leftrightarrow c \sim d].
+\]</span> Let <span class="math inline">\(e\in X.\)</span> Then the following holds, <span class="math display">\[
+a\sim e \Leftrightarrow b\sim e \Leftrightarrow c\sim e.
+\]</span> Therefore, <span class="math inline">\(a\sim c\)</span> and so <span class="math inline">\(\sim\)</span> is also transitive. In conclusion, <span class="math inline">\(\sim\)</span> is an equivalence relation.</p>
+</div>
+<div id="def-equivalence-class" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 </strong></span>If <span class="math inline">\(\sim\)</span> is an equivalence relation on <span class="math inline">\(X\)</span>, then the set <span class="math display">\[[a]=\{b\in X : b\sim a\}\]</span> is called the <strong>equivalence class</strong> of <span class="math inline">\(a\)</span> with respect to <span class="math inline">\(\sim.\)</span></p>
+</div>
+<div id="def-partition" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 </strong></span>A <strong>partition</strong> of <span class="math inline">\(X\)</span> is a collection of pairwise disjoint nonempty sets whose union is <span class="math inline">\(X.\)</span></p>
+</div>
+<div id="thm-equivalence-relation-partition" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 8 </strong></span>Let <span class="math inline">\(\sim\)</span> be a relation on <span class="math inline">\(X.\)</span> Then <span class="math inline">\(\sim\)</span> is an equivalence relation on <span class="math inline">\(X\)</span> if and only if the set <span class="math display">\[
+P=\{\{b\in X: a\sim b \}: a\in X\}
+\]</span> is a partition of <span class="math inline">\(X\)</span> with the property <span class="math inline">\(\forall a,b\in X, a\sim b \Leftrightarrow \exists A\in P\)</span> such that <span class="math inline">\(a,b\in A.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(\sim\)</span> is an equivalence relation on <span class="math inline">\(X.\)</span> We will prove that <span class="math inline">\(P\)</span> is a partition of <span class="math inline">\(X\)</span> with the desired property by proving the following four statements hold.</p>
+<p><strong>Claim 1</strong>: <span class="math inline">\(X\)</span> is the union of all equivalence classes of <span class="math inline">\(\sim.\)</span></p>
+<p>Proof: Since <span class="math inline">\(\sim\)</span> is reflexive it follows that <span class="math display">\[
+x\in \bigcup_{a\in X}[a] \Leftrightarrow \exists a\in X, x\in [a] \Leftrightarrow x\in X.
+\]</span></p>
+<p><strong>Claim 2</strong>: For all <span class="math inline">\(a,b\in X\)</span>, <span class="math inline">\([a]\cap [b]\neq \emptyset \Leftrightarrow [a]=[b].\)</span></p>
+<p>Proof: Assume <span class="math inline">\([a]\cap [b] \neq \emptyset.\)</span> Since <span class="math inline">\(\sim\)</span> is symmetric and transitive, it follows <span class="math display">\[\begin{align*}
+x\in [a]  &amp; \Leftrightarrow x\sim a \Leftrightarrow x\sim a \land \, \exists y\in [a] \cap [b]
+\\ &amp;  \Leftrightarrow \exists y\in X, x\sim a \land y\sim a \land y\sim b
+\\ &amp;  \Leftrightarrow \exists y\in X, x\sim a \land a\sim y \land y\sim b
+\\ &amp;  \Leftrightarrow \exists y\in X, x\sim y \land y\sim b  \Leftrightarrow x\sim b \Leftrightarrow x\in [b]
+\end{align*}\]</span> Assume <span class="math inline">\([a]=[b].\)</span> Since <span class="math inline">\(\sim\)</span> is reflexive <span class="math display">\[
+a\in [a]
+\implies  a\in [a] \land a\in [b] \\
+\implies a\in [a] \cap [b] \\
+\implies [a]\cap [b] \neq \emptyset
+\]</span></p>
+<p><strong>Claim 3</strong>: Every equivalence class of <span class="math inline">\(\sim\)</span> is nonempty.</p>
+<p>Proof: Since <span class="math inline">\(\sim\)</span> is reflexive, it follows that <span class="math display">\[
+a\in X \implies a\sim a \implies a\in [a] \implies [a]\neq \emptyset.
+\]</span></p>
+<p><strong>Claim 4</strong>: For all <span class="math inline">\(a,b\in X\)</span>, <span class="math inline">\(a\sim b \Leftrightarrow [a]=[b].\)</span></p>
+<p>Proof: Let <span class="math inline">\(a,b\in X\)</span> and assume <span class="math inline">\(a\sim b.\)</span> Then it follows that <span class="math display">\[
+x\in [a] \Leftrightarrow x\sim a \Leftrightarrow x\sim b \Leftrightarrow x\in [b].
+\]</span> Thus we have that <span class="math inline">\([a]=[b].\)</span> Conversely, assume <span class="math inline">\([a]=[b]\)</span> for all <span class="math inline">\(a,b\)</span> in <span class="math inline">\(X.\)</span> Then it follows that <span class="math display">\[
+a\in [a] \implies a\in [b] \implies a\sim b.
+\]</span> and so <span class="math inline">\(a\sim b\)</span> holds. Therefore we have shown that <span class="math inline">\(P\)</span>, the collection of equivalence class of <span class="math inline">\(\sim\)</span>, is a partition on <span class="math inline">\(X\)</span> with the desired property.</p>
+<p>Conversely, assume <span class="math inline">\(\sim\)</span> is a relation on <span class="math inline">\(X\)</span> and <span class="math inline">\(P\)</span> is a partition of <span class="math inline">\(X\)</span> with the stated property. First we notice <span class="math inline">\(\sim\)</span> is reflexive since <span class="math display">\[
+a\in X \implies a\in\bigcup_{A\in P} A \implies \exists A\in P, a\in A \implies a\sim a.
+\]</span> The symmetric property of <span class="math inline">\(\sim\)</span> follows by <span class="math display">\[
+a\sim b \implies \exists A\in P, a\in A \land b\in A \implies b\sim a.
+\]</span> We also notice <span class="math inline">\(\sim\)</span> is transitive by the following <span class="math display">\[
+a\sim b \land b\sim c
+\Leftrightarrow \exists a, b\in P, a,b\in A\land b,c\in B
+\Longrightarrow A=B
+\Leftrightarrow a\sim c.
+\]</span> In conclusion <span class="math inline">\(\sim\)</span> is an equivalence relation where <span class="math inline">\(a\sim b\)</span> is equivalent to the existence of a set <span class="math inline">\(A\in P\)</span> with <span class="math inline">\(a,b\in A\)</span>, namely the equivalence class <span class="math inline">\(A=[a].\)</span></p>
+</div>
+</section>
+</section>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<div id="exr-equivalence-relation" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 </strong></span>Prove <a href="#thm-equivalence-relation">Theorem&nbsp;5</a>.</p>
+</div>
+</section>
+<section id="reflexive-closure" class="level2">
+<h2 class="anchored" data-anchor-id="reflexive-closure">Reflexive Closure</h2>
+<div id="thm-reflexive-closure" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 9 </strong></span>Let <span class="math inline">\(R\)</span> be relation on <span class="math inline">\(X\)</span> and <span class="math inline">\(A\subseteq X.\)</span> The reflexive closure of <span class="math inline">\(R\)</span> is the relation <span class="math display">\[
+r(R)=R \cup I.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(R\)</span> b a relation, then <span class="math inline">\(r(R)=R\cup I.\)</span> Notice <span class="math inline">\(R\cup I\)</span> is reflexive since <span class="math display">\[
+x\in X \implies (x,x)\in I\implies (x,x)\in R\cup I.
+\]</span> Let <span class="math inline">\(T\)</span> be a reflexive relation containing <span class="math inline">\(R.\)</span> Then <span class="math inline">\(R\cup I\subseteq T\)</span> since <span class="math display">\[\begin{align*}
+&amp; (x,y)\in R\cup I
+\implies (x,y)\in R \lor (x,y)\in I  
+\\&amp;\qquad
+\implies (x,y)\in T \lor (x,y)\in I
+\implies (x,y)\in T \cup I =T
+\end{align*}\]</span> Since <span class="math inline">\(R\subseteq R\cup I \subseteq T\)</span> where <span class="math inline">\(T\)</span> is an arbitrary reflexive relation containing <span class="math inline">\(R\)</span>, it follows <span class="math inline">\(r(R)=R\cup I.\)</span></p>
+</div>
+</section>
+<section id="symmetric-closure" class="level2">
+<h2 class="anchored" data-anchor-id="symmetric-closure">Symmetric Closure</h2>
+<div id="thm-symmetric-closure" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 10 </strong></span>Let <span class="math inline">\(R\)</span> be relation on <span class="math inline">\(X\)</span> and <span class="math inline">\(A\subseteq X.\)</span> The symmetric closure of <span class="math inline">\(R\)</span> is the relation <span class="math display">\[
+s(R)=R \cup R^{-1}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(R\)</span> b a relation, then <span class="math inline">\(s(R)=R\cup R^{-1}.\)</span> Notice <span class="math inline">\(R\cup R^{-1}\)</span> is symmetric since <span class="math display">\[\begin{align*}
+\qquad \qquad &amp; (x,y) \in R\cup R^{-1}
+\implies  (x,y)\in R \lor (x,y)\in R^{-1}
+\\ &amp; \qquad
+\implies  (y,x)\in R^{-1} \lor (y,x)\in R
+\implies  (y,x)\in R^{-1} \cup R=R\cup R^{-1}
+\end{align*}\]</span> Let <span class="math inline">\(T\)</span> be a symmetric relation containing <span class="math inline">\(R.\)</span> Then <span class="math inline">\(R\cup R^{-1}\subseteq T\)</span> since <span class="math display">\[\begin{align*}
+\qquad \qquad &amp; (x,y) \in R\cup R^{-1}
+\implies (x,y)\in R \lor (x,y)\in R^{-1}
+\\ &amp; \qquad
+\implies (x,y)\in T \lor (x,y)\in R^{-1}
+\implies (x,y)\in T \lor (y,x)\in T
+\\ &amp; \qquad
+\implies (x,y)\in T \lor (x,y)\in T
+\implies (x,y)\in T
+\end{align*}\]</span> Since <span class="math inline">\(R\subseteq R\cup R^{-1} \subseteq T\)</span> where <span class="math inline">\(T\)</span> is an arbitrary symmetric relation containing <span class="math inline">\(R\)</span>, it follows <span class="math inline">\(s(R)=R\cup R^{-1}.\)</span></p>
+</div>
+</section>
+<section id="reflexive-transitive" class="level2">
+<h2 class="anchored" data-anchor-id="reflexive-transitive">Reflexive Transitive</h2>
+<div id="thm-reflexive-transitive-closure" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 11 </strong></span>Let <span class="math inline">\(R\)</span> be relation on <span class="math inline">\(X\)</span> and <span class="math inline">\(A\subseteq X.\)</span> The transitive closure of <span class="math inline">\(R\)</span> and the reflexive transitive closure of <span class="math inline">\(R\)</span> are <span class="math display">\[
+t(R)=\bigcup_{n\geq 1} R^n.
+\qquad \qquad
+rt(R)=\bigcup_{n\geq 0} R^n.
+\]</span> respectively.</p>
+</div>
+<div class="proof">
+<span class="proof-title"><em>Proof</em>. </span>For <span class="math inline">\(i&gt;0\)</span> define <span class="math display">\[
+R^i=R^{i-1}\cup \{(a,b) : \exists c\in X, (a,c)\in R^{i-1} \land (c,b)\in R^{i-1}\}
+\]</span> The transitive closure of <span class="math inline">\(R\)</span>, denoted by <span class="math inline">\(t(R)\)</span>, is the relation <span class="math inline">\(t(R)=\cup_{n\geq 1} R^n.\)</span> First notice <span class="math inline">\(t(R)\)</span> contains all powers of <span class="math inline">\(R\)</span> and so in particular <span class="math inline">\(t(R)\)</span> contains <span class="math inline">\(R.\)</span> Next notice that <span class="math inline">\(t(R)\)</span> is transitive since <span class="math display">\[\begin{align*}
+\qquad \qquad &amp; (a,b)\in t(R) \land (b,c)\in t(R)
+\implies \exists R^n, R^m, (a,b)\in R^n \land (b,c)\in R^m
+\\ &amp; \qquad \implies (a,c) \in R^m\circ R^n\subseteq t(R)
+\end{align*}\]</span> Let <span class="math inline">\(T\)</span> be a transitive relation containing <span class="math inline">\(R.\)</span> By induction it follows <span class="math inline">\(R^k\subseteq T\)</span> for all <span class="math inline">\(k.\)</span> This is true for <span class="math inline">\(k=1\)</span> since <span class="math inline">\(T\)</span> contains <span class="math inline">\(R.\)</span> Then <span class="math display">\[
+R^k\subseteq T
+\implies R^{k+1}
+=R^{k}\circ R
+\subseteq T\circ R
+\subseteq T \circ T
+=T
+\]</span> demonstrates the claim. Whence, <span class="math inline">\(t(R)=\bigcup_{n\geq 1}R^n\subseteq T\)</span> as desired.
+<p>Define <span class="math inline">\(R^0=I\)</span>, then <span class="math display">\[
+rt(R)=r\left(\bigcup_{n\geq1}R^n\right)
+= \bigcup_{n\geq1}R^n\cup I
+= \bigcup_{n\geq1}R^n \cup R^0
+= \bigcup_{n\geq0}R^n.
+\]</span> which completes the proof.</p>
+</div>
+</section>
+<section id="transitive-closure" class="level2">
+<h2 class="anchored" data-anchor-id="transitive-closure">Transitive Closure</h2>
+<div id="thm-transitive-powers" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 12 </strong></span>Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X.\)</span> Then <span class="math inline">\(R\)</span> is transitive if and only if <span class="math inline">\(R^n\subseteq R\)</span>, for <span class="math inline">\(n\geq 1.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(R\)</span> is transitive. We will prove <span class="math inline">\(R^n \subseteq R\)</span> for <span class="math inline">\(n\geq 1\)</span> by induction. The basis step is obvious. The induction step is: <span class="math display">\[
+R^n\subseteq R \implies R^{n+1}\subseteq R
+\]</span> Assume <span class="math inline">\(R^n\subseteq R\)</span> for some <span class="math inline">\(n\geq 1.\)</span> Then <span class="math display">\[\begin{align*}
+(x,y)\in R^{n+1}
+&amp; \Leftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in R^n
+\\ &amp; \Leftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in R
+\implies (x,z)\in R
+\end{align*}\]</span> Therefore, by induction <span class="math inline">\(R^n\subseteq R\)</span>, for all <span class="math inline">\(\geq 1.\)</span> Conversely, assume <span class="math inline">\(R^n\subseteq R\)</span>, for all <span class="math inline">\(n\geq 1.\)</span> Then <span class="math inline">\((x,y)\in R\land (y,z)\in R \implies (x,z)\in R^2 \implies (x,y)\in R.\)</span> Thus, <span class="math inline">\(R\)</span> is transitive.</p>
+</div>
+<div id="thm-reflexive-symmetric-transitive" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 13 </strong></span>Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X.\)</span> If <span class="math inline">\(R\)</span> is reflexive, then <span class="math inline">\(s(R)\)</span> and <span class="math inline">\(t(R)\)</span> are reflexive.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(R\)</span> is reflexive, then <span class="math inline">\(s(R)\)</span> and <span class="math inline">\(t(R)\)</span> are reflexive, then <span class="math display">\[
+I\subseteq R\subseteq s(R)
+\text{ and }
+I\subseteq R \subseteq t(R)
+\]</span> as desired.</p>
+</div>
+<div id="thm-symmetric-reflexive-transitive" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 14 </strong></span>Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X.\)</span> If <span class="math inline">\(R\)</span> is symmetric, then <span class="math inline">\(r(R)\)</span> and <span class="math inline">\(t(R)\)</span> are symmetric.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(R\)</span> is symmetric, then <span class="math inline">\(r(R)\)</span> and <span class="math inline">\(t(R)\)</span> are symmetric. <span class="math display">\[\begin{align*}
+&amp; (x,y)\in r(R)=R\cup I \implies (x,y)\in R \lor (x,y)\in I \\
+&amp; \qquad \implies (y,x)\in R \lor (y,x)\in I \implies (y,x)\in R \cup I =r(R)\\
+&amp; (x,y)\in t(R)= \bigcup_{n\geq 1}R^n \implies \exists R^n, (x,y)\in R^n \\
+&amp; \qquad \implies \exists R^n, (y,x)\in R^n \implies (y,x)\in \bigcup_{n\geq 1}R^n=t(R)
+\end{align*}\]</span> which completes the proof.</p>
+</div>
+<div id="thm-transitive-reflexive-not-necc-symmetric" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 15 </strong></span>Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X.\)</span> If <span class="math inline">\(R\)</span> is transitive, then <span class="math inline">\(r(R)\)</span> is transitive; however, <span class="math inline">\(s(R)\)</span> may not be transitive.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(R\)</span> is transitive, then <span class="math inline">\(r(R)\)</span> is transitive. <span class="math display">\[\begin{align*}
+&amp; (x,y)\in r(R) \land (y,z)\in r(R)
+\implies (x,y)\in R\cup I \land (y,z)\in R\cup I
+\\ &amp; \qquad
+\implies ((x,y)\in R \lor (x,y)\in I)\land ((y,z)\in R \lor (y,z)\in I)
+\\ &amp; \qquad
+\implies (x,z)\in R \lor (x,z)\in I
+\implies (x,z)\in R \cup I =r(R)
+\end{align*}\]</span> Let <span class="math inline">\(X=\{a,b\}\)</span> and <span class="math inline">\(R=\{(a,b)\}.\)</span> Then <span class="math inline">\(R\)</span> is transitive and <span class="math inline">\(s(R)=\{(a,b),(b,a)\}\)</span> is not transitive. Therefore, the symmetric closure of a transitive relation may not be transitive.</p>
+</div>
+<div id="thm-rts" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 16 </strong></span>Let <span class="math inline">\(R\)</span> be a relation on <span class="math inline">\(X.\)</span> The following hold: <span class="math inline">\(rt(R)=tr(R)\)</span>, <span class="math inline">\(rs(R)=sr(R)\)</span>, <span class="math inline">\(st(R)\subseteq ts(R)\)</span>, and <span class="math inline">\(st(R)\subsetneq ts(R)\)</span> can hold.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of each part follows.</p>
+<ul>
+<li><p><span class="math inline">\(rt(R)=tr(R)\)</span>: <span class="math display">\[
+tr(R)
+=t(R\cup I)=\bigcup_{n\geq 1} (R\cup I)^n
+=\left(\bigcup_{n\geq 1}R^n \right) \cup I
+=\bigcup_{n\geq 0} R^n =rt(R)
+\]</span></p></li>
+<li><p><span class="math inline">\(rs(R)=sr(R)\)</span>: <span class="math display">\[\begin{align*}
+&amp; rs(R) = r(R\cup R^{-1}) = I\cup R\cup R^{-1} \\
+&amp; =r(R)\cup R^{-1} =r(R)\cup (R^{-1}\cup I) =r(R)\cup r(R)^{-1} = sr(R)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(st(R)\subseteq ts(R)\)</span>:</p></li>
+</ul>
+<p>Let <span class="math inline">\(A=\{a,b,c\}.\)</span> Then <span class="math inline">\(st(R)=\{(a,b),(b,a),(b,c),(c,b),(a,c),(c,a)\}\)</span> and <span class="math inline">\(ts(R)=A\times A\)</span> which completes the proof.</p>
+</div>
+</section>
+<section id="equivalence-relation-characterization" class="level2">
+<h2 class="anchored" data-anchor-id="equivalence-relation-characterization">Equivalence Relation Characterization</h2>
+<div id="thm-equivalence-relation-rts" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 17 </strong></span>Let <span class="math inline">\(R\)</span> be a relation on a set <span class="math inline">\(X.\)</span> Then <span class="math inline">\(R\)</span> is an equivalence relation if and only if <span class="math inline">\(R=rts(R).\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(X.\)</span> Notice <span class="math inline">\(R\subseteq rts(R)\)</span>, where <span class="math inline">\(r\)</span>, <span class="math inline">\(s\)</span>, and <span class="math inline">\(t\)</span> denote the reflexive, symmetric and transitive closure operators, respectively. Let <span class="math inline">\(T\)</span> be an arbitrary equivalence relation on <span class="math inline">\(X\)</span> containing <span class="math inline">\(R\)</span>. Since <span class="math inline">\(R\subseteq T\)</span> and <span class="math inline">\(T\)</span> is symmetric, if follows that <span class="math inline">\(s(R)\subseteq T\)</span>. Then <span class="math inline">\(ts(R)\subseteq t(T)=T\)</span> and so <span class="math inline">\(rts(R)\subseteq r(T)=T\)</span>. Thus it follows <span class="math inline">\(rts(R)\)</span> is contained in <span class="math inline">\(T\)</span>. Since <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(X\)</span> containing <span class="math inline">\(R\)</span>, it follows that <span class="math inline">\(rts(R)\subseteq R.\)</span> Whence, <span class="math inline">\(R=rts(R).\)</span></p>
+<p>Conversely, assume <span class="math inline">\(R\)</span> is a relation on <span class="math inline">\(X\)</span> such that <span class="math inline">\(R=rts(R).\)</span> It is easy to check that <span class="math inline">\(ts(R)\)</span> is symmetric and that <span class="math inline">\(rts(R)\)</span> is symmetric and transitive. It follows that <span class="math inline">\(rts(R)\)</span> is an equivalence relation. Thus <span class="math inline">\(R\)</span> is an equivalence relation.</p>
+</div>
+<div id="thm-transitive-closure-path" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 18 </strong></span>Let <span class="math inline">\(\longrightarrow\)</span> be a relation on <span class="math inline">\(X\)</span> with transitive closure denoted by <span class="math inline">\(\stackrel{+}{\longrightarrow}.\)</span> Then <span class="math inline">\(a\stackrel{+}{\longrightarrow} b\)</span> if and only if there exists elements <span class="math inline">\(a=x_1, x_2, x_3, ..., x_n=b\)</span> in <span class="math inline">\(X\)</span> such that <span class="math inline">\(x_1\longrightarrow x_2 \longrightarrow \cdots \longrightarrow x_n.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof is left for the reader.</p>
+</div>
+</section>
+<section id="the-kernel-and-image-of-a-function" class="level2">
+<h2 class="anchored" data-anchor-id="the-kernel-and-image-of-a-function">The Kernel and Image of a Function</h2>
+<div id="thm-function-equivalence-relation" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 19 </strong></span>Let <span class="math inline">\(f:X\to X\)</span> be a function and let <span class="math inline">\(\sim\)</span> be the binary relation defined on <span class="math inline">\(X\)</span> by <span class="math inline">\(a\sim b\)</span> if and only if <span class="math inline">\(f(a)=f(b).\)</span> Then <span class="math inline">\(\sim\)</span> is an equivalence relation.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(f(a)=f(a)\)</span> holds for all <span class="math inline">\(a\in X\)</span>, it follows <span class="math inline">\(\sim\)</span> is reflexive. Let <span class="math inline">\(a,b\in X\)</span> and assume <span class="math inline">\(a\sim b.\)</span> Then <span class="math inline">\(f(b)=f(a)\)</span>, and thus <span class="math inline">\(f(b)=f(a)\)</span> also holds. Thus, <span class="math inline">\(b\sim a\)</span> and so <span class="math inline">\(\sim\)</span> is also symmetric. Let <span class="math inline">\(a,b,c\in X\)</span> and assume <span class="math inline">\(a\sim b\)</span> and <span class="math inline">\(b\sim c.\)</span> Then <span class="math inline">\(f(a)=f(b)\)</span> and <span class="math inline">\(f(b)=f(c).\)</span> Thus <span class="math inline">\(f(a)=f(c)\)</span> and so <span class="math inline">\(a\sim c\)</span>, which means <span class="math inline">\(\sim\)</span> is also transitive; and in conclusion an equivalence relation on <span class="math inline">\(X.\)</span></p>
+</div>
+<p>Recall, if <span class="math inline">\(R\)</span> is a binary relation on <span class="math inline">\(X\)</span>, then <span class="math inline">\(R(x)=\{y\in X : (x,y)\in R\}\)</span>, that is <span class="math inline">\(R(x)\)</span> is the set of outputs of <span class="math inline">\(R\)</span> for a given input <span class="math inline">\(x.\)</span> Of course when <span class="math inline">\(R\)</span> is a function <span class="math inline">\(R(x)\)</span> is a singleton set for each <span class="math inline">\(x\in X.\)</span> In general <span class="math inline">\(R(x)\)</span> can have many elements.</p>
+<div id="thm-kernel-equivalence" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 20 </strong></span>Let <span class="math inline">\(R\)</span> be a binary relation on <span class="math inline">\(X\)</span> and let <span class="math inline">\(\ker(R)\)</span> be the relation defined on <span class="math inline">\(X\)</span> by <span class="math inline">\((a,b)\in \ker(R)\)</span> if and only if <span class="math inline">\(R(a)=R(b).\)</span> Then <span class="math inline">\(\ker(R)\)</span> is an equivalence relation.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(R(a)=R(a)\)</span> holds for all <span class="math inline">\(a\in X\)</span>, it follows <span class="math inline">\(\ker(R)\)</span> is reflexive. Let <span class="math inline">\(a,b\in X\)</span> and assume <span class="math inline">\((a,b)\in \ker(R).\)</span> Then <span class="math inline">\(R(b)=R(a)\)</span>, and thus <span class="math inline">\(R(b)=R(a)\)</span> also holds. Thus, <span class="math inline">\((b,a)\in\ker(R)\)</span> and so <span class="math inline">\(\ker(R)\)</span> is also symmetric. Let <span class="math inline">\(a,b,c\in X\)</span> and assume <span class="math inline">\((a,b)\)</span> and <span class="math inline">\((b,c)\in\ker(R).\)</span> Then <span class="math inline">\(R(a)=R(b)\)</span> and <span class="math inline">\(R(b)=R(c).\)</span> Thus <span class="math inline">\(R(a)=R(c)\)</span> and so <span class="math inline">\((a,c)\in\ker(R)\)</span>, which means <span class="math inline">\(\ker(R)\)</span> is also transitive; and in conclusion an equivalence relation on <span class="math inline">\(X.\)</span></p>
+</div>
+<p>Recall, if <span class="math inline">\(R\)</span> is a binary relation on <span class="math inline">\(X\)</span>, then <span class="math inline">\(R^{-1}(y)=\{x\in X : (x,y)\in R\}\)</span>, that is <span class="math inline">\(R^{-1}(y)\)</span> is the set of inputs of <span class="math inline">\(R\)</span> for a given output <span class="math inline">\(y.\)</span> In general <span class="math inline">\(R(y)\)</span> can have many elements.</p>
+<div id="thm-image-equivalence" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 21 </strong></span>Let <span class="math inline">\(R\)</span> be a binary relation on <span class="math inline">\(X\)</span> and let <span class="math inline">\(\textnormal{im}(R)\)</span> be the relation defined on <span class="math inline">\(X\)</span> by <span class="math inline">\((a,b)\in \textnormal{im}(R)\)</span> if and only if <span class="math inline">\(R^{-1}(a)=R^{-1}(b).\)</span> Then <span class="math inline">\(\textnormal{im}(R)\)</span> is an equivalence relation.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(R^{-1}(a)=R^{-1}(a)\)</span> holds for all <span class="math inline">\(a\in X\)</span>, it follows <span class="math inline">\(\textnormal{im}(R)\)</span> is reflexive. Let <span class="math inline">\(a,b\in X\)</span> and assume <span class="math inline">\((a,b)\in\textnormal{im}(R).\)</span> Then <span class="math inline">\(R^{-1}(b)=R^{-1}(a)\)</span>, and thus <span class="math inline">\({R^{-1}(b)=R^{-1}(a)}\)</span> also holds. Thus, <span class="math inline">\((b,a)\in\textnormal{im}(R)\)</span> and so <span class="math inline">\(\textnormal{im}(R)\)</span> is also symmetric. Let <span class="math inline">\(a,b,c\in X\)</span> and assume <span class="math inline">\((a,b)\in\textnormal{im}(R)\)</span> and <span class="math inline">\((b,c)\in\textnormal{im}(R).\)</span> Then <span class="math inline">\(R^{-1}(a)=R^{-1}(b)\)</span> and <span class="math inline">\(R^{-1}(b)=R^{-1}(c).\)</span> Thus <span class="math inline">\(R^{-1}(a)=R^{-1}(c)\)</span> and so <span class="math inline">\((a,c)\in\textnormal{im}(R)\)</span>, which means <span class="math inline">\(\textnormal{im}(R)\)</span> is also transitive; and in conclusion an equivalence relation on <span class="math inline">\(X.\)</span></p>
+</div>
+<div id="thm-equivalence-relation-in-terms" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 22 </strong></span>Let <span class="math inline">\(R\)</span> be a binary relation on <span class="math inline">\(X.\)</span> Then <span class="math inline">\(R\)</span> is an equivalence relation if and only if <span class="math inline">\(\ker(R)=R\)</span> if and only if <span class="math inline">\(\textnormal{im}(R)=R\)</span> if and only if <span class="math inline">\(R=R^*.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof is left as an exercise.</p>
+</div>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+</section>
+<section id="up-sets-and-down-sets" class="level2">
+<h2 class="anchored" data-anchor-id="up-sets-and-down-sets">Up-sets and Down-sets</h2>
+<p>Throughout we assume <span class="math inline">\((X,\geq)\)</span> is an ordered set. By this we mean that <span class="math inline">\(X\)</span> is a set and that <span class="math inline">\(\geq\)</span> is binary relation on <span class="math inline">\(X\)</span> that is reflexive, antisymmetric, and transitive.</p>
+<div id="def-up-down" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 </strong></span>A subset <span class="math inline">\(U\)</span> of <span class="math inline">\(X\)</span> is called an <strong>up-set</strong> if <span class="math display">\[(x\in U, \, y\in X, \text{ and } y\geq x) \implies y\in U.\]</span> A subset <span class="math inline">\(D\)</span> of <span class="math inline">\(X\)</span> is called a <strong>down-set</strong> if <span class="math display">\[ (x\in D, \, y\in X, \text{ and } x\geq y) \implies y\in D.\]</span></p>
+</div>
+<div id="thm-union-intersection" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 23 </strong></span>Let <span class="math inline">\((X,\geq)\)</span> be an ordered set.</p>
+<ol type="1">
+<li>The union or intersection of any family of up-sets is an up-set.</li>
+<li>The complement of an up-set is a down-set.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(1): Let <span class="math inline">\(\{U_i : i \in I\}\)</span> be a family of up-sets. Let <span class="math display">\[
+U=\bigcup_{i\in I} U_i
+\quad \text{and} \quad
+F=\bigcap_{i\in I} U_i.
+\]</span> We will show that <span class="math inline">\(U\)</span> is an up-set. Let <span class="math inline">\(x\in U\)</span>, <span class="math inline">\(y\in X\)</span> and assume <span class="math inline">\(y\geq x.\)</span> Since <span class="math inline">\(x\in U\)</span>, it follows <span class="math inline">\(x\in U_i\)</span> for some <span class="math inline">\(i.\)</span> Since <span class="math inline">\(U_i\)</span> is an up-set, it follows <span class="math inline">\(y\in U_i.\)</span> Hence <span class="math inline">\(y\in U.\)</span> Next we will show <span class="math inline">\(F\)</span> is an up-set. Let <span class="math inline">\(x\in F\)</span> and <span class="math inline">\(y\in X\)</span> and assume <span class="math inline">\(y\geq x.\)</span> Since <span class="math inline">\(x\in F\)</span>, it follows <span class="math inline">\(x\in U_i\)</span> for all <span class="math inline">\(i\in I.\)</span> Since <span class="math inline">\(U_i\)</span> are all up-sets, it follows <span class="math inline">\(y \in U_i\)</span> for all <span class="math inline">\(i\in I.\)</span> Hence <span class="math inline">\(y\in F.\)</span></p>
+<p>(2): Let <span class="math inline">\(U\)</span> be an up-set and let <span class="math inline">\(D\)</span> be the complement of <span class="math inline">\(U.\)</span> Let <span class="math inline">\(x\in D\)</span>, <span class="math inline">\(y\in X\)</span>, and assume <span class="math inline">\(x\geq y.\)</span> Assume <span class="math inline">\(y\in U.\)</span> Since <span class="math inline">\(U\)</span> is an up-set and <span class="math inline">\(x\geq y\)</span>, if follows <span class="math inline">\(x\in U.\)</span> However, <span class="math inline">\(x\in U\)</span> and <span class="math inline">\(x\in D\)</span> is a contradiction. Thus, <span class="math inline">\(y\in D\)</span> as needed.</p>
+</div>
+<div id="thm-union-intersection" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 24 </strong></span>The union or intersection of any family of down-sets is a down-set. The complement of a down-set is an up-set.</p>
+</div>
+<div id="def-up-closure" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 </strong></span>If <span class="math inline">\(A\)</span> is an arbitrary subset of <span class="math inline">\(X\)</span> and <span class="math inline">\(x\in X\)</span>, then we define <span class="math display">\[
+{\uparrow}(A)=\{y\in X : \exists\, x\in A,\, y\geq x\}\quad \text{and} \quad  {\uparrow}(x)=\{y\in X :  y\geq x\}.
+\]</span> <span class="math display">\[
+{\downarrow}(A)=\{y\in X : \exists\, x\in A,\, x\geq y\}
+\quad \text{and} \quad
+{\downarrow}(x)=\{y\in X : x\geq y\},
+\]</span> to be the <strong>up-closure of <span class="math inline">\(A\)</span></strong>, <strong>up-closure of <span class="math inline">\(x\)</span></strong>, <strong>down-closure of <span class="math inline">\(A\)</span></strong>, and the <strong>down-closure of <span class="math inline">\(x\)</span></strong>, respectively. Up-sets of the form <span class="math inline">\({\uparrow}(x)\)</span> are called <strong>principal up-sets</strong> and dually, down-sets of the form <span class="math inline">\({\downarrow}(x)\)</span> are called <strong>principal down-sets</strong>.</p>
+</div>
+<p>Important special cases are <span class="math inline">\({\uparrow}(X)=X\)</span>, <span class="math inline">\({\downarrow}(X)=X\)</span>, <span class="math inline">\({\downarrow}{\emptyset}=\emptyset\)</span> and <span class="math inline">\({\uparrow}{\emptyset}=\emptyset.\)</span> Clearly,</p>
+<p><span class="math display">\[\begin{equation}
+\label{isoequiv1}
+\forall \ x,y\in X, \quad x\geq y
+\, \Longleftrightarrow \,
+{\uparrow}(x)\subseteq {\uparrow}{y}
+\, \Longleftrightarrow \,
+{\downarrow}(x)\supseteq {\downarrow}{y}.
+\end{equation}\]</span></p>
+<p>To see this, suppose <span class="math inline">\(x\geq y\)</span>, and assume <span class="math inline">\(z\in {\uparrow}(x)\)</span> and <span class="math inline">\(w\in {\downarrow}{y}.\)</span> Then by transitivity of <span class="math inline">\(\geq\)</span> we have <span class="math inline">\(z\in {\uparrow}{y}\)</span> and <span class="math inline">\(w\in {\downarrow}(x).\)</span> Conversely, both <span class="math inline">\({\uparrow}(x)\subseteq {\uparrow}{y}\)</span> and <span class="math inline">\({\downarrow}(x)\supseteq {\downarrow}{y}\)</span> imply that <span class="math inline">\(x\geq y\)</span> which follows by the reflexive property.</p>
+<div id="thm-basicpos" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 25 </strong></span>Assume <span class="math inline">\(A\subseteq X\)</span> and <span class="math inline">\(x\in X.\)</span> Then</p>
+<ol type="1">
+<li><span class="math inline">\({\downarrow}(A)\)</span> is the smallest down-set containing <span class="math inline">\(A\)</span>,</li>
+<li><span class="math inline">\(A\)</span> is an down-set if and only if <span class="math inline">\(A=\, {\downarrow}(A)\)</span>, and</li>
+<li><span class="math inline">\({\downarrow}(x)=\, {\downarrow}(x).\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(1): Let <span class="math inline">\(x\in {\downarrow}(A)\)</span>, <span class="math inline">\(y\in X.\)</span> Assume <span class="math inline">\(x\geq y.\)</span> Since <span class="math inline">\(x\in {\downarrow}(A)\)</span>, there exists <span class="math inline">\(z\in A\)</span> such that <span class="math inline">\(z\geq x.\)</span> By transitivity <span class="math inline">\(z\geq y.\)</span> Thus it follows <span class="math inline">\(y\in {\downarrow}(A).\)</span> Therefore, <span class="math inline">\({\downarrow}(A)\)</span> is an down-set. Let <span class="math inline">\(D\)</span> be an down-set that contains <span class="math inline">\(A.\)</span> We will show <span class="math inline">\({\downarrow}(A)\subseteq D.\)</span> Let <span class="math inline">\(x\in {\downarrow}(A).\)</span> Then there exists <span class="math inline">\(z\in A\)</span> such that <span class="math inline">\(z\geq x.\)</span> Since <span class="math inline">\(z\in A\)</span>, it follows <span class="math inline">\(z\in D.\)</span> Since <span class="math inline">\(D\)</span> is an down-set, it follows that <span class="math inline">\(x\in D\)</span>, as a needed.</p>
+<p>(2): Suppose <span class="math inline">\(A={\downarrow}(A)\)</span>, then by part <span class="math inline">\(\eqref{basicpos1}\)</span>, it follows <span class="math inline">\(A\)</span> is an down-set. Conversely, assume <span class="math inline">\(A\)</span> is an down-set. By <span class="math inline">\(\eqref{basicpos1}\)</span>, <span class="math inline">\({\downarrow}(A)\)</span> is the smallest down-set that contains <span class="math inline">\(A\)</span>, so it follows <span class="math inline">\({\downarrow}(A)\subseteq A\)</span> since <span class="math inline">\(A\)</span> is an down-set and <span class="math inline">\(A\subseteq A.\)</span> Let <span class="math inline">\(x\in A.\)</span> By the reflexive property of <span class="math inline">\(\geq\)</span>, it follows <span class="math inline">\(x\geq x\)</span>, and thus <span class="math inline">\(x\in {\downarrow}(A).\)</span> Hence <span class="math inline">\({\downarrow}(A)=A.\)</span></p>
+<p>(3): Immediately, <span class="math inline">\(y\in {\downarrow}(x) \Longleftrightarrow x\geq y \Longleftrightarrow y\in {\downarrow}(x)\)</span>.</p>
+</div>
+<div id="thm-smallest-up-set" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 26 </strong></span>Let <span class="math inline">\((X,\geq)\)</span> be an ordered set with <span class="math inline">\(A\subseteq X\)</span> and <span class="math inline">\(x\in X.\)</span></p>
+<ol type="1">
+<li><span class="math inline">\({\uparrow}(A)\)</span> is the smallest up-set containing <span class="math inline">\(A\)</span>.</li>
+<li><span class="math inline">\(A\)</span> is an up-set if and only if <span class="math inline">\(A=\, {\uparrow}(A).\)</span></li>
+<li><span class="math inline">\({\uparrow}(x)=\, {\uparrow}(x)\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(1): Let <span class="math inline">\(x\in {\uparrow}(A)\)</span>, <span class="math inline">\(y\in X.\)</span> Assume <span class="math inline">\(y\geq x.\)</span> Since <span class="math inline">\(x\in {\uparrow}(A)\)</span>, there exists <span class="math inline">\(z\in A\)</span> such that <span class="math inline">\(x\geq z.\)</span> By transitivity <span class="math inline">\(y\geq z.\)</span> Thus it follows <span class="math inline">\(y\in {\uparrow}(A).\)</span> Therefore, <span class="math inline">\({\uparrow}(A)\)</span> is an up-set. Let <span class="math inline">\(U\)</span> be an up-set that contains <span class="math inline">\(A.\)</span> We will show <span class="math inline">\({\uparrow}(A)\subseteq U.\)</span> Let <span class="math inline">\(x\in {\uparrow}(A).\)</span> Then there exists <span class="math inline">\(z\in A\)</span> such that <span class="math inline">\(x\geq z.\)</span> Since <span class="math inline">\(z\in A\)</span>, it follows <span class="math inline">\(z\in U.\)</span> Since <span class="math inline">\(U\)</span> is an up-set, it follows that <span class="math inline">\(x\in U\)</span>, as a needed.</p>
+<p>(2): Suppose <span class="math inline">\(A={\uparrow}(A)\)</span>, then by part <span class="math inline">\(\eqref{basicpos2}\)</span>, it follows <span class="math inline">\(A\)</span> is an up-set. Conversely, assume <span class="math inline">\(A\)</span> is an up-set. By <span class="math inline">\(\eqref{basicpos1}\)</span>, <span class="math inline">\({\uparrow}(A)\)</span> is the smallest up-set that contains <span class="math inline">\(A\)</span>, so it follows <span class="math inline">\({\uparrow}(A)\subseteq A\)</span> since <span class="math inline">\(A\)</span> is an up-set and <span class="math inline">\(A\subseteq A.\)</span> Let <span class="math inline">\(x\in A.\)</span> By the reflexive property of <span class="math inline">\(\geq\)</span>, it follows <span class="math inline">\(x\geq x\)</span>, and thus <span class="math inline">\(x\in {\uparrow}(A).\)</span> Hence <span class="math inline">\({\downarrow}(A)=A.\)</span></p>
+<p>(3): Immediately, <span class="math inline">\(y\in {\uparrow}(x) \Longleftrightarrow y\geq x \Longleftrightarrow y\in {\uparrow}(x)\)</span>.</p>
+</div>
+<div id="thm-isoequiv" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 27 </strong></span>For all <span class="math inline">\(x,y\in X\)</span>, <span class="math display">\[
+x\geq y \, \Longleftrightarrow \, {\downarrow}(x)\supseteq {\downarrow}{y} \, \Longleftrightarrow \, {\uparrow}(x)\subseteq {\uparrow}{y}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(x\geq y.\)</span> Let <span class="math inline">\(z\in {\downarrow}{y}\)</span> then <span class="math inline">\(y\geq z.\)</span> By transitivity of <span class="math inline">\(\geq\)</span> we have <span class="math inline">\(x\geq z\)</span> and thus <span class="math inline">\(z\in {\downarrow}(x).\)</span> Therefore we have shown, if <span class="math inline">\(x\geq y\)</span> then <span class="math inline">\({\downarrow}(x)\supseteq {\downarrow}{y}.\)</span> Conversely, assume <span class="math inline">\({\downarrow}(x)\supseteq {\downarrow}{y}.\)</span> By reflexivity of <span class="math inline">\(\geq\)</span> we have <span class="math inline">\(y\in {\uparrow}{y}\)</span> and so <span class="math inline">\(y\in {\downarrow}(x)\)</span>, and thus <span class="math inline">\(x\geq y.\)</span> Now suppose <span class="math inline">\(x\geq y.\)</span> Let <span class="math inline">\(z\in {\uparrow}(x).\)</span> Then <span class="math inline">\(z\geq x\)</span> and so by transitivity of <span class="math inline">\(\geq\)</span> we have <span class="math inline">\(z\geq y\)</span>, and therefore <span class="math inline">\(z\in {\uparrow}{y}.\)</span> Conversely, assume <span class="math inline">\({\uparrow}(x)\subseteq {\uparrow}{y}.\)</span> Then <span class="math inline">\(x\in {\uparrow}{y}\)</span> and thus <span class="math inline">\(x\geq y.\)</span></p>
+</div>
+<div id="thm-mupprop" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 28 </strong></span>Let <span class="math inline">\((X,\geq)\)</span> be an ordered set with <span class="math inline">\(A,B\subseteq X.\)</span></p>
+<ol type="1">
+<li><span class="math inline">\({\uparrow}(A)={\uparrow}({\uparrow}(A))\)</span></li>
+<li><span class="math inline">\({\uparrow}(A\cup B)={\uparrow}(A)\ \cup {\uparrow}(B)\)</span></li>
+<li><span class="math inline">\({\uparrow}(A\cap B)\subseteq {\uparrow}(A)\ \cap {\uparrow}(B)\)</span></li>
+<li><span class="math inline">\({\uparrow}(A)=\bigcup_{x\in A} {\uparrow}(x)\)</span></li>
+<li><span class="math inline">\(B\supseteq A\Rightarrow {\uparrow}(B)\supseteq {\uparrow}(A)\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(1): Immediately we have <span class="math inline">\({\uparrow}(A)\subseteq {\uparrow}({\uparrow}(A)).\)</span> Let <span class="math inline">\(x\in {\downarrow}({\downarrow}(A)).\)</span> Then there exists <span class="math inline">\(y\in{\downarrow}(A)\)</span> such that <span class="math inline">\(y\geq x\)</span> and there exists <span class="math inline">\(a\in A\)</span> such that <span class="math inline">\(a\geq y\geq x.\)</span> Hence <span class="math inline">\(x\in {\downarrow}(A)\)</span>.</p>
+<p>(2): Let <span class="math inline">\(x\in {\uparrow}(A\cup B).\)</span> Then there exists <span class="math inline">\(y\in A\cup B\)</span> such that <span class="math inline">\(x\geq y.\)</span> If <span class="math inline">\(y\in A\)</span>, then <span class="math inline">\(x\in {\uparrow}(A).\)</span> If <span class="math inline">\(y\in B\)</span>, then <span class="math inline">\(x\in {\uparrow}(B).\)</span> Hence, <span class="math inline">\(x\in {\uparrow}(A)\ \cup {\uparrow}(B).\)</span> Conversely, assume <span class="math inline">\(x\in {\uparrow}(A) \ \cup {\uparrow}(B).\)</span> If <span class="math inline">\(x\in {\uparrow}(A)\)</span>, then there exists <span class="math inline">\(a\in A\)</span> such that <span class="math inline">\(x \geq a.\)</span> Hence <span class="math inline">\(a\in A\cup B\)</span> with <span class="math inline">\(x\geq a\)</span> which yields <span class="math inline">\(x\in {\uparrow}(A\ \cup B).\)</span> If <span class="math inline">\(x\in {\uparrow}(B)\)</span>, then there exists <span class="math inline">\(b\in B\)</span> such that <span class="math inline">\(x \geq b.\)</span> Hence <span class="math inline">\(b\in A\cup B\)</span> with <span class="math inline">\(x\geq b\)</span> which yields <span class="math inline">\(x\in {\uparrow}(A\ \cup B)\)</span>.</p>
+<p>(3): Let <span class="math inline">\(x\in {\uparrow}(A\cap B).\)</span> Then there exists <span class="math inline">\(y\in A\cap B\)</span> such that <span class="math inline">\(x\geq y.\)</span> Hence <span class="math inline">\(y\in A\)</span> with <span class="math inline">\(x\geq y\)</span> and <span class="math inline">\(y\in B\)</span> with <span class="math inline">\(x\geq y.\)</span> Thus <span class="math inline">\(x\in {\uparrow}(A)\)</span> and <span class="math inline">\(x\in {\uparrow}(B)\)</span>, and so <span class="math inline">\(x\in {\uparrow}(A)\ \cap {\uparrow}(B).\)</span></p>
+<p>(4): Let <span class="math inline">\(z\in {\uparrow}(A).\)</span> Then there exists <span class="math inline">\(a\in A\)</span> such that <span class="math inline">\(z\geq a.\)</span> Hence it follows that <span class="math inline">\(z\in {\uparrow}(a)\subseteq \bigcup_{x\in A} {\uparrow}(x)\)</span>.Conversely, assume <span class="math inline">\(z\in \bigcup_{x\in A} {\uparrow}(x).\)</span> Then there exists <span class="math inline">\(x\in A\)</span> such that <span class="math inline">\(z\in {\uparrow}(x).\)</span> Hence we have <span class="math inline">\(x\in A\)</span> with <span class="math inline">\(z\geq x.\)</span> Thus it follows that <span class="math inline">\(z\in {\uparrow}(A)\)</span> as needed.</p>
+</div>
+<div id="thm-mupprop" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 29 </strong></span>Let <span class="math inline">\((X,\geq)\)</span> be an ordered set with <span class="math inline">\(A,B\subseteq X.\)</span></p>
+<ol type="1">
+<li><span class="math inline">\({\downarrow}(A)={\downarrow}({\downarrow}(A))\)</span></li>
+<li><span class="math inline">\({\downarrow}(A\cup B)={\downarrow}(A)\ \cup {\downarrow}(B)\)</span></li>
+<li><span class="math inline">\({\downarrow}(A\cap B)\subseteq {\downarrow}(A)\ \cap {\downarrow}(B)\)</span></li>
+<li><span class="math inline">\({\downarrow}(A)=\bigcup_{x\in A} {\downarrow}(x)\)</span></li>
+<li><span class="math inline">\(B\supseteq A\Rightarrow {\downarrow}(B)\supseteq {\downarrow}(A)\)</span></li>
+</ol>
+</div>
+</section>
+<section id="monotone-mappings" class="level2">
+<h2 class="anchored" data-anchor-id="monotone-mappings">Monotone Mappings</h2>
+<div id="def-isotone-antitone" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 </strong></span>Let <span class="math inline">\((X,\leq_1)\)</span> and <span class="math inline">\((Y,\leq_2)\)</span> be ordered sets. A mapping <span class="math inline">\(f: X \to Y\)</span> is said to be <strong>isotone</strong> ( <strong>order-preserving</strong>) whenever <span class="math display">\[
+(\forall \, x,y\in X) \quad x \leq_1 y \implies f(x) \leq_2 f(y)
+\]</span> or is said to be <strong>antitone</strong> ( <strong>order-reversing</strong>) whenever <span class="math display">\[
+(\forall \, x,y\in X) \quad x \leq_1 y \implies f(x) \geq_2 f(y).
+\]</span> Furthermore, <span class="math inline">\(f\)</span> is called <strong>monotone</strong> if <span class="math inline">\(f\)</span> is either isotone or antitone.</p>
+</div>
+<div id="thm-isotone-antitone" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 30 </strong></span>For every function <span class="math inline">\(f\)</span> on an ordered set <span class="math inline">\((X,\geq)\)</span>, we denote it to be <span class="math inline">\(\uparrow\)</span>, <span class="math inline">\(\downarrow\)</span>, or <span class="math inline">\(\updownarrow\)</span> according to whether it is isotone, antitone, or both. The following are some easy consequences:</p>
+<ol type="1">
+<li><span class="math inline">\(\uparrow \circ \downarrow = \downarrow \circ \uparrow = \downarrow\)</span> (meaning that the composition of an isotone and an antitone maps is antitone),</li>
+<li><span class="math inline">\(\uparrow \circ \uparrow = \downarrow \circ \downarrow = \uparrow\)</span> (meaning that the composition of two isotone or two antitone maps is isotone),</li>
+<li><span class="math inline">\(f\)</span> is <span class="math inline">\(\updownarrow\)</span> if and only if it is a constant on any chain in <span class="math inline">\(A\)</span>, and if this is the case, for every <span class="math inline">\(a\in A\)</span>, <span class="math inline">\(f^{-1}(a)\)</span> is a maximal chain in <span class="math inline">\(A\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>An exercise for the reader as <a href="#exr-isotone-antitone">Exercise&nbsp;2</a>.</p>
+</div>
+</section>
+<section id="exercises-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercises-1">Exercises</h2>
+<div id="exr-isotone-antitone" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 </strong></span>Prove <a href="#thm-isotone-antitone">Theorem&nbsp;30</a>.</p>
+</div>
+<div id="thm-op-isotone" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 31 </strong></span>A mapping <span class="math inline">\(f:X\to Y\)</span> is isotone if and only if the inverse image of every principal down-set of <span class="math inline">\(Y\)</span> is a down-set of <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof follows as in MR2126425. First notice that <span class="math display">\[\begin{equation}
+\label{eq-inverseprinds}
+\forall y\in Y, \quad x\in f^{-1}({\downarrow}(y)) \Longleftrightarrow y\geq f(x).
+\end{equation}\]</span></p>
+<p>Suppose that <span class="math inline">\(f\)</span> is isotone. Let <span class="math inline">\({\downarrow}(y)\)</span> be an arbitrary principal down-set of <span class="math inline">\(Y\)</span> and let <span class="math inline">\(A=f^{-1}({\downarrow}(y))\)</span>. Assume <span class="math inline">\(x\in A\)</span>, <span class="math inline">\(z\in X\)</span>, and <span class="math inline">\(x\geq z\)</span>. Since <span class="math inline">\(f\)</span> is isotone, we have <span class="math inline">\(f(x)\geq f(z)\)</span>.<br>
+Since <span class="math inline">\(x\in A\)</span> it follows by <span class="math inline">\(\eqref{eq-inverseprinds}\)</span> that <span class="math inline">\(y\geq f(x)\)</span>; and so we have <span class="math inline">\(y\geq f(z)\)</span> by transitivity of <span class="math inline">\(\geq\)</span>. Thus <span class="math inline">\(z\in A\)</span> as needed. For conversely, notice that by reflexivity of <span class="math inline">\(\geq\)</span> and <span class="math inline">\(\eqref{eq-inverseprinds}\)</span> it follows that for every <span class="math inline">\(x\in X\)</span> we have <span class="math inline">\(x\in f^{-1}({\downarrow}(f(x)))\)</span>. By hypothesis, <span class="math inline">\(f^{-1}({\downarrow}(f(x)))\)</span> is a down-set of <span class="math inline">\(X\)</span>; so if <span class="math inline">\(y\in X\)</span> is such that <span class="math inline">\(x\geq y\)</span> we have <span class="math inline">\(y\in f^{-1}({\downarrow}(f(x)))\)</span>. By <span class="math inline">\(\eqref{eq-inverseprinds}\)</span>, it follows that <span class="math inline">\(f(x)\geq f(y)\)</span> and therefore <span class="math inline">\(f\)</span> is isotone.</p>
+</div>
+<div id="thm-op-inverse-image" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 32 </strong></span>If <span class="math inline">\(X, Y\)</span> are ordered sets and if <span class="math inline">\(f:X\to Y\)</span> is any mapping then the following statements are equivalent.</p>
+<ol type="1">
+<li><span class="math inline">\(f\)</span> is isotone;</li>
+<li>the inverse image of every principal down-set of <span class="math inline">\(Y\)</span> is a down-set of <span class="math inline">\(X\)</span>;</li>
+<li>the inverse image of every principal up-set of <span class="math inline">\(Y\)</span> is an up-set of <span class="math inline">\(X\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(1)<span class="math inline">\(\Leftrightarrow\)</span>(2): Suppose that <span class="math inline">\(f\)</span> is isotone. Let <span class="math inline">\(y\in Y\)</span> and let <span class="math inline">\(A=f^{\leftarrow}(y^{\downarrow})\)</span>. If <span class="math inline">\(A\neq\emptyset\)</span> assume <span class="math inline">\(x\in A\)</span>. Then for every <span class="math inline">\(z\in X\)</span> with <span class="math inline">\(z\leq x\)</span> we have <span class="math inline">\(f(z)\leq f(x)\leq y\)</span> whence <span class="math inline">\(z\in A\)</span>. Thus <span class="math inline">\(A\)</span> is a down-set of <span class="math inline">\(X\)</span>. Conversely, notice that for every <span class="math inline">\(x\in X\)</span> we have <span class="math inline">\(x\in f^{\leftarrow}[f(x)^{\downarrow}]\)</span>. By (2) this is a down-set of <span class="math inline">\(X\)</span>; so if <span class="math inline">\(y\in X\)</span> is such that <span class="math inline">\(y\leq x\)</span> we have <span class="math inline">\(y\in f^{\leftarrow}[f(x)^{\downarrow}]\)</span>. If follows that <span class="math inline">\(f(y)\leq f(x)\)</span> and therefore <span class="math inline">\(f\)</span> is isotone.</p>
+<p>(1)<span class="math inline">\(\Leftrightarrow\)</span>(2): Assume <span class="math inline">\(f\)</span> is order preserving. Let <span class="math inline">\(y\in Y\)</span> and let <span class="math inline">\(A=f^{\leftarrow}(y^{\uparrow})\)</span> be the inverse image of a principal down-set of <span class="math inline">\(Y\)</span>. To show <span class="math inline">\(A\)</span> is an up-set of <span class="math inline">\(X\)</span>, assume <span class="math inline">\(x\in A\)</span>. If <span class="math inline">\(z\in X\)</span> with <span class="math inline">\(z\geq x\)</span> we have <span class="math inline">\(f(z)\geq f(x) \geq y\)</span> whence <span class="math inline">\(z\in A\)</span> as needed. Conversely assume <span class="math inline">\(x\leq y\)</span> and that <span class="math inline">\(\eqref{ipu}\)</span> holds. Notice <span class="math inline">\(x\in f^{\leftarrow}(f(x)^{\uparrow})\)</span> holds for all <span class="math inline">\(x\in X\)</span>. By assumption, <span class="math inline">\(f^{\leftarrow} (f(x)^{\uparrow})\)</span> is an up-set of <span class="math inline">\(X\)</span>, and so it follows <span class="math inline">\(y\in f^{\leftarrow}(f(x)^{\uparrow})\)</span>. Whence <span class="math inline">\(f(y)\geq f(x)\)</span> as needed.</p>
+</div>
+<div id="thm-order-isomorphism" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 33 </strong></span>A mapping <span class="math inline">\(f: X \to Y\)</span> is an order-isomorphism if and only if <span class="math inline">\(f\)</span> is bijective and both <span class="math inline">\(f\)</span> and <span class="math inline">\(f^{-1}\)</span> are isotone.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof follows as in davey2002introduction. Assume <span class="math inline">\(f:X\to Y\)</span> is a order-isomorphism. By definition <span class="math inline">\(f\)</span> is surjective. Using the reflexive and antisymmetric properties we have <span class="math display">\[\begin{align*}
+f(x)=f(y) &amp; \Longleftrightarrow f(x)\geq f(y)\text{ and } f(y)\geq f(x) \\
+&amp; \Longleftrightarrow x\geq y \text{ and } y\geq x \\
+&amp; \Longleftrightarrow x=y
+\end{align*}\]</span> Thus <span class="math inline">\(f\)</span> is injective and so bijective. Since <span class="math display">\[
+\forall x,y\in X, \quad x=f^{-1}(f(x))=f^{-1}(f(y))=y \Longleftrightarrow f(x)\geq_2 f(y)
+\]</span> it follows both <span class="math inline">\(f\)</span> and <span class="math inline">\(f^{-1}\)</span> are isotone. Conversely, assume <span class="math inline">\(f\)</span> is bijective and both <span class="math inline">\(f\)</span> and <span class="math inline">\(f^{-1}\)</span> are isotone. Obviously, <span class="math inline">\(f\)</span> is surjective. Let <span class="math inline">\(x,y\in X\)</span>. Assume <span class="math inline">\(x\geq y\)</span>. Then <span class="math inline">\(f(x)\geq f(y)\)</span> since <span class="math inline">\(f\)</span> is isotone. Now assume <span class="math inline">\(f(x)\geq f(y)\)</span>. Since <span class="math inline">\(f^{-1}\)</span> is isotone and <span class="math inline">\(f^{-1}\)</span> is the inverse of <span class="math inline">\(f\)</span>, we have <span class="math inline">\(x=f^{-1}(f(x))\geq y=f^{-1}(f(y))\)</span> as needed to establish <span class="math inline">\(\eqref{red-iso}\)</span>.</p>
+</div>
+<div id="thm-powerset-order-isomorphism" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 34 </strong></span>The mapping <span class="math inline">\(\phi: X\to \mathcal{X}\)</span> defined by <span class="math display">\[
+\phi(x)= {\downarrow}(x).
+\]</span> is an order-isomorphism onto the set of all principal down-sets of <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>First notice that <span class="math inline">\(\phi\)</span> is a bijection to the principal down-sets: <span class="math display">\[
+\phi(x)=\phi(y)
+\Longleftrightarrow {\downarrow}(x) = {\downarrow}(y)
+\Longleftrightarrow y\geq x \text{ and } x\geq y
+\Longleftrightarrow x=y.
+\]</span> To show that <span class="math inline">\(\phi\)</span> is a order-isomorphism, observe <span class="math inline">\(\eqref{isoequiv}\)</span> yields <span class="math inline">\(x\geq y\)</span> if and only if <span class="math inline">\(\phi(y) \subseteq \phi(x)\)</span>, and the claim follows.</p>
+</div>
+</section>
+<section id="residuated-mappings" class="level2">
+<h2 class="anchored" data-anchor-id="residuated-mappings">Residuated Mappings</h2>
+<p>Let <span class="math inline">\((X,\geq)\)</span> and <span class="math inline">\((Y,\succeq)\)</span> be ordered sets.</p>
+<div id="def-residuated" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 </strong></span>A mapping <span class="math inline">\(f:X\to Y\)</span> is called if the inverse image of every principal down-set of <span class="math inline">\(Y\)</span> is a principal down-set of <span class="math inline">\(X\)</span>.</p>
+</div>
+<div id="thm-resg" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 35 </strong></span>A mapping <span class="math inline">\(f:X\to Y\)</span> is residuated if and only if it is isotone and there exists a isotone mapping <span class="math inline">\(g:Y\to X\)</span> such that <span class="math display">\[\begin{equation}
+\label{adj}
+\forall \, x\in X,   (g\circ f)(x) \geq  x
+\quad \text{ and } \quad
+\forall y \, \in Y,   y\succeq (f\circ g)(y).
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof follows as in page 6 MR2126425. Assume <span class="math inline">\(f\)</span> is residuated. It follows that <span class="math inline">\(f\)</span> is isotone. Notice the definition of residuated means: for all <span class="math inline">\(y\in Y\)</span> there exists <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(f^{-1}({ \downarrow}(y)) = { \downarrow}(x)\)</span>. Now for every given <span class="math inline">\(y\in Y\)</span> this element <span class="math inline">\(x\)</span> is clearly unique [if <span class="math inline">\(f^{-1}({ \downarrow}(y))={ \downarrow}(x)\)</span> and <span class="math inline">\(f^{-1}({ \downarrow}(y))={ \downarrow}(z)\)</span>, then <span class="math inline">\(z\geq x\)</span> and <span class="math inline">\(x\geq z\)</span>], so we can define a mapping <span class="math inline">\(g:Y\to X\)</span> by setting <span class="math inline">\(g(y)=x\)</span>. It follows that <span class="math inline">\(g\)</span> is isotone:<br>
+<span class="math display">\[\begin{align*}
+y_1\succeq y_2 &amp; \implies {\downarrow}(y_2) \subseteq {\downarrow}(y_1) \implies f^{-1}({\downarrow}(y_2)) \subseteq f^{-1}({\downarrow}(y_1)) \\
+&amp; \implies {\downarrow}(x_2) \subseteq {\downarrow}(x_1) \implies {\downarrow}(g(y_2))\subseteq {\downarrow}(g(y_1)) \implies g(y_1)\geq g(y_2).
+\end{align*}\]</span> Further it follows <span class="math inline">\(g(y)\in {\downarrow}(g(y))= { \downarrow}(x)=f^{-1}({ \downarrow}(y))\)</span>, and so <span class="math inline">\(y\succeq (f\circ g)(y)\)</span>, for all <span class="math inline">\(y\in Y\)</span>; and <span class="math inline">\(x\in f^{-1}({\downarrow}(f(x)))={\downarrow}(g(f(x)))\)</span> so that <span class="math inline">\((g\circ f)(x)\geq x\)</span>, for all <span class="math inline">\(x\in X\)</span>. Conversely, assume <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are isotone mappings such that <span class="math inline">\(\eqref{adj}\)</span> holds. Then on the one hand we have <span class="math display">\[
+y\succeq f(x) \implies g(y)\geq g(f(x)) \geq x
+\]</span> and on the other hand we have <span class="math display">\[
+g(y) \geq x \implies y \succeq f(g(y)) \succeq f(x).
+\]</span> It follows from these observations that <span class="math inline">\(y\succeq f(x)\)</span> if and only if <span class="math inline">\(g(y)\geq x\)</span>. Therefore we have <span class="math inline">\(f^{-1}({ \downarrow}(y))={\downarrow}(g(y))\)</span>. Whence <span class="math inline">\(f\)</span> is residuated.</p>
+</div>
+<div id="thm-resuni" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 36 </strong></span>If <span class="math inline">\(f:X\to Y\)</span> is a residuated, then an isotone mapping that satisfies <span class="math inline">\(\eqref{adj}\)</span> is unique, and is called the of <span class="math inline">\(f\)</span> and is denoted by <span class="math inline">\(f^+\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose that <span class="math inline">\(g, h:Y\to X\)</span> are each isotone mappings that satisfy <span class="math inline">\(\eqref{adj}\)</span>. Then <span class="math display">\[
+\forall y\in Y, \quad  h(y)\geq h((f\circ g)(y)) = (h\circ f)(g(y))\geq g(y)
+\]</span> Similarly it follows <span class="math inline">\(g(y)\geq h(y)\)</span> and therefore <span class="math inline">\(g=h\)</span>.</p>
+</div>
+<p>For every non-empty set <span class="math inline">\(X\)</span> the residuated mappings on <span class="math inline">\(\mathcal{X}\)</span> are completely described in the following result.</p>
+<div id="thm-residuated" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 37 </strong></span>Let <span class="math inline">\(X\)</span> be a non-empty set and let <span class="math inline">\(R\)</span> be a binary relation on <span class="math inline">\(X\)</span>. Then the mapping <span class="math inline">\(\zeta_R :\mathcal{X}\to\mathcal{X}\)</span> defined by <span class="math display">\[
+\zeta_R(A)=\{y\in X : (\exists \, x\in A) \, \, (x,y)\in R\}
+\]</span> is residuated. Moreover, every residuated mapping <span class="math inline">\(f:\mathcal{X}\to\mathcal{X}\)</span> is of this form for some binary relation <span class="math inline">\(R\)</span> on <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof follows as in p.&nbsp;8 MR2126425.</p>
+<p>Let <span class="math inline">\(\iota : \mathcal{X} \to \mathcal{X}\)</span> be the antitone mapping that sends each subset of <span class="math inline">\(X\)</span> to its complement and let <span class="math inline">\(\zeta_{R^{-1}}:\mathcal{X} \to \mathcal{X}\)</span> be defined by <span class="math display">\[
+\zeta_{R^{-1}}(A)=\{y\in X : (\exists \, x\in A) \, \, (x,y)\in R^{-1}\}.
+\]</span> The mapping <span class="math inline">\(\zeta_{R}^+:\mathcal{X} \to \mathcal{X}\)</span> defined by <span class="math inline">\(\zeta_{R}^+=\iota\circ \zeta_{R^{-1}}\circ \iota\)</span> is isotone. To see this, let <span class="math inline">\(A,B\in \mathcal{X}\)</span>. Then it follows that <span class="math display">\[\begin{align*}
+A\subseteq B &amp; \implies \iota(A)\supseteq \iota(B) \implies \zeta_{R^{-1}}(\iota(A))\supseteq \zeta_{R^{-1}}(\iota(B)) \\
+&amp; \implies (\iota\circ \zeta_{R^{-1}})(\iota(A))\subseteq (\iota\circ \zeta_{R^{-1}})(\iota(B)) \implies \zeta^+_R(A) \subseteq \zeta^+_R(B).
+\end{align*}\]</span> We claim that <span class="math inline">\((\zeta_R^+\circ \zeta_R)(A)\supseteq A\)</span>, for all <span class="math inline">\(A\in \mathcal{X}\)</span>. It suffices to show <span class="math inline">\((\zeta_{R^{-1}}\circ \iota \circ \zeta_R)(A)\subseteq \iota(A)\)</span> because then we have <span class="math inline">\((\zeta^+_R\circ \zeta_R)(A)=(\iota\circ \zeta_{R^{-1}})(A)\supseteq A\)</span> as required. To this end notice that <span class="math display">\[\begin{align*}
+y\in (\zeta_{R^{-1}}\circ \iota \circ \zeta_R)(A) \implies \exists z\in (\iota\circ \zeta_R)(A), (y,z)\in R
+\end{align*}\]</span> Assume <span class="math inline">\(y\in A\)</span>. Then <span class="math inline">\(y\in A\)</span> and <span class="math inline">\((y,z)\in R\)</span> which yields <span class="math inline">\(z\in \zeta_R(A)\)</span>. However, <span class="math inline">\(z\notin \zeta_R(A)\)</span>. Hence <span class="math inline">\(y\notin A\)</span> and so <span class="math inline">\(y\in \iota(A)\)</span> as desired.</p>
+<p>Next we claim that <span class="math inline">\((\zeta_R\circ \zeta_R^+)(A)\subseteq A\)</span>, for all <span class="math inline">\(A\in \mathcal{X}\)</span>. Equivalently we show that <span class="math inline">\((\zeta_R\circ \iota\circ \zeta_{R^{-1}})(A) \subseteq \iota(A)\)</span>, for all <span class="math inline">\(A\in \mathcal{X}\)</span>. Assume <span class="math inline">\(y\in (\zeta_R\circ \iota\circ \zeta_{R^{-1}})(A)\)</span> and <span class="math inline">\(y\in A\)</span>. Then there exists <span class="math inline">\(z\in (\iota\circ \zeta_{R^{-1}})(A)\)</span> such that <span class="math inline">\((y,z)\in R^{-1}\)</span>. Thus, <span class="math inline">\(z\in (\iota\circ \zeta_{R^{-1}})(A)\)</span> and <span class="math inline">\(z\in \zeta_{R^{-1}}(A)\)</span>. This contradiction shows that <span class="math inline">\(y\notin A\)</span> as desired.</p>
+<p>To see that every residuated mapping <span class="math inline">\(f : \mathcal{X} \to \mathcal{X}\)</span> is of this form for some binary relation <span class="math inline">\(R\)</span> on <span class="math inline">\(X\)</span>, consider the relation <span class="math inline">\(R_f\)</span> defined on <span class="math inline">\(X\)</span> by <span class="math display">\[
+(x,y)\in R_f \Longleftrightarrow y\in f(\{x\}).
+\]</span> Observe that <span class="math inline">\(\zeta_{R_f}(\{x\})=\{y\in X : (x,y)\in R_f\}\)</span>, so that <span class="math inline">\(f\)</span> and <span class="math inline">\(\zeta_{R_f}\)</span> agree on singletons. Now if <span class="math inline">\(k: \mathcal{X}\to \mathcal{X}\)</span> is any residuated mapping then, since it is isotone, for every non-empty subset <span class="math inline">\(A\)</span> of <span class="math inline">\(X\)</span> we have <span class="math display">\[\begin{equation}
+\label{kab}
+k(A)=k\left(\, \bigcup_{x\in A}\{x\}\right)=\bigcup_{x\in A} k(\{x\}).
+\end{equation}\]</span> To see that <span class="math inline">\(\ref{kab}\)</span> holds, notice that if <span class="math inline">\(B=\bigcup_{x\in A} k(\{x\})\)</span> then clearly <span class="math inline">\(k(A)\supseteq B\)</span>. On the other hand, <span class="math inline">\(k(\{x\})\subseteq B\)</span> for every <span class="math inline">\(x\in A\)</span> and so <span class="math inline">\(\{x\}\subseteq k^+(B)\)</span> whence <span class="math inline">\(A=\bigcup_{x\in A}\{x\}\subseteq k^+(B)\)</span>. and therefore <span class="math inline">\(k(A)\subseteq B\)</span>. Now <span class="math inline">\(\ref{kab}\)</span> applied to both <span class="math inline">\(f\)</span> and <span class="math inline">\(\zeta_{R_f}\)</span>, together with the fact that <span class="math inline">\(f\)</span> and <span class="math inline">\(\zeta_{R_f}\)</span> agree on singletons we now have <span class="math display">\[
+f(A)
+=\bigcup_{x\in A} f(\{x\})
+=\bigcup_{x\in A} \zeta_{R_f} (\{x\})
+=\zeta_{R_f} (A).
+\]</span> Whence we obtain <span class="math inline">\(f=\zeta_{R_f}\)</span>.</p>
+</div>
+<div id="thm-residuated-mappings-semigroup" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 38 </strong></span>The set <span class="math inline">\(\text{Res}(X)\)</span> of residuated mappings <span class="math inline">\(f : X \to X\)</span> forms a semigroup, as does the set <span class="math inline">\(\text{Res}^+(X)\)</span> of residual mappings <span class="math inline">\(f^+:X\to X\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof follows as in p.&nbsp;9 MR2126425. Clearly, <span class="math inline">\(g\circ f\)</span> and <span class="math inline">\(f\circ g\)</span> are isotone. Moreover, <span class="math display">\[\begin{align*}
+&amp; (f^+\circ g^+)\circ (g\circ f)\geq f^+\circ \text{id}_Y \circ f=f^+\circ f \geq \text{id}_X \\
+&amp; (g\circ f)\circ (f^+\circ g^+)\leq g\circ \text{id}_Y \circ g^+=g\circ g^+ \leq \text{id}_Y
+\end{align*}\]</span> Thus by the uniqueness of residuals, <span class="math inline">\((g\circ f)^+\)</span> exists and is <span class="math inline">\(f^+\circ g^+\)</span>. Therefore if <span class="math inline">\(f:X\to Y\)</span> and <span class="math inline">\(g:Y\to X\)</span> are residuated, then <span class="math inline">\(g\circ f\)</span> is also residuated and <span class="math inline">\((g\circ f)^+=f^+\circ g^+\)</span>.</p>
+</div>
+</section>
+<section id="closure-operators" class="level2">
+<h2 class="anchored" data-anchor-id="closure-operators">Closure Operators</h2>
+<p>Let <span class="math inline">\((X,\geq)\)</span> be an ordered set.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 </strong></span>An isotone mapping <span class="math inline">\(f : X \to X\)</span> is a on <span class="math inline">\(X\)</span> if it is such that <span class="math display">\[
+\forall \, x\in X,   f(x)=(f\circ f)(x) \geq x
+\]</span> and is called a on <span class="math inline">\(X\)</span> if it is such that <span class="math display">\[
+\forall \, x\in X,   x\geq f(x)=(f\circ f)(x)
+\]</span></p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 39 </strong></span>If <span class="math inline">\(X\)</span> is an ordered set then <span class="math inline">\(f : X \to X\)</span> is a closure if and only if there is an ordered set <span class="math inline">\(Y\)</span> and a residuated mapping <span class="math inline">\(g : X \to Y\)</span> such that <span class="math inline">\(f = g^+ \circ g\)</span>.</p>
+</div>
+<div class="proof">
+<span class="proof-title"><em>Proof</em>. </span>The proof follows as in .
+<span class="math inline">\(\Rightarrow\)</span>: Suppose that <span class="math inline">\(f:X\to X\)</span> is a closure. Let <span class="math inline">\(R\)</span> be the kernel of <span class="math inline">\(f\)</span>, i.e.&nbsp;the equivalence relation on <span class="math inline">\(X\)</span> defined by <span class="math display">\[
+(x,y)\in R \Longleftrightarrow f(x)=f(y).
+\]</span> Define the relation <span class="math inline">\(\sqsubseteq\)</span> on the quotient set <span class="math inline">\(E/R\)</span> by <span class="math display">\[
+[x]_R \sqsubseteq [y]_R \Longleftrightarrow f(x)\leq f(y).
+\]</span> It is readily seen that <span class="math inline">\(\sqsubseteq\)</span> is an order on <span class="math inline">\(E/R\)</span> and, since <span class="math inline">\(f\)</span> is isotone, the natural mapping <span class="math inline">\(\tau_R :X\to X/R\)</span> is intone. Now since <span class="math inline">\(f\)</span> is a closure every <span class="math inline">\(R\)</span>-class has a top element, that in <span class="math inline">\([x]_R\)</span> being <span class="math inline">\(f(x)\)</span>. We can therefore define a mapping <span class="math inline">\(g:E/R\to E\)</span> by setting <span class="math inline">\(g([x]_R)=f(x)\)</span>. We then have <span class="math display">\[
+\begin{cases}
+(g\circ \tau_R)(x)=g([x]_R)=f(x)\geq x; \\
+(\tau\circ g)([x]_R)=\tau_R(f(x))=[f(x)]_R=[x]_R.
+\end{cases}
+\]</span> It follows that <span class="math inline">\(\tau\)</span> is residuated with <span class="math inline">\(\tau_R^+=g\)</span> and that <span class="math inline">\(f=\tau_R^+\circ \tau_R\)</span>.
+<p><span class="math inline">\(\Leftarrow\)</span>: Suppose conversely that there is an ordered set <span class="math inline">\(Y\)</span> and a residuated mapping <span class="math inline">\(g : X \to Y\)</span> such that <span class="math inline">\(f = g^+ \circ g\)</span>. Then on the one hand <span class="math inline">\(g^+ \circ g \geq \text{id}_X\)</span>; and on the other, by <span class="math inline">\(\ref{resprop}\)</span>, <span class="math inline">\(g = g \circ g^+ \circ g\)</span>, so that <span class="math inline">\(g^+ \circ g = (g^+ \circ g)^2\)</span>. Since <span class="math inline">\(g^+\circ g\)</span> is isotone it follows that <span class="math inline">\(f=g^+\circ g\)</span> is a closure on <span class="math inline">\(X\)</span>.</p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 40 </strong></span>Dually, <span class="math inline">\(f : X \to X\)</span> is a dual closure if and only if there is an ordered set <span class="math inline">\(Y\)</span> and a residuated mapping <span class="math inline">\(g : X \to Y\)</span> such that <span class="math inline">\(f = g \circ g^+\)</span>.</p>
+</div>
+<p>If <span class="math inline">\(f : X \to X\)</span> is a closure or a dual closure and if <span class="math inline">\(x \in \text{Im} f\)</span> then <span class="math inline">\(x = f(y)\)</span> for some <span class="math inline">\(y \in E\)</span>, whence we obtain <span class="math inline">\(f(x) = f^2(y) = f(y) = x\)</span>. Consequently, we see that <span class="math display">\[
+\text{Im}f = \{x \in E : f(x) = x\},
+\]</span> the set of of <span class="math inline">\(f\)</span>. In short, the image of a closure is its set of fixed points.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 </strong></span>A subset <span class="math inline">\(A\)</span> of an ordered set <span class="math inline">\(X\)</span> is called a (dual) closure subset if there is a (dual) closure <span class="math inline">\(f : X \to X\)</span> such that <span class="math inline">\(A = \text{Im} f\)</span>.</p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 41 </strong></span>A subset <span class="math inline">\(A\)</span> of an ordered set <span class="math inline">\(X\)</span> is a closure subset of <span class="math inline">\(X\)</span> if and only if for every <span class="math inline">\(x\in X\)</span> the set <span class="math inline">\(x^{\uparrow} \cap A\)</span> has a bottom element.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof follows as in . Suppose that <span class="math inline">\(A\)</span> is a closure subset of <span class="math inline">\(X\)</span> and let <span class="math inline">\(f : X \to X\)</span> be a closure such that <span class="math inline">\(A = \text{Im} f\)</span>. Then for every <span class="math inline">\(x \in X\)</span> the set <span class="math inline">\(x^{\uparrow} \cap A\)</span> is not empty since clearly it contains the element <span class="math inline">\(f(x)\)</span>. Moreover, if <span class="math inline">\(z \in x^{\uparrow} \cap A\)</span> then <span class="math inline">\(x\leq z\)</span> and <span class="math inline">\(f(x)\leq f(z)=z\)</span>. Consequently <span class="math inline">\(x^{\uparrow} \cap A\)</span> has a bottom element, namely <span class="math inline">\(f(x)\)</span>. Conversely, suppose that for every <span class="math inline">\(x \in X\)</span> the set <span class="math inline">\(x^{\uparrow} \cap A\)</span> has a bottom element, <span class="math inline">\(x_*\)</span> say, and consider the mapping <span class="math inline">\(f : X \to X\)</span> given by <span class="math inline">\(f(x) = x_*\)</span>. If <span class="math inline">\(x\leq y\)</span> then <span class="math inline">\(x^{\uparrow} \supseteq y^{\uparrow}\)</span> gives <span class="math inline">\(x^{\uparrow} \cap A \supseteq y^{\uparrow} \cap A\)</span> whence it follows that <span class="math inline">\(x_* \leq y_*\)</span> and so <span class="math inline">\(f\)</span> is isotone. Moreover, since <span class="math inline">\(f(x) = x_* \geq x\)</span> for every <span class="math inline">\(x \in X\)</span> we also have <span class="math inline">\(f\geq \text{id}_X\)</span>. Now for any <span class="math inline">\(y\in A\)</span> we clearly have <span class="math inline">\(y=y_*=f(y)\in\text{Im} f\)</span>. Applying this to <span class="math inline">\(f(x)=x_* \in A\)</span> we obtain <span class="math inline">\(f^2(x)=f(x)\)</span>. Hence <span class="math inline">\(f^2 =f\)</span> and so <span class="math inline">\(f\)</span> is a closure with <span class="math inline">\(\text{Im} f = A\)</span>.</p>
+</div>
+<p>is Connections</p>
+<p>Galois connections are mathematical structures that allow us to model the relationships between objects in a given category. In this comprehensive guide, you’ll learn everything you need to know about these fascinating structures, including their properties and applications. With plenty of examples and exercises to help you along the way, this book is perfect for anyone looking to gain a deeper understanding of Galois connections.</p>
+<p>In mathematics, a Galois connection is a structure that allows us to model the relationships between objects. In this comprehensive guide, you’ll learn everything you need to know about these fascinating structures, including their properties and applications. With plenty of examples and exercises to help you along the way, this book is perfect for anyone looking to gain a deeper understanding of Galois connections.</p>
+<p>Galois connections are a type of relationship between two sets that allows for mappings between the two sets. These mappings preserve (or reverse) certain properties, such as order or containment.</p>
+<p>Galois connections were first studied by French mathematician Evariste Galois, who developed the theory of algebraic equations. Galois connections have since been applied to fields such as computer science and linguistics. In computer science, they are used to define data structures and algorithms. In linguistics, they are used to describe the relationship between meaning and sound in language.</p>
+<p>Galois connections are a powerful tool for understanding relationships between sets.</p>
+<p>Galois connections have a number of interesting properties that make them useful for modeling relationships between objects.</p>
+<p>First, every Galois connection has an associated closure operator. This operator takes a set and returns a new set that is “closed” under the given Galois connection. That is, if you have a set A and a Galois connection between A and B, then the closure of A will be a subset of B that contains all the elements of A, plus any additional elements that can be reached from A via the given Galois connection.</p>
+<p>Second, every Galois connection has an associated interior operator. This operator takes a set and returns a new set that is “open” under the given Galois connection. That is, if you have a set A and a Galois connection between A and B, then the interior of A will be a subset of B that contains all the elements of A, minus any elements that can’t be reached from A via the given Galois connection.</p>
+<p>Third, every Galois connection defines a partial order on its associated sets. That is, if you have a set A and a Galois connection between A and B, then the elements of A will be partially ordered by the given Galois connection.</p>
+<p>Fourth, every Galois connection has an associated notion of distance. This distance is used to define a metric on the sets that are connected by the Galois connection. This metric allows us to measure how “far” one element is from another.</p>
+<p>Finally, every Galois connection has an associated notion of connectedness. This allows us to determine whether two elements are “connected” by the given Galois connection.</p>
+<p>Galois connections can be used to model a wide variety of relationships between objects. In computer science, they are used to define data structures and algorithms. In linguistics, they are used to describe the relationship between meaning and sound in language.</p>
+<p>Galois connections are also used in category theory, a branch of mathematics that deals with the structure of objects and their relationships. In particular, Galois connections are used to define adjunctions between categories.</p>
+<p>Finally, Galois connections can be used to study problems in physics and engineering. For example, they can be used to model the propagation of waves through a medium.</p>
+<p>Galois connections are a powerful tool for understanding relationships between sets. This book is a complete guide to the theory of Galois connections, with plenty of examples and exercises to help you along the way.</p>
+<p>There are two ways to construct a Galois connection. The first is to start with a closure operator and an interior operator, and then to define the associated mapping between the sets. The second is to start with a partial order and a metric, and then to define the associated closure and interior operators.</p>
+<p>Let <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span> be ordered sets.</p>
+<div id="def-galois-connection" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 </strong></span>If <span class="math inline">\(f_*:X\to Y\)</span> and <span class="math inline">\(f^*:Y\to X\)</span> are functions such that <span class="math display">\[\begin{equation}
+\label{gc}
+f_*(x)\leqslant y  \Longleftrightarrow x\preceq f^*(y)
+\end{equation}\]</span> for all <span class="math inline">\(x\in X\)</span> and all <span class="math inline">\(y\in Y\)</span>, then <span class="math inline">\((f_*, f^*)\)</span> is called a <strong>Galois connection</strong> between <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span>.</p>
+</div>
+<p>There are several definitions of Galois connections in the literature; however they are all order-isomorphic to the definition above.</p>
+<div id="thm-gcch" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 42 </strong></span>Let <span class="math inline">\(f_*:X\to Y\)</span> and <span class="math inline">\(f^*:Y\to X\)</span> be functions. Then <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection if and only if</p>
+<ol type="1">
+<li>both <span class="math inline">\(f_*\)</span> and <span class="math inline">\(f^*\)</span> are monotone,</li>
+<li><span class="math inline">\(x\preceq (f^*\circ f_*)(x)\)</span> for all <span class="math inline">\(x\in X\)</span>, and</li>
+<li><span class="math inline">\((f_* \circ f^*)(y)\leqslant y\)</span> for all <span class="math inline">\(y\in Y\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection. By <span class="math inline">\(\eqref{gc}\)</span> it follows <span class="math display">\[
+f_*(x)\leqslant f_*(x)  \Longleftrightarrow x\preceq (f^*\circ f_*)(x).
+\]</span> Since <span class="math inline">\(\leqslant\)</span> is reflexive, <span class="math inline">\(x\preceq (f^*\circ f_*)(x)\)</span> follows immediately. Similarly, by <span class="math inline">\(\eqref{gc}\)</span> it follows <span class="math display">\[
+(f_*\circ f^*)(y)\leqslant y \Longleftrightarrow f^*(y)\preceq f^*(y)
+\]</span> proving that <span class="math inline">\(\eqref{gc3}\)</span> also holds. Assume <span class="math inline">\(x_1\preceq x_2\)</span>. By <span class="math inline">\(\eqref{gc2}\)</span> we have <span class="math inline">\(x_2\preceq (f^*\circ f_*)(x_2)\)</span>. By <span class="math inline">\(\eqref{gc}\)</span> it follows <span class="math inline">\(f_*(x_1)\leqslant f_*(x_2)\)</span> and so <span class="math inline">\(f_*\)</span> is monotone. Assume <span class="math inline">\(y_1\leqslant y_2\)</span>. By <span class="math inline">\(\eqref{gc3}\)</span> we have <span class="math inline">\((f_*\circ f^*)(y_1)\leqslant y_1\)</span>. By <span class="math inline">\(\eqref{gc}\)</span> it follows <span class="math inline">\(f^*(y_1)\preceq f^*(y_2)\)</span> and so <span class="math inline">\(f^*\)</span> is also monotone.</p>
+<p>Conversely, assume <span class="math inline">\(\eqref{gc1}\)</span>, <span class="math inline">\(\eqref{gc2}\)</span>, and <span class="math inline">\(\eqref{gc3}\)</span> all hold. Assume <span class="math inline">\(f_*(x)\leqslant y\)</span>. By <span class="math inline">\(\eqref{gc1}\)</span> and <span class="math inline">\(\eqref{gc2}\)</span>, it follows <span class="math inline">\((f^*\circ f_*)(x)\preceq f^*(y)\)</span> and <span class="math inline">\(x\preceq (f^*\circ f_*)(x)\)</span>, respectively. By transitivity of <span class="math inline">\(\preceq\)</span>, we have <span class="math inline">\(x\preceq f^*(y)\)</span> as needed. Assume <span class="math inline">\(x\preceq f^*(y)\)</span>. By <span class="math inline">\(\eqref{gc1}\)</span> and <span class="math inline">\(\eqref{gc3}\)</span>, it follows <span class="math inline">\(f_*(x)\leqslant (f_*\circ f^*)(y)\)</span> and <span class="math inline">\((f_*\circ f^*)(y)\leqslant y\)</span>. By transitivity of <span class="math inline">\(\leqslant\)</span>, we have <span class="math inline">\(f_*(x)\leqslant y\)</span> as needed. Therefore, <span class="math inline">\(\eqref{gc}\)</span> holds and so <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection.</p>
+</div>
+<div id="thm-galois-connection-if-and-only-if" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 43 </strong></span>Let <span class="math inline">\(f_*:X\to Y\)</span> and <span class="math inline">\(f^*:Y\to X\)</span> be mappings. Then <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection if and only if <span class="math display">\[
+f^*(y) \succeq x \Longleftrightarrow y \succeq f_*(x)
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(\eqref{gc}\)</span> holds. Then <span class="math display">\[
+f_*(x) \succeq f_*(x)  \Longleftrightarrow (f^*\circ f_*)(x) \succeq x.
+\]</span> Since <span class="math inline">\(\succeq\)</span> is reflexive, <span class="math inline">\((f^*\circ f_*)(x)\succeq x\)</span> follows immediately. Similarly, by <span class="math inline">\(\eqref{gc}\)</span> it follows <span class="math display">\[
+y \succeq (f_*\circ f^*)(y)  \Longleftrightarrow f^*(y)\succeq f^*(y)
+\]</span> proving that <span class="math inline">\(\eqref{galcon}\)</span> holds.</p>
+<p>Assume <span class="math inline">\(x_2\succeq x_1\)</span>. By <span class="math inline">\(\eqref{galcon}\)</span> we have <span class="math inline">\((f^*\circ f_*)(x_2)\succeq x_2\succeq x_1\)</span>. By <span class="math inline">\(\eqref{gc}\)</span> it follows <span class="math inline">\(f_*(x_2)\succeq f_*(x_1)\)</span> and so <span class="math inline">\(f_*\)</span> is isotone. Assume <span class="math inline">\(y_1\succeq y_2\)</span>. By <span class="math inline">\(\eqref{galcon}\)</span> we have <span class="math inline">\(y_1\succeq y_2 \succeq (f_*\circ f^*)(y_2)\)</span>. By <span class="math inline">\(\eqref{gc}\)</span> it follows <span class="math inline">\(f^*(y_1)\succeq f^*(y_2)\)</span> and so <span class="math inline">\(f^*\)</span> is also isotone.</p>
+<p>Conversely, assume <span class="math inline">\(\eqref{galcon}\)</span> holds. Assume <span class="math inline">\(y\succeq f_*(x)\)</span>. It follows <span class="math inline">\(f^*(y)\succeq (f^*\circ f_*)(x)\)</span> and <span class="math inline">\((f^*\circ f_*)(x)\succeq x\)</span> and so by transitivity of <span class="math inline">\(\succeq\)</span> we have <span class="math inline">\(f^*(y)\succeq x\)</span> as needed. Assume <span class="math inline">\(f^*(y)\succeq x\)</span>. It follows <span class="math inline">\((f_*\circ f^*)(y)\succeq f_*(x)\)</span> and <span class="math inline">\(y\succeq (f_*\circ f^*)(y)\)</span> and so by transitivity of <span class="math inline">\(\succeq\)</span> we have <span class="math inline">\(y\succeq f_*(x)\)</span> as needed. Therefore <span class="math inline">\(\eqref{gc}\)</span> holds and so <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection.</p>
+</div>
+<div id="thm-gcprop" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 44 </strong></span>If <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection between <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span>, then</p>
+<ol type="1">
+<li><span class="math inline">\(f^*(y)=\max\{x\in X : y\succeq f_*(x)\}\)</span>,</li>
+<li><span class="math inline">\(f_*\circ f^* \circ f_*=f_*\)</span>,</li>
+<li><span class="math inline">\(x\in f^*(Y)\)</span> if and only if <span class="math inline">\(x\)</span> is a fixed point of <span class="math inline">\(f^*\circ f_*\)</span>,</li>
+<li><span class="math inline">\(f^*(Y)=(f^*\circ f_*)(X)\)</span>, and</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\eqref{gcmax}\)</span>: Let <span class="math inline">\(M=\{x\in X: y\succeq f_*(x)\}\)</span>. By <span class="math inline">\(\eqref{galcon}\)</span> we have <span class="math inline">\(f^*(y)\in M\)</span>. Let <span class="math inline">\(x\in M\)</span>. Then <span class="math inline">\(y\succeq f_*(x)\)</span> and since <span class="math inline">\(f^*\)</span> is isotone, it follows <span class="math inline">\(f^*(y)\succeq (f^*\circ f_*)(x)\)</span>. By <span class="math inline">\(\eqref{galcon}\)</span>, we have <span class="math inline">\((f^*\circ f_*)(x)\succeq x\)</span>. By transitivity of <span class="math inline">\(\succeq\)</span>, we have <span class="math inline">\(f^*(y)\succeq x\)</span> and thus <span class="math inline">\(f^*(y)\)</span> is the maximum of <span class="math inline">\(M\)</span>. <span class="math inline">\(\eqref{gcprop1}\)</span>: By <span class="math inline">\(\eqref{galcon}\)</span> we have <span class="math inline">\(f_*(x) \succeq (f_*\circ f^*\circ f_*)(x)\)</span>. By <span class="math inline">\(\eqref{gc}\)</span> with <span class="math inline">\(x:=(f^*\circ f_*)(x)\)</span> and <span class="math inline">\(y:=f_*(x)\)</span> it follows <span class="math inline">\((f_*\circ f^* \circ f_*)(x)\succeq f_*(x)\)</span> using that <span class="math inline">\(\succeq\)</span> is reflexive.<br>
+Since <span class="math inline">\(\succeq\)</span> is antisymmetric, it follows <span class="math inline">\(f_*(x)=(f_*\circ f^*\circ f_*)(x)\)</span> for arbitrary <span class="math inline">\(x\)</span>. <span class="math inline">\(\eqref{gcprop3}\)</span>: Clearly <span class="math inline">\(x\in f^*(Y)\)</span> is equivalent to <span class="math inline">\(f^*(y)=x\)</span> for some <span class="math inline">\(y\in Y\)</span>. Then <span class="math display">\[
+(f^*\circ f_*)(x)=(f^*\circ f_* \circ f^*)(y)=f^*(y)=x
+\]</span> follows by the dual of <span class="math inline">\(\eqref{gcprop1}\)</span>. <span class="math inline">\(\eqref{gcprop5}\)</span>: It follows by <span class="math inline">\(\eqref{gcprop3}\)</span> that <span class="math inline">\(f^*(Y)\subseteq (f^*\circ f_*)(X)\)</span>. Conversely, let <span class="math inline">\(x\in (f^*\circ f_*)(X)\)</span>. Then <span class="math inline">\(x=f^*(y)\)</span> for some <span class="math inline">\(y\in f_*(X)\subseteq Y\)</span>. By definition, <span class="math inline">\(x\in f^*(Y)\)</span> and so <span class="math inline">\((f^*\circ f_*)(X)\subseteq f^*(Y)\)</span>.</p>
+</div>
+<p>::: {#thm-galois connection-injective } If <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection, then <span class="math inline">\(f_*\)</span> is injective if and only if <span class="math inline">\(f^*\)</span> is surjective if and only if <span class="math inline">\(f_*\circ f^*\)</span> is the identity. :::</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By <span class="math inline">\(\ref{gcprop}\)</span>, every element of <span class="math inline">\(X\)</span> is a fixed element of <span class="math inline">\(f^*\circ f_*\)</span> if and only if <span class="math inline">\(f^*(Y)=X\)</span>. Thus <span class="math inline">\(f^*\)</span> is surjective if and only if <span class="math inline">\(f^*\circ f_*\)</span> is the identity of <span class="math inline">\(X\)</span>. Assume <span class="math inline">\(f^*\circ f_*\)</span> is the identity of <span class="math inline">\(X\)</span>. Then <span class="math display">\[
+f_*(x)=f_(y)\implies x=(f^*\circ f_*)(x)=(f^*\circ f_*)(y)=y
+\]</span> which shows <span class="math inline">\(f_*\)</span> is injective. Conversely, if <span class="math inline">\(f_*\)</span> is injective then, for arbitrary <span class="math inline">\(x\in X\)</span>, <span class="math inline">\((f_*\circ f^*\circ f_*)(x)=f_*(x)\)</span> implies <span class="math inline">\((f^*\circ f_*)(x)=x\)</span> and so <span class="math inline">\(f^*\circ f_*\)</span> is the identity of <span class="math inline">\(X\)</span>.</p>
+</div>
+<div id="thm-galois-connections-unique" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 45 </strong></span>If <span class="math inline">\((f_*,g)\)</span> and <span class="math inline">\((f_*, h)\)</span> are Galois connections between <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span>, then <span class="math inline">\(g=h\)</span>. Likewise, if <span class="math inline">\((g, f^*)\)</span> and <span class="math inline">\((h,f^*)\)</span> are Galois connections between <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span>, then <span class="math inline">\(g=h\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(f_*:X \to Y\)</span> and <span class="math inline">\(g:Y\to X\)</span> be a Galois connection. Also let <span class="math inline">\(f_*\)</span> and <span class="math inline">\(h:Y\to X\)</span> be a Galois connection. By <span class="math inline">\(\eqref{gc}\)</span> we have the following<br>
+<span class="math display">\[
+f_*(x) \leqslant y \Longleftrightarrow x\preceq g(y)
+\]</span> <span class="math display">\[
+f_*(x)\leqslant y  \Longleftrightarrow x\preceq h(y)
+\]</span> By <span class="math inline">\(\eqref{ugc1}\)</span> we have <span class="math inline">\((f_*\circ h)(y)\leqslant y \Longleftrightarrow h(y)\preceq g(y)\)</span>.<br>
+Notice <span class="math inline">\((f_*\circ h)(y)\leqslant y\)</span> holds by <span class="math inline">\(\ref{gcch}\)</span>.<span class="math inline">\(\eqref{gc3}\)</span>; and thus <span class="math inline">\(h(y)\preceq g(y)\)</span>.<br>
+By <span class="math inline">\(\eqref{ugc2}\)</span> we have <span class="math inline">\((f_*\circ g)(y)\leqslant y \Longleftrightarrow g(y)\preceq h(y)\)</span>.<br>
+Notice <span class="math inline">\((f_*\circ g)(y)\leqslant y\)</span> holds by <span class="math inline">\(\ref{gcch}\)</span>.<span class="math inline">\(\eqref{gc3}\)</span>; and thus <span class="math inline">\(h(y)\preceq g(y)\)</span>.<br>
+Since <span class="math inline">\(\preceq\)</span> is antisymmetric, it follows <span class="math inline">\(g(y)=h(y)\)</span> for arbitrary <span class="math inline">\(y\)</span>. The second statement is the dual of the first and follows just as easily using <span class="math inline">\(\ref{gcch}\)</span>.<span class="math inline">\(\eqref{gc2}\)</span>.</p>
+</div>
+<div id="thm-maxmin" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 46 </strong></span>If <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection between <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span>, then</p>
+<ol type="1">
+<li><span class="math inline">\(f^*(y)=\textrm{the maximum of } \{x\in X : f_*(x)\leqslant y\}\)</span> and</li>
+<li><span class="math inline">\(f_*(x)=\textrm{the minimum of } \{y\in Y : x\preceq f^*(y)\}\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(M=\{x\in X: f_*(x)\leqslant y\}\)</span>. By <span class="math inline">\(\ref{gcch}\)</span>.<span class="math inline">\(\eqref{gc3}\)</span> we have <span class="math inline">\(f^*(y)\in M\)</span>.<br>
+Let <span class="math inline">\(x\in M\)</span>.<br>
+Then <span class="math inline">\(f_*(x)\leqslant y\)</span> and since <span class="math inline">\(f^*\)</span> is monotone, it follows <span class="math inline">\((f^*\circ f_*)(x)\preceq f^*(y)\)</span>. By <span class="math inline">\(\ref{gcch}\)</span>.<span class="math inline">\(\eqref{gc2}\)</span>, we have <span class="math inline">\(x\preceq (f^*\circ f_*)(x)\)</span>. By transitivity of <span class="math inline">\(\preceq\)</span>, we have <span class="math inline">\(x\preceq f^*(y)\)</span> and thus <span class="math inline">\(f^*(y)\)</span> is the maximum of <span class="math inline">\(M\)</span>. For the second statement, let <span class="math inline">\(N=\{y\in Y : x\preceq f^*(y)\}\)</span>.<br>
+By <span class="math inline">\(\ref{gcch}\)</span>.<span class="math inline">\(\eqref{gc2}\)</span> we have <span class="math inline">\(f_*(x)\in N\)</span>.<br>
+Let <span class="math inline">\(y\in N\)</span>. Then <span class="math inline">\(x\preceq f^*(y)\)</span> and since <span class="math inline">\(f_*\)</span> is monotone, it follows <span class="math inline">\(f_*(x)\leqslant (f_*\circ f^*)(y)\)</span>.<br>
+By <span class="math inline">\(\ref{gcch}\)</span>.<span class="math inline">\(\eqref{gc3}\)</span>, we have <span class="math inline">\((f_*\circ f^*)(y)\leqslant y\)</span> and so by transitivity, it follows <span class="math inline">\(f_*(x)\leqslant y\)</span>. Thus <span class="math inline">\(f_*(x)\)</span> is the minimum of <span class="math inline">\(N\)</span>.</p>
+</div>
+<div id="thm-gcprop" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 47 </strong></span>If <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection between <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span>, then</p>
+<ol type="1">
+<li><span class="math inline">\(f_*\circ f^* \circ f_*=f_*\)</span>, <span class="math inline">\(f^*\circ f_* \circ f^*=f^*\)</span>,</li>
+<li><span class="math inline">\(x\in f^*(Y)\)</span> if and only if <span class="math inline">\(x\)</span> is a fixed point of <span class="math inline">\(f^*\circ f_*\)</span>,</li>
+<li><span class="math inline">\(y\in f_*(X)\)</span> if and only if <span class="math inline">\(y\)</span> is a fixed point of <span class="math inline">\(f_*\circ f^*\)</span>,</li>
+<li><span class="math inline">\(f^*(Y)=(f^*\circ f_*)(X)\)</span>, and <span class="math inline">\(f_*(X)=(f_*\circ f^*)(Y)\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\eqref{gcprop1}\)</span>: Using <span class="math inline">\(\ref{gcch}\)</span>, we have <span class="math inline">\(f_*(x)\leqslant (f_*\circ f^*\circ f_*)(x)\)</span>. By <span class="math inline">\(\eqref{gc}\)</span> with <span class="math inline">\(x:=(f^*\circ f_*)(x)\)</span> and <span class="math inline">\(y:=f_*(x)\)</span> it follows <span class="math inline">\((f_*\circ f^* \circ f_*)(x)\leqslant f_*(x)\)</span> using that <span class="math inline">\(\preceq\)</span> is reflexive. Since <span class="math inline">\(\leqslant\)</span> is antisymmetric, it follows <span class="math inline">\(f_*(x)=(f_*\circ f^*\circ f_*)(x)\)</span> for arbitrary <span class="math inline">\(x\)</span>, thus proving <span class="math inline">\(\eqref{gcprop1}\)</span> holds. <span class="math inline">\(\eqref{gcprop3}\)</span>: By definition, <span class="math inline">\(x\in f^*(Y)\)</span> is equivalent to <span class="math inline">\(f^*(y)=x\)</span> for some <span class="math inline">\(y\in Y\)</span>. Then <span class="math display">\[
+(f^*\circ f_*)(x)=(f^*\circ f_* \circ f^*)(y)=f^*(y)=x
+\]</span><br>
+follows by <span class="math inline">\(\eqref{gcprop1}\)</span>. <span class="math inline">\(\eqref{gcprop5}\)</span>: It follows by <span class="math inline">\(\eqref{gcprop3}\)</span> that <span class="math inline">\(f^*(Y)\subseteq (f^*\circ f_*)(X)\)</span>. Conversely, let <span class="math inline">\(x\in (f^*\circ f_*)(X)\)</span>. Then <span class="math inline">\(x=f^*(y)\)</span> for some <span class="math inline">\(y\in f_*(X)\subseteq Y\)</span>. By definition, <span class="math inline">\(x\in f^*(Y)\)</span> and so <span class="math inline">\((f^*\circ f_*)(X)\subseteq f^*(Y)\)</span>.</p>
+</div>
+<div id="thm-calcprop1" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 48 </strong></span>If <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection between <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span>, then</p>
+<ol type="1">
+<li><span class="math inline">\(x \preceq f^*(y) \Longleftrightarrow f_*(x)\leqslant (f_*\circ f^*)(y) \Longleftrightarrow f_*(x)\leqslant y \Longleftrightarrow (f^*\circ f_*)(x)\preceq f^*(y)\)</span>,</li>
+<li><span class="math inline">\(f^*(x)\preceq f^*(y) \Longleftrightarrow (f_*\circ f^*)(x)\leqslant (f_*\circ f^*)(y) \Longleftrightarrow (f_*\circ f^*)(x)\leqslant y\)</span></li>
+<li><span class="math inline">\(f_*(x)\leqslant f_*(y) \Longleftrightarrow (f^*\circ f_*)(x)\preceq (f^*\circ f_*)(y) \Longleftrightarrow x\preceq (f^*\circ f_*)(x)\)</span>,</li>
+<li><span class="math inline">\(f^*(x)=f^*(y) \Longleftrightarrow (f_*\circ f^*)(x)=(f_*\circ f^*)(y)\)</span>, and</li>
+<li><span class="math inline">\(f_*(x)=f_*(y) \Longleftrightarrow (f^*\circ f_*)(x)=(f^*\circ f_*)(y)\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For the first statement we have <span class="math display">\[\begin{align*}
+x \preceq f^*(y) &amp; \implies f_*(x)\leqslant (f_*\circ f^*)(y) \implies f_*(x)\leqslant y \\
+&amp; \implies (f^*\circ f_*)(x) \preceq f^*(y)  \implies x\preceq f^*(y)  
+\end{align*}\]</span> For the third statement we have <span class="math display">\[\begin{align*}
+f^*(x) \preceq f^*(y) &amp; \implies (f_*\circ f_*)(x)\leqslant (f_*\circ f^*)(y) \implies (f_*\circ f_*)(x)\leqslant y
+\end{align*}\]</span> For the fourth statement we have <span class="math display">\[\begin{align*}
+f^*(x)=f^*(y) &amp;  \Longleftrightarrow f^*(x)\preceq f^*(y) \land f^*(y) \preceq f^*(x) \\
+&amp; \Longleftrightarrow (f_*\circ f^*)(x)\leqslant (f_*\circ f^*)(y) \land  (f_*\circ f^*)(y)\leqslant (f_*\circ f^*)(x) \\
+&amp; \Longleftrightarrow (f_*\circ f^*)(x)=(f_*\circ f^*)(y)
+\end{align*}\]</span> The remaining statements are the dual and easily proved.</p>
+</div>
+<div id="def-order-isomorphism" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 </strong></span>By an <strong>order isomorphism</strong> from an ordered set <span class="math inline">\(X\)</span> to another ordered set <span class="math inline">\(Y\)</span> we shall mean an isotone bijection <span class="math inline">\(f:X\to Y\)</span> whose inverse <span class="math inline">\(f^{-1}: Y\to X\)</span> is also an isotone.</p>
+</div>
+<div id="thm-posetiso" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 49 </strong></span>Ordered sets <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span> are isomorphic if and only if there is a surjective mapping <span class="math inline">\(f:X\to Y\)</span> such that <span class="math display">\[
+x\preceq y  \Longleftrightarrow f(x)\leqslant f(y).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The necessity is clear. Suppose conversely that such a surjective mapping <span class="math inline">\(f\)</span> exists. Then <span class="math inline">\(f\)</span> is also injective; for if <span class="math inline">\(f(x)=f(y)\)</span> then from <span class="math inline">\(f(x)\leqslant f(y)\)</span> we obtain <span class="math inline">\(x\preceq y\)</span> and from <span class="math inline">\(f(y)\leqslant f(x)\)</span> we obtain <span class="math inline">\(y\preceq x\)</span>, so that <span class="math inline">\(x=y\)</span>. Hence <span class="math inline">\(f\)</span> is a bijection. Clearly, <span class="math inline">\(f\)</span> is isotone; and so also is <span class="math inline">\(f^{-1}\)</span>, since <span class="math inline">\(x\preceq y\)</span> can be written <span class="math inline">\(f(f^{-1}))(x)\leqslant f(f^{-1})(y)\)</span> which gives <span class="math inline">\(f^{-1}(x)\preceq f^{-1}(y)\)</span>.</p>
+</div>
+<div id="thm-calcprop1" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 50 </strong></span>If <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection between <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span>, then <span class="math inline">\(f^*(Y)\)</span> and <span class="math inline">\(f_*(X)\)</span> are order-isomorphic.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>This follows immediately from <span class="math inline">\(\ref{gcch}\)</span> and <span class="math inline">\(\ref{posetiso}\)</span>.</p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 51 </strong></span>If <span class="math inline">\((f_*, f^*)\)</span> is a Galois connection between <span class="math inline">\((X,\preceq)\)</span> and <span class="math inline">\((Y,\leqslant)\)</span>, then <span class="math inline">\(f^*\circ f_*\)</span> is a closure function for <span class="math inline">\(X\)</span> and <span class="math inline">\(f_*\circ f^*\)</span> is a co-closure function for <span class="math inline">\(Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x\in X\)</span>. Then <span class="math inline">\(x\preceq (f^*\circ f_*)(x)\)</span> follows by <span class="math inline">\(\ref{gcch}\)</span>.<span class="math inline">\(\eqref{gc2}\)</span>. Since both <span class="math inline">\(f^*\)</span> and <span class="math inline">\(f_*\)</span> are monotone we have, <span class="math inline">\(x_1\preceq x_2 \implies (f^*\circ f_*)(x_1)\preceq (f^*\circ f_*)(x_2)\)</span>. Thus <span class="math inline">\(f^*\circ f_*\)</span> is also monotone. By associativity of functions and <span class="math inline">\(\ref{gcprop}\)</span>.<span class="math inline">\(\eqref{gcprop1}\)</span> we have <span class="math display">\[
+(f^*\circ f_*)\circ (f^*\circ f_*)=f^*\circ (f_*\circ f^*\circ f_*)=f^*\circ f_*
+\]</span><br>
+as needed. The dual statement is proved just as easily.</p>
+</div>
+<p>By <span class="math inline">\(\ref{gcprop}\)</span>, the closed elements of <span class="math inline">\(f^*\circ f_*\)</span> and <span class="math inline">\(f_*\circ f^*\)</span> are precisely the elements that are an image of some element under <span class="math inline">\(f^*\)</span>, respectively <span class="math inline">\(f_*\)</span>.</p>
+<div id="thm-closure-function" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 52 </strong></span>If <span class="math inline">\(f\)</span> is a closure (respectively co-closure) function, then there is a Galois connection <span class="math inline">\((f_*,f^*)\)</span> such that <span class="math inline">\(f=f^*\circ f_*\)</span> (respectively <span class="math inline">\(f=f_*\circ f^*\)</span>).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(f:X\to X\)</span> be a closure over <span class="math inline">\((X,\preceq)\)</span>. Let <span class="math inline">\(\overline{X}\)</span> be the set of closed elements of <span class="math inline">\(f\)</span> that is <span class="math inline">\(f(X)=\overline{X}\)</span>. We will construct a Galois connection between <span class="math inline">\(\overline{X}\)</span> and <span class="math inline">\(X\)</span> using <span class="math inline">\(\ref{gcch}\)</span>. Let <span class="math inline">\(f_*=f\)</span>, that is <span class="math inline">\(f_*:X\to \overline{X}\)</span> defined by <span class="math inline">\(f_*(x)=f(x)\)</span> for all <span class="math inline">\(x\in X\)</span>. Let <span class="math inline">\(f^*:\overline{X}\to X\)</span> be the inclusion mapping, that is <span class="math inline">\(f^*(x)=x\)</span> for all <span class="math inline">\(x\in \overline{X}\)</span>. Notice <span class="math inline">\(f_*\circ f^*\)</span> is the identity on <span class="math inline">\(\overline{X}\)</span> and <span class="math inline">\(f^*\circ f_*=f\)</span>.</p>
+<ol type="1">
+<li>Notice <span class="math inline">\(f_*\)</span> is monotone since <span class="math inline">\(f\)</span> is monotone and that <span class="math inline">\(f^*\)</span> is monotone since the identity is monotone.</li>
+<li>Let <span class="math inline">\(x\in X\)</span>. Since <span class="math inline">\(f\)</span> is extensive, we have <span class="math inline">\(x\preceq f(x)\)</span>. Thus it follows, <span class="math display">\[
+x\preceq f(x)=(f^*\circ f)(x)=(f^*\circ f_*)(x).
+\]</span></li>
+<li>Let <span class="math inline">\(y\in \overline{X}\)</span>. There exists <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(y=f(x)\)</span>. Since <span class="math inline">\(f\)</span> is idempotent we have <span class="math display">\[
+f(y)=(f\circ f)(y)\preceq y
+\]</span> for all <span class="math inline">\(y\in \overline{X}\)</span> as needed.</li>
+</ol>
+<p>Therefore, <span class="math inline">\((f_*,f^*)=(f,f^*)\)</span> where <span class="math inline">\(f^*:\overline{X}\to X\)</span> is the inclusion mapping is a Galois connection between <span class="math inline">\((X,\prec0\)</span> and <span class="math inline">\((\overline{X},\preceq)\)</span>.</p>
+</div>
+<p><strong>Remark</strong>. A Galois connection is not uniquely determined by a closure.</p>
+<div id="thm-gcrel" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 53 </strong></span>Let <span class="math inline">\(R\)</span> be a relation between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and let <span class="math display">\[\begin{align}
+&amp; f_R(A)=\{b\in Y:\forall a (a\in A\implies (a,b)\in R) \} \\
+&amp; f^R(B)=\{a\in X:\forall b (b\in B\implies (a,b)\in R) \}.
+\end{align}\]</span> Then <span class="math inline">\((f_R, f^R)\)</span> is a Galois connection between <span class="math inline">\((P(X),\subseteq)\)</span> and <span class="math inline">\((P(Y),\supseteq)\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Clearly, <span class="math inline">\(f_R:P(X)\to P(Y)\)</span> and <span class="math inline">\(f^R:P(Y)\to P(X)\)</span> are functions. By <span class="math inline">\(\eqref{gc}\)</span> we must show</p>
+<p><span class="math display">\[\begin{equation}
+\label{gcrel}
+f_R(A)\supseteq B  \Longleftrightarrow A\subseteq f^R(B)
+\end{equation}\]</span></p>
+<p>for all <span class="math inline">\(A\in P(X)\)</span> and all <span class="math inline">\(B\in P(Y)\)</span>. Assume <span class="math inline">\(B\subseteq f_R(A)\)</span>. We will show <span class="math inline">\(A\subseteq f^R(B)\)</span>. Let <span class="math inline">\(x\in A\)</span>. If <span class="math inline">\(y\in B\)</span>, then <span class="math inline">\(y\in f_R(A)\)</span>. Then, by <span class="math inline">\(\eqref{gcrel1}\)</span>, it follows <span class="math inline">\((x,y)\in R\)</span>. So we have shown, <span class="math inline">\(y\in B\implies (x,y)\in R\)</span> as needed to show <span class="math inline">\(x\in f^R(B)\)</span> Conversely, assume <span class="math inline">\(A\subseteq f^R(B)\)</span>. We will show <span class="math inline">\(B\subseteq f_R(A)\)</span>. Let <span class="math inline">\(y\in B\)</span>. If <span class="math inline">\(x\in A\)</span>, then <span class="math inline">\(x\in f^R(B)\)</span>.Then, by <span class="math inline">\(\eqref{gcrel2}\)</span>, it follows <span class="math inline">\((x,y)\in R\)</span>. So we have shown, <span class="math inline">\(x\in A\implies (x,y)\in R\)</span> as needed to show <span class="math inline">\(y\in f_R(A)\)</span>. Therefore, <span class="math inline">\(\eqref{gcrel}\)</span> holds.</p>
+</div>
+<p>A <strong>relation</strong> <span class="math inline">\(R\)</span> is a subset of <span class="math inline">\(X\times Y\)</span> where <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are sets. If <span class="math inline">\((a,b)\in R\)</span>, then we say <span class="math inline">\(a\)</span> is <strong>related</strong> to <span class="math inline">\(b\)</span> by <span class="math inline">\(R\)</span> and we write <span class="math inline">\(aRb\)</span>. Whenever <span class="math inline">\(X=Y\)</span> we say that <span class="math inline">\(R\)</span> is a relation on <span class="math inline">\(X\)</span>.</p>
+<div id="def-relation-summary" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 </strong></span>A relation <span class="math inline">\(R\)</span> on a set <span class="math inline">\(X\)</span> is called</p>
+<ol type="1">
+<li> <strong>reflexive</strong> if <span class="math inline">\(aRa\)</span> for all <span class="math inline">\(a\in X\)</span>,</li>
+<li> <strong>irreflexive</strong> if <span class="math inline">\(\neg(aRa)\)</span> for all <span class="math inline">\(a\in X\)</span>,</li>
+<li> <strong>symmetric</strong> if <span class="math inline">\(aRb\)</span> implies <span class="math inline">\(bRa\)</span> for all <span class="math inline">\(a,b\in X\)</span>,</li>
+<li> <strong>asymmetric</strong> if <span class="math inline">\(aRb\)</span> implies <span class="math inline">\(\neg(bRa)\)</span> for all <span class="math inline">\(a,b\in X\)</span>,</li>
+<li> <strong>antisymmetric</strong> if (<span class="math inline">\(aRb \text { and } bRa) \Rightarrow a=b\)</span> for all <span class="math inline">\(a,b\in X\)</span>,</li>
+<li> <strong>transitive</strong> if <span class="math inline">\((aRb \text{ and } bRc)\Rightarrow aRc\)</span> for all <span class="math inline">\(a,b,c\in X\)</span>,</li>
+<li> <strong>antitransitive</strong> if <span class="math inline">\((aRb \text{ and } bRc)\Rightarrow \neg(aRc)\)</span> for all <span class="math inline">\(a,b,c\in X\)</span>,</li>
+<li>a <strong>preorder</strong> if <span class="math inline">\(aRb \Leftrightarrow \big(\forall c\in X \ cRa \Rightarrow cRb\, \big)\)</span> for all <span class="math inline">\(a,b,c\in X\)</span>,</li>
+<li>an <strong>equivalence relation</strong> if <span class="math inline">\(aRb \Leftrightarrow \big(\forall c\in X \ cRa \Leftrightarrow cRb\, \big)\)</span> for all <span class="math inline">\(a,b,c\in X\)</span>.</li>
+</ol>
+</div>
+<p>The asymmetric part of a preorder <span class="math inline">\(\succeq\)</span> (denoted by <span class="math inline">\(\succ\)</span>) is called a , i.e.&nbsp;<span class="math inline">\(\succ\)</span> is a strict preorder means there holds</p>
+<p><span class="math display">\[\begin{equation}
+\forall \, a,b \in X \qquad
+a\succ b \Leftrightarrow (a\succeq b \text{ and } b\not\succeq a).
+\end{equation}\]</span></p>
+<p>Associated with any preorder are its and , namely (respectively) subsets of the form <span class="math display">\[
+{{\downarrow}(a) = \{x\in X : a\succeq x\}}
+\qquad \text{and} \qquad
+{{\uparrow}(a) = \{x\in X : x\succeq a\}}.
+\]</span> If <span class="math inline">\(A\subseteq X\)</span>, then <span class="math inline">\(A\)</span> is called an whenever <span class="math inline">\((x\in A, \, y\in X, \text{ and } y\succeq x) \Rightarrow y\in A\)</span> and is called a whenever <span class="math inline">\((x\in A, \, y\in X, \text{ and } x\succeq y) \Rightarrow y\in A\)</span>. A preorder relation <span class="math inline">\(\succeq\)</span> together with the underlying set is called a and is denoted by <span class="math inline">\({(X,\succeq)}\)</span>. In particular, if <span class="math inline">\(\succeq\)</span> is also symmetric i.e.&nbsp;an equivalence relation (denoted by <span class="math inline">\(\sim\)</span>), then sets of the form<br>
+<span class="math display">\[
+[a] = \{x \in X : a\sim x\} = {\uparrow}(a) = {\downarrow}(a).
+\]</span> are called <strong>equivalence classes</strong> (we denote the collection of all equivalence class by <span class="math inline">\(\overline{X}\)</span>). It is interesting that whenever we have a preorder <span class="math inline">\(\succeq\)</span> the relation <span class="math inline">\(\approx\)</span> prescribed on <span class="math inline">\(X\)</span> by</p>
+<p><span class="math display">\[\begin{equation}
+\forall \, a,b \in X \qquad
+a\approx b \Leftrightarrow (a\succeq b \text{ and } b\succeq a)
+\end{equation}\]</span></p>
+<p>is an equivalence relation. Further, we say an element <span class="math inline">\(a\)</span> of a subset <span class="math inline">\(A\)</span> of <span class="math inline">\(X\)</span> is a <strong>maximum</strong> (resp. ) <strong>minimum</strong> for <span class="math inline">\(A\)</span> whenever <span class="math inline">\(a\succeq x\)</span> (<span class="math inline">\(x \succeq a\)</span>) for all <span class="math inline">\(x\in A\)</span>. Let <span class="math inline">\(M(A)\)</span> and <span class="math inline">\(m(A)\)</span> denote the collection of maximums and minimums of a subset <span class="math inline">\(A\)</span> of <span class="math inline">\(X\)</span>, respectively. In point, if either <span class="math inline">\(a,b\in M(A)\)</span> or <span class="math inline">\(a,b\in m(A)\)</span>, then <span class="math inline">\(a\approx b\)</span>.</p>
+<div id="def-isotone-antitone-monotone" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 </strong></span>A mapping <span class="math inline">\(f: (X,\succeq) \to (Y,\succeq)\)</span> between preordered sets is called</p>
+<ul>
+<li> <strong>isotone</strong> if <span class="math inline">\(a \succeq b \Rightarrow f(a) \succeq f(b)\)</span> for all <span class="math inline">\(a,b\in X\)</span>,</li>
+<li> <strong>antitone</strong> if <span class="math inline">\(a \succeq b \Rightarrow f(b) \succeq f(b)\)</span> for all <span class="math inline">\(a,b\in X\)</span>,</li>
+<li> <strong>monotone</strong> if it is either isotone or antitone.</li>
+</ul>
+<p>Further, if <span class="math inline">\(Y=X\)</span>, then <span class="math inline">\(f\)</span> is called 1. <strong>inflationary</strong> if <span class="math inline">\(f(a)\succeq a\)</span> for all <span class="math inline">\(a\in X\)</span>, 2. <strong>deflationary</strong> if <span class="math inline">\(a\succeq f(a)\)</span> for all <span class="math inline">\(a\in X\)</span>, 3. <strong>quasi-idempotent</strong> if <span class="math inline">\(f(a)\approx (f\circ f)(a)\)</span> for all <span class="math inline">\(a\in X\)</span>, 4. <strong>idempotent</strong> if <span class="math inline">\(f(a)=(f\circ f)(a)\)</span> for all <span class="math inline">\(a\in X\)</span>, 5. a <strong>closure operator</strong> if <span class="math inline">\(f(b)\succeq a \Leftrightarrow f(b)\succeq f(a)\)</span> for all <span class="math inline">\(a,b\in X\)</span>, 6. a <strong>kernel operator</strong> <span class="math inline">\(a\succeq f(b) \Leftrightarrow f(a)\succeq f(b)\)</span> for all <span class="math inline">\(a,b\in X\)</span>.</p>
+</div>
+<p>We call a preorder relation <span class="math inline">\(\geq\)</span> on set <span class="math inline">\(X\)</span> that is also antisymmetric a <strong>partial order</strong> and we say that <span class="math inline">\((X,\geq)\)</span> is an <strong>ordered set</strong>. A mapping <span class="math inline">\(f:X\to Y\)</span> between ordered sets <span class="math inline">\({(X,\geq)}\)</span> and <span class="math inline">\({(Y,\succeq)}\)</span> is called an <strong>isomorphism</strong> if it is surjective and <span class="math inline">\({x \geq y \Leftrightarrow f(x) \succeq f(y)}\)</span> for all <span class="math inline">\(x,y\in X\)</span>; and is called a if it is surjective and <span class="math inline">\(x \geq y \Leftrightarrow f(y) \succeq f(x)\)</span> for all <span class="math inline">\(x,y\in X\)</span>. A mapping <span class="math inline">\(f: X \to Y\)</span> is an isomorphism if and only if <span class="math inline">\(f\)</span> is bijective and both <span class="math inline">\(f\)</span> and <span class="math inline">\(f^{-1}\)</span> are isotone. For any set <span class="math inline">\(X\)</span>, the mapping <span class="math inline">\(\phi: X\to \mathcal{X}\)</span> prescribed by <span class="math inline">\({\phi(x)= \, {\downarrow}{x}}\)</span> is an isomorphism onto the set of all principal down-sets of <span class="math inline">\(X\)</span>.</p>
+<p>It is straightforward to show that a mapping <span class="math inline">\(f\)</span> on a preordered (ordered) set is a closure if and only if it is isotone, inflationary, and quasi-idempotent (idempotent). For example, the reflexive (symmetric, transitive) <strong>closure</strong> of a relation <span class="math inline">\(R\)</span> is the intersection of all reflexive (symmetric, transitive) relations that contain <span class="math inline">\(R\)</span>, respectively. We denote these closures by <span class="math inline">\(r(R)\)</span>, <span class="math inline">\(s(R)\)</span>, and <span class="math inline">\(t(R)\)</span> respectively, and we find there holds</p>
+<p><span class="math display">\[\begin{equation}
+\label{relclsoure}
+r(R)=R \cup I_X, \qquad
+s(R)=R \cup R^{-1}, \qquad
+t(R)=\bigcup_{n\geq 1} R^n.
+\end{equation}\]</span></p>
+<p>We say that a relation <span class="math inline">\(R\)</span> <strong>generates an equivalence relation</strong> <span class="math inline">\(\sim\)</span> whenever <span class="math inline">\(\sim = rts(R)\)</span>.</p>
+<div id="def-connections" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 </strong></span>Let <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> be relations on sets <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, respectively, and let <span class="math inline">\(f:X\to Y\)</span> and <span class="math inline">\(g:Y\to X\)</span> be mappings. The pair <span class="math inline">\((f,g)\)</span> is called</p>
+<ol type="1">
+<li>a <strong>covariant connection</strong> between <span class="math inline">\((X,R)\)</span> and <span class="math inline">\((Y,S)\)</span>, denoted by <span class="math inline">\({(f,g):(X,R) \leftrightarrow (Y,S)}\)</span> whenever <span class="math inline">\(g(b) \,R\, a \Leftrightarrow b\,S\,f(a), \forall \, a\in X, \forall \, b\in Y.\)</span></li>
+<li>an <strong>inverse covariant connection</strong> between <span class="math inline">\((X,R)\)</span> and <span class="math inline">\((Y,S)\)</span>, denoted by <span class="math inline">\({(f,g):(X,R) \leftrightarrow (Y,S)}\)</span> whenever <span class="math inline">\(a\,R\, g(b) \Leftrightarrow f(a)\,S\,b, \forall \, a\in X, \forall \, b\in Y.\)</span></li>
+<li>a <strong>contravariant connection</strong> between <span class="math inline">\((X,R)\)</span> and <span class="math inline">\((Y,S)\)</span>, denoted by <span class="math inline">\({(f,g):(X,R) \leftrightarrow (Y,S)}\)</span> whenever <span class="math inline">\(g(b)\,R\,a \Leftrightarrow f(a)\,S\,b, \forall \, a\in X, \forall \, b\in Y.\)</span></li>
+<li>an <strong>inverse contravariant connection</strong> between <span class="math inline">\((X,R)\)</span> and <span class="math inline">\((Y,S)\)</span>, denoted by <span class="math inline">\({(f,g):(X,R) \leftrightarrow (Y,S)}\)</span> whenever <span class="math inline">\(a\,R\,g(b) \Leftrightarrow b\,S\, f(a), \forall \, a\in X, \forall \, b\in Y.\)</span></li>
+</ol>
+<p>Generically, we say <span class="math inline">\((f,g)\)</span> forms a <strong>connection</strong> between <span class="math inline">\((X,R)\)</span> and <span class="math inline">\((Y,S)\)</span>, denoted by <span class="math inline">\({(f,g):(X,R) \leftrightarrow (Y,S)}\)</span> whenever <span class="math inline">\(\leftrightarrow\,\in\{\leftrightarrow, \leftrightarrow,\leftrightarrow,\leftrightarrow\}\)</span>. \footnote{The notation used here in defining a connection was found in <span class="citation" data-cites="soft">[@soft]</span>).</p>
+</div>
+<div id="exm-bijection-connection" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 </strong></span>If <span class="math inline">\(f:X\to Y\)</span> is a bijection then <span class="math inline">\((f,f^{-1}):(X,=)\leftrightarrow (Y,=)\)</span> is a connection of any type. More generally, if <span class="math inline">\(f\)</span> is injective, then <span class="math inline">\((f,f^{-1}):(X,=)\leftrightarrow (\text{Im} f,=)\)</span> is a connection of any type.</p>
+</div>
+<div id="exm-alexandconn" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 </strong></span>The collection of up-sets <span class="math inline">\(\tau^R\)</span> of a preorder relation <span class="math inline">\(R\)</span> on a nonempty set <span class="math inline">\(X\)</span> forms an Alexandroff topology on <span class="math inline">\(X\)</span>. Conversely, if <span class="math inline">\(\tau\)</span> is a topology on <span class="math inline">\(X\)</span> and if <span class="math inline">\(R^\tau\)</span> denotes the relation on <span class="math inline">\(X\)</span> prescribed by</p>
+<p><span class="math display">\[\begin{equation}
+b \ R^\tau a \ \Leftrightarrow \ \forall O\in \tau\, ( b\in O \Rightarrow a\in O ),
+\end{equation}\]</span></p>
+<p>for all <span class="math inline">\(a,b\in X\)</span>, then <span class="math inline">\(R^\tau\)</span> is a preorder relation on <span class="math inline">\(X\)</span> (called the of <span class="math inline">\(\tau\)</span>). Also notice that we have mappings prescribed by</p>
+<ol type="1">
+<li><span class="math inline">\(f:Q(X)\to A(X), \quad f(R)=\tau^R\)</span><br>
+</li>
+<li><span class="math inline">\(g:A(X)\to Q(X), \quad g(\tau)=R^\tau\)</span></li>
+</ol>
+<p>where <span class="math inline">\(Q(X)\)</span> and <span class="math inline">\(A(X)\)</span> denote the collection of all preorder relations and all Alexandroff topologies on a set <span class="math inline">\(X\)</span>, respectively. Then for any preorder relation <span class="math inline">\(R\)</span> on <span class="math inline">\(X\)</span>, and any Alexandroff topology <span class="math inline">\(\tau\)</span> on <span class="math inline">\(X\)</span>, we have</p>
+<p><span class="math display">\[\begin{equation}
+(g\circ f)(R)=R
+\qquad \text{ and } \qquad
+(f\circ g)(\tau)=\tau.
+\end{equation}\]</span></p>
+<p>In other words, there is a natural bijection where <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are inverses of each other. Hence <span class="math inline">\((f,g)\)</span> forms a connection of any type and we see that preorder relations and Alexandroff topologies are essential the same. Of course the same can be said for the special case of equivalence relations and partitions.</p>
+</div>
+<p>The next four propositions are either elementary or can be found in .</p>
+<div id="lem-pairequiv" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1 </strong></span>If <span class="math inline">\((f,g)\)</span> and <span class="math inline">\((f, h)\)</span> are contravariant connections between preordered sets <span class="math inline">\((X,\geq)\)</span> and <span class="math inline">\((Y,\succeq)\)</span>, then <span class="math inline">\(g\approx h\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose we have maps <span class="math inline">\(f:X \to Y\)</span>, <span class="math inline">\(g:Y\to X\)</span>, and <span class="math inline">\(h:Y\to X\)</span> such that</p>
+<p><span class="math display">\[\begin{align}
+\label{ugc1}
+g(b)\geq a \Leftrightarrow  f(a)\succeq b  
+\qquad  (\forall a\in X, \forall b\in Y)  \\
+\label{ugc2}
+h(b)\geq a \Leftrightarrow f(a)\succeq b
+\qquad  (\forall a\in X, \forall b\in Y)
+\end{align}\]</span></p>
+<p>We have <span class="math inline">\((f\circ h)(b)\succeq b\)</span> if and only if <span class="math inline">\(g(b)\geq h(b)\)</span>. Notice <span class="math inline">\((f\circ h)(b)\succeq b\)</span> holds; and thus <span class="math inline">\(g(b)\geq h(b)\)</span>. We have <span class="math inline">\((f\circ g)(b)\succeq b\)</span> if and only if <span class="math inline">\(h(b)\geq g(b)\)</span>. Notice <span class="math inline">\((f\circ g)(b)\succeq b\)</span> holds; and thus <span class="math inline">\(h(b)\geq g(b)\)</span>. Hence <span class="math inline">\(g(b)\approx h(b)\)</span> for arbitrary <span class="math inline">\(b\)</span>.</p>
+</div>
+<div id="lem-connprop" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2 </strong></span>If <span class="math inline">\(f:X\to Y\)</span>, <span class="math inline">\(g:Y\to X\)</span> are mappings between preordered sets <span class="math inline">\((X,\geq)\)</span> and <span class="math inline">\((Y,\succeq)\)</span>, then the following are equivalent:</p>
+<ol type="1">
+<li><span class="math inline">\((f,g):(X,\geq) \leftrightarrow (Y,\succeq)\)</span> is a contravariant connection</li>
+<li><span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are antitone maps, and <span class="math inline">\(g\circ f\)</span>, <span class="math inline">\(f\circ g\)</span> are inflationary maps</li>
+<li><span class="math inline">\({\downarrow} f(a)=g^{-1}({\uparrow} a)\)</span>, for all <span class="math inline">\(a\in X\)</span></li>
+<li><span class="math inline">\({\downarrow} g(b)=f^{-1}({\uparrow} b)\)</span>, for all <span class="math inline">\(b\in Y\)</span></li>
+<li><span class="math inline">\(f\)</span> is antitone and <span class="math inline">\(g(b)\in M(f^{-1}({\uparrow} b))\)</span> for all <span class="math inline">\(b\in Y\)</span>.</li>
+<li><span class="math inline">\(g\)</span> is antitone and <span class="math inline">\(f(a)\in M(g^{-1}({\uparrow} a))\)</span> for all <span class="math inline">\(a\in X\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(1)<span class="math inline">\(\Rightarrow\)</span>(2): Suppose <span class="math inline">\({g(b)\geq a \Leftrightarrow f(a)\succeq b}\)</span> for all <span class="math inline">\(a\in X\)</span> and <span class="math inline">\(b\in Y\)</span>. It follows that <span class="math inline">\((g\circ f)(a)\geq a\)</span> and <span class="math inline">\((f\circ g)(b)\succeq b\)</span> since <span class="math inline">\(\succeq\)</span> is reflexive. Hence <span class="math inline">\(g\circ f\)</span>, <span class="math inline">\(f\circ g\)</span> are inflationary maps. Assume <span class="math inline">\(a_1\geq a_2\)</span> for any <span class="math inline">\(a_1, a_2\in X\)</span>. We have <span class="math inline">\((g\circ f)(a_1)\geq a_1\)</span>, and so by transitivity <span class="math inline">\((g\circ f)(a_1)\geq a_2\)</span>; hence <span class="math inline">\(f(a_2)\succeq f(a_1)\)</span>. Assume <span class="math inline">\(b_1\succeq b_2\)</span> for any <span class="math inline">\(b_1, b_2\in X\)</span>. We have <span class="math inline">\((f \circ g)(b_1)\succeq b_1\)</span>, and so by transitivity <span class="math inline">\((f\circ g)(b_1)\succeq b_2\)</span>; hence <span class="math inline">\(g(b_2)\geq g(b_1)\)</span>.</p>
+<p>(2)<span class="math inline">\(\Rightarrow\)</span>(3):<br>
+On one hand we have <span class="math inline">\(f(a)\succeq b\)</span> implies <span class="math inline">\({g(b) \geq (g\circ f)(a)\geq a}\)</span> since <span class="math inline">\(g\)</span> is antitone and <span class="math inline">\(g\circ f\)</span> is inflationary. Conversely we have <span class="math inline">\(g(b)\geq a\)</span> implies <span class="math inline">\({f(a)\succeq (f\circ g)(b)\succeq b}\)</span> since <span class="math inline">\(f\)</span> is antitone and <span class="math inline">\(f\circ g\)</span> is inflationary. Hence <span class="math inline">\({f(a)\succeq b \Leftrightarrow g(b)\geq a}\)</span> as needed to prove that <span class="math inline">\({\downarrow} f(a)=g^{-1}({\uparrow} a)\)</span>.</p>
+<p>(3)<span class="math inline">\(\Rightarrow\)</span>(4):<br>
+Let <span class="math inline">\(a\in X\)</span> and <span class="math inline">\(b\in Y\)</span> be arbitrary elements. We find <span class="math display">\[\begin{align*}
+g(b)\geq a \Leftrightarrow g(b)\in {\uparrow} a \Leftrightarrow b\in g^{-1}({\uparrow} a)={\downarrow} f(a)
+\Leftrightarrow f(a)\succeq b \Leftrightarrow a\in f^{-1}({\uparrow} b).
+\end{align*}\]</span></p>
+<p>(4)<span class="math inline">\(\Rightarrow\)</span>(5):<br>
+Assume that <span class="math inline">\(a_1\geq a_2\)</span> for arbitrary elements <span class="math inline">\(a_1, a_2\in X\)</span>. Since <span class="math inline">\({f(a_1)\geq f(a_1)}\)</span>, clearly <span class="math inline">\(a_1\in f^{-1}({\uparrow} f(a_1))\)</span>.Further, since <span class="math inline">\(f^{-1}({\uparrow} f(a_1))={\downarrow} g(f(a_1))\)</span> and <span class="math inline">\(a_1\geq a_2\)</span>, it follows that <span class="math inline">\(a_2\in f^{-1}({\uparrow} f(a_1))\)</span>. Hence <span class="math inline">\(f(a_2)\succeq f(a_1)\)</span>. For the second statement, let <span class="math inline">\(a\in f^{-1}({\uparrow} b)\)</span>. Then by hypothesis <span class="math inline">\(g(b)\geq a\)</span>, as needed.</p>
+<p>(5)<span class="math inline">\(\Rightarrow\)</span>(6):<br>
+Assume that <span class="math inline">\(b_1\succeq b_2\)</span> for arbitrary elements <span class="math inline">\(b_1, b_2\in Y\)</span>. Since <span class="math inline">\({g(b_1)\in f^{-1}({\uparrow} b_1)}\)</span> we have <span class="math inline">\((f\circ g)(b_1)\succeq b_1 \succeq b_2\)</span>. Hence <span class="math inline">\(g(b_1)\in f^{-1}({\uparrow} b_2)\)</span> and so <span class="math inline">\(g(b_2)\geq g(b_1)\)</span>. Let <span class="math inline">\(a\in X\)</span> be arbitrary and assume that <span class="math inline">\(b\in g^{-1}({\uparrow} a)\)</span>. Then <span class="math inline">\(g(b)\geq a\)</span>. Since <span class="math inline">\(f\)</span> is antitone, we have <span class="math inline">\(f(a)\succeq (f\circ g)(b)\succeq b\)</span> since <span class="math inline">\(g(b)\in f^{-1}({\uparrow} b)\)</span>.</p>
+<p>(6)<span class="math inline">\(\Rightarrow\)</span>(1):<br>
+Assume that <span class="math inline">\(g(b)\geq a\)</span>. Then <span class="math inline">\(b\in g^{-1}({\uparrow} a)\)</span> and so <span class="math inline">\(f(a)\succeq b\)</span> by hypothesis. Conversely, assume that <span class="math inline">\(f(a)\succeq b\)</span>. Then <span class="math inline">\(g(b)\geq (g\circ f)(a)\geq a\)</span> as needed.</p>
+</div>
+<div id="lem-contrandcov" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 3 </strong></span>If <span class="math inline">\({(f,g):(X,\geq) \leftrightarrow (Y,\succeq)}\)</span> is a connection between preordered sets then <span class="math inline">\(f\circ g\)</span> and <span class="math inline">\(g\circ f\)</span> are closures Moreover, there holds</p>
+<ol type="1">
+<li>If <span class="math inline">\((f,g)\)</span> is a contravariant and inverse contravariant (covariant and inverse covariant) connection, then <span class="math inline">\((g\circ f)(a)\approx a\)</span> for all <span class="math inline">\(a\in A\)</span> and <span class="math inline">\((f\circ g)(b)\approx b\)</span> for all <span class="math inline">\(b\in B\)</span>.</li>
+<li>If <span class="math inline">\((f,g)\)</span> is a (contravariant or inverse contravariant) connect and a (covariant or inverse covariant) connection, then <span class="math inline">\(a_1\geq a_2\)</span> implies <span class="math inline">\(f(a_1)\approx f(a_2)\)</span> for all <span class="math inline">\(a_1,a_2\in X\)</span> and <span class="math inline">\(b_1\succeq b_2\)</span> implies <span class="math inline">\(g(b_1)\approx g(b_2)\)</span> for all <span class="math inline">\(b_1,b_2\in Y\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We prove this for the case of contravariant connections and leave the other cases for the reader as an exercise. Assume <span class="math inline">\({(f,g):(X,\geq) \leftrightarrow (Y,\succeq)}\)</span> is a contravariant connection. By <span class="math inline">\(\ref{connprop}\)</span>, <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are antitone and so it follows that <span class="math inline">\(f\circ g\)</span> and <span class="math inline">\(g\circ f\)</span> are isotone. Since <span class="math inline">\({f\circ g}\)</span> is inflationary we have <span class="math inline">\({(f\circ g\circ f)(a)\succeq f(a)}\)</span>. Since <span class="math inline">\(g\circ f\)</span> is inflationary we have <span class="math inline">\({(g\circ f)(a)\geq a}\)</span> and so <span class="math inline">\(f(a)\succeq (f\circ g\circ f)(a)\)</span> since <span class="math inline">\(f\)</span> is antitone. Hence</p>
+<p><span class="math display">\[\begin{equation}
+\label{equivclosure}
+{(f\circ g\circ f)(a)\approx f(a)}
+\end{equation}\]</span></p>
+<p>for all <span class="math inline">\(a\in X\)</span>. Further since <span class="math inline">\(g\)</span> is antitone we have <span class="math inline">\((g\circ f\circ g\circ f)(a) \succeq (g\circ f)(a)\)</span> and <span class="math inline">\({(g\circ f)(a) \succeq (g\circ f\circ g\circ f)(a)}\)</span>. Thus <span class="math inline">\(g\circ f\)</span> is quasi-idempotent. Since <span class="math inline">\(g\circ f\)</span> is inflationary we have <span class="math inline">\({(g\circ f\circ g)(b)\succeq g(b)}\)</span>. Since <span class="math inline">\(f\circ g\)</span> is inflationary we have <span class="math inline">\({(f\circ g)(b)\geq b}\)</span> and so <span class="math inline">\({g(b)\succeq (g\circ f\circ g)(b)}\)</span> since <span class="math inline">\(g\)</span> is antitone. Hence <span class="math inline">\({(g\circ f\circ g)(b)\approx g(b)}\)</span> for all <span class="math inline">\(b\in Y\)</span>. Further since <span class="math inline">\(f\)</span> is antitone we have <span class="math inline">\((f\circ g\circ f\circ g)(b) \geq (f\circ g)(b)\)</span> and <span class="math inline">\({(f\circ g)(b) \succeq (f\circ g\circ f\circ g)(b)}\)</span>. Thus <span class="math inline">\(f\circ g\)</span> is quasi-idempotent.</p>
+<ol type="1">
+<li>Suppose that <span class="math inline">\((f,g)\)</span> is both a contravariant and inverse contravariant connection. Since <span class="math inline">\(g\circ f\)</span> is both inflationary and deflationary, we have <span class="math inline">\((g\circ f)(a)\geq a\)</span> and <span class="math inline">\(a\geq (g\circ f)(a)\)</span> and so <span class="math inline">\((g\circ f)(a)\approx a\)</span>. Since <span class="math inline">\(f\circ g\)</span> is both inflationary and deflationary, we have <span class="math inline">\((f\circ g)(b)\geq b\)</span> and <span class="math inline">\(b\geq (f\circ g)(b)\)</span> and so <span class="math inline">\((f\circ g)(b)\approx b\)</span>.</li>
+<li>Suppose that <span class="math inline">\((f,g)\)</span> is both a contravariant and a covariant connection and assume that <span class="math inline">\(a_1\geq a_2\)</span>. Since <span class="math inline">\(f\)</span> is isotone and antitone, we have <span class="math inline">\(f(a_1)\succeq f(a_2)\)</span> and <span class="math inline">\(f(a_2)\succeq f(a_1)\)</span> as needed. If <span class="math inline">\(b_1\succeq b_2\)</span>, then since <span class="math inline">\(g\)</span> is isotone and antitone, we have <span class="math inline">\(g(b_1)\geq g(b_2)\)</span> and <span class="math inline">\(g(b_2)\geq g(b_1)\)</span> as needed.</li>
+</ol>
+</div>
+<div id="lem-preconnequiv" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 4 </strong></span>If <span class="math inline">\((X,\geq)\)</span> and <span class="math inline">\((Y,\succeq)\)</span> are preordered sets, there holds</p>
+<p><span class="math display">\[\begin{equation}
+\label{connandpre}
+{(f,g):(X,\geq) \leftrightarrow (Y,\succeq)} \Rightarrow
+{(f_\approx,g_\approx):(\overline{X},\geqq) \leftrightarrow (\overline{Y},\succsim)}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(f_\approx([a])=[f(a)]\)</span> for all <span class="math inline">\(a\in X\)</span>, <span class="math inline">\(g_\approx([b])=[g(b)]\)</span> for all <span class="math inline">\(b\in B\)</span>, and <span class="math inline">\({\leftrightarrow\,\in\{\leftrightarrow, \leftrightarrow,\leftrightarrow,\leftrightarrow\}}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We prove this for the case of contravariant connections and leave the other cases for the reader as an exercise. Assume <span class="math inline">\({(f,g):(X,\geq) \leftrightarrow (Y,\succeq)}\)</span> is a contravariant connection. We are assuming that <span class="math inline">\(g(b)\,\geq\,a \Leftrightarrow f(a)\,\succeq\,b\)</span> for all <span class="math inline">\({a\in X, b\in Y}\)</span>. We must show that <span class="math inline">\({g_\approx([b])\,\geqq\,[a] \Leftrightarrow f_\approx([a])\,\succsim\,[b]}\)</span> for all <span class="math inline">\({[a]\in \overline{X}, [b]\in \overline{Y}}\)</span>.</p>
+<p>Suppose that <span class="math inline">\({g_\approx([b])\,\geqq\,[a]}\)</span>. Then <span class="math inline">\([g(b)]\,\geqq\,[a]\)</span> and so <span class="math inline">\({g(b)\geq a}\)</span>, hence <span class="math inline">\({f(a)\succeq b}\)</span>. Thus we have that <span class="math inline">\({f_\approx([a])=[f(a)]\succsim [b]}\)</span> as needed. Now suppose that <span class="math inline">\({f_\approx([a])\,\succsim\,[b]}\)</span>. Then <span class="math inline">\({[f(a)]\,\succsim\,[b]}\)</span> and so <span class="math inline">\({f(a)\succeq b}\)</span>, hence <span class="math inline">\(g(b)\geq a\)</span>. Thus we have that <span class="math inline">\({g_\approx([b])=[g(b)]\succsim [a]}\)</span> as needed.</p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

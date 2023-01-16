@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Predicate Logic - Basic Set Theory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">directknowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#predicate-logic" id="toc-predicate-logic" class="nav-link active" data-scroll-target="#predicate-logic">Predicate Logic</a>
+  <ul class="collapse">
+  <li><a href="#propositional-functions" id="toc-propositional-functions" class="nav-link" data-scroll-target="#propositional-functions">Propositional Functions</a></li>
+  <li><a href="#universal-quantifier" id="toc-universal-quantifier" class="nav-link" data-scroll-target="#universal-quantifier">Universal Quantifier</a></li>
+  <li><a href="#existential-quantifier" id="toc-existential-quantifier" class="nav-link" data-scroll-target="#existential-quantifier">Existential Quantifier</a></li>
+  <li><a href="#uniqueness-quantifier" id="toc-uniqueness-quantifier" class="nav-link" data-scroll-target="#uniqueness-quantifier">Uniqueness Quantifier</a></li>
+  <li><a href="#negating-quantifiers" id="toc-negating-quantifiers" class="nav-link" data-scroll-target="#negating-quantifiers">Negating Quantifiers</a></li>
+  <li><a href="#counterexamples" id="toc-counterexamples" class="nav-link" data-scroll-target="#counterexamples">Counterexamples</a></li>
+  <li><a href="#combining-quantifiers" id="toc-combining-quantifiers" class="nav-link" data-scroll-target="#combining-quantifiers">Combining Quantifiers</a></li>
+  <li><a href="#inference-rules-for-quantified-statements" id="toc-inference-rules-for-quantified-statements" class="nav-link" data-scroll-target="#inference-rules-for-quantified-statements">Inference Rules for Quantified Statements</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="predicate-logic" class="level1">
+<h1>Predicate Logic</h1>
+<p>Predicate logic is a more powerful system of reasoning that can be used to express more complicated ideas. In predicate logic, we can make statements about things that have certain properties. For example, consider the following argument:</p>
+<blockquote class="blockquote">
+<p>Every animal that is a mammal has fur. Rover is a mammal. Therefore, Rover has fur.</p>
+</blockquote>
+<p>This argument is also valid because it follows the rules of predicate logic. In this case, the first statement is called the “universal quantifier,” the second statement is the “existential quantifier,” and the last statement is the “conclusion.”</p>
+<p>Variables in mathematical statements can be quantified in different ways. First, the symbol <span class="math inline">\(\forall\)</span> is called a <strong>universal quantifier</strong> and is used to express that a variable may take on any value in a given collection. For example, <span class="math inline">\(\forall x\)</span> is a symbolic representation for any of the following</p>
+<ul>
+<li>For any <span class="math inline">\(x\)</span>, …<br>
+</li>
+<li>For every <span class="math inline">\(x\)</span>, …<br>
+</li>
+<li>For all <span class="math inline">\(x\)</span>, …<br>
+</li>
+<li>Given any <span class="math inline">\(x\)</span>, …</li>
+<li>If <span class="math inline">\(x\)</span> is any …</li>
+</ul>
+<p>Another quantifier <span class="math inline">\(\exists\)</span> is called an <strong>existential quantifier</strong> and is used to express that a variable can take on at least one value in a given collection. For example <span class="math inline">\(\exists x\)</span> is a symbolic representation for any of the following</p>
+<ul>
+<li>For some <span class="math inline">\(x\)</span>, …</li>
+<li>There exists an <span class="math inline">\(x\)</span>, …<br>
+</li>
+<li>There is an <span class="math inline">\(x\)</span>, …<br>
+</li>
+<li>There are <span class="math inline">\(x\)</span>, …</li>
+</ul>
+<p>Mathematical statements are sometimes written with hidden quantifiers and so you may want to rephrase a given statement before writing it in symbolic form or before applying a logic rule. For example, what are the hidden quantifiers in the following statement?</p>
+<blockquote class="blockquote">
+<p>In 1941, Joe Dimaggio had a 56-game hitting streak.</p>
+</blockquote>
+<p>Namely,</p>
+<blockquote class="blockquote">
+<p>In 1941, there existed a sequence of 56 consecutive games, such that for all games in this sequence, there was at least one at-bat in which Joe Dimaggio got a hit.</p>
+</blockquote>
+<p>In this section, we discuss quantified statements and logic rules for working with them. Here are some examples of logic rules.</p>
+<ul>
+<li><p><strong>Logic Rule 1</strong>: The negation of the statement: <span class="math display">\[
+\forall \, x, P(x)
+\]</span> is the statement <span class="math display">\[
+\exists \, x, \neg P(x)
+\]</span></p></li>
+<li><p><strong>Logic Rule 2</strong>: The negation of the statement:<br>
+<span class="math display">\[
+\exists \, x, P(x)
+\]</span> is the statement <span class="math display">\[
+\forall \, x, \neg P(x)
+\]</span></p></li>
+</ul>
+<p>Before we discuss quantifiers in detail, let’s first understand what <span class="math inline">\(P(x)\)</span> means.</p>
+<section id="propositional-functions" class="level2">
+<h2 class="anchored" data-anchor-id="propositional-functions">Propositional Functions</h2>
+<p>Notice that the statement</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(x\)</span> is less than 5</p>
+</blockquote>
+<p>has two parts. The first is the variable <span class="math inline">\(x\)</span> which is the subject of the statement. The second part, <strong>is less than 5</strong> is called the <strong>predicate</strong> and refers to a property that the subject of the statement can have. We denote the statement “<span class="math inline">\(x\)</span> is less than 5” by <span class="math inline">\(P(x)\)</span>, where <span class="math inline">\(P\)</span> denotes the predicate and <span class="math inline">\(x\)</span> is the variable. Once a value as been assigned to the variable <span class="math inline">\(x\)</span>, the sentence <span class="math inline">\(P(x)\)</span> becomes a proposition and has a truth value. For instance, what are the truth values of <span class="math inline">\(P(1)\)</span> and <span class="math inline">\(P(2)\)</span>?</p>
+<div id="def-propositional-function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>A <strong>propositional function</strong> in the variable <span class="math inline">\(x\)</span> is a sentence <span class="math inline">\(P(x)\)</span> about <span class="math inline">\(x\)</span> that becomes a statement when <span class="math inline">\(x\)</span> is given a particular value.</p>
+</div>
+<p>In general, a sentence involving the <span class="math inline">\(n\)</span> variables <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> is denoted by <span class="math display">\[
+P(x_1, x_2, \dots, x_n).
+\]</span> A statement of the form <span class="math inline">\(P(a_1, a_2, \ldots, a_n)\)</span> is the value of the <strong>propositional function</strong> <span class="math inline">\(P\)</span> at the <span class="math inline">\(n\)</span>-tuple <span class="math inline">\((a_1, a_2, \ldots, a_n)\)</span> and <span class="math inline">\(P\)</span> is called the <strong>predicate</strong>.</p>
+<div id="exm-tvprop" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 </strong></span>Let <span class="math inline">\(P(x,y,z)\)</span> denote the sentence “<span class="math inline">\(x-y=z\)</span>”. What are the truth values of the propositions <span class="math inline">\(P(2,3,-1)\)</span> and <span class="math inline">\(P(5,0,7)\)</span>?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The statement <span class="math inline">\(P(2,3,-1)\)</span> corresponds to <span class="math inline">\(2-3=-1\)</span> which is true; and the statement <span class="math inline">\(P(5,0,7)\)</span> corresponds to <span class="math inline">\(5-0=7\)</span> which is false.</p>
+</div>
+</section>
+<section id="universal-quantifier" class="level2">
+<h2 class="anchored" data-anchor-id="universal-quantifier">Universal Quantifier</h2>
+<div id="def-universal-quantifier" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 </strong></span> The statement <span class="math display">\[
+\text{For all $x$, $P(x)$.}
+\]</span> is symbolized by the formula <span class="math display">\[
+\forall x, P(x).
+\]</span> The symbol <span class="math inline">\(\forall\)</span> is called an <strong>universal quantifier</strong> and translates as “for all”.</p>
+</div>
+<p>Is this statement true or false?</p>
+<div id="exm-us" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 </strong></span>Express the statement</p>
+<blockquote class="blockquote">
+<p>Every student in this class has studied calculus. as a universal quantification.</p>
+</blockquote>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P(x)\)</span> denote the statement: “<span class="math inline">\(x\)</span> has studied calculus”. Then the statement can be written <span class="math inline">\(\forall \, x, P(x)\)</span> where the universe of discourse is the set of students in this class.</p>
+</div>
+<div id="exm-ud-1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 </strong></span>Let <span class="math inline">\(P(x)\)</span> be the statement “<span class="math inline">\(x&gt;3\)</span>”. What is the truth value of the quantification <span class="math inline">\(\forall x, P(x)\)</span>, where the universe of discourse is the set of real numbers?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Notice that <span class="math inline">\(P(x)\)</span> is not true for all real numbers <span class="math inline">\(x\)</span>, since we can find one value in the universe of discourse, say <span class="math inline">\(2\)</span>, and <span class="math inline">\(P(2)\)</span> is false. Consequently <span class="math inline">\(\forall x, P(x)\)</span> is false.</p>
+</div>
+<p>When the universe of discourse is finite, say <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span>, then the universal quantification <span class="math inline">\(\forall x, P(x)\)</span> has the same truth value as the conjunction <span class="math display">\[\begin{equation}
+P(x_1)\land P(x_2) \land \cdots \land P(x_n)
+\end{equation}\]</span> since <span class="math inline">\(P(x_1)\)</span>, <span class="math inline">\(P(x_2)\)</span>, …, <span class="math inline">\(P(x_n)\)</span> are all true if and only if the conjunction is true.</p>
+<div id="exm-tass" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 </strong></span>What is the truth value of the statement <span class="math inline">\(\forall x, P(x)\)</span> where <span class="math inline">\(P(x)\)</span> is the statement</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(x^2&lt;5\)</span></p>
+</blockquote>
+<p>and the universe of discourse is the set of the negative integers not less than <span class="math inline">\(-3\)</span>?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The statement <span class="math inline">\(\forall x, P(x)\)</span> is the same as the conjunction <span class="math display">\[
+P(-3)\land P(-2)\land P(-1)
+\]</span> since the universe of discourse consists of the integers <span class="math inline">\(-3, -2\)</span>, and <span class="math inline">\(-1\)</span>. Since <span class="math inline">\(P(-3)\)</span> is false, it follows that the statement <span class="math inline">\(\forall x, P(x)\)</span> is false.</p>
+</div>
+</section>
+<section id="existential-quantifier" class="level2">
+<h2 class="anchored" data-anchor-id="existential-quantifier">Existential Quantifier</h2>
+<div id="def-existential-quantifier" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 </strong></span>The statement <span class="math display">\[
+\text{There exists an $x$ such that $P(x)$.}
+\]</span> is symbolized by the formula <span class="math display">\[
+\exists x, P(x).
+\]</span> The symbol <span class="math inline">\(\exists\)</span> is called an <strong>existential quantifier</strong> and translates as “there exists”.</p>
+</div>
+<p>Notice that P(1) is also true and that <span class="math inline">\(1\)</span> is a rational number.</p>
+<div id="exm-eq-1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 </strong></span>Let <span class="math inline">\(P(x)\)</span> denote the statement</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(x&lt;5\)</span></p>
+</blockquote>
+<p>What is the truth value of the quantification <span class="math inline">\(\exists x, P(x)\)</span>, where the universe of discourse is the set of rational numbers?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>In order for the statement <span class="math inline">\(\exists x, P(x)\)</span> to be true, we need to demonstrate at least one value <span class="math inline">\(x\)</span> in the universe of discourse where <span class="math inline">\(P(x)\)</span> is true. Since <span class="math inline">\(2\)</span> is a rational number number and <span class="math inline">\(P(2)\)</span> is true, we see that <span class="math inline">\(\exists x, P(x)\)</span> is true.</p>
+</div>
+<p>What if we change the universe of discourse to the set of complex numbers?</p>
+<div id="exm-eq-2" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 </strong></span>Let <span class="math inline">\(P(x)\)</span> be the statement</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(x^2=-1\)</span></p>
+</blockquote>
+<p>What is the truth value of the quantification <span class="math inline">\(\exists x, P(x)\)</span>, where the universe of discourse is the set of rational numbers?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(x^2=-1\)</span> is false for every rational number <span class="math inline">\(x\)</span>, the existential quantification of <span class="math inline">\(P(x),\)</span> namely <span class="math inline">\(\exists x, P(x)\)</span> is false.</p>
+</div>
+<p>When the universe of discourse is finite, say <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span>, then the existential quantification <span class="math inline">\(\exists x, P(x)\)</span> has the same truth value as the disjunction <span class="math display">\[\begin{equation}
+P(x_1)\lor P(x_2) \lor \cdots \lor P(x_n)
+\end{equation}\]</span> since at least one of <span class="math inline">\(P(x_1)\)</span>, <span class="math inline">\(P(x_2)\)</span>, , <span class="math inline">\(P(x_n)\)</span> is true if and only if the disjunction is true.</p>
+<div id="exm-existex" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 </strong></span>What is the truth value of <span class="math inline">\(\exists x, P(x)\)</span> where <span class="math inline">\(P(x)\)</span> is the statement</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(x^4&lt;1\)</span></p>
+</blockquote>
+<p>and the universe of discourse consists of the negative integers not less than <span class="math inline">\(-5\)</span>?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since the universe of discourse is <span class="math inline">\(\{-5, -4, -3, -2, -1\}\)</span>, the proposition <span class="math inline">\(\exists x, P(x)\)</span> is the same as the disjunction <span class="math display">\[
+P(-5)\lor P(-4)\lor P(-3)\lor P(-2)\lor P(-1).
+\]</span> Since <span class="math inline">\(P(-5), P(-4), P(-3), P(-2)\)</span>, and <span class="math inline">\(P(-1)\)</span> are all false, it follows that the statement <span class="math inline">\(\exists x, P(x)\)</span> is false.</p>
+</div>
+</section>
+<section id="uniqueness-quantifier" class="level2">
+<h2 class="anchored" data-anchor-id="uniqueness-quantifier">Uniqueness Quantifier</h2>
+<p>What are other ways of expressing his quantifier in English?</p>
+<div id="def-uniqueness-quantifier" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 </strong></span>The statement <span class="math display">\[
+\text{There exists a unique $x$ such that $P(x)$.}
+\]</span> is symbolized by the formula <span class="math display">\[
+\exists! \, x, P(x).
+\]</span> The symbol <span class="math inline">\(\exists!\)</span> is called an <strong>uniqueness quantifier</strong> and translates as “there exists a unique”.</p>
+</div>
+<div id="exm-uq" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 </strong></span>What is the truth value of <span class="math inline">\(\exists! \, x, P(x)\)</span> where <span class="math inline">\(P(x)\)</span> is the statement</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(x^4\leq 1\)</span>”</p>
+</blockquote>
+<p>and the universe of discourse consists of the negative integers not less than <span class="math inline">\(-5\)</span>?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The universe of discourse is the set <span class="math inline">\(\{-5, -4, -3, -2, -1\}\)</span> and since <span class="math inline">\(P(-5), P(-4), P(-3), P(-2)\)</span> are all false and <span class="math inline">\(P(-1)\)</span> is true, we see that exactly one, namely <span class="math inline">\(P(-1)\)</span> is true. Hence, it follows that the statement <span class="math inline">\(\exists!\, x, P(x)\)</span> is true.</p>
+</div>
+</section>
+<section id="negating-quantifiers" class="level2">
+<h2 class="anchored" data-anchor-id="negating-quantifiers">Negating Quantifiers</h2>
+<p>Now we discuss the two logic rules mentioned above.</p>
+<div id="thm-thmnqlab" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Negating Quantifiers) </strong></span>Let <span class="math inline">\(P(x)\)</span> be a propositional function and let <span class="math inline">\(A\)</span> be a set. Then,</p>
+<ol type="1">
+<li><span class="math inline">\(\neg [\forall x\in A, P(x)]\)</span> is a true proposition if and only if <span class="math inline">\(\exists x\in A, \neg P(x)\)</span> is a true proposition.</li>
+<li><span class="math inline">\(\neg [\exists x\in A, P(x)]\)</span> is a true proposition if and only if <span class="math inline">\(\forall x\in A, \neg P(x)\)</span> is a true proposition.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We prove (2) and leave the first part as <a href="#exr-nqlab">Exercise&nbsp;7</a>. Suppose that <span class="math display">\[\neg [\exists x\in A, P(x)]\]</span> is a true proposition. Then there is no <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span> such that <span class="math inline">\(P(x)\)</span> is true. Thus, for each <span class="math inline">\(x\in A\)</span>, <span class="math inline">\(P(x)\)</span> is false. Therefore, <span class="math inline">\(\neg P(x)\)</span> is true for every <span class="math inline">\(x\)</span> in the set <span class="math inline">\(A\)</span>, and so <span class="math inline">\(\forall x\in A, \neg P(x)\)</span> is a true proposition.</p>
+<p>Conversely, assume that <span class="math inline">\(\forall x\in A, \neg P(x)\)</span> is a true proposition. Then <span class="math inline">\(\neg P(x)\)</span> is a true statement for every <span class="math inline">\(x\)</span> in the set <span class="math inline">\(A\)</span>. So <span class="math inline">\(P(x)\)</span> is false for every <span class="math inline">\(x\)</span> in the set <span class="math inline">\(A\)</span>; that is, there does not exist an element <span class="math inline">\(x\)</span> of the set <span class="math inline">\(A\)</span> such that <span class="math inline">\(P(x)\)</span> is true. Therefore, we see that <span class="math inline">\(\neg [\exists x\in A, P(x)]\)</span> is a true proposition.</p>
+</div>
+<div id="exm-nq-1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 </strong></span>Write the negation of the statements</p>
+<ol type="1">
+<li><span class="math inline">\(\forall \, n\in \mathbb{N}, n^2-n+3=0\)</span></li>
+<li><span class="math inline">\(\exists \, n\in \mathbb{N}, n^2-n+3=0,\)</span></li>
+</ol>
+<p>and for each one, explain whether it or its negation is true.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By <a href="#thm-thmnqlab">Theorem&nbsp;1</a>,<br>
+<span class="math display">\[
+\forall \, n\in \mathbb{N}, n^2-n+3=0
+\quad \text{ has negation: } \quad
+\exists \, n\in \mathbb{N}, n^2-n+3\neq 0
+\]</span> and <span class="math display">\[\begin{equation}
+\exists \, n\in \mathbb{N}, n^2-n+3=0
+\quad \text{ has negation: } \quad
+\forall \, n\in \mathbb{N}, n^2-n+3\neq 0
+\end{equation}\]</span> The first statement <span class="math inline">\(\forall \, n\in \mathbb{N}, n^2-n+3=0\)</span> is not true simply note that when <span class="math inline">\(n=2\)</span>, then <span class="math inline">\((2)^2-(2)+3=5\neq 0\)</span>. Therefore its negation must be true. The second statement <span class="math inline">\(\exists \, n\in \mathbb{N}, n^2-n+3=0\)</span> is false since there does not exist <span class="math inline">\(n\in \mathbb{N}\)</span> such that <span class="math inline">\(n^2-n+3=0\)</span>.</p>
+</div>
+<div id="exm-nq-2" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 </strong></span>Write the negation of the statement <span class="math display">\[
+\exists !\, n\in \mathbb{N}, n^2-n+3=0.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We want to write negation of the statement</p>
+<blockquote class="blockquote">
+<p>There is one and only one <span class="math inline">\(n\in \mathbb{N}\)</span> such that <span class="math inline">\(n^2-n+3=0\)</span>.</p>
+</blockquote>
+<p>The negation is “There is no <span class="math inline">\(n\in \mathbb{N}\)</span> such that <span class="math inline">\(n^2-n+3=0\)</span> or there is more than one <span class="math inline">\(n\in \mathbb{N}\)</span> such that <span class="math inline">\(n^2-n+3=0\)</span>”. Another way of saying this is “For each <span class="math inline">\(n\in \mathbb{N}\)</span>, <span class="math inline">\(n^2-n+3\neq 0\)</span> or there exists at least two natural numbers <span class="math inline">\(n\)</span> such that <span class="math inline">\(n^2-n+3=0\)</span>.”</p>
+</div>
+</section>
+<section id="counterexamples" class="level2">
+<h2 class="anchored" data-anchor-id="counterexamples">Counterexamples</h2>
+<p>How can we show that a statement of the form <span class="math inline">\(\forall x, P(x)\)</span> is false? Or equivalently, how can we show that the negation of <span class="math inline">\(\forall x, P(x)\)</span> is true? By <a href="#thm-thmnqlab">Theorem&nbsp;1</a>, this simply means we need to show that <span class="math inline">\(\exists x, \neg P(x)\)</span> is true. If we can find a value for <span class="math inline">\(x\)</span> such that <span class="math inline">\(\neg P(x)\)</span> is true, then we have a ounterexample and have shown that <span class="math inline">\(\forall x, P(x)\)</span> is false. Intuitively for example, suppose that <span class="math inline">\(P\)</span> is the predicate “is wearing a red shirt”, then a counterexample to the statement “everyone is wearing a red shirt” is the statement “found someone, not wearing a red shirt”.</p>
+<div id="def-counterexample" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 </strong></span>If <span class="math inline">\(P(x)\)</span> is a propositional function and <span class="math inline">\(x\)</span> is a member of the set <span class="math inline">\(A\)</span>, then a <strong>counterexample</strong> to <span class="math inline">\(\forall x\in A, P(x)\)</span> is a member <span class="math inline">\(c\)</span> of the set <span class="math inline">\(A\)</span> such that <span class="math inline">\(P(c)\)</span> is false.</p>
+</div>
+<div id="exm-ce-1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 </strong></span>Show that the statement “All primes are odd” is false.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The statement “All primes are odd” is written in universal quantification form as <span class="math inline">\(\forall x, P(x)\)</span> where <span class="math inline">\(p\)</span> is the predicate “is odd” and the universe of discourse is the set of primes. It is easy to see that <span class="math inline">\(2\)</span> is a counterexample because <span class="math inline">\(2\)</span> is in the domain of discourse and is not prime.</p>
+</div>
+</section>
+<section id="combining-quantifiers" class="level2">
+<h2 class="anchored" data-anchor-id="combining-quantifiers">Combining Quantifiers</h2>
+<p>Of course quantifiers can be nested, that is, it is possible to have a statement involving several quantifiers. Consider the following two statements:</p>
+<ol type="1">
+<li>There exists an integer <span class="math inline">\(x\)</span> such that for every integer <span class="math inline">\(y\)</span>, <span class="math inline">\(x+y=5\)</span>.</li>
+<li>For every integer <span class="math inline">\(y\)</span> there exists an integer <span class="math inline">\(x\)</span> such that <span class="math inline">\(x+y=5\)</span>.</li>
+</ol>
+<p>These statements represented in symbolic form are, respectively,</p>
+<ol type="1">
+<li><span class="math inline">\(\exists x\in \mathbb{Z}, [ \forall y\in \mathbb{Z}, (x+y=5) ]\)</span></li>
+<li><span class="math inline">\(\forall x\in \mathbb{Z}, [ \exists y\in \mathbb{Z}, (x+y=5) ]\)</span></li>
+</ol>
+<p>These statements have very different meanings. In order for statement (1)), to be true we need to demonstrate at least one <span class="math inline">\(x\)</span> such that for any given <span class="math inline">\(y\)</span> (in the domain of discourse) that <span class="math inline">\(x+y=5\)</span> is true. Since we can not specify an integer <span class="math inline">\(x\)</span> such that <span class="math inline">\(x+y=5\)</span> is true for all integers <span class="math inline">\(y\)</span> we see that statement (1) is false.</p>
+<p>In order for (2) to be true, we need to be able to specify an integer <span class="math inline">\(y\)</span> once a given integer <span class="math inline">\(x\)</span> has been specified, such that <span class="math inline">\(x+y=5\)</span> is true. For example, if <span class="math inline">\(x=3\)</span>, then <span class="math inline">\(y=2\)</span>, then <span class="math inline">\(3+2+5\)</span> is true. However this is just one value for <span class="math inline">\(x\)</span>, in order for (2) to be true, we need to specify an integer <span class="math inline">\(y\)</span> <em>for any given integer <span class="math inline">\(x\)</span></em>. We can specify an integer <span class="math inline">\(y\)</span> when <span class="math inline">\(x\)</span> is given just use <span class="math inline">\(y=5-x\)</span>. Since, if we are given an integer <span class="math inline">\(x\)</span>, we know that <span class="math inline">\(y=5-x\)</span> is also an integer and <span class="math inline">\(x+y=x+(5-x)=5\)</span>. Thus we see that statement (2) is true.</p>
+<p>The reader is encourage to practice writing out the negation of the definition of a limit.</p>
+<div id="exm-dl" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (Definition of Limit) </strong></span>Recall from calculus, that the definition of a limit of a real-valued function is:</p>
+<blockquote class="blockquote">
+<p>For every real number <span class="math inline">\(\epsilon&gt;0\)</span> there exists a real number <span class="math inline">\(\delta&gt;0\)</span> such that <span class="math inline">\(|f(x)-L|&lt;\epsilon\)</span> whenever <span class="math inline">\(0&lt;|x-a|&lt;\delta\)</span>.</p>
+</blockquote>
+<p>Express the definition of a limit using quantifiers.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>This definition of limit can be phrased in term of quantifiers by <span class="math display">\[
+\forall \epsilon, \exists \delta, \forall x, (0&lt;|x-a|&lt;\delta \rightarrow |f(x)-L|&lt;\epsilon)
+\]</span> where the universe of discourse for the variables <span class="math inline">\(\epsilon\)</span> and <span class="math inline">\(\delta\)</span> is the set of positive real numbers and for <span class="math inline">\(x\)</span> is the set of real numbers.</p>
+</div>
+<div id="exm-nq-2" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 </strong></span>Find the negation of the statement <span class="math display">\[\begin{equation}
+\label{negformone}
+\exists x\in \mathbb{N}, \forall y\in \mathbb{N}, (xy=y)
+\end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>This statement has the form <span class="math display">\[
+\exists x, [\forall y, P(x,y)]
+\]</span> where <span class="math inline">\(P(x,y)\)</span> represents the propositional function <span class="math inline">\(xy=y\)</span>. We find the negation to be:</p>
+<p><span class="math display">\[\begin{align*}
+\neg [\exists x, [\forall y, P(x,y)]]
+&amp; \equiv \forall x, [\neg [\forall y, P(x,y)]]  \\
+&amp; \equiv \forall x, [\exists y, [\neg P(x,y)]
+\end{align*}\]</span></p>
+<p>So the negation of <span class="math inline">\(\eqref{negformone}\)</span> is <span class="math display">\[\begin{equation*}
+\forall x\in \mathbb{N}, [\exists y\in N, (xy\neq y)].
+\end{equation*}\]</span></p>
+</div>
+<p>The next example uses the logical equivalence <span class="math inline">\(p\rightarrow q \equiv p\land \neg q\)</span> and DeMorgan’s Law.</p>
+<div id="exm-nq-3" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 </strong></span>Find the negation of the statement <span class="math display">\[\begin{equation}
+\label{negformonea}
+\forall x, \forall y, [ x &lt; y \rightarrow \exists z, (x &lt; z \land z &lt; y) ]
+\end{equation}\]</span></p>
+</div>
+<p>If the domain of discourse for <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> and <span class="math inline">\(z\)</span> is <span class="math inline">\(\mathbb{R}\)</span>, then is this statement true or false?</p>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>This statement has the form <span class="math display">\[
+\forall x, \forall y, [ P(x,y)\rightarrow \exists z, [Q(x,z)\land R(y,z)]
+\]</span> where <span class="math inline">\(P(x,y)\)</span>, <span class="math inline">\(Q(x,z)\)</span>, and <span class="math inline">\(R(x,y)\)</span> represent the propositional functions <span class="math inline">\(x&lt;y\)</span>, <span class="math inline">\(x&lt;z\)</span>, and <span class="math inline">\(z&lt;y\)</span>, respectively. We find the negation to be: <span class="math display">\[\begin{align*}
+&amp;
+\neg \big{[}\forall x, \forall y, [ P(x,y)\rightarrow \exists z, [Q(x,z)\land R(y,z)] \big{]}
+\\
+&amp; \qquad
+\equiv
+\exists x, \neg \big{[} \forall y, [ P(x,y)\rightarrow \exists z, [Q(x,z)\land R(y,z)] \big{]}
+\\
+&amp; \qquad
+\equiv
+\exists x, \exists y, \neg [ P(x,y)\rightarrow \exists z, [Q(x,z)\land R(y,z)]  
+\\
+&amp; \qquad
+\equiv
+\exists x, \exists y, [ P(x,y)\land \neg [\exists z, [Q(x,z)\land R(y,z)]  
+\\
+&amp; \qquad
+\equiv
+\exists x, \exists y, [ P(x,y)\land [\forall z, \neg [Q(x,z)\land R(y,z)]  
+\\
+&amp; \qquad
+\equiv
+\exists x, \exists y, [ P(x,y)\land [\forall z, [\neg Q(x,z)\lor \neg R(y,z)]  
+\end{align*}\]</span> So the (working) negation of <span class="math inline">\(\eqref{negformonea}\)</span> is <span class="math display">\[\begin{equation*}
+\exists x, \exists y, [ (x &lt; y) \land (\forall z, (x\geq z \lor z\geq y )]  
+\end{equation*}\]</span></p>
+</div>
+<div id="fig-sinefunc" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/pplot1.png" class="img-fluid figure-img" alt="The sine function on $[-\pi/2,\pi,2]$." width="250"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: The sine function on <span class="math inline">\([-\pi/2,\pi,2]\)</span>.</figcaption><p></p>
+</figure>
+</div>
+<div id="exm-nq-4" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 </strong></span>Let <span class="math inline">\(P(x,y)\)</span> be the statement <span class="math display">\[
+\text{If $x&lt;y$, then $\sin x &lt; \sin y$.}
+\]</span> The domain of discourse is the closed interval <span class="math inline">\(I=\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\)</span>. Determine which of the following statements <span class="math display">\[
+\exists x, \exists y, P(x,y) \quad
+\exists x, \forall y, P(x,y) \quad
+\forall x, \exists y, P(x,y) \quad
+\forall x, \forall y, P(x,y)
+\]</span> are true and which are false.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The first statement <span class="math inline">\(\exists x\in I, \exists y\in I, P(x,y)\)</span> is true. To see this simply let <span class="math inline">\(x=0\)</span> and <span class="math inline">\(y=\pi/2\)</span> because <span class="math inline">\(0&lt;1\)</span> and <span class="math inline">\(\sin 0=0&lt;1 =\sin \pi/2\)</span>.</p>
+<p>The second statement <span class="math inline">\(\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, P(x,y)\)</span> is true. To see this let <span class="math inline">\(x=-\pi/2\)</span>, and then notice that <span class="math inline">\(\forall y\in I, P(-\pi/2,y)\)</span> is a true statement. That is, <span class="math display">\[
+\forall y\in I, \text{ if $-\frac{\pi}{2}&lt;y$, then $-1&lt;\sin y$}
+\]</span> is true. Recall the graph of the sine function restricted to the domain of <span class="math inline">\(I\)</span> (see <a href="#fig-sinefunc">Figure&nbsp;1</a>).</p>
+<p>The third statement <span class="math inline">\(\forall x\in I, \exists y\in I, P(x,y)\)</span> is true. We can not prove this statement is true with one value for <span class="math inline">\(x\)</span>. Let <span class="math inline">\(x\in I\)</span> be an arbitrary element in <span class="math inline">\(I\)</span>. Now that <span class="math inline">\(x\)</span> is given we can set <span class="math inline">\(y=x\)</span>. Then <span class="math inline">\(P(x,y)\)</span> is a true implication since it has a false hypothesis.</p>
+<p>The fourth statement <span class="math inline">\(\forall x\in I, \forall y\in I, P(x,y)\)</span> is true. Again we can not prove this statement is true with one value for <span class="math inline">\(x\)</span>. Moreover, for any given value of <span class="math inline">\(x\)</span>, the value of <span class="math inline">\(y\)</span> must also be arbitrary. Let <span class="math inline">\(x\in I\)</span> be an arbitrary element in <span class="math inline">\(I\)</span>. If <span class="math inline">\(y\leq x\)</span>, then the implication <span class="math inline">\(P(x,y)\)</span> is true by a false hypothesis; and thus the statement <span class="math inline">\(\forall x\in I, \exists y\in I, P(x,y)\)</span> is true in this case. If <span class="math inline">\(x&lt;y\)</span>, then the hypothesis in the implication <span class="math inline">\(P(x,y)\)</span> is true, but in fact the conclusion in <span class="math inline">\(P(x,y)\)</span> is also true since the sine function is increasing on <span class="math inline">\(I\)</span>. Therefore, no matter what <span class="math inline">\(x\)</span> in <span class="math inline">\(I\)</span> is given we see that <span class="math inline">\(P(x,y)\)</span> is true for all <span class="math inline">\(y\)</span> in <span class="math inline">\(I\)</span>.</p>
+</div>
+</section>
+<section id="inference-rules-for-quantified-statements" class="level2">
+<h2 class="anchored" data-anchor-id="inference-rules-for-quantified-statements">Inference Rules for Quantified Statements</h2>
+<p>Before we begin proving theorems, we need to discuss the inference rules for quantified statements. However, before we do so, the reader is encourage to complete <strong>?@exr-incidaxioms</strong>, that is, write out each incidence axiom in symbolic form and also write the negation of each one in both symbolic and English form.</p>
+<p>Suppose that <span class="math inline">\(\exists x\in U\)</span>, <span class="math inline">\(P(x)\)</span> is true, where <span class="math inline">\(U\)</span> is the domain of discourse. By <a href="#def-existential-quantifier">Definition&nbsp;3</a>, <span class="math inline">\(P(x)\)</span> is true for some <span class="math inline">\(x\)</span> in <span class="math inline">\(U\)</span>. Thus, there exists <span class="math inline">\(c\in U\)</span> such that <span class="math inline">\(P(c)\)</span> is true. Hence we have shown that the argument <span class="math display">\[
+\begin{array}{l}
+\exists x, P(x)
+\\ \hline
+\therefore \, \text{$P(c)$ for some element $c\in U$}
+\end{array}
+\]</span> is valid. Now suppose that <span class="math inline">\(\forall x\in U\)</span>, <span class="math inline">\(P(x)\)</span> is true. By <a href="#def-uniqueness-quantifier">Definition&nbsp;4</a>, <span class="math inline">\(P(x)\)</span> is true for every <span class="math inline">\(x\)</span> in <span class="math inline">\(U\)</span>. In particular, if <span class="math inline">\(c\in U\)</span>, then <span class="math inline">\(P(c)\)</span> is true. Hence we have shown that the argument <span class="math display">\[
+\begin{array}{l}
+\forall x, P(x)
+\\ \hline
+\therefore \, \text{$P(c)$ if $c\in U$}
+\end{array}
+\]</span> is valid. The reader should write careful arguments to justify the other two inference rules. All four are listed below.</p>
+<div id="tbl-inference-rules" class="anchored">
+<table class="table">
+<caption>Table&nbsp;1: Inference Rules for Universe</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Inference Rules for Universe <span class="math inline">\(U\)</span></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\begin{array}{l} \forall x, P(x) \\ \hline \therefore \, \text{$P(c)$ if $c\in U$} \end{array}\)</span></td>
+<td>Universal instantiation</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\begin{array}{l} P(c) \text{ for an arbitrary $c\in U$} \\ \hline \therefore \, \forall x, P(x) \end{array}\)</span></td>
+<td>Universal generalization</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\begin{array}{l} \exists x, P(x) \\ \hline \therefore \, \text{$P(c)$ for some element $c\in U$} \end{array}\)</span></td>
+<td>Existential instantiation</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\begin{array}{l} P(c) \text{ for some element $c\in U$} \\ \hline \therefore \, \exists x, P(x) \end{array}\)</span></td>
+<td>Existential generalization</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<div id="exr-forall-negation-for-each-statement" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 </strong></span>Write the negation for each statement.</p>
+<ol type="1">
+<li><span class="math inline">\(\forall x, p(x) \land q(x)\)</span></li>
+<li><span class="math inline">\(\forall x, p(x)\lor q(x)\)</span></li>
+<li><span class="math inline">\(\forall x, p(x)\rightarrow q(x)\)</span></li>
+<li><span class="math inline">\(\forall x, p(x)\leftrightarrow q(x)\)</span></li>
+<li><span class="math inline">\(\forall x, \neg p(x)\)</span></li>
+</ol>
+</div>
+<div id="exr-exists-negation-for-each-statement" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 </strong></span>Write the negation for each statement.</p>
+<ol type="1">
+<li><span class="math inline">\(\exists x, p(x) \land q(x)\)</span></li>
+<li><span class="math inline">\(\exists x, p(x)\lor q(x)\)</span></li>
+<li><span class="math inline">\(\exists x, p(x)\rightarrow q(x)\)</span></li>
+<li><span class="math inline">\(\exists x, p(x)\leftrightarrow q(x)\)</span></li>
+<li><span class="math inline">\(\exists x, \neg p(x)\)</span></li>
+</ol>
+</div>
+<p>Let <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span>, <span class="math inline">\(\mathbb{R}\)</span>, and <span class="math inline">\(\mathbb{C}\)</span> denote the natural numbers, integers, the rational numbers, the real numbers and the complex numbers, respectively.</p>
+<div id="exr-exists-true-false" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 </strong></span>Decide which of the following propositions are true and which are false.</p>
+<ol type="1">
+<li><span class="math inline">\(\exists \ x\in \mathbb{Q}, x^3+3=0.\)</span></li>
+<li><span class="math inline">\(\exists \ x\in \mathbb{R}, x^3+3=0.\)</span></li>
+<li><span class="math inline">\(\exists \ x\in \mathbb{C}, x^3+3=0.\)</span></li>
+<li><span class="math inline">\(\exists! \ x\in \mathbb{Q}, x^3+3=0.\)</span></li>
+<li><span class="math inline">\(\exists! \ x\in \mathbb{R}, x^3+3=0.\)</span></li>
+<li><span class="math inline">\(\exists! \ x\in \mathbb{C}, x^3+3=0.\)</span></li>
+</ol>
+</div>
+<div id="exr-propositions-are-true-and-which-are-false" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 </strong></span>Decide which of the following propositions are true and which are false.</p>
+<ol type="1">
+<li><span class="math inline">\(\forall \ x\in \mathbb{N}, \exists \ y\in \mathbb{N}, x\leq y\)</span></li>
+<li><span class="math inline">\(\forall \ x\in \mathbb{Z}, \exists \ y\in \mathbb{Z}, x\leq y\)</span></li>
+<li><span class="math inline">\(\exists \ x\in \mathbb{Q}, \exists \ y\in \mathbb{N}, x\leq y\)</span></li>
+<li><span class="math inline">\(\exists \ x\in \mathbb{N}, \forall \ y\in \mathbb{N}, x\leq y\)</span></li>
+<li><span class="math inline">\(\forall \ x\in \mathbb{Z}, \forall \ y\in \mathbb{Z}, x\leq y\)</span></li>
+<li><span class="math inline">\(\exists \ x\in \mathbb{Q}, \forall \ y\in \mathbb{N}, x\leq y\)</span></li>
+</ol>
+</div>
+<div id="exr-symbolically-with-the-quantifiers-explicit" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 </strong></span>Rewrite the following propositions symbolically with the quantifiers explicit and in the correct place.</p>
+<ol type="1">
+<li>For every two distinct points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> there exists a unique line <span class="math inline">\(l\)</span> incident with <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.</li>
+<li>For every line <span class="math inline">\(l\)</span> there exist at least two distinct points incident with <span class="math inline">\(l.\)</span></li>
+<li>There exist three distinct points with the property that no line is incident with all three of them.</li>
+</ol>
+</div>
+<div id="exr-write-negation-in-symbols-words" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 </strong></span>If the statement is written in symbols, then rewrite the statement using words; and conversely. For each also write its negation in both symbols and words.</p>
+<ol type="1">
+<li><span class="math inline">\((\exists \, x\in \mathbb{Z})(\forall \, y\in \mathbb{Z})(x+y=0)\)</span></li>
+<li>There exists an integer <span class="math inline">\(x\)</span> such that for all real numbers <span class="math inline">\(y\)</span> the sum of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is zero.</li>
+<li>There exists an integer <span class="math inline">\(y\)</span> such that for all rational numbers <span class="math inline">\(x\)</span> the sum of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is zero.</li>
+<li>There exists a natural number <span class="math inline">\(x\)</span> such that for all integers <span class="math inline">\(y\)</span> the sum of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is zero.</li>
+<li>There exists an natural number <span class="math inline">\(y\)</span> such that for all natural numbers <span class="math inline">\(x\)</span> the sum of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is zero.</li>
+<li><span class="math inline">\((\forall \, x\in \mathbb{N})(\exists \, y\in \mathbb{N})(x y=x)\)</span></li>
+<li>There exists an integer <span class="math inline">\(x\)</span> such that for all real numbers <span class="math inline">\(y\)</span> the product of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is <span class="math inline">\(x\)</span>.</li>
+<li>There exists an integer <span class="math inline">\(y\)</span> such that for all real numbers <span class="math inline">\(x\)</span> the product of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is <span class="math inline">\(x\)</span>.</li>
+<li>There exists a natural number <span class="math inline">\(x\)</span> such that for all integers <span class="math inline">\(y\)</span> the product of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is <span class="math inline">\(x\)</span>.</li>
+<li>There exists an natural number <span class="math inline">\(y\)</span> such that for all rational numbers <span class="math inline">\(x\)</span> the product of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is <span class="math inline">\(x\)</span>.</li>
+<li>Given any two distinct real numbers, some rational number lies strictly between them.</li>
+<li><span class="math inline">\(\forall \, x,y\in \mathbb{R}, (x\neq y\rightarrow \exists \, z\in \mathbb{Q}, x&lt;z&lt;y)\)</span></li>
+<li><span class="math inline">\(\exists \, x,y\in \mathbb{R}, (x\neq y\rightarrow \exists \, z\in \mathbb{Q}, x&lt;z&lt;y)\)</span></li>
+<li><span class="math inline">\(\exists \, x,y\in \mathbb{R}, (x\neq y\rightarrow \forall \, z\in \mathbb{Q}, x&lt;z&lt;y)\)</span></li>
+<li><span class="math inline">\(\forall \, x,y\in \mathbb{R}, (x\neq y\rightarrow \forall \, z\in \mathbb{Q}, x&lt;z&lt;y)\)</span></li>
+<li><span class="math inline">\(\exists \, x,y\in \mathbb{R}, (x\neq y \rightarrow \exists \, z\in \mathbb{Q}, x&lt;z&lt;y)\)</span></li>
+<li><span class="math inline">\((\exists \, x\in \mathbb{Z})(\forall \, y\in \mathbb{Q})(x+y=0)\)</span></li>
+<li><span class="math inline">\((\forall \, y\in \mathbb{Z})(\exists \, x\in \mathbb{Z})(x+y=0)\)</span></li>
+<li><span class="math inline">\((\forall \, x\in \mathbb{N})(\exists \, y\in \mathbb{N})(x y=x)\)</span></li>
+<li><span class="math inline">\((\exists \, y\in \mathbb{N})(\forall \, x\in \mathbb{N})(x y=x)\)</span></li>
+<li><span class="math inline">\((\forall \, x\in \mathbb{N})(\exists \, y\in \mathbb{N})(x=y-7)\)</span></li>
+<li><span class="math inline">\((\exists \, y\in \mathbb{N})(\forall \, x\in \mathbb{N})(x=y-7)\)</span></li>
+<li><span class="math inline">\((\forall \, y\in \mathbb{N})(\forall \, x\in \mathbb{N})(y=x-7)\)</span></li>
+<li><span class="math inline">\((\exists \, x\in \mathbb{N})(\exists \, y\in \mathbb{N})(y=x-7)\)</span></li>
+<li>For all integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, the numbers <span class="math inline">\(x y\)</span> and <span class="math inline">\(y x\)</span> are equal.</li>
+<li>Given any real number <span class="math inline">\(x,\)</span> there exists a natural number <span class="math inline">\(n\)</span> such that <span class="math inline">\(x&lt;n\)</span></li>
+<li>Given any real number <span class="math inline">\(x,\)</span> there exists a natural number <span class="math inline">\(y\)</span> such that <span class="math inline">\(x+y=0.\)</span></li>
+<li>Given any nonnegative real number <span class="math inline">\(x,\)</span> there exists a natural number <span class="math inline">\(y\)</span> such that <span class="math inline">\(y^2=x.\)</span></li>
+<li>Given any nonzero real number <span class="math inline">\(x,\)</span> there exists a natural number <span class="math inline">\(y\)</span> such that <span class="math inline">\(x y=1.\)</span></li>
+<li>There exists a smallest natural number.</li>
+<li>There is no largest integer.</li>
+<li>Given any two distinct real numbers, some rational number lies strictly between them.</li>
+<li>Given any positive real number <span class="math inline">\(\epsilon ,\)</span> there exists a natural number <span class="math inline">\(k\)</span> such that <span class="math inline">\(\frac{1}{n} &lt; \epsilon\)</span> whenever <span class="math inline">\(n\)</span> is a natural number greater than <span class="math inline">\(k.\)</span></li>
+<li>For each real number <span class="math inline">\(\epsilon ,\)</span> if <span class="math inline">\(\epsilon &gt;0\)</span> then there exists a positive real number <span class="math inline">\(\delta\)</span> such that for each number <span class="math inline">\(x,\)</span> if <span class="math inline">\(|x-2|&lt;\delta\)</span> then <span class="math inline">\(\left|x^2-4\right|&lt;\epsilon .\)</span></li>
+</ol>
+</div>
+<div id="exr-nqlab" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 </strong></span>Finish the proof of <a href="#thm-thmnqlab">Theorem&nbsp;1</a>.</p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
