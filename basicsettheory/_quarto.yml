@@ -6,7 +6,7 @@ project:
   resources: 
     - assets
     - images
-  output-dir: ../directknowledge.com/_site/basic-set-theory/
+  output-dir: ../_site/basic-set-theory/
   #post-render: 
     #- _webtools/html_revise.py
 
