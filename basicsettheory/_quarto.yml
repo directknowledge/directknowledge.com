@@ -1,0 +1,92 @@
+# Basic Set Theory
+# python -m http.server 8001
+
+project:
+  type: book
+  resources: 
+    - assets
+    - images
+  post-render: 
+    - _webtools/html_revise.py
+
+book:
+  title: "Basic Set Theory"
+  #author: "David A. Smith"
+  #date: "1/4/2023"
+  chapters:
+    - index.qmd
+    - propositional-logic.qmd
+    - predicate-logic.qmd
+    - mathematical-proofs.qmd
+    - set-theory.qmd
+    - functions-and-relations.qmd
+    - well-founded-confluence.qmd
+    - connect-everything.qmd
+    - concept-theory.qmd
+    - references.qmd
+  page-navigation: true
+  sidebar:
+    style: "floating"
+    search: false
+    collapse-level: 0
+  open-graph: true
+  page-footer:
+    left: 
+      - text: "&copy; Copyright 2023, David A. Smith, All Rights Reserved."
+        href: index.qmd
+    right:
+      - icon: github
+        href: https://github.com/davedoesmath/
+        aria-label: GitHub
+      - icon: youtube
+        href: https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/
+        aria-label: YouTube
+  description: "Basic Set Theory"
+  favicon: assets/favicon.ico
+  navbar:
+    background: light
+    foreground: dark
+    search: true
+    logo: assets/basic-set-theory-logo.svg
+    logo-alt: "Basic Set Theory Logo"
+  site-url: https://basicsettheory.com
+
+bibliography: 
+  - references.bib
+  - logic.bib
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: Contents
+    toc-depth: 3
+    toc-location: right
+    smooth-scroll: true
+    collapse-level: 1
+    anchor-sections: true
+    link-external-icon: false
+    link-external-newwindow: true
+    title-block-banner: false
+    title-block-style: none
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"	
+    include-in-header: 
+      - _html/head.html
+    include-after-body: 
+      - _html/mathjax.html
+      - _control/mathhead.html
+      - _html/analytics.html
+  pdf:
+    keep-tex: true
+    toc: false
+    documentclass: book
+    classoption: [10pt,reqno,twopage,openany]
+    include-in-header: 
+      - _control/packages.tex
+      - _control/commands.tex
+    include-before-body:
+      - _control/topmatter.tex
+    include-after-body: 
+      - _control/makeindex.tex

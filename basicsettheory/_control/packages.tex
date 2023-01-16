@@ -1,0 +1,86 @@
+
+\def\authname{David A. Smith}
+\def\website{https://basicsettheory.com}
+\def\cred{B.S. Mathematics, M.S. Mathematics}
+\def\firstTitle{Basic Set Theory}
+\def\secondTitle{That Anyone Can Understand}
+\def\publisher{David A. Smith}
+\def\isbn{978-1-951290-27-6}
+\def\edition{First}
+
+
+% Geometry
+\usepackage[includefoot]{geometry}
+\geometry{
+paperwidth=6.14in,
+paperheight=9.21in,
+vmargin=1.5cm, % top and bottom margins
+inner=.75in, % inside margin
+outer=.5in, % outside margin
+bindingoffset=0.35in % gutter
+}
+\linespread{1}
+
+% Math
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage{graphicx} 
+
+
+% Header/Footer
+\usepackage{fancyhdr}
+
+\fancypagestyle{toc}{%
+    \fancyhf{}%
+    \fancyhead[RO]{\thepage}%
+    \fancyhead[LO]{\textsl{Contents}}%
+    \fancyhead[LE]{\thepage}%
+    \fancyhead[RE]{\textsl{Contents}}%
+}
+
+\fancypagestyle{preface}{%
+    \fancyhf{}%
+    \fancyhead[RO]{\thepage}%
+    \fancyhead[LO]{\textsl{Preface}}%
+    \fancyhead[LE]{\thepage}%
+    \fancyhead[RE]{\textsl{Preface}}%
+}
+
+\fancypagestyle{fancy}{%
+    \fancyhf{}%
+    \fancyhead{}
+    \fancyfoot{}
+    \rhead[]{\small{\textsf{\thesection. \rightmark \hfill \thepage}}}
+    \lhead[\small{\textsf{\thepage \hfill Chapter \thechapter. \leftmark}}]{}
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+
+
+% Titlepage
+\usepackage{afterpage}
+\usepackage{anyfontsize}
+
+% Links & References
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={black},
+    citecolor={black},
+    urlcolor={black}
+}
+
+\usepackage{tocloft}
+\cftpagenumbersoff{part}
+\renewcommand{\cftchapfont}{\normalsize\scshape}
+
+\usepackage{lipsum}
+
+
+
+
+\usepackage{makeidx}
+\makeindex

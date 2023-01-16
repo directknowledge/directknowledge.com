@@ -1,0 +1,46 @@
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+
+</script>

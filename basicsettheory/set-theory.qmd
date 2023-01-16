@@ -1,0 +1,1146 @@
+---
+pagetitle: "Set Theory - Basic Set Theory"
+---
+# Set Theory
+
+Set theory is the study of sets, which are (informally speaking) collections of objects. The objects in a set can be anything: numbers, points in space, people, etc. Sets can be finite or infinite (more numerous?).
+
+The basic concepts of set theory include sets, subsets, unions, intersections, power sets, products, functions, and relations. The objects in a set are called elements of the set. A subset is a set that is contained within another set. The union of two sets is the set of all elements that are in either of the two sets. The intersection of two sets is the set of all elements that are in both of the two sets. There is so much to dicusss because set theory is quite rich with ideas and results. 
+
+
+Set theory is a branch of mathematics that is used in many other areas of mathematics, such as geometry, algebra, and analysis. It is also used in computer science, particularly in the design and analysis of algorithms.
+
+Set theory has a long and rich history. Some of the earliest work on sets was done by the Greek philosopher Aristotle, who studied sets of objects that could be added together to form a whole. In the late 19th century, Georg Cantor developed the axiomatic approach to set theory and made major contributions to the study of infinite sets. In the early 20th century, Kurt Gödel proved that set theory was consistent, and in the 1940s, he used set theory to prove the existence of infinitely many different types of sets.
+
+In the axiomatic approach to set theory, sets are defined using a set of axioms, or rules. The most famous of these axioms is the Axiom of Extensionality, which states that two sets are equal if they have the same elements.
+
+
+
+
+## What is a set?
+
+We leave the term \index{set} **set**  undefined.  We also leave the term \index{belonging} **belonging** undefined. We say $x$ belongs to a set $A$ and we write $x\in A$. We instead, sometimes say $x$ is an \index{element} **element** of $A$, or even $x$ is a \index{member} **member**  of a set $A$. We will say that a set is a collection of objects. The \index{universe} **universe**, or universal set, usually denoted by $U,$ is the set of all elements under discussion. 
+
+For example, if $U$ consists of the elements: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, and 10, then the equation 
+$$
+A=\{0,1,2,3,4,5\}
+$$
+describes a set $A$ made up of the six elements $0,$ 1, 2, 3, 4, and $5.$
+
+A set is determined by its elements and not by any particular order. In other words, set $A$ is just as easily specified by 
+$$
+A=\{5,4,3,2,1,0\}.
+$$
+
+Sets are often described by properties of the elements using the \index{set-builder notation} **set-builder notation**  
+$$
+\{ \qquad  \mid \qquad  \qquad \}
+\qquad  \text{ or } \qquad  
+\{ \qquad  :  \qquad  \qquad \}
+$$
+
+A variable is indicated before the colon, and the properties are given after the colon. For example, 
+
+\begin{equation}
+\label{setbuilder}
+\{n \mid n\in \mathbb{N} \text{ and $n$ is odd}\}.
+\end{equation}
+
+represents the set of nonnegative odd integers, i.e. the set $\{0,1,3,5,7,\ldots \}.$ 
+The colon is alway read \index{such that} and so \eqref{setbuilder} can be read as "the set of all $n$ such that $n$ is a natural number and is odd". 
+
+Throughout we use $\mathbb{N}$, $\mathbb{Z}$, and $\mathbb{Q}$ to denote the set of natural numbers, the set of integers, and the set of rational numbers, respectfully. Note that we include 0 among the \index{natural numbers} **natural numbers**: 
+$$
+\mathbb{N}=\{0,1,2,3,4,5,6,\ldots\}.
+$$
+
+The set of all positive, zero, or negative numbers, are called the \index{integers} **integers**.  Numbers of the form $m/n,$ where $m,n$ are integers and $n\neq 0$ are called the \index{rational numbers} **rational numbers** since they are ratios of integers. The set of \index{real numbers} **real numbers**, rational or not, contains all the numbers in $\mathbb{Q},$ and many others as well such as $\sqrt{2},$ $\sqrt{3},$ $\sqrt[3]{3},$ $\sqrt[5]{3},$ $\pi,$ and $e$ and so on. 
+
+The most basic property of belonging is that of \index{equality} **equality**. For example, if 
+$$
+A=\{x\in \mathbb{R} \mid -9+21 x-10 x^2=0\}, \quad
+B=\left\{\frac{3}{5},\frac{3}{2}\right\}
+$$
+then $A=B.$ To see this notice that $-9+21 x-10 x^2=(2x-3)(3-5x)=0$ precisely when $x=3/5$ or $x=3/2.$
+
+
+
+## Principle of Extension
+
+\index{Extension}**Extension**. Two sets are equal if and only if they contain the same elements.
+
+::: {#def-equal } 
+Two sets $A$ and $B$ are called \index{equal}**equal**, denoted by $A=B,$ provided they consist of the same elements. If $A$ and $B$ are not equal we write $A\neq B.$
+::: 
+  
+Let $A$ and $B$ be sets. If every element of $A$ is an element of $B,$ we say $A$ is a \index{subset} **subset** of $B,$ or $B$ \index{contains} **contains** $A,$ and we write $A\subseteq B,$ or $B\supseteq A.$ Notice that \index{set inclusion} **set inclusion** $\subseteq$ has a few nice properties. It is \index{reflexive} **reflexive**, meaning $A\subseteq A$ for any set $A$; and is \index{transitive} **transitive**, meaning, if $A \subseteq B$ and $B\subseteq C$ then $A\subseteq C$ for all sets $A, B, C.$
+
+By the principle of extension, set inclusion is also \index{antisymmetric} meaning $A\subseteq B$ and $B\subseteq A$ together imply $A=B.$ You might have noticed that equality is also reflexive and transitive. Equality is also \index{symmetric}**symmetric**, meaning if $A=B$ then $B=A,$ for all sets $A, B.$
+
+
+## Specification
+
+The next principle is designed to produce new sets out of known ones. We use the notation $P(x)$ to mean a mathematical statement $P$ which depends on the free variable $x.$ 
+
+**Specification**. To every set $A$ and to every condition $P(x)$ there corresponds a set $B$ whose elements are exactly those elements $x$ of $A$ for which $P(x)$ holds. 
+
+By Extension, the set $B$ in the Specification is uniquely determined.  Also by Specification,  the set $\{x\in A \mid x\neq x \},$ denoted by $\emptyset,$ exists and is called the \index{empty set} **empty set**. This of course assumes that there exists a set $A$ in the first place, as we have assumed all along.
+Of course the empty set is a subset of every set. The next question that comes to mind is: are there enough sets to ensure that every set belongs to some set?
+
+Let $A$ and $B$ be sets. If every element of $A$ is an element of $B$, we say $A$ is a \index{subset} **subset** of $B$, or sometimes we say $B$ \index{contains} **contains**  $A$, and we write $A\subseteq B$, or $B\supseteq A$. For example, $\{1,4,a\}\subseteq \{0,1,3,4,a,b\}$ or as another example the inclusions hold $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}\subseteq \mathbb{R}.$
+
+::: {#def-subset } 
+A set $A$ is called a \index{subset} **subset**  of a set $B,$ denoted by $A\subseteq B,$ provided every element of $A$ is also an element of $B.$
+::: 
+
+The symbol $\emptyset$ is the last letter in the Danish-Norwegian alphabet. 
+
+::: {#def-emptyset } 
+The unique set that has no elements is called the \index{empty set}**empty set** and is denoted by $\emptyset.$
+::: 
+
+Recall the [tautologies](propositional-logic.qmd#thm-tautologies-used-in-proofs) $p\rightarrow p$ and $((p\rightarrow q)\land (q\rightarrow r))\rightarrow (p\rightarrow r).$
+
+::: {#thm-universal } 
+Let $A$, $B$, and $C$ be subsets of a universal set $U.$
+
+1. $A\subseteq A$
+2. $(A\subseteq B \land B\subseteq C) \rightarrow A\subseteq C.$  
+::: 
+
+::: {.proof }
+Let $x$ be an arbitrary element of $A.$ Then $x$ is in $A$ and so $A\subseteq A.$  For the second statement, assume $x$ be an arbitrary element of $A.$  Since $A\subseteq B,$ we have $x\in B$ by definition of subset.  Since  $B\subseteq C,$ we have $x\in C$ by definition of subset, whence $A\subseteq C.$  
+::: 
+
+To show that $A=B$ one must prove that $x\in A\leftrightarrow x\in B$; that is, $x\in A$ if and only if $x\in B.$  This is equivalent to proving that $x\in A\rightarrow x\in B$ and $x\in B\rightarrow x\in A.$ There are two parts to such a proof: first assume that $x\in A$ and show that $x\in B$ follows.  Then assume, independently, that $x\in B$ and show that $x\in A$ follows.  
+
+The reader is encourage to justify each step in this proof.
+
+::: {#thm-universal } 
+For any two subsets $A$ and $B$ of a universal set $U,$
+\begin{equation}
+\label{eqsetsone}
+A=B \leftrightarrow (A\subseteq B \land B\subseteq A).
+\end{equation}
+::: 
+
+::: {.proof }
+We proceed as follows
+\begin{align*}
+A=B & \leftrightarrow 
+\forall x, (x\in A \leftrightarrow x\in B) \\
+& \leftrightarrow 
+\forall x, [(x\in A\rightarrow x\in B)\land (x\in B\rightarrow x\in A)] \\
+& \leftrightarrow [\forall x, x\in A \rightarrow x\in B]\land [\forall x, (x\in B\rightarrow x\in A)]\\
+& \leftrightarrow (A\subseteq B) \land (B\subseteq A)
+\end{align*}
+as needed.  
+::: 
+
+::: {#thm-subsetsmean } 
+For any two subsets $A$ and $B$ of a universal set $U,$
+\begin{equation}
+\label{subsetsmean}
+A\subseteq B \leftrightarrow \forall C (C\subseteq A \rightarrow C\subseteq B).
+\end{equation}
+::: 
+
+::: {.proof }
+First we show that 
+\begin{equation}
+\forall C, (C\subseteq A\rightarrow C\subseteq B)\rightarrow A\subseteq B.
+\end{equation}
+Assume that for any set $C,$ if $C\subseteq A,$ then $C\subseteq B.$ Since $A\subseteq A,$ it follows that $A\subseteq B$ as needed. Next it must be shown that 
+\begin{equation}
+A\subseteq B \rightarrow \forall C, (C\subseteq A \rightarrow C\subseteq B).
+\end{equation}
+Assume $A\subseteq B$ and let $C$ be any set such that $C\subseteq A.$ Then we have $C\subseteq A$ and $A\subseteq B,$ and so we have $C\subseteq B.$  
+::: 
+
+::: {#thm-elesubst } 
+Let $A$ be a subset of a universal subset $U.$
+Then for all $x\in U,$
+\begin{equation}
+\label{elesubst}
+x\in A \leftrightarrow \{x\}\subseteq A.
+\end{equation}
+::: 
+
+::: {.proof }
+The proof is left for the reader as @exr-elesubst.
+::: 
+
+Set inclusion is also \index{antisymmetric} **antisymmetric**  meaning $A\subseteq B$ and $B\subseteq A$ together imply $A=B$. 
+Equality is also \index{symmetric} **symmetric**, meaning if $A=B$ then $B=A$, for all sets $A, B$.
+
+
+
+::: {#thm-aasym } 
+For any two subsets $A$ and $B$ of a universal set $U,$
+
+1. $A=B \leftrightarrow B=A,$ and
+2. $(A\subseteq B \land B\subseteq A) \rightarrow A=B.$
+::: 
+
+::: {.proof }
+The proof is left for the reader as @exr-aasym.
+::: 
+
+
+
+
+## Proper Subset
+
+A subset $B$ of a set $A$ is said to be a proper subset of $A$ if it is not equal to $A$ itself. 
+Thus all subsets of $A$ are proper subsets except the set $A$ itself, which is referred to as the \index{improper subset} **improper subset**  of $A.$
+
+::: {#def-proper-subset } 
+A set $A$ is called a \index{proper subset} **proper subset**  of a set $B$ provided $A\subseteq B$ and $A\neq B.$
+We write $A\subset B$ to denote that $A$ is a proper subset of $B.$  
+::: 
+
+::: {#thm-subseteq } 
+For any two subsets $A$ and $B$ of a universal set $U,$
+\begin{equation}
+A\subset B \leftrightarrow [A\subseteq B \land \exists x, (x\in B \land x\notin A)].
+\label{eqsets}
+\end{equation}
+::: 
+
+::: {.proof }
+Assume $A\subset B.$ Then $A\subseteq B$ and $A\neq B.$ By definition of $A\neq B,$ one must hold 
+$$
+\exists x, (x\in A\land x\notin B)
+\quad \text{ or }\quad 
+\exists x, (x\in B \land x\notin A).
+$$
+
+If the first one holds, then  we have $x\in B$ and $x\notin B,$ a contradiction. Hence the former holds as needed. Conversely, assume $A\subseteq B$ and ${\exists x, (x\in B \land x\notin A).}$ Then by definition of $A\neq B,$ since $B$ contains an element not in $A,$ we have $A\neq B.$  Therefore we have  $A\subseteq B$ and $A\neq B,$ and thus $A\subset B.$ 
+::: 
+
+
+## Why elelmentary set theory?
+
+In the foundations of mathematics, Russell's paradox, discovered by Bertrand Russell in 1901, showed that the naive set theory created by Georg Cantor leads to a contradiction. According to naive set theory, any definable collection is a set.
+ 
+Let $R$ be the set of all sets that are not members of themselves. 
+If $R$ is not a member of itself, then its definition dictates that it must contain itself, and if it contains itself, then it contradicts its own definition as the set of all sets that are not members of themselves. 
+
+This contradiction is called \index{Russell's paradox}**Russell's paradox**. Symbolically:
+$$
+\text{If $R = \{ x \mid x \notin x \},$ then $R \in R \leftrightarrow R \not \in R$.}
+$$
+In 1908, two ways of avoiding the paradox were proposed, Russell's type theory and the Zermelo set theory. There is a long interesting history of this problem and the reader is encourage to explore. 
+
+
+## Axiom of Choice
+
+In 1904, Ernst Zermelo formulated the Axiom of Choice to prove the Well-Ordering Theorem \cite{zermelo1904beweis}.
+Of course, we now know that these two statements are logically equivalent and in fact, there are many equivalents forms [@moore2012zermelo,@jech2008axiom, @rubin1985equivalents, @adamson1998equivalents]. 
+
+::: {#thm-zf-equivalent }
+In Zermelo-Fraenkel set theory, the following statements are equivalent: 
+
+1. (Axiom of Choice) 
+Given any set $X$ of pairwise disjoint non-empty sets, there exists at least one set $B$ that contains exactly one element in common with each of the sets in $X$. [@MR0453532, @suppes1972axiomatic]
+2. (Well-Ordering) Every set can be well-ordered. [@MR1510215]
+:::
+
+Said differently, and in particular, the Axiom of Choice guarantees that every finite collection of nonempty sets has a choice function.  However, in Zermelo-Fraenkel set theory, this is easily proven using mathematical induction [@tourlakis2003lectures]. The following statements are also weaker than the Axiom of Choice. 
+
+[@szpilrajn1930extension,@MR2127991]
+
+::: {#thm-extendord }
+Every partial order can be extended to a total order and every well-founded partial order can be extended to a well-order. 
+:::
+
+
+
+## Set Operations
+
+
+
+### Power Sets
+
+The next question that comes to mind is: is the collection of subsets of a set, a set itself? In other words, given a set $A$ does there exist a set $\mathcal{P}$ such that if $X\subseteq A$ then $X\in \mathcal{P}\,$? 
+
+
+::: {#def-power-set } 
+The set consisting of all subsets of a given set $A$ is called the \index{power set} **power set** of $A$ and is denoted by $\mathcal{P}(A).$ 
+::: 
+
+::: {#thm-power-set } 
+If $A$ is a set, then $\emptyset \in \mathcal{P}(A)$ and $A\in \mathcal{P}(A).$
+::: 
+
+::: {.proof }
+Notice that the empty set is a subset of every set (including itself). Thus, $\emptyset \in \mathcal{P}(A)$ is immediate.  The second statement follows immediately; that is, $A\subseteq A$ implies $A\in \mathcal{P}(A).$ 
+::: 
+
+::: {#thm-power-set-n } 
+If $A$ has $n$ elements, then $\mathcal{P}(A)$ has $2^n$ elements.  
+::: 
+
+::: {.proof }
+If $n=0,$ then $A$ is the empty set. The only subset of the empty set is the set itself; thus the number of elements in $\mathcal{P}(A)$ is $1$ which is $2^0$ as needed to verify the basis step. 
+
+Assume that the statement holds for $n.$ Let $X$ be a set with $n+1$ elements and assume $x\in X.$  We claim that exactly half of the subsets of $X$ contain $x,$ and half do not.  To see this, notice that each subset of $X$ that contains $x$ can be paired uniquely with a subset obtained by removing $x$.
+$$
+\begin{matrix}
+\text{ subsets of $A$ that contain $x$ }
+&
+\text{ subsets of $A$ that do not contain $x$ } 
+\\ \hline
+\{x\} & \emptyset \\
+\{x,y\} & \{y\} \\
+\{x,z\} & \{z\} \\
+\{x,y,z\} & \{y,z\}
+\end{matrix}
+$$
+If we let $Y$ be the set obtained from $X$ by deleting $x,$ $Y$ has $n$ elements.  By the inductive hypothesis $\mathcal{Y}$ has exactly $2^n$ elements. But the subsets of $Y$ are precisely the subsets of $X$ that do not contain $x.$  It follows that the number of elements in $\mathcal{Y}$ is one-half the number of elements in $\mathcal{X}.$  Therefore, the number of elements in $\mathcal{X}$ is twice the number of elements in $\mathcal{Y}.$ Whence the number of elements in $\mathcal{X}$ is $2^{n+1}.$ 
+::: 
+
+::: {#thm-infinite-set } 
+If $A$ is an infinite set, then $\mathcal{P}(A)$ is also. 
+::: 
+
+::: {.proof }
+The proof is left for the reader as @exr-infinite-set.
+::: 
+
+
+
+
+
+### Principle of Unions
+
+**Union**.  For every collection of sets there exists a set that contains all the elements that belong to at least one set of the given collection. 
+
+Given a collection of sets $\mathcal{C}$ we want their union to consist of only those elements that belong to at least one of the subsets in the collection. So we apply the principle of specification to the set $U$ and define the \index{union} **union** of a collection of sets as
+$$
+\bigcup_{X\in \mathcal{C}}X=\{x\in U \mid x\in X \text{ for some $X$ in $\mathcal{C}$\}}.
+$$
+This set exists by the principle of specification and is unique by the principle of extension. In the case $\mathcal{C}=\{A, B\}$ we usually write 
+$$
+A\cup B=\{x \mid x\in A \text{ or } x\in B\}.
+$$ 
+
+::: {#thm-unions } 
+Let  $A,$ $B,$ and $C$ be sets. Then
+
+1. $A\cup \emptyset =A ,$ 
+2. $A\cup B=B\cup A,$ 
+3. $A\cup (B \cup C) =(A\cup B)\cup C,$ 
+4. $A \cup A =A,$ and
+5. $A\subseteq B$ if and only if $A\cup B=B.$
+::: 
+
+::: {.proof }
+The proof is left for the reader as @exr-unions.
+::: 
+
+If $A$ and $B$ are sets we then define, using the principle of specification, their intersection as the set $A \cap B=\{x\in A \mid x\in B\}.$ It is very easy to show the more familiar form, $A\cap B=\{x \mid x\in A \text{ or } x\in B\}.$ More generally, let $\mathcal{C}$ be a non-empty collection of sets, the principle of specification allows us to define a set 
+$$
+I=\{x \in A \mid x\in X \text{ for every $X$ in $\mathcal{C}$}\}
+$$
+where $A$ is some set in $\mathcal{C}.$ In fact the use of a set $A$ is arbitrary (but necessary in order to use the principle of specification). Thus we are lead to the definition of the \index{intersection} **intersection**  of a collection of sets
+$$
+\bigcap_{X\in \mathcal{C}} X=\{x\mid x\in X \text{ for all $X$ in 
+$\mathcal{C}$ }\}
+$$
+where uniqueness is guaranteed by the principle of extension.
+
+::: {#thm-emptyset-prop } 
+Let  $A$, $B$, and $C$ be sets. Then
+
+1. $A\cap \emptyset =\emptyset ,$ 
+2. $A\cap B=B\cap A,$ 
+3. $A\cap (B \cap C) =(A\cap B)\cap C,$ 
+4. $A \cap A =A,$ and
+5. $A\subseteq B$ if and only if $A\cap B=A.$
+::: 
+
+::: {.proof }
+The proof is left for the reader as @exr-emptyset-prop.
+::: 
+
+Let $A$ and $B$ be subsets of a set $C.$ The \index{difference} between $A$ and $B,$ known as the \index{relative complement} of $B$ in $A,$ is the set defined by $A-B=\{x\in A \mid x\not\in B \}$; and the \index{symmetric difference} **difference} between $A$ and $B,$ known as the \index{relative complement} of $B$ in $A,$ is the set defined by $A-B=\{x\in A \mid x\not\in B \}$; and the \index{symmetric difference**  of $A$ and $B$ is defined by $A+B=(A-B)\cup (B-A).$ Notice that the principle of specification guarantees existence and the principle of extension guarantees uniqueness of these sets for a given $A$ and $B.$ These sets are of course, by definition, also subsets of $C.$ 
+
+The next question that comes to mind is: is the collection of subsets of $C$ a set itself? In other words, given a set $C$ does there exist a set $\mathcal{P}$ such that if $X\subseteq S$ then $X\in \mathcal{P}\,$? 
+
+
+
+
+
+### Principle of Powers
+
+**Principle of Powers**. For each set there exists a collection of sets that contains among its elements all the subsets of the given set.
+
+Thus, given a set $C$ we can form a collection of sets, denoted by $\mathcal{P},$ that contains the subsets of $C.$ We can use the principle of specification to ensure that this set will consist only of subsets of $C$ and the principle of extension to ensure that this set is unique. We call this set the \index{power set} **power set**  of $C,$ and denote it by 
+$\mathcal{P}(S)=\{X \mid X\subseteq S\}$ 
+or sometimes even $2^S.$ 
+
+The fundamental most frequently used operations of set theory are union, intersection, and difference.  
+
+In this section we discuss these operations and some of their properties. 
+
+The \index{union} **union** of a collection of sets is the set of all distinct elements in the collection.
+
+::: {#def-union } 
+Let $A$ and $B$ be subsets of some universal set $U.$
+The \index{union} **union**  of $A$ and $B$ is the set $A\cup B$ defined by 
+$$
+A\cup B =\{x\mid x\in A \lor x\in B\}.
+$$
+::: 
+
+Recall that $p\rightarrow (p\lor q)$ is a tautology. 
+This immediately yields that for any sets $A$ and $B,$ 
+\begin{equation}
+\label{subsetcup}
+A\subseteq A\cup B
+\qquad \text{ and } \qquad 
+B\subseteq A\cup B. 
+\end{equation}
+This follows because $A\subseteq A\cup B$ is equivalent to $\forall x, x\in A\rightarrow (x\in A \lor x\in B)$ by definition of subset. 
+Similarly for $B\subseteq A\cup B.$
+
+::: {#exm-union } 
+Let $U=\{1,2,3,\ldots, 10\},$ $A=\{2,4,6\},$ $B=\{1,3,5,7,9\}$ and $C=\{5,10\}.$
+Find and compare the sets: $A\cup (B \cup C)$ and $(A\cup B)\cup C$
+::: 
+
+::: {.proof }
+We find $B\cup C=\{1,3,5,7,9,10\}$ and so 
+$$
+A\cup(B\cup C)=\{1,2,3,4,5,6,7,9,10\}.
+$$ 
+Also, $A\cup B=\{1,2,3,4,5,6,7,9\}$ and so 
+$$
+(A\cup B)\cup C)=\{1,2,3,4,5,6,7,9,10\}.
+$$
+Therefore we find that $A\cup (B \cup C)=(A\cup B)\cup C$.
+::: 
+
+
+::: {#thm-set-union }
+Let $A$ and $B$ be subsets of some universal set $U.$
+
+1. $A\cup \emptyset =A$
+2. (\index{commutativity} **commutativity**) $A\cup B=B\cup A$
+3. (\index{associativity} **associativity**) $A\cup (B \cup C) =(A\cup B)\cup C$
+4. (\index{idempotence} **idempotence**) $A \cup A =A$
+5. $A\subseteq B$ if and only if $A\cup B=B$.
+::: 
+
+::: {.proof }
+We prove (1) and (5) and leave the remainder of the proof for the reader as @exr-set-union.
+
+(1): Let $x$ be an arbitrary element of $A\cup \emptyset.$  Then, by definition of union, either $x\in A$ or $x\in \emptyset.$  Since there are no elements in $\emptyset,$ we must have $x\in A$; hence $A\cup \emptyset\subseteq A.$ Conversely, follows from \eqref{subsetcup}. 
+
+(5):  Assume $A\subseteq B.$  We must show that $A\cup B=B.$ By \eqref{subsetcup} we immediately see that $B\subseteq A\cup B.$  To show the remaining inclusion, let $x\in A\cup B.$  Then either $x\in A$ or $x\in B.$  In the case that $x\in A,$ then we have $x\in B$ by hypothesis.  Thus, in either case we have $x\in B,$ and so $A\cap B\subseteq B.$ Therefore, we have shown that if $A\subseteq B,$ then $A\cap B=B.$ 
+
+Conversely, we now assume that $A\cup B=B$ and we wish to conclude that $A\subseteq B.$  To do so, let $x$ be an arbitrary element of $A.$ 
+Then $x\in A\cup B$ by \eqref{subsetcup}, and so $x\in A\cup B=B.$  Hence $A\subseteq B$ as needed. 
+::: 
+
+The intersection of a collection of sets is the set that contains all elements, each of which are in each of the sets in the collection, and no other elements. 
+
+
+
+
+### Principle of Intersections
+
+::: {#def-intersection } 
+Let $A$ and $B$ be subsets of some universal set $U.$ The \index{intersection} **intersection**  of $A$ and $B$ is the set $A\cap B$ defined by 
+$$
+A\cap B =\{x\mid x\in A \land x\in B\}.
+$$
+::: 
+
+::: {#thm-set-intersection }
+Let $A$ and $B$ be subsets of some universal set $U.$
+
+1. $A\cap \emptyset =\emptyset$
+2. (\index{commutativity} **commutativity**) $A\cap B=B\cap A$
+3. (\index{associativity} **associativity**) $A\cap (B \cap C) =(A\cap B)\cap C$
+4. (\index{idempotence} **idempotence**) $A \cap A =A$
+5. $A\subseteq B$ if and only if $A\cap B=A$.
+::: 
+
+::: {.proof }
+We prove (2) and (3) and leave the remainder of the proof for the reader as @exr-set-intersection.
+
+(2): Let $x$ be an arbitrary element in $A\cap B.$ Then 
+\begin{align*}
+& x\in A \cap B & \qquad & \\
+& \quad \rightarrow  x\in A\land x\in B & &  \text{by Definition of $\cap$} \\
+& \quad \rightarrow x\in B\land x\in A & &  \text{by commutativity of $\land$} \\
+& \quad \rightarrow x\in B \cap A  & &  \text{by Definition of $\cap$}
+\end{align*} 
+Thus $x\in A\cap B\rightarrow x\in B\cap A$ and consequently 
+$$
+A\cap B\subseteq B\cap A.
+$$
+
+In a similar fashion (simply reverse the implications) one may prove that $B\cap A\subseteq A\cap B.$
+Therefore, $A\cap B=B\cap A$.
+
+(3):
+Let $x$ be an arbitrary element in $(A \cap B)\cap C.$ 
+Then 
+\begin{align*}
+& x\in (A \cap B)\cap C & \qquad & \\
+& \quad \rightarrow [ x\in (A \cap B) \land x\in C ] & & \text{by Definition of $\cap$} \\
+& \quad \rightarrow [ (x\in A \land x\in B)\land x\in C ]& & \text{by Definition of $\cap$} \\
+& \quad \rightarrow [ x\in A \land ( x\in B \land x\in C) ] & & 
+\text{by associativity of $\land$} \\
+& \quad \rightarrow [ x\in A \land ( x\in B \cap C) ]& & 
+\text{by Definition of $\cap$} \\
+& \quad \rightarrow [ x\in (A \cap B) \cap C ] & & 
+\text{by Definition of $\cap$}
+\end{align*}
+ 
+Thus $x\in (A\cap B)\cap C \rightarrow x\in A\cap (B\cap C)$ and consequently 
+$$
+(A\cap B)\cap C\subseteq A\cap (B\cap C).
+$$
+In a similar fashion (simply reverse the implications) one may prove that $A\cap (B\cap C)\subseteq (A\cap B)\cap C.$
+Therefore, $A\cap (B\cap C)=(A\cap B)\cap C.$
+::: 
+
+
+
+::: {#thm-cap-cup } 
+Let $A$, $B$, $C$ be subsets of some universal set $U.$
+
+1. $A\cap (B \cup C) = (A\cap B)\cup (A\cap C)$
+2. $A\cup (B \cap C) = (A\cup B)\cap (A\cup C)$
+::: 
+
+::: {.proof }
+We prove (1) and leave the remainder of the proof for the reader as @exr-cap-cup.
+
+(1): Let $x$ be an arbitrary element in $A\cap (B \cup C).$  Then 
+\begin{align*}
+& x\in A\cap (B \cup C) & \qquad & \\
+& \quad \rightarrow [ x\in A \land x\in B\cup C ] & &  \text{by Definition of $\cap$} \\
+& \quad \rightarrow [ x\in A \land (x\in B \lor x\in C) ]& &  \text{by Definition of $\cup$} \\
+& \quad \rightarrow [ (x\in A \land x\in B) \lor (x\in A \land x\in C) ] & &  \text{by distributivity of $\land$} \\
+& \quad \rightarrow [ (x\in A \cap B) \lor (x\in A \cap C) ] & &  \text{by Definition of $\cap$} \\
+& \quad \rightarrow [ (x\in A \cap B) \cup (A \cap C) ] & &  \text{by Definition of $\cup$} 
+\end{align*}
+ 
+Thus $x\in A\cap (B \cup C) \rightarrow x\in (A\cap B)\cup (A\cap C)$ and consequently 
+$$
+A\cap (B \cup C) \subseteq (A\cap B)\cup (A\cap C).
+$$
+
+In a similar fashion (simply reverse the implications) one may prove that $(A\cap B)\cup (A\cap C) \subseteq A\cap (B \cup C).$
+Therefore, $A\cap (B \cup C)=(A\cap B)\cup (A\cap C).$
+::: 
+
+
+
+
+### Relative Complement
+
+The relative complement of $B$ with respect to a set $A$ is the set of elements in $A$ but not in $B.$ 
+
+::: {#def-relative-complement } 
+Let $A$ and $B$ be subsets of some universal set $U.$
+The \index{relative complement} **relative complement**  of $B$ in $A$ is the set $A-B$ defined by 
+$$
+A-B =\{x\mid x\in A \land x\notin B\}.
+$$
+The relative complement of $B$ in $A$ is also denoted by $A\setminus B.$ 
+::: 
+
+When all sets under consideration are considered to be subsets of a given set $U,$ the absolute \index{complement} **complement**  of $A$ is the set of all elements in $U$ but not in $A,$ and is denoted by $A',$ that is, the complement of a set $A$ is defined by 
+$$
+A'=\{x\in U \mid x\not\in A\}. 
+$$
+To be redundant, by definition $A'=U-A.$
+
+::: {#exm-relative-complement } 
+Let $S=\{a,b,c\},$ $T=\{1,a\},$ and $V=\{1,2,3,c\}.$
+Find and compare the sets, $(S-T)-V$ and $S-(T-V).$
+::: 
+
+::: {.proof }
+We find $S-T=\{b,c\}$ and $T-V=\{a\},$ and so $(S-T)-V=\{b\}$ and $S-(T-V)=\{b,c\}.$  Thus, $(S-T)-V\subseteq S-(T-V).$ 
+::: 
+
+
+
+### De Morgan's Laws
+
+::: {#thm-de-morgans-laws }
+Let $A$ and $B$ be subsets of some universal set $U.$
+
+1. $(A \cup B)'=A' \cap B'$
+2. $(A \cap B)'=A' \cup B'$.
+::: 
+
+::: {.proof }
+We prove (1) and leave the remainder of the proof for the reader as @exr-de-morgans-laws. Let $x$ be an arbitrary element in $(A \cup B)'.$ Then 
+\begin{align*}
+& x\in (A \cup B)' & \qquad & \\
+& \quad \rightarrow [x\notin A \cup B] & &  \text{by Definition of complement} \\
+& \quad \rightarrow [\neg(x\in A \cup B)] & &  \text{by Definition of $\notin$} \\
+& \quad \rightarrow [\neg(x\in A \lor x\in B)] & &  \text{by Definition of $\cup$} \\
+& \quad \rightarrow [\neg(x\in A) \land \neg(x\in B)] & &  \text{DeMorgan's Law} \\
+& \quad \rightarrow [x\notin A \land x\notin B] & &  \text{by Definition of $\notin$} \\
+& \quad \rightarrow [x\in A' \land x\in B'] & &  \text{by Definition of complement} \\
+& \quad \rightarrow [x\in A' \cap B'] & &  \text{by Definition of $\cap$}
+\end{align*}
+
+Thus $x\in (A \cup B)' \rightarrow x\in A' \cap B'$ and consequently $(A \cup B)' \subseteq x\in A' \cap B'.$ In a similar fashion (simply reverse the implications) one may prove that $A' \cap B' \subseteq (A \cup B)'.$ Therefore, $(A \cup B)'=A' \cap B'$. 
+::: 
+
+::: {#thm-emptyset-cup-cap } 
+Let $A$ and $B$ be subsets of some universal set $U.$
+
+1. $(A')'=A$
+2. $\emptyset '=U$
+3. $U'=\emptyset$
+4. $A \cap A'=\emptyset$
+5. $A \cup A' =U$
+6. $A-B=A\cap B'$
+::: 
+ 
+::: {.proof }
+The proof is left for the reader as @thm-emptyset-cup-cap.
+::: 
+
+::: {#thm-subseteq-subseteq } 
+Let $A$ and $B$ be subsets of some universal set $U.$
+
+1. $A \subseteq B$ if and only if $B'\subseteq A'$
+2. $A\subseteq B$ if and only if $A-B=\emptyset$
+::: 
+
+::: {.proof }
+We prove (1) and leave the remainder of the proof for the reader as @exr-subseteq-subseteq. Assume $A\subseteq B$ and let $x$ be an arbitrary element in $B'.$ Thus, $x\notin B.$  Assume for a contradiction that $x\in A.$  By hypothesis, we have $x\in B$ and $x\notin B.$ Thus, $x\in A'$ must occur.  Conversely, assume $B'\subseteq A'$ and let $x$ be an arbitrary element of $A.$ Assume for a contradiction that $x\in B'.$ By hypothesis, we have $x\in A$ and $x\notin A.$ Thus, $x\in B$ must occur. 
+::: 
+
+
+### Symmetric Difference
+
+The symmetric difference of two sets is the set of elements which are in either of the sets and not in their intersection.
+
+::: {#def-symmetric-difference } 
+If $A$ and $B$ are sets, we define the \index{symmetric difference} **symmetric difference** of $A$ and $B$ by 
+$$
+A\bigtriangleup B=(A-B)\cup (B-A).
+$$
+::: 
+
+::: {#thm-symmetric-difference } 
+Let $A$ and $B$ be subsets of some universal set $U.$  Then 
+\begin{equation}
+\label{symmdiff}
+A\bigtriangleup B=(A\cup B)-(A\cap B).
+\end{equation}
+::: 
+
+::: {.proof }
+Let $x$ be an arbitrary element of $A\bigtriangleup B.$ Then
+\begin{align*}
+& x\in A\bigtriangleup B & \\
+& \qquad  \rightarrow x\in (A-B) \cup (B-A) &  \\
+& \qquad  \rightarrow x\in A-B \lor x\in B-A &  \\
+& \qquad  \rightarrow (x\in A \land x\notin B) \lor (x\in B\land x\notin A) & \\
+& \qquad  \rightarrow (x\in B\land x\notin A)  \lor (x\in A \land x\notin B) &  \\
+& \qquad  \rightarrow [(x\in A\land x\notin A) \lor (x\in B\land x\notin A)]  \\ 
+& \qquad \qquad  \qquad \lor [(x\in A \land x\notin B)\lor (x\in B \land x\notin B)]  \\
+& \qquad  \rightarrow [(x\in A \lor x\in B)\land x\notin A)]  \lor [(x\in A \lor x\in B) \land x\notin B)] &  \\
+& \qquad  \rightarrow (x\in A \lor x\in B) \land (x \notin A \lor x\notin B) &  \\
+& \qquad  \rightarrow (x\in A \lor x\in B) \land \neg (x\in A \land x\in B) &  \\
+& \qquad  \rightarrow  x\in (A\cup B) \land \neg (x\in A \cap B) &  \\
+& \qquad  \rightarrow  x\in (A\cup B) \land x\notin A\cap B &  \\
+& \qquad  \rightarrow  x\in (A\cup B) -(A\cap B) & 
+\end{align*}
+The justification of the above steps and the remainder of the proof is left for the reader as @exr-symmetric-difference.
+::: 
+
+::: {#thm-symmetric-difference-2 } 
+Let $A$, $B$, and $C$ be subsets of some universal set $U.$
+
+1. $A\bigtriangleup B=B\bigtriangleup A$
+2. $A\bigtriangleup (B\bigtriangleup C)=(A\bigtriangleup B)\bigtriangleup C$
+3. $A\bigtriangleup \emptyset = A$
+4. $A\bigtriangleup A=\emptyset$ 
+::: 
+
+::: {.proof }
+The proof is left for the reader as @exr-symmetric-difference-2.
+::: 
+
+::: {#thm-set-sum } 
+Let $A$ and $B$ be sets. Then 
+
+1. $A+B=B+A,$ 
+2. $A+(B+C)=(A+B)+C,$ 
+3. $A+\emptyset = A,$ and 
+4. $A+A=\emptyset .$ 
+::: 
+ 
+::: {.proof }
+The proof is left for the reader as @exr-set-sum.
+::: 
+
+
+
+A collection of sets is called \index{disjoint} **disjoint**  if they have no elements in common. 
+
+::: {#def-disjoint } 
+If $A$ and $B$ are sets and $A\cap B=\emptyset,$ then $A$ and $B$ are \index{disjoint sets} **disjoint sets** . 
+::: 
+
+::: {#thm-disjoint } 
+Let $A$ and $B$ be subsets of some universal set $U.$  Then $A$ and $B$ are disjoint if and only if  $A\cup B=A\bigtriangleup B.$
+::: 
+
+::: {.proof }
+The proof is left for the reader as @exr-disjoint.
+::: 
+
+
+
+
+
+### Principle of Pairing
+
+\index{Principle of Pairing}**Principle of Pairing**.  For any two sets there exists a set that they both belong to.
+
+For example, suppose $a$ and $b$ are sets that are elements of the set $A,$ then by the principle of specification the set $\{a, b\}:=\{x\in A \mid x=a \text{ or } x=b \}$ exists, and by the principle of extension is unique. This set is called the \index{pair} **pair** (or \index{unordered pair} **unordered pair**) formed by $a$ and $b.$ Given any set $a$ we have the pair $\{a,a\}$ which is usually just denoted by $\{a\},$ and is called the \index{singleton set} **singleton set** of $a.$
+
+Let $\mathcal{C}$ denote a collection of sets. By the following principle we can define the set $U$ consisting of those elements $x$ such that if $x\in X$ for some $X\in \mathcal{C},$ then $x\in U.$ 
+
+An ordered pair $(a, b)$ is a pair of mathematical objects. The order in which the objects appear in the pair is significant: the ordered pair $(a, b)$ is different from the ordered pair $(b, a)$ unless $a = b.$ (In contrast, the unordered pair $\{a, b\}$ equals the unordered pair $\{b, a\}.$)
+
+
+
+### Cartesian Product
+
+::: {#def-cartesian-product } 
+Given any two sets $A$ and $B,$ the \index{Cartesian product} **Cartesian product** of $A$ and $B$ is the set $A\times B$ defined by 
+$$
+A\times B =\{(a,b)\mid a\in A \land b\in B)\}.
+$$
+::: 
+
+::: {#thm-cartesian-product-union-intersection } 
+If $A$, $B$, and $C$ are sets, then
+
+1. $A\times (B\cup C)=(A\times B)\cup (A\times C)$
+2. $A\times (B\cap C)=(A\times B)\cap (A\times C)$
+3. $A\times (B- C)=(A\times B)- (A\times C)$
+4. $A\times (B\bigtriangleup C)=(A\times B)\bigtriangleup (A\times C)$ 
+::: 
+
+::: {.proof }
+The proof is left for the reader as @exr-cartesian-product-union-intersection.  
+::: 
+
+
+
+The idea of ordered pair can be extended to more than two elements. Given $n$ elements $a_1, a_2, \ldots, a_n,$ where $n\geq 3,$ we can define the \index{ordered} **ordered**  $n$-tuple $(a_1, a_2, \ldots a_n),$ in which $a_1$ is the first element, $a_2$ is the second element, and so on, and $a_n$ is the $n$-th element. We can now generalize the idea of Cartesian product.  
+
+::: {#def-cartesian-product } 
+Given any $n$ sets $A_1, A_2, \ldots, A_n,$ the Cartesian product of $A_1, A_2, \ldots, A_n$ is the set defined by 
+$$
+A_1\times A_2 \times \cdots \times A_n
+=\{(a_1, a_2, \ldots, a_n) \mid a_i\in A_i \text{ for each $i,$ $1\leq i \leq n$}\}.
+$$
+::: 
+
+It follows immediately, 
+$$
+(a_1, a_2, \ldots, a_n)=(b_1, b_2, \ldots, b_n)
+\text{ if and only if $a_i=b_i$ for each $i,$ $1\leq i \leq n.$}
+$$ 
+Also notice that $A_1\times A_2 \times \cdots \times A_n=\emptyset$ if and only if $A_i=\emptyset$ for some $i,$ $1\leq i \leq n.$ 
+For this reason, when working with Cartesian products of sets, it is normally the case that each of the sets is nonempty. 
+
+::: {#exm-cartesian-product } 
+Prove or disprove that 
+$$
+\mathcal{P}(A\times B)=\mathcal{P}(A)\times \mathcal{P}(B),
+$$ 
+for any sets $A$ and $B.$ 
+::: 
+
+
+
+The \index{ordered pair} **ordered pair** of $a$ and $b,$ with first coordinate $a$ and second coordinate $b$ is defined as the set $\{\{a\},\{a,b\}\}$ and is denoted more naturally by $(a,b).$ The reader should show that this definition is well-defined by proving the following lemma. 
+
+::: {#lem-ordered-pair }
+If $(a,b)$ and $(x,y)$ are ordered pairs and if $(a,b)=(x,y)$ then $x=a$ and $y=b.$ 
+:::
+
+::: {.proof }
+The proof is left as an exercise for the reader as @exr-ordered-pair.  
+:::
+
+The next question that comes to mind is: if $A$ and $B$ are sets, does there exist a set that contains all the ordered pairs $(a,b)$ with $a\in A$ and $b\in B.$ Surely so; for example, $\{a\}\subseteq A$ and $\{b\}\subseteq B,$ and therefore $\{a,b\}\subseteq A\cup B.$  Thus, by definition, $(a,b)=\{\{a\},\{a,b\}\}\subseteq \mathcal{P}(A\cup B).$  It follows that ${(a,b)\in \mathcal{P}(\mathcal{P}(A\cup B)).}$ We can do much better than this though.
+
+The Cartesian product of two sets is a set of ordered pairs. Conversely, every set of ordered pairs is a subset of the Cartesian product of two sets.  By the above argument, every set of ordered pairs is contained in some subset, via
+$$
+(a,b)\in  \mathcal{P}(\mathcal{P}(A\cup B)) \quad \text{whenever } \quad a\in A, b\in B.
+$$
+By the principle of specification, we define a set 
+$$
+A\times B = \{x \in \mathcal{P}(\mathcal{P}(A\cup B)) \mid x=(a,b) \text{ for some $a\in A$ and $b\in B$}\}.
+$$ 
+By the principle of extension, this set is unique; and is called the \index{Cartesian product} **Cartesian product**  of $A$ and $B.$ Thus, as desired, the Cartesian product of two sets is a set of ordered pairs.  Conversely, let $P$ be a set that consists of ordered pairs and let $x\in P.$  Then by definition of ordered pair $x=\{\{a\},\{a,b\}\}$ for some $a$ and for some $b.$ Since $P$ is a set consisting of sets, we form the union and observe $\{a,b\}\in \cup_{X\in P} P.$  
+
+Observe further that ${\cup_{X\in P} P:=P'}$ is a set consisting of sets, so it follows both $a$ and $b$ are elements of 
+$$
+U:=\bigcup_{Y\in P'} \bigcup_{X\in P} P.
+$$ 
+Let $A$ and $B$ be such that $A=B=U.$ Thus $P,$ a set of ordered pairs, is a subset of the Cartesian product of two sets, namely $U\times U.$ 
+We can use the principle of specification to refine the sets $A$ and $B,$ namely
+$$
+A=\{ a \in U \mid (a,b) \in P \text{ for some } b \} 
+$$
+and
+$$
+B=\{ b \in U \mid (a,b) \in P \text{ for some } a \}.
+$$
+These sets are unique by the principle of extension and are called the \index{projections} **projections**  of $P$ onto the first and second coordinates, respectively.
+
+::: {#thm-projections } 
+Let $A$, $B$, $X$, and $Y$ be sets. Then
+
+1. $(A \cup B)\times X=(A\times X)\cup (B\times X),$ 
+2. $(A \cap B)\times (X\cap Y)=(A\times X)\cap (B\times Y),$ 
+3. $(A-B)\times X=(A\times X)-(B\times X),$ 
+4. $\left( A=\emptyset \text{ or } B=\emptyset \right)$ if and only if $A\times B=\emptyset,$ and 
+5. If $A\times B\neq \emptyset$ then, $\left( A\subseteq X \text{ and } B\subseteq Y \right)$ if and only if $A\times B \subseteq X\times Y.$ 
+::: 
+
+
+::: {.proof }
+The proof is left for the reader as @exr-projections. 
+::: 
+
+
+
+### Finite Families
+
+Given any $n$ sets $A_1, A_2, \ldots, A_n,$ we define their union to be the set 
+$$
+A_1 \cup A_2 \cup \cdots \cup A_n
+=\{x\mid x\in A_i \text{ for some } i, 1\leq i \leq n\}.
+$$
+and their intersection to the the set 
+$$
+A_1 \cap A_2 \cap \cdots \cap A_n
+=\{x\mid x\in A_i \text{ for all } i, 1\leq i \leq n\}.
+$$
+These sets can be written as
+$$
+\bigcup_{i=1}^n A_i 
+\qquad \text{and}\qquad  
+\bigcap_{i=1}^n A_i 
+$$
+respectively. 
+
+::: {#exm-find-union } 
+For $i\in \{1,2,3,\ldots, 10\},$ define 
+$$
+A_i=[-i,10-i].
+$$
+Find $A_1,$ $A_2, \ldots, A_{10}$ and then find $\bigcup_{i=1}^{10} A_i$ and $\bigcap_{i=1}^{10} A_i.$ 
+::: 
+
+::: {.solution }
+We find that 
+$$
+A_1=[-1,9], \quad 
+A_2=[-2,8], \quad
+\ldots, \quad 
+A_{10}=[-10,0]. 
+$$
+Hence 
+\begin{equation}
+\bigcup_{i=1}^{10} A_i=[-10,9]
+\qquad  \text{and} \qquad 
+\bigcap_{i=1}^{10} A_i=[-1,0].
+\end{equation}
+as needed.
+::: 
+
+::: {#exm-find-cup-cap } 
+For $k\in \{1,2,\ldots, 100\},$ define 
+$$
+B_k=\{r\in \mathbb{Q} \mid -1\leq k \cdot r \leq 1\}.
+$$
+Find $B_k$ for $1\leq k\leq 100,$ compare these sets, and then find $\bigcup_{k=1}^{100} B_k$ and $\bigcap_{k=1}^{100} B_k.$
+::: 
+
+::: {.solution }
+We find 
+\begin{align*}
+& B_1=\{r\in \mathbb{Q} \mid -1 \leq r \leq 1\}, \\
+& \qquad & B_2=\left\{\{r\in \mathbb{Q} \mid -\frac{1}{2} \leq r \leq \frac{1}{2}\right\}, \\
+& \qquad \cdots \qquad \cdots \\
+& & B_{100}=\left\{r\in \mathbb{Q} \mid -\frac{1}{100} \leq r \leq \frac{1}{100}\right\},  
+\end{align*}
+and so 
+$$
+B_{100}\subseteq B_{99} \subseteq B_{98} \subseteq \cdots \subseteq B_2 \subseteq B_1.
+$$
+It follows that 
+$$
+\bigcup_{k=1}^{100} B_k=B_1
+\qquad \text{and} \qquad 
+\bigcap_{k=1}^{100} B_k=B_{100}. 
+$$
+as needed.  
+::: 
+
+
+
+
+### Families of Sets
+
+Let $I$ be a nonempty set, and suppose that for each element $i\in I$ there is associated a set $A_i.$
+We then call $I$ an index set for the collection of sets $\mathcal{P}(A)=\{ A_i \mid i\in I\}.$
+
+::: {#def-union-of-the-collection } 
+Let $I$ be an indexed set and suppose that $\mathcal{P}(A)=\{A_i\mid i\in I\}$ is a collection of sets. Then
+
+1. the \index{union of the collection} $\mathcal{P}(A)$ **union of the collection** is defined to be the set 
+$$ \bigcup_{i\in I} A_i  =\{x\mid x\in A_i \text{ for some } i\in I\},  $$
+2. the \index{intersection of the collection} $\mathcal{P}(A)$ **intersection of the collection** is defined to be the set 
+$$ \bigcap_{i\in I} A_i  =\{x\mid x\in A_i \text{ for each } i\in I\}. $$
+::: 
+
+::: {#thm-ascdecs } 
+Given the collection of sets $\{A_i \mid i\in \mathbb{N}\}$ the following properties hold. 
+
+1. If $A_i \subseteq A_{i+1}$ for all $i\in \mathbb{N},$ then $\bigcap_{i=1}A_i=A_1.$ 
+2. If $A_i \supseteq A_{i+1}$ for all $i\in \mathbb{N},$ then $\bigcup_{i=1}A_i=A_1.$ 
+::: 
+
+::: {.proof }
+We prove (1) and leave (2) for the reader as @exr-ascdecs.
+Let $T=\cap_{i=1}A_i=A_0$ and let $x$ be an arbitrary element of $T.$ Then $x\in A_i$ for each $i\in \mathbb{N},$ and this certainly implies that $x\in A_1.$ So $T\in A_1.$ Conversely, assume $x\in A_1.$  Since $A_i \subseteq A_{i+1}$ for all $i\in \mathbb{N},$ we have that $A_1\subseteq A_i$ for every $i\in \mathbb{N},$ and hence $x\in T.$ This shows that $A_1\subseteq T$; hence we conclude that $T=A_1.$  
+::: 
+
+::: {#exm-ascdecs } 
+Let $n\in \mathbb{N}$ and let 
+$$
+A_n=\{m\in \mathbb{Z} \mid -n \leq m \land 2^m\leq n\}.
+$$
+Use @thm-ascdecs to find $\bigcap_{i=1}^{\infty} A_i$ and $\bigcup_{i=1}^{\infty} A_i.$
+::: 
+
+::: {.solution }
+We find that 
+\begin{align*}
+& A_1=\{-1,0\},  
+& & A_2=\{-2,-1,0,1\}, \\
+& A_3=\{-3,-2,-1,0,1\}, 
+& & A_4=\{-3,-2,-1,0,1,2\} 
+\end{align*}
+and so on.  Note that $A_1\subseteq A_2 \subseteq A_3 \subseteq \cdots.$ Hence by @thm-ascdecs, we have
+$$
+\bigcap_{n=1}^\infty A_n=A_1
+$$
+The reader should verify that $\bigcup_{n=1}^\infty A_n=\mathbb{Z}.$  
+::: 
+
+::: {#exm-cap-cup-2 } 
+Let $I=(0,1),$ and for $i\in I,$ define $A_i=(-i,i).$ Find $\bigcap_{i\in I} A_i$ and $\bigcup_{i\in I} A_i.$
+::: 
+
+::: {.solution }
+For example, 
+$$
+A_{1/2}=\left(-\frac{1}{2},\frac{1}{2}\right)
+\qquad \text{and}\qquad
+A_{\sqrt{2}/3}=\left(-\frac{\sqrt{2}}{3},\frac{\sqrt{2}}{3}\right).
+$$
+Notice that if $0<i<j<1,$ then $\{0\}\subset A_i \subset A_j \subset (-1,1).$ It follows that 
+$$
+\label{intexatwo}
+\bigcup_{i\in I} A_i =(-1,1)
+\qquad \text{and} \qquad 
+\bigcap_{i\in I} A_i =\{0\}
+$$
+by @thm-ascdecs.  
+::: 
+
+
+
+::: {#thm-extended-demorgan-laws }
+
+## Extended DeMorgan Laws
+Let $\{A_i \mid i\in I\}$ be a collection of sets indexed by $I.$ Then
+
+1. $\left(\bigcup_{i\in I} A_i\right)' =\bigcap_{i\in I} A_i'$
+2. $\left(\bigcap_{i\in I} A_i\right)' =\bigcup_{i\in I} A_i'$ 
+::: 
+
+::: {.proof }
+We prove(1) and leave (2) for the reader as @exr-extended-demorgan-laws. Let $x$ be an arbitrary element in $\left(\cup_{i\in I} A_i\right)'.$  Then 
+\begin{align*}
+& x\in \left(\cup_{i\in I} A_i\right)' & \qquad & \\
+& \quad \rightarrow [x\notin \cup_{i\in I} A_i] & &  \text{by Definition of complement} \\
+& \quad \rightarrow [\neg(x\in \cup_{i\in I} A_i)] & &  \text{by Definition of $\notin$} \\
+& \quad \rightarrow [\neg(\exists i\in I, x\in A_i)] & &  \text{by Definition of $\cup$} \\
+& \quad \rightarrow [\forall i\in I, x\notin A_i] & &  \text{by logic rule} \\
+& \quad \rightarrow [\forall i\in I, x\in A_i'] & &  \text{by Definition of complement} \\
+& \quad \rightarrow [x\in \cap_{i\in I} A_i'] & &  \text{by Definition of $\cap$}
+\end{align*}
+
+Thus $x\in \cap_{i\in I} A_i'$ and consequently 
+$$
+\left(\cup_{i\in I} A_i\right)' \subseteq x\in \cap_{i\in I} A_i'.
+$$
+In a similar fashion (simply reverse the implications) one may prove the reverse containment.
+Therefore, we conclude 
+$$
+\left(\cup_{i\in I} A_i\right)' = \cap_{i\in I} A_i'.
+$$ 
+as desired.  
+::: 
+
+
+
+
+Let $I$ be a nonempty set, and suppose that for each element $i\in I$ there is associated a set $A_i$. We then call $I$ an index set for the collection of sets $\mathcal{A}=\{A_i \mid i\in I\}$.
+
+::: {#def-union-intersection-collection } 
+Let $I$ be an indexed set and suppose that $\mathcal{A}=\{A_i\mid i\in I\}$ is a collection of sets.  Then
+ 
+1. the union of the collection $\mathcal{A}$ is defined to be the set 
+$$
+\bigcup_{i\in I} A_i =\{x\mid x\in A_i \text{ for some } i\in I\}, 
+$$
+2. the intersection of the collection $\mathcal{A}$ is defined to be the set 
+$$
+\bigcap_{i\in I} A_i  =\{x\mid x\in A_i \text{ for each } i\in I\}.
+$$
+::: 
+
+
+
+::: {#thm-ardntuni } 
+
+## Ascending and Descending Chains of Sets
+Given the collection of sets $\{A_i \mid i\in \mathbb{N}\}$ the following properties hold. 
+ 
+1. If $A_i \subseteq A_{i+1}$ for all $i\in \mathbb{N}$, then $\bigcap_{i=1}A_i=A_1$. 
+2. If $A_i \supseteq A_{i+1}$ for all $i\in \mathbb{N}$, then $\bigcup_{i=1}A_i=A_1$. 
+::: 
+
+::: {.proof }
+We prove (1) and leave (2) for the reader as @exr-ardntuni.
+
+Let $T=\cap_{i=1}A_i=A_0$ and let $x$ be an arbitrary element of $T$.
+Then $x\in A_i$ for each $i\in \mathbb{N}$, and this certainly implies that $x\in A_1$.
+Sp $T\in A_1$.
+
+Conversely, assume $x\in A_1$. 
+Since $A_i \subseteq A_{i+1}$ for all $i\in\mathbb{N}$, we have that $A_1\subseteq A_i$ for every $i\in \mathbb{N},$ and hence $x\in T.$
+This shows that $A_1\subseteq T$; hence we conclude that $T=A_1$.  
+::: 
+
+
+
+## Exercises
+
+::: {#exr-infinite-set } 
+Prove @thm-infinite-set. 
+::: 
+
+::: {#exr-unions } 
+Prove @thm-unions. 
+::: 
+
+::: {#exr-emptyset-prop } 
+Prove @thm-emptyset-prop. 
+::: 
+
+::: {#exr-emptyset-cup-cap } 
+Prove @thm-emptyset-cup-cap. 
+::: 
+
+::: {#exr-set-union } 
+Finish the proof of @thm-set-union. 
+::: 
+
+::: {#exr-set-intersection } 
+Finish the proof of @thm-set-intersection. 
+::: 
+
+::: {#exr-cap-cup } 
+Finish the proof of @thm-cap-cup. 
+::: 
+
+::: {#exr-de-morgans-laws } 
+Finish the proof of @thm-de-morgans-laws. 
+::: 
+
+::: {#exr-subseteq-subseteq } 
+Finish the proof of @thm-subseteq-subseteq. 
+::: 
+
+::: {#exr-symmetric-difference } 
+Finish the proof of @thm-symmetric-difference. 
+::: 
+
+::: {#exr-symmetric-difference-2 } 
+Prove @thm-symmetric-difference-2. 
+::: 
+
+::: {#exr-set-sum } 
+Prove @thm-set-sum. 
+::: 
+
+::: {#exr-disjoint } 
+Prove @thm-disjoint. 
+::: 
+
+::: {#exr-cartesian-product-union-intersection } 
+Finish the proof of @thm-cartesian-product-union-intersection. 
+::: 
+
+::: {#exr-projections } 
+Finish the proof of @thm-projections. 
+::: 
+
+::: {#exr-ordered-pair } 
+Prove @lem-ordered-pair. 
+::: 
+
+::: {#exr-ascdecs } 
+Finish the proof of @thm-ascdecs. 
+::: 
+
+::: {#exr-extended-demorgan-laws } 
+Finish the proof of @thm-extended-demorgan-laws. 
+::: 
+
+::: {#exr-ardntuni } 
+Finish the proof of @thm-ardntuni. 
+::: 
+
+
+
+
+
+
+::: {#exr-elesubst } 
+Prove @thm-elesubst. 
+::: 
+
+::: {#exr-aasym } 
+Prove @thm-aasym. 
+::: 
+
