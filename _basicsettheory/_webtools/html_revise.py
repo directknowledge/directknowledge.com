@@ -58,15 +58,15 @@ js = js + '</body>'
 
 
 ## find all css on page
-css_1 = '<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">'
-css = css_1 + '\n'
-css_2 = '<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">'
-css = css + css_2 + '\n'
-css_3 = '<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">'
-css = css + css_3 + '\n'
-css_4 = '<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">'
-css = css + css_4 + '\n'
-css = css + '</body>' 
+#css_1 = '<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">'
+#css = css_1 + '\n'
+#css_2 = '<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">'
+#css = css + css_2 + '\n'
+#css_3 = '<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">'
+#css = css + css_3 + '\n'
+#css_4 = '<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">'
+#css = css + css_4 + '\n'
+#css = css + '</body>' 
 
 
 
@@ -107,11 +107,11 @@ def html_revise():
             newText = newText.replace(js_11,'')
             newText = newText.replace('</body>', js)
             # move css
-            newText = newText.replace(css_1,'')
-            newText = newText.replace(css_2,'')
-            newText = newText.replace(css_3,'')
-            newText = newText.replace(css_4,'')
-            newText = newText.replace('</body>', css)
+            #newText = newText.replace(css_1,'')
+            #newText = newText.replace(css_2,'')
+            #newText = newText.replace(css_3,'')
+            #newText = newText.replace(css_4,'')
+            #newText = newText.replace('</body>', css)
 
             # remove extra lines
             newText = os.linesep.join([s for s in newText.splitlines() if s])
