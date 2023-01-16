@@ -66,6 +66,8 @@ ul.task-list li input[type="checkbox"] {
     font-size: 150%;
     margin:-20px -20px 20px -20px;
     line-height:120%;
+    text-decoration: none!important;
+    display:block;
 }
 .book-title, #quarto-search svg {
     color: #800000!important;
@@ -89,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" class="navbar-logo">
     </a>
-    <a aria-label="Basic Set Theory" class="navbar-brand" href="./index.html">
+    <a aria-label="Basic Set Theory" class="navbar-brand" href="https://directknowledge.com">
     <span class="navbar-title">Direct Knowledge</span>
     </a>
   </div>
@@ -142,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
       <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="book-title">Basic Set Theory</div><div class="sidebar-search">
+        <a class="book-title" href="https://directknowledge.com/basic-set-theory/">Basic Set Theory</a><div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
       </div>
@@ -250,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
     "@context": "http://schema.org",
     "@type": "WebSite",
           "name": "Basic Set Theory",
-        "url": "https://directknowledge.com/basic-set-theory/"
+        "url": "?meta:website.site-url"
     }
 </script>
 <script>
@@ -487,7 +489,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/basic-set-theory\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

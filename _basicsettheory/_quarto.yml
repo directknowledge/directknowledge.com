@@ -11,8 +11,6 @@ project:
 
 book:
   title: "Basic Set Theory"
-  #author: "David A. Smith"
-  #date: "1/4/2023"
   search: false
   section: "Basic Set Theory"
   chapters:
@@ -34,6 +32,7 @@ book:
     search: true
   navbar:
     title: "Direct Knowledge"
+    #site-url: https://directknowledge.com/basic-set-theory/
     background: light
     foreground: dark
     logo: ../assets/directknowledge-logo.svg
@@ -53,7 +52,6 @@ book:
       - href: https://github.com/directknowledge
         icon: github
         aria-label: GitHub
-  site-url: https://directknowledge.com/basic-set-theory/
   open-graph: true
   page-footer:
     center: 

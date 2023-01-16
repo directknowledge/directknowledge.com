@@ -28,7 +28,7 @@ image_toc += '</picture>'
 image_toc += '</a>' 
 
 book_search = '<div class="sidebar-search">'
-book_title_search = '<div class="book-title">Basic Set Theory</div><div class="sidebar-search">'
+book_title_search = '<a class="book-title" href="https://directknowledge.com/basic-set-theory/">Basic Set Theory</a><div class="sidebar-search">'
 
 
 ## find all js on page
@@ -84,7 +84,7 @@ def html_revise():
         with open(html_file) as f:
             newText = f.read()
             # navbar 
-            newText = newText.replace('class="navbar-brand"', 'aria-label="Basic Set Theory" class="navbar-brand"')
+            newText = newText.replace('class="navbar-brand" href="./index.html"', 'aria-label="Basic Set Theory" class="navbar-brand" href="https://directknowledge.com"')
             newText = newText.replace('<img src="./assets/basic-set-theory-logo.svg"', '<img width="28" height="24" src="./assets/basic-set-theory-logo.svg"')
             # sidebar 
             newText = newText.replace(book_search, book_title_search)
