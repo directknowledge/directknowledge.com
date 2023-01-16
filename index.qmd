@@ -1,5 +1,6 @@
 ---
 #title: "Direct Knowledge"
+pagetitle: "Direct Knowledge - Learn faster, explore deeper"
 format:
   html:
     anchor-sections: false

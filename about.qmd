@@ -1,5 +1,6 @@
 ---
 title: "About"
+pagetitle: "About Direct Knowledge"
 sidebar: false
 image: assets/dave-profile.png
 about:
