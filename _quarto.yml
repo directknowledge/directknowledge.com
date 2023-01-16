@@ -2,7 +2,7 @@ project:
   type: website
   render:
     - "*.qmd"
-    - "!basicsettheory/"
+    - "!basic-set-theory/"
 
 website:
   title: "directknowledge"

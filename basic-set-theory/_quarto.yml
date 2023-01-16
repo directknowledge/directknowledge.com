@@ -6,8 +6,8 @@ project:
   resources: 
     - assets
     - images
-  post-render: 
-    - _webtools/html_revise.py
+  #post-render: 
+    #- _webtools/html_revise.py
 
 book:
   title: "Basic Set Theory"
@@ -49,7 +49,7 @@ book:
     search: true
     logo: assets/basic-set-theory-logo.svg
     logo-alt: "Basic Set Theory Logo"
-  site-url: https://basicsettheory.com
+  site-url: https://directknowledge.com/basic-set-theory
 
 bibliography: 
   - references.bib
