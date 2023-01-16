@@ -1,0 +1,518 @@
+---
+pagetitle: "Well-founded Confluence - Basic Set Theory"
+---
+# Well-founded Confluence
+
+For example, the relation "is less than" is well-founded on the natural numbers, because there is no sequence of natural numbers that go from a smaller number to a larger number. On the other hand, the relation "is taller than" is not well-founded, because there is an infinite sequence of people (starting with someone who is very short) who are all taller than each other. Well-founded relations can be used to solve problems in a variety of fields, including economics, computer science, and physics.
+
+In mathematics, a well-founded relation is a binary relation that satisfies the descending chain condition. In other words, it contains no infinite descending chains. In fact, these two conditions are equivalent, assuming the axiom of dependent choice.
+
+In mathematics and computer science, recursion is a method of defining functions in which the function being defined is applied within its own definition. The most common form of recursion is fractional recursion, in which a function is defined in terms of itself divided by some well-founded relation.
+
+In computers, recursion is used to implement procedures that iterate over data structures or perform computations on infinite sets of data. Recursive programming techniques can be used to solve problems that would be difficult or impossible to solve using other programming paradigms. However, they can also introduce errors that are difficult to debug, and they can be computationally expensive. As a result, care must be taken to use recursion judiciously. When used properly, it can be an immensely powerful tool for solving complex problems.
+
+The well-foundedness condition is what makes recursion possible. Without it, we would not be able to define functions by recursion, and many of the things we take for granted in computer science would not be possible.
+
+
+
+
+## Well-Founded Relations
+
+
+::: {#def-irreflexive-asymmetric-antisymmetric } 
+Let $X$ be a set.
+
+1. A relation $R$ on $X$ is called \index{irreflexive} **irreflexive**  if it satisfies the  property $$\forall a\in X, (a,a)\notin R.$$
+2. A relation $R$ on $X$ is called \index{asymmetric} **asymmetric**  if it satisfies the  property $$\forall a,b\in X, (a,b)\in R \implies (b,a)\notin R.$$
+3. A relation $R$ on $X$ is called \index{antisymmetric} **antisymmetric**  if it satisfies the  property $$
+\forall a,b\in X, (a,b)\in R \land (b,a)\in R\implies a=b.$$
+::: 
+
+A $\longrightarrow$-minimal element need not be smaller than the other elements of $X.$ For example, singleton sets of $X$ all have $\longrightarrow$-minimal elements, namely $a$ is a $\longrightarrow$-minimal element of $\{a\}\subseteq X$ since there does not exist $b\in\{a\}$ such that $a\longrightarrow b$ whenever $\longrightarrow$ is irreflexive. 
+
+
+
+::: {#lem-well-founded-irreflexive-antisymmetric } 
+If $\longrightarrow$ is a well-founded relation on $X,$ then $\longrightarrow$ is irreflexive and antisymmetric; and hence also asymmetric. 
+::: 
+
+::: {.proof }
+Assume $\longrightarrow$ is a well-founded relation on $X.$
+If $a\longrightarrow a,$ then $A=\{a\}\neq\emptyset$ does not have an $\longrightarrow$-minimal element, country to hypothesis. 
+If $a\longrightarrow b$ and $b\longrightarrow a,$ then $X=\{a,b\}\neq\emptyset$ does not have a $\longrightarrow$-minimal element, contrary to hypothesis. 
+Thus, if $\longrightarrow$ is well-founded and $a\longrightarrow b,$ then $b\longrightarrow a$ can not hold and so $\longrightarrow$ is asymmetric. 
+A relation is asymmetric if and only if it is both antisymmetric and irreflexive. 
+::: 
+
+
+
+::: {#lem-well-founded-subrelation } 
+If $\longrightarrow$ is a well-founded relation on $X$ and $\longrightarrow'$ is a subrelation of $\longrightarrow,$ then $\longrightarrow'$ is well-founded on $X.$ 
+::: 
+
+::: {.proof }
+Assume $\longrightarrow$ is well-founded on $X$ and let $\longrightarrow'$ be a subrelation of $\longrightarrow.$  Let $A\neq\emptyset$ be a subset of $X.$ Suppose $A$ does not have a $\longrightarrow'$-minimal element. Thus for all $a\in A$ there exists $b\in A$ that $a\longrightarrow' b$ holds. Since $\longrightarrow'$ is a subrelation of $\longrightarrow,$ it follows that for all $a\in A$ there exists $b\in A$ such that $a\longrightarrow b.$ Thus $A$ does not have a $\longrightarrow$-minimal element, contrary to hypothesis. 
+::: 
+
+
+
+::: {#def-well-founded-relation } 
+Let $\longrightarrow$ be a relation on $X.$
+ 
+1. If $A\subseteq X$ and $a\in A,$ then $a$ is called a $\longrightarrow$-\index{minimal element} **minimal element**  of $A$ if 
+there does not exist $b\in A$ such that $a\longrightarrow b.$
+2. If each nonempty subset of $X$ has a $\longrightarrow$-minimal element, then $\longrightarrow$ is called a \index{well-founded relation} **well-founded relation**  on $X.$
+3. If $x\in X,$ then the set $$\overrightarrow{x\,}=\{y\in X : x\longrightarrow y \land x\neq y\}$$ is called the \index{initial segment} **initial segment**  of $x.$
+::: 
+
+Clearly, $b$ is a $\longrightarrow$-minimal element of $A$ if and only if $\overrightarrow{b\,}\cap A=\emptyset.$ 
+
+
+
+
+### Well-Founded Induction
+
+::: {#lem-well-founded-nduction }
+A relation $\longrightarrow$ on $X$ is well-founded if and only if 
+the principle of $\longrightarrow$-induction holds: 
+$$
+\forall \, A\subseteq X, 
+\forall x\in X, (\overrightarrow{x\,}\subseteq A \implies x\in A)
+\implies  A=X.
+$$
+::: 
+
+::: {.proof }
+Assume $\longrightarrow$ is well-founded on $X.$
+Let $A\subseteq X$ and assume the following holds
+\begin{equation}
+\label{wellfind}
+\forall x\in X, \overrightarrow{x\,}\subseteq A \implies x\in A
+\end{equation}
+Assume for a contradiction that $X\setminus A$ is nonempty with $\longrightarrow$-minimial element $b.$ Thus $\overrightarrow{b\,}\cap X\setminus A=\emptyset$ and so it follows $\overrightarrow{b\,}\subseteq A.$  By \eqref{wellfind} we have $b\in A$ and thus $X\setminus A$ is empty.  Hence $A=X.$
+
+Conversely, assume the principle of induction holds and suppose $A$ is a nonempty subset of $X$ with no $\longrightarrow$-minimal element. We will apply the principle of $\longrightarrow$ induction to the set $X\setminus A.$ Let $x\in X$ and assume $\overrightarrow{x\,}\subseteq X\setminus A.$ Suppose $x\in A.$ Since $\overrightarrow{x\,}\cap A=\emptyset$ it follows $x$ is a $\longrightarrow$-minimal element of $A$ contrary to hypothesis. Thus, it follows $x\not\in A$ and so $x\in X\setminus A.$ We have shown 
+$$
+\forall x\in X, \overrightarrow{x\,}\subseteq X\setminus A \implies x\in X\setminus A
+$$
+By the principle of $\longrightarrow$-induction it follows $X\setminus A=X.$ Therefore, $A$ is empty as desired.  
+::: 
+
+
+
+
+### Well-Founded Recursion
+
+
+::: {#def-recursively-defined-function } 
+Let $Y$ be a set and let $h:X\times P(Y)\to Y$ be a function. We call a function $f:X\to Y$ a $\longrightarrow$-\index{recursively defined function} **recursively defined function** if 
+\begin{equation}
+f(x)=h(x,f(\overrightarrow{x\,}))
+\end{equation}
+for all $x\in X.$
+::: 
+
+
+
+::: {#lem-well-founded-recursion } 
+
+## Well-Founded Recursion
+Let $\longrightarrow$ be a relation on $X.$ Then the following are equivalent. 
+1. $\longrightarrow$ is well founded on $X$
+2. for every set $Y,$ there exists $\longrightarrow$-recursively defined functions from $X$ to $Y$
+3. $\longrightarrow$-recursively defined functions on $X$ are unique
+::: 
+
+::: {.proof }
+This proof is not completely rigorous not finished. 
+
+$(1)\Leftrightarrow(2)$: 
+Assume $\longrightarrow$ is well-founded on $X.$ Let $Y$ be a set and let $h:X\times P(Y)\to Y.$ Consider functions $g$ defined on subsets of $X$ with values in $Y.$ 
+We say $R(g)$ holds if both conditions are satisfied:
+
+- for all $x\in D(g),$ $\overrightarrow{x\,} \subseteq D(g)$
+- for all $x\in D(g),$ $g(x)=h(x,g(\overrightarrow{x\,}))$
+ 
+
+Claim: If $R(g_1)$ and $R(g_2)$ hold, then $x\in D(g_1)\cap D(g_2)$ implies $g_1(x)=g_2(x).$ 
+The proof of this claim follows by $\longrightarrow$-induction. 
+
+Claim: Let $f=\cup \{g : R(g) \text{ holds}\}.$ Clearly $f$ is a relation with domain included in $X.$ We claim $f$ is a function. To prove this we have to show that if $g_1,g_2\in \{g : R(g) \text{ holds}\}$ and $x\in D(g_1)\cap D(g_2),$ then $g_1(x)=g_2(x).$ Now $Z=D(g_1)\cap D(g_2)$ is an initial segment of $\longrightarrow$ and $\longrightarrow'=\longrightarrow\cap(Z\times Z)$ is well-founded on $Z.$ It follows by induction on $\longrightarrow'$ that if $x\in Z,$ then $g_1(x)=g_2(x).$ 
+
+Claim: $f$ is maximal such that $R(f)$ holds.
+Next we claim that 
+\begin{equation}
+\label{fmaxp}
+x\in D(f) \implies f(x)=g(x,f(\overrightarrow{x\,})).
+\end{equation}
+To prove \eqref{fmaxp} assume $x\in D(f).$ Then $x\in D(g)$ for some $g$ such that $R(g)$ holds. It follows that 
+$$
+f(x)=g(x)=h(x,\{g(\overrightarrow{x\,}))=h(x,\{f(\overrightarrow{x\,})\}).
+$$
+
+Claim: $D(f)=X.$
+The proof of this claim follows by $\longrightarrow$-induction. Let $x$ be such that $\overrightarrow{x\,}\subseteq D(f).$ Since $D(f)$ is an initial segment of $\longrightarrow,$ so is $D(f)\cup \{x\}.$ Let 
+$$
+f'=f\cup \{x,g(x,f(\overrightarrow{x\,}))\}.
+$$
+Then $R(f')$ holds and hence $x\in D(f).$ 
+
+Conversely, we assume the principle of definition of recursion to hold. 
+We define a rank function 
+$$
+\mathop{rk}(x)=\mathop{sup}_{x\longrightarrow y} \mathop{rk}(y).
+$$
+It then follows that $\longrightarrow$ is well-founded since 
+$$
+x\longrightarrow y \Leftrightarrow \mathop{rk} (y)\in \mathop{rk}(x).
+$$
+Alternatively, we can simplify the proof by assuming $\longrightarrow$ is transitive. Suppose $A$ is a subset of $X$ that has no minimal element, and define (by recursion applied to the characteristic function of $M$):
+$$
+\textrm{
+$x$ belongs to $M$ if and only if for every $x\longrightarrow y,$ if $y$ is in $A$ then $y$ is not in $M.$
+}
+$$
+Then for $x$ in $A,$ if $x$ is in $M$ there is a $x\longrightarrow y$ in $A$ (since $A$ has no minimal element) which is not in $M.$ But then there is a $y\longrightarrow z$ in $A$ which is in $M,$ and since $x\longrightarrow z$ we have a contradiction. 
+So no $x$ in $A$ is in $M.$ 
+But then every $x$ in $A$ is in $M,$ so $A$ must be empty.
+We thus see that given the defining property of $M,$ the assumption that $A$ has no minimal element, and the
+transitivity of $\longrightarrow,$ logical manipulation allows us to conclude that $A$ is empty.
+\par
+$(1)\Leftrightarrow(3)$: 
+Assume $\longrightarrow$ is well-founded on $X.$ We say that $\phi:Z\to Y$ is an attempt if $Z$ is an initial segment of $X,$ and 
+$$
+\phi(x)=g(x,\{\phi(z):x \longrightarrow z\}) \quad \text{for all $x\in Z.$}
+$$ 
+If $\phi_1:Z_1\to Y$ and $\phi_2: Z_2\to Y$ are two attempts, they agree on $Z_1\cap Z_2$ namely $\phi_1|_{Z_1 \cap Z_2}=\phi_2|_{Z_1 \cap Z_2}.$ Because $X_1\cap X_2$ is clearly an initial segment of $X$ and if as attempts that do not agree there is some $x_0$ which is $\longrightarrow$-minimal in $\{x\in Z_1 \cap Z_2 : \phi_1(x)\neq \phi_2(x)\}.$ But in that case we have 
+$$
+\phi_1(x_0)
+=g(x_0,\{\phi_0(x) : x_0\longrightarrow x\})
+=g(x_0, \{\phi_1(x) | x_0\longrightarrow x\})
+$$
+a contradiction.   
+
+Conversely, we will show uniqueness implies well-foundedness. Assume $X$ is nontrivial by having two elements, say $a_0$ and $a_1.$
+::: 
+
+
+
+
+### Chains
+
+The next proposition asserts that every relation $\longrightarrow$ on $X$ is well-founded if and only if every $\longrightarrow$-chain in $X$ is finite. 
+
+::: {#lem-infinitely-descending-chains } 
+Let $\longrightarrow$ be a relation on $X.$ Then $\longrightarrow$ is well-founded if and only there are no infinitely descending $\longrightarrow$-chains.
+::: 
+
+::: {.proof }
+Assume there exists an infinite descending $\longrightarrow$-chain $B.$ 
+Then $B\subseteq A$ has no $\longrightarrow$-minimal element and thus $\longrightarrow$ is not well-founded.  The result follows by contrapositive. 
+
+Conversely, assume for a contradiction that $B$ is a nonempty subset of $X$ with no $\longrightarrow$-minimal element. Then the set $A_a=\{b\in B : b \longrightarrow a\}$ is nonempty for each $a\in B,$ for otherwise $a$ would be an $\longrightarrow$-minimal element of $B.$ The principle of choice, applied to the family $\{A_a\}_{a\in B},$ provides a function 
+$$
+f: B\longrightarrow \bigcup_{a\in B} A_a\subseteq B \text{ with } f(a) \longrightarrow a,  \text{ for all } a\in B.
+$$ 
+Since $B$ is nonempty, fix $a_0\in B.$ Define the sequence $\{a_n\}_{n\in \mathbb{N}}$ recursively by $a_{n+1}=f(a_n)$ and notice this sequence forms a strictly descending $\longrightarrow$-chain. This contradicts the assumption that there are no strictly descending $\longrightarrow$-chains in $X.$  Thus every nonempty subset of $B$ must have a $\longrightarrow$-minimal element.
+::: 
+
+
+::: {#lem-well-founded-relation-unique function } 
+Let $X$ and $Y$ be sets. Let $\longrightarrow$ be a well-founded relation on $X,$ and let $g:X\times P(Y)\to Y$ be a function. Then there exists a unique function $f:X\to Y$ such that 
+$$
+f(x)=g(x,\{f(z): x\longrightarrow z\})
+$$
+for all $x\in X.$ 
+::: 
+
+::: {.proof }
+We say that $\phi:Z\to Y$ is an attempt if $Z$ is an initial segment of $X,$ and 
+$$
+\phi(x)=g(x,\{\phi(z):x \longrightarrow z\}) \quad \text{for all $x\in Z.$}
+$$ 
+If $\phi_1:Z_1\to Y$ and $\phi_2: Z_2\to Y$ are two attempts, they agree on $Z_1\cap Z_2$ namely $\phi_1|_{Z_1 \cap Z_2}=\phi_2|_{Z_1 \cap Z_2}.$ 
+Because $X_1\cap X_2$ is clearly an initial segment of $X$ and if as attempts that do not agree there is some $x_0$ which is $\longrightarrow$-minimal in $\{x\in Z_1 \cap Z_2 : \phi_1(x)\neq \phi_2(x)\}.$ But in that case we have 
+$$
+\phi_1(x_0)
+=g(x_0,\{\phi_0(x) : x_0\longrightarrow x\})
+=g(x_0, \{\phi_1(x) | x_0\longrightarrow x\})
+$$
+a contradiction.   
+
+Now let $f=\cup \{\phi : \phi \text{ is an attempt}\},$ so $f(x)=\phi(x)$ if there is an attempt $\phi$ with $x\in D(\phi).$ It is clear that $D(f)=\cup \{D(\phi) : \phi \text{ is an attempt} \}$ is an initial segment of $X,$ and that $f$ satisfies $f(x)=g(x,f(z)|x \longrightarrow z)\}$ for all $x\in D(f).$ So all that remains to be shown is that $D(f)=X.$ 
+
+But if $D(f)\neq X$ there is some $x_0$ that is $\longrightarrow$ minimal in $\{x\in X : x\not\in D(f)\}.$ For such an $x$ define $\overline{f}:D(f)\cup \{x_0\}\to Y$ by 
+$$
+\overline{f}(x)=
+\begin{cases}
+f(x) & \text{ if } x\in D(f) \\
+g(x_0,\{f(x) : x_0 \longrightarrow x\}) & \text{ if } x=x_0.
+\end{cases}
+$$
+Then one would clearly have that $\overline{f}$ is an attempt, but is not a subset of $f.$ Hence a contradiction and so $f:X\to Y$ as desired. 
+::: 
+
+
+::: {#lem-infinite-descending } 
+Let $f:X\to Y$ be a function. If $\longrightarrow_Y$ is a well-founded relation on $Y,$ then the relation defined on $X$ by $x \longrightarrow_X y \Leftrightarrow f(x)\longrightarrow_Y f(y)$ is well-founded.
+::: 
+
+::: {.proof }
+Any infinite descending $\longrightarrow_X$-chain leads to an infinite descending $\longrightarrow_Y$-chain.
+::: 
+
+::: {#lem-well-founded-char } 
+Let $\longrightarrow$ be a relation on $X.$ Then $\longrightarrow$ is well-founded if and only if $\longrightarrow^+$ is well-founded. 
+::: 
+
+::: {.proof }
+Clearly any infinite descending chain 
+$$
+x_0 \longrightarrow^+ x_1 \longrightarrow^+ x_2 \longrightarrow^+ \cdots
+$$
+would induce an infinite descending chain with respect to $\longrightarrow.$  This follows easily since $\longrightarrow\subseteq \longrightarrow^+$ and that any subrelation of a well-founded relation is a well-founded relation. Conversely, in order to show $\longrightarrow^+$ is well-founded, assume 
+$$
+x_1 \longrightarrow^+ x_2 \longrightarrow^+ x_3  \longrightarrow^+\cdots 
+$$
+is an infinite descending $\longrightarrow^+$-chain.
+Then there exists $i_j\geq 1$ such that $x_j\longrightarrow^{i_j} x_{j+1}$ for all $j\geq 1.$ This implies that 
+$$
+x_1 \longrightarrow^{i_1} x_2 \longrightarrow^{i_2} x_3 \longrightarrow^{i_3} \cdots 
+$$ 
+is an infinite $\longrightarrow$-chain. But this contradicts the well-foundedness of $\longrightarrow.$
+::: 
+
+
+
+## Confluent Relations
+
+This chapter is covers reduction relations, Newmann's Lemma, Buchberger-Winkler's Property, and more. 
+
+
+
+
+### Reduction Relation
+
+A \index{reduction relation} **reduction relation** is a binary relation with additional properties that allow us to model the idea of *reduction*. In particular, we will consider well-founded relations as a starting point. Moreover, since the transitive closure of a well-founded relation is also well-founded relation, we will also study partial order relations. 
+
+A conﬂuent relation is a binary relation that is both left-conﬂuent and right-conﬂuent. In other words, for every element in the relation, there is a unique element that it can be reduced to on the left side and a unique element that it can be reduced to on the right side.
+
+Conﬂuent relations are used in a variety of different contexts, including computer science, mathematics, and physics. In computer science, they are used to define algorithms; in mathematics, they are used to study equations and systems of equations; in physics, they are used to model physical phenomena. Further, they are used in the study of abstract data types, formal language theory, automata theory, and compiler design.
+
+
+
+
+Newman's lemma is a result in confluent relations that suggests a local confluence and confluence are equivalent whenever the relation is well-founded. The lemma is named for Max Newmann, who proved the result in 1936.
+
+A confluent relation is one in which every pair of connected elements can be brought into a common cluster. In other words, if you have two elements that are related by the confluent relation, there must be a third element that is related to both of them. Local confluence is a weaker form of confluence that only requires every pair of connected elements to be brought into a common cluster if they share a certain property.
+
+The lemma has important implications for confluent relations, as it provides a way to check whether a given relation is confluent or not.
+
+Newmann's lemma has many applications in different areas of mathematics and computer science. In particular, it is used in the study of abstract data types, formal language theory, automata theory, and compiler design.
+
+In this chapter, you'll learn about the Buchberger-Winkler Property (also called the generalized Newman's Lemma) and about abstract reduction systems.
+
+In short, under well-foundedness, confluent means that given any two "paths" emanating from some element in the set, there is always a unique way to combine those paths so as to get back to the original element. Moreover, an abstract reduction system is simply a confluent and well-founded reduction relation on some set. The importance of abstract reduction systems lies in the fact that they can be used to model a wide variety of systems, ranging from computational systems to biological systems.
+
+
+
+### Confluence
+
+Confluent relations are important in the study of rewriting systems, as they ensure that any two equivalent elements can be transformed into each other by repeatedly applying the rules of the system. Moreover, confluent relations have the property that any two elements that are related by R can be "reached" from each other by following a path through the relation. As a result, confluent relations play an important role in the study of rewriting systems.
+
+We discuss confluent relations; in particular, we prove Newman's Lemma: that local confluence, confluence, the Church-Rosser property, and the unique normal forms property are all equivalent for a well-founded relation. We also give a generalization of Newman's lemma based on the Buchberger-Winkler's Property.
+
+Let $\longrightarrow$ be a relation on $X.$ If there exists  $c\in X$ such that  $a\stackrel{*}{\longrightarrow} c$ and $b\stackrel{*}{\longrightarrow} c,$ then $a$ and $b$ are said to have a \index{common successor} **common successor**, denoted by $a \downarrow b.$ If there does not exist $b\in X$ such that $a\longrightarrow b,$ then $a$ is called a normal form of $\longrightarrow.$ If $a\stackrel{*}{\longrightarrow} b$ and $b$ is a normal form, then $b$ is called a \index{normal form} **normal form** of $X.$ 
+
+
+::: {#thm-well-founded-normal-form } 
+Well-founded implies every element has a normal form. 
+::: 
+
+::: {#def-confluence } 
+Let $\longrightarrow$ be a relation on $X.$
+ 
+1. A relation $\longrightarrow$ is called \index{locally confluent} **locally confluent**  whenever $a \longrightarrow b$ and $a \longrightarrow c$ implies $b \downarrow c,$ for all $a,b,c\in X.$ 
+2. A relation $\longrightarrow$ is called \index{confluent} **confluent** whenever $a \stackrel{*}{\longrightarrow} b$ and $a \stackrel{*}{\longrightarrow} c$ implies $b \downarrow c,$ for all $a,b,c\in X.$
+3. A relation $\longrightarrow$ is said to satisfy the \index{unique normal forms property} **unique normal forms property** if $a \stackrel{*}{\longrightarrow} b$ and $a \stackrel{*}{\longrightarrow} c$ with $b$ and $c$ in $\longrightarrow$-normal form implies $b=c,$ for all $a,b,c\in X.$
+4. A relation $\longrightarrow$ is said to have the \index{Church-Rosser property} **Church-Rosser property** whenever $b\stackrel{*}{\longleftrightarrow} c$ implies $b\downarrow c,$ for all $a,b,c\in X.$  
+::: 
+
+
+
+
+
+### Newman's Lemma
+
+::: {#thm-Newman }
+Let $\longrightarrow$ be a well-founded relation on $X.$ Then the following properties are equivalent. 
+
+1. local confluence 
+2. confluence
+3. unique normal forms
+4. Church-Rosser property
+::: 
+
+::: {.proof }
+$(1)\Rightarrow(2)$: 
+Assume for a contradiction that $\longrightarrow$ is locally confluent but that the set 
+$$
+T=\left\{ a \in X  : \exists \, \, b, c \in X \text{ with } a \stackrel{*}{\longrightarrow} b \text{ and } a \stackrel{*}{\longrightarrow} c \text{ but not } b \downarrow c\right \}
+$$
+is non-empty. 
+Since $\longrightarrow$ is well-founded, $T$ has a $\longrightarrow$-minimial element $a.$ Let $b,c \in X$ with $a \stackrel{*}{\longrightarrow} b$ and $a \stackrel{*}{\longrightarrow} c,$ but not $b \downarrow c.$ If $a=b$ or $a=c,$ then it trivially follows $b \downarrow c.$ Otherwise there must exist $b', c'\in X$ (possibly $b'=b$ or $c'=c$) with 
+$$
+a \longrightarrow b' \stackrel{*}{\longrightarrow} b
+\quad \text{and} \quad 
+a \longrightarrow c' \stackrel{*}{\longrightarrow} c.
+$$
+By the local confluence of $\longrightarrow,$ there exists $d\in X$ with 
+$$
+a \longrightarrow b' \stackrel{*}{\longrightarrow} d
+\quad \text{and} \quad 
+a \longrightarrow c' \stackrel{*}{\longrightarrow} d.
+$$
+By the minimality of $a$ in $T$ it follows $b'\not\in T,$ and so  there exists $e\in X$ with 
+$$
+a\longrightarrow b' \stackrel{*}{\longrightarrow} b \stackrel{*}{\longrightarrow} e
+\quad \text{and} \quad 
+a\longrightarrow b' \stackrel{*}{\longrightarrow} d \stackrel{*}{\longrightarrow} e.
+$$
+Then $a\longrightarrow c' \stackrel{*}{\longrightarrow} d \stackrel{*}{\longrightarrow} e$ and again by the minimality of $a$ in $T$ it follows $c'\not\in T.$ 
+Thus there exists $f \in X$ with 
+$$
+a \longrightarrow c' \stackrel{*}{\longrightarrow} d \stackrel{*}{\longrightarrow} e \stackrel{*}{\longrightarrow} f
+\quad \text{and} \quad 
+a \longrightarrow c' \stackrel{*}{\longrightarrow} c \stackrel{*}{\longrightarrow} f. 
+$$
+Therefore we have shown 
+$$
+a \longrightarrow b' \stackrel{*}{\longrightarrow} b \stackrel{*}{\longrightarrow} e \stackrel{*}{\longrightarrow} f
+\quad \text{and} \quad 
+a \longrightarrow c' \stackrel{*}{\longrightarrow} c \stackrel{*}{\longrightarrow} f. 
+$$
+and so $b \downarrow c$ which is contrary to assumption. 
+
+
+\begin{figure}[h!tbp]
+\centering
+%\includegraphics[width=200pt]{_includes/local-confluence-implies-confluence.pdf}
+\end{figure}
+
+
+$(2)\Rightarrow(3)$: 
+Let $a \stackrel{*}{\longrightarrow} b$ and $a \stackrel{*}{\longrightarrow} c,$ and suppose $b$ and $c$ are in $\longrightarrow$-normal form. 
+There exists $d \in X$ with $b \stackrel{*}{\longrightarrow} d$ and $c \stackrel{*}{\longrightarrow} d,$ and thus $b=d=c.$ 
+\par
+$(3)\Rightarrow(4)$: 
+Claim: by induction on $k\in \mathbb{N}$ that for all $a, b \in X$ with $a \stackrel{k}{\longleftrightarrow} b$ it follows that $a \downarrow b.$ 
+The case $k=0$ is trivial. Now let $a \stackrel{k+1}{\longleftrightarrow} b,$ say $a \stackrel{k}{\longleftrightarrow} c \longleftrightarrow  b.$ 
+Then by induction hypothesis there exists $d \in X$ with $a \stackrel{*}{\longrightarrow} d$ and $c \stackrel{*}{\longrightarrow} d.$
+If $b \longrightarrow c,$ then $a \stackrel{*}{\longrightarrow} d$ and $b \stackrel{*}{\longrightarrow} d$ and so $a \downarrow b.$  
+For the other case, assume $c \longrightarrow b.$ 
+Let $d'$ be a normal form of $d$ and let $b'$ be a normal form of $b$ with respect to $\longrightarrow.$ 
+Then $c \stackrel{*}{\longrightarrow} b'$ and $c \stackrel{*}{\longrightarrow} d',$ and so $d'$ and $b'$ are normal forms of $c$ and hence equal. 
+Thus we have $a \stackrel{*}{\longrightarrow} d'$ and  $b \stackrel{*}{\longrightarrow} d',$ which means $a \downarrow b.$
+
+\begin{figure}[htbp]
+\centering
+%\includegraphics[width=350pt]{_includes/unique-normal-forms-implies-Church-Rosser-property.pdf}
+\end{figure}
+
+$(4)\Rightarrow(1)$: 
+If $a \longrightarrow b$ and $a \longrightarrow c,$ then $b \stackrel{*}{\longleftrightarrow} c,$ and so it follows $b \downarrow c.$
+::: 
+
+::: {#cor-normal-form-confluent } 
+If $\longrightarrow$ is confluent and $a\stackrel{*}{\longleftrightarrow} b,$ then 
+
+1. if $b$ is in normal form, then $a\stackrel{*}{\longrightarrow} b,$ and
+2. if $a$ and $b$ are in normal form, then $a=b.$
+::: 
+
+::: {.proof }
+This proof is left as an exercise. 
+::: 
+
+Thus we know that for confluent relations, two elements are equivalent if and only if they have a common successor. 
+
+
+
+
+
+
+### Connected Below
+
+In this part we follows the ideas in buchberger1983criterion.
+
+::: {#def-connected-below-buchberger-Winkler } 
+Let $\longrightarrow$ be a relation on $X.$
+
+1. If there exists $c_1,c_2,\ldots,c_n\in X$ such that  $$b_1=c_1\longleftrightarrow c_2\longleftrightarrow \cdots \longleftrightarrow c_n=b_2$$ and $a\longrightarrow^+ c_i$ for $i=1,2,\ldots,n,$ then $b_1$ and $b_2$ are said to be \index{connected below} *connected below* $a,$ denoted by $b_1 \stackrel{a}{\longleftrightarrow} b_2.$
+2. A relation $\longrightarrow$ on $X$ is said to have the \index{Buchberger-Winkler property} **Buchberger-Winkler property** whenever $a\longrightarrow b$ and $a\longrightarrow c$ implies $b \stackrel{a}{\longleftrightarrow} c$ for all $a,b,c\in X.$
+::: 
+
+
+::: {#thm-buchberger-winkler-property } 
+Let $\longrightarrow$ be a well-founded relation on $X.$ Then $\longrightarrow$ is confluent if and only if the Buchberger-Winkler property holds.
+::: 
+
+::: {.proof }
+Suppose $\longrightarrow$ is confluent and $a \longrightarrow b$ and $a \longrightarrow c$ for $a, b, c \in X.$ Then there exists $d$ such that $b\stackrel{*}{\longrightarrow} d$ and $c\stackrel{*}{\longrightarrow} d.$ It follows that $b \stackrel{a}{\longleftrightarrow} c.$
+
+Conversely, assume $a, b, c$ are arbitrary, but fixed such that $a \stackrel{*}{\longrightarrow} b$ and $a \stackrel{*}{\longrightarrow} c.$ 
+The proof follows by induction on $\longrightarrow.$ 
+The first induction hypothesis is:  
+$$
+\forall \, a' \, (a\longrightarrow^+ a'), \forall \, b', c' \, (\text{if }  a' \stackrel{*}{\longrightarrow} c'  \text{ and } a' \stackrel{*}{\longrightarrow} b'  \text{, then } b' \downarrow c').
+$$ 
+It is required to show $b \downarrow c,$ that is $b \stackrel{*}{\longrightarrow} d$ and $c \stackrel{*}{\longrightarrow} d$ for some $d.$  The cases $a=b$ or $a=c$ are trivial. Assume $a \neq b$ and $a \neq c.$ Then there exist $b_1$ and $c_1$ such that  $a \longrightarrow b_1 \stackrel{*}{\longrightarrow} b$ and $a \longrightarrow c_1 \stackrel{*}{\longrightarrow} c.$ By assuming $\longrightarrow$ has the Buchberger property, there exists $e_1, e_2, \ldots , e_n$ such that $b_1=e_1 \longleftrightarrow e_2 \longleftrightarrow \cdots  \longleftrightarrow e_n=c_1$ and $a\longrightarrow^+ e_i.$ we will proceed by induction on $n$ and show: for all $n,$ for all $e_1, e_2, \ldots,e_n$:
+
+\begin{equation}
+\label{conflutwo}
+\text{if} \quad  e_1 \longleftrightarrow e_2 \longleftrightarrow \cdots  \longleftrightarrow e_n \quad \text{with} \quad   a\longrightarrow^+ e_i , \qquad \text{then } \qquad e_1\downarrow e_n.
+\tag{*}
+\end{equation}
+
+Notice \eqref{conflutwo} is clear for $n=1.$ Our second induction hypothesis is: \eqref{conflutwo} is true for some $n.$  Assume $e_1\longleftrightarrow e_2 \longleftrightarrow \cdots  \longleftrightarrow e_n \longleftrightarrow e_{n+1}$ and $a\longrightarrow^+ e_i$ for $i=1, 2, \ldots,n+1.$   By induction hypothesis 2, there exists $d_1$ such that $e_1\stackrel{*}{\longrightarrow} d_1$ and   $e_n\stackrel{*}{\longrightarrow} d_1.$  If $e_{n+1}\longrightarrow e_n$ then $e_{n+1} \stackrel{*}{\longrightarrow} d_1$ and so  $e_1\downarrow e_{n+1}.$ 
+If $e_n \longrightarrow e_{n+1},$ then by induction hypothesis 1, there exists $d_1'$ such that $d_1\stackrel{*}{\longrightarrow} d_1'$ and $e_{n+1} \stackrel{*}{\longrightarrow} d_1'.$ Thus, it follows $e_1\downarrow e_{n+1}$ in this case as well. Therefore, \eqref{conflutwo} is proven by induction and so $d_1$ exists such that $e_1\stackrel{*}{\longrightarrow} d_1$ and $e_n\stackrel{*}{\longrightarrow} d_1$ for all $n.$ Then, $b_1 \stackrel{*}{\longrightarrow} d_1,$ $b_1 \stackrel{*}{\longrightarrow} b,$ and $a\longrightarrow b_1$ implies, by induction hypothesis 1, that there exists $f$ such that $b \stackrel{*}{\longrightarrow} f$ and  $d_1 \stackrel{*}{\longrightarrow} f.$ It follows that, $c_1 \stackrel{*}{\longrightarrow} c$ and $c_1 \stackrel{*}{\longrightarrow} f.$ Again by induction hypothesis 1, there exists $d$ such that $f \stackrel{*}{\longrightarrow} d$ and $c \stackrel{*}{\longrightarrow} d.$ Therefore, it follows $b \stackrel{*}{\longrightarrow} d$ and  $c \stackrel{*}{\longrightarrow} d.$
+
+\begin{figure}[htbp]
+\centering
+%\includegraphics[width=330pt]{_includes/buchbergers-property-implies-confluence.pdf}
+\end{figure}
+::: 
+
+
+
+
+### Terminating
+
+Let $X$ be a set and $\to$ a reduction (binary relation) on $X.$  A \index{chain} **chain**  with respect to $\to$ is a sequence of elements $x_1,x_2,x_3,\ldots$ in $X$ such that $x_1\to x_2,$ $x_2\to x_3,$ etc. A chain with respect to $\to$ is usually written $$x_1\to x_2 \to x_3 \to \cdots \to x_n \to \cdots.$$
+The length of a chain is the cardinality of its underlying sequence.  A chain is finite if its length is finite.  Otherwise, it is infinite.  
+
+::: {#def-terminating } 
+A reduction $\to$ on a set $X$ is said to be \index{terminating} **terminating** if it has no infinite chains. In other words, every chain \index{terminates}**terminates**.
+::: 
+
+Here are a few examples.
+
+- If $\to$ is reflexive, or non-trivial symmetric, then it is never terminating.
+- Let $X$ be the set of all positive integers greater than $1.$  Define $\to$ on $X$ so that $a\to b$ means that $a=bc$ for some $c\in X.$  Then $\to$ is a terminating reduction.  By the way, $\to$ is also a normalizing reduction.
+- In fact, it is easy to see that a terminating reduction is normalizing: if $a$ has no normal form, then we may form an infinite chain starting from $a.$
+- On the other hand, not all normalizing reduction is terminating.  A canonical example is the set of all non-negative integers with the reduction $\to$ defined by $a\to b$ if and only if either $a,b\ne 0,$ $a\ne b,$ and $aj,$ and $j$ arbitrary. 
+- The reflexive transitive closure of a terminating relation is a partial order.
+ 
+
+A closely related concept is the descending chain condition (DCC). A reduction $\to$ on $X$ is said to satisfy the \index{descending chain condition (DCC)} **descending chain condition (DCC)**  if the only infinite chains on $X$ are those that are eventually constant. A chain $x_1\to x_2 \to x_3 \to \cdots$ is eventually constant if there is a positive integer $N$ such that for all $n\ge N,$ $x_n=x_N.$  Every terminating relation satisfies DCC. The converse is obviously not true, as a reflexive reduction illustrates.
+
+
+Another related concept is acyclicity. Let $\to$ be a reduction on $X.$  A chain $x_0\to x_1 \to \cdots x_n$ is said to be cyclic if $x_i=x_j$ for some $0\le i < j\le n.$ This means that there is a "closed loop'' in the chain. The reduction $\to$ is said to be \index{acyclic} **acyclic** if there are no cyclic chains with respect to $\to.$ Every terminating relation is acyclic, but not conversely. The usual strict inequality relation on the set of positive integers is an example of an acyclic but non-terminating relation.
+
+
+
+## Exercises
+
+
+
+

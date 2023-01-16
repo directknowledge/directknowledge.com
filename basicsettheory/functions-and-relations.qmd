@@ -1,0 +1,1116 @@
+---
+pagetitle: "Relations - Basic Set Theory"
+---
+# Functions and Relations
+
+The set theory of functions is a powerful tool for solving mathematical problems, as it allows us to represent relationships between variables in a concise and exact way. It also provides a way to reason about these relationships and to prove results about them. Further, the set theory of functions is a fundamental tool in many branches of mathematics, including algebra, analysis, and topology. It is also used in physics and engineering, and in the study of computer algorithms.
+
+First we need to understand the basic concepts related to functions. In particular, we need to know what a function is, and what its domain, codmain, and range are. So in other words, a function is a set of ordered pairs $(x, y)$ such that each x corresponds to a unique $y.$ The set of all x-values is called the domain, and the set of all y-values is called the codomain. However, not every element in the codomain will be paired with an element in the domain. 
+
+It is important to note that a function does not have to be a mathematical formula. Any relationship between two sets can be considered a function. For example, we could define a function between the set of all countries and the set of all languages as follows: 
+
+$$
+f(x) = \{y \mid y \text{ is a language spoken in country } x\}.
+$$ 
+
+In this function, every country corresponds to a set of languages spoken in that country. This shows that functions can be very general relationships between two sets. 
+
+In fact, the notion of a set function is simply a generalization of the concept of a family of sets. Given any set $X$, we can create a family of sets by taking any collection of subsets of $X$, where each subset is considered to be a member set. Conversely, given any family $F$ of sets, we can define a set function $f : F \to X$ by letting $f(S)$ be the union of all the members of $S$. This shows that the concepts of a family of sets and a set function are intimately related.
+
+
+## Domain and Codomain
+
+Let $X$ and $Y$ be sets, we say $f$ is a \index{function} **function** from $X$ to $Y$ if $f$ is a subset of $X\times Y$ such that the domain of $f$ is $X$ and $f$ has the property:  if $(x,y)\in f$ and $(x,z)\in f$ then $x=z$. For each $x\in X$, the unique $y\in Y$ such that $(x,y)\in f$ is denoted by $f(x)$. 
+The element $y$ is called the \index{value} **value** of $f$ at the \index{argument} **argument** $x$. 
+
+If we do not specify a function with the notation $f:X\to Y$ we will use $D(f)$ and $R(f)$ to denote the domain and range of $f$, respectively.
+
+
+
+##  Image and Preimage
+
+::: {#def-image } 
+Let $X$ and $Y$ be sets. The \index{image} **image** of $A\subseteq X$ is the set $$f(A) = \{y\in Y : \exists x\in A, y=f(x)\}.$$
+::: 
+
+::: {#thm-function-subseteq } 
+Let $f:X\to Y$ be a function.
+If $A_1, A_2\subseteq X$, then 
+$$
+f(A_1)\cup f(A_2)=f(A_1\cup A_2).
+$$ 
+::: 
+
+::: {.proof }
+$f(A_1)\cup f(A_2)=f(A_1\cup A_2)$:
+\begin{align*}
+& y\in f(A_1)\cup f(A_2) 
+\Leftrightarrow y\in f(A_1) \lor y\in f(A_2) 
+\\& \qquad 
+\Leftrightarrow \exists x_1\in A_1, y=f(x_1) \lor \exists x_2\in A_2, y=f(x_2) 
+\\& \qquad 
+\Leftrightarrow \exists x\in X, (x\in A_1 \lor x\in A_2) \land y=f(x) 
+\\& \qquad 
+\Leftrightarrow \exists x \in A_1 \cup A_2, y=f(x) 
+\Leftrightarrow y\in f(A_1\cup A_2) 
+\end{align*}
+::: 
+
+::: {#thm-function-cap } 
+Let $f:X\to Y$ be a function.
+If $A_1, A_2\subseteq X$, then 
+$$
+f(A_1\cap A_2) \subseteq f(A_1)\cap f(A_2).
+$$
+::: 
+
+::: {.proof }
+$f(A_1\cap A_2) \subseteq f(A_1)\cap f(A_2)$ 
+\begin{align*}
+& y\in f(A_1 \cap  A_2) 
+\Longrightarrow \exists x\in A_1 \cap A_2, y=f(x)
+\\& \qquad 
+\Longrightarrow  \exists x\in A_1, y=f(x) \land \exists x\in A_2, y=f(x)
+\\& \qquad 
+\Longrightarrow  y\in f(A_1)\land y\in f(A_2) 
+\Longrightarrow  y\in f(A_1)\cap f(A_2)
+\end{align*}
+::: 
+
+::: {#thm-function-setminus } 
+Let $f:X\to Y$ be a function.
+If $A_1, A_2\subseteq X$, then 
+$$
+f(A_2)\setminus f(A_1) \subseteq f(A_2\setminus A_1).
+$$
+::: 
+
+::: {.proof }
+$f(A_2)\setminus f(A_1) \subseteq f(A_2\setminus A_1)$
+\begin{align*}
+& y\in f(A_2)\setminus f(A_1) \Leftrightarrow y\in f(A_2) \land y\notin f(A_1) \\
+& \qquad \Leftrightarrow (\exists x\in A_2, y=f(x) )\land \neg (y\in f(A)) \\
+& \qquad \Leftrightarrow (\exists x\in A_2, y=f(x) )\land \neg (\exists z\in A_1, y=f(z)) \\
+& \qquad \Leftrightarrow (\exists x\in A_2, y=f(x) )\land (\forall z\in A_1, y\neq f(z)) \\
+& \qquad \Longrightarrow \exists x\in A_2\setminus A_1, y=f(x) \Leftrightarrow y\in f(A_2\setminus A_1) 
+\end{align*}
+::: 
+
+
+::: {#def-preimage } 
+Let $X$ and $Y$ be sets.
+The \index{preimage} **preimage** of $B\subseteq Y$ is the set
+$$
+f^{-1}(B)=\{x\in X : f(x)\in B\}.
+$$ 
+::: 
+
+::: {#thm-function-cup } 
+Let $f:X\to Y$ be a function.
+If $B_1, B_2\subseteq Y$, then 
+$$
+f^{-1}(B_1\cup B_2)=f^{-1}(B_1)\cup f^{-1}(B_2).
+$$ 
+::: 
+
+::: {.proof }
+$f^{-1}(B_1\cup B_2)=f^{-1}(B_1)\cup f^{-1}(B_2)$ 
+\begin{align*}
+& x\in f^{-1}(B_1\cup B_2) \Leftrightarrow   f(x)\in B_1 \cup B_2  \\ 
+& \qquad \Leftrightarrow f(x) \in B_1 \lor f(x)\in B_2 \\ 
+& \qquad \Leftrightarrow x\in f^{-1}(B_1) \lor x\in f^{-1}(B_2)  \\ 
+& \qquad \Leftrightarrow x\in f^{-1}(B_1)\cup f^{-1}(B_2)
+\end{align*}
+::: 
+
+::: {#thm-function-cap-subseteq } 
+Let $f:X\to Y$ be a function.
+If $B_1, B_2\subseteq Y$, then 
+$$
+f^{-1}(B_1\cap B_2)=f^{-1}(B_1)\cap f^{-1}(B_2).
+$$
+::: 
+
+::: {.proof }
+$f^{-1}(B_1\cap B_2)=f^{-1}(B_1)\cap f^{-1}(B_2)$
+\begin{align*}
+& x\in f^{-1}(B_1\cup B_2) \Leftrightarrow f(x)\in B_1\cup B_2 \\
+& \qquad \Leftrightarrow f(x)\in B_1 \land f(x)\in B_2 \\ 
+& \qquad \Leftrightarrow f(x)\in B_1 \land f(x)\in B_2 \\ 
+& \qquad \Leftrightarrow x\in f^{-1}(B_1) \land x\in f^{-1}(B_2) \\ 
+& \qquad \Leftrightarrow x\in f^{-1}(B_1)\cap f^{-1}(B_2)
+\end{align*}
+::: 
+
+::: {#thm-function-setminus-subseteq } 
+Let $f:X\to Y$ be a function.
+If $B_1, B_2\subseteq Y$, then 
+$$
+f^{-1}(B_2\setminus B_1)=f^{-1}(B_2)\setminus f^{-1}(B_1).
+$$
+::: 
+
+::: {.proof }
+$f^{-1}(B_2\setminus B_1)=f^{-1}(B_2)\setminus f^{-1}(B_1)$
+\begin{align*}
+& x\in f^{-1}(B_2\setminus B_1)
+\Leftrightarrow   f(x)\in B_2\setminus B_1 
+\\ & \qquad 
+\Leftrightarrow  f(x)\in B_2 \land \neg(f(x)\in B_1) 
+%\\ & \qquad 
+\Leftrightarrow   x\in f^{-1}(B_2) \land \neg (x\in f^{-1}(B_1))
+\\ & \qquad 
+\Leftrightarrow   x\in f^{-1}(B_2) \land x\not\in f^{-1}(B_1) 
+%\\ & \qquad 
+\Leftrightarrow   x\in f^{-1}(B_2) \setminus f^{-1}(B_1)
+\end{align*}
+::: 
+
+::: {#thm-subseteq-implies } 
+Let $f:X\to Y$ be a function.
+Then 
+$$
+A_1\subseteq A_2\subseteq X\implies f(A_1)\subseteq f(A_2).
+$$
+::: 
+
+::: {.proof }
+$A_1\subseteq A_2\implies f(A_1)\subseteq f(A_2)$
+\begin{align*}
+& y\in f(A_1) \Leftrightarrow \exists x\in A_1, y=f(x) 
+\\ & \qquad 
+\implies \exists x\in A_2, y=f(x) \implies y\in f(A_2) 
+\end{align*}
+::: 
+
+::: {#thm-subseteq-subseteq-implies } 
+Let $f:X\to Y$ be a function.
+Then 
+$$
+A_1\subseteq A_2\subseteq X\implies f(A_1)\subseteq f(A_2).
+$$
+::: 
+
+::: {.proof }
+$B_1\subseteq B_2\implies f^{-1}(B_1)\subseteq f^{-1}(B_2)$  \begin{align*}
+x\in f^{-1}(B_1) 
+\Leftrightarrow   f(x)\in B_1 
+\Longrightarrow   f(x)\in B_2
+\Leftrightarrow   x\in f^{-1}(B_2)
+\end{align*}
+::: 
+
+::: {#thm-preimage-subseteq } 
+Let $f:X\to Y$ be a function.
+Then 
+$$
+B\subseteq Y  \implies  f(f^{-1}(B))\subseteq B
+$$
+::: 
+
+::: {.proof }
+$B\subseteq Y  \implies  f(f^{-1}(B))\subseteq B$
+\begin{align*}
+& y\in f(f^{-1}(B))
+\Leftrightarrow   \exists x\in f^{-1}(B), y=f(x) 
+\\ & \qquad 
+\Longrightarrow   \exists x\in X, f(x)\in B \land y=f(x)
+\Longrightarrow  y\in B 
+\end{align*}
+::: 
+
+::: {#thm-subseteq-preimage } 
+Let $f:X\to Y$ be a function.
+Then 
+$$
+A\subseteq X \implies A\subseteq f^{-1}(f(A)).
+$$
+::: 
+
+::: {.proof }
+$A\subseteq X \implies A\subseteq f^{-1}(f(A))$
+\begin{align*}
+x\in A \implies \exists y\in Y, y=f(x) \Leftrightarrow y\in f(A) \implies x\in f^{-1}(f(A))
+\end{align*}
+::: 
+
+
+
+## Injective and Surjective
+
+A one-to-one function is a function in which each element in the domain corresponds to a unique element in the codomain. In other words, no two elements in the domain have the same image. An onto function is a function in which each element in the codomain has at least one pre-image. In other words, for every element in the codomain, there is at least one element in the domain that maps to it. One-to-one and onto functions are important because they allow us to uniquely identify each element in the domain, and to know that every element in the codomain has a pre-image.
+
+
+::: {#def-injective-functions } 
+Let $X$ and $Y$ be sets.
+A function $f:X\to Y$ is called \index{injective} **injective**  if 
+$$
+\forall x_1,x_2\in X, f(x_1)=f(x_2)\implies x_1=x_2.
+$$
+::: 
+
+::: {#thm-injective-restriction } 
+Let $f:X\to Y$ be a function. 
+If $f$ is injective and $A\subseteq X$, then $f|_A$ is injective.  
+::: 
+
+::: {.proof }
+Let $x_1, x_2\in A$. 
+Then 
+$$
+f|_A(x_1)=f|_A(x_2) 
+\Longrightarrow f(x_1)=f(x_2)
+\Longrightarrow x_1=x_2
+$$
+shows that $f|_A$ is injective. 
+::: 
+
+::: {#thm-injective-if-and-only-if  } 
+Let $f:X\to Y$ be a function. Then $f$ is injective if and only if $f(A_1\cap A_2) = f(A_1)\cap f(A_2)$ for all $A_1, A_2\subseteq X.$
+::: 
+
+::: {.proof }
+Assume $f$ is injective. 
+It suffices to show $f(A_1)\cap f(A_2)\subseteq f(A_1\cap A_2)$ for all $A_1, A_2\subseteq X$. 
+Let $A_1, A_2\subseteq X$. 
+Then
+\begin{align*}
+& y\in f(A_1)\cap f(A_2) \Leftrightarrow y\in f(A_1)\land y\in f(A_2) \\
+& \qquad \Leftrightarrow [\exists x\in A_1, y=f(x)] \land [\exists z\in A_2, y=f(z)] \\
+& \qquad \Longrightarrow \exists x\in A_1, \exists z\in A_2, f(x)=y=f(z) \\
+& \qquad \Longrightarrow \exists x\in A_1, \exists z\in A_2, x=z, y=f(x)  \\
+& \qquad \Longrightarrow \exists x\in A_1\cap A_2, y=f(x) \Longrightarrow  y\in f(A_1\cap A_2) 
+\end{align*}
+
+Conversely, assume $f(A_1\cap A_2)=f(A_1)\cap f(A_2)$, for all $A_1, A_2\subseteq X$. 
+Let $x_1, x_2\in X$ and assume $x_1\neq x_2$. 
+Then $\{x_1\}\cap \{x_2\}=\emptyset$. Then 
+$$
+f(\{x_1\}\cap \{x_2\})=\emptyset=f(\{x_1\})\cap f(\{x_2\}).
+$$
+If $f(x_1)=f(x_2)$, then $f(x_2)\in f(\{x_1\})$ and $f(x_1)\in f(\{x_2\})$, and so $f(\{x_1\})\cap f(\{x_2\}) \neq \emptyset.$ 
+Thus, $f(x_1)\neq f(x_2)$ and so $f$ is injective.
+::: 
+
+::: {#thm-setminus-injective } 
+Let $f:X\to Y$ be a function. 
+Then $f$ is injective if and only if $f(A_2\setminus A_1)=f(A_2)\setminus f(A_1)$ for all $A_1, A_2\subseteq X.$
+::: 
+
+::: {.proof }
+Assume $f$ is injective. 
+Let $A_1, A_2\subseteq X$. 
+It suffices to show $f(A_2\setminus A_1)\subseteq f(A_2)\setminus f(A_1)$. 
+Assume $y\in f(A_2\setminus A_1)$. 
+Then $y=f(x)$ for some $x\in A_2\setminus A_1$. 
+Thus, $x\in A_2$ and so $y\in f(A_2)$. 
+We claim $y\not\in f(A_1)$. 
+Suppose $y\in f(A_1)$. 
+Then, there exists $z\in A_1$ such that $f(z)=y$. Since $f$ is injective, $x=z$. However, $x\not\in A_1$, and so the claim follows. Thus, $y\in f(A_2)\setminus f(A_1)$ as desired. 
+
+Conversely, assume $f(A_2\setminus A_1)=f(A_2)\setminus f(A_1)$ holds for all $A_1, A_2\in X$. Let $x_1, x_2\in X$ and assume $x_1\neq x_2$. 
+Then $\{x_2\}\setminus \{x_1\}=\{x_2\}$ and so 
+$$
+f(\{x_2\}\setminus \{x_1\})=f(\{x_2\})=f(\{x_2\})\setminus f(\{x_1\}). 
+$$
+If $f(x_1)=f(x_2)$, then $f(\{x_2\})\setminus f(\{x_1\})=\emptyset$, contrary to $f(\{x_2\})\setminus f(\{x_1\})=f(\{x_2\})$. 
+Thus $f(x_1)\neq f(x_2)$ and so $f$ is injective. 
+::: 
+
+
+::: {#thm-injective-if-if  } 
+Let $f:X\to Y$ be a function. Then  $f$ is injective if and only if $f(A_1)\cap f(A_2)=\emptyset$ for all $A_1, A_2\subseteq X$ such that $A_1\cap A_2=\emptyset$. 
+::: 
+
+::: {.proof }
+Assume $f$ is injective. Let $A_1, A_2\in X$ with $A_1\cap A_2=\emptyset$. Assume $y\in f(A_1)\cap f(A_2)$. Then there exists $x_1\in A_1$ and $x_2\in A_2$ such that $y=f(x_1)$ and $y=f(x_2)$. Since $f$ is injective, $x_1=x_2$. Thus, $A_1\cap A_2\neq \emptyset$ contrary to hypothesis. Thus, $f(A_1)\cap f(A_2)$ is empty. Conversely, assume $f(A_1)\cap f(A_2)=\emptyset$ for all $A_1, A_2\subseteq X$ with $A_1\cap A_2=\emptyset$. Let $x_1, x_2\in X$ and assume $x_1\neq x_2$. Then $\{x_1\}\cap \{x_2\}=\emptyset$. By hypothesis, $f(\{x_1\})\cap f(\{x_2\})=\emptyset$. Thus $f(x_1)\neq f(x_2)$ and so $f$ is injective. 
+::: 
+
+::: {#thm-injective-preimage } 
+Let $f:X\to Y$ be a function. Then $f$ is injective if and only if $A=f^{-1}(f(A))$ for all $A\subseteq X$.
+::: 
+
+::: {.proof }
+Assume $f$ is injective. Let $A\subseteq X$. It suffices to show $f^{-1}(f(A))$. Let $x\in f^{-1}(f(A))$. Then $f(x)\in f(A)$. Then there exists $x_1\in A$ such that $f(x_1)=f(x)$. Since $f$ is injective, $x_1=x$ and so $x\in A$. Conversely, assume $A=f^{-1}(f(A))$ for all $A\subseteq X$. Let $x_1, x_2\in X$. Assume $f(x)1=f(x_2)$. Then 
+$$
+\{x_1\}=f^{-1}(f(\{x_1\}))=f^{-1}(f(\{x_2\}))=\{x_2\}
+$$
+implies $x_1=x_2$ and so $f$ is injective. 
+::: 
+
+::: {#def-surjective-functions } 
+Let $X$ and $Y$ be sets.
+A function $f:X\to Y$ is called \index{surjective} **surjective**  if 
+$$
+\forall y\in Y, \exists x\in X, y=f(x).
+$$
+::: 
+
+::: {#thm-surjective-supseteq } 
+Let $f:X\to Y$ be a function. If $f$ is surjective and $A\supseteq X,$ then $f|^A$ is surjective.  
+::: 
+
+::: {.proof }
+Let $t\in Y$. Since $f$ is surjective there exists $x\in X$ such that $f(x)=y$. Since $X\subseteq A$, $x\in A$ and so $f(x)=y$ with $x\in A$ implies $f|^A$ is surjective. 
+::: 
+
+::: {#thm-surjective-if-and-only-if } 
+Let $f:X\to Y$ be a function. Then $f$ is surjective if and only if $B=f(f^{-1}(B))$ for all $B\subseteq Y.$
+::: 
+
+::: {.proof }
+Assume $f$ is surjective. It suffices to show $B\subseteq f(f^{-1}(B))$. Let $y\in B$. Since $f$ is surjective. there exists $x\in X$ such that $y=f(x)$. Since $f(x)\in B$ we have $x\in f^{-1}(B)$. It follows $y=f(x)\in f(f^{-1}(B)).$
+
+Conversely, assume $B=f(f^{-1}(B))$ for all $B\subseteq Y$. Since $\{y\}=f(f^{-1}(\{y\}))$, it follows $y=f(x)$ for some $x\in f^{-1}(\{y\})$. Let $y\in Y$. Thus, $f$ is surjective. 
+::: 
+
+::: {#thm-not-surjective }  
+If $f:X\rightarrow P(X)$ is a function, then $f$ is not surjective.
+::: 
+
+::: {.proof }
+Let $A=\{x\in X : x\notin f(x)\}$.
+Assume for a contradiction that $f$ is onto.
+Then there exists $x\in X$ such that $f(x)=A$. 
+Consider both cases $x\in f(x)$ and $x\not\in f(x)$:
+
+\begin{align*}
+& x\in f(x) \implies x\in A \implies x\not\in f(x) 
+\implies\Longleftarrow \\
+& x\notin f(x) \implies x\in A=f(x) \implies x\not\in f(x) 
+\implies\Longleftarrow
+\end{align*}
+
+Thus, $x$ can not exist with $f(x)=A$. Therefore, no $f:X\rightarrow P(X)$ is onto.
+::: 
+
+
+
+## Composition and Inverse
+
+
+The composition of functions is a way to combine two or more functions into a single function. This can be done by combining the domain and range of the functions, or by using the functions to compute new outputs. The composition of functions is a powerful tool that can be used to simplify complex problems. It is also a useful way to create new functions from existing functions. To compose two functions $f$ and $g$, we apply f to the output of $g.$ That is, we first apply $g$ to its input, and then apply $f$ to the resulting output. The composition of functions is denoted by $f \circ g$.
+
+The inverse of a function is a function that "undoes" the original function. In other words, it is a function that maps each element in the codomain back to its corresponding element in the domain. It's important to note that not all functions have inverse functions. For example, the function that takes in an age and outputs whether or not the person is tall has no inverse. This is because there are many people who are the same age but have different heights. So, there is no way to take in a height and produce an age. However, functions like this are still useful; they just can't be "undone".
+
+
+::: {#thm-composition } 
+Let $f:X\to Y$ be a function. If $g:Y\to Z$ and $g\circ f$ is injective, then $f$ is injective. 
+::: 
+
+::: {.proof }
+Let $x_1, x_2\in X.$ Then
+$$
+f(x_1)=f(x_2) \Longrightarrow (g\circ f)(x_1)=(g\circ f)(x_2) \Longrightarrow x_1=x_2
+$$
+shows that $f$ is injective. 
+::: 
+
+::: {#thm-left-inverse } 
+Let $f:X\to Y$ be a function. Then following are equivalent.
+ 
+1. given any functions $g,h:Y\to X$, if $f\circ g=f\circ h$, then $g=h$
+2. there exists a function $g:Y\to X$ with $g\circ f=I_X$ ($f$ has a left inverse)
+::: 
+
+::: {.proof }
+(1)$\Leftrightarrow$(2): 
+Assume $f$ is injective. Let $g,h:Y\to X$ and assume $f\circ g= f\circ h$. Let $y\in Y$. Then $(f\circ g)(y)=(f\circ h)(y)$. Since $f$ is injective it follows $g(y)=h(y)$ for all $y\in Y.$ Conversely, assume $g,h:Y\to X$, $f\circ g=f\circ h \implies g=h$ holds. Let $x_1, x_2\in X$ and assume $x_1\neq x_2$. Assume, for a contradiction, $f(x_1)=f(x_2)$. Let $g:Y\to X$ be defined by $g(y)=x_1$ for all $y\in Y$. Let $h:Y\to X$ be defined by $h(y)=x_2$ for all $y\in Y$. Notice 
+$$
+(f\circ g)(y)=f(g(y))=f(x_1)=f(x_2)=(f\circ h)(y)
+$$
+for all $y\in Y$. Thus, $f\circ g=f\circ h$, yet $g\neq h$ since $g(y)=x_1\neq x_2=h(y)$. Therefore, $f(x_1)\neq f(x_2)$ and so $f$ is injective.
+
+(2)$\Leftrightarrow$(1): 
+Assume $X\neq \emptyset$ and also assume $f:X\to Y$ is injective. Let $y\in Y$. Either $y\in f(X)$ or $y\notin f(X)$. Define $g:Y\to X$ as follows
+\begin{equation}
+g(y)=
+\begin{cases}
+x & y\in f(X) \text{ and } f(x)=y \\
+x_0 & y \notin f(X) 
+\end{cases}
+\end{equation}
+where $x_0$ is a fixed element of $X\neq \emptyset$. Then $g$ is defined for all $y\in Y$. If $y'\in Y$ with $x_1=g(y')\neq g(y')=x_2$, then 
+$y'=f(x_1)\neq f(x_2)=y'$, since $f$ is injective. Thus, $f$ is injective implies $g$ is a function. If $x\in X$, then 
+$$
+(g\circ f)(x)=g(f(x))=g(y)=x, \qquad \text{ for some $y\in f(X)$}
+$$
+which shows $g\circ f=I_X$. Conversely, assume $f:X\to Y$ and there exists $g:Y\to X$ such that $g\circ f=I_X$. Let $x_1,x_2\in X$ and assume $f(x_1)=f(x_2)$. Then
+$$
+x_1=(g\circ f)(x_1)=g(f(x_1))=g(f(x_2))=(g\circ f)(x_2)=x_2
+$$
+which shows $f$ is injective.
+::: 
+
+::: {#thm-injective-then } 
+Let $f:X\to Y$ be a function. If $f$ is injective and $g:Y\to Z$ is injective, then $g\circ f$ is injective. 
+::: 
+
+::: {.proof }
+Let $x_1, x_2\in X$. Then
+$$
+(g\circ f)(x_1)=(g\circ f)(x_2) 
+\Longrightarrow f(x_1)=f(x_2) 
+\Longrightarrow x_1= x_2 
+$$
+shows that $g\circ f$ is injective. 
+::: 
+
+
+
+::: {#thm-circ-surjective } 
+Let $f:X\to Y$ be a function. If $g:Y\to Z$ and $g\circ f$ is surjective, then $g$ is surjective. 
+::: 
+
+::: {.proof }
+Let $z\in Z$. Then there exists $x\in X$ such that $(g\circ f)(x)=z$. Thus it follows $g(f(x))=z$ shows, for all $z\in Z$ there exists $y$ (namely $y=f(x)$) such that $g(y)=z$ and so $g$ is surjective. 
+::: 
+
+
+
+::: {#thm-surjective } 
+Let $f:X\to Y$ be a function. If $f$ is surjective and $g:Y\to Z$ is surjective, then $g\circ f$ is surjective. 
+::: 
+
+::: {.proof }
+Let $z\in Z$. Since $g$ is surjective there exists $y\in Y$ such that $g(y)=z$. Since $f$ is surjective there exists $x\in X$ such that $f(x)=y$. Thus $(g\circ f)(x)=z$ and so $g\circ f$ is surjective. 
+::: 
+
+
+
+::: {#thm-surjective-iff } 
+Let $f:X\to Y$ be a function. Then $f$ is surjective if and only if given any functions $g,h:Y\to X$, if $g\circ f=h\circ f$, then $g=h$
+::: 
+
+::: {.proof }
+Assume $f$ is surjective and let $g:Y\to Z$ and $h:Y\to Z$ be functions such that $g\circ f=h\circ f$. Let $y\in Y$. Since $f$ is surjective, there exists $x\in X$ such that $y=f(x)$. Then $g(y)=g(f(X))=h(f(x))=h(y)$ as needed to show $g=h$.
+
+Conversely, and for contrapositive, suppose  $f$ is not surjective. Then there exists $y_1\in Y$ such that $y_1=f(x)$ does not hold for all $x\in X$. Let $Z=\{a,b\}$ and let $g$ and $h$ be defined by $g(y)=a$ for all $a\in Y$ and 
+$$
+h(y)=\begin{cases}
+a & \text{ if } y\neq y_1 \\
+b & \text{ if } y=y_1.
+\end{cases}
+$$
+Then we have $g\neq h$ such that $g\circ f=h\circ f$. Thus $f$ is not right cancelable.  
+::: 
+
+
+
+::: {#thm-surjective-right-inverse } 
+Let $f:X\to Y$ be a function. Then $f$ is surjective if and only if there exists a function $h:Y\to X$ with $f\circ h = I_Y$ ($f$ has a right inverse). 
+::: 
+
+::: {.proof }
+Then $f$ is surjective if and only if there exists a function $h:Y \to X$ with $f \circ h = I_Y.$ Assume there exist $h:Y\to X$ with $f \circ h=I_Y$. Let $b\in Y$. Then $b=(f\circ h)(b)=f(h(b))=f(a)$ where $a\in X$, shows $f$ is surjective. 
+
+Conversely, follows using the \index{Axiom of Choice}**Axiom of Choice**. Suppose $f$ is surjective. Then $f^{-1}(b)\subseteq X$ is a nonempty set for every $b\in Y$. For each $b\in Y$ choose $a_b\in f^{-1}(b)$. Then the map $h:Y\to X$ defined by $h(b)=a_b$ is such that $f\circ h=I_Y$ since $(f\circ h)(y)=f(h(y))=f(a_y)=y$.
+::: 
+
+
+If the inverse relation $f^{-1}$ is also a function, then we say $f$ is an \index{invertible function}**invertible function**, or just \index{invertible} **invertible function**. 
+
+
+::: {#thm-invertible-function } 
+A function $f:X\to Y$ is invertible if and only if it is injective. 
+If $f$ is invertible then $f^{-1}$ is also invertible and $(f^{-1})^{-1}=f$. 
+::: 
+
+::: {.proof }
+Let $f$ be invertible, then $f^{-1}$ is a function. It follows that $f^{-1}(f(x))=x$ for all $x\in X$. If $x_1, x_2\in X$ and $f(x_1)=f(x_2)$, we get $f^{-1}(f(x_1))=f^{-1}(f(x_2))$ and $x_1=x_2$. So $f$ is injective. Let $f$ be injective. If $a=f^{-1}(y_1)$ and $a=f^{-1}(y_2)$ we have $y_1 = f(a)$ and $y_2 =f(a)$. Therefore, $y_1=y_2$ and we have proven that $f^{-1}$ is a function. We know that $(f^{-1})^{-1}=f$ by previous theorem and so $f^{-1}$ is also invertible. 
+::: 
+
+
+
+::: {#def-bijective } 
+Let $X$ and $Y$ be sets.
+A function $f$ is called \index{bijective}**bijective**, if $f$ is both injective and surjective.
+::: 
+
+::: {#thm-bijective-unique-function } 
+Let $f:X\to Y$ be a function. Then $f$ is bijective if and only if there exists a unique function $f':Y\to X$ such that both $f'\circ f=I_X$ and $f \circ f' = I_Y.$
+::: 
+
+::: {.proof }
+If $f$ is bijective, then $f$ is injective and surjective; and thus there exists functions $g$ and $h$ such that $g\circ f=I_X$ and $f \circ h = I_Y.$ Notice
+$$
+g=g \circ I_Y=g \circ (f \circ h)=(g\circ f)\circ h=I_X\circ h=h
+$$
+showing $f':=g=h$ as needed. Conversely, follows from the statements above. 
+::: 
+
+
+::: {#thm-bijections } 
+Let $f:X\to Y$ be a function. If $f$ and $g:Y\to Z$ are bijections, then $g\circ f$ is a bijection and 
+$$
+(g\circ f)^{-1}=f^{-1}\circ g^{-1}.
+$$
+::: 
+
+::: {.proof }
+If $f$ and $f$ are bijections, then $g\circ f$ is a bijection and  $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$. Therefore, the inverse of a function $f:X\to Y$ is a function $f^{-1}:Y\to X$ if and only if $f$ is a bijection. Since $f$ and $g$ are bijections, $f^{-1}:Y\to X$ and $g^{-1}:Z\to Y$ are functions. Hence, $f^{-1}\circ g^{-1}:Z\to X$ is a function. It follows that, $g\circ f$ is injective and surjective, and so a bijection. Thus $(g\circ f)^{-1}:Z\to X$ is also a function. Let $z\in Z$. Since $f$ and $g$ are surjections there exists $x\in X$ and $y\in Y$ such that 
+
+\begin{equation}
+\label{surjcomp}
+g(y)=z 
+\qquad \text{and} \qquad 
+f(x)=y, 
+\end{equation}
+
+respectively. Written in inverse function notation, $y=g^{-1}(z)$ and $x=f^{-1}(y)$. By substitution, $x=f^{-1}(g^{-1}(z))=(f^{-1}\circ g^{-1})(z)$. 
+Notice it also follows from \eqref{surjcomp} that $(g\circ f)(x)=g(f(x))=g(y)=z$. Written in inverse function notation we obtain $(g\circ f)^{-1}(z)=x$. 
+::: 
+
+
+
+
+
+
+## Relations
+
+Binary relations are defined as a set of ordered pairs, where each element in the pair is from a set. In other words, binary relations involve set(s) of elements, which we will call the *left* set and the *right* set. The relationship between the two elements in each ordered pair is what we call the **relation**.
+
+Binary relations allow us to study the relationships between sets. 
+
+For example, let’s say we have a set of all the countries in the world, which we will call C, and a set of all the capitals of those countries, which we will call P. We can then define a binary relation R between C and P as follows: 
+
+$$
+R = \{(c,p) \mid c \in C \text{ and } p \in P \text{ and $c$ is the capital of $p$}\}.
+$$
+
+In other words, $R$ is the set of all ordered pairs $(c,p)$ such that $c$ is a country and $p$ is its capital.
+
+Binary relations can be classified according to various properties. The most common properties are composition, inverse, image, and preimage.
+
+**Image**. Given a relation $R$ and a set $A$, the image of $A$ under $R$ is the set 
+$$
+\{y \mid \exists x\in A \text{ such that } (x,y)\in R\}.
+$$
+
+**Preimage**. Given a relation $R$ and a set $B$, the preimage of $B$ under $R$ is the set 
+$$
+\{x \mid \exists y\in B \text{ such that } (x,y)\in R\}.
+$$
+
+**Composition**. Given two relations $R$ and $S$, their composition $RS$ is the relation that consists of all ordered pairs $(x,z)$ such that there exists a $y$ such that $(x,y)\in R$ and $(y,z)\in S$.
+
+**Inverse**. Given a relation $R$, the inverse of $R$ is the relation that consists of all ordered pairs $(y,x)$ such that $(x,y)\in R$.
+
+Binary relations can be represented in various ways, such as tables, graphs, and sets of ordered pairs. In order to understand binary relations, it is important to be familiar with all the different representations.
+
+**Tables**. A binary relation can be represented using a table with two columns, where the left column represents the left set and the right column represents the right set. The entries in the table are the ordered pairs that make up the relation.
+
+**Graphs**. A binary relation can also be represented using a graph, where the left set is represented by the vertices and the right set is represented by the edges. The edges are labeled with the elements of the right set, and each edge goes from the vertex that represents the left element of the ordered pair to the vertex that represents the right element.
+
+**Sets of ordered pairs**. Finally, a binary relation can also be represented as a set of ordered pairs. This is the most common way to represent a binary relation, and it is the representation we will use most often in this book.
+
+Binary relations are a fundamental concept in mathematics, and they can be used to model many different situations. For example, in computer science, binary relations are used to represent many different types of relationships. They can be used to represent the relationship between two pieces of *data*, or the relationship between two *nodes in a graph*. They can also be used to represent the relationship between two *points in space*, or the relationship between two people in a *social network*. Binary relations are also used in physics to represent the interactions between particles. For example, the *gravitational force* between two masses is a binary relation.
+
+
+
+Now it's time to become familiar with the basic terminology and notation.
+
+Let $X$ be a set and let $X\times X=\{(a,b): a,b \in X\}.$ A (binary) relation **relation** $R$ is a subset of $X\times X$. If $(a,b)\in R$, then we say $a$ is \index{related} **related**  to $b$ by $R$. It is possible to have both $(a,b)\in R$ and $(a,b')\in R$ where $b'\neq b$; that is any element in $X$ could be related to any number of other elements of $X$. It is also possible to have some element that is not related to any element in $X$ at all. We say a relation $S$ is an \index{extension} **extension** of a relation $R$, denoted by $R\subseteq S$, whenever $aRb$ implies $aSb$, for all $a,b\in X$. Just as we would with sets, we say relations $R$ and $S$ are equal whenever $R\subseteq S$ and $S\subseteq R$.
+
+::: {#def-basic-terminology-notation } 
+Let $R$ and $S$ be relations on $X$.
+ 
+1. The \index{image} **image** of $A\subseteq X$ under $R$ is the set $$R(A)=\{y\in X : \exists \, x\in A, (x,y)\in R\}.$$
+2. The \index{preimage} **preimage** of $B\subseteq X$ under $R$ is the set $$R^{-1}(B)=\{x\in X : \exists \, y\in B, (x,y)\in R\}.$$
+3. The \index{composition} **composition** of $R$ and $S$ is the relation  $$S\circ R = \{(a,c)\in X\times X : \exists \, b\in X, (a,b)\in R \land (b,c)\in S\}.$$ 
+4. The \index{inverse} **inverse** of $R$ is the relation $$R^{-1}=\{(b,a)\in X\times X : (a,b)\in R\}.$$
+::: 
+
+
+
+
+### Union, Intersection, and Complement of Relations
+
+
+We define the union, intersection, and complement of two relations just as one would expect knowing elementary set theory. So the union of two relations consists of those ordered pairs of elements that are related under at least one of the two relations, and the intersection of two relations consists of those ordered pairs of elements which are related under both relations. 
+
+::: {#def-relations-union-intersection }
+Let $R$ and $S$ be relations on a set $X$.The \index{union} **union** and \index{intersection} **intersection** of $R$ and $S$ are the relations prescribed (respectively) by 
+$$
+R\cup S  = \{(a,b) : aRb \text{ or } aSb\}
+\quad \text{and} \quad
+R\cap S  = \{(a,b) :  aRb \text{ and } aSb\}. 
+$$
+The \index{complement} of $R$ is the relation prescribed by $R^c  = \{(a,b): \neg (aRb)\}$. 
+:::
+
+We now demonstrate one way of proving a proposition holds using elementary set theory. Suppose we wish to show that 
+\begin{equation}
+\label{subeq}
+R\subseteq S
+\Leftrightarrow
+R\cap S=R
+\end{equation}
+for relations $R$ and $S$ defined on a set $X$. 
+To do so, we will prove that $R\subseteq S$ implies $R\cap S=R$, and conversely that $R\cap S=R$ implies $R\subseteq S$.  
+\begin{enumerate}
+\item
+First we show $R\subseteq S \Rightarrow R\cap S=R$: 
+Assume that $R\subseteq S$. 
+Let $(a,b)$ be an arbitrary element of $X\times X$. 
+If $a(R\cap S)b$, then we have $aRb$, and so $R\cap S\subseteq R$ follows. 
+If $aRb$, then $aSb$ by hypothesis, and so $a(R\cap S)b$ follows.
+Therefore, we have shown $R\cap S=R$ by assuming $R\subseteq S$. 
+\item
+Conversely, we show $R\cap S=R\Rightarrow R\subseteq S$: 
+Let $(a,b)$ be an arbitrary element of $X\times X$. 
+If $aRb$, then $a(R\cap S)b$ by hypothesis, and so $aSb$.
+Therefore we have shown $R\subseteq S$ by assuming $R\cap S=R$.
+\end{enumerate}
+This type of reasoning illustrates the process of using basic logic and unwrapping definitions. 
+
+::: {#thm-boonalg }
+If $R$, $S$, and $T$ be relations on a set $X$, there holds 
+
+1. ${R\cup(S\cup T)=(R\cup S)\cup T}$ 
+2. $R \cup S = S \cup R$
+3. $R \cup (R \cap S) = R$
+4. $R \cup \emptyset = R$
+5. ${R \cup (S \cap T) = (R \cup S) \cap (R \cup T)}$
+6. $R \cup R^c = X\times X$
+7. $R\cap(S\cap T)=(R\cap S)\cap T$ 
+8. $R \cap S = S \cap R$
+9. $R \cap (R \cup S) = R$
+10. $R \cap \, (X\times X) = R$
+11. ${R \cap (S \cup T) = (R \cap S) \cup (R \cap T)}$
+12. $R \cap R^c = \emptyset$
+:::
+
+::: {.proof }
+For the first statement, let $(x,y)$ be an arbitrary element of $X\times X$, then 
+\begin{align*}
+x\big(R\cup(S\cup T)\big)y & \Leftrightarrow xRy \lor x(S\cup T)y  \Leftrightarrow x Ry \lor \Big(xSy \lor xTy \Big) \\
+& \Leftrightarrow \Big( xRy \lor xSy \Big) \lor xTy  \Leftrightarrow x(R\cup S)y \lor xTy  \Leftrightarrow x\big(( R\cup S) \cup T\big)y. 
+\end{align*}
+We leave the remainder of the proof for @exr-boonalg. 
+:::
+
+
+
+
+### Relative Complement and Symmetric Difference
+
+Other operations on $\mathcal{X\times X}$ can be defined using logical connectives. For example, let $\oplus$ denote the logical XOR symbol (defined by $p\oplus q$ is true if and only if $p$ and $q$ have different truth values), then $R\bigtriangleup S = \{(a,b) : aRb \oplus aSb\}$ prescribes the symmetric difference of relations $R$ and $S$ defined on a set $X$.  
+
+::: {#def-relations-symmetric-difference }
+Let $R$ and $S$ be relations on a set $X$. The \index{relative complement} **relative complement** and \index{symmetric difference} **symmetric difference** of $R$ and $S$ are the relations prescribed (respectively) by 
+$$
+R - S = R\cap S^c \qquad \text{and} \qquad R\bigtriangleup S = (R-S)\cup (S-R).
+$$
+:::
+
+There are several equivalent formulations of the symmetric difference, some of which will be seen in the exercises. 
+
+::: {#thm-symdiff}
+For any relations $R$, $S$, and $T$ on a set $X$, there holds 
+1. $R\bigtriangleup S = S\bigtriangleup R$
+2. $R\bigtriangleup (S\bigtriangleup T)=(R\bigtriangleup S)\bigtriangleup T$
+3. $R\bigtriangleup \emptyset = R$
+4. $R\bigtriangleup R=\emptyset$
+5. $R\cap (S\bigtriangleup T)=(R\cap S)\bigtriangleup (R\cap T)$
+6. $(S\bigtriangleup T)\cap R=(S\cap R)\bigtriangleup (T\cap R)$
+:::
+
+::: {.proof }
+When we consider the triple $(\mathcal{X\times X},\bigtriangleup,\cap)$ as an algebraic structure, it is an example of a Boolean ring with identity \cite{MR1501865}. 
+More precisely, $(\mathcal{X},\bigtriangleup)$ is an abelian group with identity $\emptyset$ and $(\mathcal{X\times X},\bigtriangleup,\cap)$ is a commutative ring with identity that is Boolean. 
+:::
+
+
+::: {#thm-symdifftwo }
+For any relations $R$, $S$, and $T$ on a set $X$, there holds 
+
+1. $R\bigtriangleup S\subseteq R\cup S$, 
+2. $R\cap S=\emptyset$ if and only if 
+$R\cup S=R\bigtriangleup S$, and
+3. $(R\bigtriangleup S)\bigtriangleup (S\bigtriangleup T)=R\bigtriangleup T$.
+:::
+
+::: {.proof} 
+(1): Since $R-S\subseteq R$ and $S-R\subseteq S$, we have $R\bigtriangleup S \subseteq R\cup S$. 
+
+(2):  If $R$ and $S$ are disjoint, then $R=R-S$ and $S=S-R$ and so $R\bigtriangleup S = R\cup S$. Conversely, assume that $R\bigtriangleup S = R\cup S$. If ${R\cap S\neq \emptyset}$, then both ${R-S\subset R}$ and ${S-R\subset S}$ (proper containment); whence $R\bigtriangleup S \neq R\cup S$ contrary to hypothesis. 
+
+(3):By @thm-symdiff we have 
+\begin{equation}
+{(R\bigtriangleup S)\bigtriangleup (S\bigtriangleup T)} = {R\bigtriangleup S\bigtriangleup S\bigtriangleup T}
+= {R\bigtriangleup \emptyset \bigtriangleup T} = {R \bigtriangleup T}
+\end{equation}
+as needed. 
+:::
+
+
+
+
+### Composition and Inverse Relations
+
+In particular, relations are sets and, so are the image and preimage of a relation. Here are some basic properties of relations on a set regarding image, union, intersection, and compositon.
+
+::: {#thm-relations-composition } 
+Let $R$, $S$ and $T$ be relations on $X$.
+Then the following hold.
+ 
+1. $R\circ (S\circ T)=(R\circ S)\circ T$
+2. $R\circ (S\cup T)=(R\circ S)\cup (R\circ T)$
+3. $(S\cup T)\circ R=(S\circ R)\cup (T\circ R)$
+4. $R\circ (S\cap T) \subseteq (R\circ S)\cap (R\circ T)$
+5. $R\subseteq S \implies R\circ T \subseteq S\circ T$
+6. $R\subseteq S \implies T\circ R \subseteq T\circ S$
+::: 
+
+::: {.proof }
+The proof of each part follows. 
+ 
+(1) $R\circ (S\circ T)=(R\circ S)\circ T$:
+\begin{align*}
+(x,y)\in & R\circ (S\circ T) \\
+& \Longleftrightarrow \exists z\in X, (x,z)\in S\circ T \land (z,y)\in R\\
+& \Longleftrightarrow \exists z\in X, [ \exists w\in X, (x,w)\in T \land (w,z)\in S ] \land  (z,y)\in R \\
+& \Longleftrightarrow \exists w, z\in X, (x,w)\in T \land (w,z)\in S \land (z,y)\in R\\
+& \Longleftrightarrow \exists w\in X, [\exists z\in X, (w,z)\in S \land (z,y)\in R] \land (x,w)\in T\\
+& \Longleftrightarrow \exists w\in X, (x,w)\in T \land (w,y)\in R\circ S \\
+& \Longleftrightarrow (x,y)\in (R\circ S) \circ T 
+\end{align*}
+
+(2) $R\circ (S\cup T)=(R\circ S)\cup (R\circ T)$:
+\begin{align*}
+(x,y) & \in R\circ (S\cup T) \\
+& \Longleftrightarrow \exists z\in X, (x,z)\in S \cup T \land (z,y)\in R \\
+& \Longleftrightarrow \exists z\in X, [(x,z)\in S \lor (x,z)\in T ]  \land (z,y)\in R \\
+& \Longleftrightarrow \exists z\in X, [(x,z)\in S \land (z,y)\in R] \lor [(x,z)\in T \land (z,y)\in R]\\
+& \Longleftrightarrow (x,y)\in R\circ S \lor (x,y)\in R\circ T\\
+& \Longleftrightarrow (x,y)\in (R\circ S)\cup (R \circ T) 
+\end{align*}
+
+(3) $(S\cup T)\circ R=(S\circ R)\cup (T\circ R)$:
+\begin{align*}
+(x,y) & \in (S\cup T)\circ R \\
+& \Longleftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in S\cup T\\
+& \Longleftrightarrow \exists z\in X, (x,z)\in R \land [(z,y)\in S\lor (z,y)\in T] \\
+& \Longleftrightarrow \exists z\in X, [(x,z)\in R \land (z,y)\in S] \lor  [(x,z)\in R \land (z,y)\in T] \\
+& \Longleftrightarrow (x,y)\in (S\circ R) \lor (x,y)\in (T\circ R)\\
+& \Longleftrightarrow (x,y)\in (S\circ R)\cup (T\circ R)
+\end{align*}
+
+(4) )$R\circ (S\cap T) \subseteq (R\circ S)\cap (R\circ T)$:
+\begin{align*}
+\qquad \quad  & (x,y) \in R\circ (S\cap T)  \\
+& \qquad \Longleftrightarrow \exists z\in X, (x,z)\in S\cap T \land (z,y)\in R \\
+& \qquad \Longleftrightarrow \exists z\in X, [(x,z)\in S \land (x,z)\in T] \land (z,y)\in R \\
+& \qquad \Longleftrightarrow \exists z\in X, [(x,z)\in S \land (z,y)\in R] \land (x,z)\in T\\
+& \qquad \Longleftrightarrow \exists z\in X, [(x,z)\in S \land (z,y)\in R] \land [(x,z)\in T \land (z,y)\in R] \\
+& \qquad \Longrightarrow [\exists z\in X, [(x,z)\in S \land (z,y)\in R] \land [ \exists w\in X, (x,w)\in T \land (w,y)\in R]\\
+& \qquad \Longleftrightarrow (x,y)\in R\circ S \land (x,y)\in R\circ T \\
+& \qquad \Longleftrightarrow (x,y)\in (R\circ S) \cap (R\circ T)
+\end{align*}
+
+(5) $R\subseteq S \implies R\circ T \subseteq S\circ T$: 
+\begin{align*}
+& (x,y)\in R\circ T \Longleftrightarrow \exists z\in X, (x,z)\in T \land (z,y)\in R \\ 
+& \qquad \Longrightarrow \exists z\in X, (x,z)\in T \land (z,y)\in S \Longleftrightarrow (x,y)\in S\circ T
+\end{align*}
+
+(6) $R\subseteq S \implies T\circ R \subseteq T\circ S$:
+\begin{align*}
+& (x,y)\in T\circ R \Longleftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in T \\ 
+& \qquad \Longrightarrow \exists z\in X, (x,z)\in S \land (z,y)\in T \Longleftrightarrow (x,y)\in T\circ S
+\end{align*}
+The proof is now complete.
+::: 
+
+Here are some basic properties of relations on a set regarding preimage, union, intersection, set difference, and compositon.
+
+::: {#thm-relations-image-preimage } 
+Let $R$ and $S$ be relations on $X$.
+Then the following hold. 
+ 
+1. $(R^{-1})^{-1}=R$
+2. $(R\cup S)^{-1}=R^{-1}\cup S^{-1}$
+3. $(R\cap S)^{-1}=R^{-1}\cap S^{-1}$
+4. $(R\circ S)^{-1}=S^{-1}\circ R^{-1}$
+5. $R\subseteq S \implies R^{-1}\subseteq S^{-1}$. 
+6. $(R^c)^{-1}=(R^{-1})^c$
+7. $(R\setminus S)^{-1}=R^{-1}\setminus S^{-1}$
+::: 
+
+::: {.proof }
+The proof of each part follows. 
+ 
+(1) $(R^{-1})^{-1}=R$:
+$$
+(x,y)\in (R^{-1})^{-1} \Longleftrightarrow (y,x)\in R^{-1} \Longleftrightarrow (x,y)\in R
+$$
+
+(2) $(R\cup S)^{-1}=R^{-1}\cup S^{-1}$:
+\begin{align*}
+& (x,y)\in (R\cup S)^{-1}  \Longleftrightarrow (y,x)\in R\cup S \Longleftrightarrow (y,x)\in R \lor (y,x)\in S \\ 
+& \qquad \Longleftrightarrow (x,y)\in R^{-1} \lor (x,y)\in S^{-1} \Longleftrightarrow (x,y)\in R^{-1}\cup S^{-1}
+\end{align*}
+
+(2) $(R\cap S)^{-1}=R^{-1}\cap S^{-1}$:
+\begin{align*}
+& (x,y)\in (R\cap S)^{-1}  \Longleftrightarrow (y,x)\in R\cap S \Longleftrightarrow (y,x)\in R \land (y,x)\in S\\ 
+&  \qquad \Longleftrightarrow (x,y)\in R^{-1} \land (x,y)\in S^{-1} \Longleftrightarrow (x,y)\in R^{-1}\cap S^{-1}
+\end{align*}
+
+(3) $(R\circ S)^{-1}=S^{-1}\circ R^{-1}$:
+\begin{align*}
+& (x,y)\in (R\circ S)^{-1} \Longleftrightarrow (y,x)\in R\circ S\\ 
+& \qquad \Longleftrightarrow \exists z\in X, (y,z)\in S \land (z,x)\in R\\ 
+&  \qquad \Longleftrightarrow \exists z\in X, (z,y)\in S^{-1} \land (x,z)\in R^{-1}\\ 
+& \qquad \Longleftrightarrow \exists z\in X, (x,z)\in R^{-1} \land (z,y)\in S^{-1} \\ 
+&  \qquad \Longleftrightarrow (x,y)\in S^{-1} \circ R^{-1} 
+\end{align*}
+
+(4) If $R\subseteq S$, then $R^{-1}\subseteq S^{-1}$:
+\begin{align*}
+(x,y)\in & R^{-1} \Longleftrightarrow (y,x)\in R \Longrightarrow (y,x)\in S \Longleftrightarrow (x,y) \in S^{-1}
+\end{align*}
+
+(5) $(R^c)^{-1}=(R^{-1})^c$: 
+\begin{align*}
+& (x,y)\in (R^c)^{-1} \Longleftrightarrow (y,x)\in R^c \Longleftrightarrow (y,x)\in X\times X \land (y,x)\notin R\\ 
+& \qquad \Longleftrightarrow (x,y)\in X\times X \land (x,y)\notin R^{-1} \Longleftrightarrow (x,y)\in (R^{-1})^c 
+\end{align*}
+
+(6) $(R\setminus S)^{-1}=R^{-1}\setminus S^{-1}$
+\begin{align*}
+& (x,y)\in (R\setminus S)^{-1} \Longleftrightarrow (y,x)\in R\setminus S \Longleftrightarrow (y,x)\in R \land (y,x)\notin S\\ 
+& \qquad \Longleftrightarrow (x,y)\in R^{-1} \land (y,x)\notin S \Longleftrightarrow (x,y)\in R^{-1} \land (x,y)\notin S^{-1} \\ 
+& \qquad \Longleftrightarrow (x,y)\in R^{-1}\setminus S^{-1} 
+\end{align*}
+::: 
+
+
+
+In the next two theorems we have basic properties involving the image, union, intersection, and set difference. And exactly when two relations are equal. 
+
+::: {#thm-relations-subseteq } 
+Let $R$ and $S$ be a relations on $X$ and $A, B\subseteq X$. 
+Then the following hold.
+ 
+1. $A\subseteq B \implies R(A)\subseteq R(B)$
+2. $R(A\cup B)=R(A)\cup R(B)$
+3. $R(A\cap B)\subseteq R(A)\cap R(B)$
+4. $R(A)\setminus R(B)\subseteq R(A\setminus B)$
+5. If $R(x)=S(x)$ for all $x\in X$, then $R=S$. 
+::: 
+
+::: {.proof }
+The proof of each part follows. 
+ 
+(1) If $A\subseteq B$, then $R(A)\subseteq R(B)$: 
+\begin{align*}
+\qquad y\in R(A) \Longleftrightarrow \exists x\in A, (x,y)\in R \implies \exists x\in B, (x,y)\in R \Longleftrightarrow y\in R(B)
+\end{align*}
+
+(2) $R(A\cup B)=R(A)\cup R(B)$:
+\begin{align*}
+\qquad & y\in R(A\cup B) \Longleftrightarrow \exists x\in X, x\in A\cup B \land (x,y)\in R  \\ 
+& \qquad \Longleftrightarrow  \exists x\in X, (x\in A \lor x\in B) \land (x,y)\in R \\ 
+& \qquad \Longleftrightarrow  \exists x\in A, (x,y)\in R \lor \exists x\in B, (x,y)\in R \Longleftrightarrow  y\in R(A) \cup R(B)
+\end{align*}
+
+(3) $R(A\cap B)\subseteq R(A)\cap R(B)$:
+\begin{align*}
+\qquad & y\in R(A\cap B) \Longleftrightarrow \exists x\in X, x\in A\cap B \land (x,y)\in R \\ 
+& \qquad \Longleftrightarrow  \exists x\in X, (x\in A \land x\in B) \land (x,y)\in R \\ 
+& \qquad \Longrightarrow  \exists x\in A, (x,y)\in R \land \exists x\in B, (x,y)\in R \Longleftrightarrow  y\in R(A) \cap R(B)
+\end{align*}
+
+(4) $R(A)\setminus R(B)\subseteq R(A\setminus B)$:
+\begin{align*}
+y\in R(A)\setminus R(B) & \Longleftrightarrow y\in R(A)\land y\not\in R(B) \\
+& \Longleftrightarrow \exists x\in A, (x,y)\in R \land \forall z\in B, (z,y)\not\in R \\
+& \Longleftrightarrow \exists x\in A\setminus B, (x,y)\in R \Longleftrightarrow y\in R(A\setminus B) 
+\end{align*}
+
+(5) Assume $R(x)=S(x)$ for all $x\in X$, then 
+$$
+(x,y)\in R \Longleftrightarrow y\in R(x)  \Longleftrightarrow y\in S(x)  \Longleftrightarrow (x,y)\in S
+$$
+which completes the proof.
+::: 
+
+
+
+Why is there not a part (5) to the next theorem? Can you state and prove a part (5)? If not, can you provide a counterexample? 
+
+::: {#thm-relations-preimage } 
+Let $R$ be a relation on $X$ with $A, B\subseteq X$. Then the following hold.
+ 
+1. $A\subseteq B \implies R^{-1}(A)\subseteq R^{1-}(B)$
+2. $R^{-1}(A\cup B)=R^{-1}(A)\cup R^{-1}(B)$
+3. $R^{-1}(A\cap B)\subseteq R^{-1}(A)\cap R^{-1}(B)$
+4. $R^{-1}(A)\setminus R^{-1}(B)\subseteq R^{-1}(A\setminus B)$
+::: 
+
+::: {.proof }
+The proof of each part follows.
+ 
+(1) $A\subseteq B \implies R^{-1}(A)\subseteq R^{-1}(B)$:
+\begin{align*}
+x\in R^{-1}(A) & \Longleftrightarrow \exists y\in A, (x,y)\in R \\
+& \implies \exists y\in B, (x,y)\in R  \Longleftrightarrow x\in R^{-1}(B)
+\end{align*}
+
+(2) $R^{-1}(A\cup B)=R^{-1}(A)\cup R^{-1}(B)$: 
+\begin{align*}
+& x\in R^{-1}(A\cup B)  \Longleftrightarrow \exists y \in A\cup B, (x,y)\in R \\ 
+& \qquad \Longleftrightarrow \exists y\in A, (x,y)\in R \lor \exists y\in B, (x,y)\in R \\ 
+& \qquad  \Longleftrightarrow x\in R^{-1}(A)\lor R^{-1}(B) \Longleftrightarrow x\in R^{-1}(A)\cup R^{-1}(B)
+\end{align*}
+
+(3) $R^{-1}(A\cap B)\subseteq R^{-1}(A)\cap R^{-1}(B)$:
+\begin{align*}
+& x\in R^{-1}(A\cap B) \Longleftrightarrow \exists y\in A \cap B, (x,y)\in R \\
+& \qquad \Longleftrightarrow \exists y\in X, y\in A \land y\in B \land (x,y)\in R \\
+& \qquad \Longrightarrow  x\in R^{-1}(A) \land x\in R^{-1}(B) \Longleftrightarrow x\in R^{-1}(A) \cap x\in R^{-1}(B)
+\end{align*}
+
+(4) $R^{-1}(A)\setminus R^{-1}(B)\subseteq R^{-1}(A\setminus B)$:
+\begin{align*}
+& x\in R^{-1}(A)\setminus R^{-1}(B) \Longleftrightarrow  x\in R^{-1}(A) \land \neg(x\in R^{-1}(B)) \\ 
+& \qquad \Longleftrightarrow  x\in R^{-1}(A)\land [\forall y\in B, (x,y)\not\in R] \\ 
+& \qquad \Longleftrightarrow  \exists y\in A, (x,y)\in R \land [\forall y\in B, (x,y)\not\in R] \\ 
+& \qquad \Longrightarrow \exists y\in A\setminus B, (x,y)\in R \Longleftrightarrow x\in R^{-1}(A\setminus B)
+\end{align*} 
+::: 
+
+
+
+
+
+### Families of Relations
+
+In the next theorem we have a family of relations and we see how they interact with composition. 
+
+::: {#thm-relations-indexed } 
+Let $R$ and $R_i$ be relations on $X$ for $i\in I$ where $I$ is an indexed set. Then the following hold.
+ 
+1. $R\circ \left(\bigcup_{i\in I} R_i\right)=\bigcup_{i\in I}(R\circ R_i)$
+2. $\left(\bigcup_{i\in I} R_i\right)\circ R=\bigcup_{i\in I}(R_i\circ R)$
+::: 
+
+::: {.proof }
+The proof of each part follows.
+ 
+(1) $R\circ \left(\bigcup_{i\in I} R_i\right)=\bigcup_{i\in I}(R\circ R_i)$
+\begin{align*}
+(x,y)\in R\circ \left(\bigcup_{i\in I} R_i\right) & \Longleftrightarrow \exists z\in X, (x,z)\in \bigcup_{i\in I} R_i \land (z,y)\in R \\ 
+& \Longleftrightarrow \exists z\in X, \exists i\in I, (x,z)\in R_i \land (z,y)\in R \\ 
+& \Longleftrightarrow \exists i\in I, (x,y)\in R\circ R_i  \\ 
+& \Longleftrightarrow (x,y) \in \bigcup_{i\in I}(R\circ R_i)
+\end{align*}
+
+(2) $\left(\bigcup_{i\in I} R_i\right)\circ R=\bigcup_{i\in I}(R_i\circ R)$:
+\begin{align*}
+(x,y)\in \left(\bigcup_{i\in I} R_i\right)\circ R
+& \Longleftrightarrow \exists z\in X, (x,z)\in R \land (z,y)\in \bigcup_{i\in I} R_i \\
+& \Longleftrightarrow \exists z\in X, \exists i\in I, (x,z)\in R \land (z,y)\in R_i \\
+& \Longleftrightarrow (x,y)\in \bigcup_{i\in I}(R_i\circ R)
+\end{align*}
+::: 
+
+
+
+
+### The Powers of a Relation
+
+In the next theorem we see how powers of a relation interacts with preimage and unions.
+
+::: {#thm-relation-powers-inverse } 
+Let $R$ be a relation on $X$. Then the following hold.
+ 
+1. $(R^n)^{-1}=(R^{-1})^n$ for all $n\geq 1$
+2. $R^n \cup S^n\subseteq (R\cup S)^n$ for all $n\geq 1$
+3. $\left( \bigcup_{n\geq 1} R^n \right)^{-1} = \bigcup_{n\geq 1} (R^{-1})^{n}$ 
+::: 
+
+::: {.proof }
+The proof of each part follows.
+ 
+(1) By induction.  The basis step is obvious: $(R^{1})^{-1}=(R^{-1})^1$. In fact, 
+$$
+(R^2)^{-1} = (R\circ R)^{-1} = R^{-1}\circ R^{-1} = (R^{-1})^2.
+$$ 
+The induction step is 
+$$
+(R^n)^{-1}=(R^{-1})^n\implies (R^{n+1})^{-1}=(R^{-1})^{n+1}.
+$$
+The result now follows from the argument:
+\begin{align*}
+(x,y)\in (R^{n+1})^{-1} 
+& \Longleftrightarrow (y,x)\in R^{n+1} \\
+& \Longleftrightarrow \exists z\in X, (y,z)\in R \land (z,x)\in R^n \\
+& \Longleftrightarrow \exists z\in X, (z,y)\in R^{-1} \land (x,z)\in (R^n)^{-1}\\
+& \Longleftrightarrow \exists z\in X, (x,z)\in (R^n)^{-1} \land (z,y)\in R^{-1}\\
+& \Longleftrightarrow \exists z\in X, (x,z)\in (R^{-1})^n \land (z,y)\in R^{-1} \\
+& \Longleftrightarrow (x,y)\in (R^{-1})^{n+1}
+\end{align*}
+
+(2) $\left( \bigcup_{n\geq 1} R^n \right)^{-1} = \bigcup_{n\geq 1} (R^{-1})^{n}$ 
+\begin{align*}
+(x,y)\in & \left( \bigcup_{n\geq 1} R^n \right)^{-1} 
+\Longleftrightarrow (y,x)\in \bigcup_{n\geq 1} R^n \\
+& \Longleftrightarrow \exists n\geq 1, (y,x)\in R^n =R^{n-1}\circ R \\
+& \Longleftrightarrow \exists n\geq 1, \exists z\in X, (y,z)\in R \land (z,x)\in R^{n-1} \\
+& \Longleftrightarrow \exists n\geq 1, \exists z\in X, (z,y)\in R^{-1} \land (x,z)\in (R^{n-1})^{-1}\\
+& \Longleftrightarrow \exists n\geq 1, \exists z\in X, (x,z)\in (R^{n-1})^{-1} \land (z,y)\in R^{-1}  \\
+& \Longleftrightarrow \exists n\geq 1, \exists z\in X, (x,z)\in (R^{-1})^{n-1} \land (z,y)\in R^{-1} \\ 
+& \Longleftrightarrow \exists n\geq 1, (x,y)\in (R^{-1})^n \Longleftrightarrow (x,y)\in \bigcup_{n\geq 1}(R^{-1})^n
+\end{align*}
+
+(3) $R^n \cup S^n\subseteq (R\cup S)^n$ for all $n\geq 1.$ The basis step is obvious. The induction step is:
+$$
+R^n \cup S^n\subseteq (R\cup S)^n \implies R^{n+1} \cup S^{n+1}\subseteq (R\cup S)^{n+1}
+$$
+The result holds by 
+\begin{align*}
+(R\cup S)^{n+1} & =(R\cup S)^n\circ (R\cup S)  \\
+& \supseteq (R^n\cup S^n) \circ (R \cup S) \\
+& = [(R^n\cup S^n)\circ R] \cup (R^n\cup S^n) \circ S \\
+& = R^{n+1} \cup (S^n \circ R) \cup (R^n\circ S) \cup S^{n+1}  \\
+& \supseteq R^{n+1}\cup S^{n+1}.
+\end{align*} 
+::: 
+
+
+The next theorem will be very useful when we discuss transtive relations.
+
+::: {#thm-powers } 
+Let $R$ be a relation on $X$. 
+Then $(x,y)\in R^n$ if and only if there exists $x_1, x_2, x_3, \ldots, x_{n-1}\in X$ such that $(x,x_1)\in R, (x_1,x_2)\in R , ...., (x_{n-1},y)\in R$. 
+::: 
+
+::: {.proof }
+Bases case, $i=1$ is obvious. 
+We assume the claim is true for $j$. 
+Then
+\begin{align*}
+& (x,y)\in R^{j+1} \Longleftrightarrow (x,y)\in R^j\circ R \\
+& \Longleftrightarrow \exists x_1\in X, (x,x_1)\in R \land (x_1,y)\in R^j \\
+& \Longleftrightarrow \exists x_1\in X, (x,x_1)\in R \land \exists x_2, ..., x_{j-1}\in X, (x_2, x_3), ..., (x_{j-1},y)\in R \\
+& \Longleftrightarrow  \exists x_1\in X, x_2, ..., x_{j-1}\in X, (x,x_1), (x_2, x_3), ..., (x_{j-1},y)\in R 
+\end{align*}
+as needed to complete induction.
+::: 
+
+
+
+
+
+## Exercises
+
+::: {#exr-boonalg}
+Finish proving @thm-boonalg.
+:::
+
+
+
+

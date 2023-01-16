@@ -1,5 +1,8 @@
 project:
   type: website
+  render:
+    - "!basicsettheory/"
+    - "*.qmd"
 
 website:
   title: "directknowledge"
