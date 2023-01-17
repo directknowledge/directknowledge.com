@@ -13,7 +13,7 @@ pagetitle: "Basic Set Theory - Learn set theory"
 
 ::: {.content-visible when-format="html"}
 
-Currently, this site is the (working) first draft of the upcoming book **Basic Set Theory**, to be available on Amazon in the Spring of 2023. Both paperback and hardcover will be available soon. 
+Welcome. Currently, this site is the (working) first draft of the upcoming book **Basic Set Theory**, to be available on Amazon in the Spring of 2023. Both paperback and hardcover will be available soon. 
 
 ## About this book 
 This book is intended for readers who are new to set theory, or who need a refresher on the basic concepts. It will be particularly useful for readers who are taking a course in mathematics or computer science that uses set theory.

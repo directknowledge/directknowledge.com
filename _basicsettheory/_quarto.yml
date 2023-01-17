@@ -58,7 +58,7 @@ book:
   page-footer:
     center: 
       - text: "&copy; Copyright 2023, All Rights Reserved. DirectKnowledge.com"
-        href: index.qmd
+        href: "https://directknowledge.com"
   description: "Basic Set Theory"
 
 bibliography: 
