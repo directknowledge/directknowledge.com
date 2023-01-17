@@ -24,12 +24,13 @@ book:
     - concept-theory.qmd
     - references.qmd
   page-navigation: true
-  search: false
+  search: 
+    location: sidebar
+    type: textbox
   sidebar:
     title: "Basic Set Theory"
     style: "floating"
     collapse-level: 0
-    search: true
   navbar:
     title: "Direct Knowledge"
     site-url: https://directknowledge.com/basic-set-theory/
