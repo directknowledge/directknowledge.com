@@ -1,0 +1,1084 @@
+---
+pagetitle: "Quadratic Congruences - Learning Number Theory"
+---
+# Quadratic Congruences
+
+Math can be a difficult subject for some students, but with the right guide, anyone can understand it. Quadratic Congruence Equations is a comprehensive guide to the topic of quadratic congruence equations, written by an experienced math teacher. It provides clear explanations of all the basic concepts, as well as more advanced theories, and is perfect for students who want to learn more about the subject.
+
+Most number theory book I’ve seen points out that the general problem of solving $x^2 \equiv a \pmod{m}$ can be reduced to solving the special case where m is a prime then spends most of the time studying this special case in detail. However, in this book, you'll learn how to reduce the general problem to the problem of prime moduli, or how you can unwind the reduction to produce a solution to the original problem.
+
+Quadratic congruence equations are a type of equation that involves finding the remainder when a certain number is divided by another number. For example, the equation $x^2 \equiv 2 \pmod{3}$ is a quadratic congruence equation. The general form of a Quadratic Congruence Equation is $ax^2 + bx + c \equiv 0 \pmod{m}$, where $a, b, c,$ and $m$ are integers.
+
+Quadratic congruence equations can be a challenge to solve, but with the help of this book, you will find that they are much easier than most people think. I'll provide step-by-step instructions on how to reduce any general quadratic equation into its own specific case where the modulus is prime and then explain both methods for solving $x$ when it comes time! With these few tips under your belt, not only should things become more clear; however puzzles like these might even seem like child’s play after all.
+
+In number theory, an integer q is called a quadratic residue modulo n if it is congruent to a perfect square modulo n; i.e., if there exists an integer x such that: $q \equiv x^2 \pmod{n}.$ Otherwise, q is called a quadratic nonresidue modulo n. For example, 3 is a quadratic residue modulo 5 because $32 \equiv 25 \equiv 0 \pmod{5}$, but 10 is not a quadratic residue modulo 5 because $102 \equiv 100 \equiv 25 \equiv 0 \pmod{5}.$
+
+Quadratic residues play an important role in many areas of number theory, including the construction of various cryptographic systems. In addition, they have applications to engineering and physics. Quadratic residues are also interesting from the point of view of combinatorics: for example, the study of Gaussian binomials leads to the study of quadratic residues.
+
+In Number Theory, they are used in Quadratic Sieve Methods to factorize large numbers. In Cryptography, they are used in various algorithms, such as the Quadratic Sieve algorithm and the Generalized Fermat Primality Test. Thus, Quadratic Residues are important in both Math and Computer Science.
+
+In other words, the value of the Legendre symbol at a (nonzero) quadratic residue mod p is 1 and at a non-quadratic residue (non-residue) is $-1$. And the value of the Legendre symbol at 0 is 0.
+
+The Legendre symbol was introduced by Adrien-Marie Legendre in 1798 in the course of his attempts to prove the law of quadratic reciprocity. The notational convenience of the Legendre symbol inspired the introduction of several other "symbols" used in algebraic number theory, such as the Hilbert symbol and the Artin symbol.
+
+The Legendre symbol is important in many ways, one being that it provides a way to calculate whether a given number is a quadratic residue modulo a prime number. It also serves as a building block for other more complicated symbols in algebraic number theory, such as the Jacobi symbol and Dirichlet characters. Consequently, the Legendre symbol has many applications in fields such as mathematics, cryptography, and physics.
+
+Two of the most celebrated mathematicians of all time, Leonhard Euler and Carl Friedrich Gauss, both made significant contributions to the study of quadratic congruences. In particular, they each developed a criterion for determining when a given quadratic equation has a solution modulo a prime number. These criteria, known as Euler's criterion and Gauss's criterion, are both still widely used today.
+
+Euler's criterion states that a quadratic equation has a solution modulo a prime number $p$ if and only if the quantity $(a/p)$ is congruent to 1 or $-1$ modulo $p.$ In other words, the equation must have at least one real solution when reduced modulo p. Gauss's criterion is similar, but rather than considering the quantity $(a/p),$ it looks at $(ab/p).$ This criterion states that a quadratic equation has a solution modulo a prime number $p$ if and only if the quantity $(ab/p)$ is congruent to 1 or $-1$ modulo $p.$
+
+Both of these criteria are still widely used in number theory and other branches of mathematics. Indeed, they are both special cases of a more general theorem known as Quadratic Reciprocity. As such, they continue to be of great interest today.
+
+The Law of Quadratic Reciprocity is a fundamental theorem in number theory that gives a condition for the solvability of quadratic congruences. Quadratic congruences are equations of the form $x^2 \equiv a \pmod{p},$ where $p$ is a prime number. The Law of Quadratic Reciprocity states that if p and q are prime numbers and p is not equal to q, then the following conditions are equivalent:
+
+- $-x^2 \equiv a \pmod{p}$ is solvable if and only if $x^2 \equiv a \pmod{q}$ is solvable.
+- $-p$ is a quadratic residue modulo $q$ if and only if $q$ is a quadratic residue modulo $p.$
+
+This theorem has many applications in cryptography, as it can be used to construct efficient algorithms for factoring numbers. In general, the Law of Quadratic Reciprocity is a powerful tool for studying the properties of prime numbers.
+
+The Tonelli-Shanks algorithm is a method for solving the Quadratic congruence equation. It is named after Italian mathematician Giuseppe Tonelli and British mathematician Alan M. Shanks. The Quadratic congruence equation is an equation of the form $ax^2 + bx + c \equiv 0 \pmod{n}$, where $a, b,$ and $c$ are integers and $x$ is an unknown integer. The Tonelli-Shanks algorithm can be used to find the value of $x$ that satisfies the equation.
+
+To do so, the algorithm first uses the Beijing theorem to factor the Quadratic congruence equation into a product of two linear factors. Then, it uses the Chinese remainder theorem to solve for $x$. The Tonelli-Shanks algorithm is a powerful tool for solving Quadratic congruence equations, and it can be used to find the values of x that satisfy any such equation.
+
+The Tonelli-Shanks algorithm is significant because it provides an efficient way to solve quadratic congruences, which are equations that arise frequently in number theory and cryptography. In particular, the algorithm has applications for factoring integers and computing discrete logarithms. As such, it has been studied extensively by mathematicians and computer scientists alike.
+
+This book is a comprehensive guide to the topic of quadratic congruence equations, written by an experienced math teacher. It provides clear explanations of all the basic concepts, as well as more advanced theories, and is perfect for students who want to learn more about the subject.
+
+Anyone who wants to brush up on their skills will find this book helpful, whether they are struggling with math or not. My teaching style makes the material easy to understand, and the exercises at the end of each chapter help reinforce what has been learned. I highly recommend this book to anyone looking to improve their understanding of quadratic congruence equations.
+
+
+
+
+## General Quadratic Congruence
+
+Consider the general quadratic congruence,
+\begin{align}\label{gqc1}
+a x^2+b x+c\equiv 0 \pmod{p}
+\end{align}
+where $p$ is an odd prime and $(a,p)=1.$ 
+Inspired by completing the square, we have  
+\begin{align*}
+& a x^2+b x+c\equiv 0 \pmod{p} \\
+& 4 a^2 x^2+4 a b x+4 a c\equiv 0 \pmod{p} \\
+& 4a^2x^2+4a b x+4a c+\left(b^2-4a c\right)\equiv \left(b^2- 4 a c\right) \pmod{p} \\
+& 4a^2x^2+4a b x+b^2\equiv b^2- 4 a c \pmod{p} \\
+& (2a x+b)^2\equiv b^2- 4 a c \pmod{p}
+\end{align*}
+Let $y=2a x+b$ and $d=b^2-4 a c,$ then we have a simplified version of (\ref{gqc1}), namely  
+\begin{equation}
+\label{qcimp}
+y^2\equiv d \pmod{p}.
+\end{equation}
+Thus, solving \ref{qcimp} becomes the impetus.     
+
+
+
+
+### Quadratic Residues
+
+::: {#def- } 
+Let $m$ be a positive integer with $(a,m)=1.$  If $x^2\equiv a \pmod{m}$ has a solution then $a$ is a \index{quadratic residue} **quadratic residue** of $m.$ If $x^2\equiv a \pmod{m}$ does not have solution then $a$ is a \index{quadratic nonresidue} **quadratic nonresidue** of $m.$
+::: 
+
+::: {#thm- }
+Let $p$ be an odd prime. 
+If $(a,p)=1,$ then $x^2\equiv a \pmod{p}$ either has no solutions or exactly two incongruent solutions modulo $p.$
+::: 
+
+::: {.proof }
+If $x_0$ is a solution for $x^2\equiv  a \pmod{p}$ then so is $-x_0.$ If $x_0\equiv -x_0 \pmod{p}$ then $2x_0\equiv  0 \pmod{p}$ and so $x_0\equiv 0 \pmod{p}$ since $p$ is odd. 
+Clearly, this can not happen and so if there are any solutions there  are at least two incongruent solutions. If $x_0$ and $x_1$ are both solutions then $x_0{}^2-x_1{}^2\equiv \left(x_0-x_1\right)\left(x_0+x_1\right)\equiv  0 \pmod{p}$ and so either $x_0\equiv -x_1 \pmod{p}$ or $x_0\equiv x_1 \pmod{p}.$ 
+::: 
+
+
+
+
+### The Legendre Symbol
+
+::: {#def- } 
+Let $p$ be an odd prime with $(a,p)=1.$ The \index{Legendre symbol} **Legendre symbol**  is defined as follows:  
+$$
+\left(\frac{a}{p}\right)=
+\begin{cases}
+1 & \text{if $a$ is a quadratic residue  of } p  \\   
+-1 & \text{if $a$ is a quadratic nonresidue  of } p  
+\end{cases}
+$$
+::: 
+
+Since the quadratic residues of 13 are $1, 3, 4, 9, 10, 12$ and the quadratic non-residues of 13 are $2, 5, 6, 7,  8, 11.$ We can rewrite using the Legendre symbol,
+ $$
+ \left(\frac{1}{13}\right)
+ =\left(\frac{3}{13}\right)
+ =\left(\frac{4}{13}\right)
+ =\left(\frac{9}{13}\right)
+ =\left(\frac{10}{13}\right)
+ =\left(\frac{12}{13}\right)
+ =1
+$$
+and
+$$
+ \left(\frac{2}{13}\right)
+ =\left(\frac{5}{13}\right)
+ =\left(\frac{6}{13}\right)
+ =\left(\frac{7}{13}\right)
+ =\left(\frac{8}{13}\right)
+ =\left(\frac{11}{13}\right)
+ =-1.
+$$
+
+Notice the relationship the quadratic residues and quadratic non-residues of 13 satisfies: 
+$$
+1^6 \equiv 3^6\equiv 4^6\equiv 9^6\equiv 10^6\equiv 12^6\equiv 1\pmod{13}
+$$
+and
+$$
+2^6 \equiv 5^6\equiv 6^6\equiv 7^6\equiv 8^6\equiv 11^6\equiv -1\pmod{13}.
+$$
+So for each of these $a's$ we have $\left(\frac{a}{13}\right)\equiv a^{(13-1)/2}\text{  }\pmod{13}.$  Also notice that for $p=17,$  
+$$
+1^8 \equiv 2^8\equiv 4^8\equiv 8^8\equiv 9^8\equiv 13^8\equiv 15^8\equiv 16^8\equiv 1\pmod{17}
+$$
+and
+$$
+3^8 \equiv 5^8\equiv 6^8\equiv 7^8\equiv 10^8\equiv 11^8\equiv 12^8\equiv 14^8\equiv -1\pmod{17}.
+$$ 
+So again for each of these $a's$ we have $\left(\frac{a}{17}\right)\equiv a^{(17-1)/2} \pmod{17}.$      
+
+
+
+
+
+## Euler's and Gauss's Criterion
+
+::: {#thm- }
+[Euler's Criterion]
+Let $p$ be an odd prime and $(a,p)=1.$ Then  
+$$ 
+\left(\frac{a}{p}\right)\equiv a^{(p-1)/2} \pmod{p}.
+$$
+::: 
+
+::: {.proof }
+The only values for $a^{(p-1)/2}$ are $\pm 1$ $\pmod{p}.$ So it suffices to consider the cases $\left(\frac{a}{p}\right)=1$  and $\left(\frac{a}{p}\right)=-1.$ 
+If $\left(\frac{a}{p}\right)=1$ then $x^2\equiv a \pmod{p}$ has a solution say $x_0.$ 
+Then by Fermat's Little theorem, 
+$$
+a^{(p-1)/2}
+\equiv \left(x_0^2\right)^{(p-1)/2}
+\equiv x_0^{p-1}
+\equiv 1 \pmod{p}
+$$
+since $\left(x_0,p\right)=1.$ 
+Conversely, if $\left(\frac{a}{p}\right)=-1$ then $x^2\equiv a \pmod{p}$ has no solution. 
+The key idea  is that we can group together the integers $1, 2, 3. ... , p-1$ into $(p-1)/2$ pairs each with product of $a$. 
+Then multiplying these pairs together, and using Wilson's theorem, we have 
+$$
+a^{(p-1)/2}\equiv (p-1)!\equiv -1=\left(\frac{a}{p}\right) \pmod{p}.
+$$
+To see why we can do this, note that $(y,p)=1$ means $y x\equiv a \pmod{p}$ has exactly one solution say $x$ and this must happen precisely  when $x\neq y.$ 
+::: 
+
+::: {#exm- }
+Use Euler's Criterion to determine $\left(\frac{5}{23}\right)$ and $\left(\frac{9}{53}\right).$ 
+::: 
+
+::: {.solution }
+Since $(5,23)=1$ we have, by Euler's criterion,        
+$\left(\frac{5}{23}\right)\equiv 5^{11}\equiv 22\equiv -1 \pmod{23}$ 
+and so $5$ is a quadratic nonresidue of 23. 
+Similarly,  
+$\left(\frac{9}{53}\right)\equiv 9^{26}\equiv 1 \pmod{53}$ 
+and so $9$ is a quadratic residue of 53.      
+::: 
+
+::: {#thm- }[Gauss's Criterion]
+Let $p$ be an odd prime with $(a,p)=1.$ 
+If $n$ is the number of least positive residues of the integers $a, 2a,  3a,  ... , ((p-1)/2)a$ that exceed $p/2,$ then $$\left(\frac{a}{p}\right)=(-1)^n.$$     
+::: 
+
+::: {.proof }
+Let $$A=\left\{a, 2a, 3a,  ... , \left(\frac{p-1}{2}\right)a\right\},$$ $\left\{r_1,r_2, ... ,r_n\right\}$ be those least  positive residues of $A$ that exceed $p/2$, and $\left\{s_1,s_2, ... ,s_m\right\}$ be those least positive residues of $A$ that do not  exceed $p/2.$ 
+It follows that  
+$$
+\left\{p-r_1,p-r_2, ... ,p-r_n,s_1,s_2, ... ,s_m\right\}
+$$ 
+is a permutation of the set $\left\{1,2,3, ... ,\left(\frac{p-1}{2}\right)\right\}$, and so 
+$$
+\left(p-r_1\right)\left(p-r_2\right)\cdot \cdot \cdot \left(p-r_n\right)s_1s_2\cdot \cdot \cdot s_m=1\cdot 2\cdot 3\cdot \cdot \cdot  \left(\frac{p-1}{2}\right).
+$$ 
+Simplifying with modulus $p,$ we have 
+$$
+(-1)^nr_1r_2\cdot \cdot \cdot r_ns_1s_2\cdot \cdot \cdot s_m\equiv \left(\frac{p-1}{2}\right)! \pmod{p}
+$$ 
+By definition of the $r_i's$ and $s_i's$ we know,  
+$$
+(-1)^na(2a)(3a)\cdot \cdot \cdot \left(\frac{p-1}{2}\right)a\equiv \left(\frac{p-1}{2}\right) \pmod{p}
+$$
+$$
+(-1)^na^{(p-1)/2}\left(\frac{p-1}{2}\right)! 
+\equiv \left(\frac{p-1}{2}\right)! %\pmod{p} 
+(-1)^na^{(p-1)/2} \equiv 1 \pmod{p}.
+$$
+By Euler's Criterion 
+$\left(\frac{a}{p}\right)\equiv a^{(p-1)/2}\equiv (-1)^n \pmod{p}$ 
+as desired.      
+::: 
+
+::: {#exm- }
+Find $\left(\frac{7}{13}\right)$ and $\left(\frac{9}{53}\right)$ using Gauss's Lemma.   
+::: 
+
+::: {.solution }
+Since $(13-1)/2=6$ we look at the first 6 multiples of 7 namely: $7, 14, 21, 28, 35, 42.$ The least positive residues $\pmod{13}$ are $7, 1, 8, 2, 9, 3 .$ The number of them that exceed $13/2$ is 3 namely: $7, 8, 9.$ Therefore, $\left(\frac{7}{13}\right)=(-1)^3=-1.$ Since $(53-1)/2=26$ we look at the first 26 multiples of 9 (mod 53) namely  
+$$    
+\begin{array}{ccccccccccccc}   9 & 18 & 27 & 36 & 45 & 1 & 10 & 19 & 28 & 37 & 46 & 2 & 11  \\   20 & 29 & 38 & 47 & 3 & 12 & 21 & 30 & 39 & 48 & 4 & 13 & 22.  
+\end{array}  
+$$  
+The number of them that exceeds $53/2$ is 12. Therefore, 
+$$
+\left(\frac{9}{53}\right)=(-1)^{12}=1.
+\square 
+$$      
+::: 
+
+
+
+## Quadratic Characters
+
+::: {#exm- }
+[Quadratic Characters]
+Show that if $p$ is an odd prime, then  
+\begin{equation}
+\label{charm1}
+\left(\frac{-1}{p}\right)=
+\begin{cases}
+1 & p\equiv 1 \pmod{4}  \\   
+-1 & p\equiv 3 \pmod{4}.  
+\end{cases}
+\end{equation}
+\begin{equation}
+\label{char2}
+\left(\frac{2}{p}\right)=
+\begin{cases}
+1 & p\equiv 1 \text{ or } 7\pmod{8}  \\   
+-1 & p\equiv 3  \text{ or }  5  \pmod{8}.  
+\end{cases}
+\end{equation}
+\begin{equation}
+\label{char3}
+\left(\frac{3}{p}\right)=
+\begin{cases}
+1 & p\equiv 1 \text{ or } 11 \pmod{12}  \\   
+-1 & p\equiv 5 \text{ or } 7 \pmod{12}.  
+\end{cases}
+\end{equation}
+::: 
+
+::: {.solution }
+To verify \ref{charm1}, notice every odd prime is of the form $p=4k+1$ (that is $p\equiv 1 \pmod{4}$) or of the form  $p=4k+3$ (that is $p\equiv  -1 \pmod{4}$). 
+In the first case, Euler's Criterion yields  $1\equiv (-1)^{(p-1)/2}\equiv \left(\frac{-1}{p}\right)$ because $(p-1)/2$ is even. In the latter case,  $(p-1)/2$ is odd and so Euler's Criterion yields  
+$-1\equiv (-1)^{(p-1)/2}\equiv \left(\frac{-1}{p}\right)$.    
+The reader should verify the remaining formulas. 
+::: 
+
+
+
+## Properties of the Legendre Symbol
+
+::: {#lem- } 
+Let $p$ be an odd prime with $(a,p)=(b,p)=1.$ 
+If $a\equiv b \pmod{p}$ then $\left(\frac{a}{p}\right)=\left(\frac{b}{p}\right)$. 
+::: 
+
+::: {.proof } 
+The congruence $x^2\equiv a$ has a solution if and only if $x^2\equiv b \pmod{p}$ does because $a\equiv b \pmod{p}.$    
+:::  
+
+::: {#lem- } 
+\label{abp1}
+If $p$ is an odd prime with $(a,p)=(b,p)=1$, then  
+\begin{equation}
+\label{mfunc}
+\left(\frac{a}{p}\right)\left(\frac{b}{p}\right)
+=\left(\frac{a b}{p}\right).
+\end{equation}
+::: 
+
+::: {.proof } 
+By Euler's Criterion we know  
+$$
+a^{(p-1)/2}\equiv \left(\frac{a}{p}\right), 
+\hspace{.5cm} 
+b^{(p-1)/2}\equiv \left(\frac{b}{p}\right), 
+\hspace{.5cm} 
+\text{ and }
+\hspace{.5cm} 
+(a b)^{(p-1)/2}\equiv \left(\frac{a  b}{p}\right).
+$$ 
+Therefore,  
+$$
+\left(\frac{a b}{p}\right)\equiv (a b)^{(p-1)/2}
+=a^{(p-1)/2}b^{(p-1)/2}\equiv \left(\frac{a}{p}\right)\left(\frac{b}{p}\right) \pmod{p}
+$$ 
+and because the only values possible are $\pm 1$,  \ref{mfunc} 
+follows immediately. 
+:::  
+
+::: {#lem- } 
+\label{abp2} 
+If $p$ is an odd prime with $(a,p)=1$, then
+$\left(\frac{a^2}{p}\right)=1$.
+::: 
+
+::: {.proof }
+\ref{abp1} yields $\left(\frac{a^2}{p}\right)=\left(\frac{a}{p}\right)\left(\frac{a}{p}\right)=1$ as desired.    
+::: 
+
+::: {#lem- } 
+\label{abp3} 
+If $p$ is an odd prime with $(a,p)=(b,p)=1$, then  
+$$
+\left(\frac{a b^2}{p}\right)=\left(\frac{a}{p}\right).
+$$
+::: 
+
+::: {.proof } 
+By \ref{abp1}  and \ref{abp2},  
+$$
+\left(\frac{a b^2}{p}\right)=\left(\frac{a}{p}\right)\left(\frac{b^2}{p}\right)=\left(\frac{a}{p}\right)
+$$ 
+follows immediately. 
+::: 
+
+::: {#thm- }
+If $n$ has prime factorization  
+$$
+n=p_1{}^{2t_1+1}\cdot \cdot \cdot p_k{}^{2t_k+1}p_{k+1}^{2t_{k+1}}\cdot \cdot \cdot p_m^{2t_m}
+$$  
+and $q$ is a prime not dividing $n$, then 
+$$
+\left(\frac{n}{q}\right)=\left(\frac{p_1}{q}\right)\left(\frac{p_2}{q}\right)\cdot \cdot \cdot \left(\frac{p_k}{q}\right).
+$$ 
+::: 
+
+::: {.proof } 
+By \ref{abp3}, 
+$$
+\left(\frac{n}{q}\right)=\left(\frac{p_1{}^{2t_1+1}}{q}\right)\left(\frac{p_2{}^{2t_2+1}}{q}\right)\cdot \cdot \cdot \left(\frac{p_k{}^{2t_k+1}}{q}\right)\left(\frac{p_{k+1}{}^{2t_k}}{q}\right)\cdot  \cdot \cdot \left(\frac{p_m{}^{2t_m}}{q}\right)
+$$
+By \ref{abp2}, we see that  $\left(\frac{n}{q}\right)=\left(\frac{p_1}{q}\right)\left(\frac{p_2}{q}\right)\cdot \cdot \cdot \left(\frac{p_k}{q}\right)$  as desired. 
+::: 
+
+
+
+
+
+## Law of Quadratic Reciprocity
+
+::: {#thm- }
+[Law of Quadratic Reciprocity]
+Let $p$ and $q$ be distinct odd primes, then   
+$$
+\left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=(-1)^{(p-1)/2(q-1)/2}
+$$
+::: 
+Notice that the Law of Quadratic Reciprocity is equivalent to the following.
+$$
+\left(\frac{p}{q}\right)=\left\{ 
+\begin{array}{cl}   
+-\left(\frac{q}{p}\right) & 
+\text{ if $p\equiv q\equiv 3 \pmod{4}$}  \\
+\left(\frac{q}{p}\right) & 
+\text{ otherwise }
+\end{array}  \right.
+$$
+
+::: {#exm- }
+Evaluate $\left(\frac{29}{53}\right)$. 
+::: 
+
+::: {.solution }
+Since $29\equiv 1 \pmod{4}$ we have $\left(\frac{29}{53}\right)=\left(\frac{53}{29}\right).$ Since $53\equiv 24 \pmod{29}$ and $24=2^26$,
+\begin{align*}
+\left(\frac{29}{53}\right)
+& =\left(\frac{24}{29}\right)
+=\left(\frac{6}{29}\right)
+=\left(\frac{2}{29}\right)\left(\frac{3}{29}\right) \\
+& =(-1)\left(\frac{3}{29}\right)
+=(-1)\left(\frac{29}{3}\right)
+=(-1)\left(\frac{2}{3}\right)
+=1.
+\end{align*} 
+which shows $x^2\equiv 29 \pmod{53}$ is not solvable. 
+::: 
+
+::: {#exm- }
+Evaluate $\left(\frac{30}{43}\right)$.
+::: 
+
+::: {.solution }
+To evaluate $\left(\frac{30}{43}\right)$ we note that 
+$30=2\cdot 3\cdot 5.$ 
+So we have 
+$$
+\left(\frac{30}{43}\right)=\left(\frac{2}{43}\right)\left(\frac{3}{43}\right)\left(\frac{5}{43}\right)
+$$ 
+and since $43\equiv 3 \pmod{4},$ we see that  
+$\left(\frac{30}{43}\right)
+=\left(\frac{2}{43}\right)(-1)\left(\frac{43}{3}\right)\left(\frac{43}{5}\right)$. 
+Finally since $43\equiv 3 \pmod{8},$ $43\equiv 1 \pmod{3},$ and $43\equiv 3 \pmod{5}$ and so 
+\begin{align*}
+\left(\frac{30}{43}\right)
+=(-1)\left(\frac{1}{3}\right) 
+\left(\frac{3}{5}\right)
+=(-1)\left(\frac{3}{5}\right) 
+=(-1)\left(\frac{5}{3}\right)
+=(-1)\left(\frac{2}{3}\right)
+=-1
+\end{align*}
+which shows $x^2\equiv 30 \pmod{43}$ is not solvable. 
+::: 
+
+::: {#exm- }
+Evaluate $\left(\frac{713}{1009}\right)$. 
+::: 
+
+::: {.solution }
+Since $713=23\cdot 31$ we have   $\left(\frac{713}{1009}\right)=\left(\frac{23}{1009}\right)\left(\frac{31}{1009}\right).$   So we break these down into the two parts 23 and 31 as follows:
+\begin{align*}
+& \left(\frac{23}{1009}\right)=\left(\frac{1009}{23}\right)  
+& \text{ since } 1009\equiv 1 \pmod{4} \\ 
+& \left(\frac{1009}{23}\right)=\left(\frac{20}{23}\right) & \text{ since } 1009\equiv 20 \pmod{23} \\
+& \left(\frac{20}{23}\right)=\left(\frac{5}{23}\right)  
+& \text{ since } 20=4^2\cdot 5 \\
+& \left(\frac{5}{23}\right)=\left(\frac{23}{5}\right) 
+& \text{ since } 5\equiv 1 \pmod{4} \\
+& \left(\frac{23}{5}\right)=\left(\frac{3}{5}\right) 
+&  \text{ since } 23\equiv 3 \pmod{5} \\
+& \left(\frac{3}{5}\right)=\left(\frac{5}{3}\right) 
+&  \text{ since } 5\equiv 1 \pmod{4} \\
+& \left(\frac{5}{3}\right)=\left(\frac{2}{3}\right) 
+& \text{ since } 5\equiv 2 \pmod{3} \\
+& \left(\frac{2}{3}\right)=-1 
+& \text{ since } 3\equiv 3 \pmod{8}
+\end{align*}
+and the second part follows from,
+\begin{align*}
+& \left(\frac{31}{1009}\right)=\left(\frac{1009}{31}\right) 
+& \text{ since } 1009\equiv 1 \pmod{4} \\
+& \left(\frac{1009}{31}\right)=\left(\frac{17}{31}\right) & \text{ since } 1009\equiv 17 \pmod{31} \\
+& \left(\frac{17}{31}\right)=\left(\frac{31}{17}\right) 
+& \text{ since } 17\equiv 1 \pmod{4} \\
+& \left(\frac{31}{17}\right)=\left(\frac{14}{17}\right) 
+& \text{ since } 31\equiv 14 \pmod{17} \\  
+& \left(\frac{14}{17}\right)=\left(\frac{2}{17}\right) \left(\frac{7}{17}\right) 
+& \text{ since } 14=2\cdot 7 \\
+& \left(\frac{2}{17}\right)\left(\frac{7}{17}\right)=\left(\frac{7}{17}\right) 
+& \text{ since } 17\equiv 1 \pmod{8} \\ 
+& \left(\frac{7}{17}\right)=\left(\frac{17}{7}\right) 
+& \text{ since } 17\equiv 1 \pmod{4} \\
+& \left(\frac{17}{7}\right)=\left(\frac{3}{7}\right) 
+& \text{ since } 17\equiv 3 \pmod{7} \\
+& \left(\frac{3}{7}\right)=(-1)\left(\frac{7}{3}\right) 
+& \text{ since } 7\equiv 3 \pmod{4} \text{ and } 
+3\equiv 3 \pmod{4} \\
+& (-1)\left(\frac{7}{3}\right)=(-1)\left(\frac{1}{3}\right)=-1 
+& \text{ since } 7\equiv 1 \pmod{3}.
+\end{align*}
+Therefore, $\left(\frac{713}{1009}\right)=1.$    
+::: 
+
+::: {#exm- }
+Solve the quadratic congruence $5x^2-3x+21\equiv 0 \pmod{53}.$
+::: 
+
+::: {.proof }[Solution]
+Let $y=2a x+b=10x-3$ and $d=(-3)^2-4(5 (21)=-411\equiv 13 \pmod{53}.$ 
+So the congruence becomes $y^2\equiv 13 \pmod{53}$. 
+We find that $y\equiv 15 \pmod{53}$ and $y\equiv 38 \pmod{53}$. 
+Therefore we solve, $10x-3\equiv 15 \pmod{53}$  and $10x-3\equiv 38 \pmod{53}$. 
+We find $x\equiv 23 \pmod{53}$ and $x\equiv 20 \pmod{53}.$ 
+::: 
+
+
+
+
+
+
+## Tonelli--Shanks Algorithm
+
+The Tonell--Shanks algorithm (sometimes called the RESSOL algorithm\footnote{or just Shank's Algorithm for short}) is used within modular arithmetic to solve a quadratic congruence equation of the form
+$$
+x^2 \equiv a \pmod p 
+$$
+where $a$ is a quadratic residue (mod $p$), and $p$ is an odd prime.
+Tonelli--Shanks cannot be used for composite moduli. 
+Note that, finding square roots modulo composite numbers is a computational problem equivalent to integer factorization \cite{goldreich2008computational}. 
+
+::: {#thm- }[Shanks]
+\label{shanks}
+Let $p$ be an odd prime and assume $(a,p)=1$. Let $x$ be a solution to $x^2\equiv a \pmod{p}$ and let $n$ and $k$ be integers such that 
+$p-1=2^nk$ where $n\geq 1$ and $k$ is odd, and let $q$ be a quadratic nonresidue modulo $p.$ 
+Then $x$ can be found by repeating the following loop:
+
+- Set $t=a^{(k+1)/2} \pmod{p}$ and find the least $i$ such that $r^{2^i}\equiv 1 \pmod{p}$ where $r=a^k \pmod{p}.$
+- If $i=0$ then the solutions are $x\equiv \pm t \pmod{p}$ else set $u\equiv q^{k\left(2^{n-i-1}\right)} \pmod{p}$  and goto (i) and replace $t$ by $t u$ and $r$ by $r u^2.$
+
+::: 
+
+### Examples of Shank's Algorithm
+
+We solve three examples illustrating the use of \ref{shanks}.
+
+::: {#exm- }
+Solve the quadratic congruence 
+$x^2\equiv 29 \pmod{53}$.
+::: 
+
+::: {.proof }[Solution]
+First we find $53-1=52=2^2(13)$ and so we set $n=2$ and $k=13$. 
+Next we find the a quadratic nonresidue. 
+Since $\left(\frac{2}{53}\right)=-1,$  we use $q=2$. With $a=29,$ $q=2,$ $n=2,$ and $k=13$ we perform Shanks algorithm.
+\par
+Loop 1: We find $t=29^7\equiv 17 \pmod{53}$ and $r=29^{13}\equiv 52 \pmod{53}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}  
+i & 52^{2^i}  \\   \hline
+0 & 52^{2^0}\equiv 52 \pmod{53}  \\   
+1 & 52^{2^1}\equiv 1 \pmod{53}  
+\end{array}  
+$$
+Since $i\neq 0$ we find $u=2^{13\left(2^{2-1-1}\right)}\equiv 30 \pmod{53}$.
+\par
+Loop 2: We find $t=17(30)\equiv 33 \pmod{53}$ and $r=52(30)^2\equiv 1 \pmod{53}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}   
+i & 1^{2^i}  \\   \hline
+0 & 1^{2^0}\equiv 1 \pmod{53}  
+\end{array}  
+$$
+Since $i=0$, we find $x=\pm 33 \pmod{53}$.
+Therefore the solutions are $x\equiv 20, 33  \pmod{53}$.
+::: 
+
+::: {#exm- }
+Solve the quadratic congruence 
+$x^2\equiv 37 \pmod{137}$.
+::: 
+
+::: {.proof }[Solution]
+We let $a=37.$ 
+Since $137-1=2^317$ we let $n=3,$ $k=17.$ 
+Also, since $\left(\frac{3}{137}\right)=-1$ we let $q=3$  and perform Shanks algorithm.  
+\par
+Loop 1: We find $t=37^9\equiv 37 \pmod{137}$ and $r=37^{17}\equiv 37 \pmod{137}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}   
+i & 37^{2^i}  \\   \hline
+0 & 37^{2^0}\equiv 37 \pmod{137}  \\   
+1 & 37^{2^1}\equiv 136 \pmod{137}  \\   
+2 & 37^{2^2}\equiv 1 \pmod{137}  
+\end{array} 
+$$
+Since $i\neq 0$ we find $u=127 \pmod{137}$.
+\par
+Loop 2: We find $t=37(127)\equiv 41\pmod{137}$ and $r=37(127)^2\equiv 1 \pmod{137}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}   
+i & 1^{2^i}  \\   \hline
+0 & 1^{2^0}\equiv 1 \pmod{137}  
+\end{array}  
+$$
+Since $i=0$ we find $x\equiv \pm 41 \pmod{137}$.
+Therefore the solutions are $x\equiv 41, 96  \pmod{137}$.
+::: 
+
+::: {#exm- }
+Solve the quadratic congruence 
+$x^2\equiv 11 \pmod{257}$.
+::: 
+
+::: {.proof }[Solution]
+We let $a=11.$ Since $257-1=256=2^8(1)$ we let $n=8,$ $k=1.$ Also, since $\left(\frac{5}{257}\right)=-1$ we let $q=5$ and perform Shanks algorithm.
+\par
+Loop 1: We find $t=11^1\equiv 11 \pmod{257}$ and $r=11^1\equiv 11 \pmod{257}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}   
+i & 11^{2^i}  \\   \hline
+0 & 11^{2^0}\equiv 11 \pmod{257}  \\\hline
+1 & 11^{2^1}\equiv 121 \pmod{257}  \\   \hline
+2 & 11^{2^2}\equiv 249 \pmod{257}  \\   \hline
+3 & 11^{2^3}\equiv 64 \pmod{257}  \\   \hline
+4 & 11^{2^4}\equiv 241 \pmod{257}  \\   \hline
+5 & 11^{2^5}\equiv 256 \pmod{257}  \\   \hline
+6 & 11^{2^6}\equiv 1 \pmod{257}  
+\end{array} 
+$$
+Since $i\neq 0$ we find $u=5^{1\left(2^{8-6-1}\right)}\equiv 25 \pmod{257}$.
+\par
+Loop 2: We find $t=11(25)\equiv 18\pmod{257}$ and $r=11(25)^2\equiv 193 \pmod{257}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}   
+i & 193^{2^i}  \\   \hline
+0 & 193^{2^0}\equiv 193 \pmod{257}  \\   \hline
+1 & 193^{2^1}\equiv 241 \pmod{257}  \\   \hline
+2 & 193^{2^2}\equiv 256 \pmod{257}  \\   \hline
+3 & 193^{2^3}\equiv 1 \pmod{257}  
+\end{array} 
+$$
+Since $i\neq 0$ we find $u=5^{1\left(2^{8-3-1}\right)}\equiv 225 \pmod{257}$.
+\par
+Loop 3: We find $t=18(225)\equiv 195\pmod{257}$ and $r=193(225)^2\equiv 256 \pmod{257}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}   
+i & 256^{2^i}  \\   \hline
+0 & 256^{2^0}\equiv 256 \pmod{257}  \\   \hline
+1 & 256^{2^1}\equiv 1 \pmod{257} 
+\end{array}
+$$
+Since $i\neq 0$ we find $u=5^{1\left(2^{8-1-1}\right)}\equiv 16 \pmod{257}$.
+\par
+Loop 4: We find $t=195(16)\equiv 36\pmod{257}$ and $r=256(16)^2\equiv 1 \pmod{257}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}   
+i & 1^{2^i}  \\   \hline
+0 & 1^{2^0}\equiv 1 \pmod{257}  
+\end{array} 
+$$
+Since $i=0$ we find $x\equiv \pm 36 \pmod{257}$.
+Therefore the solutions are $x\equiv 36, 221  \pmod{257}$. 
+:::   
+
+## Solving Quadratic Congruences
+ 
+::: {#exm- }
+Find all solutions to the quadratic congruence equation  
+\begin{equation}
+\label{quadcong}
+f(x)=2x^2+10x+1\equiv 0 \pmod{1429530274918301}.
+\end{equation}
+::: 
+
+::: {.proof }[Solution]
+The first step in our method is to find the unique factorization of the modulus namely,
+$$
+m=1429530274918301=101^3193^4.
+$$
+Now we divide this problem into solving both of the following equations. 
+\begin{equation}\label{qc1}
+2x^2+10x+1\equiv 0 \pmod{101} 
+\end{equation}
+\begin{equation}\label{qc2}
+2x^2+10x+1\equiv  0 \pmod{193} 
+\end{equation}
+First we solve (\ref{qc1}) by making the linear change of variables $y=4x+10$ and $d=92$ because solving (\ref{qc1}) is equivalent  to solving $y^2\equiv 92 \pmod{101}$ since  
+$$
+y^2-92
+=(4x+10)^2-92
+%=100+80 x+16 x^2-92
+\equiv 2x^2+10x+1
+\equiv 0 \pmod{101}.
+$$
+To determine if $y^2\equiv 92 \pmod{101}$ is solvable we compute the Legendre symbol $\left(\frac{92}{101}\right)$ by first factoring $92=2^223$  and then we apply the law of quadratic reciprocity to find,  
+$$
+\left(\frac{92}{101}\right)
+=\left(\frac{2^2}{101}\right)\left(\frac{23}{101}\right)
+=\left(\frac{23}{101}\right)
+=\left(\frac{101}{23}\right)
+=\left(\frac{9}{23}\right)
+=1.
+$$
+
+So now we use Shank's algorithm to solve $y^2\equiv 92 \pmod{101}.$ First we find $101-1=100=2^2(25)$ and so we set $n=2$ and $k=25.$  With $a=92,$ $n=2,$ and $k=25$ we perform Shanks algorithm and find
+$t\equiv 92^{13}\equiv 71 \pmod{101}$ and 
+$r\equiv 92^{25}\equiv 1 \pmod{101}$.
+Therefore, Shank's algorithm terminates during the first loop and the solutions are $y=\pm 71.$ 
+
+So we need to solve  
+$$
+71\equiv 4x+10\pmod{101}
+\qquad \text{and} \qquad 
+-71\equiv 4x+10 \pmod{101}.
+$$
+For the first congruence equation we obtain 
+$x\equiv 91  \pmod{101}$ and for the second we obtain $x\equiv 5 \pmod{101}$.
+Therefore the two solutions of the quadratic congruence $2x^2+10x+1\equiv 0 \pmod{101}$ are $x\equiv 91 \pmod{101}$ and  $x\equiv 5 \pmod{101}.$ 
+
+Next we solve (\ref{qc2}) by making the linear change of variables $y=4x+10$ and $d=92$ because solving $2x^2+10x+1\equiv 0 \pmod{193}$ is equivalent  to solving $y^2\equiv 92 \pmod{193}.$ 
+To determine if this equation is solvable we compute the Legendre symbol $\left(\frac{92}{193}\right)$  by first factoring $92=2^223.$ 
+Then  
+$$
+\left(\frac{92}{193}\right)
+=\left(\frac{2^2}{193}\right)\left(\frac{23}{193}\right)
+=\left(\frac{23}{193}\right)
+=\left(\frac{193}{23}\right)
+=\left(\frac{9}{23}\right)
+=1
+$$ 
+Therefore, $y^2\equiv 92 \pmod{193}$ is solvable. 
+
+Now we use Shank's algorithm to solve $y^2\equiv 92 \pmod{193}.$ 
+First we find  $193-1=192=2^6(3)$ and so we set $n=6$ and $k=3.$ 
+Next we find a quadratic nonresidue of $193$ namely $q=5$ since $\left(\frac{5}{193}\right)=-1.$  
+Now with $a=92,$ $q=5,$ $n=6,$ and $k=3$ we perform Shank's algorithm 
+\par
+Loop 1: We find 
+$t=92^2\equiv 165 \pmod{193}$ and 
+$r=92^3\equiv 126 \pmod{193}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}   
+i & 126^{2^i}  \\ \hline  
+0 & 126^{2^0}\equiv 126 \pmod{193}  \\   
+1 & 126^{2^1}\equiv 50 \pmod{193}  \\   
+2 & 126^{2^2}\equiv 184 \pmod{193}  \\   
+3 & 126^{2^3}\equiv 81 \pmod{193}  \\   
+4 & 126^{2^4}\equiv 192 \pmod{193}  \\  
+5 & 126^{2^5}\equiv 1 \pmod{193}
+\end{array} 
+$$
+Since $i\neq 0$ we find 
+$u= 5^{3\left(2^{6-5-1}\right)}\equiv 125 \pmod{193}$.
+\par
+Loop 2: We find 
+$t=165(125)\equiv 167 \pmod{193}$ and 
+$r=126(125)^2\equiv 150 \pmod{193}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}   
+i & 150^{2^i}  \\ \hline  
+0 & 150^{2^0}\equiv 150  \pmod{193}  \\   
+1 & 150^{2^1}\equiv 112 \pmod{193}  \\   
+2 & 150^{2^2}\equiv 192 \pmod{193}  \\   
+3 & 150^{2^3}\equiv 1 \pmod{193}  
+\end{array}   
+$$
+Since $i\neq 0$ we find 
+$u=5^{3\left(2^{6-3-1}\right)}\equiv 64 \pmod{193}$.
+\par
+Loop 3: We find 
+$t=167(64)\equiv 73 \pmod{193}$ and 
+$r=150(64)^2\equiv 81 \pmod{193}$. 
+Next we find $i$: 
+$$
+\begin{array}{c|c}  
+i & 81^{2^i}  \\   \hline
+0 & 81^{2^0}\equiv 81 \pmod{193}  \\   
+1 & 81^{2^1}\equiv 192 \pmod{193}  \\  
+2 & 81^{2^2}\equiv 1 \pmod{193} 
+ \end{array}   
+$$
+Since $i\neq 0$ we find 
+$u=5^{3\left(2^{6-2-1}\right)}\equiv 43 \pmod{193}$.
+\par
+Loop 4: We find 
+$t=73(43)\equiv 51\pmod{193}$ and 
+$r=81(43)^2\equiv 1 \pmod{193}$. 
+\par
+Therefore, Shank's algorithm terminates and the solutions are $y=\pm 51.$ So we need to solve  $51\equiv 4x+10\pmod{193}$ and $-51\equiv 4x+10 \pmod{193}.$ 
+For the first congruence equation we obtain 
+$x\equiv 155 \pmod{193}$ and for the second we obtain $x\equiv 33 \pmod{193}$. 
+Therefore the two solutions of the quadratic congruence $2x^2+10x+1\equiv 0 \pmod{193}$ are $x\equiv 155 \pmod{193}$  and $x\equiv 33 \pmod{193}.$   
+     
+Next we will use Hensel's lifting theorem to lift to solutions modulo $101^3$ and $193^4.$ Thus we compute $f'(x)=4x+10$ and we notice that   
+\begin{align*}
+& f'(5) \equiv 30\neq 0 \pmod{101}
+& f'(91)\equiv 71\neq 0 \pmod{101}  \\     
+& f'(33) \equiv 142\neq 0 \pmod{193} 
+& f'(155)\equiv 51\neq 0 \pmod{193}  
+\end{align*}
+Since these values of the derivative are nonzero we know each of these four solutions lift (uniquely) up to the necessary powers. To do so we compute  the inverses of each, namely, 
+\begin{align*}
+& 30u_1\equiv 1 \pmod{101} \Rightarrow  u_1=64 &   & 71u_2\equiv 1 \pmod{101} \Rightarrow  u_2=37 \\   
+& 142u_3\equiv 1 \pmod{193} \Rightarrow  u_3=140 &   & 51u_4\equiv 1 \pmod{193} \Rightarrow  u_4=53  
+\end{align*}
+Now using the inverses we just computed we can lift our 4 solutions as follows. 
+$$
+\begin{array}{c|l}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)64  \\    \hline
+1 & x_1\equiv 5\pmod{101^1}  \\   
+2 & x_2=5-f(5)*64\equiv 3742 \pmod{101^2}  \\   
+3 & x_3=3742-f(3742)*64\equiv 64948 \pmod{101^3}   
+\end{array} $$
+$$
+\begin{array}{c|l}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)37  \\   \hline
+1 & x_1\equiv 91 \pmod{101^1}  \\   
+2 & x_2=6454-f(6454)*37\equiv 6454 \pmod{101^2}  \\   
+3 & x_3=6454-f(6454)*37\equiv 965348 \pmod{101^3}   
+\end{array} $$
+$$
+\begin{array}{c|l}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)140  \\    \hline
+1 & x_1\equiv 33\pmod{193^1}  \\  
+2 & x_2=33-f(33)*140\equiv 21263 \pmod{193^2}  \\   
+3 & x_3=21263-f(21263)*140\equiv 6055601 \pmod{193^3}   \\   
+4 & x_4=6055601-f(6055601)*140\equiv 811229985 \pmod{193^4}  
+\end{array} $$
+$$
+\begin{array}{c|l}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)53  \\    \hline
+1 & x_1\equiv 155 \pmod{193^1}  \\   
+2 & x_2=155-f(155)*53\equiv 15981 \pmod{193^2}  \\   
+3 & x_3=15981-f(15981)*53\equiv 1133451 \pmod{193^3}   \\   
+4 & x_4=1133451-f(1133451)*53\equiv 576258011 \pmod{193^4}  
+\end{array} $$
+To recap, $2x^2+10x+1\equiv 0 \pmod{101^3}$ has solutions $64948$ and $965348$ and  $2x^2+10x+1\equiv 0 \pmod{193^4}$ has solutions $811229985$ and $576258011$.
+
+Finally, to solve our originally congruence equation we use the Chinese remainder theorem to solve the 4 linear systems:  
+$$
+\begin{array}{ll}
+(1) \left\{  
+\begin{array}{l}   
+x\equiv 64948 \pmod{101^3}  \\  
+x\equiv 811229985 \pmod{193^4}  
+\end{array}  
+\right.  & \qquad
+(2) \left\{  
+\begin{array}{l}   
+x\equiv 64948 \pmod{101^3}  \\   
+x\equiv 576258011 \pmod{193^4}  
+\end{array}  
+\right.  \\ 
+& \\
+(3) \left\{  
+\begin{array}{l}   
+x\equiv 965348 \pmod{101^3}   \\   
+x\equiv 811229985 \pmod{193^4} 
+\end{array}  
+\right. & \qquad
+(4) \left\{  
+\begin{array}{l}   
+x\equiv 965348 \pmod{101^3}   \\   
+x\equiv 576258011 \pmod{193^4}  
+\end{array}  
+\right. 
+\end{array}
+$$
+We use the following tables to construct the four solutions. 
+$$
+\begin{array}{c|c|c|c|c}   
+i & n_i & a_i & \bar{n}_i & u_i  \\   \hline
+1 & 101^3 & 64948 & 193^4 & 193^4u_1\equiv 1 \pmod{101^3} \Longrightarrow  u_1=970433  \\   
+2 & 193^4 & 811229985 & 101^3 & 101^3u_2\equiv 1 \pmod{193^4} \Longrightarrow  u_2=80623169  
+\end{array}$$
+So a solution to (1) is 
+\begin{align*}
+x_1 & = (64948) \left(193^4\right) (970433)+ (811229985) \left(101^3\right) (80623169) \\
+& \equiv 1193121168121899 \pmod{m}.
+\end{align*}
+$$
+\begin{array}{c|c|c|c|c}   
+i & n_i & a_i & \bar{n}_i & u_i  \\   \hline
+1 & 101^3 & 64948 & 193^4 & 193^4u_1\equiv 1 \pmod{101^3}
+\Longrightarrow  u_1=970433  \\   
+2 & 193^4 & 576258011 & 101^3 & 101^3u_2\equiv 1 \pmod{193^4} \Longrightarrow  u_2=80623169  
+\end{array} 
+$$ 
+So the solution to (2)  is 
+\begin{align*}
+x_2 & =(64948)\left(193^4\right)(970433)+(576258011)\left(101^3\right)(80623169) \\
+& \equiv 1386887794953578 \pmod{m}.
+\end{align*}
+$$
+\begin{array}{c|c|c|c|c}   
+i & n_i & a_i & \bar{n}_i & u_i  \\   \hline
+1 & 101^3 & 965348 & 193^4 & 193^4u_1\equiv 1 \pmod{101^3} \Longrightarrow u_1=970433  \\   
+2 & 193^4 & 811229985 & 101^3 & 101^3u_2\equiv 1 \pmod{193^4} \Longrightarrow  u_2=80623169  
+\end{array}$$
+So the solution to (3) is 
+\begin{align*}
+x_3 & =(965348)\left(193^4\right)(970433)+(811229985)\left(101^3\right)(80623169) \\
+& \equiv 42642479964718 \pmod{m}.
+\end{align*}
+$$
+\begin{array}{c|c|c|c|c}   
+i & n_i & a_i & \bar{n}_i & u_i  \\   \hline
+1 & 101^3 & 965348 & 193^4 & 193^4u_1\equiv 1 \pmod{101^3} \Longrightarrow  u_1=970433  \\   
+2 & 193^4 & 576258011 & 101^3 & 101^3u_2\equiv 1 \pmod{193^4} \Longrightarrow  u_2=80623169  
+\end{array}
+$$ 
+So the solution to (4)  is 
+\begin{align*}
+x_4 & = (965348) \left(193^4\right) (970433) + (576258011) \left(101^3\right) (80623169) \\ 
+& \equiv 236409106796397 \pmod{m}.
+\end{align*}
+
+Therefore, the four and only four solutions to \ref{quadcong} are 1193121168121899, 1386887794953578,  42642479964718, and 236409106796397.
+::: 
+
+
+
+
+
+
+
+## Exercises
+
+::: {#exr- }
+Find a congruence describing all primes for which 5 is a quadratic residue.    
+::: 
+
+::: {#exr- }
+Find a congruence describing all primes for which 7 is a quadratic residue.    
+::: 
+
+::: {#exr- }
+Evaluate the Legendre symbol. 
+
+- $\left(\frac{7}{79}\right)$
+- $\left(\frac{15}{101}\right)$
+- $\left(\frac{31}{641}\right)$
+- $\left(\frac{111}{991}\right)$
+- $\left(\frac{105}{1009}\right)$
+- $\left(\frac{1005}{10009}\right)$ 
+ 
+::: 
+
+::: {#exr- }
+Solve the quadratic congruence.
+
+
+- $x^2+x+1\equiv 0 \pmod{7}$
+- $x^2+5x+1\equiv 0 \pmod{7}$
+- $x^2+3x+1\equiv 0 \pmod{7}$
+- $x^2\equiv 1 \pmod{15}$
+- $x^2\equiv 58 \pmod{77}$
+- $x^2\equiv 207 \pmod{1001}$  
+
+::: 
+
+::: {#exr- }
+Evaluate the Legendre symbols $\left( \frac{221}{881} \right)$ and $\left( \frac{855}{1009} \right)$.
+::: 
+
+::: {#exr- }
+Determine which of the following quadratic congruences has solutions 
+
+
+- $16x^2+5x+1\equiv 0 \pmod{31}$ 
+- $16x^2-5x+1\equiv 0 \pmod{101}$
+
+::: 
+
+::: {#exr- }
+Let $p$ be an odd prime. 
+Show that the quadratic congruence equation $a x^2+bx +c\equiv 0 \pmod{p}$ has a solution if and only if $\left(\frac{b^2-4ac}{p}\right)=1$
+::: 
+
+::: {#exr- }
+Solve $2 x^2 - 17 x + 1\equiv 0 \pmod{111400}$.
+::: 
+
+::: {#exr- }
+Let $a$ and $b$ be integers not divisible by the prime $p.$ 
+Show that either one or all three of the integers $a, b,$ and $a b$ are  quadratic residues of $p.$    
+::: 
+
+::: {#exr- }
+Using the law of quadratic reciprocity to show each of the following is true.
+
+- $\left(\frac{3}{p}\right)= \begin{cases} 1 & p\equiv \pm 1 \pmod{12}  \\ -1 & p\equiv \pm 5 \pmod{12} \end{cases}$
+- $\left(\frac{-3}{p}\right)= \begin{cases} 1 & p\equiv 1 \pmod{6} \\ 1 & p\equiv -1 \pmod{6}  \end{cases}$
+
+::: 
+
+::: {#exr- }
+Find all of the quadratic residues of the following integers.
+
+- 7    
+- 8    
+- 15   
+- 18
+ 
+::: 
+
+::: {#exr- }
+Find the value of the Legendre symbol $\left(\frac{j}{11}\right)$ for $j=1,2,3,4,5,$ and 6.    
+::: 
+
+::: {#exr- }
+Evaluate the Legendre symbol $\left(\frac{7}{11}\right)$ using Euler's criterion.    
+::: 
+
+::: {#exr- }
+Evaluate the Legendre symbol $\left(\frac{7}{11}\right)$ using Gauss's lemma.    
+::: 
+
+::: {#exr- }
+Let $a$ and $b$ be integers not divisible by the prime $p.$ Show that either one or all three of the integers $a, b,$ and $a b$ are  quadratic residues of $p.$    
+::: 
+
+::: {#exr- }
+(a) Find a congruence describing all primes for which 5 is a quadratic residue.    
+(b) Find a congruence describing all primes for which 7 is a quadratic residue.    
+::: 
+
+::: {#exr- }
+Let $p$ be an odd prime. 
+Show that the quadratic congruence equation $a x^2+bx +c\equiv 0 \pmod{p}$ has a solution if and only if $\left(\frac{b^2-4ac}{p}\right)=1$
+::: 
+
+::: {#exr- }
+Find all the quadratic residues of $13.$
+::: 
+
+::: {#exr- }
+Determine if $x^2\equiv 105 (\pmod{1009}$ is solvable using Legendre symbols.
+::: 
+
+::: {#exr- }
+Use Hensel's lifting theorem and the Chinese Remainder Theorem  to solve the quadratic congruence equation $3x^2+11x+2\equiv 0 (\text{mod} 72).$
+::: 
+
+::: {#exr- }
+Determine whether (or not) Shank's Algorithm applies to $x^2\equiv 6 \pmod{37}$. 
+::: 
+
+::: {#exr- }
+Determine whether (or not) Shank's Algorithm applies to $x^2\equiv 21 \pmod{37}$. 
+::: 
+
+::: {#exr- }
+Rewrite an equivalent quadratic congruence (in standard form) and test whether (or not) Shank's Algorithm applies: $3x^2-2x+7\equiv 0 \pmod{23}$. 
+::: 
+
+::: {#exr- }
+Solve $x^2\equiv 25 \pmod{127}$. 
+::: 
+
+::: {#exr- }
+Solve $x^2\equiv 35 \pmod{127}$.
+::: 
+
+::: {#exr- }
+Determine whether (or not) Shank's Algorithm applies to $x^2\equiv 6 \pmod{37}$. 
+::: 
+
+::: {#exr- }
+Determine whether (or not) Shank's Algorithm applies to $x^2\equiv 21 \pmod{37}$. 
+::: 
+
+::: {#exr- }
+Rewrite an equivalent quadratic congruence (in standard form) and test whether (or not) Shank's Algorithm applies: $3x^2-2x+7\equiv 0 \pmod{23}$. 
+::: 
+
+::: {#exr- }
+Solve $x^2\equiv 25 \pmod{127}$. [Hint: You may use Shank's Algorithm, but you do not need to.]
+::: 
+
+::: {#exr- }
+Solve $x^2\equiv 35 \pmod{127}$ using Shank's Algorithm.
+::: 
+
+
+

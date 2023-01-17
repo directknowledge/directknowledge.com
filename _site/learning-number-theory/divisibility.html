@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Learning Number Theory">
+<title>Divisibility - Learning Number Theory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./euclidean-algorithm.html" rel="next">
+<link href="./peanos-axioms.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+</style>
+<style>
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+.book-title, #quarto-search svg {
+    color: #cb6d00!important;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
+    font-weight: 500!important;
+    color:#cb6d00;
+ }
+ #quarto-sidebar .text-start {
+    font-variant: small-caps;
+    font-size: 120%;
+ }
+ #quarto-sidebar .active, .active .chapter-number {
+    color:#000000!important;
+    font-weight: 700!important;
+ }
+</style>
+  
+<meta property="og:title" content="Divisibility - Learning Number Theory">
+<meta property="og:description" content="Learning Number Theory">
+<meta property="og:site-name" content="Learning Number Theory">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Learning Number Theory" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Number Theory Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Divisibility</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/learning-number-theory/">Learning Number Theory</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./peanos-axioms.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Peano’s Axioms</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./divisibility.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Divisibility</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./euclidean-algorithm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Euclidean Algorithm</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/learning-number-theory/"><picture><source type="image/webp" srcset="../../assets/learning-number-theory-cover.webp"><source type="image/webp" srcset="../../assets/learning-number-theory-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/learning-number-theory-cover.png" alt="Learning Number Theory Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#the-integers" id="toc-the-integers" class="nav-link active" data-scroll-target="#the-integers"><span class="toc-section-number">2.1</span>  The Integers</a></li>
+  <li><a href="#divisibility-and-the-division-algorithm" id="toc-divisibility-and-the-division-algorithm" class="nav-link" data-scroll-target="#divisibility-and-the-division-algorithm"><span class="toc-section-number">2.2</span>  Divisibility and The Division Algorithm</a></li>
+  <li><a href="#prime-numbers" id="toc-prime-numbers" class="nav-link" data-scroll-target="#prime-numbers"><span class="toc-section-number">2.3</span>  Prime Numbers</a></li>
+  <li><a href="#greatest-common-divisors" id="toc-greatest-common-divisors" class="nav-link" data-scroll-target="#greatest-common-divisors"><span class="toc-section-number">2.4</span>  Greatest Common Divisors</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Divisibility</span></h1>
+</header>
+<p>Anyone who has ever taken a high school math class knows that divisibility is an important concept. But what exactly is divisibility, and how can it be used to solve problems? This book provides a comprehensive guide to understanding divisibility and covers topics such as prime numbers, composite numbers, GCDs, and more. If you’re looking to improve your understanding of math and want to learn everything there is to know about divisibility, then this is the perfect book for you!</p>
+<p>Number theory is the study of integers and their properties. One of the most important concepts in number theory is divisibility. Divisibility is a way of determining whether one number is a multiple of another number. For example, we say that 6 is divisible by 3 because 3 x 2 = 6. We also say that 10 is divisible by 5 because 5 x 2 = 10. In general, we say that a number a is divisible by another number b if there exists an integer c such that a = b x c.&nbsp;</p>
+<p>Divisibility is a critical concept for advanced college students because it is the basis for many other number theoretic concepts and results. For example, the Euclidean algorithm for finding the greatest common divisor of two numbers relies on the concept of divisibility. Furthermore, many proofs in number theory involve showing that one number is divisible by another number. As a result, students must have a strong understanding of divisibility and be able to apply it in various contexts.&nbsp;</p>
+<p>First focus on specific properties of divisibility such as the division algorithm and modular arithmetic. And then we focus on specific applications of divisibility such as greatest common divisors and least common multiples. We make sure to provide plenty of examples and practice problems for you to work through. By doing so, you’ll help ensure that they gain a strong understanding of this important number theoretic concept.</p>
+<p>A prime number is a positive integer that has no divisors other than 1 and itself. In other words, a prime number cannot be evenly divided by any other number except for 1 and itself. For example, the number 7 is prime because it can only be evenly divided by 1 and 7. The number 10 is not prime because it can be evenly divided by 1, 2, 5, and 10. Prime numbers are an important concept in mathematics, and they have a wide range of applications in cryptography and coding theory.</p>
+<p>Divisibility in the integers is a fundamental topic in number theory, and the study of prime numbers has led to the development of important theoretical tools like the Chinese Remainder Theorem and the Euclidean algorithm. In addition, prime numbers are used in public key cryptography, which is a technique for secure communication that is used by militaries, banks, and other organizations.</p>
+<p>The greatest common divisor (GCD) of two integers is the largest integer that evenly divides both numbers. For example, the GCD of 24 and 18 is 6 because 6 is the largest integer that evenly divides 24 and 18. The Euclidean algorithm is a method for finding the GCD of two integers that is based on the concept of divisibility. The algorithm is named after the Greek mathematician Euclid, who first described it in his book Elements, around 300 BC, making it one of the oldest algorithms still in use today.</p>
+<p>The Euclidean algorithm is a powerful tool that has a wide range of applications. In particular, it can be used to find the GCD of two numbers when one number is much larger than the other. It can also be used to find the LCM of two numbers and to solve linear Diophantine equations.</p>
+<p>The Euclidean algorithm is based on the following property of divisibility: if a is divisible by b, then a - b is also divisible by b. This property can be used to find the GCD of two numbers when one number is much larger than the other.</p>
+<p>The Fundamental Theorem of Arithmetic is a theorem that states that every positive integer is divisible by a unique (up to ordering) set of primes. In other words, if a and b are two positive integers with no common factors (i.e., they are co-prime), then a*b is divisible by all of the primes that divide a and by all of the primes that divide b.</p>
+<p>This theorem is one of the cornerstones of number theory, and it has many applications in mathematics and computer science. It is also a useful tool for proving other results in number theory. For example, it can be used to show that there are infinitely many prime numbers. The proof of the theorem is relatively simple, but it relies on some interesting ideas.</p>
+<p>The theorem is a fundamental result in number theory, and it has important applications in cryptography and security. The theorem was first proved by Euclid in his Elements, and it has been central to number theory ever since.</p>
+<p>A linear Diophantine equation is an equation of the form ax + by = c, where a, b, and c are integers. This type of equation has infinitely many integral solutions if a and b are relatively prime, and no solutions if they are not.</p>
+<p>In general, the set of all solutions to a linear Diophantine equation forms a line in the plane. However, some equations have special solutions that do not lie on this line. For example, the equation 2x + 3y = 5 has the solution x = 2 and y = -1, which is not on the line 2x + 3y = 5. These special solutions are called non-trivial solutions. The most common method to solve a linear Diophantine equation is the Euclidean algorithm.</p>
+<p>The study of linear Diophantine equations is a branch of mathematics known as number theory. Number theory is the study of the positive integers, which are the whole numbers greater than 0. Integer solutions to linear Diophantine equations have applications to many areas of mathematics, including cryptography and coding theory.</p>
+<p>I wrote this book for people who want to improve their understanding of mathematics. In it, I cover the basics of divisibility and explain how to use divisibility to solve problems. I also include worked examples and practice problems so that you can test your knowledge as you go.</p>
+<p>When teaching divisibility to advanced college students, it is important to stress the importance of writing proofs. A proof is a logical argument that shows that a statement is true. By stressing the importance of writing proofs, students will be better prepared to understand and apply the concept of divisibility in their future studies.</p>
+<p>When it comes to teaching mathematics, there is no one-size-fits-all approach. Different students learn in different ways, and what works for one may not work for another. However, some general principles can help to make math instruction more effective.</p>
+<p>First, it is important to create a foundation of basic skills. Without a strong understanding of basic concepts, students will struggle to progress to more advanced material. Second, it is important to provide plenty of practice opportunities. Students need to be able to work through problems on their own in order to develop fluency and confidence.</p>
+<p>Finally, it is important to emphasize understanding over rote memorization. Understanding the underlying concepts is key to being able to apply mathematics in the real world. By following these principles, you will build a strong foundation that will serve you well throughout your life.</p>
+<p>This book is a comprehensive guide to understanding divisibility. If you’re looking to improve your understanding of math and want to learn everything there is to know about divisibility, then this is the perfect book for you! The author does a great job of explaining complex concepts in an easy-to-understand way, making it ideal for anyone who wants to strengthen their understanding of divisibility. I would highly recommend this book to anyone looking for a better grasp of how divisibility works.</p>
+<section id="the-integers" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-integers"><span class="header-section-number">2.1</span> The Integers</h2>
+<p>Discuss axioms and the properties of the integers.</p>
+</section>
+<section id="divisibility-and-the-division-algorithm" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="divisibility-and-the-division-algorithm"><span class="header-section-number">2.2</span> Divisibility and The Division Algorithm</h2>
+<p>We begin by stating the definition of divisibility, the main topic of discussion. We then give a few examples followed by several basic lemmas on divisibility. The Well-Ordering Axiom, which is used in the proof of the Division Algorithm, is then stated. Examples demonstrating how to use the Division Algorithm as a method of proof are then given.</p>
+<p>Certainly the sum, difference and product of any two integers is an integer. The same can not be said about the ratio of two integers. For example, while 2 and 3 are integers, the ratio <span class="math inline">\(2/3\)</span> is not an integer. We simply can not take any to integers and divide them. The study of the integers is to a great extent the study of divisibility.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.1 </strong></span>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers with <span class="math inline">\(a\neq 0,\)</span> we say that <span class="math inline">\(a\)</span> <strong>divides</strong> <span class="math inline">\(b,\)</span> written <span class="math inline">\(a | b,\)</span> if there exists an integer <span class="math inline">\(c\)</span> such that <span class="math inline">\(b=a c\)</span>.</p>
+</div>
+<p>Here are some examples of divisibility:</p>
+<ul>
+<li><span class="math inline">\(3|6\)</span> since <span class="math inline">\(6=2(3)\)</span> and <span class="math inline">\(2\in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(6|24\)</span> since <span class="math inline">\(24=4(6)\)</span> and <span class="math inline">\(4\in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(8|0\)</span> since <span class="math inline">\(0=0(8)\)</span> and <span class="math inline">\(0\in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(-5|-55\)</span> since <span class="math inline">\(-55=11(-5)\)</span> and <span class="math inline">\(11\in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(-9|909\)</span> since <span class="math inline">\(909=-101(-9)\)</span> and <span class="math inline">\(-101\in \mathbb{Z}\)</span></li>
+</ul>
+<p>There are other common ways of saying <span class="math inline">\(a\)</span> divides <span class="math inline">\(b\)</span>. Namely, <span class="math inline">\(a|b\)</span> is equivalent to all of the following:</p>
+<ul>
+<li><span class="math inline">\(a\)</span> is a <strong>divisor</strong> of <span class="math inline">\(b\)</span></li>
+<li><span class="math inline">\(a\)</span> divides <span class="math inline">\(b\)</span></li>
+<li><span class="math inline">\(b\)</span> is <strong>divisible by</strong> <span class="math inline">\(a\)</span></li>
+<li><span class="math inline">\(b\)</span> is a <strong>multiple of</strong> <span class="math inline">\(a\)</span></li>
+<li><span class="math inline">\(a\)</span> is a <strong>factor of</strong> <span class="math inline">\(b\)</span></li>
+</ul>
+<p>Any integer <span class="math inline">\(n\)</span>, except <span class="math inline">\(0\)</span>, has just a finite number of divisors. For if <span class="math inline">\(a|n\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(n\)</span> are positive integers, then <span class="math inline">\(n=ak\)</span> for some integer <span class="math inline">\(k\)</span>. Since <span class="math inline">\(k\)</span> is a positive integer, we see that <span class="math inline">\(n=ak\geq a\)</span>. Hence any nonzero integer <span class="math inline">\(n\)</span> can have a most <span class="math inline">\(2|n|\)</span> divisors.</p>
+<p>We now state and prove the transitive and linear combination properties of divisibility.</p>
+<div id="lem-lemdivone" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2.1 (Transitive Property of Divisibility]) </strong></span>Let <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> be integers. If <span class="math inline">\(a | b\)</span> and <span class="math inline">\(b | c\)</span>, then <span class="math inline">\(a | c\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b|c,\)</span> then there exists integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(b=m a\)</span> and <span class="math inline">\(c=n b.\)</span> Thus <span class="math display">\[
+c=n b=n(m a)=(n m )a.
+\]</span> Since <span class="math inline">\(nm\in \mathbb{Z}\)</span> we see that <span class="math inline">\(a|c\)</span> as desired.</p>
+</div>
+<p>We say an integer <span class="math inline">\(n\)</span> is a <strong>linear combination</strong> of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> if there exists integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> such that <span class="math inline">\(n=ax+by\)</span>. For example, <span class="math inline">\(7\)</span> is a linear combination of <span class="math inline">\(3\)</span> and <span class="math inline">\(2\)</span> since <span class="math inline">\(7=2(2)+1(3)\)</span>. The next lemma says that if an integer divides to other integers, then it divides any linear combination of these two integers.</p>
+<div id="lem-lincombdiv" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2.2 (Linear Combinations) </strong></span>Let <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> be integers. If <span class="math inline">\(c|a\)</span> and <span class="math inline">\(c|b,\)</span> then <span class="math inline">\(c|(x a+y b)\)</span> for any positive integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(c|a\)</span> and <span class="math inline">\(c|b\)</span>. Then there exists integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(a=m c\)</span> and <span class="math inline">\(b=n c.\)</span> Assume <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are arbitrary integers. We have <span class="math display">\[
+x a+y b=x(m c)+y(n c)= c(x m+ y n)
+\]</span> Since <span class="math inline">\(x m+ y n \in \mathbb{Z}\)</span> we see that <span class="math inline">\(c|(x a+y b)\)</span> as desired.</p>
+</div>
+<p>We now state and prove the antisymmetric and multiplicative properties of divisibility.</p>
+<div id="lem-lemdivthree" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2.3 (Antisymmetric Property of Divisibility) </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be nonzero positive integers. If <span class="math inline">\(a | b\)</span> and <span class="math inline">\(b |a\)</span>, then <span class="math inline">\(a= b.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b|a,\)</span> then there exists integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(b=m a\)</span> and <span class="math inline">\(a=n b.\)</span> Notice that both <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are positive since both <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are.<br>
+Then we have <span class="math display">\[
+a=n b= n(m a) = (n m) a.
+\]</span> Thus, <span class="math inline">\(n m=1\)</span> and so in particular <span class="math inline">\(n= 1.\)</span> Whence, <span class="math inline">\(a= b\)</span> as desired.</p>
+</div>
+<div id="lem-lemmadivfour" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2.4 (Multiplicative Property of Divisibility) </strong></span>Let <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> be integers. If <span class="math inline">\(c\neq 0\)</span> and <span class="math inline">\(a|b\)</span> then <span class="math inline">\(a c|b c.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(a|b\)</span>. Then there exists an integer <span class="math inline">\(n\)</span> such that <span class="math inline">\(b=n a.\)</span> By substitution we find, <span class="math display">\[
+b c=(n c) a=(a c) n.
+\]</span> Since <span class="math inline">\(c\neq 0\)</span>, it follows that <span class="math inline">\(ac\neq 0\)</span>, and so <span class="math inline">\(a c| b c\)</span> as needed.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2.5 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers. If <span class="math inline">\(a|b,\)</span> then <span class="math inline">\(a^n|b^n\)</span> for any natural number <span class="math inline">\(n.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We will use mathematical induction. Since <span class="math inline">\(a|b\)</span> certainly implies <span class="math inline">\(a|b,\)</span> the case for <span class="math inline">\(k=1\)</span> is trivial. Assume that <span class="math inline">\(a^k|b^k\)</span> holds for some natural number <span class="math inline">\(k&gt;1\)</span>. Then there exists an integer <span class="math inline">\(m\)</span> such that <span class="math inline">\(b^k=m a^k.\)</span> Then <span class="math display">\[
+b^{k+1}=b b^k
+=b \left(m a^k\right)
+=(b m )a^k
+=(m' a m )a^k
+=M a^{k+1}
+\]</span> where <span class="math inline">\(m'\)</span> and <span class="math inline">\(M\)</span> are integers. Whence, <span class="math inline">\(a^{k+1}|b^{k+1}\)</span> as desired.</p>
+</div>
+<p>Before we state and prove the Division Algorithm, let’s recall the Well-Ordering Axiom, namely:</p>
+<blockquote class="blockquote">
+<p>Every nonempty set of positive integers contains a least element.</p>
+</blockquote>
+<p>This is an incredible important and powerful statement. We will use the Well-Ordering Axiom to prove the <strong>Division Algorithm</strong> .</p>
+<p>The proof of the Division Algorithm illustrates the technique of proving <strong>existence</strong> and <strong>uniqueness</strong> and relies upon the Well-Ordering axiom.</p>
+<div id="thm-division-algorithm" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2.1 (Division Algorithm) </strong></span>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are nonzero positive integers, then there are unique positive integers <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> such that <span class="math display">\[
+a=b q+r \qquad \text{and} \qquad 0\leq r&lt;b.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>First we prove existence. Let <span class="math inline">\(b\)</span> be an arbitrary natural number greater than <span class="math inline">\(0\)</span> and let <span class="math inline">\(S\)</span> be the set of multiples of <span class="math inline">\(b\)</span> that are greater than <span class="math inline">\(a\)</span>, namely,<br>
+<span class="math display">\[S=\{b i \mid i\in \mathbb{N} \text{ and } b i &gt; a \}.\]</span></p>
+Notice <span class="math inline">\(S\)</span> is nonempty since <span class="math inline">\(ab&gt;a\)</span>. By the Well-Ordering Axiom, <span class="math inline">\(S\)</span> must contain a least element, say <span class="math inline">\(bk\)</span>. Since <span class="math inline">\(k\not= 0\)</span>, there exists a natural number <span class="math inline">\(q\)</span> such that <span class="math inline">\(k=q+1\)</span>. Notice <span class="math inline">\(b q\leq a\)</span> since <span class="math inline">\(bk\)</span> is the least multiple of <span class="math inline">\(b\)</span> greater than <span class="math inline">\(a\)</span>. Thus there exists a natural number <span class="math inline">\(r\)</span> such that <span class="math inline">\(a=bq+r\)</span>. Notice <span class="math inline">\(0\leq r\)</span>. Assume, <span class="math inline">\(r\geq b\)</span>. Then there exists a natural number <span class="math inline">\(m\geq 0\)</span> such that <span class="math inline">\(b+m=r\)</span>. By substitution, <span class="math inline">\(a=b(q+1)+m\)</span> and so <span class="math inline">\(bk=b(q+1)\leq a\)</span>. This contradiction shows <span class="math inline">\(r&lt;b\)</span> as needed.
+<p>Now we prove uniqueness. Suppose <span class="math display">\[
+a=bq_1 +r_1, \quad
+a=b q_2+r_2, \quad
+0\leq r_1&lt;b, \quad
+0\leq r_2&lt;b.
+\]</span> If <span class="math inline">\(q_1=q_2\)</span> then <span class="math inline">\(r_1=r_2\)</span>. Assume <span class="math inline">\(q_1&lt;q_2\)</span>. Then <span class="math inline">\(q_2=q_1+n\)</span> for some natural number <span class="math inline">\(n&gt;0\)</span>. This implies <span class="math display">\[
+r_1=a-b q_1=bq_2+r_2-b q_1=b n +r_2\geq b n\geq b
+\]</span> which is contrary to <span class="math inline">\(r_1&lt;b\)</span>. Thus <span class="math inline">\(q_1&lt;q_2\)</span> cannot happen. Similarly, <span class="math inline">\(q_2&lt;q_1\)</span> cannot happen either, and thus <span class="math inline">\(q_1=q_2\)</span> as desired.</p>
+</div>
+<p>We say an integer <span class="math inline">\(a\)</span> is of the form <span class="math inline">\(bq+r\)</span> if there exists integers <span class="math inline">\(b,\)</span> <span class="math inline">\(q,\)</span> and <span class="math inline">\(r\)</span> such that <span class="math inline">\(a=bq+r.\)</span> Notice that the division algorithm, in a certain sense, measures the divisibility of <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span> using a remainder <span class="math inline">\(r\)</span>.</p>
+<div id="exm-divsloone" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.1 </strong></span>Show <span class="math inline">\(3\)</span> divides <span class="math inline">\(a(a^2+2)\)</span> for any natural number <span class="math inline">\(a\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Equivalently, we need to show that <span class="math inline">\(a\left(a^2+2\right)\)</span> is of the form <span class="math inline">\(3k\)</span> for some <span class="math inline">\(k\)</span> for any natural number <span class="math inline">\(a.\)</span> By the division algorithm, <span class="math inline">\(a\)</span> has exactly one of the forms <span class="math inline">\(3 k,\)</span> <span class="math inline">\(3k+1,\)</span> or <span class="math inline">\(3k+2.\)</span> If <span class="math inline">\(a=3k+1\)</span> for some <span class="math inline">\(k,\)</span> then<br>
+<span class="math display">\[(3k+1)\left((3k+1)^2+2\right)=3(3k+1)\left(3k^2+2k+1\right)\]</span> which shows <span class="math inline">\(3|a(a^2+2)\)</span>. If <span class="math inline">\(a=3k+2\)</span> for some <span class="math inline">\(k,\)</span> then<br>
+<span class="math display">\[(3k+2)\left((3k+2)^2+2\right)=3(3k+2)\left(3k^2+4k+2\right)\]</span> which shows <span class="math inline">\(3|a(a^2+2)\)</span>. Finally, if <span class="math inline">\(a\)</span> is of the form <span class="math inline">\(3k\)</span> then we have<br>
+<span class="math display">\[a\left(a^2+2\right)=3k\left(9k^2+2\right)\]</span> which shows <span class="math inline">\(3|a(a^2+2)\)</span>. Therefore, in all possible cases, <span class="math inline">\(3|a(a^2+2))\)</span> for any positive natural number <span class="math inline">\(a\)</span>.</p>
+</div>
+<p>The advantage of the Division Algorithm is that it allows us to prove statements about the positive integers (integers) by considering only a finite number of cases. The next three examples illustrates this.</p>
+<div id="exm-divslotwo" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.2 </strong></span>Show <span class="math inline">\(6\)</span> divides the product of any three consecutive positive integers.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(m\)</span> be an natural number. We need to show that <span class="math inline">\(m(m+1)(m+2)\)</span> is of the form <span class="math inline">\(6 k\)</span>. The division algorithm yields that <span class="math inline">\(m\)</span> is either even or odd (not both). In either case, <span class="math inline">\(m(m+1)(m+2)\)</span> must be even. The natural number <span class="math inline">\(m(m+1)(m+2)\)</span> is also divisible by 3, since one of <span class="math inline">\(m,\)</span> <span class="math inline">\(m+1,\)</span> or <span class="math inline">\(m+2\)</span> is of the form <span class="math inline">\(3k\)</span>. Since <span class="math inline">\(m(m+1)(m+2)\)</span> is even and is divisible by 3, it must be divisible by 6.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.3 </strong></span>Prove that, for each natural number <span class="math inline">\(n\)</span>, <span class="math inline">\(7^n-2^n\)</span> is divisible by <span class="math inline">\(5\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of natural number for which <span class="math inline">\(7^n-2^n\)</span> is divisible by <span class="math inline">\(5\)</span>. Clearly, <span class="math inline">\(7^1-2^1=5\)</span> is divisible by <span class="math inline">\(5\)</span>, so <span class="math inline">\(P\)</span> is nonempty with <span class="math inline">\(0\in P\)</span>. Assume <span class="math inline">\(k\in P\)</span>. We find <span class="math display">\[\begin{align*}
+7^{k+1}-2^{k+1}
+&amp; = 7\cdot 7^k-2\cdot 2^k \\
+&amp; = 7\cdot 7^k-7\cdot 2^k+7\cdot 2^k-2\cdot 2^k  \\
+&amp; = 7(7^k- 2^k)+2^k(7 -2)
+\end{align*}\]</span> The induction hypothesis is that <span class="math inline">\((7^k- 2^k)\)</span> is divisible by 5. Now since both <span class="math inline">\((7^k-\cdot 2^k)\)</span> and <span class="math inline">\(7-2\)</span> are divisible by 5, so is any linear combination of <span class="math inline">\((7^k- 2^k)\)</span> and <span class="math inline">\(7-2\)</span>. Hence, <span class="math inline">\(7^{k+1}-2^{k+1}\)</span> is divisible by 5 by <span class="math inline">\(\ref{lincombdiv}\)</span>. Therefore, <span class="math inline">\(k+1\in P\)</span> and so <span class="math inline">\(P=\mathbb{N}\)</span> by mathematical induction.</p>
+</div>
+</section>
+<section id="prime-numbers" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="prime-numbers"><span class="header-section-number">2.3</span> Prime Numbers</h2>
+Several of the most basic and interesting questions concerning the integers involves the prime numbers. For example,
+<p>This question is easy to understand, but no one has been able to answer it.</p>
+<p>From a certain point of very, the prime numbers are the building blocks for the integers; that is to say, every integer greater than 1 has a prime factor. Indeed, every positive integer is a product of primes. This result was known to the ancient Greeks and is sometimes referred to as Euclid{’}s lemma.</p>
+<p>One of the first questions that comes to mind is concerning prime numbers is: <code>how many prime numbers are there?" or maybe even</code>why are primes so important to talk about?“.<br>
+What about these questions: <code>without using trial division, how can one determine whether a given integer is prime or composite?",</code>is it possible for given a function to find all the prime numbers?”, ``are there arbitrarily long sequences of integers, all of which are not primes?“. These simple questions have kept mathematicians busy for thousands of years.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.2 </strong></span>A <strong>prime number</strong> is a natural number greater than 1 that is divisible by no natural numbers other than 1 and itself. A natural number greater than 1 that is not prime is called a <strong>composite number</strong> .</p>
+</div>
+<p>The idea, passing over 1, is to find a prime number and then cross out all of the multiples of this prime number. For example, 2 is prime but every even number is not and so cross all even numbers off the list. Next, 3 is prime and so cross out every multiple of three, because they are not prime. Continue in this fashion, and then the numbers left are the prime numbers. Of course for a given large integer this is not practical, if your time is limited. Since the time of Eratosthenes, sophisticated versions of this algorithm (called the <strong>Sieve of Eratosthenes</strong> ) have achieved new results.<br>
+<span class="math display">\[
+\begin{array}{llllllllll}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10
+\\
+11 &amp; 12 &amp; 13 &amp; 14 &amp; 15 &amp; 16 &amp; 17 &amp; 18 &amp; 19 &amp; 20
+\\
+21 &amp; 22 &amp; 23 &amp; 24 &amp; 25 &amp; 26 &amp; 27 &amp; 28 &amp; 29 &amp; 30
+\\
+31 &amp; 32 &amp; 33 &amp; 34 &amp; 35 &amp; 36 &amp; 37 &amp; 38 &amp; 39 &amp; 40
+\\
+41 &amp; 42 &amp; 43 &amp; 44 &amp; 45 &amp; 46 &amp; 47 &amp; 48 &amp; 49 &amp; 50
+\\
+51 &amp; 52 &amp; 53 &amp; 54 &amp; 55 &amp; 56 &amp; 57 &amp; 58 &amp; 59 &amp; 60
+\\
+61 &amp; 62 &amp; 63 &amp; 64 &amp; 65 &amp; 66 &amp; 67 &amp; 68 &amp; 69 &amp; 70
+\\
+71 &amp; 72 &amp; 73 &amp; 74 &amp; 75 &amp; 76 &amp; 77 &amp; 78 &amp; 79 &amp; 80
+\\
+81 &amp; 82 &amp; 83 &amp; 84 &amp; 85 &amp; 86 &amp; 87 &amp; 88 &amp; 89 &amp; 90
+\\
+91 &amp; 92 &amp; 93 &amp; 94 &amp; 95 &amp; 96 &amp; 97 &amp; 98 &amp; 99 &amp; 100
+\end{array}
+\]</span> Consider the first 5 rows in the above array. How many primes are there in the first 5 rows? How many in the last five rows? If one carries out the sieve of Eratosthenes between 10,000 and 10,050, you will find that there are just 4 prime numbers. Can we find 5 rows where there are no prime numbers? What is the last prime number?</p>
+<p>The following lemma, while known to Euclid, is proven using the (modern) Well-Ordering Axiom.</p>
+<div id="lem-prime-divisor" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2.6 (Prime Divisor) </strong></span>Every natural number greater than 1 has a prime divisor.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume, for a contradiction, that there exists an natural number greater than 1 that does not have a prime divisor. Then since the set of all natural numbers greater than 1 without a prime divisor is nonempty, the Well-Ordering Axiom states that this set must have a least positive natural number, say <span class="math inline">\(n,\)</span> that does not have a prime divisor and is greater than 1. Since <span class="math inline">\(n\)</span> does not have a prime divisor and <span class="math inline">\(n\)</span> divides <span class="math inline">\(n\)</span>, <span class="math inline">\(n\)</span> must not be prime. Thus, <span class="math inline">\(n=a b\)</span> and since <span class="math inline">\(a&lt;n,\)</span> <span class="math inline">\(a\)</span> must have a prime divisor and similarly for <span class="math inline">\(b.\)</span> Therefore, <span class="math inline">\(n=a b\)</span> must have a prime divisor. This contradiction, leads us to the desired conclusion that every natural number greater than 1 must have a <strong>prime divisor</strong> .</p>
+</div>
+<p>The following proof of the infinitude of primes is a great example of what is called proof <strong>by contradiction</strong> . The idea is to suppose that there are finitely many prime numbers, and then use these primes to create another natural number whose prime divisor can not be in the original list of all prime numbers.</p>
+<div id="thm-euclid" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2.2 (Euclid) </strong></span>There are infinitely many primes.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume that the prime numbers are listed in ascending order with <span class="math inline">\(p_1=2,\)</span> <span class="math inline">\(p_2=3,\)</span> <span class="math inline">\(p_3=5,\)</span> and so on; and assume (for a contradiction) that <span class="math inline">\(p_k\)</span> is the last prime. Consider the natural number,<br>
+<span class="math display">\[
+P=p_1p_2\cdots p_k+1.
+\]</span> Since every positive natural number greater than 1 has a prime divisor, <span class="math inline">\(P\)</span> has a prime divisor, say <span class="math inline">\(p_m.\)</span> However, <span class="math inline">\(p_m\)</span> can not divide <span class="math inline">\(P\)</span> since <span class="math inline">\(P\)</span> is of the form, <span class="math inline">\(P=c p_m+1.\)</span> Therefore <span class="math inline">\(p_k\)</span>, the last prime number, cannot exist.</p>
+</div>
+</section>
+<section id="greatest-common-divisors" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="greatest-common-divisors"><span class="header-section-number">2.4</span> Greatest Common Divisors</h2>
+<p>Perhaps the most useful result concerning great common divisors is Bezout’s lemma. This fact states that the greatest common divisor of two integers is always a linear combination of these two integers. In fact we can say more, the greatest common divisor of two given integers is always the least positive linear combination of these two integers.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.3 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be two integers that are not both zero. Then the <strong>greatest common divisor</strong> of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the largest integer that divides both <span class="math inline">\(a\)</span> and <span class="math inline">\(b.\)</span> The greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is denoted by <span class="math inline">\((a,b)\)</span> or sometimes by <span class="math inline">\(\gcd (a,b).\)</span></p>
+</div>
+<p>The integers 4 and 8 have greatest common divisor of 4 and we write <span class="math inline">\((4,8)=4\)</span> since 4 is the largest integer that divides both 4 and 8. Also <span class="math inline">\((23,2)=1\)</span> and <span class="math inline">\((9,51)=3.\)</span></p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.4 </strong></span>A <strong>linear combination</strong> of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is an integer of the form <span class="math inline">\(m a+n b\)</span> where <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are integers.</p>
+</div>
+<p>Note that given 2 and 51 we can form many different linear combinations, here are three examples: <span class="math display">\[
+3(2)+7(51)=363,
+\qquad
+3(2)-7(51)=-351,
+\]</span> and <span class="math inline">\(-31(2)+0(51)=-62.\)</span> The connection between liner combination and greatest command visors is <strong>Bezout’s identity</strong> .</p>
+<div id="thm-linecombgcd" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2.3 (Bezout’s Identity) </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers, not both zero. Then <span class="math inline">\((a,b)=a m +b n\)</span> for some integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers and w.l.o.g. assume <span class="math inline">\(a\neq 0\)</span>. Consider the set<br>
+<span class="math display">\[
+S=\{a x+b y \mid a x+b y&gt;0, \, x \text{ and } y \text{ are integers}\}.
+\]</span> Since <span class="math inline">\(S\)</span> is nonempty, because <span class="math inline">\(|a|\)</span> is in <span class="math inline">\(S,\)</span> the Well-Ordering Axiom yields a least positive natural number <span class="math inline">\(d\)</span> such that <span class="math inline">\(d=a m+b n\)</span> for some integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n.\)</span> The idea is to show that <span class="math inline">\(d=(a,b).\)</span> To do this we use the Division Algorithm obtaining <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> such that <span class="math inline">\(a=q d+r\)</span> where <span class="math inline">\(0\leq r&lt;d.\)</span> If <span class="math inline">\(r&gt;0,\)</span> then <span class="math inline">\(r\)</span> is in <span class="math inline">\(S\)</span> because <span class="math display">\[
+r=a-q d=a-q(a m+b n)=a(1-q m)+b(-q n).
+\]</span><br>
+But we can not have <span class="math inline">\(r\)</span> is in S because <span class="math inline">\(r&lt;d\)</span> and <span class="math inline">\(d\)</span> is the least in <span class="math inline">\(S.\)</span> Therefore <span class="math inline">\(r=0\)</span> and so <span class="math inline">\(d|a.\)</span> Using the same argument with <span class="math inline">\(a\)</span> replaced by <span class="math inline">\(b,\)</span> it is shown that <span class="math inline">\(d|b.\)</span> To show <span class="math inline">\(d=(a,b)\)</span> it remains to show that <span class="math inline">\(d\)</span> is greater than any other common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b;\)</span> and so let <span class="math inline">\(c\)</span> be a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b.\)</span> Then, <span class="math inline">\(c\mid a m+b n\)</span> that is <span class="math inline">\(c\mid d\)</span> and so <span class="math inline">\(d\geq c.\)</span></p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2.1 </strong></span>There are an infinite number of ways to write <span class="math inline">\((a,b)\)</span> as a linear combination of <span class="math inline">\(a\)</span> and <span class="math inline">\(b.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(d=(a,b).\)</span> There exists integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(d=a m+b n\)</span> and thus, for any integer <span class="math inline">\(k,\)</span> we have <span class="math display">\[
+d=(m+k(b/d))a+(n-k(a/d))b
+\]</span> which expresses <span class="math inline">\((a,b)\)</span> as a linear combination of <span class="math inline">\(a\)</span> and <span class="math inline">\(b.\)</span></p>
+</div>
+<div id="cor-setifmultiples" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2.2 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers, then the set of linear combinations of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the set of multiples of <span class="math inline">\((a,b)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By <span class="math inline">\(\ref{linecombgcd}\)</span>, if <span class="math inline">\(d=(a,b)\)</span> then <span class="math inline">\(d=a m+b n\)</span> for some integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n.\)</span> Thus every multiple of <span class="math inline">\(d\)</span> is also a linear combination of <span class="math inline">\(a\)</span>and <span class="math inline">\(b.\)</span> Conversely, let <span class="math inline">\(a x+b y\)</span> be a linear combination of <span class="math inline">\(a\)</span> and <span class="math inline">\(b.\)</span> Then using <span class="math inline">\(\ref{lincombdiv}\)</span>, <span class="math inline">\(d|a m+b y\)</span> and so <span class="math inline">\(a m+b y\)</span> is a multiple of <span class="math inline">\(d.\)</span></p>
+</div>
+<p>Two integers are said to be <strong>relatively prime</strong> if their greatest common divisor is 1.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.5 </strong></span>If <span class="math inline">\((a,b)=1\)</span> then <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are said to be <strong>relatively prime</strong> .</p>
+</div>
+<p>Note that <span class="math inline">\((2,5)=1\)</span> and so 2 and 5 are relatively prime. But <span class="math inline">\((8,24)=8\)</span> and so 8 and 24 are not relatively prime.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.6 </strong></span>Integers <span class="math inline">\(a_1,\)</span> <span class="math inline">\(a_2,\)</span> <span class="math inline">\(\text{...},\)</span> <span class="math inline">\(a_n\)</span> are called <strong>pairwise relatively prime</strong> when <span class="math inline">\(\left(a_i,a_j\right)=1\)</span> for every possible <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> with <span class="math inline">\(i\neq j.\)</span></p>
+</div>
+<p>For example, The integers 3, 5, 7 are pairwise relatively prime because <span class="math inline">\((3,5)=1,\)</span> <span class="math inline">\((5,7)=1,\)</span> and <span class="math inline">\((3,7)=1.\)</span> The integers 4, 19, 27 are pairwise relatively prime because <span class="math inline">\((4,19)=1,\)</span> <span class="math inline">\((4,27)=1,\)</span> and <span class="math inline">\((4,27)=1.\)</span><br>
+The integers 10, 14, and 35 are <strong>mutually relatively prime</strong> because <span class="math inline">\((10,14,35)=1\)</span> (there is no common divisor for all three) however they are not pairwise relatively prime because <span class="math inline">\((10,14)=2.\)</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.4 </strong></span>Show that if <span class="math inline">\(k\)</span> is an integer, then the integers <span class="math inline">\(6k-1,\)</span> <span class="math inline">\(6k+1,\)</span> <span class="math inline">\(6k+2,\)</span> <span class="math inline">\(6k+3,\)</span> and <span class="math inline">\(6k+5\)</span> are relatively prime.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Suppose that <span class="math inline">\((6k+a,6k+b)=d.\)</span> Then <span class="math inline">\(d|(b-a).\)</span> We have <span class="math inline">\(a,b\in \{-1,1,2,3,5\},\)</span> so if <span class="math inline">\(a&lt;b\)</span> it follows that <span class="math inline">\(b-a\in \{1,2,3,4,6\}.\)</span> Hence <span class="math inline">\(d\in \{1,2,3,4,6\}.\)</span> To show that <span class="math inline">\(d=1\)</span> it is sufficient to show that neither 2 nor 3 divides <span class="math inline">\((6k+a,6k+b).\)</span> If <span class="math inline">\(p=2\)</span> or <span class="math inline">\(p=3\)</span> and <span class="math inline">\(p|(6k+a,6k+b)\)</span> then <span class="math inline">\(p|a\)</span> and <span class="math inline">\(p|b.\)</span> However, there are no such pairs <span class="math inline">\(a,b\)</span> in the set <span class="math inline">\(\{-1,1,2,3,5\}.\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.5 </strong></span>Show that every positive integer greater than 6 is the sum of two relatively prime integers greater than 1.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By the previous example, we know that <span class="math inline">\(6k-1,\)</span> <span class="math inline">\(6k+1,\)</span> <span class="math inline">\(6k+2,\)</span> <span class="math inline">\(6k+3,\)</span> and <span class="math inline">\(6k+5\)</span> are pairwise relatively prime. To represent <span class="math inline">\(n\)</span> as the sum of two relatively prime integers greater than one, let <span class="math inline">\(n=12k+h,\)</span> <span class="math inline">\(0\leq h&lt;12.\)</span> We now examine the twelve cases, one for each possible value of <span class="math inline">\(h,\)</span> in the following tables:</p>
+<p><span class="math display">\[\begin{array}{c|c}
+h &amp; n \\ \hline
+0 &amp; (6k-1)+(6k+1) \\
+1 &amp; (6k-1)+(6k+2) \\
+2 &amp; (6k-1)+(6k+3) \\
+3 &amp; (6k+1)+(6k+2) \\
+4 &amp; (6k+2)+(6k+2) \\
+5 &amp; (6k+2)+(6k+3)
+\end{array}\]</span></p>
+<p><span class="math display">\[\begin{array}{c|c}
+h &amp; n \\ \hline
+6 &amp; (6k+1)+(6k+5) \\
+7 &amp; (6k+2)+(6k+5) \\
+8 &amp; (6k+3)+(6k+5) \\
+9 &amp; (12k+7)+2 \\
+10 &amp; (12k+7)+3 \\
+11 &amp; (12k+9)+2
+\end{array}\]</span></p>
+<p>So for all possible cases very positive integer greater than 6 is the sum of two relatively prime integers greater than 1.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2.3 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers, then <span class="math inline">\((a,b)=1\)</span> if and only if there exists integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(a m+b n=1\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\((a,b)=1\)</span> then by <span class="math inline">\(\ref{linecombgcd}\)</span> there exists integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(1=a m +b y.\)</span> Conversely, suppose <span class="math inline">\((a,b)=d\)</span> and that <span class="math inline">\(1=a x+b y\)</span> for some integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y.\)</span> Then <span class="math inline">\(d|1\)</span> because <span class="math inline">\(d|a\)</span> and so <span class="math inline">\(d=1.\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.6 </strong></span>Show that <span class="math inline">\(3k+2\)</span> and <span class="math inline">\(5k+3\)</span> are relatively prime.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(5(3k+2)-3(5k+3)=1,\)</span> the previous proposition implies that <span class="math inline">\((3k+2,5k+3)=1.\)</span></p>
+</div>
+<div id="thm-lestlinercomb" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2.4 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers, then <span class="math inline">\((a,b)\)</span> is the least positive integer that is a linear combination of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>This follows from the Well-Ordering Axiom as in the proof of (i). The proof is left for the reader as Exercise <span class="math inline">\(\ref{linecombgcd}\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.7 </strong></span>What is <span class="math inline">\(\left(a^2+b^2,a+b\right),\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are relatively prime integers that are not both 0?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(p\)</span> be a prime dividing <span class="math inline">\(\left(a^2+b^2,a+b\right)\)</span>. Then<br>
+<span class="math display">\[
+p \, | (a+b)^2 - (a^2+b^2) =2 a b.
+\]</span> Now if <span class="math inline">\(p|a,\)</span> then <span class="math inline">\(p|b\)</span> since <span class="math inline">\(p|(a+b).\)</span> But <span class="math inline">\((a,b)=1,\)</span> so <span class="math inline">\(p\nmid a.\)</span> Similarly, <span class="math inline">\(p\nmid b.\)</span> Therefore, <span class="math inline">\(p|2\)</span> and so <span class="math inline">\(p=1\)</span> or <span class="math inline">\(p=2.\)</span> If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have the same parity, then <span class="math inline">\(2|(a+b)\)</span> and <span class="math inline">\(2\left|\left(a^2+b^2\right)\right.\)</span> and so <span class="math inline">\(\left(a^2+b^2,a+b\right)=2.\)</span> But if <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have opposite parity, then <span class="math inline">\(a+b\)</span> and <span class="math inline">\(\left(a^2+b^2,a+b\right)=1.\)</span></p>
+</div>
+<div id="cor-abdivd" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2.4 </strong></span>If <span class="math inline">\((a,b)=d,\)</span> then <span class="math inline">\((a/d,b/d)=1\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\((a,b)=d\)</span> then <span class="math inline">\(d=a m+b n\)</span> for some integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n.\)</span> Since <span class="math inline">\(d|a\)</span> and <span class="math inline">\(d|b\)</span> we have <span class="math inline">\(1=(a/d) m+(b/d) n\)</span> and by <span class="math inline">\(\ref{lestlinercomb}\)</span> <span class="math inline">\((a/d,b/d)=1.\)</span></p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2.5 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers, then <span class="math inline">\((a,b)=d\)</span> if and only if <span class="math inline">\(d|a,\)</span> <span class="math inline">\(d|b,\)</span> and if <span class="math inline">\(c\)</span> is another common divisor then <span class="math inline">\(c|d\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\((a,b)=d\)</span> then by definition, <span class="math inline">\(d|a\)</span> and <span class="math inline">\(d|b.\)</span> Let <span class="math inline">\(c\)</span> be a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(a=c x\)</span> and <span class="math inline">\(b=c y\)</span> for some integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y.\)</span> By <span class="math inline">\(\ref{linecombgcd}\)</span>, there exists <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(d=a m+b n;\)</span> and therefore we have <span class="math inline">\(d=c (x m+y n).\)</span> Whence, <span class="math inline">\(c|d.\)</span></p>
+</div>
+<div id="cor-euclidlemmaprop" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2.5 </strong></span>If <span class="math inline">\(b|a c\)</span> and <span class="math inline">\((a,b)=1,\)</span> then <span class="math inline">\(b|c\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(b| a c\)</span> there exists an integer <span class="math inline">\(k\)</span> such that <span class="math inline">\(a c = b k\)</span>. Since <span class="math inline">\((a,b)=1\)</span> there exists integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(a m+b n=1\)</span>. Then <span class="math display">\[
+c=c (1)=c (a m + b n) = (a c) m + b c n = b k m+b n = b ( k m + c n)
+\]</span> which shows <span class="math inline">\(b|c\)</span> since <span class="math inline">\(km + c n\)</span> is an integer.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2.6 </strong></span>If <span class="math inline">\(b|a\)</span>, <span class="math inline">\(c|a\)</span>, and <span class="math inline">\((b,c)=1\)</span>, then <span class="math inline">\(b c|a\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(b|a,\)</span> <span class="math inline">\(c|a,\)</span> and <span class="math inline">\((b,c)=1,\)</span> there exist natural numbers <span class="math inline">\(s\)</span>, <span class="math inline">\(t\)</span>, <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> with <span class="math inline">\(a= sb\)</span>, <span class="math inline">\(a =t c\)</span>, and <span class="math inline">\(bm+nc=1\)</span>. Then <span class="math display">\[
+a=a(1)=a(bm+nc)=a b m+a n c = t c b m +s b n c= bc(tm+sn)
+\]</span> which shows <span class="math inline">\(bc|a\)</span> since <span class="math inline">\(tm+sn\)</span> is an natural number.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2.7 </strong></span>If <span class="math inline">\((a,b c)=1\)</span>, then <span class="math inline">\((a,b)=1\)</span> and <span class="math inline">\((a,c)=1\)</span>; and conversely.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\((a,b c)=1\)</span>, there exists natural numbers <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> such that <span class="math inline">\(a u+ b c v=1\)</span>. Since 1 is a linear combination of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and is also a linear combination of <span class="math inline">\(a\)</span> and <span class="math inline">\(c\)</span>, it follows <span class="math inline">\((a,b)=1\)</span> and <span class="math inline">\((a,c)=1\)</span>.</p>
+<p>Conversely, if <span class="math inline">\((a,c)=1\)</span> then <span class="math inline">\((a,b)=1\)</span> there exists natural numbers <span class="math inline">\(s\)</span>, <span class="math inline">\(t\)</span>, <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(a s+b ct=1\)</span> and <span class="math inline">\(a m+b n=1\)</span>. Multiplying, <span class="math display">\[
+1=(a s+b ct)(a m+b n)=a (sm+sbn+ctm)+ bc (tn)
+\]</span> which shows 1 is a linear combination of <span class="math inline">\(a\)</span> and <span class="math inline">\(bc\)</span> and so <span class="math inline">\((a,bc)=1\)</span>.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2.8 </strong></span>If <span class="math inline">\((a,b)=1\)</span> and <span class="math inline">\(c|a\)</span>, then <span class="math inline">\((c,b)=1\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\((a,b)=1\)</span> and <span class="math inline">\(c|a,\)</span> then there exists natural numbers <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span>, and <span class="math inline">\(k\)</span> such that <span class="math inline">\(am+bn=1\)</span> and <span class="math inline">\(a=ck\)</span>. Then <span class="math display">\[
+1=am+bn=c(km)+bn
+\]</span> which shows <span class="math inline">\((b,c)=1\)</span>.</p>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/learning-number-theory\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./peanos-axioms.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Peano’s Axioms</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./euclidean-algorithm.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Euclidean Algorithm</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

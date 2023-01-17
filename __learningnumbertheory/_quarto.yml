@@ -1,5 +1,5 @@
-# Basic Set Theory
-# python -m http.server 8001
+# Learning Number Theory
+# python -m http.server 8000
 
 project:
   type: book
@@ -7,27 +7,27 @@ project:
     - assets
     - images
   post-render: 
-    - _webtools/html_revise.py
+    - ../_webtools/html_revise_lnt.py
 
 book:
-  title: "Basic Set Theory"
+  title: "Learning Number Theory"
   chapters:
     - index.qmd
-    - propositional-logic.qmd
-    - predicate-logic.qmd
-    - mathematical-proofs.qmd
-    - set-theory.qmd
-    - functions-and-relations.qmd
-    - well-founded-confluence.qmd
-    - connect-everything.qmd
-    - concept-theory.qmd
+    - peanos-axioms.qmd
+    - divisibility.qmd
+    - euclidean-algorithm.qmd
+    - unique-factorization.qmd
+    - congruence-equations.qmd
+    - eulers-theorem.qmd
+    - quadratic-congruences.qmd
+    #- polynomial-congruences.qmd
     - references.qmd
   page-navigation: true
   search: 
     location: sidebar
     type: textbox
   sidebar:
-    title: "Basic Set Theory"
+    title: "Learning Number Theory"
     style: "floating"
     collapse-level: 0
   navbar:
@@ -43,6 +43,10 @@ book:
             href: https://directknowledge.com/basic-set-theory/
             icon: book
             aria-label: Basic Set Theory Book
+          - text: "Learning Number Theory"
+            href: https://directknowledge.com/learning-number-theory/
+            icon: book
+            aria-label: Learning Number Theory Book
       - href: http://directknowledge.com/about.html
         text: "About"
       - href: https://youtube.com/@directknowledge
@@ -53,16 +57,14 @@ book:
         aria-label: GitHub
   favicon: "../assets/favicon.ico"
   open-graph: true
-  site-url: https://directknowledge.com/basic-set-theory/
+  site-url: https://directknowledge.com/learning-number-theory/
   page-footer:
     center: 
       - text: "&copy; Copyright 2023, All Rights Reserved. DirectKnowledge.com"
         href: "https://directknowledge.com"
-  description: "Basic Set Theory"
-
-bibliography: 
-  - references.bib
-  - logic.bib
+  description: "Learning Number Theory"
+  
+bibliography: references.bib
 
 format:
   html:
@@ -83,22 +85,23 @@ format:
       url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"	
     include-in-header: 
       - ../_html/head.html
-      - _html/head-book.html
+      - ../_html/head-lnt.html
     include-after-body: 
       - ../_html/organization.html
       - ../_html/website.html
       - ../_html/mathjax.html
       - ../_html/analytics.html
-      - _html/mathhead.html
+      - ../_html/mathhead.html
   pdf:
     keep-tex: true
     toc: false
     documentclass: book
     classoption: [10pt,reqno,twopage,openany]
     include-in-header: 
-      - _control/packages.tex
-      - _control/commands.tex
+      - ../_control/packages.tex
+      - ../_control/commands.tex
     include-before-body:
-      - _control/topmatter.tex
+      - ../_control/topmatter.tex
     include-after-body: 
-      - _control/makeindex.tex
+      - ../_control/makeindex.tex
+

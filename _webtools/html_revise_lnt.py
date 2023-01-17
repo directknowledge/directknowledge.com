@@ -3,12 +3,12 @@ import shutil
 import glob
 
 global site_dir 
-site_dir = '/Users/davidsmith/Documents/Sites/directknowledge.com/_basicsettheory/_book/'
+site_dir = '/Users/davidsmith/Documents/Sites/directknowledge.com/__learningnumbertheory/_book/'
 os.chdir(site_dir)
 
 
 # delete final directory if exists
-final_dir = '/Users/davidsmith/Documents/Sites/directknowledge.com/_site/basic-set-theory'
+final_dir = '/Users/davidsmith/Documents/Sites/directknowledge.com/_site/learning-number-theory'
 #try:
     #os.remove(final_dir)
 shutil.rmtree(final_dir, ignore_errors=True)
@@ -19,16 +19,16 @@ shutil.rmtree(final_dir, ignore_errors=True)
 ## add the html (image, link, book info) above the toc on all pages. 
 toc = '<nav id="TOC" role="doc-toc" class="toc-active">'
 image_toc = toc
-image_toc += '<a href="https://directknowledge.com/basic-set-theory/">'
+image_toc += '<a href="https://directknowledge.com/learning-number-theory/">'
 image_toc += '<picture>' 
-image_toc += '<source type="image/webp" srcset="../../assets/basic-set-theory-cover.webp">'
-image_toc += '<source type="image/webp" srcset="../../assets/basic-set-theory-cover-thumbnail.png">'
-image_toc += '<img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/basic-set-theory-cover.png" alt="Basic Set Theory Book Cover">'
+image_toc += '<source type="image/webp" srcset="../../assets/learning-number-theory-cover.webp">'
+image_toc += '<source type="image/webp" srcset="../../assets/learning-number-theory-cover-thumbnail.png">'
+image_toc += '<img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/learning-number-theory-cover.png" alt="Learning Number Theory Book Cover">'
 image_toc += '</picture>' 
 image_toc += '</a>' 
 
 book_search = '<div class="sidebar-search">'
-book_title_search = '<a class="book-title" href="https://directknowledge.com/basic-set-theory/">Basic Set Theory</a><div class="sidebar-search">'
+book_title_search = '<a class="book-title" href="https://directknowledge.com/learning-number-theory/">Learning Number Theory</a><div class="sidebar-search">'
 
 
 ## find all js on page
@@ -84,7 +84,7 @@ def html_revise():
         with open(html_file) as f:
             newText = f.read()
             # navbar 
-            newText = newText.replace('class="navbar-brand" href="./index.html"', 'aria-label="Basic Set Theory" class="navbar-brand" href="https://directknowledge.com"')
+            newText = newText.replace('class="navbar-brand" href="./index.html"', 'aria-label="Learning Number Theory" class="navbar-brand" href="https://directknowledge.com"')
             newText = newText.replace('-logo.svg" alt="Direct Knowledge Logo"', '-logo.svg" alt="Direct Knowledge Logo" width="28" height="24" ')
             # sidebar 
             newText = newText.replace(book_search, book_title_search)

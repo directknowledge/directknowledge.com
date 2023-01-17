@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Learning Number Theory">
+<title>Peano’s Axioms - Learning Number Theory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./divisibility.html" rel="next">
+<link href="./index.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+</style>
+<style>
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+.book-title, #quarto-search svg {
+    color: #cb6d00!important;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
+    font-weight: 500!important;
+    color:#cb6d00;
+ }
+ #quarto-sidebar .text-start {
+    font-variant: small-caps;
+    font-size: 120%;
+ }
+ #quarto-sidebar .active, .active .chapter-number {
+    color:#000000!important;
+    font-weight: 700!important;
+ }
+</style>
+  
+<meta property="og:title" content="Peano’s Axioms - Learning Number Theory">
+<meta property="og:description" content="Learning Number Theory">
+<meta property="og:site-name" content="Learning Number Theory">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Learning Number Theory" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Number Theory Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Peano’s Axioms</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/learning-number-theory/">Learning Number Theory</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./peanos-axioms.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Peano’s Axioms</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./divisibility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Divisibility</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./euclidean-algorithm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Euclidean Algorithm</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/learning-number-theory/"><picture><source type="image/webp" srcset="../../assets/learning-number-theory-cover.webp"><source type="image/webp" srcset="../../assets/learning-number-theory-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/learning-number-theory-cover.png" alt="Learning Number Theory Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#addition" id="toc-addition" class="nav-link active" data-scroll-target="#addition"><span class="toc-section-number">1.1</span>  Addition</a></li>
+  <li><a href="#multiplication" id="toc-multiplication" class="nav-link" data-scroll-target="#multiplication"><span class="toc-section-number">1.2</span>  Multiplication</a></li>
+  <li><a href="#mathematical-induction" id="toc-mathematical-induction" class="nav-link" data-scroll-target="#mathematical-induction"><span class="toc-section-number">1.3</span>  Mathematical Induction</a></li>
+  <li><a href="#the-well-ordering-principle" id="toc-the-well-ordering-principle" class="nav-link" data-scroll-target="#the-well-ordering-principle"><span class="toc-section-number">1.4</span>  The Well-Ordering Principle</a></li>
+  <li><a href="#the-mathematical-induction-equivalence" id="toc-the-mathematical-induction-equivalence" class="nav-link" data-scroll-target="#the-mathematical-induction-equivalence"><span class="toc-section-number">1.5</span>  The Mathematical Induction Equivalence</a></li>
+  <li><a href="#the-fibonacci-sequence" id="toc-the-fibonacci-sequence" class="nav-link" data-scroll-target="#the-fibonacci-sequence"><span class="toc-section-number">1.6</span>  The Fibonacci Sequence</a></li>
+  <li><a href="#universal-property-of-natural-numbers" id="toc-universal-property-of-natural-numbers" class="nav-link" data-scroll-target="#universal-property-of-natural-numbers"><span class="toc-section-number">1.7</span>  Universal Property of Natural Numbers</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">1.8</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Peano’s Axioms</span></h1>
+</header>
+<p><strong>Peano’s Axioms</strong> <span class="math inline">\(\mathbb{N}\)</span> is a set with the following properties.</p>
+<ul>
+<li><span class="math inline">\(\mathbb{N}\)</span> has a distinguished element which we call <strong>1</strong>.</li>
+<li>There exists a distinguished set map <span class="math inline">\(s: \mathbb{N} \to \mathbb{N}\)</span>.</li>
+<li>The mapping <span class="math inline">\(s\)</span> is injective.</li>
+<li>There does not exists an element <span class="math inline">\(n\in \mathbb{N}\)</span> such that <span class="math inline">\(s(n)=1\)</span>.</li>
+<li>If <span class="math inline">\(S\)</span> is a subset of <span class="math inline">\(\mathbb{N}\)</span> with the properties: <span class="math inline">\(1\in S\)</span> and if <span class="math inline">\(n\in S\)</span>, then <span class="math inline">\(s(n)\in S\)</span>, then <span class="math inline">\(S=\mathbb{N}\)</span>.</li>
+</ul>
+<p>We call such a set <span class="math inline">\(\mathbb{N}\)</span> to be the set of natural numbers and elements of this set to be natural numbers.</p>
+<div id="thm-wdef" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.1 </strong></span>If <span class="math inline">\(n\in\mathbb{N}\)</span> and <span class="math inline">\(n\neq 1\)</span>, then there exists a unique <span class="math inline">\(m\in \mathbb{N}\)</span> such that <span class="math inline">\(s(m)=n\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Consider the subset <span class="math display">\[\begin{equation}
+S=\{n\in \mathbb{N} \mid n=1 \text{ or } n=s(m), \text{ for some } m\in \mathbb{N}\}.
+\end{equation}\]</span> By definition, <span class="math inline">\(1\in S\)</span>. If <span class="math inline">\(n\in S\)</span>, clearly <span class="math inline">\(s(n)\in S\)</span>, again by definition of <span class="math inline">\(S\)</span>. Thus by induction, we see that <span class="math inline">\(S=\mathbb{N}\)</span>. Further injectivity of <span class="math inline">\(s\)</span> implies uniqueness as claimed.</p>
+</div>
+<section id="addition" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="addition"><span class="header-section-number">1.1</span> Addition</h2>
+<p>By <span class="math inline">\(\ref{wdef}\)</span>, the following definition of addition is well-defined.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.1 </strong></span>Let be the operation <span class="math inline">\(+:X\times X\to X\)</span> recursively defined on <span class="math inline">\(y\)</span> by <span class="math display">\[\begin{equation}
+x+y:=
+\begin{cases}
+x &amp; \text{if $y=0$} \\
+s(x+z) &amp; \text{if $y\in s(X)$ and $y=s(z)$} \\
+\end{cases}
+\end{equation}\]</span></p>
+</div>
+<p>Notice <span class="math inline">\(0+0=0\)</span> and that <span class="math inline">\(x+0=x\)</span>, for all <span class="math inline">\(x\in X\)</span>.</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.1 </strong></span> For all <span class="math inline">\(x\in X\)</span>, <span class="math inline">\(x+1=s(x)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x\in X\)</span>. Immediately, <span class="math inline">\(x+1=x+s(0)=s(x+0)=s(x)\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.2 </strong></span> For all <span class="math inline">\(x\in X\)</span>, <span class="math inline">\(0+x=x\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We use induction on <span class="math inline">\(x\)</span>. First, <span class="math inline">\(0+1=0+s(0)=s(0+0)=s(0)=1\)</span>. Assume that <span class="math inline">\(0+y=y\)</span>. We must show that <span class="math inline">\(0+s(y)=s(y)\)</span>. We have <span class="math inline">\(0+s(y)=s(0+y)=s(y)\)</span>. Therefore, <span class="math inline">\(0+x=x\)</span>, for all <span class="math inline">\(x\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.3 </strong></span> For all <span class="math inline">\(x,y\in X\)</span>, <span class="math inline">\(s(x+y)=s(x)+y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x\in X\)</span>. We use induction on <span class="math inline">\(y\)</span>. First, <span class="math inline">\(s(x+0)=s(x)=s(x)+0\)</span>. Let <span class="math inline">\(z\in X\)</span> and assume that <span class="math inline">\(s(x+z)=s(x)+z\)</span>. We must show that <span class="math inline">\(s(x+s(z))=s(x)+s(z)\)</span>. We have <span class="math inline">\(s(x+s(z))=s(s(x+z))=s(s(x)+z)=s(x)+s(z)\)</span>. Therefore, <span class="math inline">\(s(x+y)=s(x)+y\)</span>, for all <span class="math inline">\(x,y\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.4 </strong></span> For all <span class="math inline">\(x,y\in X\)</span>, <span class="math inline">\(x+y=y+x\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x\in X\)</span>. We use induction on <span class="math inline">\(y\)</span>. The case <span class="math inline">\(y=0\)</span> follows from <span class="math inline">\(\ref{prop2}\)</span>. Let <span class="math inline">\(z\in X\)</span> and assume that <span class="math inline">\(x+z=z+x\)</span>. We must show that <span class="math inline">\(x+s(z)=s(z)+x\)</span>. We have <span class="math inline">\(x+s(z)=s(x+z)=s(z+x)=s(z)+x\)</span>, where the last equality follows by <span class="math inline">\(\ref{prop3}\)</span>. Therefore, <span class="math inline">\(x+y=y+x\)</span>, for all <span class="math inline">\(x,y\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.5 </strong></span>For all <span class="math inline">\(x,y,z\in X\)</span>, <span class="math inline">\((x+y)+z=x+(y+z)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x,y\in X\)</span>. We use induction on <span class="math inline">\(z\)</span>. First, <span class="math inline">\((x+y)+0=x+y=x+(y+0)\)</span>. Let <span class="math inline">\(w\in X\)</span> and assume <span class="math inline">\((x+y)+w=x+(y+w)\)</span>, we must show <span class="math inline">\(s(w)\)</span> has the same property. In fact, <span class="math inline">\((x+y)+s(w)=s((x+y)+w)=s(x+(y+w))=x+s(y+w)=x+(y+s(w))\)</span> as we needed. Therefore, <span class="math inline">\((x+y)+z=x+(y+z)\)</span>, for all <span class="math inline">\(x,y,z\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.6 </strong></span> For all <span class="math inline">\(x,y,z\in X\)</span>, <span class="math display">\[\begin{equation}
+\label{canadd}
+x+y=z+y\implies x=z.
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x,z\in X\)</span>. We use induction on <span class="math inline">\(y\)</span>. If <span class="math inline">\(y=0\)</span>, then <span class="math inline">\(\eqref{canadd}\)</span> holds. Let <span class="math inline">\(w\in X\)</span> and assume that <span class="math inline">\(\eqref{canadd}\)</span> holds for <span class="math inline">\(w\)</span>.<br>
+We must show that <span class="math inline">\(x+s(w)=z+(w)\)</span> implies <span class="math inline">\(x=z\)</span>. Notice <span class="math inline">\(x+s(w)=z+s(w)\)</span> is equivalent to <span class="math inline">\(s(x+w)=s(z+w)\)</span>. Since <span class="math inline">\(s\)</span> is injective, this implies <span class="math inline">\(x+w=z+w\)</span> as needed.</p>
+</div>
+</section>
+<section id="multiplication" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="multiplication"><span class="header-section-number">1.2</span> Multiplication</h2>
+<p>By <span class="math inline">\(\ref{wdef}\)</span>, the following definition of multiplication is well-defined.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.2 </strong></span>We define <span class="math inline">\(x\cdot y\)</span>, recursively on <span class="math inline">\(y\)</span>, by <span class="math display">\[\begin{equation}
+x\cdot 0=0, \qquad x\cdot s(y)=x\cdot y +x.
+\end{equation}\]</span></p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.7 </strong></span>For all <span class="math inline">\(x\in X\)</span>, <span class="math inline">\(x\cdot 1=x\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x\in X\)</span>. Immediately, <span class="math inline">\(x\cdot 1=x\cdot s(0)=x\cdot 0+x=0+x=x\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.8 </strong></span>For all <span class="math inline">\(y\in X\)</span>, <span class="math inline">\(0\cdot y=0\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We use induction on <span class="math inline">\(y\)</span>. First, <span class="math inline">\(0\cdot 0=0\)</span>. Let <span class="math inline">\(z\in X\)</span> and assume <span class="math inline">\(0\cdot z=0\)</span>. We must show that <span class="math inline">\(0\cdot s(z)=0\)</span>. We have <span class="math inline">\(0\cdot s(z)=0\cdot z +0=0+0=0\)</span>. Therefore, <span class="math inline">\(0\cdot y=0\)</span>, for all <span class="math inline">\(y\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.9 </strong></span>For all <span class="math inline">\(x,y\in X\)</span>, <span class="math inline">\(s(x)\cdot y=x\cdot y+y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x\in X\)</span>. We use induction on <span class="math inline">\(y\)</span>. First, <span class="math inline">\(s(x)\cdot 0=0=0+0=x\cdot 0+0\)</span>. Let <span class="math inline">\(z\in X\)</span> and assume <span class="math inline">\(s(x)\cdot z=x\cdot z+z\)</span>. We must show that <span class="math inline">\(s(x)\cdot s(z)=x\cdot s(z)+s(z)\)</span>. We have <span class="math inline">\(s(x)\cdot s(z) =s(x)\cdot z +s(x) =x\cdot z+z +(x+1) =x\cdot z+x +(z+1)=x\cdot s(z)+s(z)\)</span>. Therefore, <span class="math inline">\(s(x)\cdot y=x\cdot y+y\)</span>, for all <span class="math inline">\(x,y\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.10 </strong></span>For all <span class="math inline">\(x,y\in X\)</span>, <span class="math inline">\(x\cdot y = y\cdot x\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x\in X\)</span>. We use induction on <span class="math inline">\(y\)</span>. First, <span class="math inline">\(x\cdot 0 =0= 0\cdot x\)</span>. Let <span class="math inline">\(z\in X\)</span> and assume <span class="math inline">\(x\cdot z = z\cdot x\)</span>. We must show that <span class="math inline">\(x\cdot s(z) = s(z)\cdot x\)</span>. We have <span class="math inline">\(x\cdot s(z) = x\cdot z+x=z\cdot x+x=s(z)\cdot x\)</span>. Therefore, <span class="math inline">\(x\cdot y = y\cdot x\)</span>, for all <span class="math inline">\(x,y\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.11 </strong></span>For all <span class="math inline">\(x,y,z\in X\)</span>, <span class="math inline">\((x+y)\cdot z=x\cdot z+y\cdot z\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x,y\in X\)</span>. We use induction on <span class="math inline">\(z\)</span>. Clearly, <span class="math inline">\((x+y)\cdot 0=x\cdot 0+y\cdot 0\)</span>. Let <span class="math inline">\(w\in X\)</span> and assume <span class="math inline">\((x+y)\cdot w=x\cdot w+y\cdot w\)</span>. We must show that <span class="math inline">\((x+y)\cdot s(w)=x\cdot s(w)+y\cdot s(w)\)</span>. We have <span class="math display">\[\begin{align*}
+(x+y)\cdot s(w) &amp; =(x+y) \cdot w+(x+y) = x\cdot w+y \cdot w+(x+y) \\
+&amp; = (x\cdot w+x)+(y \cdot w+y) =x\cdot s(w)+y\cdot s(w)
+\end{align*}\]</span> which follow by the commutative and associative laws for addition. Therefore, <span class="math inline">\((x+y)\cdot z=x\cdot z+y\cdot z\)</span>, for all <span class="math inline">\(x,y,z\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.12 </strong></span>For all <span class="math inline">\(x,y,z\in X\)</span>, <span class="math inline">\((x\cdot y)\cdot z=x\cdot (y\cdot z)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x,y\in X\)</span>. We use induction on <span class="math inline">\(z\)</span>. Clearly, <span class="math inline">\((x\cdot y)\cdot 0=x\cdot (y\cdot 0)\)</span>. Let <span class="math inline">\(w\in X\)</span> and assume <span class="math inline">\((x\cdot y)\cdot w=x\cdot (y\cdot w)\)</span>. We must show that <span class="math inline">\((x\cdot y)\cdot s(w)=x\cdot (y\cdot s(w))\)</span>. We have <span class="math display">\[\begin{align*}
+(x\cdot y)\cdot s(w)
+&amp; =(x\cdot y)\cdot w+(x\cdot y)
+=x\cdot (y\cdot w)+(x\cdot y) \\
+&amp; =x\cdot (y\cdot w+ y)
+=x\cdot (y\cdot s(w))
+\end{align*}\]</span> which follow from the commutative law of multiplication and the distributive law. Therefore, <span class="math inline">\((x\cdot y)\cdot z=x\cdot (y\cdot z)\)</span>, for all <span class="math inline">\(x,y,z\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.13 </strong></span> For all <span class="math inline">\(x,y\in X\)</span>, <span class="math display">\[\begin{equation}
+\label{greadd}
+x&gt; y \text{ if and only if } x=y+u \text{ for some } 0\neq u\in X.
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<span class="proof-title"><em>Proof</em>. </span>We use induction on <span class="math inline">\(y\)</span>. The case for <span class="math inline">\(y=0\)</span> is clear. Let <span class="math inline">\(z\in X\)</span>. Assume <span class="math inline">\(\ref{greadd}\)</span> holds for <span class="math inline">\(z\)</span>, for all <span class="math inline">\(x\in X\)</span>. We will prove that <span class="math display">\[
+t&gt;s(z) \Leftrightarrow t=s(z)+v \text{ for some } 0\neq v\in X.
+\]</span> Assume <span class="math inline">\(t&gt;s(z)\)</span>. Then <span class="math inline">\(t&gt;s(z)&gt;z\)</span> and so by hypothesis, there exists <span class="math inline">\(0\neq v\in X\)</span> such that <span class="math inline">\(t=z+v\)</span>. Since <span class="math inline">\(s\)</span> is onto, let <span class="math inline">\(v=s(u)\)</span>. Then <span class="math inline">\(t=z+v=z+s(u)=s(z+u)=s(z)+u\)</span>. If <span class="math inline">\(u=0\)</span>, then <span class="math inline">\(t=s(z)\)</span> contrary to hypothesis.
+<p>To prove conversely, assume <span class="math inline">\(t=s(z)+v\)</span> for some nonzero element <span class="math inline">\(v\)</span>. If <span class="math inline">\(t=s(z)\)</span>, then <span class="math inline">\(v=0\)</span> contrary to hypothesis. Suppose <span class="math inline">\(t&lt;s(z)\)</span>. Case: <span class="math inline">\(t&gt;z\)</span>. Then <span class="math inline">\(z&lt;t&lt;s(z)\)</span> which can not happen. Case: <span class="math inline">\(t=z\)</span>. Then <span class="math inline">\(z=s(z)+v\)</span> and so <span class="math inline">\(s(z)=z+1=s(z)+v+1\)</span>. Hence <span class="math inline">\(0=v+1=v+s(0)=s(v+0)=s(v)\)</span> which implies <span class="math inline">\(v=1\)</span> since <span class="math inline">\(s\)</span> is injective. Hence <span class="math inline">\(0=1+1\)</span>, this absurdity implies that this case can not happen. Case: <span class="math inline">\(t&gt;z\)</span>. Then <span class="math inline">\(s(z)+v&lt;z\)</span> and so <span class="math inline">\(x=z+v&lt;s(z+v)=s(z)+v&lt;z\)</span>. By induction hypothesis <span class="math inline">\(x&gt;z\)</span>. Therefore, this case cannot happen either. All cases considered, it now follows that <span class="math inline">\(t&gt;s(z)\)</span>. Whence, <span class="math inline">\(\ref{greadd}\)</span> holds for all <span class="math inline">\(x,y\in X\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.14 </strong></span>For all <span class="math inline">\(w,x,y,z\in X\)</span>, if <span class="math inline">\(w&lt;x\)</span> and <span class="math inline">\(y&lt;z\)</span>, then <span class="math inline">\(w+y&lt;x+z\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(w&lt;x\)</span> and <span class="math inline">\(y&lt;z\)</span>. Then there exists nonzero <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> such that <span class="math inline">\(x=w+s\)</span> and <span class="math inline">\(z=y+t\)</span>. Then <span class="math inline">\(x+z=w+y+(s+t)\)</span> and so by <span class="math inline">\(\ref{lemorder}\)</span>, <span class="math inline">\(w+y&lt;x+z\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.15 </strong></span> For all <span class="math inline">\(x,y,z\in X\)</span>, <span class="math display">\[\begin{equation}
+\label{canmult}
+x\cdot y=x\cdot z, x\neq 0 \implies y=z.
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(x\cdot y = x\cdot z.\)</span> If <span class="math inline">\(y&lt;z\)</span> then there exists <span class="math inline">\(w&gt;0\)</span> such that <span class="math inline">\(z=y+w\)</span>. Then <span class="math inline">\(x\cdot y=x\cdot z=x\cdot (y+w)=x\cdot y+x\cdot w\)</span>. By <span class="math inline">\(\ref{addcan}\)</span>, we have <span class="math inline">\(x\cdot w=0\)</span>. Since <span class="math inline">\(x\neq0\)</span> and <span class="math inline">\(w\neq 0\)</span>, let <span class="math inline">\(x=s(u)\)</span> and <span class="math inline">\(w=s(t)\)</span>. Then <span class="math inline">\(x\cdot w=x\cdot s(t)=x\cdot t+s(u)=s(x\cdot t+u)\neq 0\)</span>. Hence, we find that <span class="math inline">\(y&lt;z\)</span> cannot happen. Similarly, the case for <span class="math inline">\(y&gt;z\)</span> cannot happen, and thus <span class="math inline">\(y=z\)</span>.</p>
+</div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.16 </strong></span>For all <span class="math inline">\(x,y,z\in X\)</span>, if <span class="math inline">\(x&lt;y\)</span> and <span class="math inline">\(0&lt;z\)</span>, then <span class="math inline">\(xz&lt;yz\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(x&lt;y\)</span> and <span class="math inline">\(0&lt;z.\)</span> Then there exist nonzero <span class="math inline">\(s\)</span> such that <span class="math inline">\(y=x+s\)</span>. Then <span class="math inline">\(yz=(x+s)z=xz+sz\)</span> If <span class="math inline">\(sz=0\)</span>, then <span class="math inline">\(yz=xz\)</span>. By <span class="math inline">\(\ref{canlemma}\)</span>, we have <span class="math inline">\(y=x\)</span>, contrary to hypothesis. Therefore, <span class="math inline">\(sx\neq 0\)</span> and so we have <span class="math inline">\(xz&lt;yz\)</span>.</p>
+</div>
+</section>
+<section id="mathematical-induction" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="mathematical-induction"><span class="header-section-number">1.3</span> Mathematical Induction</h2>
+<p>Now it’s time to take a closer look at the principle of mathematical induction and see how it works. Then we’ll explore some examples so that you can get a better understanding of this important principle.</p>
+<p>Mathematical induction is a principle that allows us to prove a theorem by assuming that the theorem is true for a certain value of a variable and then demonstrating that the theorem holds for all larger values of the variable. This principle is incredibly important in mathematics and can be used to solve problems both big and small.</p>
+<p>But, mathematical induction is challenging, especially for beginners. That’s why I made this article and video series so you can become skilled. So let’s start learning about mathematical induction.</p>
+<p>The idea behind mathematical induction (or just <strong>induction</strong>) is simple: we prove that the statement holds for the first element in a well-ordered set (this is called the <strong>base case</strong>), and then we prove that if the statement holds for any given element in the set, it must also hold for the next element in the set (this is called the <strong>inductive step</strong>). By showing these two steps, the base case and the inductive step, it follows by mathematical induction that the statement holds for all elements in the set.</p>
+<p>This process can be used to prove statements involving natural numbers, integers, rational numbers, and real numbers; and is basically used throughout mathematics.</p>
+<p>The most basic form of mathematical induction is called <strong>natural induction</strong>. This type of induction can be used to prove statements involving the natural numbers <span class="math display">\[\mathbb{N}=\{0,1,2,3,\ldots\}.\]</span> To use natural induction, we first need to prove the statement for the first natural number, which is 0. This is called the base case.</p>
+<p>On the other hand, we also use mathematical induction to prove statements involving the positive integers <span class="math display">\[\mathbb{Z}^+ =\{1,2,3,\ldots\}.\]</span> In using this method, the base case is at 1. Now whichever of these two methods you wish to use, the next step is the same.</p>
+<p>Next, we assume that the statement is true for some number <span class="math inline">\(n.\)</span> This is called the <strong>induction hypothesis</strong>. Finally, we must prove that the statement is also true for the next number, <span class="math inline">\(n+1.\)</span> This is called the induction step. If we can successfully complete these two steps (base case) and inductive step), then we have written a mathematical proof based on the principle of mathematical induction. For more on mathematical induction see <span class="citation" data-cites="davenport2008higher">(<a href="references.html#ref-davenport2008higher" role="doc-biblioref">Davenport 2008, 6–8</a>)</span>.</p>
+<p>Does this sound confusing yet? Well, we have just begun. So let’s go into more detail.</p>
+<p>What is mathematical induction and why is it useful in proofs? Mathematical induction is a method of mathematical proof that is used to establish a given statement for all natural numbers. In other words, it allows us to prove statements about infinitely many objects (such as natural numbers) by proving them for just one object, and then using that result to prove the statement for the next object, and so on. Here is the full statement of mathematical induction <span class="citation" data-cites="burton2006elementary">(<a href="references.html#ref-burton2006elementary" role="doc-biblioref">Burton 2006, 2–6</a>)</span>:</p>
+<p><strong>Mathematical Induction</strong>. If <span class="math inline">\(P\)</span> <strong>is a subset</strong> of the natural numbers with the following properties:</p>
+<ol type="1">
+<li><span class="math inline">\(0 \in P,\)</span> and</li>
+<li>for all <span class="math inline">\(k\in \mathbb{N},\)</span> <span class="math inline">\(k \in P\)</span> implies <span class="math inline">\(k+1 \in P,\)</span></li>
+</ol>
+<p>then <span class="math inline">\(P\)</span> is <strong>the set</strong> of natural numbers.</p>
+<p>Notice that this statement is an implication, containing two sub-statements, the second of which is an implication.</p>
+<p>To use mathematical induction to prove a statement, we first need to prove two things:</p>
+<ol type="1">
+<li>The statement is true for the first natural number.</li>
+<li>If the statement is true for some natural number <span class="math inline">\(k\)</span>, then it is also true for <span class="math inline">\(k+1.\)</span></li>
+</ol>
+<p>If both of these things can be proven, then the statement is true for all natural numbers. Notice that the second statement is where the difficulty lies, mostly because it is an implication. More on this in a moment.</p>
+<p>Here are three examples where a proof by mathematical induction can be used.</p>
+<ol type="1">
+<li>Proof that <span class="math inline">\(1 + 2 + 3 + ... + n = n(n+1)/2\)</span> for all natural numbers <span class="math inline">\(n.\)</span> <span class="citation" data-cites="dasmith2021_2">(see <a href="references.html#ref-dasmith2021_2" role="doc-biblioref">Smith 2021</a>)</span></li>
+<li>Proof that every natural number greater than 1 is either a prime number or can be written as a product of prime numbers. <span class="citation" data-cites="rosen2005elementary">(see <a href="references.html#ref-rosen2005elementary" role="doc-biblioref">Rosen 2005, 108</a> – 110)</span></li>
+<li>Proof that the Fibonacci sequence <span class="math inline">\(F(n)\)</span> satisfies the formula <span class="math display">\[F(n+1) F(n-1) - F(n)^2 = (-1)^n\]</span> for all natural numbers <span class="math inline">\(n\)</span>. <span class="citation" data-cites="asmith2022Fib">(see <a href="references.html#ref-asmith2022Fib" role="doc-biblioref">Smith 2022</a>)</span></li>
+</ol>
+<p>We will begin proving statements using mathematical induction after mentioning a few applications, in the next lecture.</p>
+<p>One of the most important applications of mathematical induction is in combinatorics, where it is used to prove statements about counting objects (such as the number of ways to choose <span class="math inline">\(k\)</span> objects from a set of <span class="math inline">\(n\)</span>). To be clear though, mathematical induction is used throughout sciences, engineering, and humanities, i.e. <span class="citation" data-cites="williamcryptography">(see <a href="references.html#ref-williamcryptography" role="doc-biblioref">William 2016</a>)</span>.</p>
+<ol type="1">
+<li>In computer science, mathematical induction is used to design algorithms that work for all inputs of a certain size or larger.</li>
+<li>In physics and engineering, mathematical induction is used to derive formulas for the sum of infinitely many terms in a series.</li>
+<li>In mathematics, induction is used to prove statements about sets of numbers, such as integers or real numbers.</li>
+<li>In economics, induction is used to study optimal behavior in situations where agents have incomplete information.</li>
+<li>Induction is also used in philosophy, for example, to justify the belief that the future will be like the past.</li>
+<li>In linguistics, mathematical induction is used to study the structure of language.</li>
+<li>In biology, mathematical induction is used to study the behavior of populations over time.</li>
+</ol>
+<p>This list is just a few applications, to be clear, mathematical induction is ubiquitous.</p>
+<p>Now in order to understand mathematical induction we need to work out some examples. Lots of examples and exercises.</p>
+<p>Mathematical induction (induction) is important because it allows us to prove statements that are true for all natural numbers. This means that we can use induction to prove statements about infinite sets, which is something difficult to do. To be clear, mathematical induction provides a rigorous method of proving mathematical statements involving infinite sets of numbers.</p>
+<p>Mathematical induction is the following statement:</p>
+<blockquote class="blockquote">
+<p>If <span class="math inline">\(P\)</span> is a subset of the natural numbers with the properties:</p>
+<ul>
+<li><span class="math inline">\(0 \in P\)</span>, and</li>
+<li>for all <span class="math inline">\(k\in \mathbb{N}\)</span>, <span class="math inline">\(k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>,</li>
+</ul>
+<p>then <span class="math inline">\(P\)</span> is the set of the natural numbers.</p>
+</blockquote>
+<p>The advantage of mathematical induction is that it gives us a procedure to change the <strong>is a subset</strong> in the hypothesis to <strong>is the set</strong> in the conclusion. Before understanding the foundations of mathematical induction (later in this series), let’s work through some examples and see how it works.</p>
+<p>We will now look at some examples of how to use mathematical induction.</p>
+<div id="exm-one" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.1 </strong></span>Prove that for all natural numbers <span class="math inline">\(n\)</span>,<br>
+<span class="math display">\[\begin{equation}
+\label{addsum}
+\sum_{i=0}^n i =\frac{n(n+1)}{2}.
+\end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of natural numbers for which <span class="math inline">\(\eqref{addsum}\)</span> is true. Since <span class="math inline">\(0=0=0(1)/2\)</span> we see that <span class="math inline">\(0\in P.\)</span> Assume <span class="math inline">\(k\in P.\)</span> Then we find,</p>
+<p><span class="math display">\[\begin{align}
+\sum_{i=0}^{k+1} i
+&amp; =\sum_{i=0}^{k} i+(k+1) \label{twostep}\\[8pt]
+&amp; =\frac{k(k+1)}{2} +(k+1) \label{threestep} \\[8pt]
+&amp; =\frac{(k+1)(k+2)}{2}
+\end{align}\]</span></p>
+<p>which shows <span class="math inline">\(k+1\in P.\)</span> By mathematical induction <span class="math inline">\(P=\mathbb{N}\)</span> as desired. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>Notice that the <strong>induction hypothesis</strong> is used in moving from steps <span class="math inline">\(\eqref{twostep}\)</span> to <span class="math inline">\(\eqref{threestep}\)</span>.</p>
+<p>In the next example, I leave out the reference to the set <span class="math inline">\(P\)</span>. Also notice that I start the base case at 1 and use the set of positive integers.</p>
+<div id="exm-two" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.2 </strong></span>Prove that <span class="math display">\[\begin{equation}\label{squares}
+\sum _{i=1}^n i^2=\frac{n(2n+1)(n+1)}{6}
+\end{equation}\]</span> for all positive integers <span class="math inline">\(n.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For <span class="math inline">\(n=1,\)</span> <span class="math display">\[\begin{equation}
+1=\sum _{i=1}^1 i^2=\frac{1(2+1)(1+1)}{6}=1
+\end{equation}\]</span> and so the base case holds. Assume that <span class="math inline">\(\eqref{squares}\)</span> is true for some positive integer <span class="math inline">\(k,\)</span> we need to show that <span class="math display">\[\begin{equation}
+\sum _{i=1}^{k+1} i^2=\frac{(k+1)(2k+2)(k+2)}{6}
+\end{equation}\]</span> holds. We have</p>
+<p><span class="math display">\[\begin{align}
+\sum _{i=1}^{k+1} i^2
+&amp; =(k+1)^2+\sum _{i=1}^k i^2 \\[8pt]
+&amp; =(k+1)^2+\frac{k(2k+1)(k+1)}{6} \\[8pt]
+&amp; =\frac{(k+1)(2k+2)(k+2)}{6}.
+\end{align}\]</span></p>
+<p>Therefore, by mathematical induction <span class="math inline">\(\eqref{squares}\)</span> holds for all positive integers <span class="math inline">\(n.\)</span> <span class="math inline">\(\square\)</span></p>
+</div>
+<p>The next example also demonstrates how to use mathematical induction.</p>
+<p>Notice in this example, that we define a set of numbers with the intent of showing that this subset of natural numbers is in fact the entire set of natural numbers. We do this in two steps. First, we verify the base case. For the second step, using an induction hypothesis, we verify the needed implication. The final statement is simply the conclusion that this subset of natural numbers <span class="math inline">\(P\)</span> is in fact the entire set of natural numbers.</p>
+<div id="exm-third" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.3 </strong></span>Prove that, for all natural numbers <span class="math inline">\(n\)</span>, <span class="math inline">\(2^n&gt;n.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of all natural numbers for which <span class="math inline">\(2^n&gt;n\)</span> is true. Since <span class="math inline">\(2^0=1&gt;0\)</span> is true, <span class="math inline">\(0\in P.\)</span> Assume <span class="math inline">\(k\in P\)</span> and <span class="math inline">\(k&gt;0\)</span>. Then <span class="math inline">\(2^k&gt;k\)</span> is true and since</p>
+<p><span class="math display">\[\begin{align}
+2^{k+1} &amp; = 2^k\cdot 2 \\[8pt]
+&amp; &gt; k \cdot 2  \\[8pt]  
+&amp; = k+k  \\[8pt]
+&amp; &gt; k+1
+\end{align}\]</span></p>
+<p>it follows <span class="math inline">\(k+1\in P.\)</span> Thus, for all <span class="math inline">\(k\in P\)</span>, <span class="math inline">\(k\in P\)</span> implies <span class="math inline">\(k+1\in P\)</span> is true and so by mathematical induction <span class="math inline">\(P=\mathbb{N}\)</span> as desired. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><strong>And there we have it our first three examples. We will have several more examples to come.</strong></p>
+<p>But first you should checkout the well-ordering principle.</p>
+</section>
+<section id="the-well-ordering-principle" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="the-well-ordering-principle"><span class="header-section-number">1.4</span> The Well-Ordering Principle</h2>
+<p>The <strong>well-ordering principle</strong> (also called the <strong>well-ordering axiom</strong>) for the natural numbers is important because it provides a way to order the natural numbers. This ordering can be used to prove mathematical statements about the natural numbers. For example, the well-ordering principle can be used to show that every natural number has a unique successor. This fact can then be used to prove that there are no infinite descending sequences of natural numbers.</p>
+<p>One answer is to simply use the order in which they are defined, so that <span class="math inline">\(0 &lt; 1 &lt; 2 &lt; 3 &lt; 4\)</span> and so on. However, we are looking for an ordering in the sense of being antisymmetric and transitive.</p>
+<div id="def-one" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.3 </strong></span>The relation <span class="math inline">\(\leq\)</span> defined on <span class="math inline">\(\mathbb{N}\)</span> by, for all <span class="math inline">\(m,n\in \mathbb{N}\)</span>,<br>
+<span class="math display">\[\begin{equation}
+m\leq n \Longleftrightarrow \exists p \in \mathbb{N}:
+\, m+p=n.
+\end{equation}\]</span></p>
+</div>
+<p>We call <span class="math inline">\(\leq\)</span> an ordering because it is <strong>reflexive</strong>, <strong>antisymmetric</strong>, and <strong>transitive</strong>.</p>
+<p>Let’s see why. If <span class="math inline">\(m\in \mathbb{N}\)</span>, then <span class="math inline">\(m +0 = m\)</span> and so <span class="math inline">\(m\leq m\)</span> by definition of <span class="math inline">\(\leq\)</span>. In other words <span class="math inline">\(p=0\)</span> and so <span class="math inline">\(\leq\)</span> is reflexive.</p>
+<p>Notice the ordering is antisymmetric also. To see this suppose that <span class="math inline">\(m\leq n\)</span> and <span class="math inline">\(n\leq m\)</span>. Then there exists <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span> such that <span class="math inline">\(m+p_1 = n\)</span> and <span class="math inline">\(n+p_2 = m\)</span>. From this we see that <span class="math inline">\(m=n\)</span> because</p>
+<p><span class="math display">\[\begin{align}
+m+p_1 &amp; = (n+p_2)+p_1 \\[8pt]
+&amp; = n + (p_1+p_2) \\[8pt]
+&amp; = n
+\end{align}\]</span></p>
+<p>which yields that <span class="math inline">\(p_1=p_2=0\)</span>.</p>
+<p>Finally to show that <span class="math inline">\(\leq\)</span> is transitive just assume that <span class="math inline">\(r\leq s\)</span> and <span class="math inline">\(s\leq t\)</span> where <span class="math inline">\(r,s,t\)</span> are natural numbers. Then there exists <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span> such that <span class="math inline">\(r+p_1 = s\)</span> and <span class="math inline">\(s+p_2 = t\)</span>. From this we see that</p>
+<p><span class="math display">\[\begin{align}
+r + (p_1 + p_2) &amp; = (r+p_1) +p_2 \\[8pt]
+&amp; = s + p_2 \\[8pt]
+&amp; = t
+\end{align}\]</span></p>
+<p>which yields that <span class="math inline">\(r\leq t\)</span>.</p>
+<p>The well-ordering principle is the simple claim that:</p>
+<blockquote class="blockquote">
+<p>every nonempty set of positive integers has a least element.</p>
+</blockquote>
+<p>This sometimes overlooked and obvious statement will be proven to be logically equivalent to mathematical induction, in a later tutorial. To be clear, though, it can not be proven using the familiar properties satisfied by the integers under addition and multiplication.</p>
+<p>For now, let’s consider some examples.</p>
+<div id="exm-one" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.4 </strong></span>Find the smallest element in each subset of <span class="math inline">\(\mathbb{N}\)</span>.</p>
+<ol type="1">
+<li><span class="math inline">\(A=\\{n\in \mathbb{N}\mid n \text{ is prime }\\}\)</span></li>
+<li><span class="math inline">\(B=\\{n\in \mathbb{N} \mid \text{ $n$ is a multiple of 7}\\}\)</span></li>
+<li><span class="math inline">\(C=\\{n\in \mathbb{N} \mid \text{ $n=110-7m$ for some $m\in \mathbb{Z}$}\\}\)</span></li>
+<li><span class="math inline">\(D=\\{n\in \mathbb{N} \mid \text{ $n=12s+18t$ for some $s,t\in \mathbb{Z}$}\\}\)</span></li>
+</ol>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The smallest prime is 2. The smallest positive multiple of 7 is 7. As <span class="math inline">\(m\)</span> takes on the values <span class="math inline">\(1,2,3,\ldots\)</span>, then values of <span class="math inline">\(n\)</span> form the sequence <span class="math display">\[ 93, 76, 59, \ldots, 8, -9 ,\ldots \]</span> Hence the smallest element of <span class="math inline">\(C\)</span> is 8. Notice that <span class="math inline">\(12s+18t=6(2s+3t)\)</span> and so elements of <span class="math inline">\(D\)</span> are multiples of <span class="math inline">\(6\)</span>. In fact, <span class="math inline">\(6=(12)(-1)+18(1)\)</span> and so <span class="math inline">\(6\)</span> is in <span class="math inline">\(D\)</span>. Since 6 is the smallest positive multiple of 6, we see that <span class="math inline">\(6\)</span> is the least element of <span class="math inline">\(D\)</span>. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>In other words, no matter how a subset of natural numbers is defined, as long as it is nonempty, the Well-Ordering Principle guarantees us, that it must have a least element.</p>
+<p>On the one hand, the Well-Ordering Principle seems like an obvious statement, and on the other hand, the Principal of Mathematical Induction is an incredibly useful method of proof. In a later article we’ll be proving this theorem here.</p>
+<div id="thm-one" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.2 </strong></span>The following statements are equivalent.</p>
+<ol type="1">
+<li><strong>(Well-Ordering Axiom)</strong> Every nonempty set of positive integers has a least element.</li>
+<li><strong>(Mathematical Induction)</strong> If <span class="math inline">\(P\)</span> is a subset of the positive integers with the following properties: 1) <span class="math inline">\(0 \in P\)</span>, and 2) for all <span class="math inline">\(k\in \mathbb{N}\)</span>, <span class="math inline">\(k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>, then <span class="math inline">\(P\)</span> is the set of positive integers.</li>
+</ol>
+</div>
+<p>Notice in the proof of the following theorem, that the well-ordering principle is used.&nbsp;</p>
+<div id="thm-one" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.3 </strong></span>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are positive integers, then there exists a positive integer <span class="math inline">\(n\)</span> such that <span class="math inline">\(n a \geq b.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume for a contradiction that <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> do not satisfy the statement; that is, assume there exists positive integers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(n a&lt; b\)</span> for every positive integer <span class="math inline">\(n.\)</span> Consider the set,</p>
+<p><span class="math display">\[S=\{b-n a \, | \, n \text{ is a positive integer}\}\]</span></p>
+<p>which consists only of positive integers. By the well-ordering principle, <span class="math inline">\(S\)</span> possess a least element, say <span class="math inline">\(b-m a\)</span> for some positive integer <span class="math inline">\(m.\)</span> However, <span class="math inline">\(b-(m+1)a\)</span> is in <span class="math inline">\(S\)</span> and <span class="math inline">\(b-(m+1)a\)</span> is less than <span class="math inline">\(b-m a\)</span> by</p>
+<p><span class="math display">\[ b-(m+1)a=(b-m a)-a&lt;b-m a.\]</span></p>
+<p>Therefore, for positive integers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> there must exist a positive integer <span class="math inline">\(n\)</span> such that <span class="math inline">\(n a\geq b.\)</span> <span class="math inline">\(\square\)</span></p>
+</div>
+<p><strong>Remark</strong>. Can the reader prove that the Archimedean Property implies the Well-Ordering Principle?</p>
+<p>Later, we will use the Well-Ordering Principle to prove the Division Algorithm and the Fundamental Theorem of Arithmetic. Before, we get to these theorems though, let’s practice using mathematical induction.</p>
+<p>When proving a statement by mathematical induction, you should look for a pattern in the statement that can be used to create a base case and an inductive case. The base case is the simplest version of the statement, and the inductive case is a more complicated version of the statement that builds on the base case. You can then use mathematical induction to justify that the statement holds true for all cases.</p>
+<p>In our first example, we are proving that</p>
+<p><span class="math display">\[\sum_{i=1}^n (2i-1)=n^2\]</span></p>
+<p>for all positive integers <span class="math inline">\(n\)</span>. For example, notice that</p>
+<p><span class="math display">\[\sum_{i=1}^1 (2i-1) = 1 = 1^2\]</span></p>
+<p>so the base case holds for <span class="math inline">\(n=1\)</span> (i.e.&nbsp;the first positive integer). However, to demonstrate that sometimes a change in the index is desired, we show how to accomplish this.&nbsp;</p>
+<div id="exm-one" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.5 </strong></span>Prove that for all natural numbers <span class="math inline">\(n\)</span>, <span id="eq-addsumtwo"><span class="math display">\[\sum_{i=0}^n (2i+1)=(n+1)^2. \qquad(1.1)\]</span></span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of natural numbers for which (<a href="#eq-addsumtwo">Equation&nbsp;<span>1.1</span></a>) is true, that is</p>
+<p><span class="math display">\[P=\left\{n\in \mathbb{N} \mid  \sum_{i=0}^n (2i+1)=(n+1)^2 \right\}.\]</span></p>
+<p>The basis step is easily verified by</p>
+<p><span class="math display">\[\sum_{i=0}^0 (2i+1) = 1 = 1^2\]</span></p>
+<p>and so we see <span class="math inline">\(0\in P\)</span>. For an induction hypothesis, assume <span class="math inline">\(k\in P\)</span>. Then</p>
+<p><span class="math display">\[\sum_{i=0}^k (2i+1)=(k+1)^2\]</span></p>
+<p>is true and thus,</p>
+<p><span class="math display">\[\begin{align}
+\sum_{i=0}^{k+1} (2i+1)
+&amp; =\sum_{i=0}^{k} (2i+1)+(2(k+1)+1) \\
+&amp; =(k+1)^2+2k+3 \\
+&amp; =(k+2)^2
+\end{align}\]</span></p>
+<p>which shows <span class="math inline">\(k+1\in P\)</span>. By mathematical induction, <span class="math inline">\(P=\mathbb{N}\)</span> as desired. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>In our next example, we work with an alternating sum.</p>
+<div id="exm-two" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.6 </strong></span>Prove that for all positive integers <span class="math inline">\(n\)</span>, <span id="eq-powerprod"><span class="math display">\[ \sum_{i=1}^n (-1)^i \, i = \frac{(-1)^n (2n+1)-1}{4}  \qquad(1.2)\]</span></span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of positive integers for which (<a href="#eq-powerprod">Equation&nbsp;<span>1.2</span></a>) is true. The basis step is easily verified by</p>
+<p><span class="math display">\[\sum_{i=1}^1 (-1)^i \, i = -1 = \frac{(-1)^1 (2(1)+1)-1}{4}\]</span></p>
+<p>and so we see <span class="math inline">\(1\in P\)</span>. For an induction hypothesis, assume <span class="math inline">\(k\in P\)</span>. Then</p>
+<p><span class="math display">\[\sum_{i=1}^k (-1)^i \, i = \frac{(-1)^k (2k+1)-1}{4}\]</span></p>
+<p>is true and thus,</p>
+<p><span class="math display">\[\begin{align}
+\sum_{i=1}^{k+1} (-1)^i \, i
+&amp; = \sum_{i=1}^k (-1)^i \, i + (-1)^{k+1} (k+1)  \\
+&amp; =\frac{(-1)^k (2k+1)-1}{4} + (-1)^{k+1} (k+1) \\
+&amp; = \frac{(-1)^{k+1} (2(k+1)+1)-1}{4}
+\end{align}\]</span></p>
+<p>which shows <span class="math inline">\(k+1\in P\)</span>. By mathematical induction <span class="math inline">\(P=\mathbb{Z}^+\)</span> as desired. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>In this next example, we work with an inequality, showing that exponential growth is greater than linear growth.</p>
+<div id="exm-three" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.7 </strong></span>Prove that for all positive integers <span class="math inline">\(n\)</span>, <span class="math inline">\(3^n &gt; 3n-1\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>If <span class="math inline">\(n=1\)</span>, then <span class="math inline">\(3^1 = 3 &gt; 2 = 3(1)-1\)</span> so the base case holds. Let <span class="math inline">\(k\)</span> be a positive integer and assume that <span class="math inline">\(3^k &gt; 3k-1\)</span>. Then</p>
+<p><span class="math display">\[3^{k+1} = 3^k \cdot 3 &gt; (3k-1) \cdot 3 \geq 3k+2 = 3(k+1) -1.\]</span></p>
+<p>So the result follows by mathematical induction. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>Now let’s generalize the previous example.</p>
+<div id="exm-four" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.8 </strong></span>Let <span class="math inline">\(x\)</span> be any real number greater than <span class="math inline">\(-1\)</span>. Use mathematical induction to prove that <span class="math display">\[\begin{equation}\label{polyind}
+(1+x)^n \geq 1 + nx
+\end{equation}\]</span> for all positive integers <span class="math inline">\(n\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>If <span class="math inline">\(n=1\)</span>, then <span class="math inline">\((1+x)^1\geq 1 + (1) x\)</span> and so the base case holds. Let <span class="math inline">\(k\)</span> be a positive integer and assume that <span class="math inline">\((1+x)^k \geq 1+kx\)</span>. Then</p>
+<p><span class="math display">\[\begin{align}
+(1+x)^{k+1}
+&amp; = (1+x)^{k} (1+x)   \\
+&amp; \geq (1+kx)(1+x) \\
+&amp; = 1+x+k x +k x^2 \\
+&amp; = 1+ (k+1)x +kx^2 \\
+&amp; \geq 1+ (k+1)x
+\end{align}\]</span></p>
+<p>because <span class="math inline">\(x^2\geq 0\)</span> and <span class="math inline">\(k\geq 0\)</span>. So the result follows by mathematical induction. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>In our fifth example, we have a sum of the reciprocals of squares involved with an inequality. These types of inequalities can be very useful in other subjects such as analysis.</p>
+<div id="exm-five" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.9 </strong></span>Prove that for all integers <span class="math inline">\(n\geq 1\)</span>, <span class="math display">\[\begin{equation}\label{squarerec}
+\sum_{i=1}^n \frac{1}{i^2} \leq 2 -\frac{1}{n}.
+\end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>If <span class="math inline">\(n=1\)</span>, then <span class="math inline">\(\sum_{i=1}^1 \frac{1}{1^2} = 1\leq 2 -\frac{1}{1}\)</span> and so the base case holds. Let <span class="math inline">\(k\)</span> be a positive integer and assume that <span class="math inline">\(\sum_{i=1}^k \frac{1}{i^2} \leq 2 -\frac{1}{k}\)</span>. Then</p>
+<p><span class="math display">\[\begin{align}
+\sum_{i=1}^{k+1} \frac{1}{i^2}
+&amp; = \sum_{i=1}^{k} \frac{1}{i^2}  + \frac{1}{(k+1)^2}  \\
+&amp; \leq 2 - \frac{1}{k}  + \frac{1}{(k+1)^2} \\
+&amp; \leq 2 -\frac{1}{k+1}
+\end{align}\]</span></p>
+<p>So the result follows by mathematical induction. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>Now that we’ve seen some examples, let’s go for a deeper understanding of mathematical induction.</p>
+<p>Now we will demonstrate the usefulness of mathematical induction by providing rigorous proofs for the summation formulas for finite sums of arithmetic and geometric progressions.</p>
+<p>Arithmetic progressions are found all around us in nature and in everyday life. The temperature on a day might rise steadily from morning until evening, for instance. Or the population of a town might grow gradually over time. The study of arithmetic progressions has many practical applications. Businesses use them to forecast future sales, for example. And mathematicians use them to solve problems in physics and other areas of mathematics.</p>
+<div id="def-one" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.4 </strong></span>A sequence of the form <span class="math inline">\(a, a+d, a+2d, \ldots, a+nd, \ldots\)</span> where <span class="math inline">\(a,d\in \mathbb{R}\)</span> is called an <strong>arithmetic progression.</strong></p>
+</div>
+<p>For example, if <span class="math inline">\(a=0\)</span> and <span class="math inline">\(d=1\)</span>, then the sequence is <span class="math inline">\(0,1,2,3,4,\ldots\)</span>, in other words the natural numbers. Or let’s say, <span class="math inline">\(a=1/2\)</span> and <span class="math inline">\(d=-2\)</span>, then the sequence is <span class="math inline">\(1/2, -3/2, -7/2, -11/2, -15/2,\)</span> and so on.</p>
+<p>In the following example, we prove a wonderful formula for the sum of the terms in arithmetic progression.&nbsp;</p>
+<div id="exm-one" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.10 </strong></span>Let <span class="math inline">\(a,d\in \mathbb{R}\)</span>. Prove that for every positive integer <span class="math inline">\(n\)</span>, that <span class="math display">\[\begin{equation} \label{arithprog} a+(a+d)+\cdots + (a+nd) =\frac{(n+1)(2a+nd)}{2}. \end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of positive integers for which <span class="math inline">\(\eqref{arithprog}\)</span> holds. Since</p>
+<p><span class="math display">\[a+(a+d)=[(1+1)(2a+d)]/2,\]</span></p>
+<p>we see that <span class="math inline">\(1\in P\)</span>. Assume <span class="math inline">\(k\in P\)</span>. We find</p>
+<p><span class="math display">\[\begin{align}
+&amp; a+(a+d)+\cdots + (a+kd) + (a+(k+1) d) \\
+&amp; \qquad = \frac{(k+1)(2a+kd)}{2} + (a+(k+1) d) \\
+&amp; \qquad = \frac{(k+1)(2a+kd)+ 2(a+(k+1) d)}{2} \\
+&amp; \qquad = \frac{(k+2)(2a+(k+1)d)}{2}
+\end{align}\]</span></p>
+<p>Therefore, <span class="math inline">\(k+1\in P\)</span> and thus <span class="math inline">\(\eqref{arithprog}\)</span> holds for <span class="math inline">\(n\geq 1\)</span>, by mathematical induction. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>A geometric progression is a sequence of numbers in which each term after the first is found by multiplying the previous term by a fixed number, called the <strong>common ratio</strong>. In other words, each number in the sequence is determined by multiplying the previous number by a (fixed) certain amount. Let’s now explore geometric progressions.</p>
+<div id="def-two" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.5 </strong></span>Recall a sequence of the form <span class="math inline">\(a, ar, ar^2, \ldots, a r^n, \ldots\)</span> where <span class="math inline">\(a,r\in \mathbb{R}\)</span> and <span class="math inline">\(r\geq 1\)</span> is called a <strong>geometric progression.</strong></p>
+</div>
+<p>For example, if <span class="math inline">\(a=1\)</span> and <span class="math inline">\(r=2\)</span>, the sequence is <span class="math inline">\(1,2,4,8,16,32,\ldots\)</span>. Or let’s say, <span class="math inline">\(a=1/2\)</span> and <span class="math inline">\(r=-2\)</span>, then the sequence is <span class="math inline">\(1/2, -1, 2, -4, 8,\cdots\)</span> and so on.</p>
+<div id="exm-two" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.11 </strong></span>Let <span class="math inline">\(a,r\in \mathbb{R}\)</span> and suppose <span class="math inline">\(r\geq 1\)</span>. Prove that, for each positive integer <span class="math inline">\(n,\)</span> that <span class="math display">\[\begin{equation} \label{geopro} a+ar+\cdots +a r^n =a\left(\frac{r^{n+1}-1}{r-1}\right). \end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of positive integers for which <span class="math inline">\(\eqref{geopro}\)</span> holds. Since <span class="math inline">\(a+ar=a (r^2-1)/(r-1),\)</span> we see that <span class="math inline">\(1\in P.\)</span> Assume <span class="math inline">\(k\in P.\)</span> We find</p>
+</div>
+<p><span class="math display">\[\begin{align*}
+&amp; a+ar +ar^2+\cdots +a r^k+a r^{k+1} \\
+&amp; \qquad =a\left(\frac{r^{k+1}-1}{r-1}\right)+a r^{k+1} \\
+&amp; \qquad =\frac{a r^{k+1}-a+(r-1)a r^{k+1} }{r-1} \\
+&amp; \qquad =a\left(\frac{r^{k+2}-1}{r-1}\right).
+\end{align*}\]</span></p>
+<p>Therefore, <span class="math inline">\(k+1\in P\)</span> and thus <span class="math inline">\(\eqref{geopro}\)</span> holds for <span class="math inline">\(n\geq 1\)</span>, by mathematical induction. <span class="math inline">\(\square\)</span></p>
+<p>The <strong>mathematical induction principle</strong> is analogous to an infinite string of equally spaced dominos set up in a single line arranged so that if one falls down then so does the next one. Imagine you knock down the first domino, and then after some time has passed you check back and the dominos are still falling. Would you believe that this will continue indefinitely?</p>
+<p>The method of proof of using the principle of mathematical induction is frequently useful in the theory of numbers. Familiarity with this type of argument is essential to subsequent work.</p>
+<p>In any proof by induction, we must not forget to show that <span class="math inline">\(0\)</span> is in <span class="math inline">\(P\)</span>. Even if we show that the truth of <span class="math inline">\(k\)</span> in <span class="math inline">\(P\)</span> implies that <span class="math inline">\(k+1\)</span> is in <span class="math inline">\(P\)</span>, if <span class="math inline">\(0\)</span> is not in <span class="math inline">\(P,\)</span> then we cannot conclude that <span class="math inline">\(P\)</span> is the set of natural numbers. For example, let <span class="math inline">\(P\)</span> be the set of all natural numbers that satisfy:</p>
+<p><span id="eq-falseq"><span class="math display">\[n+(n+1)=2n. \qquad(1.3)\]</span></span></p>
+<p>Suppose <span class="math inline">\(k\)</span> satisfies, (<a href="#eq-falseq">Equation&nbsp;<span>1.3</span></a>). Using this we have</p>
+<p><span class="math display">\[\begin{align*}
+(k+1)+(k+2) &amp; =k+(k+1)+2 \\
+&amp; =2k+2 \\
+&amp; = 2(k+1)
+\end{align*}\]</span></p>
+<p>and thus <span class="math inline">\(k+1\)</span> also satisfies (<a href="#eq-falseq">Equation&nbsp;<span>1.3</span></a>). So, if <span class="math inline">\(1\)</span> satisfies (<a href="#eq-falseq">Equation&nbsp;<span>1.3</span></a>) then, it would follow that (<a href="#eq-falseq">Equation&nbsp;<span>1.3</span></a>) is true for all natural numbers <span class="math inline">\(n\)</span>. However, <span class="math inline">\(0\)</span> does not satisfy (<a href="#eq-falseq">Equation&nbsp;<span>1.3</span></a>). In fact, obviously, (<a href="#eq-falseq">Equation&nbsp;<span>1.3</span></a>) is false for all natural numbers <span class="math inline">\(n\)</span>. We conclude that the basis step is a <strong>necessary</strong> part of any proof by mathematical induction.</p>
+<p>The assumption that the statement is true for some number <span class="math inline">\(n=k\)</span> will often be referred to as the induction hypothesis. Sometimes the role that 1 plays in the principle of mathematical induction will be replaced by some other integer, say <span class="math inline">\(a,\)</span> in such instances mathematical induction establishes the statement for all integers <span class="math inline">\(n\geq a.\)</span></p>
+<p>The method of mathematical induction has its limitations in that it consists of testing a known (or conjectured) formula. All that the induction process enables us to do is to show that any special case can be proved on the assumption that all the preceding cases have been verified.</p>
+</section>
+<section id="the-mathematical-induction-equivalence" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="the-mathematical-induction-equivalence"><span class="header-section-number">1.5</span> The Mathematical Induction Equivalence</h2>
+<p>In the hypothesis of mathematical induction, the statement <span class="math inline">\(0\in P\)</span> is called the <strong>base case</strong>. Mathematical induction can be thought of as a collection of principles, for example, the base case may start at <span class="math inline">\(0\)</span>, or <span class="math inline">\(1\)</span>, or <span class="math inline">\(2\)</span>, etc. instead of <span class="math inline">\(0\)</span>. In each of these scenarios, the goal is to prove a collection of statements is true, for all <span class="math inline">\(n\)</span> greater than some initial value which must be verified (base case).</p>
+<p>Now that we have established that a base case is required when using mathematical induction. It is now natural to ask: does the base case need to start at the first natural number 0. We have seen previous examples where that base case starts at 1 when proving a statement holds for all positive integers. So let’s make this formal.</p>
+<p>Let <span class="math inline">\(a\)</span> be a natural number. Consider the set defined by</p>
+<p><span class="math display">\[\mathbb{N}_a = \{k\in \mathbb{N}:k\geq a\}.\]</span></p>
+<p>In other words,</p>
+<p><span class="math display">\[\mathbb{N}_a = \{a,a+1,a+2,a+3, \ldots \}.\]</span></p>
+<p>Using this set notation we can formalize variations of mathematical induction as follows.</p>
+<p><strong>Mathematical Induction</strong> is the following statement:</p>
+<blockquote class="blockquote">
+<p>Let <span class="math inline">\(a\)</span> be a natural number. If <span class="math inline">\(P\)</span> is <strong>a subset</strong> of <span class="math inline">\(\mathbb{N}_a\)</span> with the properties:</p>
+<ol type="1">
+<li><span class="math inline">\(a \in P\)</span>, and</li>
+<li>for all <span class="math inline">\(k\in \mathbb{N}_a\)</span>, <span class="math inline">\(k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>,</li>
+</ol>
+<p>then <span class="math inline">\(P\)</span> is <strong>the set</strong> <span class="math inline">\(\mathbb{N}_a\)</span>.</p>
+</blockquote>
+<p>Notice that whenever <span class="math inline">\(a=0\)</span>, we have the Principle of Mathematical Induction as stated previously.</p>
+<p>For example, while <span class="math inline">\(n!&gt;n\)</span> is not true for $n=0, 1, 2 $, it is true for all <span class="math inline">\(n\geq 3\)</span>. So our base case is <span class="math inline">\(n=3\)</span>. Let’s prove that <span class="math inline">\(n!&gt;n\)</span> for all <span class="math inline">\(n\geq 3\)</span>. Since <span class="math inline">\(3!=1\cdot 2\cdot 3=6&gt;3\)</span> we see that the base case holds. Now assume that for some positive integer <span class="math inline">\(k\)</span> greater than 3, that <span class="math inline">\(k!&gt;k.\)</span> Then we see that</p>
+<p><span class="math display">\[\begin{align*}
+(k+1)! &amp; =k!(k+1) \\
+&amp; &gt;k(k+1) \\
+&amp; &gt;k+1
+\end{align*}\]</span></p>
+<p>Therefore, by mathematical induction, <span class="math inline">\(n!&gt;n\)</span> for all <span class="math inline">\(n\geq 3\)</span>.</p>
+<div id="exm-one" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.12 </strong></span>Prove that <span class="math inline">\(2^{n-1}&gt;n\)</span> for all positive integers <span class="math inline">\(n\geq 3.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(4=2^{3-1}=2^2=4&gt;3\)</span> the statement is true for <span class="math inline">\(n=3.\)</span> Assume that the result is true for a positive integer <span class="math inline">\(n,\)</span> we need to show that <span class="math inline">\(2^{(n+1)-1}&gt;n+1\)</span> holds. Starting from <span class="math inline">\(2^{n-1}&gt;n\)</span> we multiply by 2 to obtain <span class="math inline">\(2^n&gt;2n.\)</span> But <span class="math inline">\(2n=n+n&gt;n+1\)</span> since <span class="math inline">\(n\geq 3.\)</span> Therefore by mathematical induction, <span class="math inline">\(2^{(n+1)-1}&gt;2n&gt;n+1\)</span> for all positive integers <span class="math inline">\(n\geq 3\)</span> as desired. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>Now let’s turn our attention to another variation of mathematical induction called <strong>strong induction</strong>.</p>
+<p>The principle of strong (mathematical) induction is also a method of proof and is frequently useful in the theory of numbers. This principle can also be used to prove statements about arays, sequences, and many other structures. Familiarity with this type of argument is essential to subsequent work.</p>
+<blockquote class="blockquote">
+<p>Strong induction was invented by the mathematician, logician, and philosopher Bertrand Russell.</p>
+</blockquote>
+<div id="thm-one" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.4 </strong></span>A set of positive integers that contains the integer 1, and that has the property: for every positive integer <span class="math inline">\(n,\)</span> if the set contains <span class="math inline">\(1,2,\ldots,n,\)</span> then it also contains the integer <span class="math inline">\(n+1\)</span>; must be the set of all positive integers.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(P\)</span> be the set with the stated properties and let <span class="math inline">\(S\)</span> be the set consisting of all positive integers not in <span class="math inline">\(P.\)</span> Assuming that <span class="math inline">\(S\)</span> is nonempty, we can choose <span class="math inline">\(n\)</span> to be the least integer in <span class="math inline">\(S\)</span> by the Well-Ordering Principle. Since <span class="math inline">\(1\)</span> is in <span class="math inline">\(P\)</span> and <span class="math inline">\(n\)</span> is not in <span class="math inline">\(P\)</span>, we know that <span class="math inline">\(n&gt;1\)</span>. Further, notice that none of the integers <span class="math inline">\(1,2,3,\ldots,n-1\)</span> lies in <span class="math inline">\(S\)</span>, so that in fact, they are in <span class="math inline">\(P\)</span>. Then by the second property, <span class="math inline">\(n=(n-1)+1\)</span> is in <span class="math inline">\(P,\)</span> which contradicts <span class="math inline">\(n\)</span> is not in <span class="math inline">\(P\)</span>. Thus, <span class="math inline">\(S\)</span> is empty and <span class="math inline">\(P\)</span> must be the set of all positive integers. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>While the hypothesis is <em>stronger</em>, both statements are actually logically equivalent to each other, as the next theorem states.</p>
+<div id="thm-two" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.5 (Induction Principles) </strong></span>The following statements are logically equivalent.</p>
+<ol type="1">
+<li><strong>(Mathematical Induction)</strong> If <span class="math inline">\(P\)</span> is a subset of the natural numbers with the following properties: a) <span class="math inline">\(0 \in P\)</span>, and b) for all <span class="math inline">\(k\in \mathbb{N}\)</span>, <span class="math inline">\(k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>, then <span class="math inline">\(P\)</span> is the set of natural numbers.</li>
+<li><strong>(Strong Induction)</strong> If <span class="math inline">\(P\)</span> is a subset of the natural numbers with the following properties: a) <span class="math inline">\(0 \in P\)</span>, and b) for all <span class="math inline">\(k\in \mathbb{N}\)</span>, <span class="math inline">\(0,1,..., k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>, then <span class="math inline">\(P\)</span> is the set of natural numbers.</li>
+</ol>
+</div>
+<p>Which one you choose is often a matter of convenience. Some statements are much easier to work with using one or the other. Can you tell which version is used in the next example?</p>
+<div id="exm-one" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.13 </strong></span>Let <span class="math inline">\(a\)</span> be a real number. Prove that for all <span class="math inline">\(n\geq 1\)</span>,</p>
+<p><span class="math display">\[a^n-1=(a-1)\left(a^{n-1}+a^{n-2}+a^{n-3}+\text{...}+a+1\right).\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For <span class="math inline">\(n=1,\)</span> <span class="math inline">\(a-1=a-1\)</span> is obvious. Suppose that the equation is true for <span class="math inline">\(k\)</span> namely,</p>
+<p><span class="math display">\[\left(a^k-1\right)=(a-1)\left(a^{k-1}+a^{k-2}+a^{k-3}+\cdots+a+1\right).\]</span></p>
+<p>Then for <span class="math inline">\(k+1\)</span> we have</p>
+<p><span class="math display">\[\begin{align*}
+\left(a^{k+1}-1\right) &amp; =\left(a^{k+1}-a^k+a^k-1\right) \\
+&amp; =a^k(a-1)+(a-1)\left(a^{k-1}+a^{k-2}+a^{k-3}+\cdots+a+1\right)
+\end{align*}\]</span></p>
+<p>and so</p>
+<p><span class="math display">\[\left(a^{k+1}-1\right)=(a-1)\left(a^k+a^{k-1}+a^{k-2}+a^{k-3}+\cdots+a+1\right).\]</span></p>
+<p>as desired. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>We can also rely on the strong principle of induction, by considering the formula:</p>
+<p><span class="math display">\[a^{n+1}-1=(a+1)\left(a^n-1\right)-a\left(a^{n-1}-1\right)\]</span></p>
+<p>if desired.</p>
+<p>Now in order to understand the difference between strong induction and mathematical induction, we will consider the Lucas numbers. The following example illustrates when strong induction might be the preferred method.</p>
+<p>To illustrate the strong form of induction we will discuss the Lucas numbers. Numbers in the sequence <span class="math inline">\(1, 3, 4, 7, 11, 18, \ldots\)</span> are called <strong>Lucas numbers</strong>. They are defined inductively by, <span class="math inline">\(L_1=1\)</span>, <span class="math inline">\(L_2=3,\)</span> and</p>
+<p><span class="math display">\[L_n=L_{n-1}+L_{n-2} \quad  \text{for all $n\geq 3$}. \]</span></p>
+<p>The Lucas numbers have a number of interesting mathematical properties, and they can be used to generate a variety of different patterns and sequences. They also show up in a surprising number of real-world applications, from financial markets to computer algorithms.</p>
+<div id="exm-two" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.14 </strong></span>Prove that for all positive integers <span class="math inline">\(n\)</span>,</p>
+<p><span id="eq-lussevenfour"><span class="math display">\[L_n &lt; \left(\frac{7}{4}\right)^n. \qquad(1.4)\]</span></span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For the basis step notice that</p>
+<p><span class="math display">\[L_1=1&lt; \left(\frac{7}{4}\right)^1=\frac{7}{4}. \]</span></p>
+<p>Now assume (<strong>strong induction hypothesis</strong>) that (<a href="#eq-lussevenfour">Equation&nbsp;<span>1.4</span></a>) holds true for <span class="math inline">\(n=1, \dots, k-1\)</span>. Then we find,</p>
+<p><span class="math display">\[\begin{align*}
+L_k = L_{k-1}+L_{k-2} &amp; &lt; \left(\frac{7}{4}\right)^{k-1}+\left(\frac{7}{4}\right)^{k-2}
+\\[5pt] &amp; =\left(\frac{7}{4}\right)^{k-2} \left(\frac{7}{4}+1\right)
+\\[5pt] &amp; =\left(\frac{7}{4}\right)^{k-2} \left(\frac{11}{4}\right)
+\\[5pt] &amp; &lt; \left(\frac{7}{4}\right)^{k-2} \left(\frac{7}{4}\right)^{2}
+\\[5pt] &amp; = \left(\frac{7}{4}\right)^{k}.
+\end{align*}\]</span></p>
+<p>Because the inequality is true for <span class="math inline">\(n=k\)</span> whenever it is true for the integers <span class="math inline">\(1, 2, \dots, k-1\)</span>, we conclude, by Strong Induction, that <span class="math inline">\(L_n &lt; (7/4)^n\)</span> for all <span class="math inline">\(n\geq 1\)</span>. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>When first studying mathematical induction a student often runs into solving the postage stamp problem.</p>
+<div id="exm-three" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.15 </strong></span>Show that any amount of postage more than 1-cent can be formed just using 2-cent and 3-cent stamps.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Notice that 2-cent and 3-cent stamps can be formed using 2-cent and 3-cent stamps, so the base case is obvious. Let <span class="math inline">\(k\)</span> be a positive integer with <span class="math inline">\(k\geq 1\)</span>. For an induction hypothesis (strong), assume that any amount of postage up to <span class="math inline">\(k\)</span>-cents can be formed using 2-cent and 3-cent stamps. Then using <span class="math inline">\(k+1 = k-1+ 2\)</span>, and the fact that <span class="math inline">\(2\)</span> is a 2-cent stamp and <span class="math inline">\(k-1\)</span> can be formed using 2-cent and 3-cent stamps, we see that <span class="math inline">\(k+1\)</span> can be formed using 2-cent and 3-cent stamps. Hence by strong induction, any amount can be formed using 2-cent and 3-cent stamps. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>For our next example, let’s use a new function. Define a function recursively, for all positive integers <span class="math inline">\(n\)</span> by <span class="math inline">\(f(1)=1,\)</span> <span class="math inline">\(f(2)=5\)</span> and</p>
+<p><span class="math display">\[f(n+1)=f(n)+2f(n-1).\]</span></p>
+<p>For example, <span class="math inline">\(f(1)=1\)</span>, <span class="math inline">\(f(2)=5\)</span>, <span class="math inline">\(f(3)=7\)</span>, <span class="math inline">\(f(4)=17\)</span>, and so on. We can (exhaustively) search for patterns until we find this gem:</p>
+<div id="exm-four" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.16 </strong></span>Prove that <span class="math inline">\(f(n)=2^n+(-1)^n\)</span> for all positive integers <span class="math inline">\(n\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For <span class="math inline">\(n=1\)</span> and <span class="math inline">\(n=2\)</span>, we have <span class="math inline">\(f(1)=1=2^1+(-1)^1\)</span> and <span class="math inline">\(f(2)=5=2^2+(-1)^2\)</span>, so the base case holds. Let <span class="math inline">\(k\)</span> be a positive integer with <span class="math inline">\(k\geq 1\)</span>. Assume <span class="math inline">\(f(n)=2^n+(-1)^n\)</span> holds for <span class="math inline">\(n=0,.\ldots, k\)</span>. Then</p>
+<p><span class="math display">\[\begin{align}
+f(k+1) &amp; = f(k)+2f(k-1) \\
+&amp; = 2^k+(-1)^k +2 ( 2^{k-1}+(-1)^{k-1}) \\
+&amp;  = 2^k +2^k +(-1)^k + 2((-1)^{k-1}) \\
+&amp;  = 2^{k+1} + (-1)^{k+1}
+\end{align}\]</span></p>
+<p>Therefore, the result follows by strong induction. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>If you haven’t seen these examples on mathematical induction you should work through them before moving on to the Mathematical Induction Equivalence.</p>
+<p>In this video, you’ll learn the <strong>Mathematical Induction Equivalence</strong>, the equivalence of the well-ordering principle, mathematical induction, and strong induction. You’ll see that if the well-ordering principle holds then induction must also hold. Then we’ll prove that if induction holds, then strong induction must also hold. Finally, then we prove that if strong induction holds, then the well-ordering principle must also hold. Proving these three statements is the same as proving all three of them are logically equivalent. Effectively, what this means is that if you assume one of them is true, then all three of them must be true.</p>
+<p>The Mathematical Induction Equivalence is the statement that all three of these statements:</p>
+<ol type="1">
+<li>The Well-Ordering Principle</li>
+<li>The Principle of Mathematical Induction</li>
+<li>The Strong Form of Induction</li>
+</ol>
+<p>are all equivalent to each other.</p>
+<p>Now in order to prove the Mathematical Induction Equivalence, let’s review what these three statements are.</p>
+<div id="thm-one" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.6 (Well-Ordering Principle) </strong></span>Every nonempty set of natural numbers has a least element.</p>
+</div>
+<div id="thm-two" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.7 (Mathematical Induction) </strong></span>If <span class="math inline">\(P\)</span> is a subset of the natural numbers with the following properties: 1) <span class="math inline">\(0 \in P\)</span>, and 2) for all <span class="math inline">\(k\in \mathbb{N}\)</span>, <span class="math inline">\(k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>, then <span class="math inline">\(P\)</span> is the set of natural numbers.</p>
+</div>
+<div id="thm-three" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.8 (Strong Induction) </strong></span>If <span class="math inline">\(P\)</span> is a subset of the natural numbers with the following properties: 1) <span class="math inline">\(0 \in P\)</span>, and 2) for all <span class="math inline">\(k\in \mathbb{N}\)</span>, <span class="math inline">\(0,1,..., k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>, then <span class="math inline">\(P\)</span> is the set of natural numbers.</p>
+</div>
+<p>Let’s use WOP, PMI, and SFI for the abbreviations for these three statements, respectively.</p>
+<blockquote class="blockquote">
+<p>Our goal is to prove the equivalence of these three statements.</p>
+</blockquote>
+<p>Mathematical induction is a technique used to prove that a certain property holds for all natural numbers. The well-ordering principle states that every non-empty set of natural numbers contains a smallest element. We will now prove that the well-ordering principle implies mathematical induction.</p>
+<div id="thm-four" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.9 </strong></span><span class="math inline">\(WOP\Rightarrow PMI\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(P\)</span> be a subset of natural numbers with <span class="math inline">\(0\in P\)</span> and the property, for all natural numbers <span class="math inline">\(k\)</span>, <span class="math inline">\(k\in P\)</span> implies <span class="math inline">\(k+1\in P\)</span>. Assume, for a contradiction, there exists a nonempty set <span class="math inline">\(S\)</span> containing the natural numbers not in <span class="math inline">\(P\)</span>. By the Well-Ordering Principle, <span class="math inline">\(S\)</span> has a least natural number, <span class="math inline">\(s\)</span>. Since <span class="math inline">\(0\in P\)</span>, <span class="math inline">\(s\neq 0\)</span>. Thus there exists a natural number <span class="math inline">\(t\)</span> such that <span class="math inline">\(t+1=s\)</span>. Notice <span class="math inline">\(t\mathbb{N}ot\in S\)</span> since <span class="math inline">\(t&lt;s\)</span>. Thus <span class="math inline">\(t\in P\)</span> and so <span class="math inline">\(s=t+1\in P\)</span>. This contradiction shows <span class="math inline">\(S\)</span> cannot exist, meaning <span class="math inline">\(P=\mathbb{N}\)</span> as desired. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>As a fun exercise for the reader, you should try proving that <span class="math inline">\(PMI\Rightarrow WOP\)</span>. After trying that, read on.</p>
+<p>In case you’ve heard of terms like weak induction or strong induction, we will now see they are actually equivalent. The advantage of having different mathematical induction variations though is to have flexibility when writing proofs.</p>
+<div id="thm-five" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.10 </strong></span><span class="math inline">\(PMI\Rightarrow SFI\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(S\)</span> be a set of natural numbers with <span class="math inline">\(0\in S\)</span> and the property, for all natural numbers <span class="math inline">\(k\)</span>, <span class="math inline">\(0,1,2...,k\in S\)</span> implies <span class="math inline">\(k+1\in S\)</span>. Let <span class="math inline">\(P\)</span> be the set of natural numbers for which <span class="math inline">\(0,2, ..., n\in S\)</span> is true. Notice <span class="math inline">\(0\in P\)</span> since <span class="math inline">\(0\in S\)</span>. Assume <span class="math inline">\(k\in P\)</span>. Then <span class="math inline">\(0,1,2, ..., k\in S\)</span>. Thus <span class="math inline">\(0,1,2,3,..., k , k+1\in S\)</span> meaning <span class="math inline">\(k+1\in P\)</span>. By I, <span class="math inline">\(P=\mathbb{N}\)</span>. By definition of <span class="math inline">\(P\)</span>, <span class="math inline">\(S=\mathbb{N}\)</span> as desired. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>Notice that only <span class="math inline">\(PMI\Rightarrow SFI\)</span> was proven above. The converse statement, namely <span class="math inline">\(SFI\Rightarrow PMI\)</span> is left for the reader.</p>
+<p>One of the most important statements in number theory is the well-ordering principle. This principle states that every non-empty set of natural numbers contains a smallest element. In other words, there is no infinite sequence of natural numbers in which each number is smaller than the one before it. The well-ordering principle is often used to prove results by contradiction. This makes it a very powerful tool for mathematical reasoning. Now it’s time to show that strong induction implies the well-ordering principle.</p>
+<div id="thm-six" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.11 </strong></span><span class="math inline">\(SFI\Rightarrow WOP\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume, for a contradiction, there exists a nonempty set of natural numbers <span class="math inline">\(S\)</span> with no least element. Let <span class="math inline">\(P\)</span> be the set of natural numbers for which <span class="math inline">\(n\mathbb{N}otin S\)</span> is true. Because <span class="math inline">\(0\)</span> is the least element of all natural numbers, <span class="math inline">\(0\mathbb{N}otin S\)</span> and so <span class="math inline">\(0\in P\)</span>. Assume <span class="math inline">\(0,1,...,k\in P\)</span>. If <span class="math inline">\(k+1\in S\)</span> then <span class="math inline">\(k+1\)</span> is the least element of <span class="math inline">\(S\)</span>. However, <span class="math inline">\(S\)</span> has no least element and thus <span class="math inline">\(k+1\mathbb{N}otin S\)</span>. Thus, <span class="math inline">\(k+1\in P\)</span> and so by Strong Induction, <span class="math inline">\(P=\mathbb{N}\)</span>. This contradiction shows <span class="math inline">\(S\)</span> can not exist. Therefore, <span class="math inline">\(S=\mathbb{N}\)</span>. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>Notice that only <span class="math inline">\(SFI\Rightarrow WOP\)</span> was proven above. The converse statement, namely <span class="math inline">\(WOP\Rightarrow SFI\)</span> is left for the reader.</p>
+<p>Okay, so we have proven that <span class="math inline">\(WOP\Rightarrow PMI \Rightarrow SFI \Rightarrow WOP\)</span>. This means, logically speaking that, <span class="math inline">\(WOP\Leftrightarrow PMI \Leftrightarrow SFI\)</span>, and so all three theorems above are proven.</p>
+<p>As discussed above, there are several variations of mathematical induction. Now we would like to show that these are equivalent also. Recall we use the notation <span class="math display">\[N_a = \{k\in \mathbb{N}: k\geq a\}\]</span> where <span class="math inline">\(a\)</span> is a natural number.</p>
+<div id="thm-seven" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.12 (Mathematical Induction Equivalence**)) </strong></span>Let <span class="math inline">\(a\)</span> be a fixed natural number. The following statements are logically equivalent.</p>
+<ol type="1">
+<li>Every nonempty set of <span class="math inline">\(\mathbb{N}_a\)</span> has a least element.</li>
+<li>If <span class="math inline">\(a\in P\subseteq\mathbb{N}_a\)</span> and for all <span class="math inline">\(k\in \mathbb{N}_a\)</span>, <span class="math inline">\(k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>, then <span class="math inline">\(P=\mathbb{N}_a\)</span>.</li>
+<li>If <span class="math inline">\(a\in P\subseteq\mathbb{N}_a\)</span> and for all <span class="math inline">\(k\in \mathbb{N}_a\)</span>, <span class="math inline">\(a,a+1,\ldots,a+k \in P\)</span> implies <span class="math inline">\(a+k+1 \in P\)</span>, then <span class="math inline">\(P=\mathbb{N}_a\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\((1)\Rightarrow (2)\)</span>: Let <span class="math inline">\(P\subseteq \mathbb{N}_a\)</span> with <span class="math inline">\(a\in P\)</span> and the property, for all natural numbers <span class="math inline">\(k\)</span>, <span class="math inline">\(k\in P\)</span> implies <span class="math inline">\(k+1\in P\)</span>. Assume, for a contradiction, there exists a nonempty subset <span class="math inline">\(S\)</span> of <span class="math inline">\(\mathbb{N}_a\)</span> containing the natural numbers not in <span class="math inline">\(P\)</span>. By the Well-Ordering Principle, <span class="math inline">\(S\)</span> has a least natural number, <span class="math inline">\(s\)</span>. Since <span class="math inline">\(a\in P\)</span>, <span class="math inline">\(s\neq a\)</span>. Further, since <span class="math inline">\(s\in S\subseteq \mathbb{N}_a\)</span> we know that <span class="math inline">\(s&gt;a\)</span>. Thus there exists a natural number <span class="math inline">\(t\)</span> such that <span class="math inline">\(t+1=a\)</span>. Notice <span class="math inline">\(t\mathbb{N}ot\in S\)</span> since <span class="math inline">\(t&lt;s\)</span>. Thus <span class="math inline">\(t\in P\)</span> and so <span class="math inline">\(s=t+1\in P\)</span>. This contradiction shows <span class="math inline">\(S\)</span> cannot exist, meaning <span class="math inline">\(P=\mathbb{N}_a\)</span> as desired.</p>
+<p><span class="math inline">\((2)\Rightarrow (3)\)</span>: Let <span class="math inline">\(S\)</span> be a set of natural numbers with <span class="math inline">\(a\in S\)</span> and the property, for all natural numbers <span class="math inline">\(k\)</span>, <span class="math inline">\(a,a+1,\ldots,a+k\in S\)</span> implies <span class="math inline">\(a+k+1\in S\)</span>. Let <span class="math inline">\(P\)</span> be the set of natural numbers for which <span class="math inline">\(a,a+1, \ldots, a+n\in S\)</span> is true. Notice <span class="math inline">\(a\in P\)</span> since <span class="math inline">\(a\in S\)</span>. Assume <span class="math inline">\(k\in P\)</span>. Then <span class="math inline">\(a,a+1, \ldots, a+k\in S\)</span>. Thus <span class="math inline">\(a,a+1,\ldots, a+k, a+k+1\in S\)</span> meaning <span class="math inline">\(a+k+1\in P\)</span>. Hence, <span class="math inline">\(P=\mathbb{N}_a\)</span>. By definition of <span class="math inline">\(P\)</span>, <span class="math inline">\(S=\mathbb{N}_a\)</span> as desired.</p>
+<p><span class="math inline">\((3)\Rightarrow (1)\)</span>: Assume, for a contradiction, there exists a nonempty subset <span class="math inline">\(S\)</span> of <span class="math inline">\(\mathbb{N}_a\)</span> with no least element. Let <span class="math inline">\(P\)</span> be the set of natural numbers for which <span class="math inline">\(n\mathbb{N}otin S\)</span> is true. Because <span class="math inline">\(a\)</span> is the least element of all elements in <span class="math inline">\(\mathbb{N}_a\)</span>, <span class="math inline">\(a\mathbb{N}otin S\)</span> and so <span class="math inline">\(a\in P\)</span>. Assume <span class="math inline">\(a,a+1,\ldots,a+k\in P\)</span>. If <span class="math inline">\(a+k+1\in S\)</span> then <span class="math inline">\(a+k+1\)</span> is the least element of <span class="math inline">\(S\)</span>. However, <span class="math inline">\(S\)</span> has no least element and thus <span class="math inline">\(a+k+1\mathbb{N}otin S\)</span>. Thus, <span class="math inline">\(a+k+1\in P\)</span> and so <span class="math inline">\(P=\mathbb{N}_a\)</span>. This contradiction shows <span class="math inline">\(S\)</span> can not exist. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>There are many other forms of mathematical induction. We are only limited by our imagination. But for now, let’s work through more exercises on mathematical induction.</p>
+<p>Mathematical induction is one of the most powerful techniques in mathematics. It allows us to prove a statement for a certain set of numbers, and then use that proof to show that the statement is true for all natural numbers. In this section, we will give some exercises on mathematical induction to help you understand the technique better. We will also provide solutions to these exercises so that you can check your work. Let’s get started!</p>
+<div id="exm-one" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.17 </strong></span>Prove that</p>
+<p><span class="math display">\[\sum _{k=1}^n k^3=\left(\frac{n(n+1)}{2}\right)^2\]</span></p>
+<p>for all positive integers <span class="math inline">\(n.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For <span class="math inline">\(n=1,\)</span></p>
+<p><span class="math display">\[ 1=\sum _{k=1}^1 k^3=\left(\frac{1(1+1)}{2}\right)^2=1. \]</span></p>
+<p>Assume that the result is true for a positive integer <span class="math inline">\(n,\)</span> we need to show that</p>
+<p><span class="math display">\[ \sum _{k=1}^{n+1} k^3=\left(\frac{(n+1)(n+2)}{2}\right)^2 \]</span></p>
+<p>holds. We have</p>
+<p><span class="math display">\[\begin{align*}
+\sum _{k=1}^{n+1} k^3
+&amp; =(n+1)^3+\sum _{k=1}^n k^3 \\
+&amp; =(n+1)^3+\left(\frac{n(n+1)}{2}\right)^2 \\
+&amp; =\left(\frac{(n+1)(n+2)}{2}\right)^2.
+\end{align*}\]</span></p>
+<p>Therefore by mathematical induction</p>
+<p><span class="math display">\[\sum _{k=1}^{n+1} k^3=\left(\frac{(n+1)(n+2)}{2}\right)^2\]</span></p>
+<p>holds true for all positive integers <span class="math inline">\(n.\)</span> <span class="math inline">\(\square\)</span></p>
+</div>
+<div id="exm-two" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.18 </strong></span>Prove that <span class="math inline">\(2\cdot 6 \cdot 10 \cdot 14 \cdots (4n-2) = \frac{(2n)!}{n!}\)</span> for all positive integers <span class="math inline">\(n.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For <span class="math inline">\(n=1\)</span> we have <span class="math inline">\(2 = \frac{2!}{1!} = \frac{2}{1}\)</span> so the base case holds. Assume that</p>
+<p><span class="math display">\[2\cdot 6 \cdot 10 \cdot 14 \cdots (4k-2) = \frac{(2k)!}{k!}\]</span></p>
+<p>for some positive integer <span class="math inline">\(k\)</span>. Then</p>
+<p><span class="math display">\[\begin{align*}
+&amp; 2\cdot 6 \cdot 10 \cdot 14 \cdots (4k-2) \cdot (4k+2)  \\[8pt]
+&amp; \qquad = \frac{(2k)!}{k!} \cdot (4k+2)  \\[8pt]
+&amp; \qquad = \frac{(2k)! (2)(2k+1)(k+1)}{(k+1)!} \\[8pt]
+&amp; \qquad = \frac{1\cdot 2 \cdots (2k)(2k+1)(2k+2)}{(k+1)!} \\[8pt]
+&amp; \qquad = \frac{(2k+2)!}{(k+1)!}
+\end{align*}\]</span>$$</p>
+<p>as desired. The result follows by mathematical induction. <span class="math inline">\(\square\)</span></p>
+</div>
+</section>
+<section id="the-fibonacci-sequence" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="the-fibonacci-sequence"><span class="header-section-number">1.6</span> The Fibonacci Sequence</h2>
+<p>Fibonacci numbers have been found to occur in many areas of mathematics, as well as in nature. For example, the proportions of many spiral shells can be expressed as Fibonacci numbers.</p>
+<blockquote class="blockquote">
+<p>Fibonacci numbers were highlighted by the Italian mathematician Leonardo of Pisa (Fibonacci), who was investigating the growth of rabbit populations. He realized that the Fibonacci sequence could be used to model the way in which rabbits reproduce.</p>
+</blockquote>
+<p>Fibonacci numbers also appear in the DNA molecule and in the arrangement of leaves on a stem. It seems that Fibonacci numbers are ubiquitous in both mathematics and nature!</p>
+<p>The <strong>Fibonacci numbers</strong> start with 0 and 1, and then the next Fibonacci number is 1 <span class="math inline">\((0+1),\)</span> and the next Fibonacci number is 2 <span class="math inline">\((1+1),\)</span> and so on. As a result, the <strong>Fibonacci sequence</strong> is 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987,…</p>
+<p>Fibonacci numbers play an important role in mathematics and have a wide range of applications. They are also closely related to the golden ratio, which is often found in nature. Fibonacci numbers can be generated by starting with 0 and 1, and then adding the two previous numbers to get the next number in the sequence. This relationship is known as the <strong>Fibonacci recurrence</strong>.</p>
+<p>The Fibonacci numbers are also related to each other by a plethora of (<strong>Fibonacci identities</strong>) identities. These identities can be proved using mathematical induction. How? First, the base case must be proven true for <span class="math inline">\(n=0.\)</span> Then, the inductive step, it must be shown that if the Fibonacci identities are true for <span class="math inline">\(n=k\)</span>, then they are also true for <span class="math inline">\(n=k+1.\)</span> By following this process, it can be shown that a Fibonacci identity holds. As a result, these identities provide a powerful tool for understanding and manipulating Fibonacci numbers.</p>
+<p>After having studied mathematical induction the Fibonacci numbers are a good topic to test ones abilities to perform induction. There are two obvious reasons for this. Firstly, many of the results (exercises) for are relatively straight-forward. Secondly, many of the results obtain are quite surprising. For instance, the sum of the squares of the first <span class="math inline">\(n\)</span> Fibonacci numbers is the same as the product of the <span class="math inline">\(n\)</span>-th and the <span class="math inline">\(n+1\)</span>-th. This fact is easily provable by mathematical induction. We now study the Fibonacci Numbers and the Euler-Binet Formula.</p>
+<p>Fibonacci numbers are defined as a <em>recursive sequence</em> by starting with <span class="math inline">\(0\)</span> and <span class="math inline">\(1,\)</span> and then adding the previous two integers together. It has long been noticed that the Fibonacci numbers arise in many places throughout the natural world. Fibonacci numbers have many special mathematical properties.</p>
+<div id="def-one" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.6 </strong></span><strong>Fibonacci numbers</strong> are the positive integers defined by <span class="math inline">\(f_0=0,\)</span> <span class="math inline">\(f_1=1,\)</span> and</p>
+<p><span class="math display">\[f_{n}=f_{n-1}+f_{n-2}\]</span></p>
+<p>for <span class="math inline">\(n\geq 2.\)</span></p>
+</div>
+<p>The first 21 Fibonacci numbers are</p>
+<p><span class="math display">\[\begin{array}{ccccccc}
+1 &amp; 1 &amp; 2 &amp; 3 &amp; 5 &amp; 8 &amp; 13 \\
+21 &amp; 34 &amp; 55 &amp; 89 &amp; 144 &amp; 233 &amp; 377 \\
+610 &amp; 987 &amp; 1597 &amp; 2584 &amp; 4181 &amp; 6765 &amp; 10946
+\end{array}\]</span></p>
+<p>Here we prove several identities involving Fibonacci numbers. The idea is to provide several interesting examples on how mathematical induction can be applied to give rigorous arguments on (perhaps) experimentally found identities.</p>
+<div id="exm-one" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.19 </strong></span>Prove that for all positive integers <span class="math inline">\(n\)</span>,</p>
+<p><span id="eq-squareind"><span class="math display">\[\sum_{i=0}^n f_{i}^2  = f_n f_{n+1}. \qquad(1.5)\]</span></span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of positive integers for which (<a href="#eq-squareind">Equation&nbsp;<span>1.5</span></a>) is true. Since <span class="math inline">\(f_0^2 =0=f_0 f_1\)</span> we see <span class="math inline">\(0\in P\)</span>. Assume <span class="math inline">\(k\in P\)</span>. It follows <span class="math inline">\(k+1\in P\)</span> by</p>
+<p><span class="math display">\[\begin{align}
+\sum_{i=0}^{k+1} f_i^2
+&amp; =\sum_{i=0}^{k} f_i^2+ f_{k+1}^2 \\[8pt]
+&amp; =f_k f_{k+1}+f_{k+1}^2  \\[8pt]
+&amp; =f_{k+1}(f_k+f_{k+1}) \\[8pt]
+&amp; =f_{k+1} f_{k+2}.
+\end{align}\]</span></p>
+<p>By mathematical induction <span class="math inline">\(P=\mathbb{N}\)</span> as desired. <span class="math inline">\(\square\)</span></p>
+</div>
+<div id="exm-two" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.20 </strong></span>Prove that for all positive integers <span class="math inline">\(n,\)</span></p>
+<p><span id="eq-fourthfib"><span class="math display">\[\sum_{j=1}^n f_{2j}=f_{2n+1}-1. \qquad(1.6)\]</span></span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For <span class="math inline">\(n=1,\)</span> <span class="math inline">\(f_2=1= f_3-1\)</span> so the base case holds. Assume, for some positive integer <span class="math inline">\(k,\)</span> that (<a href="#eq-fourthfib">Equation&nbsp;<span>1.6</span></a>) holds. Then we find</p>
+<p><span class="math display">\[\begin{align}
+\sum_{j=1}^{k+1} f_{2j}
+&amp; = \sum_{j=1}^k f_{2j}+f_{2k+2} \\[8pt]
+&amp; = f_{2k+1}-1+f_{2k+2} \\[8pt]
+&amp; = f_{2k+3}-1.
+\end{align}\]</span></p>
+<p>By mathematical induction, (<a href="#eq-fourthfib">Equation&nbsp;<span>1.6</span></a>) holds for all positive integers <span class="math inline">\(n.\)</span> <span class="math inline">\(\square\)</span></p>
+</div>
+<div id="exm-three" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.21 </strong></span>Prove that for all positive integers <span class="math inline">\(n\)</span>,</p>
+<p><span id="eq-fibodd"><span class="math display">\[\sum_{i=1}^n f_{2i-1} = f_{2n}. \qquad(1.7)\]</span></span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(f_1=1=f_2\)</span> we see the base case holds. Assume, for some positive integer <span class="math inline">\(k\)</span>, that (<a href="#eq-fibodd">Equation&nbsp;<span>1.7</span></a>) holds. Then we find</p>
+<p><span class="math display">\[\begin{align}
+\sum_{i=1}^{k+1} f_{2i-1}
+&amp; = \sum_{i=1}^k f_{2i-1} +f_{2(k+1)-1}  \\[8pt]
+&amp; = f_{2k}+f_{2k+1}  \\[8pt]
+&amp; = f_{2k+2}  \\[8pt]
+&amp; = f_{2(k+1)}.
+\end{align}\]</span></p>
+<p>By mathematical induction, (<a href="#eq-fibodd">Equation&nbsp;<span>1.7</span></a>) holds for all positive integers <span class="math inline">\(n.\)</span> <span class="math inline">\(\square\)</span></p>
+</div>
+<div id="exm-four" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.22 </strong></span>Prove that for all positive integers <span class="math inline">\(n,\)</span></p>
+<p><span id="eq-thirdfib"><span class="math display">\[\sum_{i=1}^n f_i = f_{n+2}-1. \qquad(1.8)\]</span></span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For <span class="math inline">\(n=1,\)</span> <span class="math inline">\(f_1=1=f_3-1\)</span> so the bases case holds. Assume, for some positive integer <span class="math inline">\(k\)</span>, that (<a href="#eq-thirdfib">Equation&nbsp;<span>1.8</span></a>) holds. Then we find</p>
+<p><span class="math display">\[\begin{align}
+\sum_{j=1}^{k+1} f_j
+&amp; =\sum_{j=1}^k f_j+f_{k+1}  \\[8pt]
+&amp; = f_{k+2}-1+f_{k+1}  \\[8pt]
+&amp; = f_{k+1}+f_{k+2}-1  \\[8pt]
+&amp; = f_{k+3}-1.
+\end{align}\]</span></p>
+<p>By mathematical induction, (<a href="#eq-thirdfib">Equation&nbsp;<span>1.8</span></a>) holds for all positive integers <span class="math inline">\(n.\)</span> <span class="math inline">\(\square\)</span></p>
+</div>
+<div id="exm-five" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.23 </strong></span>Prove that for all positive integers <span class="math inline">\(n,\)</span></p>
+<p><span id="eq-fifthfib"><span class="math display">\[f_{n+1}f_{n-1}-\left(f_n\right){}^2=(-1)^n. \qquad(1.9)\]</span></span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For <span class="math inline">\(n=1,\)</span> <span class="math inline">\(f_2f_0-\left(f_1\right)^2=(-1)^1\)</span> so the base case holds. Assume, for some positive integer <span class="math inline">\(k\)</span>, that (<a href="#eq-fifthfib">Equation&nbsp;<span>1.9</span></a>) holds. Then we find</p>
+<p><span class="math display">\[\begin{align}
+f_{k+2}f_k-\left(f_{k+1}\right){}^2
+&amp; =\left(f_{k+1}+f_k\right)f_k-\left(f_{k+1}\right)\left(f_{k-1}+f_k\right) \\[8pt]
+&amp; =f_{k+1}f_k+\left(f_k\right){}^2-f_{k+1}f_{k-1}-f_{k+1}f_k \\[8pt]
+&amp; =(-1)\left(-\left(f_k\right){}^2+f_{k+1}f_{k-1}\right)  \\[8pt]
+&amp; =(-1)(-1)^k  \\[8pt]
+&amp; =(-1)^{k+1}.
+\end{align}\]</span></p>
+<p>By mathematical induction, (<a href="#eq-fifthfib">Equation&nbsp;<span>1.9</span></a>) holds for all positive integers <span class="math inline">\(n.\)</span> <span class="math inline">\(\square\)</span></p>
+</div>
+<p>From our previous video, we recall the definition of the Fibonacci numbers.</p>
+<div id="def-one" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.7 </strong></span><strong>Fibonacci numbers</strong> are the positive integers defined by <span class="math inline">\(f_0=0,\)</span> <span class="math inline">\(f_1=1,\)</span> and</p>
+<p><span class="math display">\[f_{n}=f_{n-1}+f_{n-2}\]</span></p>
+<p>for <span class="math inline">\(n\geq 2.\)</span></p>
+</div>
+<p>The first 21 Fibonacci numbers are</p>
+<p><span class="math display">\[\begin{array}{ccccccc}
+1 &amp; 1 &amp; 2 &amp; 3 &amp; 5 &amp; 8 &amp; 13 \\
+21 &amp; 34 &amp; 55 &amp; 89 &amp; 144 &amp; 233 &amp; 377 \\
+610 &amp; 987 &amp; 1597 &amp; 2584 &amp; 4181 &amp; 6765 &amp; 10946
+\end{array}\]</span></p>
+<p>In our previous lecture we also proved the following 5 Fibonacci identities.</p>
+<div id="exm-1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.24 </strong></span>Prove that for all positive integers <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[\sum_{i=0}^n f_{i}^2  = f_n f_{n+1}.\]</span></p>
+</div>
+<div id="exm-2" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.25 </strong></span>Prove that for all positive integers <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[\sum_{j=1}^n f_{2j}=f_{2n+1}-1.\]</span></p>
+</div>
+<div id="exm-3" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.26 </strong></span>Prove that for all positive integers <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[\sum_{i=1}^n f_{2i-1} = f_{2n}.\]</span></p>
+</div>
+<div id="exm-4" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.27 </strong></span>Prove that for all positive integers <span class="math inline">\(n,\)</span></p>
+<p><span class="math display">\[\sum_{i=1}^n f_i = f_{n+2}-1.\]</span></p>
+</div>
+<div id="exm-5" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.28 </strong></span>Prove that for all positive integers <span class="math inline">\(n,\)</span></p>
+<p><span class="math display">\[f_{n+1}f_{n-1}-\left(f_n\right){}^2=(-1)^n.\]</span></p>
+</div>
+<p>Now let’s see what this infamous formula is all about.</p>
+<p>The Fibonacci numbers also have an interesting relationship to the <strong>golden ratio</strong>. This relationship is expressed by a formula called the <strong>Euler-Binet formula</strong>. And this simple equation has surprising implications, and it has been used to derive many other results in mathematics. The Fibonacci numbers and the golden ratio continue to fascinate mathematicians and laypeople alike, and they are sure to continue to yield new insights in the future.</p>
+<p>Firstly, we notice that the Euler-Binet formula gives us a <strong>closed form</strong> for calculating the <span class="math inline">\(n\)</span>-th Fibonacci number. In fact, the formula is in terms of the golden ratio <span class="math inline">\(\phi.\)</span> To prove the formula we first need the following lemma involving the golden ratio.</p>
+<div id="lem-binetlem" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1.17 </strong></span>For any solution <span class="math inline">\(x\)</span> of <span class="math inline">\(x^2-x-1=0\)</span> and any positive integer <span class="math inline">\(n\)</span>, <span class="math display">\[x^n=x f_n+f_{n-1}.\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Proof by mathematical induction. Clearly, <span class="math inline">\(x^1= x f_1+f_{0}=x (1)+0=x\)</span> so the base case holds. Assume now that, for some positive integer <span class="math inline">\(k\)</span>, that</p>
+<p><span class="math display">\[ x^k=x f_k+f_{k-1}. \]</span></p>
+<p>We wish to prove that</p>
+<p><span class="math display">\[x^{k+1}=x f_{k+1}+f_{k}.\]</span></p>
+<p>To this end, multiply the identity by <span class="math inline">\(x\)</span> to obtain</p>
+<p><span class="math display">\[\begin{align}
+x^{k+1}
+&amp; =x^2 f_k+ x f_{k-1} \\[8pt]
+&amp; = (x+1) f_k+x f_{k-1} \\[8pt]
+&amp; = x(f_k+f_{k-1})+f_k  \\[8pt]
+&amp; = x f_{k+1}+f_k
+\end{align}\]</span></p>
+<p>as needed.</p>
+</div>
+<p>The <strong>golden ratio</strong> is the positive root of the quadratic equation <span class="math inline">\(x^2-x-1=0,\)</span> that is,</p>
+<p><span class="math display">\[\phi=\frac{1+\sqrt{5}}{2}.\]</span></p>
+<p>The conjugate of <span class="math inline">\(\phi\)</span> is denoted using <span class="math inline">\(\tau\)</span> and is</p>
+<p><span class="math display">\[\tau=\frac{1-\sqrt{5}}{2}.\]</span></p>
+<p>It is easily verified that <span class="math inline">\(\phi\tau=-1\)</span> and <span class="math inline">\(\phi-\tau=\sqrt{5}\)</span>. We now give a closed formula to compute the <span class="math inline">\(n\)</span>-th Fibonacci number.</p>
+<div id="thm-Binetform" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.13 (Euler-Binet Formula) </strong></span>For all positive integers <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[f_n=\frac{1}{\sqrt{5}}(\phi^n-\tau^n).\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By (<a href="#lem-binetlem">Lemma&nbsp;<span>1.17</span></a>),</p>
+<p><span class="math display">\[
+\phi^n=\phi f_n+f_{n-1}
+\quad \text{ and } \quad
+\tau^n=\tau f_n+f_{n-1}.
+\]</span></p>
+<p>It follows that <span class="math inline">\(f_n=\frac{\phi^n-\tau^n}{\phi-\tau}\)</span>. Now observe that (<a href="#thm-Binetform">Theorem&nbsp;<span>1.13</span></a>) follows since <span class="math inline">\(\phi-\tau=\sqrt{5}\)</span>.</p>
+</div>
+<p>The first 75 Fibonacci numbers.</p>
+<blockquote class="blockquote">
+<p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, 267914296, 433494437, 701408733, 1134903170, 1836311903, 2971215073, 4807526976, 7778742049, 12586269025, 20365011074, 32951280099, 53316291173, 86267571272, 139583862445, 225851433717, 365435296162, 591286729879, 956722026041, 1548008755920, 2504730781961, 4052739537881, 6557470319842, 10610209857723, 17167680177565, 27777890035288, 44945570212853, 72723460248141, 117669030460994, 190392490709135, 308061521170129, 498454011879264, 806515533049393, 1304969544928657, 2111485077978050</p>
+</blockquote>
+<p>The next example shows that the Fibonacci numbers grow exponentially fast.</p>
+<div id="exm-six" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.29 </strong></span>Prove that <span class="math inline">\(f_n&gt;\left(\frac{3}{2}\right)^{n-1}\)</span>, for all <span class="math inline">\(n\geq 6\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We verify that</p>
+<p><span class="math display">\[f_6=8&gt;\left(\frac{3}{2}\right)^5\approx 7.59375.\]</span></p>
+<p>We also must verify <span class="math display">\[f_7=13&gt;\left(\frac{3}{2}\right)^6\approx 11.390625.\]</span></p>
+<p>Now let <span class="math inline">\(k&gt;7\)</span>, and assume (the inductive hypothesis) that <span class="math inline">\(f_i &gt;(3/2)^{i-1}\)</span> for <span class="math inline">\(i=k-1\)</span> and <span class="math inline">\(i=k-2\)</span>. Then we have</p>
+<p><span class="math display">\[\begin{align*}
+f_k
+&amp; = f_{k-1}+f_{k-2} \\[8pt]
+&amp; &gt; \left(\frac{3}{2}\right)^{k-2}+\left(\frac{3}{2}\right)^{k-3} \\[8pt]
+&amp; = \left(\frac{3}{2}\right)^{k-3}\left(\frac{3}{2}+1\right) \\[8pt]
+&amp; = \left(\frac{3}{2}\right)^{k-3}\left(\frac{5}{2}\right) \\[8pt]
+&amp; &gt; \left(\frac{3}{2}\right)^{k-3}\left(\frac{9}{4}\right) \\[8pt]
+&amp; = \left(\frac{3}{2}\right)^{k-3}\left(\frac{3}{2}\right)^2 = \left(\frac{3}{2}\right)^{k-1}
+\end{align*}\]</span></p>
+<p>as desired.</p>
+</div>
+<p>The golden ratio <span class="math inline">\(\phi\)</span> is approximately, 1.61803398875. We can use the golden ratio to improve our understanding of the growth rate of the Fibonacci sequence.</p>
+<div id="exm-seven" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.30 </strong></span>Prove that <span class="math inline">\(f_n&gt;\phi^{n-2}\)</span>, for all <span class="math inline">\(n\geq 3\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We verify that</p>
+<p><span class="math display">\[f_3=3&gt;\phi^1\approx 1.618
+\qquad \text{and}\qquad
+f_4=5&gt;\phi^2\approx 2.618.\]</span></p>
+<p>Now let <span class="math inline">\(k&gt;4\)</span>, and assume (the inductive hypothesis) that <span class="math inline">\(f_i &gt;\phi^{i-2}\)</span> for <span class="math inline">\(i=k-1\)</span> and <span class="math inline">\(i=k-2\)</span>. Now using <span class="math inline">\(\phi^2=\phi+1\)</span>, we have</p>
+<p><span class="math display">\[\begin{align*}
+f_k &amp; =f_{k-1}+f_{k-2} \\[8pt]
+&amp; &gt; \phi^{k-3}+\phi^{k-4}  \\[8pt]
+&amp; =\phi^{k-4}\left(\phi+1\right)  \\[8pt]
+&amp; =\phi^{k-4}\phi^2  \\[8pt]
+&amp; =\phi^{k-2}
+\end{align*}\]</span></p>
+<p>as desired.</p>
+</div>
+<p>This may seem like a slight improvement (i.e.&nbsp;the base has increased from 1.5 to <span class="math inline">\(\phi\)</span>), but this small change in base means much more growth in the long term.</p>
+</section>
+<section id="universal-property-of-natural-numbers" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="universal-property-of-natural-numbers"><span class="header-section-number">1.7</span> Universal Property of Natural Numbers</h2>
+<div id="thm-universal-property-of-natural-numbers" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.14 (Universal Property of Natural Numbers) </strong></span>Let <span class="math inline">\(S\)</span> be any set, <span class="math inline">\(f:S\to S\)</span> be any function, and let <span class="math inline">\(x_0\in S\)</span>. Then there exists a unique function <span class="math inline">\(\phi:\mathbb{N}\to S\)</span> such that <span class="math inline">\(\phi(1)=x_0\)</span> and <span class="math inline">\(\phi\circ s=f\circ \phi\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We will rely upon the set-theoretic principle that a subset <span class="math inline">\(\Gamma\subseteq A\times B\)</span> is the graph of a function from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> if and only if <span class="math inline">\(p:\Gamma\to A\)</span> is a bijection. We wish to construct a mapping <span class="math inline">\(\phi:\mathbb{N}\to S\)</span> and so <span class="math inline">\(p:\Gamma \to \mathbb{N}\)</span> must be a bijection with graph <span class="math inline">\(\Gamma\subseteq \mathbb{N}\times S\)</span>. We also insist that <span class="math inline">\(\phi(1)=x_0\)</span> which means <span class="math inline">\((1,x_0)\in \Gamma\)</span>. Since <span class="math inline">\(\Gamma\)</span> is expected to be the graph of the yet unconstructed function <span class="math inline">\(\phi\)</span>, for any <span class="math inline">\(n\in \mathbb{N}\)</span>, we must have elements of the form <span class="math inline">\((n, \phi(n)) \in \Gamma\)</span>. So, if <span class="math inline">\((n, t) \in \Gamma\)</span>, then <span class="math inline">\(t\)</span> is expected to be <span class="math inline">\(\phi(n)\)</span>. Then, the second condition says that <span class="math inline">\(\phi(s(n)) = f(\phi(n))\)</span> and hence <span class="math inline">\((s(n),f(t)) \in \Gamma\)</span>. This says, if we prescribe <span class="math inline">\(\theta : \mathbb{N}\times S \to \mathbb{N}\times S\)</span> as <span class="math inline">\(\theta(n,t) = (s(n),f(t))\)</span>, then <span class="math inline">\(\theta(\Gamma) \subseteq \Gamma\)</span>. So let <span class="math inline">\(\theta\)</span> be so prescribed, we see that these three conditions ensure what we need:</p>
+<ul>
+<li><span class="math inline">\(p:\Gamma\to A\)</span> is a bijection </li>
+<li><span class="math inline">\((1,x_0)\in \Gamma\)</span> </li>
+<li><span class="math inline">\(\theta(\Gamma) \subseteq \Gamma\)</span>.</li>
+</ul>
+Let <span class="math inline">\(\mathcal{C}\)</span> be the set of all subsets of <span class="math inline">\(\mathbb{N} \times S\)</span> satisfying <span class="math inline">\((ii)\)</span> and <span class="math inline">\((iii)\)</span>. Notice that <span class="math inline">\((1,x_0)\in \mathbb{N}\times S\)</span>, and so <span class="math inline">\(\mathbb{N}\times S\)</span> satisfies <span class="math inline">\((ii)\)</span>. If <span class="math inline">\((s(n),f(t))\in \theta(\mathbb{N}\times S)\)</span>, then by the definitions of <span class="math inline">\(s\)</span> and <span class="math inline">\(f\)</span> we see that <span class="math inline">\((s(n),f(t))\in \mathbb{N}\times S\)</span>, and so <span class="math inline">\(\mathbb{N}\times S\)</span> satisfies <span class="math inline">\((iii)\)</span>. Then <span class="math inline">\(\mathbb{N} \times S \in \mathcal{C}\)</span>, and hence this collection is nonempty.
+<span class="math inline">\(b)\)</span> and <span class="math inline">\(c)\)</span>: Let <span class="math inline">\(\Gamma\)</span> be the intersection of all elements in <span class="math inline">\(\mathcal{C}\)</span>. First let us check that <span class="math inline">\(\Gamma\in\mathcal{C}\)</span>. This is easy, since <span class="math inline">\((1, x_0) \in X\)</span> for all <span class="math inline">\(X \in \mathcal{C}\)</span> and <span class="math inline">\(\Gamma\)</span> being the intersection of such sets, <span class="math inline">\((1,x_0) \in\Gamma\)</span>. Similarly, for any <span class="math inline">\(X \in\mathcal{C}\)</span>, <span class="math inline">\(\theta(\Gamma) \subseteq \theta(X) \subseteq X\)</span> and thus <span class="math inline">\(\theta(\Gamma) \subseteq X\)</span> for all <span class="math inline">\(X \in \mathcal{C}\)</span>. So, by definition of <span class="math inline">\(\Gamma\)</span>, <span class="math inline">\(\theta(\Gamma) \subseteq \Gamma\)</span>. So, <span class="math inline">\(\Gamma\)</span> satisfies <span class="math inline">\(b)\)</span> and <span class="math inline">\(c)\)</span>, and hence <span class="math inline">\(\Gamma \in \mathcal{C}\)</span>.
+<span class="math inline">\(a)\)</span>: First, consider the set <span class="math inline">\(G = \theta(\Gamma) \cup \{(1, x_0)\}\)</span>. Then clearly <span class="math inline">\(G \subseteq \Gamma\)</span>. On the other hand, <span class="math inline">\((1,x_0) \in G\)</span> and <span class="math display">\[
+\theta(G) \subseteq  \theta(\theta(\Gamma))\cup \theta(\{(1,x_0)\} \subseteq  \theta(\Gamma) \subseteq  G.
+\]</span> So, <span class="math inline">\(G \in \mathcal{C}\)</span> and thus by definition of <span class="math inline">\(\Gamma\)</span>, we get <span class="math inline">\(\Gamma \subseteq G\)</span>. This shows that <span class="math display">\[\begin{equation}
+\label{gisgam}
+\theta(\Gamma) \cup  \{(1, x_0)\} = G = \Gamma.
+\end{equation}\]</span> We prove that <span class="math inline">\(p : \Gamma \to\mathbb{N}\)</span> is a bijection by applying induction to the set, <span class="math display">\[
+T = \{n \in  \mathbb{N} \mid p^{-1}(n) \subseteq  \Gamma \text{ has exactly one element}\}.
+\]</span> Notice that if <span class="math inline">\(T = \mathbb{N}\)</span>, then <span class="math inline">\(p\)</span> is a bijection.
+We have <span class="math inline">\(p(1,x_0) = 1\)</span> and we wish to show that <span class="math inline">\(p^{-1}(1) = \{(1,x_0)\}\)</span>. If not, say <span class="math inline">\((1,t) \in p^{-1}(1)\)</span> with <span class="math inline">\(t\neq x_0\)</span>. By <span class="math inline">\(\eqref{gisgam}\)</span>, we see that <span class="math inline">\((1, t) \in \theta(\Gamma)\)</span>. So, there exists an element <span class="math inline">\((n, u) \in \Gamma\)</span> such that <span class="math inline">\((1, t) = \theta(n, u) = (s(n), f (u))\)</span>. This says in particular, <span class="math inline">\(1 = s(n)\)</span> contradicting Peano’s axiom. This proves that <span class="math inline">\(p^{-1}(1) = \{(1,x_0)\}\)</span> and hence <span class="math inline">\(1 \in T\)</span>.
+<p>Next, assume that <span class="math inline">\(n \in T\)</span>. Then by definition, we have <span class="math inline">\(p^{-1}(n) = \{(n, w)\}\)</span>. Since <span class="math inline">\((n, w) \in \Gamma\)</span>, we know that <span class="math inline">\(\theta(n, w) = (s(n), f(w)) \in \Gamma\)</span>, since <span class="math inline">\(\theta(\Gamma) \subseteq \Gamma\)</span>. Thus <span class="math inline">\(p^{-1}(s(n))\)</span> contains <span class="math inline">\((s(n),f(w))\)</span>. If we can show this is the only element in this set, we would have shown <span class="math inline">\(s(n) \in T\)</span> and then by induction, we would be done. So, assume that <span class="math inline">\((s(n),x) \in \Gamma\)</span> and we want to show that <span class="math inline">\(x = f(w)\)</span>. By Peano’s axiom, <span class="math inline">\((s(n),x)\neq (1,x_0)\)</span> and hence, from <span class="math inline">\(\eqref{gisgam}\)</span>, we see that <span class="math inline">\((s(n),x) \in \theta(\Gamma)\)</span> and thus there is an element <span class="math inline">\((m, y) \in \Gamma\)</span> with <span class="math inline">\(\theta(m, y) = (s(n), x)\)</span>. Then <span class="math inline">\(s(m) = s(n)\)</span> and <span class="math inline">\(f(y) = x\)</span>. By injectivity of <span class="math inline">\(s\)</span>, we get <span class="math inline">\(m = n\)</span>. Since <span class="math inline">\((m,y)=(n,y)\in \Gamma\)</span> and <span class="math inline">\(n \in T\)</span> implies <span class="math inline">\(y=w\)</span>. Then <span class="math inline">\(x=f(w)\)</span> and thus <span class="math inline">\((s(n), x) = (s(n), f(w))\)</span> proving what we set out to prove. Thus <span class="math inline">\(T = \mathbb{N}\)</span> and hence <span class="math inline">\(p\)</span> is a bijection.</p>
+</div>
+</section>
+<section id="exercises" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">1.8</span> Exercises</h2>
+<div id="exr-three" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.1 </strong></span>Conjecture a formula for the sum of the first <span class="math inline">\(n\)</span> even positive integers. Prove your result using mathematical induction.</p>
+</div>
+<div id="exr-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.2 </strong></span>Show that the sum of consecutive odd natural numbers beginning with 1 is a square.</p>
+</div>
+<div id="exr-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.3 </strong></span>Prove that <span class="math inline">\(2^{n+1}&gt; n+2\)</span> for every positive integer <span class="math inline">\(n\)</span>.</p>
+</div>
+<div id="exr-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.4 </strong></span>Prove that a set with <span class="math inline">\(n\)</span> elements has exactly <span class="math inline">\(2^n\)</span> subsets.</p>
+</div>
+<div id="exr-5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.5 </strong></span>Prove that, for all positive integers <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[\sum _{j=1}^n (-1)^{j-1}j^2=(-1)^{n-1}\frac{n(n+1)}{2}.\]</span></p>
+</div>
+<div id="exr-6" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.6 </strong></span>Prove that, for all positive integers <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[\sum _{j=1}^n j\cdot j! =(n+1)!-1.\]</span></p>
+</div>
+<div id="exr-7" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.7 </strong></span>Use mathematical induction to show that the sum of the first <span class="math inline">\(n\)</span> odd cubes is <span class="math inline">\(n^2\left(2n^2-1\right).\)</span></p>
+</div>
+<div id="exr-8" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.8 </strong></span>Use mathematical induction to prove that <span class="math inline">\(2^n&lt;n!\)</span> for <span class="math inline">\(n\geq 4.\)</span></p>
+</div>
+<div id="exr-9" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.9 </strong></span>Use mathematical induction to prove that <span class="math inline">\(3^n&gt;3n-1\)</span> for every positive integer <span class="math inline">\(n.\)</span></p>
+</div>
+<div id="exr-10" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.10 </strong></span>Prove that <span class="math inline">\(0&lt;a&lt;b\)</span> then <span class="math inline">\(0&lt;a^n&lt;b^n\)</span> for all positive integers <span class="math inline">\(n\)</span>.</p>
+</div>
+<div id="exr-11" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.11 </strong></span>Use mathematical induction to prove that <span class="math inline">\(3^n &gt; n^3\)</span> for <span class="math inline">\(n&gt;4\)</span>.</p>
+</div>
+<div id="exr-12" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.12 </strong></span>Use the strong form of mathematical induction to establish that for all <span class="math inline">\(n\geq 1,\)</span></p>
+<p><span class="math display">\[ a^n-1=(a-1)\left(a^{n-1}+a^{n-2}+a^{n-3}+\cdots+a+1\right).\]</span></p>
+</div>
+<div id="exr-13" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.13 </strong></span>Show that any amount of postage that is an integer number of cents greater than 53 cents can be formed using just 7-cent and 10-cent stamps.</p>
+</div>
+<div id="exr-14" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.14 </strong></span>Use mathematical induction to prove that <span class="math inline">\(x-y\)</span> is a factor of <span class="math inline">\(x^n-y^n,\)</span> where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are variables.</p>
+</div>
+<div id="exr-15" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.15 </strong></span>Use mathematical induction to prove the inequality. For all <span class="math inline">\(n\geq 1\)</span>,</p>
+<p><span class="math display">\[ \frac{1}{2}+\frac{2}{2^2}+\frac{3}{2^3}+\cdots +\frac{n}{2^n}\leq 2-\frac{n+2}{2^n}. \]</span></p>
+</div>
+<div id="exr-16" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.16 </strong></span>Use mathematical induction to prove that <span class="math inline">\(2^n &gt; n^2\)</span> for <span class="math inline">\(n&gt;4\)</span>.</p>
+</div>
+<div id="exr-17" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.17 </strong></span>Use mathematical induction to show that for every positive integer <span class="math inline">\(n,\)</span></p>
+<p><span class="math display">\[\sum _{i=1}^n 2^k=2^{n+1}-2.\]</span></p>
+</div>
+<div id="exr-18" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.18 </strong></span>You have a supply of <span class="math inline">\(32\)</span> cent stamps and <span class="math inline">\(21\)</span> cent stamps. You need to mail a package which requires <span class="math inline">\(1.48\)</span> dollars in postage. How many of each type of stamp should you use? Can you prove it?</p>
+</div>
+<div id="exr-19" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.19 </strong></span>Prove <span class="math inline">\(2 n&lt;7^n\)</span> whenever <span class="math inline">\(n\)</span> is a positive integer.</p>
+</div>
+<div id="exr-20" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.20 </strong></span>Find the Fibonacci numbers <span class="math inline">\(f_{24}\)</span>, <span class="math inline">\(f_{32}\)</span>, and <span class="math inline">\(f_{44}\)</span>.</p>
+</div>
+<div id="exr-21" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.21 </strong></span>Write out the first 50 Fibonacci numbers.</p>
+</div>
+<div id="exr-22" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.22 </strong></span>Show that <span class="math inline">\(f_{n+3}+f_n=2f_{n+2}\)</span> whenever <span class="math inline">\(n\)</span> is a positive integer.</p>
+</div>
+<div id="exr-23" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.23 </strong></span>Show that <span class="math inline">\(f_{n+3}-f_n=2f_{n+1}\)</span> whenever <span class="math inline">\(n\)</span> is a positive integer.</p>
+</div>
+<div id="exr-24" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.24 </strong></span>Show that <span class="math inline">\(f_{n-2}+f_{n+2}=3f_n\)</span> whenever <span class="math inline">\(n\)</span> is a positive integer with <span class="math inline">\(n\geq 2.\)</span></p>
+</div>
+<div id="exr-25" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.25 </strong></span>Show that <span class="math inline">\(f_{2n}=f_{n}^2+2f_{n-1}f_n\)</span> whenever <span class="math inline">\(n\)</span> is a positive integer with <span class="math inline">\(n\geq 2.\)</span></p>
+</div>
+<div id="exr-26" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.26 </strong></span>Show that <span class="math inline">\(f_{2n+1}=f_{n+1}^2+f_{n}^2\)</span> whenever <span class="math inline">\(n\)</span> is a positive integer.</p>
+</div>
+<div id="exr-27" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.27 </strong></span>Show that <span class="math inline">\(f_{2n}=f_{n+1}^2-f_{n-1}^2\)</span> whenever <span class="math inline">\(n\)</span> is a positive integer.</p>
+</div>
+<div id="exr-28" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.28 </strong></span>Show that for all positive integers <span class="math inline">\(n,\)</span><br>
+<span class="math display">\[f_1 f_2 + \left(f_2 f_3 + f_3 f_4 \right) + \cdots + \left( f_{2n-2} f_{2n-1} + f_{2n-1} f_{2n} \right) = \left( f_{2n} \right)^2.\]</span></p>
+</div>
+<div id="exr-29" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.29 </strong></span>Prove that <span class="math inline">\(f_{n+2}^2-f_{n+1}^2=f_n f_{n+3}\)</span> , for all <span class="math inline">\(n\geq 1\)</span>.</p>
+</div>
+<div id="exr-30" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.30 </strong></span>Prove that <span class="math inline">\(f_{n+1}f_n-f_{n-1}f_{n-2}=f_{2n-1}\)</span> for every positive integer <span class="math inline">\(n\)</span>, <span class="math inline">\(n&gt;2\)</span>.</p>
+</div>
+<div id="exr-31" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.31 </strong></span>Prove that <span class="math inline">\(f_1 f_2+f_2f_3+\cdots +f_{2n-1}f_{2n}=f_{2n}^2\)</span> for every positive integer <span class="math inline">\(n\)</span>.</p>
+</div>
+<div id="exr-32" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.32 </strong></span>Prove that <span class="math inline">\(f_{m+n}=f_m f_{n+1}+f_n f_{m-1}\)</span> for every positive integer <span class="math inline">\(n\)</span>.</p>
+</div>
+<div id="exr-33" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.33 </strong></span>Prove that <span class="math inline">\(f_n&gt;\left(\frac{5}{3}\right)^{n-1}\)</span>, for all <span class="math inline">\(n\geq 2\)</span>.</p>
+</div>
+<div id="exr-34" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.34 </strong></span>Show that for <span class="math inline">\(n\geq 2\)</span>, <span class="math display">\[
+f_n=\frac{f_{n-1}+\sqrt{5 f_{n-1}^2+4(-1)^n}}{2}
+\]</span> Notice that this formula gives <span class="math inline">\(f_n\)</span> in terms of one predecessor rather than two predecessors.</p>
+</div>
+<div id="exr-35" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.35 </strong></span>Let <span class="math inline">\(F=\begin{bmatrix}1 &amp; 1 \\ 1 &amp; 0\end{bmatrix}\)</span>. Show that <span class="math display">\[
+F^n=
+\begin{bmatrix}f_{n+1} &amp; f_n \\ f_n &amp; f_{n-1}
+\end{bmatrix}
+\]</span> for all <span class="math inline">\(n\geq 1\)</span>.</p>
+</div>
+<div id="exr-36" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.36 </strong></span>Let <span class="math inline">\(a_0=1\)</span> and, for <span class="math inline">\(n&gt;0\)</span>, let <span class="math inline">\(a_n=2 a_{n-1}+1\)</span>. The first few terms of the sequence are 1,3,7,15. What are the next fews terms? Prove that <span class="math inline">\(a_n=2^{n+1}-1\)</span> for all positive integers.</p>
+</div>
+<div id="exr-37" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.37 </strong></span>Let <span class="math inline">\(b_0=1\)</span> and, for <span class="math inline">\(n&gt;0\)</span>, let <span class="math inline">\(b_n=3 b_{n-1}-1\)</span>. What are the first five terms of the sequence? Prove that <span class="math inline">\(b_n=(3^{n}+1)/2\)</span> for all positive integers.</p>
+</div>
+<div id="exr-38" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.38 </strong></span>Find the first 50 Lucas numbers.</p>
+</div>
+<div id="exr-39" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.39 </strong></span>Find and prove a formula for the sum of the first <span class="math inline">\(n\)</span> Lucas numbers when <span class="math inline">\(n\)</span> is a positive integer.</p>
+</div>
+<div id="exr-40" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.40 </strong></span>Find and prove a formula for the sum of the first <span class="math inline">\(n\)</span> Lucas numbers with odd indices when <span class="math inline">\(n\)</span> is a positive integer.</p>
+</div>
+<div id="exr-41" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.41 </strong></span>Find and prove a formula for the sum of the first <span class="math inline">\(n\)</span> Lucas numbers with even indices when <span class="math inline">\(n\)</span> is a positive integer.</p>
+</div>
+<div id="exr-42" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.42 </strong></span>Show that <span class="math inline">\(f_{2n}=f_n L_n\)</span> for all positive integers <span class="math inline">\(n\)</span>.</p>
+</div>
+<div id="exr-43" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.43 </strong></span>Prove that <span class="math inline">\(L_{m+n}=f_{m+1}L_n+f_mL_{n-1}\)</span> whenever <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are positive integers with <span class="math inline">\(n&gt;1\)</span>.</p>
+</div>
+<div id="exr-44" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.44 </strong></span>Prove that <span class="math inline">\(L_n=\phi^n+\tau^n\)</span> where <span class="math inline">\(\phi\)</span> is the golden ratio and <span class="math inline">\(\tau\)</span> its conjugate.</p>
+</div>
+<div id="exr-45" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.45 </strong></span>Establish each of the following for all <span class="math inline">\(n\in \mathbb{N}\)</span>.</p>
+<ul>
+<li><span class="math inline">\(L_n-5 f_n^2=4(-1)^n\)</span></li>
+<li><span class="math inline">\(L_{2n}=L_n^2-2(-1)^n\)</span></li>
+<li><span class="math inline">\(f_{n+1}+f_{n-1}=L_n\)</span></li>
+<li><span class="math inline">\(L_{n+1}+L_{n-1}=5 f_n\)</span></li>
+<li><span class="math inline">\(L_{2n+1}=L_n L_{n+1}-(-1^n)\)</span></li>
+<li><span class="math inline">\(L_{n-1}L_{n+1}-L_n^2=5(-1)^{n-1}\)</span>, <span class="math inline">\(n\geq 2\)</span></li>
+</ul>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-burton2006elementary" class="csl-entry" role="doc-biblioentry">
+Burton, D. M. 2006. <em>Elementary Number Theory</em>. Tata McGraw-Hill Publishing Company Limited. <a href="https://books.google.com/books?id=XMQjuoTqqRMC">https://books.google.com/books?id=XMQjuoTqqRMC</a>.
+</div>
+<div id="ref-davenport2008higher" class="csl-entry" role="doc-biblioentry">
+Davenport, H. 2008. <em>The Higher Arithmetic: An Introduction to the Theory of Numbers</em>. Cambridge University Press. <a href="https://books.google.com/books?id=VdMhAwAAQBAJ">https://books.google.com/books?id=VdMhAwAAQBAJ</a>.
+</div>
+<div id="ref-rosen2005elementary" class="csl-entry" role="doc-biblioentry">
+Rosen, K. H. 2005. <em>Elementary Number Theory and Its Applications</em>. Alternative eText Formats Series. Pearson/Addison Wesley. <a href="https://books.google.com/books?id=jD0lAQAAIAAJ">https://books.google.com/books?id=jD0lAQAAIAAJ</a>.
+</div>
+<div id="ref-dasmith2021_2" class="csl-entry" role="doc-biblioentry">
+Smith, David A. 2021. <span>“First <span>Examples</span> <span>Using</span> <span>Mathematical</span> <span>Induction</span>.”</span> April 2, 2021. <a href="https://directknowledge.com/math/mathematical-induction/first-examples-using-mathematical-induction/">https://directknowledge.com/math/mathematical-induction/first-examples-using-mathematical-induction/</a>.
+</div>
+<div id="ref-asmith2022Fib" class="csl-entry" role="doc-biblioentry">
+———. 2022. <span>“Proving <span>Fibonacci</span> <span>Identities</span> <span>Using</span> <span>Mathematical</span> <span>Induction</span>.”</span> December 5, 2022. <a href="https://directknowledge.com/math/mathematical-induction/proving-fibonacci-identities-using-mathematical-induction">https://directknowledge.com/math/mathematical-induction/proving-fibonacci-identities-using-mathematical-induction</a>.
+</div>
+<div id="ref-williamcryptography" class="csl-entry" role="doc-biblioentry">
+William, S. 2016. <em>Cryptography and Network Security - Principles and Practice, 7th Edition</em>. Pearson Education India. <a href="https://books.google.com/books?id=AhDCDwAAQBAJ">https://books.google.com/books?id=AhDCDwAAQBAJ</a>.
+</div>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/learning-number-theory\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./divisibility.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Divisibility</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

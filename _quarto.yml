@@ -27,6 +27,10 @@ website:
             href: https://directknowledge.com/basic-set-theory/
             icon: book
             aria-label: Basic Set Theory Book
+          - text: "Learning Number Theory"
+            href: https://directknowledge.com/learning-number-theory/
+            icon: book
+            aria-label: Learning Number Theory Book
       - href: http://directknowledge.com/about.html
         text: "About"
       - href: https://youtube.com/@directknowledge

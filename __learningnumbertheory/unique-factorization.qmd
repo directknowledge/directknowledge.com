@@ -1,0 +1,288 @@
+---
+pagetitle: "Unique Factorization - Learning Number Theory"
+---
+# Unique Factorization
+
+The Fundamental Theorem of Arithmetic states that every natural number greater than 1 is either a prime or a product of a finite number of primes and this factorization is unique except for the rearrangement of the factors. Before we prove the fundamental fact, it is important to realize that not all sets of numbers have this property.
+
+For example, let us consider the set of even natural numbers, namely 
+
+$$E=\{2k \mid k\in \mathbb{Z}\}.$$
+
+We can add, subtract, even multiply elements of $E,$ and obtain elements in $E,$ so we say the set $E$ is closed under addition, subtraction, and multiplication. 
+However, this is not the set of natural numbers so we should define what we mean by divisibility; namely for any two elements of E we say $a | b$ means there exists $m\in E$ such that $b=m a$. 
+The importance of $m\in E$ should not be overlooked. For example, $2|8$ because $8=m (2)$ where $m=4\in E.$ But $2\nmid 6$ because there is no $m\in E$ such that $6=m (2)$. 
+
+> So what are some primes in $E$? 
+
+For example, 2 is prime in $E$ because there does not exist $n, m$ in $E$ such that $2=n m$. 
+Similarly, 6 is prime in $E$ because there does not exist $n, m$ in $E$ such that $6=n m$. 
+Also, 10 and 30 are primes, and so $60=2(30)$ is not. 
+However since $60=10(6)$ we conclude that factorization into primes in $E$ is not unique. 
+
+Before getting to the Fundamental Theorem of Arithmetic we need an important result. 
+
+::: {#lem-primechar }
+
+## Prime Characterization
+
+A natural number $p$ is a prime if and only if 
+$$
+p | b c \implies (p | b \text{ or } p | c)  
+$$
+for any natural numbers $b$ and $c.$
+::: 
+
+::: {.proof }
+Assume $p$ is prime and $p|b c$.
+Notice that, since $p$ is prime, either $(p,b)=1$ or $(p,b)=p$. 
+If $(p,b)=1,$ then $p|c$ by \ref{euclidlemmaprop}.\eqref{gcdlemone}. 
+If $(p,b)=p$ then $p|b$. 
+In either case, $p|c$ or $p|b$.  
+Conversely, suppose 
+
+\begin{equation}
+\label{primeprop}
+\forall \, b, c \in \mathbb{N}, \, p|b c\implies  \text{$p|c$ or $p|b$}. 
+\end{equation}
+
+To show that $p$ is prime let $d$ be a divisor of $p$.  
+Then $p=d t$ for some $t$. 
+Hence, by \ref{primeprop} we have $p | d$ or $p | t$. 
+Thus, if $t=p k$ for some $k$, 
+then $p=d t=d p k,$ and so $d=\pm 1$.  
+If $d=p k$ for some $k,$ then $p=p t k$ and so $d=\pm p$.
+Therefore, the only divisors of $p$ are $d=\pm 1, \pm p$, and so $p$ is prime. 
+::: 
+
+::: {#exm- } 
+Prove if $p$ is a prime number, $a_1,$ $a_2, ... ,$ $a_n$ are natural numbers, and $p\left|a_1a_2\cdot \cdot \cdot a_n\right. ,$ then $p\left|a_i\right.$ for some $1\leq  i\leq  n.$
+::: 
+
+::: {.solution }
+The statement is clearly true when $n=1$ and $n=2$ follows from Theorem \ref{primechar}. 
+Assume the statement is true for $n=k,$ and suppose  $p\left|a_1a_2\cdot \cdot \cdot a_ka_{k+1}.\right.$
+Then by Theorem \ref{primechar}, $p\left|a_1a_2\cdot \cdot \cdot a_k\right.$ or $p\left|a_{k+1}.\right.$ If $p\left|a_{k+1}\right.$, the statement is proven. 
+If not, then by the induction hypothesis there is some $0\leq  i\leq k$ such that $p | a_i$. 
+Therefore, there is some $0\leq  i\leq k+1$ such that $p | a_i$ as desired.
+::: 
+
+The most basic method of checking the primality of a given integer n is called \index{trial division} **trial division** . 
+This method consists of dividing $n$ by each integer $m$ that is greater than 1 and less than or equal to the square root of $n$. 
+If the result of any of these divisions is an integer, then $n$ is not a prime, otherwise it is a prime. 
+For example, for $n = 37$, the trial divisions are by $m = 2, 3, 4, 5$, and 6. 
+None of these numbers divides $37$, so $37$ is prime. 
+
+::: {#lem-lemmaprime } 
+Every natural number greater than 1 is a product of primes.
+::: 
+
+::: {.proof }
+Consider the set $S$ consisting of all positive natural numbers greater than 1 that are not a product of primes. Assume for a contradiction that $S$ is not empty, then by the Well-Ordering Axiom there is a least element, say $m$. 
+Because $m$ has no prime divisors and $m$ divides $m$, we see that $m$ is not prime.  
+Thus, $m=a b$ where $1<a<m$ and $1<b<m$. 
+Since $m$ is the least element in $S$, 
+$a$ and $b$ are products of primes; and thus so is $m$.  
+This contradiction shows that $S$ is empty and so every natural number greater than $1$ is a product of primes. 
+::: 
+
+The \index{Fundamental Theorem of Arithmetic} **Fundamental Theorem of Arithmetic**, also called the \index{unique factorization theorem} **unique factorization theorem** or the unique-prime-factorization theorem, states that every integer greater than 1 is either is prime itself or is the product of prime numbers, and that, although the order of the primes in the second case is arbitrary, the primes themselves are not. 
+
+
+::: {#thm-fundamental-theorem-of-arithmetic }
+
+## Fundamental Theorem of Arithmetic
+
+Every natural number greater than 1 can be written uniquely in the form 
+\begin{equation}
+n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}
+\end{equation}
+where $p_1 < p_2 < \cdots < p_k$ are prime numbers 
+and $e_1, e_2, ... , e_k$ are natural numbers.
+::: 
+
+::: {.proof } 
+Every natural number has a prime factorization by Theorem \ref{lemmaprime}. 
+Thus existence is proven. 
+Now we prove uniqueness. 
+If there is an natural number greater than 1 for which the factorization is not unique, then by the Well-Ordering Axiom there exists a smallest such natural number, say $m.$ Assume that $m$ has two prime factorizations say 
+$$
+m=p_1{}^{\alpha _1}p_2^{\alpha _2}\cdots p_s^{\alpha _s}
+\qquad \text{and}\qquad 
+m=q_1^{\beta _1}q_2^{\beta _2}\cdots  q_t^{\beta _t},
+$$
+where 
+$$
+p_1<p_2< \cdots <p_s
+\qquad 
+q_1<q_2< \cdots <q_t
+$$ 
+and the $\alpha _i$ and $\beta _j$ are all positive for $0\leq i\leq s$ and $0\leq j\leq  t.$ 
+By Theorem \ref{primechar}, 
+$$
+q_1\mid p_{i^*} \text{ for some } 1\leq  i^*\leq  s 
+\quad \text{ and } \quad 
+p_1\mid q_{j^*} \text{ for some } 1\leq j^*\leq t.
+$$
+Since all the numbers $p_i$ and $q_j$ are prime, we must have $q_1=p_{i^*}$ and $p_1=q_{j^*}.$ 
+Then $i^*=j^*=1$ since 
+$$
+q_1\leq q_{j^*}=p_1\leq p_{i^*}=q_1.
+$$ 
+Let $u$ be the natural number defined as
+$$
+u=\frac{m}{p_1}=\frac{m}{q_1}=p_1{}^{\alpha _1-1}p_2{}^{\alpha _2}\cdot \cdot \cdot p_s{}^{\alpha _s}=q_1{}^{\beta _1-1}q_2{}^{\beta_2}\cdot \cdot \cdot q_t{}^{\beta _t}.
+$$
+ If $u=1,$ then $m=p_1$ has a unique factorization contrary to hypothesis. 
+ If $u>1,$ then $u<m$ and $u$ has two factorizations. Both cases reveal that $m$ can not exist as desired.
+::: 
+
+::: {#exm- }
+Show there are infinitely many primes of the form $4n+3.$
+::: 
+
+::: {.solution }
+First notice that the product of any two natural numbers of the form $4n+1$ also has the form $4n+1$ which can be seen by letting $a=4s+1$ and $b=4r+1$ where $s$ and $r$ are natural numbers, then  
+$$
+a b=(4s+1)(4r+1)=16 r s+4 r+4 s+1=4(4 r s+r+s)+1.
+$$ 
+We assume there are only a finite number of primes of the form $4k+3,$ say $p_0=3,p_1, ... ,p_n$ is all of them; and we consider the natural number  
+$$
+Q=4p_1p_2\cdot \cdot \cdot p_n+3.
+$$ 
+Notice that the prime factorization of $Q$, namely  $Q=q_1\cdots q_t\cdots q_m$  must contain at least one prime of the form $4k+3$ because otherwise $Q$ would be of the form $4k+1.$ 
+Thus, there is one prime in the prime factorization of $Q$ that is of the form $4k+3$ say $q_t.$ 
+Either $q_t=3$ or $q_t>3.$ If $q_t=3,$ then $3|Q$ which means $3|(Q-3)$ and so $3\left|4p_1\cdot \cdot \cdot p_n\right.$ which is absurd. If $q_t>3,$ then $q_t=p_j$ for some $1\leq j\leq n$ and so $\left.q_t\right|Q$ implies $q_t|Q-4p_1\cdot \cdot \cdot p_n=3,$ which is also absurd. 
+Therefore, there are infinitely many primes of the form $4n+3.$
+::: 
+
+::: {#def- } 
+The \index{least common multiple} **least common multiple**  of two nonzero natural numbers $a$ and $b$ is the smallest positive natural number that is divisible by $a$ and $b.$
+::: 
+
+The least common multiple of $15$ and 21 is $[15,21]=105.$ The least common multiple of $24$ and 36 is $[24,36]=72.$ The least common multiple of 2 and 20 is $[2,20]=20.$ The least common multiple of 7 and 11 is $[7,11]=77.$
+
+::: {#cor- }
+Let $a$ and $b$ be natural numbers. 
+Then 
+\begin{equation}
+(a,b)=p_1^{\min \left(\alpha _1,\beta _1\right)} p_2^{\min \left(\alpha _2,\beta _2\right)} \cdots p_n^{\min \left(\alpha_1,\beta _1\right)}
+\end{equation}
+\begin{equation}
+[a,b]=p_1^{\max \left(\alpha _1,\beta _1\right)} p_2^{\max \left(\alpha _2,\beta _2\right)} \cdots p_n^{\max \left(\alpha_1,\beta _1\right)}.
+\end{equation}
+::: 
+
+::: {.proof }
+By the Fundamental Theorem of Arithmetic is the ability to find the greatest common divisor and least common multiple from a factorization of two given natural numbers. Say we are given $a$ and $b,$ and we are able to find the unique factorization of each (and assume that all exponents are nonnegative and the $p_i$ are all primes in both $a$ and $b$), namely
+$$
+a=p_1^{\alpha _1} p_2^{\alpha _2} \cdots p_n^{\alpha _n}
+\qquad \text{ and } \qquad
+b=p_1^{\beta _1}p_2^{\beta _2}\cdots p_m^{\beta _m}
+$$
+then because for each prime $p_i,$ in $a$ and $b$ have exactly $\min \left(\alpha _i,\beta _i\right)$ factors of $p_i$ in common; and
+::: 
+
+::: {#exm- }
+Find the unique prime factorization of $m=4463914455$ and $n=8125921375.$  Then factor $m$ and $n$ into a product of primes with the same set of primes with (possibly zero) nonnegative exponents.
+::: 
+
+::: {.solution }
+Notice  $4463914455=3^4\cdot 5\cdot 7^2\cdot 11^3\cdot 13^2$ and  $8125921375=5^3\cdot 11^3\cdot 13^2\cdot 17^2.$  Thus the set of primes in both natural numbers is $\{3,5,7,11,13,17\}$ and so we have 
+\begin{align*}
+& 4463914455=3^4\cdot 5\cdot 7^2\cdot 11^3\cdot 13^2 \cdot 17^0 
+\\
+& 8125921375=3^0\cdot 5^3\cdot 7^0\cdot 11^3\cdot 13^2\cdot 17^2.
+\square 
+\end{align*}
+::: 
+
+
+
+::: {#cor-product-of-gcd-and-lcm }
+
+## Product of GCD and LCM
+
+If $a$ and $b$ are integers, then 
+\begin{equation}
+(a,b) [a,b]=a b.
+\end{equation}
+::: 
+
+::: {.proof } 
+Let $a$ and $b$ have unique prime factorizations; 
+namely 
+$$
+a=p_1^{u_1}p_2^{u_2} \cdots p_n^{u_n} 
+\qquad \text{and} \qquad 
+b=q_1^{v_1}q_2^{v_2} \cdots q_m^{v_m}.
+$$ 
+Now we can form the set of primes $P_1, ... ,P_k$ consists of all the $p_1,p_2, ... ,p_n$ and $q_1,q_2 , ... ,q_m.$ So we can write  
+$$
+a=P_1^{\alpha _1}P_2^{\alpha _2}\cdots P_n^{\alpha _n}
+\qquad \text{and} \qquad 
+b=P_1^{\beta _1}P_2^{\beta_2}\cdot \cdot \cdot P_m^{\beta _m}
+$$ 
+where the exponents are zero where necessary. 
+Now let $X_i=\max \left(\alpha _i,\beta _i\right)$ and $x_i=\min \left(\alpha _i,\beta _i\right).$ Then 
+$$
+[a,b](a,b)
+%=P_1^{X_1}P_1^{X_1}\cdots P_n^{X_n}P_1^{x_1}P_1^{x_1}\cdots P_n^{x_n} 
+=P_1 ^{X_1+x_1}P_1 ^{X_1+x_1}\cdots P_n^{X_1+x_1}
+=a b.
+$$
+as desired.
+::: 
+
+::: {#exm- }
+Prove that, if $a, b,$ and $c$ are natural numbers, then 
+\begin{equation}
+[a,b]|c  \text{ if and only if } a|c \text{ and } b|c.
+\end{equation}
+::: 
+
+::: {.solution }
+Suppose $[a,b]|c.$ Since $a|[a,b]$ and $b|[a,b]$ it follows that $a|c$ and $b|c.$ Conversely, suppose $a|c$ and $b|c.$ Using prime factorization we can write 
+$$
+a=p_1^{a_1}\cdot p_2^{a_2}\cdot \cdot \cdot p_n^{a_n},
+\qquad 
+b=p_1{}^{b_1}\cdot p_2^{b_2}\cdot \cdot \cdot p_n^{b_n},\qquad
+c=p_1^{c_1}\cdot p_2^{c_2}\cdot \cdot \cdot p_n^{c_n}.
+$$
+Then $\max \left(a_i,b_i\right)\leq c_i$ for $i=1,2, ... ,n$ because $a|c$ and $b|c.$ Hence, $[a,b]\mid c$.
+::: 
+
+Let $p$ be a prime and $n$ a positive integer. 
+If $\left.p^a\right|n$ but $p^{a+1}\nmid n,$ we say that $p^a$ exactly divides $n$ and
+we write $\left.p^a\right\|n.$
+
+::: {#exm- }
+Prove that, if $a$ and $b$ are positive natural numbers, then
+
+\begin{equation}
+\label{prodgcdlcm}
+(a,b)=(a+b,[a,b]).
+\end{equation}
+::: 
+
+::: {.solution }
+Let $p$ be a prime that divides $a$ or $b.$ 
+Then $p$ divides $a+b$ and $[a,b].$ 
+Hence $p$ divides both sides of \ref{prodgcdlcm}. 
+Define, $s$ and $t$ by $\left.p^s\right\|a$ and $\left.p^t\right\|b,$ say $a=x p^s$ and $b=y p^t.$ 
+Without loss of generality, suppose $s\leq t.$ 
+Then 
+$$
+a+b=p^s\left(x+p^{t-s}\right),
+$$ 
+so $\left.p^s\right\|(a+b).$ Also, $\left.p^{\max (s,t)}\right\|[a,b].$ 
+But $\max (s,t)=t,$ so $\left.p^t\right\|[a,b].$ 
+Therefore, 
+$$
+\left.p^{\min (s,t)}\right\|(a+b,[a,b]).
+$$
+But $\min (s,t)=s,$ so the same power of $p$ divides both sides of \ref{prodgcdlcm}. 
+Therefore, the two sides of \ref{prodgcdlcm} must be equal.
+::: 
+
+

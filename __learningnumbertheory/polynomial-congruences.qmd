@@ -1,0 +1,1093 @@
+---
+pagetitle: "Polynomial Congruences - Learning Number Theory"
+---
+# Polynomial Congruences
+
+
+Polynomial Congruence Equations is a mathematics book designed for undergraduate number theory students. The purpose of this book is to provide students with a step-by-step guide on how to solve polynomial congruence equations. It also aims to help students understand the different concepts related to polynomials and their applications.
+
+Two numbers are said to be congruent modulo m if they have the same remainder when divided by m. For example, 15 and 28 are congruent modulo 13 because both numbers leave a remainder of 12 when divided by 13. Congruence is an equivalence relation, which means that it is reflexive, symmetric, and transitive. Congruence modulo m is often written as $a \equiv b \pmod{m}$.
+
+The set of all integers that are congruent modulo m is called an equivalence class. Congruence classes can be used to form a group, which is called the modular arithmetic group. The modular arithmetic group is isomorphic to the quotient group Z/mZ, where Z is the set of all integers.
+
+Modular arithmetic has many applications in mathematics and computer science. For example, it can be used to define division on fields that do not have an inverse element (such as the field of real numbers). It can also be used to solve linear Diophantine equations, which are equations that involve only integer variables.
+
+Congruence reduction is one of the most powerful techniques in solving congruence equations. The idea is to replace a large congruence equation with a smaller system of equations by using factorization. This is a much simpler system of equations and is easier to solve. In fact, congruence reduction can be used to solve much more complex equations as well, along with the assistance of other theorems such as the Chinese remainder theorem.
+
+In this chapter, you'll learn about using Hensel's Lifting Theorem to solve polynomial congruence equations. Here's where you'll see the statement of the theorem, followed by some examples showing how to use it.
+
+Hensel's Lifting Theorem says that if you have two congruence equations, you can find a solution by solving a series of smaller congruence equations. In other words, you can break down a large problem into smaller pieces and then put them back together to find the overall solution. This theorem is particularly useful in number theory, where congruence equations are often used to solve problems. However, it can also be applied to other areas of mathematics. So next time you're stuck on a problem, remember Hensel's Lifting Theorem and try to break it down into smaller pieces. You might just find the solution you're looking for.
+
+Solving polynomial congruences is a fundamental problem in mathematics and has a wide range of applications, from primality testing to cryptography.
+
+In general, the problem is to find all solutions to the equation $f(x) \equiv 0 \pmod{n}$, where f is a polynomial with integer coefficients and n is a positive integer. When n is a prime power, this problem can be solved using Lagrange's Theorem.
+
+However, when n is not a prime power, there is no analog of Lagrange's Theorem that can be used to Solve the problem. However, there is an algorithm for determining when a solution modulo p generates solutions to higher power moduli.
+
+The motivation for this algorithm comes from Newton's method for approximating roots over the real numbers.
+
+Given a polynomial $f(x)$ and an initial guess $x_0$, Newton's method produces a sequence of approximations $x_1, x_2,\ldots$ that converges to a root of $f(x)$. If we start with a guess that is congruent to a root of $f(x)$ modulo $p$, then the sequence produced by Newton's method will be congruent to a root of $f(x)$ modulo $p^k$ for all $k > 0$.
+
+This provides a way to solve the polynomial congruence $f(x) \equiv 0 \pmod{p^k}$ for all $k > 0$, without having to solve the congruence $f(x) \equiv 0 \pmod{p}$.
+
+This algorithm can be used to solve any polynomial congruence $f(x) \equiv 0 \pmod{n}$, where n is not a prime power. Consequently, it can be used to solve any instance of the general problem mentioned above. Given the wide range of applications of this problem, this algorithm is sure to be of great interest to mathematicians and computer scientists alike.
+
+Overall, Polynomial Congruence Equations is an excellent book that provides students with a step-by-step guide on how to solve polynomial congruence equations. The exercises provided are also very helpful in reinforcing the concepts covered in the main text. I would definitely recommend this book to any undergraduate number theory student looking for a comprehensive guide on solving polynomial congruences.
+
+
+
+## Congruence Reduction
+
+::: {#thm- }
+[Congruence Reduction]
+Let $n=p_1{}^{e_1}p_2{}^{e_2}\cdot \cdot \cdot p_s{}^{e_s}$ be the unique factorization of $n.$ Then the  linear congruence $a x\equiv b \pmod{n}$ has the same set of solutions as the system of simultaneous congruences  
+$$
+\begin{cases}
+a x\equiv b \pmod{p_1{}^{e_1}}  \\   
+a x\equiv b \pmod{p_2{}^{e_2}}  \\   
+\quad \vdots \\ 
+a x\equiv b \pmod{p_s{}^{e_s}}.
+\end{cases}
+$$
+:::  
+
+::: {.proof }
+As consequence of the Fundamental Theorem of Arithmetic, $n|m$ if and only if $\left.p_i^{e_i}\right|m$ for each $i.$ This follows  easily since, for some integer $k,$ 
+$$
+n|m 
+\Longleftrightarrow  
+m=\left.n k \Longleftrightarrow 
+m=k p_1^{e_1}p_2^{e_2} 
+\cdot \cdot \cdot 
+p_s^{e_s} 
+\Longleftrightarrow 
+p_i^{e_i}\right| m$$
+for each $i.$ 
+Hence, $A\equiv B \pmod{n}$ if and only if all of the congruences 
+$A\equiv B \pmod{p_1{}^{e_1}}$, 
+$A\equiv B \pmod{p_2{}^{e_2}}$,  
+$\cdots$, 
+$A\equiv B \pmod{p_s{}^{e_s}}$
+ also hold. 
+::: 
+ 
+::: {#exm- }
+Solve the linear congruence equation $17x\equiv 9 \pmod{276}$ by reducing to a linear system of congruence equations. 
+::: 
+
+::: {.solution }
+Since $276=\left(2^2\right)(3)(23)$ the given congruence may be replaced by the system
+$17x\equiv 9 \pmod{4}$,
+$17x\equiv 9 \pmod{3}$,
+$17x\equiv 9 \pmod{23}$.
+We find $N=(4)(3)(23)=276$ and we use a table to construct the solution.  
+$$
+\begin{array}{c|c|c|c|c|c|c}   
+i & n_i & a_i & b_i &  a_i x_i \equiv b_i \pmod{n_i} & \bar{n}_i & \bar{n}_iu_i  \equiv 1 \pmod{n_i} \\   \hline
+1 & 4 & 17 & 9 & x_1=1 & 69 & u_1=1  \\   
+2 & 3 & 17 & 9 & x_2=0 & 92 & u_2=2  \\   
+3 & 23 & 17 & 9 & x_3=10 & 12 & u_3=2 
+\end{array} $$
+The solution is  
+$$
+x_0=(1)(69)(1)+(0)(92)(2)+(10)(12)(2)=309\equiv 33 \pmod{276}
+$$ 
+and so the solution to $17x\equiv 9 \pmod{276}$ is $x\equiv 33 \pmod{276}$. 
+::: 
+
+::: {#exm- }
+Solve the linear congruence equation $3 x\equiv 11 \pmod{2275}$ by reducing to a linear system of congruence equations. 
+::: 
+
+::: {.solution }
+Since $2275=\left(5^2\right)(7)(13)$ the given congruence may be replaced by the system
+$$
+\begin{cases}
+3 x\equiv 11 \pmod{25}  \\ 
+3 x\equiv 11 \pmod{7}  \\  
+3 x\equiv 11 \pmod{13}. 
+\end{cases}
+$$
+We find $N=(25)(7)(13)=2275$ and we use a table to construct the solution.  
+$$
+\begin{array}{c|c|c|c|c|c|c}   
+i & n_i & a_i & b_i &  a_i x_i \equiv b_i \pmod{n_i} & \bar{n}_i & \bar{n}_iu_i  \equiv 1 \pmod{n_i} \\   \hline
+1 & 25 & 3 & 11 & x_1=12 & 91 & u_1=11  \\   
+2 & 7 & 3 & 11 & x_2=6 & 325 & u_2=5  \\   
+3 & 13 & 3 & 11 & x_3=8 & 175 & u_3=11  
+\end{array} $$
+The solution is 
+$$
+x_0=(12)(91)(11) +(6)(325)(5) +(8)(175)(11) = 37162 \equiv 762 \pmod{2275}.
+$$
+and so the solution to $2275=\left(5^2\right)(7)(13)$ is $x\equiv 762 \pmod{2275}$. 
+::: 
+
+
+
+
+
+## Simple Examples of Polynomial Congruence
+
+Given a polynomial $f$ with integer coefficients, the congruence equation $f(x)\equiv 0 \pmod{n}$ is  called a \index{polynomial congruence} **polynomial congruence**.   
+
+::: {#exm- }
+Solve the polynomial congruence,
+\begin{equation}\label{pc1}
+x^3+2\equiv 0 \pmod{9}.
+\end{equation} 
+::: 
+
+::: {.solution }
+Any solution of \ref{pc1} also satisfies 
+$x^3+2\equiv 0 \pmod{3}.$ 
+Trying $x=0, 1$ and $2$ in the latter congruence gives us $x=1$. 
+Thus we can restrict our search for solutions  of \ref{pc1} to the integers in some complete residue system modulo $9$ congruent to 1 modulo $3$; 
+namely, $1,4,$ and 7.  
+Substitution shows that none of these work, and therefore \ref{pc1} has no solutions.     
+::: 
+
+::: {#exm- }
+Solve the polynomial congruence,
+\begin{equation}\label{pc2}
+f(x)=x^3+3\equiv 0 \pmod{16}.
+\end{equation}
+::: 
+
+::: {.solution }
+We start with $x^3+3\equiv 0 \pmod{2};$ and find $x=1$ is a solution. 
+Thus the only possible solutions of $x^3+3\equiv 0 \pmod{4}$ are $x=1$ and $x=3.$ 
+Substitution shows that only $x=1$ works. 
+Since all solutions of $x^3+3\equiv 0 \pmod{8}$ must be congruent to $1$ modulo 4, we try $x=1$ and $x=5$.  
+Since $f(1)=4$ and $f(5)=128,$ only $x=5$ works. We note that $x=5$ is a solution of \ref{pc2} and 
+$x=13$ is the  only other possibility. 
+But $f(13)\not \equiv 0 \pmod{16}$ and so $x=5$ is a complete solution to \ref{pc2}.  
+::: 
+
+::: {#thm- }
+\label{PCR}
+Let $n=p_1^{e_1}p_2^{e_2}\cdot \cdot \cdot p_s^{e_s}$ be the unique factorization of $n.$  Then the polynomial congruence $f(x)\equiv 0 \pmod{n}$ has the same set of solutions as the system of simultaneous congruences  
+$$
+\begin{array}{cccc}   
+f(x)\equiv 0 \pmod{p_1^{e_1}},  & 
+f(x)\equiv 0 \pmod{p_2^{e_2}},  &  
+...,  &    
+f(x)\equiv 0 \pmod{p_s^{e_s}}  \\
+\end{array}.
+$$
+::: 
+
+::: {.proof }
+As consequence of the fundamental theorem of arithmetic, $n|m$ if and only if 
+$\left.p_i^{e_i}\right|m$ for each $i.$ This  follows easily since, for some integer $k,$ 
+$$
+n|m \Longleftrightarrow  m=\left.n k \Longleftrightarrow k p_1^{e_1}p_2^{e_2}\cdot \cdot \cdot p_s^{e_s} \Longleftrightarrow   p_i^{e_i}\right|m$$
+ for each $i.$ Hence, $A\equiv B \pmod{n}$  if and only if all of the congruences $A\equiv B \pmod{p_1^{e_1}}$, $A\equiv B \pmod{p_2^{e_2}}$, $\cdots$, $A\equiv B \pmod{p_s^{e_s}}$ are satisfied.
+::: 
+ 
+
+
+
+## Hensel's Lifting Theorem
+
+In general, in order to solve a polynomial congruence $f(x)\equiv 0 \pmod{n}$ we can reduce, by \ref{PCR}, to the case of moduli that are powers of primes.  Thus solving these polynomial congruences becomes the main focus. In order to solve $f(x)\equiv 0 \pmod{p^i}$ where $p^i$ is  some prime power, we would actually like to reduce even further and just solve, $f(x)\equiv 0 \pmod{p}.$ 
+So our first goal will be how to  solve polynomial congruences with a prime moduli, and then to see how to lift these solutions to $f(x)\equiv 0 \pmod{p^i}.$ However,  the general procedure for solving $f(x)\equiv 0 \pmod{p}$ is non-trivial; instead, we set a limit to the number of solutions, which will help in some cases.
+
+Let $f(x)=\sum _{k=1}^n a_kx^k$ with integers $a_k$ and $p$ is a prime such that $p\nmid   a_n$, then the congruence $f(x)\equiv 0 \pmod{p}$ has at most $n$ mutually incongruent solutions modulo $p.$ 
+Solving $f(x)\equiv 0 \pmod{p^i}$ where $p^i$ is some prime power, our strategy is to solve the case for when $f(x)\equiv  0 \pmod{p}$ (if possible) and then to \index{lift} **lift** these solutions to the case for $f(x)\equiv 0 \pmod{p^2},$ and then to the case for $f(x)\equiv 0 \pmod{p^3},$ eventually we can reach $f(x)\equiv 0 \pmod{p^i}.$ 
+
+Given $f(x)=\sum _{k=1}^m a_kx^k$  recall that the derivative is $f'(x)=\sum _{k=1}^m k a_kx^{k-1}.$ 
+Assuming $f, g$ and $h$ are polynomials with integer coefficients, here are  three other properties from calculus that we will use,  
+$$
+h(x)=f(x)+g(x) \Longrightarrow  h'(x)=f'(x)+g'(x)
+$$
+$$ 
+f(x)=x^m \Longrightarrow f^{(k)}(x)=m(m-1)(m-2)\cdot \cdot \cdot (m-k+1)x^{m-k}
+$$ 
+and (the Taylor expansion),  
+$$
+f(a+b)=\sum _{k=0}^n \frac{f^{(n)}(a)b^n}{n!}
+$$
+where $f^0(x)=f(x).$  
+These tools will lead to a proof of the next theorem which states when a solution to $f(x)\equiv 0 \pmod{p^{k-1}}$ lifts  to a unique solution of $f(x)\equiv 0 \pmod{p^k}$ and when such a solution lifts to 
+$p$ incongruent solutions modulo  $p^k$ or to none at all. 
+
+Let $\bar{a}$ denote the inverse $a$ modulo $p;$ that is, given a prime $p$ and an integer $a$ any integer $\bar{a}$ for which  $a \bar{a}\equiv 1 \pmod{p}.$ 
+
+Hensel's lemma, also known as Hensel's lifting lemma, named after Kurt Hensel, is a result in modular arithmetic, stating that if a polynomial equation has a simple root modulo a prime number $p$, then this root corresponds to a unique root of the same equation modulo any higher power of $p$, which can be found by iteratively ``lifting" the solution modulo successive powers of $p$.
+
+::: {#thm- }[Hensel's Lifting]
+If $f$ is a polynomial with integers coefficients and $r$ is a solution to $f(x)\equiv 0\pmod{p^{k-1}}$ with $k\geq 2$ and prime $p$, then
+
+- if $f'(r) \not\equiv 0 \pmod{p},$ then there is a unique integer $t,$ $0\leq t<p,$ such that 
+$f\left(r+t p^{k-1}\right)\equiv 0  \pmod{p^k}$ 
+given by  $t\equiv -\overline{f'(r)} \frac{f(r)}{p^{k-1}}\pmod{p}$ 
+- if $f'(r)\equiv 0 \pmod{p}$ and $f(r)\equiv 0 \pmod{p^k},$ then $f\left(r+t p^{k-1}\right)\equiv 0\pmod{p^k}$ for all integers $t;$ 
+- if $f'(r)\equiv 0\pmod{p}$ and $f(r)\not\equiv 0\pmod{p^k},$ then $f(x)=0 \pmod{p^k}$  has no solutions with $x\equiv r\pmod{p^{k-1}}.$  
+
+Furthermore, if $f(r)\equiv 0\pmod{p}$ and $f'(r)\not \equiv 0 \pmod{p},$ then there is a unique solution $r_k$ modulo  $p^k$ for $k=2,3,\ldots$ such that $r_k=r_{k-1}-f\left(r_{k-1}\right)\overline{f'(r)}.$ 
+::: 
+
+::: {#exm- }
+Solve the polynomial congruence equation  
+\begin{equation}\label{pce1}
+f(x)=x^2+x+47\equiv 0\pmod{2401}.
+\end{equation}
+::: 
+
+::: {.solution }
+Since $2401=7^4,$ first we consider the equation 
+$f(x)\equiv 0 \pmod{7}.$ 
+By inspection, we see that the solutions  are $x=1$ and $x=5.$ Note that, $f'(x)=2x+1.$ 
+\par
+For $x=1$ we find that $f'(1)\equiv 3  \pmod{7}.$ Thus $x=1$ lifts successively to unique solutions modulo each power of $7.$  
+We set $x_1=1$.  
+Then, since $(3)(5)\equiv 1 \pmod{7}$ we have 
+$\overline{f'(1)}=5,$ and so  
+\begin{align*}
+x_2& =x_1-f\left(x_1\right)\overline{f'(1)}=1-f(1)(5)=1-(49)(5)=-244\equiv 1  \pmod{49} \\
+x_3& =x_2-f\left(x_2\right)\overline{f'(1)}=1-f(1)(5)=1-(49)(5)=-244\equiv 99  \pmod{343} \\ 
+x_4& =x_3-f\left(x_3\right)\overline{f'(1)}=99-f(99)(5)=99-(9947)(5)\equiv 785 \pmod{2401}
+\end{align*}
+So we have lifted $x\equiv 1  \pmod{7}$ to a solution $x=785  \pmod{2401}.$ 
+\par
+For $x=5$ we find that $f'(5)\equiv 4  \pmod{7}.$
+Thus $x=5$ lifts successively to unique solutions modulo each power of $7.$  
+We set 
+$x_1=5.$ 
+Then, since $(4)(2)\equiv 1  \pmod{7}$ we have 
+$\overline{f'(5)}=2,$ and so
+\begin{align*}
+x_2 & =5-f(5)(2)=5-(77)(2)\equiv 47 \pmod{49} \\
+x_3 & =47-f(47)(2)=47-(2303)(2)=243\equiv 243  \pmod{343} \\
+x_4 & =243-f(243)(2)=243-(59339)(2)\equiv 1615  \pmod{2401}
+\end{align*}
+So we have lifted $x\equiv 5  \pmod{7}$ to a solution $x=1615 \pmod{2401}.$
+Therefore the solutions to \ref{pce1} are 
+$x\equiv 785 \pmod{2401}$ and 
+$x\equiv 1615 \pmod{2401}$.
+
+$$\begin{array}{|c|c|c|c|c|}   \hline
+x  &  f(x)  & f'(x) & \overline{f'(x)} &  \pmod{7} \\ \hline   
+0 & 5 & - & - & -  \\     \hline
+1 & 0 & 3 & 5 & 
+\begin{array}{c|c}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)}  \\   \hline
+k=1 & x_1\equiv 1 \pmod{7^1}  \\   
+k=2 & x_2=1-f(1)*5\equiv 1 \pmod{7^2} \\
+k=3 & x_2=1-f(1)*5\equiv 99 \pmod{7^3} \\
+k=4 & x_2=99-f(99)*5\equiv 785 \pmod{7^4} \\
+\end{array}   
+\\     \hline
+2 & 4 & - & - & -  \\     \hline
+3 & 3 & - & - & - \\   \hline
+4 & 4 & - & - & - \\   \hline
+5 & 0 & 4 & 2 & 
+\begin{array}{c|c}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)}  \\  \hline
+k=1 & x_1\equiv 5 \pmod{7^1}  \\   
+k=2 & x_2=5-f(5)*2\equiv 47 \pmod{7^2}  \\
+k=3 & x_2=47-f(47)*2\equiv 243 \pmod{7^3} \\
+k=4 & x_2=243-f(243)*2\equiv 1615 \pmod{7^4} \\
+\end{array}   
+\\   \hline
+6 & 5 & - & - & -  \\ \hline
+\end{array}$$
+::: 
+
+
+
+
+
+
+## Solving Polynomial Congruences
+
+::: {#exm- }
+Consider trying to solve the polynomial congruence equation  
+\begin{equation}
+\label{pce4}
+f(x)=x^5-3x^4+7x^3-2x^2-9x+6\equiv 0 \pmod{165}.
+\end{equation}
+::: 
+
+::: {.solution }
+Since $165=(3)(5)(11),$ by inspection we solve the following congruences, and we have 
+$$
+f(x)\equiv 0\pmod{3}\Longrightarrow x\equiv 0,1\pmod{3}
+$$
+$$
+f(x)\equiv 0 \pmod{5} \Longrightarrow x\equiv 1, 2, 3\pmod{5}
+$$
+$$
+f(x)\equiv 0\pmod{11} \Longrightarrow x\equiv 1, 6, 8\pmod{11}
+$$
+Thus there are a total of $(2)(3)(3)=18$ solutions to (\ref{pce4}); for example to find one of them we solve the system $x\equiv 0 \pmod{3}$, $x\equiv 1 \pmod{5}$, $x\equiv 1 \pmod{11}$.  Using the Chinese remainder theorem we obtain the solution $x\equiv 111 \pmod{165}.$ 
+The other 17 solutions are also found using the Chinese  remainder theorem.
+$$
+\begin{array}{l|l}
+x & f(x) \pmod{25} \\
+0 & 15\not\cong 0 \\
+5 & 15 \not\cong 0 \\
+10 & 15 \not\cong 0 \\
+15 & 15 \not\cong 0 \\
+20 & 15 \not\cong 0
+\end{array}
+\qquad
+\begin{array}{l|l}
+x & f(x) \pmod{25} \\
+0 & 14\not\cong 0 \\
+7 &  14 \not\cong 0 \\
+14 & 14 \not\cong 0 \\
+21 & 14 \not\cong 0 \\
+28 & 14 \not\cong 0 \\
+35 & 14 \not\cong 0 \\
+42 & 14 \not\cong 0 \\
+\end{array}
+$$
+::: 
+
+::: {#exm- }
+Solve the polynomial congruence equation  
+\begin{equation}\label{pce3}
+f(x)=x^6-2x^5-35\equiv 0 \pmod{6125}.
+\end{equation}  
+::: 
+
+::: {.solution }
+Since $6125=5^37^2,$ first we consider the equation $f(x)\equiv 0 \pmod{5}.$ 
+By inspection, we see that the  solutions are $x=0$ and $x=2$ modulo 5. 
+Note that, $f'(x)=6x^5-10x^4$.  
+For $x=0$ we find that $f'(0)\equiv 0 \pmod{5}.$ 
+Thus we check, $f(0)=-35\equiv 15 \pmod{25}$ and so $x=0$ does not lift  to a solution modulo $5^k$.
+For $x=2$ we find that $f'(2)=32\equiv 2 \pmod{5}$ and so $x=2$ has unique lifts modulo $5^k.$ We set $x_1=2.$ 
+Then, since  $(2)(3)\equiv 1\pmod{5}$ we have 
+$\overline{f'(2)}=3,$ and so 
+\begin{align*}
+x_2 & =2-f(2)(3)=2-(-35)(3)\equiv 7\pmod{25} \\ 
+x_3 & =7-f(7)(3)=7-(76832)(3)\equiv 7 \pmod{125}.
+\end{align*}
+So we have lifted $x\equiv 5 \pmod{5}$ to a solution $x\equiv 7 \pmod{125}$; that is we have 
+solved $f(x)\equiv  0 \pmod{125}.$ 
+Now we consider the case for $f(x)\equiv 0 \pmod{7}.$ 
+By inspection, we see that the solutions are $x=0$ and  $x=2 \pm{7}$.
+For $x=0$ we find that $f'(0)\equiv 0 \pmod{7}.$ 
+Thus we check, $f(0)=-35\equiv 7 \pmod{49}$ and so $x=0$  does not lift to a solution modulo $7^k$.
+For $x=2$ we find that $f'(2)=32\equiv 4 \pmod{7}$ and so $x=2$ has unique lifts modulo $7^k.$ 
+We set $x_1=2.$ 
+Then, since  $(4)(2)\equiv 1 \pmod{7}$ we have 
+$\overline{f'(2)}=2,$ and so  
+$$
+x_2=2-f(2)(2)=2-(-35)(2)\equiv 23 \pmod{49}.
+$$ 
+So we have lifted $x\equiv 2 \pmod{7}$ to a solution $x\equiv 23 \pmod{49}$; that is we have solved $f(x)\equiv  0 \pmod{49}.$ 
+It remains to solve the system $x\equiv 7 \pmod{125}$, $x\equiv 23 \pmod{49}$. This is easy since $(125,49)=1$ and we have $125(-29)+49(74)=1$ and so $x=125(-29)(23)+49(74)(7)=-57993\equiv 3257\pmod{6125}$ as desired.
+::: 
+
+
+::: {#exm- }
+Outline how to solve the polynomial congruence equation.
+\begin{equation}
+\label{pc6}
+-82+12 x-10 x^2+x^3\equiv 0 \pmod{33075}
+\end{equation}
+::: 
+
+::: {.solution }
+The unique factorization of $33075,$ is $3^35^27^2$ and the derivative is $f'(x)=3 x^2-20 x+12.$  
+
+$$
+\small
+\begin{array}{|c|c|c|c|c|c|}   \hline
+x  &  f(x)  & f'(x) & \overline{f'(x)} &  \pmod{3} \\ \hline   
+0 & 2 & - & - & -  \\ \hline  
+1 & 2 & - & - & -  \\    \hline
+2 & 0 & 2 & 2 &     
+\begin{array}{c|c}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)}  \\   \hline
+1 & x_1\equiv 2 \pmod{3^1}  \\   
+2 & x_2=2-f(2)*2\equiv 2 \pmod{3^2}  \\   
+3 & x_3=2-f(2)*2\equiv 20 \pmod{3^3} 
+\end{array}  \\  \hline
+\end{array}
+$$
+
+$$ 
+\small
+\hspace{-7pt}
+\begin{array}{|c|c|c|c|c|}   \hline
+x  &  f(x)  & f'(x) & \overline{f'(x)} &  \pmod{5} \\ \hline   
+0 & 3 & - & - & -  \\  \hline 
+1 & 1 & - & - & -  \\  \hline
+2 & 0 & 4 & 4 &  
+\begin{array}{c|c}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)}  \\   \hline
+k=1 & x_1\equiv 2 \pmod{5^1}  \\   
+k=2 & x_2=2-f(2)*4\equiv 12 \pmod{5^2}  
+\end{array}   \\   \hline
+3 & 1 & - & - & -  \\   \hline
+4 & 0 & 0 & - & f(x)\not\equiv 0 \pmod{25} \therefore  x \text{ does not lift where $x=4,9,14,19,24$}  \\ \hline
+\end{array}$$
+
+$$\begin{array}{|c|c|c|c|c|}   \hline
+x  &  f(x)  & f'(x) & \overline{f'(x)} &  \pmod{7} \\ \hline   
+0 & 2 & - & - & -  \\   \hline
+1 & 5 & - & - & -  \\   \hline 
+2 & 1 & - & - & -  \\   \hline
+3 & 3 & - & - & -  \\    \hline
+4 & 3 & - & - & -  \\    \hline
+5 & 0 & 1 & 1 & 
+\begin{array}{c|c}  
+ k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)}  \\  \hline
+k=1 & x_1=5 \pmod{7^1} \\    
+k=2 & x_2=5-f(5)*1\equiv 5 \pmod{7^2}  
+\end{array}    \\   \hline
+6 & 0 & 0 & - & f(x)\not\equiv 0 \pmod{49} \therefore  x \text{ does not lift where $x=6,13,20,27,34,41,48$}  \\ \hline
+\end{array} 
+$$ 
+
+After applying Hensel's Lifting theorem, we now must solve the system $x\equiv 20 \pmod{27}$,  $x\equiv 12 \pmod{25}$,  $x\equiv 5 \pmod{49}$. 
+The Chinese remainder theorem yields  
+$$
+x\equiv 20\left(\frac{33075}{27}\right)y_1+12\left(\frac{33075}{25}\right)y_2+5\left(\frac{33075}{49}\right)y_3  \pmod{ 33075}
+$$
+where $y_1, y_2,$ and $y_3$ are solutions to 
+$$
+\frac{33075}{27}y_1\equiv 1 \pmod{27} \Longrightarrow y_1=19
+$$
+$$
+\frac{33075}{25}y_2\equiv 1 \pmod{25} \Longrightarrow y_2=12
+$$
+$$
+\frac{33075}{49}y_3\equiv 1 \pmod{49} \Longrightarrow y_3=40
+$$
+Therefore,  $x \equiv 20 \left( \frac{33075}{27} \right) 19+12 \left(\frac{33075}{25} \right)12 + 5\left( \frac{33075}{49}\right ) 40 \equiv 30287 \pmod{33075}$ is THE solution. 
+:::  
+
+::: {#exm- }
+Solve the polynomial congruence equation
+\begin{equation}
+\label{polconglast}
+2308-567 x-6 x^2+35x^3\equiv 0 \pmod{148225}.
+\end{equation}
+::: 
+
+::: {.solution }
+The unique factorization of $148225,$ is $5^27^211^2$ and the derivative is  $f'(x)=105 x^2-12 x-567.$  We apply Hensel's Lifting theorem and display the computations in the following tables. %\ref{f25}, \ref{f27}, and \ref{f211}. 
+
+$$\begin{array}{|c|c|c|c|c|}  \hline
+x  &  f(x)  & f'(x) & \overline{f'(x)} &  \pmod{5} \\ \hline   
+0 & 3 & - & - & - \\    \hline
+1 & 0 & 1 & 1 & 
+\begin{array}{c|c}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)} \\   \hline
+k=1 & x_1\equiv 1 \pmod{5^1} \\   
+k=2 & x_2=1-f(1)*1\equiv 6 \pmod{5^2}  
+\end{array}   \\   \hline
+2 & 0 & 4 & 4 & 
+\begin{array}{c|c}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)}  \\   \hline
+k=1 & x_1\equiv 2\pmod{5^1}  \\   
+k=2 & x_2=2-f(2)*4\equiv 7\pmod{5^2}  
+\end{array}    \\   \hline
+3 & 3 & - & - & -  \\   \hline
+4 & 4 & - & - & -  \\ \hline
+\end{array}$$
+
+$$\begin{array}{|c|c|c|c|c|}   \hline
+x  &  f(x)  & f'(x) & \overline{f'(x)} &  \pmod{7} \\ \hline   
+0 & 5 & - & - & -  \\     \hline
+1 & 6 & - & - & -  \\     \hline
+2 & 2 & - & - & -  \\     \hline
+3 & 0 & 6 & 6 &  
+\begin{array}{c|c}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)}  \\   \hline
+k=1 & x_1\equiv 3 \pmod{7^1}  \\   
+k=2 & x_2=3-f(3)*6\equiv 31 \pmod{7^2} \\
+\end{array}    \\   \hline
+4 & 0 & 1 & 1 & 
+\begin{array}{c|c}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)}  \\  \hline
+k=1 & x_1\equiv 4 \pmod{7^1}  \\   
+k=2 & x_2=4-f(4)*1\equiv 25 \pmod{7^2}  \\
+\end{array}    \\   \hline
+5 & 2 & - & - & -  \\   \hline
+6 & 6 & - & - & -  \\ \hline
+\end{array}$$
+
+$$\begin{array}{|c|c|c|c|c|}   \hline
+x  &  f(x)  & f'(x) & \overline{f'(x)} &  \pmod{11} \\ \hline   
+0 & 9 & - & - & -  \\     \hline
+1 & 10 & - & - & -  \\     \hline
+2 & 0 & f'(x)\equiv 5 & 9 &   
+\begin{array}{c|c}   
+k & x_k=x_{k-1}-f\left(x_{k-1}\right)\overline{f'(x)}  \\     \hline
+k=1 & x_1\equiv 2 \pmod{11^1} \\   
+ k=2 & x_2=2-f(2)*9\equiv 79 \pmod{11^2}  
+ \end{array}    \\   \hline  
+3 & 2 & - & - & -  \\     \hline
+4 & 6 & - & - & -  \\     \hline
+5 & 2 & - & - & -  \\     \hline
+6 & 2 & - & - & -  \\     \hline
+7 & 7 & - & - & -  \\     \hline
+8 & 7 & - & - & -  \\     \hline
+9 & 3 & - & - & -  \\     \hline
+10 & 7 & - & - & -  \\ \hline
+\end{array}$$ 
+
+
+We now must solve the four systems 
+\begin{center} 
+$\begin{array}{cc}
+\begin{cases}
+x\equiv 6 & \pmod{25}  \\   
+x\equiv 31 & \pmod{49}  \\   
+x\equiv 79 & \pmod{121}  
+\end{cases}
+&
+\begin{cases}
+x\equiv 7 & \pmod{25}  \\   
+x\equiv 31 & \pmod{49}  \\   
+x\equiv 79 & \pmod{121}  
+\end{cases} 
+\\ \\
+\begin{cases}
+x\equiv 6 & \pmod{25}  \\   
+x\equiv 25 & \pmod{49}  \\   
+x\equiv 79 & \pmod{121}  
+\end{cases}
+&
+\begin{cases}
+x\equiv 7 & \pmod{25}  \\   
+x\equiv 25 & \pmod{49}  \\   
+x\equiv 79 & \pmod{121}  
+\end{cases} 
+\end{array}$
+\end{center}
+
+The Chinese remainder theorem yields the four solutions,  
+$$
+x\equiv 6\left(\frac{148225}{25}\right)u_1+31\left(\frac{148225}{49}\right)u_2+79\left(\frac{148225}{121}\right)u_3 \pmod{148225}
+$$
+$$
+x\equiv 7\left(\frac{148225}{25}\right)u_1+31\left(\frac{148225}{49}\right)u_2+79\left(\frac{148225}{121}\right)u_3 \pmod{148225}
+$$ 
+$$
+x\equiv 6\left(\frac{148225}{25}\right)u_1+25\left(\frac{148225}{49}\right)u_2+79\left(\frac{148225}{121}\right)u_3 \pmod{148225}
+$$
+$$
+x\equiv 7\left(\frac{148225}{25}\right)u_1+25\left(\frac{148225}{49}\right)u_2+79\left(\frac{148225}{121}\right)u_3 \pmod{148225}
+$$
+where $u_1, u_2$ and $u_3$ are found via
+$$
+\left(148225/25\right)u_1\equiv 1 \pmod{25} \Longrightarrow u_1=19
+$$
+$$
+\left(148225/49\right)u_2\equiv 1 \pmod{49} \Longrightarrow u_2=15
+$$ 
+$$
+\left(148225/121\right)u_3 \equiv 1 \pmod{121} \Longrightarrow u_3=113
+$$ 
+Therefore the solutions to \ref{polconglast} are
+ $x \equiv122531 \pmod{148225}$, $x \equiv 86957 \pmod{148225}$, $x \equiv 146731 \pmod{148225}$, and $x\equiv 111157 \pmod{148225}$  as the only solutions.
+::: 
+
+
+
+
+
+## Exercises
+
+The following polynomial congruences all have 10 or fewer solutions. Use unique factorization,  
+Hensel's Lifting theorem and the Chinese remainder theorem to solve them.  
+
+::: {#exr- }
+$2+3 x-2 x^2\equiv 0 \pmod{1155}$
+::: 
+
+::: {#exr- }
+$5+11 x-12 x^2\equiv 0 \pmod{8085}$ 
+::: 
+
+::: {#exr- }
+$2+3 x-2 x^2\equiv 0 \pmod{3465}$
+::: 
+
+::: {#exr- }
+$5+11 x-12 x^2\equiv 0 \pmod{24255}$ 
+::: 
+
+::: {#exr- }
+$2+3 x-2 x^2\equiv 0 \pmod{12705}$
+::: 
+
+::: {#exr- }
+$5+11 x-12 x^2\equiv 0 \pmod{5775}$ 
+::: 
+
+::: {#exr- }
+$2+3 x-2 x^2\equiv 0 \pmod{8085}$
+::: 
+
+::: {#exr- }
+$5+11 x-12 x^2\equiv 0 \pmod{63525}$ 
+::: 
+
+::: {#exr- }
+$3+11 x+10 x^2\equiv 0 \pmod{1925}$
+::: 
+
+::: {#exr- }
+$120-9 x+8 x^2\equiv 0 \pmod{1155}$ 
+::: 
+
+::: {#exr- }
+$3+11 x+10 x^2\equiv 0 \pmod{5775}$
+::: 
+
+::: {#exr- }
+$120-9 x+8 x^2\equiv 0 \pmod{5775}$ 
+::: 
+
+::: {#exr- }
+$3+11 x+10 x^2\equiv 0 \pmod{17325}$
+::: 
+
+::: {#exr- }
+$120-9 x+8 x^2\equiv 0 \pmod{40425}$ 
+::: 
+
+::: {#exr- }
+$3+11 x+10 x^2\equiv 0 \pmod{63525}$
+::: 
+
+::: {#exr- }
+$120-9 x+8 x^2\equiv 0 \pmod{698775}$ 
+::: 
+
+::: {#exr- }
+$180-15 x+11 x^2\equiv 0 \pmod{1155}$
+::: 
+
+::: {#exr- }
+$46-5 x-9 x^2\equiv 0 \pmod{315}$ 
+::: 
+
+::: {#exr- }
+$180-15 x+11 x^2\equiv 0 \pmod{56595}$
+::: 
+
+::: {#exr- }
+$46-5 x-9 x^2\equiv 0 \pmod{10395}$ 
+::: 
+
+::: {#exr- }
+$180-15 x+11 x^2\equiv 0 \pmod{24255}$
+::: 
+
+::: {#exr- }
+$46-5 x-9 x^2\equiv 0 \pmod{51975}$ 
+::: 
+
+::: {#exr- }
+$180-15 x+11 x^2\equiv 0 \pmod{17325}$
+::: 
+
+::: {#exr- }
+$46-5 x-9 x^2\equiv 0 \pmod{121275}$ 
+::: 
+
+::: {#exr- }
+$4+6 x+2 x^2\equiv 0 \pmod{312987}$
+::: 
+
+::: {#exr- }
+$4+6 x+2 x^2\equiv 0 \pmod{521645}$           
+::: 
+
+
+Solve the polynomial congruence.
+
+::: {#exr- }
+$x^2+4x+2\equiv 0 \pmod{7}$
+::: 
+
+::: {#exr- }
+$x^2+4x+2\equiv 0 \pmod{49}$
+::: 
+
+::: {#exr- }
+$x^2+4x+2\equiv 0 \pmod{343}$
+::: 
+
+::: {#exr- }
+$x^3+8x^2-x-1\equiv 0 \pmod{11}$
+::: 
+
+::: {#exr- }
+$x^3+8x^2-x-1\equiv 0 \pmod{121}$
+::: 
+
+::: {#exr- }
+$x^3+8x^2-x-1\equiv 0 \pmod{1331}$
+::: 
+
+::: {#exr- }
+$x^2+x+47\equiv 0 \pmod{2401}$
+::: 
+
+::: {#exr- }
+$x^2+x+34\equiv 0 \pmod{81}$
+::: 
+
+::: {#exr- }
+$13x^7-42x-649\equiv 0 \pmod{1323}$
+::: 
+
+::: {#exr- }
+$x^8-x^4+1001\equiv 0 \pmod{539}$
+::: 
+
+::: {#exr- }
+$x^4+2x+36\equiv 0 \pmod{4375}$
+::: 
+
+::: {#exr- }
+$x^6-2x^5-35\equiv 0 \pmod{6125}$
+::: 
+
+Each of the following polynomial congruence equations have fewer than 50 solutions. 
+
+::: {#exr- }
+$9 x^5+10 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{12960}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{12960}$    
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{19440}$   
+::: 
+
+::: {#exr- }
+$9 x^5+10 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{19440}$    
+::: 
+
+::: {#exr- }
+$9 x^5+10 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{38880}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{38880}$    
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{10800}$    
+::: 
+
+::: {#exr- }
+$8 x^5+10 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{10800}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{21600}$    
+::: 
+
+::: {#exr- }
+$6 x^5+10 x^4+5 x^3+ x^2+ x+1\equiv 0 \pmod{21600}$    
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{16200}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{16200}$    
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{32400}$    
+::: 
+
+::: {#exr- }
+$8 x^5+10 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{32400}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{64800}$    
+::: 
+
+::: {#exr- }
+$6 x^5+10 x^4+5 x^3+ x^2+ x+1\equiv 0 \pmod{64800}$    
+::: 
+
+::: {#exr- }
+$4 x^5+4 x^4+5 x^3+5 x^2+ x+1\equiv 0 \pmod{12150}$    
+::: 
+
+::: {#exr- }
+$3 x^5+2 x^4+5 x^3+6 x^2+ x+1\equiv 0 \pmod{12150}$    
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{24300}$    
+::: 
+
+::: {#exr- }
+$4 x^5+3 x^4+ x^3+2 x^2+ x+1\equiv 0 \pmod{24300}$    
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{48600}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{48600}$    
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{97200}$    
+::: 
+
+::: {#exr- }
+$8 x^5+10 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{97200}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{194400}$    
+::: 
+
+::: {#exr- }
+$6 x^5+10 x^4+5 x^3+ x^2+ x+1\equiv 0 \pmod{194400}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{12000}$    
+::: 
+
+::: {#exr- }
+$7 x^5+10 x^4+4 x^3+ x^2+ x+1\equiv 0 \pmod{12000}$    
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{18000}$    
+::: 
+
+::: {#exr- }
+$8 x^5+10 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{18000}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{36000}$    
+::: 
+
+::: {#exr- }
+$6 x^5+10 x^4+5 x^3+ x^2+ x+1\equiv 0 \pmod{36000}$
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{13500}$    
+::: 
+
+::: {#exr- }
+$4 x^5+3 x^4+ x^3+2 x^2+ x+1\equiv 0 \pmod{13500}$    
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{27000}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{27000}$    
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{54000}$    
+::: 
+
+::: {#exr- }
+$8 x^5+10 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{54000}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{108000}$    
+::: 
+
+::: {#exr- }
+$6 x^5+10 x^4+5 x^3+ x^2+ x+1\equiv 0 \pmod{108000}$    
+::: 
+
+::: {#exr- }
+$3 x^5+2 x^4+5 x^3+6 x^2+ x+1\equiv 0 \pmod{20250}$    
+::: 
+
+::: {#exr- }
+$3 x^5+5 x^4+4 x^3+3 x^2+2 x+1\equiv 0 \pmod{20250}$    
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{40500}$    
+::: 
+
+::: {#exr- }
+$4 x^5+3 x^4+ x^3+2 x^2+ x+1\equiv 0 \pmod{40500}$    
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{81000}$    
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{81000}$   
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{162000}$   
+::: 
+
+::: {#exr- }
+$8 x^5+10 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{162000}$   
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{324000}$   
+::: 
+
+::: {#exr- }
+$6 x^5+10 x^4+5 x^3+ x^2+ x+1\equiv 0 \pmod{324000}$   
+::: 
+
+::: {#exr- }
+$3 x^5+2 x^4+5 x^3+6 x^2+ x+1\equiv 0 \pmod{60750}$   
+::: 
+
+::: {#exr- }
+$3 x^5+5 x^4+4 x^3+3 x^2+2 x+1\equiv 0 \pmod{60750}$   
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{121500}$   
+::: 
+
+::: {#exr- }
+$4 x^5+3 x^4+ x^3+2 x^2+ x+1\equiv 0 \pmod{121500}$   
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{243000}$   
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{243000}$   
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{486000}$   
+::: 
+
+::: {#exr- }
+$8 x^5+10 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{486000}$   
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{972000}$   
+::: 
+
+::: {#exr- }
+$6 x^5+10 x^4+5 x^3+ x^2+ x+1\equiv 0 \pmod{972000}$   
+::: 
+
+::: {#exr- }
+$1 x^5+10 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{20000}$   
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{20000}$   
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{15000}$   
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{15000}$   
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{30000}$   
+::: 
+
+::: {#exr- }
+$8 x^5+10 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{30000}$   
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{60000}$   
+::: 
+
+::: {#exr- }
+$7 x^5+10 x^4+4 x^3+ x^2+ x+1\equiv 0 \pmod{60000}$   
+::: 
+
+::: {#exr- }
+$5 x^5+3 x^4+3 x^3+5 x^2+ x+1\equiv 0 \pmod{11250}$   
+::: 
+
+::: {#exr- }
+$2 x^5+3 x^4+6 x^3+5 x^2+ x+1\equiv 0 \pmod{11250}$   
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{22500}$   
+::: 
+
+::: {#exr- }
+$4 x^5+3 x^4+ x^3+2 x^2+ x+1\equiv 0 \pmod{22500}$   
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{45000}$   
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{45000}$   
+::: 
+
+::: {#exr- }
+$6 x^5+6 x^4+ x^3+ x^2+ x+1\equiv 0 \pmod{90000}$   
+::: 
+
+::: {#exr- }
+$8 x^5+10 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{90000}$   
+::: 
+
+::: {#exr- }
+$4 x^5+6 x^4+3 x^3+ x^2+ x+1\equiv 0 \pmod{180000}$   
+::: 
+
+::: {#exr- }
+$6 x^5+10 x^4+5 x^3+ x^2+ x+1\equiv 0 \pmod{180000}$   
+::: 
+
+::: {#exr- }
+$6 x^5+9 x^4+8 x^3+5 x^2+ x+1\equiv 0 \pmod{33750}$    
+::: 
+
+::: {#exr- }
+$3 x^5+2 x^4+5 x^3+6 x^2+ x+1\equiv 0 \pmod{33750}$    
+::: 
+
+::: {#exr- }
+$3 x^5+4 x^4+2 x^3+ x^2+ x+1\equiv 0 \pmod{67500}$    
+::: 
+
+::: {#exr- }
+Let $a$ be an integer and $p$ a prime such that $(a,p)=1.$ 
+Use Hensel's Lifting theorem to solve the polynomial congruence equation $a x\equiv  1 \pmod{p^k}$ for all positive integer $k.$    
+::: 
+
+::: {#exr- }
+Solve the polynomial congruence equation $2x^2-3x+12\equiv 0 (\text{mod} 343).$
+::: 
+
+
