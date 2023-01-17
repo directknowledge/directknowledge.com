@@ -32,7 +32,6 @@ book:
     collapse-level: 0
   navbar:
     title: "Direct Knowledge"
-    site-url: https://directknowledge.com/basic-set-theory/
     background: light
     foreground: dark
     logo: ../assets/directknowledge-logo.svg
@@ -54,6 +53,7 @@ book:
         aria-label: GitHub
   favicon: "../assets/favicon.ico"
   open-graph: true
+  site-url: https://directknowledge.com/basic-set-theory/
   page-footer:
     center: 
       - text: "&copy; Copyright 2023, All Rights Reserved. DirectKnowledge.com"
