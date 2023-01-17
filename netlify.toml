@@ -19,3 +19,9 @@
       form-action 'self';
       frame-src https://www.youtube.com/embed/ 
     '''
+
+[[redirects]]
+  from = "https://directknowledge.com/basicsettheory"
+  to = "https://directknowledge.com/basic-set-theory/"
+  status = 301
+
