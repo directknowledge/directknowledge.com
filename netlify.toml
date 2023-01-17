@@ -25,3 +25,8 @@
   to = "https://directknowledge.com/basic-set-theory/"
   status = 301
 
+[[redirects]]
+  from = "https://directknowledge.com/learningnumbertheory"
+  to = "https://directknowledge.com/learning-number-theory/"
+  status = 301
+
