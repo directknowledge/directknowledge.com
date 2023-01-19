@@ -1,0 +1,231 @@
+---
+pagetitle: "Line Integrals - Exploring Calculus"
+---
+# Line Integrals
+
+  
+
+Let $C$ be a smooth curve, with parametric equations $x=x(t),$ $y=y(t),$ and $z=z(t)$ for $a\leq t\leq b,$ that lies within the domain of a function $f(x,y,z).$ We say that $C$ is \index{orientable} if it is possible to describe direction along the curve for increasing $t.$ Partition $C$ into $n$ sub-arcs, the $k \text{th}$ of which has length $\triangle  s_k.$ Let $\left(x_k^*,y_k^*,z_k^*\right)$ be a point chosen (arbitrarily) from the $k \text{th} **orientable} if it is possible to describe direction along the curve for increasing $t.$ Partition $C$ into $n$ sub-arcs, the $k \text{th}$ of which has length $\triangle  s_k.$ Let $\left(x_k^*,y_k^*,z_k^*\right)$ be a point chosen (arbitrarily) from the $k \text{th** $ sub-arc. Form the Riemann sum 
+\[
+\sum _{k=1}^n f\left(x_k^*,y_k^*,z_k^*\right)\triangle  s_k\]
+and let $\|\triangle  s\|$ denote the largest sub-arc length in the partition. 
+The following limit 
+\[
+\lim _{\|\text{$\triangle $s}\|\to 0}\sum _{k=1}^n f\left(x_k^*,y_k^*,z_k^*\right)\triangle  s_k\]
+is called the \index{line integral} **line integral**  of $f$ over $C$ and is denoted by 
+$$
+\int _Cf(x,y,z)\, dS.
+$$
+Additionally, if $C$ is a closed curve, then we denote the line integral by 
+$$
+\oint _C\text{  }f \, dS.
+$$
+
+::: {#thm- } 
+
+Let $f,$ $f_1,$ and $f_2$ be continuous scalar functions defined on a piecewise smooth orientable curve $C.$
+Then for any constants $k_1$and $k_2,$
+ 
+- $\int _C \left(k_1 f_1+k_2f_2\right) \, dS=k_1\int _Cf_1 \, dS+k_2\int _Cf_2 \, dS$
+- $\int _C f \, dS=\int _{C_1}f \,\, dS+\cdots+\int _{C_n}f \,\, dS$
+where $C$ is the union of smooth orientable sub-arcs $C=C_1\cup C_2\cup \cdots \cup C_n$ with only endpoints in common.
+- $\int _{-C} f \, dS=-\int _C f \, dS.$
+ 
+::: 
+
+
+## Evaluating Line Integrals Using Parametrization
+
+::: {#thm- }  
+
+Suppose that the function $f$ is continuous at each point on a smooth curve $C$, with parametric equations $x=x(t),$ $y=y(t),$ and $z=z(t)$ for $a\leq t\leq b,$ that lies within the domain of $f.$ 
+Then 
+$$
+\int _Cf(x,y,z)\, dS=\int _a^bf( x(t),y(t),z(t) )\sqrt{[x'(t)]^2+[y'(t)]^2+[z'(t)]^2} \, dt .
+$$
+where
+$\, dS=\sqrt{[x'(t)]^2+[y'(t)]^2+[z'(t)]^2} \, dt$. 
+::: 
+
+The definition of a line integral can be extended to curves that are piecewise smooth in the sense that they are the union of a finite number of smooth curves with only endpoints in common. In particular, if $C$ is comprised of a number of smooth sub-arcs $C_1,C_2,\text{...},C_n,$ then 
+\[
+\int _C f(x,y,z)\, dS=\int _{C_1} f(x,y,z)\, dS+\cdots +\int _{C_n} f(x,y,z)\, dS.
+\]
+
+::: {#exm- } 
+
+Evaluate the line integral
+$$
+\int _Cy \sin  z \, dS,
+$$ 
+where $C$ is the circular helix given by the equations   $x=\cos  t, y=\sin t, z=t,$ and $0\leq t\leq 2\pi$.
+::: 
+
+::: {.solution }
+We determine
+\begin{align*}
+\int _C y \sin  z \, dS
+& =\int _0^{2\pi }(\sin  t) \sin  t \sqrt{\left(\frac{d x}{d t}\right)^2+\left(\frac{d y}{d t}\right)^2+\left(\frac{d z}{d t}\right)^2}dt 
+\\[5pt]
+& =\int _0^{2\pi }\sin ^2 t \sqrt{\sin ^2t+\cos ^2t+1}dt 
+\\[5pt]
+& =\sqrt{2}\int _0^{2\pi }\frac{1}{2}(1-\cos  2t)dt 
+\\[5pt]
+& =\frac{\sqrt{2}}{2}\left[t-\frac{1}{2}\sin  2t\right]_0^{2\pi } 
+ =\sqrt{2}\pi.
+ \end{align*}
+::: 
+  
+::: {#thm- } 
+
+Let $C$ be a smooth curve and let $f(x,y,z)$ be a continuous function with domain containing the trace of $C.$ Then the value of the integrals 
+\[
+\int _C f \, dS, \quad \int _C f dx, \quad \int _C f dy, \quad \int _C f dz\]
+depen\, dS only on the initial point $A,$ terminal point $B,$ and the trace of $C.$ That is, two different parameterizations having the same trace
+from $A$ to $B$ yield the same values for these integrals.
+::: 
+
+::: {#exm- } 
+
+Suppose the smooth curves $C_1$ and $C_2$ are given by  
+\begin{align*}
+& C_1: \quad x=t, \, y=t^2 \quad \text{ for }  0\leq t\leq 1, \text{ and} 
+\\[5pt]
+& C_2:  \quad x=\sin  t, \, y=\sin ^2 t\quad \text{ for }  0\leq t\leq \frac{\pi }{2}. 
+\end{align*}
+Evaluate  
+$$
+\int _{C_1} x \, dS
+\quad \text{ and } \quad 
+\int _{C_2} x \, dS.
+$$
+::: 
+
+::: {.solution }
+Both $C_1$ and $C_2$ are smooth curves from $(0,0)$ to $(1,1)$ with the same trace which is the portion of the parabola
+$y=x^2$ for $0\leq x\leq 1.$ For $C_1,$ we have   $x=t$ and $\, dS=\sqrt{1+4t^2}dt,$ therefore 
+\[
+\int _{C_1} x \, dS=\int _0^1t\sqrt{1+4t^2}dt=\frac{1}{12}\left(17^{3/2}-1\right).
+\] 
+For $C_2,$ we have   $x=\sin  t$ and $\, dS=\sqrt{\cos ^2t+4\sin ^2t\text{  }\cos ^2t}dt,$ therefore 
+\begin{equation*}
+\int _{C_2} x \, dS=\int _0^{\pi /2} \sin  t\text{  }\cos  t\sqrt{1+4\sin ^2t}dt=\frac{1}{12}\left(17^{3/2}-1\right).
+\end{equation*}
+::: 
+ 
+## Line Integrals with Respect to Coordinate Variables
+
+Other line integrals are obtained by replacing $\triangle  s_k$ by $\triangle  x_k=x_k-x_{k-1}.$ 
+This is called the \index{line integral} **line integral**  of $f$ along $C$ with respect to $x$: 
+\[
+\int _C f(x,y,z) \,dx=\lim _{\| \triangle x\|\to  0}\sum _{k=1}^n f\left(x_k^*,y_k^*,z_k^*\right)\triangle  x_k.\]
+Similarly with respect to $y$ and $z$, we define
+\[
+\int _C f(x,y,z) \,dy=\lim _{\| \triangle y \|\to  0}\sum _{k=1}^n f\left(x_k^*,y_k^*,z_k^*\right)\triangle  y_k\]
+\[
+\int _C f(x,y,z) \,dz=\lim _{\| \triangle z\|\to  0}\sum _{k=1}^n f\left(x_k^*,y_k^*,z_k^*\right)\triangle  z_k.\]
+When we want to distinguish the original line integral $\int _Cf \,\, dS$ from these, we call it the \index{line integral} **line integral**  with respect to arc length. 
+
+The following formulas say that the line integrals with respect to $x,$ $y,$ or $z$ can also be evaluated by expressing everything in terms of $t$: $x=x(t),$ $y=y(t),$ $z=z(t),$ $dx=x'(t),$ $dy=y'(t),$ and $dz=z'(t)$ yielding: 
+\[\int _C f(x,y,z)\,d x=\int _a^b f( x(t),y(t),z(t) )x'(t)\,dt\]
+\[\int _C f(x,y,z)\,d y=\int _a^b f( x(t),y(t),z(t) )y'(t)\,dt\]
+and
+\[\int _C f(x,y,z)\,d z=\int _a^b f( x(t),y(t),z(t) )z'(t)\,dt\]
+assuming $f$ is continuous and $C$ lies within the domain of $f$.
+
+::: {#exm- } 
+
+Evaluate the line integral
+$$
+\int _C y \,dx+z \,dy+x \,dz,
+$$ 
+where $C$ consists of the line segment $C_1$ from $(2,0,0)$ to $(3,4,5)$ followed by the vertical line segment $C_2$ from $(3,4,5)$ to $(3,4,0)$
+::: 
+
+::: {.solution }
+The curve $C$ is the union of the curves
+\begin{align*}
+& C_1: \vec{R}_1(t)=(1-t)\langle 2,0,0\rangle+t \langle 3,4,5\rangle = \langle 2+t,4t,5t\rangle  \text{ for } 0\leq t\leq 1
+\\[5pt]
+& C_2: \vec{R}_2(t)=(1-t)\langle3,4,5\rangle+t\langle3,4,0\rangle=\langle3,4,5-5t\rangle \text{ for } 0\leq t\leq 1.
+\end{align*}
+Thus 
+\begin{align*}
+\int _C y \, dx+z\, dy+x\, dz 
+& =\int _{C_1} y \, dx+z\, dy+x\, dz+\int _{C_2} y \, dx+z \, dy+x \, dz  \\
+& =\int_0^1 ( (4t)+5t(4)+(2+t)5) \, dt +\int _0^1( 0+0+3(-5) )\, dt \\
+& =\int_0^1 (10+29t) \, dt +\int _0^1 (-15)\, dt 
+%\\ & =\left[10t+29\frac{t^2}{2}\right]_0^1 +\left[-15t\right]_0^1  
+%= 24.5 -15
+=9.5
+\end{align*}
+::: 
+  
+## Line Integral of Vector Field Along a Curve
+
+::: {#thm- } 
+Let 
+$$
+\vec{V}(x,y,z)=u(x,y,z)\vec{i}+v(x,y,z)\vec{j}+w(x,y,z)\vec{k}
+$$
+be a continuous vector field, and let $C$ be a piecewise smooth orientable curve with parametric representation 
+$$
+\vec{R}(t)=x(t) \vec{i}+y(t) \vec{j}+z(t) \vec{k} 
+$$
+for $a\leq  t\leq  b.$
+Using $d\vec{R}=dx  \vec{i}+dy  \vec{j}+dz  \vec{k}$ we define the \index{line integral} of $\vec{V} **line integral} of $\vec{V** $ along $C$ by
+\begin{align*}
+& \int _C \vec{V}\cdot d \vec{R}  
+=\int _C ( u \, dx +v \, dy +w \, dz) 
+=\int _C \left( \vec{V}[\vec{R}(t)]\cdot \vec{R}'(t) \right)dt \\
+&  \qquad =\int _a^b \left[u[x(t),y(t),z(t)]\frac{dx}{dt}+v[x(t),y(t),z(t)]\frac{dy}{dt}+w[x(t),y(t),z(t)]\frac{dz}{dt}\right]d t.\end{align*}
+::: 
+
+::: {#thm- }  
+Let $\vec{F}$ be a continuous force field over a domain $D.$ Then the work $W$ performed as an object moves along a smooth curve $C$ in $D$ is given by the integral 
+\[
+W=\int _C \vec{F}\cdot \vec{T} \, \, dS=\int _C \vec{F}\cdot d\vec{R}\] 
+where  $\vec{T}$ is the unit tangent at each point on $C$ and $\vec{R}$ is the position vector of the object moving on $C.$
+::: 
+
+::: {#exm- } 
+
+Evaluate the line integral
+$$
+\oint \vec{F}\cdot \, d\vec{R}
+$$ 
+where $\vec{F}=y^2\vec{i} +x^2 \vec{j}-(x+z)\vec{k} $ and $C$ is the boundary of the triangle with vertices $(0,0,0),$ $(1,0,0),$ and $(1,1,0)$, transversed once clockwise, as viewed from above.
+::: 
+
+::: {.solution }
+First let $C_1$ be the line segment from $(1,0,0)$ to $(0,0,0).$ Then $C_1$ can be represented by the vector function  
+$$
+\vec{R}_1(t)=(1-t)\langle 1,0,0\rangle +t\langle 0,0,0\rangle =\langle 1-t,0,0\rangle
+$$ 
+with $0\leq t\leq 1.$ 
+Let $C_2$ be the line segment from $(0,0,0)$ to $(1,1,0)$ and so can be represented by the vector function,  
+$$
+\vec{R}_2(t)=(1-t)\langle 0,0,0\rangle +t\langle1,1,0\rangle =\langle t,t,0\rangle
+$$  
+with $0\leq t\leq 1.$ 
+Let $C_3$ be the line segment from $(1,1,0)$ to $(1,0,0)$ and so can be represented by the vector function,  
+$$
+\vec{R}_3(t)=(1-t)\langle1,1,0\rangle+t\langle1,0,0\rangle =\langle 1,1-t,0\rangle
+$$ 
+with $0\leq t\leq 1$. 
+Then  
+\begin{align*}
+& \vec{F}_1=\left(1-t^2\right)\vec{j}-(1-t)\vec{k} & 
+& d\vec{R}_1=\langle -dt,0,0\rangle \\
+& \vec{F}_2=t^2\vec{i}+t^2\vec{j}-t \vec{k} & 
+ & d\vec{R}_2=\langle dt,dt,0\rangle \\
+& \vec{F}_3=(1-t)^2\vec{i}+\vec{j}-\vec{k} & 
+& d\vec{R}_3=\langle 0,-dt,0\rangle\end{align*}
+We find 
+\begin{align*}
+\int_C \vec{F}\cdot d\vec{R}
+& =\underset{C_1}{\int }\vec{F}_1\cdot d\vec{R}_1+\underset{C_2}{\int }\vec{F}_2\cdot d\vec{R}_2+\underset{C_3}{\int }\vec{F}_3\cdot d\vec{R}_3 \\
+& =\int_0^1 0 \, dt+\int_0^1 2t^2 \, dt+\int_0^1 (-1) \, dt=-\frac{1}{3}.
+\end{align*}
+::: 
+  

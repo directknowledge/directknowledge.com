@@ -1,0 +1,416 @@
+---
+pagetitle: "Techniques for Finding Limits - Exploring Calculus"
+---
+# Techniques for Finding Limits
+
+
+
+## Calculating Limits Using Limit Theorems
+In this topic we concentrate not on the formal definition of a limit of a function of one variable but rather give several examples which emphasis algebra and trigonometry techniques to evaluate limits of functions using basic limit theorems. 
+
+
+::: {#thm- } [Limit Theorems]
+For any real number $c,$  suppose the functions $f$  and $g$  both have finite limits at $x=c.$  Then 
+ 
+- (Constant) $\lim _{x\to c} k=k$  for any constant $k$ 
+- (Limit of $x$ ) $\lim _{x\to c} x=c$ 
+\item 
+(Multiple) $\lim _{x\to c}k f(x)=k \lim _{x\to c}f(x)$ 
+\item 
+(Sum) $\lim _{x\to c}[f(x)+g(x)]=\lim _{x\to c}f(x)+\lim _{x\to c}g(x)$ 
+\item 
+(Difference) $\lim _{x\to c}[f(x)-g(x)]=\lim _{x\to c}f(x)-\lim _{x\to c}g(x)$ 
+- (Product) $\lim _{x\to c}[f(x)g(x)]=\left( \lim _{x\to c}f(x) \right)\left( \lim _{x\to c}g(x) \right)$ 
+- (Quotient) $\lim _{x\to c}[f(x)/g(x)]=\left( \lim _{x\to c}f(x) \right)/\left( \lim _{x\to c}g(x) \right)$ 
+- (Power) $\lim _{x\to c}[f(x)]^n=\left( \lim _{x\to c}f(x) \right){}^n$  where $n$  is a rational number and whenever the limit on the right exists 
+- (Polynomial) $\lim _{x\to c}P(x)=P(c)$  for any polynomial $P$ 
+- (Rational) $\lim _{x\to c}R(x)=R(c)$  for any rational function $R$  where $c$  is in the domain of $R.$ 
+ 
+::: 
+
+
+::: {#exm- } 
+Find the limit of $f(x)=\frac{2x^3-5x+8}{x^2-3}$  at $x=3.$  
+::: 
+
+::: {.solution }   
+By using several limit rules, we have 
+\begin{align*}
+& \lim _{x\to 3}\frac{2x^3-5x+8}{x^2-3}
+=\frac{\lim _{x\to 3}\left(2x^3-5x+8\right)}{\lim _{x\to 3}\left(x^2-3\right)} \\
+& \qquad =\frac{\lim _{x\to 3}\left(2x^3\right)-\lim _{x\to 3}(5x)+\lim _{x\to 3}(8)}{\lim _{x\to 3}\left(x^2\right)-\lim _{x\to 3}(3)} \\
+& \qquad =\frac{2 \lim _{x\to 3}\left(x^3\right)- 5\lim _{x\to 3}(x)+8}{\lim _{x\to 3}\left(x^2\right)-3} \\
+& \qquad =\frac{2 \left(\lim _{x\to 3} x\right){}^3- 5(3)+8}{\left(\lim _{x\to 3}x\right){}^2-3} 
+=\frac{2 (3)^3- 5(3)+8}{(3)^2-3} 
+=\frac{47}{6}
+\end{align*}
+Notice this is the same as evaluating the rational function $f(x)$  at $x=3$.  
+::: 
+
+
+::: {#exm- }  
+Compute the limit of $f(x)=\frac{2x^3+x^2-16x+12}{x^2-4}$  at $x=2.$  
+::: 
+
+::: {.solution }   
+By using several limit rules, we have
+\begin{align*}
+& \lim _{x\to 2}\frac{2x^3+x^2-16x+12}{x^2-4} 
+=\lim _{x\to 2}\frac{(x-2)\left(2x^2+5x-6\right)}{(x-2)(x+2)} \\
+& \qquad  =\lim _{x\to 2}\frac{\left(2x^2+5x-6\right)}{(x+2)}  
+=\frac{\left(2(2)^2+5(2)-6\right)}{((2)+2)}
+ =3.
+\end{align*}
+In the previous example notice that we used 
+\begin{equation}\label{limeq}
+\lim _{x\to 2}\frac{(x-2)\left(2x^2+5x-6\right)}{(x-2)(x+2)}=\lim _{x\to 2}\frac{\left(2x^2+5x-6\right)}{(x+2)}.
+\end{equation}
+Now it is not true that the functions 
+\[
+f(x)=\frac{\left(2x^2+5x-6\right)}{(x+2)} \qquad \text{and} \qquad g(x)=\frac{\left(2x^2+5x-6\right)}{(x+2)}
+\] 
+are the same function because they have different domains. 
+But the above equality is true because $x$  is approaching 2, and not equal to 2. 
+So the point is,because $f(x)=g(x)$  when $x\neq 2$  we can indeed say \eqref{limeq} holds. 
+This is an important part of understanding limits.
+::: 
+
+
+::: {#exm- } 
+Suppose $\lim _{x\to -2^-}f(x)=2,$  $\lim _{x\to -2^+}f(x)=4,$  $\lim _{x\to -2^-}g(x)=0,$  and $\lim _{x\to -2^+}g(x)=0,$  find
+\begin{equation*}
+\lim _{x\to -2}[f(x)+g(x)]
+\quad
+\text{and}
+\quad 
+\lim _{x\to -2}[f(x)g(x)].
+\end{equation*}
+::: 
+
+::: {.solution }   
+Since 
+$$\lim _{x\to -2^-}f(x)\neq \lim _{x\to -2^+}f(x)
+$$ 
+we know $\lim _{x\to -2}f(x)$ does not exist, but this does not imply anything about $\lim _{x\to -2}[f(x)+g(x)]$ nor $\lim _{x\to -2}[f(x)g(x)].$  
+To find these limits we first find the two one-sided limits, 
+\[
+\lim _{x\to -2^-}[f(x)+g(x)]=\lim _{x\to -2^-}f(x)+\lim _{x\to -2^-}g(x)=2+0=2
+\]
+\[
+\lim _{x\to -2^+}[f(x)+g(x)]=\lim _{x\to -2^+}f(x)+\lim _{x\to -2^+}g(x)=4+0=4
+\]
+and since 
+\[
+\lim _{x\to -2^-}[f(x)+g(x)]\neq \lim _{x\to -2^+}[f(x)+g(x)]
+\] 
+we can now say the two-sided limit $\lim _{x\to -2}[f(x)+g(x)]$  does not exist. 
+Similarly, 
+\[
+\lim _{x\to -2^-}[f(x)g(x)]=\left( \lim _{x\to -2^-}f(x) \right)\left( \lim _{x\to -2^-}g(x)\right)=2(0)=0\]
+\[
+\lim _{x\to -2^+}[f(x)g(x)]=\left( \lim _{x\to -2^+}f(x) \right)\left( \lim _{x\to -2^+}g(x) \right)=4(0)=0
+\] 
+and therefore, $\ds\lim _{x\to -2}[f(x)g(x)]=0.$
+::: 
+
+## Special Trigonometric Limits
+
+
+::: {#thm- }  
+The following trigonometric limits hold:
+\[
+\lim _{x\to 0}\frac{\sin  x}{x}=1\text\qquad \text{and} \qquad \lim _{x\to 0} \frac{\cos  x-1}{x}=0
+\]
+::: 
+
+
+::: {#exm- }  
+Find $\lim _{x\to 0} \frac{\sin ^2x}{2 x}.$  
+::: 
+
+::: {.solution }   
+We have $\lim _{x\to 0}\frac{\sin ^2 x}{2x}=\lim _{x\to 0}\frac{\sin  x}{2}\frac{\sin  x}{x}=\frac{0}{2}(1)=0.$ 
+::: 
+
+
+::: {#exm- } 
+Find $\lim _{x\to 0}\frac{\sin  x(1-\cos  x)}{2 x^2}.$ 
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+& \lim _{x\to 0}\frac{\sin  x(1-\cos  x)}{2 x^2} 
+=\lim _{x\to 0} \frac{1}{2}\frac{\sin  x}{x}\frac{1-\cos  x}{x} \\
+& \qquad =\frac{1}{2}\lim _{x\to 0} \left(\frac{\sin  x}{x}\right)\lim _{x\to 0}\left(\frac{1-\cos  x}{x}\right) 
+=\frac{1}{2}(1)(0)
+=0.
+\square
+\end{align*}
+::: 
+
+
+::: {#exm- } 
+Find $\lim _{x\to 0} \frac{\sin  5x}{\sin  4x}.$ 
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+& \lim _{x\to 0} \frac{\sin  5x}{\sin  4x} 
+=\lim _{x\to 0} \left(\frac{\sin  5x}{x}\right)\left(\frac{x}{\sin  4x}\right) \\
+& \qquad =\lim _{x\to 0} \left(\frac{ 5\sin  5x}{5x}\right)\left(\frac{4x}{4 \sin  4x}\right) \\
+& \qquad =\lim _{x\to 0} \left(\frac{ 5\sin  5x}{5x}\right)\lim _{x\to 0}\left(\frac{4x}{4 \sin  4x}\right) 
+=\frac{5}{4}.
+\square
+\end{align*}
+::: 
+
+::: {#exm- } 
+Given $g(x)=-27-9 x-6 x^2+x^3+x^4$  and $h(x)=21-16 x-3 x^2+2 x^3,$  compute the limit $g(x)/h(x)$  at $x=3.$  
+::: 
+
+::: {.solution }   
+Try a factor of $(x-3)$  from $g(x)$  obtaining 
+\[
+g(x)=(x-3)\left(9+6 x+4 x^2+x^3\right)
+\] 
+and a graph of $h$  is which also inspires to try to factor of $(x-3)$  from $h(x)$  obtaining $h(x)=(x-3)\left(2x^2+3x-7\right).$  
+Therefore,
+\begin{align*}
+& \lim _{x\to 3}\frac{-27-9 x-6 x^2+x^3+x^4}{21-16 x-3 x^2+2 x^3}
+ =\lim _{x\to 3}\frac{(x-3)\left(9+6 x+4 x^2+x^3\right)}{(x-3)\left(2x^2+3x-7\right)} \\
+& \qquad =\lim _{x\to 3}\frac{9+6 x+4 x^2+x^3}{2x^2+3x-7}
+ =\frac{9+6 (3)+4 (3)^2+(3)^3}{2(3)^2+3(3)-7} 
+ =\frac{9}{2}.
+\square
+\end{align*}
+::: 
+
+::: {#thm- }  
+If $c$  is any real number in the domain of the given function, then 
+\[
+\begin{array}{ccccc} 
+\lim _{x\to c} \cos  x=\cos  c & & \lim _{x\to c} \sin  x=\sin  c & & \lim _{x\to c} \tan  x=\tan  c \\[8pt] 
+\lim _{x\to c} \sec  x=\sec  c  & & \lim _{x\to c} \csc  x=\csc  c & & \lim _{x\to c} \cot  x=\cot  c.
+\end{array}
+\]
+::: 
+
+::: {#exm- } 
+Compute the limit of $f(x)=\frac{x}{\sin  x-2 \cos  x}$  at $x=\pi .$  
+::: 
+
+::: {.solution }   
+By using several limit rules, we have
+\[
+\lim _{x\to \pi }\frac{x}{\sin  x-2 \cos  x}=\frac{\pi }{\sin  \pi -2\cos  \pi }=\frac{\pi }{0-2(-1)}=\frac{\pi }{2}.
+\square
+\]
+::: 
+
+
+::: {#exm- }  
+Compute $\lim _{x\to \pi /4}\frac{1-\tan  x}{\sin  x- \cos  x}.$  
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+& \lim _{x\to \pi /4}\frac{1-\tan  x}{\sin  x- \cos  x} 
+=\lim _{x\to \pi /4}\frac{1-\frac{\sin  x}{\cos  x}}{\sin  x- \cos  x} \\
+& \qquad =\lim _{x\to \pi /4}\frac{\frac{\cos  x-\sin  x}{\cos  x}}{\sin  x- \cos  x}   
+=\lim _{x\to \pi /4}\frac{\cos  x-\sin  x}{\cos  x}\frac{1}{\sin  x- \cos  x} \\
+& \qquad  =\lim _{x\to \pi /4}\frac{-1}{\cos  x} 
+=\lim _{x\to \pi /4}\frac{-1}{\frac{1}{\sqrt{2}}}
+=-\sqrt{2}
+\square
+\end{align*}
+::: 
+
+::: {#exm- } 
+Compute the limit of $f(x)=\frac{\tan  x}{\sin  x}$  as $x\to0.$  
+::: 
+
+::: {.solution }   
+We have $\lim _{x\to 0}\frac{\tan  x}{\sin  x}$ $=\lim _{x\to 0} \left(\frac{\sin  x}{\cos  x}\right)\left(\frac{1}{\sin  x}\right)$ $=\lim _{x\to 0} \frac{1}{\cos  x}$ $=1.$ 
+::: 
+
+## Using Rationalization
+
+
+::: {#exm- }  
+Compute: $\lim _{x\to 1}\frac{\sqrt{x}-1}{x-1}.$  
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+\lim _{x\to 1}\frac{\sqrt{x}-1}{x-1}=\lim _{x\to 1}\frac{\sqrt{x}-1}{x-1}\frac{\sqrt{x}+1}{\sqrt{x}+1}=\lim _{x\to 1}\frac{1}{\sqrt{x}+1}=\frac{1}{\sqrt{1}+1}=\frac{1}{2}.
+\end{align*}
+::: 
+
+
+::: {#exm- } 
+Compute the limit of $f(x)=\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}$  as $x\to\pi .$  
+::: 
+
+::: {.solution }   
+We have
+\begin{align*}
+& \lim _{x\to \pi }\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}
+=\lim _{x\to \pi }\left(\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}\right)\left(\frac{\sqrt{x}+\sqrt{\pi }}{\sqrt{x}+\sqrt{\pi }}\right) \\
+& \qquad =\lim _{x\to \pi }\frac{(x-\pi )\left(\sqrt{x}+\sqrt{\pi }\right)}{x-\pi } 
+=2\sqrt{\pi }
+\square
+\end{align*}
+::: 
+
+::: {#exm- } 
+Compute the limit of $f(x)=\frac{x-1}{\sqrt[3]{x}-1}$  as $x\to 1.$  
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+& \lim _{x\to 1}\frac{x-1}{\sqrt[3]{x}-1} 
+=\lim _{x\to 1}\left(\frac{x-1}{\sqrt[3]{x}-1}\right)\left(\frac{\sqrt[3]{x^2}+\sqrt[3]{x}+1}{\sqrt[3]{x^2}+\sqrt[3]{x}+1}\right) \\
+& \quad  =\lim _{x\to 1}\frac{(x-1)\left(\sqrt[3]{x^2}+\sqrt[3]{x}+1\right)}{x-1} 
+=\lim _{x\to 1}\left(\sqrt[3]{x^2}+\sqrt[3]{x}+1\right) 
+=3.
+\square
+\end{align*}
+::: 
+
+## Limits of Piecewise Functions
+
+::: {#exm- } 
+
+Find 
+\begin{equation}
+\lim _{x\to 0} 
+\begin{cases}
+2(x+1) & x<3 \\ 
+4 & x=3 \\ 
+x^2-1 & x>3
+\end{cases}
+\end{equation}
+::: 
+
+::: {.solution }   
+Since $x\to 0$  we know that $x<3$  and so we use $2(x+1)$  to evaluate the limit of the piecewise function, as follows, 
+\begin{equation}
+\lim _{x\to 0} 
+\begin{cases}
+2(x+1) & x<3 \\ 4 & x=3 \\ x^2-1 & x>3.
+\end{cases}
+=\lim _{x\to 0} 2(x+1)=2
+\end{equation}
+::: 
+
+::: {#exm- } 
+At $x=7,$  compute the limit of  
+\begin{equation}
+f(x)=
+\begin{cases}
+2\left(x-x^2\right) & x<7 \\ 
+-83 & x=7 \\ 
+(x-7)^2-84 & x>7
+\end{cases}
+\end{equation}
+::: 
+
+::: {.solution }   
+Since the function is pieced together at $x=7$  we will evaluate two one sided limit. 
+First the limit from the left, we have 
+$$
+\lim_{x\to 7^-}f(x)=-84
+$$ and for the limit from the right we have 
+$$
+\lim _{x\to 7^+}f(x)=-84.
+$$  
+Since 
+$$
+\lim _{x\to 7^-} f(x)=\lim _{x\to 7^+}f(x)
+$$ 
+we know the two-sided limit must exist and we have 
+$$
+\lim _{x\to 7}f(x)=-84
+$$ even though $f(7)=-83.$  
+::: 
+
+## Squeeze Theorem
+
+Next we state the squeeze theorem and through an example show how to use it. 
+Basically, the idea is to bound a function on both sides by functions whose limits can be more easily computed; and thus in the process squeeze the value of the limit of the original function out. 
+
+
+::: {#thm- } [Squeeze Theorem]
+Let $f, g$ and $h$  be functions of $x$ . 
+If both of the following conditions hold
+ 
+- $g(x)\leq f(x)\leq h(x)$  on an open interval containing $c$  and
+- $\lim _{x\to c}g(x) =\lim _{x\to c}h(x) =L$  
+ 
+then $\lim _{x\to c}f(x)=L.$  
+::: 
+
+
+::: {#exm- } 
+Use the squeeze rule to find the limit of $f(x)=x \cos \left(\frac{1}{x}\right)$  as $x\to 0^+.$  
+::: 
+
+::: {.solution }  
+We are interested in this function around $x>0$ . 
+Knowing that the cosine function is always less than or equal to one, we see that when $-1\leq  x\leq  1$  we have 
+\[
+-x\leq f(x)=x \cos \left(\frac{1}{x}\right)\leq x.
+\]
+Since $\lim _{x\to 0} -x=\lim _{x\to 0} x=0$  we have $\lim _{x\to 0}x \cos  \left(\frac{1}{x}\right)=0$  by the squeeze theorem. 
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Find the following limits.
+ 
+- $\lim _{x\to -7}(2x+5)$
+- $\lim _{x\to -2}\left(x^3-2x^2+4x+8\right)$
+- $\lim _{x\to 2}\left(\frac{x+3}{x+6}\right)$
+- $\lim _{y\to 2}\left(\frac{y+2}{y^2+5y+6}\right)$
+- $\lim _{y\to -3}(5-y)^{4/3}$
+- $\lim _{h\to 0}\left(\frac{5}{\sqrt{5h+4}+2}\right)$
+- $\lim _{x\to 5}\left(\frac{x-5}{x^2-25}\right)$
+- $\lim _{x\to 2}\left(\frac{x^2-7x+10}{x-2}\right)$
+- $\lim _{x\to -2}\left(\frac{-2x-4}{x^3+2x^2}\right)$
+- $\lim _{x\to 1}\left(\frac{x-1}{\sqrt{x+3}-2}\right)$
+- $\lim _{x\to -2}\left(\frac{x+2}{\sqrt{x^2+5}-3}\right)$
+ 
+::: 
+
+::: {#exr- } 
+Suppose $\lim _{x\to  4}f(x)=0$ and $\lim _{x\to 4}g(x)=3.$ Using limit laws find the limits $\lim _{x\to 4}(g(x)+3),$ $\lim _{x\to 4}xf(x),$ $\lim _{x\to 4}(g(x))^2,$ and $\lim _{x\to 4}\frac{g(x)}{f(x)+1}.$ 
+::: 
+
+::: {#exr- } 
+Suppose that $\lim _{x\to -2}p(x)=4,$ $\lim _{x\to -2}r(x)=0,$ and $\lim _{x\to -2}s(x)=-3.$ Using limit laws find the limits, $\lim_{x\to -2}(p(x)+r(x)+s(x)),$ $\lim _{x\to -2}p(x)r(x)s(x),$ and $\lim _{x\to -2}\left(\frac{-4p(x)+5 r(x)}{s(x)}\right).$ 
+::: 
+
+::: {#exr- } 
+Using limit laws evaluate the limit, $\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}$ where $f(x)=x^2$ and $x=1.$
+::: 
+
+::: {#exr- } 
+Using limit laws evaluate the limit, $\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}$ where $f(x)=3x-4$ and $x=2.$
+::: 
+
+::: {#exr- } 
+If $\lim _{x\to -2}\frac{f(x)}{x^2}=1,$ find $\lim _{x\to -2}f(x)$ and $\lim _{x\to -2}\frac{f(x)}{x}.$
+::: 
+
+::: {#exr- } 
+If $\lim _{x\to 2}\frac{f(x)-5}{x-2}=3,$ find $\lim _{x\to 2}f(x).$ Also if $\lim _{x\to 2}\frac{f(x)-5}{x-2}=4$ find $\lim _{x\to 2}f(x).$
+::: 
+
+
+

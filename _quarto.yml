@@ -27,10 +27,22 @@ website:
             href: https://directknowledge.com/basic-set-theory/
             icon: book
             aria-label: Basic Set Theory Book
+          - text: "Exploring Calculus"
+            href: https://directknowledge.com/exploring-calculus/
+            icon: book
+            aria-label: Exploring Calculus Book
           - text: "Learning Number Theory"
             href: https://directknowledge.com/learning-number-theory/
             icon: book
-            aria-label: Learning Number Theory Book
+            aria-label: Learning Linear Algebra Book
+          - text: "Learning Linear Algebra"
+            href: https://directknowledge.com/learning-linear-algebra/
+            icon: book
+            aria-label: Learning Linear Algebra Book
+          - text: "Multivariable Calculus"
+            href: https://directknowledge.com/multivariable-calculus/
+            icon: book
+            aria-label: Multivariable Calculus Book
       - href: http://directknowledge.com/about.html
         text: "About"
       - href: https://youtube.com/@directknowledge
@@ -64,4 +76,5 @@ format:
       - _html/website.html
       - _html/mathjax.html
       - _html/analytics.html
+
 

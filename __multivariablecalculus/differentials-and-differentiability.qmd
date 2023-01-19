@@ -1,0 +1,395 @@
+---
+pagetitle: "Differentials and Differentiability - Exploring Calculus"
+---
+# Differentials and Differentiability
+
+
+
+
+## Differentials
+
+::: {#def- } 
+Let $z=f(x,y)$ and let  $\Delta x$ and $\Delta y$ be increments of $x$ and $y$, respectively. 
+The \index{differentials} **differentials**  $dx$ and $dy$ of the independent variables 
+$x$ and $y$ are defined by $dx=\Delta x$ and $dy=\Delta y$.
+The \index{differential} $d z$, also called the \index{total differential} **differential} $d z$, also called the \index{total differential** , is defined by
+\[
+d z=f_x(x,y)d x+f_y(x,y)d y
+=\frac{\partial z}{\partial x}d x+\frac{\partial z}{\partial y}d y.
+\]
+::: 
+
+
+::: {#thm- } 
+If $f(x,y)$ and its partial derivatives $f_x$ and $f_y$ are defined on an open region $R$ containing the point $P\left(x_0,y_0\right)$ and both $f_x$ and $f_y$ are continuous at $P,$ then  
+\[
+\Delta  f=f\left(x_0+\Delta  x,y_0+\Delta  y\right)-f\left(x_0,y_0\right)\approx f_x\left(x_0,y_0\right)\Delta  x+f_y\left(x_0,y_0\right)\Delta y
+\]
+so that  
+\begin{equation}
+\label{linappform}
+f\left(x_0+\Delta  x,y_0+\Delta  y\right)\approx f\left(x_0,y_0\right)+f_x\left(x_0,y_0\right)\Delta  x+f_y\left(x_0,y_0\right)\Delta y.
+\end{equation}
+::: 
+
+::: {#exm- } 
+
+If 
+$$
+z=f(x,y)=x^2+3x y-y^2,
+$$ 
+find the differential $d z.$ 
+Further, if $x$ changes from $2$ to $2.05$ and $y$ changes from $3$ to $2.96$, compare the values of $\Delta  z$ and $d z.$ 
+Which is easier to compute $\Delta  z$ or $d z$?
+::: 
+
+::: {.solution }
+By definition
+\[
+d z=\frac{\partial z}{\partial x}d x+\frac{\partial z}{\partial y}d y=(2x+3y)d x+(3x-2y)d y.
+\]
+Putting $x=2$, $d x=\Delta  x=0.05$, $y=3$, and $d y=\Delta  y=-0.04$, we get 
+\[
+d z=[2(2)+3(3)]0.05+[3(2)-2(3)](-0.04)=0.65.
+\]  
+The increment of $z$ is 
+\begin{align*}
+\Delta  z & =f(2.05,2.96)-f(2,3) \\
+& =\left[(2.05)^2+3(2.05)(2.96)-(2.96)^2\right]-\left[2^2+3(2)-3^2\right] 
+ =0.6449.\end{align*}
+Notice that $\Delta  z\approx  d z$ but $d z$ is easier to compute.
+::: 
+
+::: {#exm- } 
+Use differentials to approximate the real number 
+\[
+\sqrt{9(1.95)^2+(8.1)^2}.
+\]
+::: 
+
+::: {.solution }
+Consider the function 
+$$
+z=f(x,y)=\sqrt{9x^2+y^2}
+$$ 
+and observe that we can easily calculate $f(2,8)=10.$ Therefore, we take $a=2,
+b=8, d x=\Delta  x=-0.05,$ and $d y=\Delta  y=0.1$ in our linear approximation formula with the multivariate function $f(x,y),$ so 
+$$
+f(a+\Delta  x,b+\Delta  y)\approx f(a,b)+d z.
+$$ 
+Next we compute the partial derivatives 
+\[
+f_x(x,y)=\frac{9x}{\sqrt{9x^2+y^2}} \qquad \text{and} \qquad f_y(x,y)=\frac{y}{\sqrt{9x^2+y^2}}
+\]
+Now using \ref{linappform}
+\begin{align*}
+& \sqrt{9(1.95)^2+(8.1)^2}
+ =f(1.95,8.1)
+ \approx f(2,8)+d z \\
+& =f(2,8)+f_x(2,8)d x+f_y(2,8)d y 
+ =10+\frac{18}{10}(-0.05)+\frac{8}{10}(0.1) 
+ =9.99\end{align*}
+This approximation is accurate to two decimal places.
+::: 
+
+::: {#exm- } 
+Use differentials to approximate the real number 
+\[
+8.94\sqrt{9.99-(1.01)^3}.
+\]
+::: 
+
+::: {.solution }
+Consider the multivariate function $z=f(w,x,y)=w\sqrt{x-y^3}$ 
+and observe that we can easily calculate 
+$$
+f(9,10,1)=9\sqrt{10-1^3}=27.
+$$ 
+Therefore, we take $a=9,$ $ b=10,$ $ c=1,$ $ d w=\Delta  w=-0.06,$
+$d x=\Delta  x=-0.01$ and $d y=\Delta  y=0.01$ in 
+$$
+f(a+\Delta  x,b+\Delta  y,c+\Delta  z)\approx f(a,b,c)+d z.
+$$
+We find the partial derivatives 
+\[
+f_w(w,x,y)=\sqrt{x-y^3},
+\quad 
+f_x(w,x,y)=\frac{w}{2 \sqrt{x-y^3}},
+\quad 
+f_y(w,x,y)=-\frac{3 w y^2}{2 \sqrt{x-y^3}}
+\] 
+Now using \ref{linappform}
+\begin{align*}
+& 8.94\sqrt{9.99-(1.01)^3} 
+=f(8.94,9.99,1.01)
+ \approx f(9,10,1)+d z \\
+& \qquad =f(9,10,1)+f_w(9,10,1)d w+f_x(9,10,1)d x+f_y(9,10,1)d y \\
+& \qquad =27+3(-0.06)+\frac{3}{2}(-0.01)+-\frac{9}{2}(0.01) 
+ =26.75\overline{9}.\end{align*}
+This approximation is accurate to two decimal places.
+::: 
+
+
+## Differentiability
+
+For a function of two variables $z=f(x,y)$, if $x$ and $y$ are given increments $\Delta  x$ and $\Delta
+y$ , then the corresponding increment of $z$ is 
+\[
+\Delta  z=f(x+\Delta  x,y+\Delta  y)-f(x,y).
+\]
+
+::: {#def- } 
+If $z=f(x,y)$, then $f$ is \index{differentiable} **differentiable**  at $(a,b)$ provided $\Delta  z$ can be expressed in the form
+\[
+\Delta  z=f_x(a,b)\Delta  x+f_y(a,b)\Delta  y+\epsilon _1\Delta  x+\epsilon _2\Delta  y
+\]
+where $\epsilon _1\to 0$ and $\epsilon _2\to  0$ as $(\Delta  x,\Delta  y)\to (0,0).$ Additionally, $f(x,y)$ is said to be differentiable in the region $R$ of the plane if $f$ is differentiable at each point in $R$.
+::: 
+
+::: {#thm- } [Differentiability Implies Continuity]
+\label{suffdiff}
+Let $f$ be a function of two variables with $(a,b)$ in the domain of $f.$ 
+ 
+- If $f$ is differentiable at $(a,b)$ it is also continuous at $(a,b)$. 
+- If $f$ is a function of $x$ and $y$, and $f$, $f_x$, $f_y$ are continuous in a disk $D$ centered at $(a,b)$, then $f$ is differentiable at $(a,b).$ 
+ 
+::: 
+
+::: {.proof }
+The proof is left to the reader.
+::: 
+
+\begin{figure}[H]
+\centering
+\includegraphics{_includes/tpex1.pdf}
+\caption{The function defined by $f(x,y)=1$ whenever $x$ and $y$ are both positive and $f(x,y)=0$ otherwise, is not differentiable at $(0,0)$.}
+\label{fig:tanplane-1}
+\end{figure} 
+
+::: {#exm- } 
+Let $f$ be the function defined by 
+\begin{equation}
+\label{nondiffex}
+f(x,y)=
+\begin{cases}
+1 & \text{ if } x>0 \text{ and } y>0  \\ 
+0 & \text{ otherwise }
+\end{cases}
+\end{equation}
+Show that the partial derivatives $f_x$ and $f_y$ exist at the origin, but $f$ is not differentiable there.
+::: 
+
+::: {.solution }
+Since $f(0,0)=0$, we have 
+\[
+f_x(0,0)=\lim _{\Delta  x\to 0}\frac{f(0+\Delta  x,0)-f(0,0)}{\Delta  x}=0
+\] 
+and similarly $f_y(0,0)=0.$ Thus, the partial derivatives both exist at the origin. If $f(x,y)$ were differentiable at the origin, it would have to be continuous there. Thus, we can show that $f$ is not differentiable by showing that it is not continuous at $(0,0).$ Toward this end, note that 
+\begin{equation}
+\label{nondifflimex}
+\lim _{(x,y)\to (0,0)} f(x,y)
+\end{equation} 
+is 1 along the line $y=x$ in the first quadrant but it is $0$ if the approach is along the $x$-axis. This means that the limit in \ref{nondifflimex} does not exist. Thus $f(x,y)$ is not differentiable at $(0,0)$. 
+
+Therefore $f(x,y)$ is an example of a  \index{non-differentiable} **non-differentiable**  function for which $f_x$ and $f_y$ exist, or in other words, the word differentiable means more than just the partial derivatives exist because the existence of partial derivatives does not guarantees that a function is differentiable. 
+::: 
+
+\begin{figure}[H]
+\centering
+\includegraphics{_includes/tpex2.pdf}
+\caption{The polynomial function $f(x,y)=x^2y+x y^3$ is differentiable everywhere.}
+\label{fig:tanplane-1}
+\end{figure} 
+
+::: {#exm- } 
+
+Show that $f(x,y)=x^2y+x y^3$ is differentiable for all $(x,y)$. 
+::: 
+
+::: {.solution }
+We find the partial derivatives
+\[
+f_x(x,y)=\frac{\partial }{\partial x}\left(x^2y+x y^3\right)=2x y+y^3\]
+and
+\[
+f_y(x,y)=\frac{\partial }{\partial  y}\left(x^2y+x y^3\right)=x^2+3x y^2.
+\]
+Because $f,$ $f_x$ and $f_y$ are all polynomials in $x$ and $y$ they are continuous throughout the plane. Therefore by \ref{suffdiff}, $f$ must be differentiable for all $x$ and $y.$
+::: 
+
+\begin{figure}[H]
+\centering
+\includegraphics{_includes/tpex3.pdf}
+\caption{The rational function $f(x,y)=\frac{x^2y}{x^4+y^2}$ is not differentiable at $(0,0)$.}
+\label{fig:tanplane-1}
+\end{figure} 
+
+::: {#exm- } 
+Determine whether the function 
+$$
+f(x,y)=\frac{x^2y}{x^4+y^2}
+$$ 
+is differentiable at either $(0,0)$ or $(1,1).$
+Explain why.
+::: 
+
+::: {.solution }
+Since $(0,0)$ is not in the domain of $f$, $f$ is not continuous at  $(0,0)$, and thus not differentiable at $(0,0)$ by \ref{suffdiff}. 
+To show that $f$ is differentiable at $(1,1)$ we compute the partial derivatives 
+\[
+f_x=\frac{-2 x^5 y+2 x y^3}{\left(x^4+y^2\right)^2} \quad \text{and} \quad f_y= \frac{x^6-x^2 y^2}{\left(x^4+y^2\right)^2}.
+\]
+Since these partial derivatives and $f$ are continuous on any open disk not containing $(0,0)$ we conclude that $f$ is differentiable at any point except 
+$(0,0)$; and in particular at $(1,1).$ 
+::: 
+
+\begin{figure}[H]
+\centering
+\includegraphics{_includes/tpex4.pdf}
+\caption{The function $f(x,y)=\frac{2(x-1)(y-1)}{(x-1)^2+(y-1)^2}$ whenever $(x,y)\neq (0,0)$ and $f(x,y)=0$ otherwise,  is not differentiable at $(1,1)$.}
+\label{fig:tanplane-1}
+\end{figure} 
+
+::: {#exm- } 
+Determine whether the function defined by 
+\[
+f(x,y)=\left\{ \begin{array}{ll}
+\frac{2(x-1)(y-1)}{(x-1)^2+(y-1)^2} & \text{if } (x,y)\neq (0,0) \\[15pt] 0 & \text{if } (x,y)= (0,0)
+\end{array}\right.
+\]
+is differentiable at either $(0,0)$ or $(1,1).$ Explain why.
+::: 
+
+::: {.solution }
+The limit, 
+\[
+\lim_{(x,y)\to (1,1)}\frac{2(x-1)(y-1)}{(x-1)^2+(y-1)^2}
+\] 
+does not exist because along $y=1$
+\[
+\plim{(x,y)\to (1,1)}{y=1} \frac{2(x-1)(y-1)}{(x-1)^2+(y-1)^2}
+=\lim_{x\to1}\frac{0}{(x-1)^2}
+=0
+\] 
+and along $y=x$
+\[
+\plim{(x,y)\to (1,1)}{y=x} \frac{2(x-1)(y-1)}{(x-1)^2+(y-1)^2}
+=\lim_{x\to 1}\frac{2(x-1)^2}{(x-1)^2+(x-1)^2}
+=1.
+\]  
+Therefore $f$ is not continuous at $(1,1)$. By \ref{suffdiff}, $f$ is not differentiable at $(1,1).$ To show that $f$ is differentiable at $(0,0)$ we compute the partial derivatives,
+\[
+f_x(x,y)=
+\frac{[(x-1)^2+(y-1)^2][2(y-1)]-[2(x-1)(y-1)][2(x-1)]}{(x-1)^2+(y-1)^2}
+\quad \text{for $(x,y)\neq (0,0)$}
+\]  
+and
+\[
+f_y(x,y)=
+\frac{[(x-1)^2+(y-1)^2][2(x-1)]-[2(x-1)(y-1)][2(y-1)]}{(x-1)^2+(y-1)^2}
+\quad \text{for $(x,y)\neq (0,0)$}.
+\]  
+Since $f$, $f_x$ and  $f_y$ are rational functions they are continuous on any open disk not containing $(1,1)$. We conclude that $f$ is differentiable at any point except $(1,1)$; and in particular at $(0,0).$
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Find the maximum rate of change of the function at the given point and the direction in which it occurs 
+$f(x,y)=\sqrt{x^2+2y}$, $(4,10)$ 
+::: 
+
+::: {#exr- } 
+Show that if $x$ and $y$ are sufficiently close to zero and $f$ is differentiable at $(0,0),$ then  
+\[
+f(x,y)\approx f(0,0)+x f_x(0,0)+y f_y(0,0)
+\]
+Use this approximation for the expressions 
+\[
+\frac{1}{1+x-y} \qquad \text{and} \qquad  \frac{1}{(x+1)^2+(y+1)^2}
+\]
+around $(0,0).$ 
+ 
+- Find the total differential of the function $z=x^2-2x y +3y^2$.
+::: 
+
+::: {#exr- } 
+Find the tangent plane to the surface $z=x \sin y-x \cos x$ at $(\pi,0)$.
+::: 
+
+::: {#exr- } 
+Find an equation for each horizontal tangent plane to the surface $z=5-x^2-y^2+4y.$    
+::: 
+
+::: {#exr- } 
+Determine the total differential.
+ 
+- $z=5x^2y^3$ 
+- $z=\cos  x^2y$ 
+- $z=y e^x$ 
+- $w=\sin  x+\sin  y+\cos  z$ 
+- $w=z^2\sin (2x-3y)$
+- $w=3y^2z \cos  x$ 
+ 
+::: 
+
+::: {#exr- } 
+Show that each functions is differentiable on 
+$\R^2.$ 
+ 
+- $f(x,y)=x y^3+3 x y^2$ 
+- $f(x,y)=\sin \left(x^2+3y\right)$
+- $f(x,y)=x^2+4x-y^2$
+- $f(x,y)=e^{2x+y^2}$ 
+ 
+::: 
+
+::: {#exr- } 
+Determine the standard-form equation for the tangent plane to the surface at the specified point.
+ 
+- $f(x,y)=\sqrt{x^2+y^2}$ at $P_0\left(3,1,\sqrt{10}\right)$
+- $f(x,y)=x^2+y^2+ \sin  x y$ at $P_0(0,2,4)$
+- $f(x,y)=e^{-x} \sin  y$ at $P_0\left(0,\frac{\pi}{2},1\right)$ 
+- $z=10-x^2-y^2$ at $P(2,2,2)$
+- $z=\ln \left|x+y^2\right|$ at $P(-3,-2,0)$
+ 
+::: 
+
+::: {#exr- } 
+Use linear approximation (differentials) to find approximate value.
+ 
+- $\left(\sqrt{\frac{\pi }{2}}-0.01\right) $
+$\sin \left(\sqrt{\frac{\pi }{2}}+0.01\right)$
+- $e^{1.01^20.98^2} $
+ 
+::: 
+
+::: {#exr- } 
+Show that if $x$ and $y$ are sufficiently close to zero and $f$ is differentiable at $(0,0),$ then  
+\[
+f(x,y)\approx f(0,0)+x f_x(0,0)+y f_y(0,0)
+\]
+Use this approximation for the expressions 
+\[
+\frac{1}{1+x-y} \qquad \text{and} \qquad  \frac{1}{(x+1)^2+(y+1)^2}
+\]
+around $(0,0).$ 
+::: 
+
+::: {#exr- } 
+Find a unit vector that is normal to the given graph at the point $P_0\left(x_0,y_0\right)$ on the graph. 
+ 
+- the circle $x^2+y^2=a^2$ 
+- the ellipse $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1.$
+ 
+::: 
+
+::: {#exr- } 
+Find a unit vector that is normal to each surface given at the prescribed point, and the standard form of the equation of the tangent plane at that point. 
+ 
+- $\ln \left(\frac{x}{y-z}\right)=0$ at $(2,5,3)$  
+- $z e^{x^2-y^2}=3$ at $(1,1,3)$
+ 
+::: 
+
+

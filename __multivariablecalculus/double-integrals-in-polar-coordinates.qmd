@@ -1,0 +1,374 @@
+---
+pagetitle: "Double Integrals In Polar Coordinates - Exploring Calculus"
+---
+# Double Integrals In Polar Coordinates
+
+
+
+The polar conversion formulas are used to convert from rectangular to polar coordinates: 
+
+\begin{equation}
+x=r \cos  \theta, \quad
+y=r \sin  \theta, \quad 
+r=\sqrt{x^2+y^2}, \quad  
+\tan  \theta =\frac{y}{x}.
+\end{equation}
+
+::: {#thm- } [Fubini's Theorem in Polar Coordinates] 
+If $f$ is continuous in the polar region $R$ described by 
+$$
+0\leq  r_1(\theta )\leq r\leq
+r_2(\theta ) \qquad \qquad 
+\alpha \leq \theta \leq \beta
+$$ 
+(with $0\leq \beta -\alpha \leq 2\pi $), then 
+\begin{equation}
+\iint_R f(r,\theta )d A=\int
+_{\alpha }^{\beta } \int _{r_1(\theta )}^{r_2(\theta )}f(r,\theta )r \, dr \, d\theta .
+\end{equation}
+::: 
+ 
+::: {#exm- } 
+
+Evaluate 
+\begin{equation}
+\iint_R \left(3x+4y^2\right)\, dA
+\end{equation}
+where $R$ is the upper-half plane bounded by the circles $x^2+y^2=1$ and 
+$x^2+y^2=4$.
+::: 
+
+::: {.solution }
+The region of integration $R$ is described as 
+$$
+R=\left\{(x,y) \mid  y\geq 0,1\leq x^2+y^2\leq 4\right\}.
+$$
+It is an upper ring with polar coordinates given by $1\leq r\leq 2,$ $ 0\leq \theta \leq \pi .$ Therefore 
+\begin{align*}
+\iint_R\left(3x+4y^2\right) \, d A 
+& =\int_0^{\pi }\int _1^2\left(3r \cos  \theta +4r^2\sin ^2 \theta \right) r \, dr \, d\theta \\
+& =\int_0^{\pi } \left(7 \cos  \theta +15\sin ^2\theta \right)\, d\theta =\frac{15\pi }{2}\end{align*}
+by using the trigonometric identity $\sin^2 \theta=\frac{1-\cos (2\theta)}{2}$. 
+::: 
+
+::: {#exm- } 
+
+Evaluate 
+\begin{equation}
+\int _0^{\pi /2}\int _1^3 r e^{-r^2} \, dr \, d\theta.
+\end{equation}
+::: 
+
+::: {.solution }
+In polar coordinates the region  of integration is described as 
+\[
+R=\{(r,\theta) \mid  0\leq \theta \leq \frac{\pi}{2}, 1\leq r \leq 3\}.
+\] 
+Using Fubini's Theorem in polar coordinates the iterated integral is evaluated as 
+\[\int _0^{\pi /2}\int _1^3 r e^{-r^2}drd\theta =\int_0^{\pi /2} \frac{e^8-1}{2 e^9 } \, d\theta =\frac{\left(e^8-1\right) \pi }{4 e^9}.
+\]
+::: 
+
+::: {#exm- } 
+Evaluate 
+\begin{equation}
+\int _0^{\pi /2}\int _1^2 \sqrt{4-r^2}r \,dr \, d\theta.
+\end{equation}
+::: 
+
+::: {.solution }
+In polar coordinates the region of integration is described as 
+\[
+R=\{(r,\theta) \mid  0\leq \theta \leq \frac{\pi}{2}, 1\leq r \leq 2\}.\]
+Using polar coordinates the iterated integral is evaluated as 
+\[
+\int _0^{\pi /2}\int _1^2 \sqrt{4-r^2}r drd\theta =\int_0^{\pi /2} \sqrt{3} \, d\theta =\frac{\sqrt{3} \pi }{2}.
+\]
+::: 
+
+::: {#exm- } 
+Evaluate
+\begin{equation}
+\int _0^{\pi }\int _0^4 r^2 \sin  ^2\theta \, dr \, d\theta.
+\end{equation}
+::: 
+
+::: {.solution }
+In polar coordinates the region  of integration is described as 
+\[
+R=\{(r,\theta) \mid 0\leq \theta \leq \pi, 0\leq r \leq 4\}.
+\] 
+Using polar coordinates the iterated integral is evaluated as 
+\[
+\int _0^{\pi }\int _0^4 r^2 \sin  ^2\theta dr \, d\theta =\int_0^{\pi } \frac{64 \sin ^2\theta }{3} \, d\theta =\frac{32 \pi }{3}
+\]
+by using the trigonometric identity $\sin^2 \theta=\frac{1-\cos (2\theta)}{2}$.
+::: 
+
+::: {#exm- } 
+Evaluate 
+\begin{equation}
+\int _0^{\pi /2}\int_1^3 r^2 \cos ^2\theta \, dr \, d\theta .
+\end{equation}
+::: 
+
+::: {.solution }
+In polar coordinates the region is described as 
+\[
+R=\{(r,\theta) \mid  0\leq \theta \leq \frac{\pi}{2}, 1\leq r \leq 3\}.
+\]  
+Using polar coordinates the iterated integral is evaluated as 
+\[
+\int _0^{\pi /2}\int _1^3 r^2 \cos ^2\theta \, dr \, d\theta =\int_0^{\pi /2} \frac{26 \cos ^2\theta }{3} \, d\theta =\frac{13 \pi }{6}
+\]
+by using the trigonometric identity $\cos^2 \theta=\frac{1+\cos (2\theta)}{2}$.
+::: 
+
+::: {#exm- } 
+
+Evaluate 
+\begin{equation}
+\int _0^{\pi }\int _0^{1+\sin  \theta } \, dr \, d\theta .
+\end{equation}
+::: 
+
+::: {.solution }
+In polar coordinates the region is described as 
+\[
+R=\{(r,\theta) \mid  0\leq \theta \leq \pi, 0\leq r \leq 1+\sin \theta\}
+\]
+Using polar coordinates the iterated integral is evaluated as 
+\[
+\int _0^{\pi }\int _0^{1+\sin  \theta } drd\theta =\int_0^{\pi } (\sin  \theta +1) \, d\theta =2+\pi.
+\]
+::: 
+
+::: {#exm- } 
+Evaluate 
+\begin{equation}
+\int _{-3}^3\int _{-\sqrt{9-x^2}}^{\sqrt{9-x^2}}\ln \left(x^2+y^2+9\right) \, dy \, dx. 
+\end{equation}
+::: 
+
+::: {.solution }
+In polar coordinates
+\begin{align*}
+\int _{-3}^3\int _{-\sqrt{9-x^2}}^{\sqrt{9-x^2}}\ln \left(x^2+y^2+9\right) \, dy \, dx 
+& =\int _0^{2\pi }\int _0^3\ln \left(r^2+9\right) rdrd\theta \\[5pt]
+&  =\int _0^{2\pi }\left[-\frac{9}{2} (1+\ln (9)-2 \ln (18))\right]d\theta 
+\\[5pt]
+= (-9 \pi  (1+\ln (9)-2 \ln (18))).
+%\approx 73.0473.
+\end{align*}
+::: 
+
+::: {#exm- } 
+Evaluate
+\begin{equation}
+\int _0^2\int _0^{\sqrt{2x-x^2}}\frac{x-y}{x^2+y^2} \, dy \, dx
+\end{equation}
+::: 
+
+::: {.solution }
+In polar coordinates
+\begin{align*}
+\int _0^2\int _0^{\sqrt{2x-x^2}}\frac{x-y}{x^2+y^2} \, dy \, dx 
+& =\int _0^{\pi /2}\int _0^{2\cos \theta }(\sin \theta -\cos \theta ) \, dr \, d\theta 
+ \\[5pt] 
+ & =\int _0^{\pi /2}2 \cos \theta  (\sin \theta -\cos (\theta )) \, d\theta 
+ \\[5pt] 
+& =\frac{2-\pi }{2}.
+%\approx -0.570796
+\end{align*}
+::: 
+
+
+::: {#exm- } 
+Use a double integral to find the area enclosed by one loop of the four leaved rose $r=\cos  2\theta .$ 
+::: 
+
+::: {.solution }
+From the sketch of the curve we see that a loop is given by the region 
+\[
+R=\left\{(r,\theta )\mid\frac{-\pi }{4}\leq \theta \leq \frac{\pi }{4}\, , 0\leq r\leq \cos  2\theta \right\}.
+\] 
+So the area is
+\[
+\iint_R \, d A=\int _{-\pi /4}^{\pi /4} \int _0^{\cos  2\theta }r dr \, d\theta =\frac{1}{4}\int_{-\pi /4}^{\pi /4} (1+\cos  4\theta ) \, d\theta =\frac{\pi }{8}.
+\]
+::: 
+
+::: {#exm- } 
+Find the volume of the bounded solid region
+bounded below by the rectangle $R:$ $ 0\leq x\leq 1,$ $ 0\leq y\leq 1$ in the $x y$-plane and above by the graph of 
+$$
+z=f(x,y)=\sqrt{x+y}.
+$$
+::: 
+
+::: {.solution }
+The volume is
+\begin{align*}
+\int _0^1\int _0^1\sqrt{x+y}dy\, dx
+& =\int_0^1 \left(\frac{2}{3} \left(-x^{3/2}+(1+x)^{3/2}\right)\right) \, dx
+\\[5pt]
+& =\frac{8}{15} \left(-1+2 \sqrt{2}\right).
+\end{align*}
+::: 
+
+::: {#exm- } 
+Find the volume of the bounded solid region below by the rectangle $R:$ $ 1\leq x\leq 2,$ $1\leq y\leq e$ in the $x y-\text{plane}$ and above by the graph of 
+$$
+z=f(x,y)=x \ln  (x y).
+$$
+::: 
+
+::: {.solution }
+The volume is
+\begin{align*}
+\int _1^2\int _1^ex \ln  (x y)dy\, dx
+& =\int_1^2 (x (1+(-1+e) \ln  x)) \, dx 
+\\[5pt]
+& =-\frac{3}{4} (-3+e)+2(-1+e) \ln  2.
+\end{align*}
+Note in this example we used the formulas 
+\[
+\int  \ln  udu=u \ln  u-u+C, u>0
+\quad \text{and} \quad 
+\int u \ln  udu=\frac{-1}{4}u^2+\frac{1}{2}u^2\ln  u.
+\]
+::: 
+
+
+::: {#exm- } 
+Find the volume of the bounded solid region bounded by the plane $z=0$ and the paraboloid $z=1-x^2-y^2.$
+::: 
+
+::: {.solution }
+If we put $z=0$ in the equation of the paraboloid, we get $x^2+y^2=1.$ This means that the plane intersects the paraboloid in the circle $x^2+y^2=1,$ so the solid lies under the paraboloid and above the circular disk $R$ given by $x^2+y^2\leq 1.$ In polar coordinates the region of integration $R$ is given by $0\leq r\leq 1,$ $0\leq \theta \leq 2\pi $. 
+Since $1-x^2-y^2=1-r^2,$ the volume is 
+\[
+V=\iint_R \left(1-x^2-y^2\right)d A=\int _0^{2\pi}\int _0^1\left(1-r^2\right)r \, dr \, d\theta =  \frac{\pi}{4} \int _0^{2\pi} \, d\theta = \frac{\pi }{2}.
+\]
+::: 
+
+::: {#exm- } 
+Find the volume of the bounded solid region under the paraboloid  $z=x^2+y^2,$ above the $x y-\text{plane},$ and inside the cylinder $x^2+y^2=2x$ 
+::: 
+
+::: {.solution }
+The solid lies above the disk $R$ whose boundary circle has equation $x^2+y^2=2x$ or $(x-1)^2+y^2=1.$ In polar coordinates the boundary is $r^2=2 r \cos  \theta $ or $r=2 \cos  \theta .$ Thus the region of integration is 
+\[
+R=\left\{(r,\theta )\mid -\frac{\pi }{2}\leq \theta \leq \frac{\pi }{2}, \, 0\leq r\leq 2 \cos  \theta  \right\} \]
+and so the volume is 
+\[
+V=\iint_R \left(x^2+y^2\right)d A=\int _{-\pi /2}^{\pi /2}\int _0^{2 \cos  \theta }r^2rdrd\theta =4\int _{-\pi /2}^{\pi /2}\cos ^4\theta  d\theta =\frac{3\pi }{2}\]
+by using the trigonometric identity $\cos^4 \theta=\left(\frac{1+\cos(2\theta)}{2}\right)^2$.
+::: 
+
+::: {#exm- } 
+
+Find the volume of the bounded solid common to the cylinder $x^2+y^2=2$ and the ellipsoid $3x^2+3y^2+z^2=7.$  
+::: 
+
+::: {.solution }
+In polar coordinates 
+\begin{align*}
+V
+& =2\int _0^{2\pi }\int _0^{\sqrt{2}}\sqrt{7-3r^2}r \, dr \, d\theta  
+=2\int _0^{2\pi }\left(-\frac{1}{9}+\frac{7 \sqrt{7}}{9}\right)\, d\theta
+\\[5pt]
+& =\frac{4\pi}{9} \left(-1+7 \sqrt{7}\right).
+%\approx 24.4629.
+\end{align*}
+::: 
+  
+::: {#exm- } 
+Find the volume of the solid bounded above by the cone $z=x^2+y^2,$ below by the plane $z=0,$ and on both sides by the cylinder $x^2+y^2=y.$
+::: 
+
+::: {.solution }
+In polar coordinates  
+\[
+V=\int _0^{\pi }\int _0^{\sin \theta }r^3 \, dr \, d\theta 
+=\int _0^{\pi }\frac{\sin ^4 \theta  }{4} \, d\theta 
+=\frac{3 \pi }{32}
+%\approx 0.294524.
+\]
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Evaluate 
+$\int _0^{\pi }\int _0^{1+\sin  \theta } \, dr \, d\theta $.
+::: 
+
+::: {#exr- } 
+Sketch the region of integration and then evaluate the iterated integral in polar coordinates. 
+ 
+- $\int _0^{\pi /2}\int _1^3r e^{-r^2} drd\theta $ 
+- $\int _0^{\pi /2}\int _1^2\sqrt{4-r^2} drd\theta$ 
+- $\int _0^{\pi }\int _0^4r^2\sin ^2\theta dr \, d\theta $ 
+- $\int _0^{\pi /2}\int _1^3r ^2\cos ^2\theta drd\theta $ 
+- $\int _0^{\pi}\int _0^{1+\sin  \theta } dr \, d\theta $ 
+  
+::: 
+
+::: {#exr- } 
+Sketch the enclosed region and then use an iterated integral to find the area of the region.
+ 
+- $r=2 \cos  \theta $  
+- $r=4 \cos  3\theta $ 
+- $r=1$ and $r=2\sin  \theta $ 
+- $r=1$ and $r=1+\cos  \theta  $ 
+  
+::: 
+
+::: {#exr- } 
+Use polar coordinates to evaluate the iterated integrals. 
+ 
+- $ \int _0^1\int _x^{\sqrt{x}}\left(x^2+y^2\right)^{3/2} dy dx$
+- $ \int _0^2\int _0^{\sqrt{2x-x^2}}\frac{x-y}{x^2+y^2} dy dx.$
+  
+::: 
+
+::: {#exr- } 
+Evaluate the following iterated integrals by converting to polar coordinates. 
+ 
+- $\int _0^3\int _0^{\sqrt{9-x^2}}x dy dx$
+- $ \int _0^2\int _0^{\sqrt{4-y^2}}e^{x^2+y^2} dx dy$
+- $ \int _0^3\int _0^{\sqrt{9-x^2}}x dy dx$
+- $\int _{-3}^3\int _{-\sqrt{9-x^2}}^{\sqrt{9-x^2}}\ln \left(x^2+y^2+9\right) dy dx$
+- $\int _0^2\int _y^{\sqrt{8-y^2}}\frac{1}{\sqrt{1+x^2+y^2}}dx dy$
+- $\int _0^3\int_0^{\sqrt{9-x^2}}\cos \left(x^2+y^2\right) dy dx$
+- $\int _0^4\int _0^{\sqrt{4y-y^2}}\frac{1}{\sqrt{x^2+y^2}} dx dy$
+  
+::: 
+
+::: {#exr- } 
+Find the volume of the solid region common to the cylinder $x^2+y^2=2$ and the ellipsoid $3x^2+3y^2+z^2=7.$
+::: 
+
+::: {#exr- } 
+Find the volume of the ice cream cone bounded by the hemisphere $z=\sqrt{8-x^2-y^2}$ and the cone $z=\sqrt{x^2+y^2}.$ 
+::: 
+
+::: {#exr- } 
+Find the volume of the solid region bounded above by the cone $z=x^2+y^2,$ below by the plane $z=0,$ and on both sides by the cylinder $x^2+y^2=y.$  
+::: 
+
+::: {#exr- } 
+Find the volume of the given solid region common to the cylinder $x^2+y^2=2$ and the ellipsoid $3x^2+3y^2+z^2=7.$ 
+::: 
+
+::: {#exr- } 
+Find the volume of the given solid region bounded above by the cone $z=x^2+y^2,$ below by the plane $z=0,$ and on both sides by the cylinder $x^2+y^2=y.$ 
+::: 
+
+::: {#exr- } 
+For a constant $a$ where $0\leq a\leq R,$ the plane $z=R-a$ cuts off a $\texttt{"}$cap$\texttt{"}$ from the hemisphere $z=\sqrt{R^2-x^2-y^2}.$ Use a double integral in polar coordinates to find the volume of the cap. For what values of $a$ is the volume of the cap half the volume of the hemisphere?
+::: 
+
+
+

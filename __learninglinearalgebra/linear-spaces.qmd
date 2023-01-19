@@ -1,0 +1,76 @@
+---
+pagetitle: "Linear Spaces - Learning Linear Algebra"
+---
+# Linear Spaces
+
+
+In mathematics, a linear space is a vector space over the real numbers or complex numbers in which every vector has a unique linear combination of basis vectors that satisfies certain properties. Linear spaces are very important in mathematics and physics because many physical problems can be reduced to problems about linear spaces. In this book, we will give a complete introduction to linear spaces.
+
+##  What are (vector spaces) linear spaces?
+
+Linear spaces, also called vector spaces, are mathematical structures that allow the addition of vectors and the multiplication of vectors by scalars. Linear spaces contain a set of vectors, called the basis, which spans the space. The dimension of a linear space is the number of vectors in the basis. Linear spaces are important in physics because they allow physicists to model physical phenomena such as electromagnetism and gravity.
+
+Linear spaces also have applications in engineering and computer science. In engineering, linear spaces are used to design structural elements such as bridges and buildings. In computer science, linear spaces are used to represent data points in multidimensional space.
+
+##  Properties of a linear space
+
+A linear space has the following properties:
+
+1. Vector addition is commutative: For any two vectors $u$ and $v$ in the linear space, we have $u + v = v + u$.
+2. Vector addition is associative: For any three vectors $u, v,$ and $w$ in the linear space, we have $(u + v) + w = u + (v + w).$
+3. There is a zero vector: There is a vector $0$ in the linear space such that for any vector $u$ in the linear space, we have $0 + u = u.$
+4. Every vector has an additive inverse: For any vector $u$ in the linear space, there is a vector $-u$ such that $u + (-u) = 0.$
+5. Multiplication by a scalar is left distributive: For any scalar $c$ and any two vectors $u$ and $v$ in the linear space, we have $c(u + v) = cu + cv.$
+6. Multiplication by a scalar is right distributive: For any scalars $a$ and $b$ and any vector $u$ in the linear space, we have $(a+b) u = au + bu.$
+7. Multiplication by a scalar is associative: For any three scalars $c, d, and e,$ and any vector $u$ in the linear space, we have $(cd)e u = c(de)u.$
+8. There is a multiplicative identity: There is a scalar $1$ such that for any vector $u$ in the linear space, we have $1 u = u.$
+
+
+##  Bases and dimensions
+
+A basis for a linear space is a set of vectors that spans the space and is linearly independent. A set of vectors is linearly independent if no vector in the set can be written as a linear combination of the other vectors. The dimension of a linear space is the number of vectors in any basis for the space.
+
+For example, consider the set of all real numbers. This set has infinite dimensions because it takes an infinite number of real numbers to describe any element in the set. On the other hand, the set of all two-dimensional vectors has dimension two because any two-dimensional vector can be written as a linear combination of the vectors (1,0) and (0,1).
+
+The dimension of a linear space is also the number of degrees of freedom of the space. For example, a point in three-dimensional space has three degrees of freedom because it can be described by three coordinates. A point in four-dimensional space has four degrees of freedom because it can be described by four coordinates.
+
+The dimension of a linear space is also the number of independent equations that are needed to describe the space. For example, consider the set of all real numbers. This set can be described by the equation $x + 0 = x$. Since this equation has only one unknown $(x)$, it is said to have dimension one.
+
+The dimension of a linear space is also the number of vectors in any basis for the space. So, in the previous example, the set of all real numbers has dimension one because any basis for this space must have only one vector.
+
+The dimension of a linear space is also the number of dimensions in which the space can be embedded. For example, consider the set of all two-dimensional vectors. This space can be embedded in three-dimensional space by adding a third coordinate that is always zero. So, the dimension of the set of all two-dimensional vectors is three.
+
+##  Introduction to Linear Maps
+
+A linear map is a function that preserves the structure of a linear space. In other words, a linear map is a function that takes vectors in one linear space and maps them to vectors in another linear space such that the following properties are satisfied:
+
+1. The map is commutative: For any two vectors $u$ and $v$ in the first linear space, we have $f(u) + f(v) = f(v) + f(u).$
+2. The map is associative: For any three vectors $u, v,$ and $w$ in the first linear space, we have $f((u + v) + w) = (f(u) + f(v)) + f(w).$
+3. The map is distributive: For any scalar $c$ and any two vectors $u$ and $v$ in the first linear space, we have $f(cu + cv) = cf(u) + cf(v).$
+4. The map is additive: For any two vectors $u and $v in the first linear space, we have $f(u + v) = f(u) + f(v).$
+5. The map is homogeneous: For any scalar $c$ and any vector $u$ in the first linear space, we have $f(cu) = cf(u).$
+
+A linear map is also called a linear transformation or a linear operator if the function maps into itself. The set of all linear maps from one linear space to another is itself a linear space. This space is called the space of linear maps from the first space to the second space.
+
+In this book, we'll introduce the concept of linear maps and explore some of their properties. We'll also discuss some of the ways in which they can be used.
+
+##  Coordinates and the Matrix of a Linear Map
+
+Linear spaces are vector spaces with a basis. This means that every element in the space can be written as a linear combination of the elements in the basis. The coordinates of an element are the coefficients of this linear combination.
+
+In other words, they tell us how much of each element in the basis we need to add together to get to our desired element. For example, consider the vector $v=(2,3,5)$. We can write this vector as a linear combination of the vectors $e_1=(1,0,0)$, $e_2=(0,1,0)$, and $e_3=(0,0,1)$ like so: $v=2e_1+3e_2+5e_3$. Therefore, the coordinates of $v$ with respect to this basis are $(2,3,5).$
+
+Linear maps take vector spaces and transform them into (perhaps) new vector spaces. The matrix of a linear map is a way of representation that shows how the map transforms each basis vector.
+
+The matrix of a linear map is a way of representing this transformation. It is a square array of numbers that define how the coordinates of one space are transformed into the coordinates of another space. By understanding how linear maps work, we can better understand the relationships between objects in space.
+
+For example, let's say we have the linear map $f(x)=Ax$ where $A$ is the matrix $[[1,-2],[3,4]]$. This map takes vectors in $\mathbb{R}^2$ and transforms them into vectors in $\mathbb{R}^2$. The matrix $A$ tells us how $f(x)$ does this transformation. It takes the first basis vector $(1,0)$ and transforms it into $(-2,3)$, which is ($-2$ times the first basis vector plus 3 times the second basis vector). It does the same thing to the second basis vector $(0,1)$, transforming it into $(4,-1)$. So now we know that $f(x)=(-2,3)x+(4,-1)y$ for all $x$ and $y$ in $\mathbb{R}^2$.
+
+We can use matrices to represent any linear map, no matter how complicated. This makes them a very powerful tool for mathematical analysis.
+
+##  Conclusion
+
+In this book, you'll learn about the concept of linear spaces and linear maps. We've discussed how these maps can be represented by matrices, and we've seen how they can be used to understand relationships between objects in space.
+
+This is just the beginning of our exploration into the world of linear algebra. In future books, we'll delve deeper into the properties of linear maps and matrices. We'll also see how they can be used in a variety of applications.
+

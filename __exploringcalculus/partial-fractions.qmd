@@ -1,0 +1,326 @@
+---
+pagetitle: "Partial Fractions - Exploring Calculus"
+---
+# Partial Fractions
+
+The decomposition of a rational function into a sum of simpler rational functions is an important integration technique, known as the method of partial fractions. We illustrate this method using several examples. We concentrate on linear and quadratic factors.
+
+## The Method of Partial Fractions
+
+We now concentrate on integrals of the form 
+$$
+\label{frac}
+\int \frac{P(x)}{Q(x)} \, dx
+$$
+where $P(x)$ and $Q(x)$ are polynomial functions.
+In the case when $Q(x)$ is a constant, then the integration is accomplished using the power rule form before.  
+In the case when the degree of $P(x)$ is larger than the degree of $Q(x)$ we can use long division. 
+For example, consider the integral 
+$$
+\int \frac{x^2}{x+1}\, dx.
+$$
+By long division, we have 
+$$  
+\frac{x^2}{x+1} = x-1 + \frac{1}{x+1}
+$$
+Using the power rule and the natural logarithmic function we can easily integrate, 
+$$
+\label{intfrac}
+\int \frac{x^2}{x+1}\, dx = \frac{1}{2} x-x +\ln |x+1| +C
+$$
+where $C$ is an arbitrary constant. 
+The method of partial fractions assumes that the fraction in the integrand is always irreducible, meaning the degree of the numerator is less than the degree of the denominator. 
+
+The method of partial fractions takes advantages of the fact that certain fractions are easy to integrate using the logarithmic function. 
+For example, in \eqref{intfrac}, the integral 
+$$
+\int \frac{1}{x+1}\, dx
+$$
+is immediate. 
+So our goal is to be able to decomposition a complex fraction into simpler fractions which can be integrated easier. 
+For example, notice that 
+$$
+\frac{3x}{x^2+2x-8} = \frac{1}{x-2} +\frac{2}{x+4}.
+$$
+We ask, which is easier to integrate: the left or the right hand side? 
+
+To begin the process of partial fractions we factor $Q(x)$ into factors of the form 
+$$
+(ax+b)^n \qquad \text{and} \qquad  (ax^2 +bx+c)^n
+$$
+where $ax^2+bx+c$ are irreducible. 
+We then apply algebraic techniques to solve for the missing coefficients that decomposition $P(x)/Q(x)$ into its partial fractions.  
+
+
+## Linear Factors
+
+::: {#thm- } 
+Suppose that $f(x) = P(x)/Q(x)$, where $P(x)$ and $Q$ are polynomials with no common factors and with the degree of $P$ less than the degree of $Q$. 
+If $Q$ is the product of simple linear factors, then for each factor of the form $(ax+b)^n$, the partial fraction decomposition is the following sum of $n$ partial fractions: 
+\begin{equation}
+\frac{P(x)}{Q(x)}
+= \frac{A_1}{ax+b} + \frac{A_2 }{(ax+b)^2}
++ \cdots + \frac{A_n }{(ax+b)^n}
+\end{equation}
+where $A_i$, for $i=1, 2, \ldots, n$ are constants to be determined. 
+::: 
+
+::: {#exm- } 
+Evaluate $\ds \int \frac{1}{x(x-4)}\, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+$$
+\frac{1}{x(x-4)} 
+= \frac{A}{x} + \frac{B}{x-4} 
+= \frac{(A+B) x - 4A}{x(x-4)}.
+$$
+This yields $A=-1/4$ and $B=1/4$, so we have
+\begin{align*}
+\int \frac{1}{x(x-4)}\, dx & 
+= -\frac{1}{4} \int \frac{1}{x}\, dx + \frac{1}{4}\int \frac{1}{x-4} \, dx \\
+& = -\frac{1}{4}\ln |x| +\frac{1}{4}\ln |x-4| +C 
+\end{align*}
+where $C$ is an arbitrary constant
+::: 
+
+
+::: {#exm- } 
+Evaluate $\ds \int \frac{x^2+2x+8}{x^3-4x}\, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{x^2+2x+8}{x^3-4x}
+& = \frac{A}{x} + \frac{B}{x+2} + \frac{C}{x-2} \\
+& = \frac{A(x^2-4)+B(x^2-2x)+C(x^2+2x)}{x(x+2)(x-2)}
+\end{align*}
+This yields $A=-2$, $B=1$ and $C=2$, so we have
+\begin{align*}
+\int \frac{x^2+2x+8}{x^3-4x}\, dx & 
+= -2 \int \frac{1}{x}\, dx + \int \frac{1}{x+2}\, dx +2 \frac{1}{x-2} \, dx \\
+& = -2\ln |x|+\ln |x+2|+2\ln |x-2| +C
+\end{align*}
+where $C$ is an arbitrary constant
+::: 
+
+::: {#exm- } 
+Evaluate $\ds \int_2^4 \frac{3x-5}{(x-1)^2}\, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{3x-5}{(x-1)^2} 
+= \frac{A}{x-1} + \frac{B}{(x-1)^2} 
+= \frac{A x +(B-A)}{(x-1)^2}
+\end{align*}
+This yields $A=3$ and $B=-2$, so we have
+\begin{align*}
+\int_2^4 \frac{3x-5}{(x-1)^2}\, dx 
+& = \int_2^4 \left[\frac{3}{x-1}-\frac{2}{(x-1)^2}\right]\, dx \\
+& = \left.\left(3\ln |x-1| + \frac{2}{x-1}\right)\right|_2^4 = 3 \ln 3 -\frac{4}{3}
+\end{align*}
+as desired.
+::: 
+
+
+::: {#exm- } 
+Evaluate $\ds \int \frac{x^2+10x -36}{x(x-3)^2}\, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{x^2+10x -36}{x(x-3)^2}
+& = \frac{A}{x} + \frac{B}{x-3} +\frac{C}{(x-3)^2} \\
+& = \frac{(A+B)x^2 -(6A+3B-C)x +9A}{x(x-3)^2}
+\end{align*}
+This yields $A=-4$, $B=5$ and $C=1$, so we have
+\begin{align*}
+\int \frac{x^2+10x -36}{x(x-3)^2}\, dx 
+& = \int_1^2 \left[\frac{-4}{x} +\frac{5}{x-3} +\frac{1}{(x-3)^2} \right] \\
+& = \left.\left(-4\ln |x| + \ln |x-3| -\frac{1}{x-3}\right)\right|_1^2
+= \frac{1}{2}-9\ln 2
+\end{align*}
+as desired. 
+::: 
+
+
+
+## Quadratic Factors
+
+
+::: {#thm- } 
+Suppose that $f(x) = P(x)/Q(x)$, where $P(x)$ and $Q$ are polynomials with no common factors and with the degree of $P$ less than the degree of $Q$. 
+If $Q$ is the product of irreducible quadratic factors, then for each factor of the form $(ax^2+bx+c)^n$, the partial fraction decomposition is the following sum of $n$ partial fractions: 
+\begin{equation}
+\frac{A_1 x +B_1}{ax^2+bx+c} + \frac{A_2 x +B_2}{(ax^2+bx+c)^2}
++ \cdots + \frac{A_n x +B_n}{(ax^2+bx+c)^n}
+\end{equation}
+where $A_i$, $B_i$ for $i=1, 2, \ldots, n$ are constants to be determined. 
+::: 
+
+
+::: {#exm- } 
+Evaluate $\ds \int \frac{8(x^2+4)}{x(x^2+8)} \, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{8(x^2+4)}{x(x^2+8)} 
+& = \frac{Ax+B}{x^2+8} +\frac{C}{x}
+\end{align*}
+After equating coefficients, we obtain $A=4$, $B=0$ and $C=4$, so we have
+\begin{align*}
+\int \frac{8(x^2+4)}{x(x^2+8)} \, dx 
+& = \int \left( \frac{4x}{x^2+8} +\frac{4}{x} \right) \, dx 
+= \ln [(x^2+8)^2 x^4] +C
+\end{align*}
+as desired. 
+::: 
+
+
+::: {#exm- } 
+Evaluate $\ds \int \frac{20x}{(x-1)(x^2+4x+5)} \, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{20x}{(x-1)(x^2+4x+5)} 
+& = \frac{A}{x-1} +\frac{Bx+C}{x^2+4x+5}
+\end{align*}
+After equating coefficients, we obtain $A=2$, $B=-2$ and $C=10$, so we have
+\begin{align*}
+\int \frac{20x}{(x-1)(x^2+4x+5)} \, dx 
+& = \int \left( \frac{2}{x-1} +\frac{-2x+10}{x^2+4x+5} \right) \, dx \\
+& = \ln \left\vert\frac{(x-1)^2}{x^2+4x+5}\right\vert +14 \tan^{-1}(x+2) +C
+\end{align*}
+where $C$ is an arbitrary constant. 
+::: 
+
+
+::: {#exm- } 
+Evaluate $\ds \int \frac{2}{x(x^2+1)^2} \, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{2}{x(x^2+1)^2}
+& = \frac{A}{x} +\frac{Bx+C}{x^2+1} +\frac{Dx+E}{(x^2+1)^2}
+\end{align*}
+After equating coefficients, we obtain $A=2$, $B=-2$ and $C=0$, $D=-2$, and $E=0$ so we have
+\begin{align*}
+\int \frac{2}{x(x^2+1)^2} \, dx 
+& = \int \left( \frac{-2}{x} +\frac{-2x}{x^2+1} +\frac{-2x}{(x^2+1)^2} \right)\, dx \\
+& = 2\ln |x| -\ln (x^2+1) +\frac{1}{x^2+1} +C
+\end{align*}
+where $C$ is an arbitrary constant. 
+::: 
+
+
+::: {#exm- } 
+Evaluate $\ds \int \frac{3x^4+4x^3+16x^2+20x+9}{(x+2)(x^2+3)^2} \, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{3x^4+4x^3+16x^2+20x+9}{(x+2)(x^2+3)^2}
+& = \frac{A}{x+2} + \frac{Bx+C}{x^2+3} +\frac{Dx+E}{(x^2+3)^2}
+\end{align*}
+By equating coefficients, we obtain the linear system of equations
+$$
+\begin{array}{rl}
+A+B & = 3\\
+2B+C & = 4 \\
+6A+3B+2C+D & = 16 \\
+6B +3C +2D +E & = 20 \\
+9A+6C+2E & = 9. 
+\end{array}
+$$
+Using a computer algebra system we obtain $A=1$, $B=2$, $C=0$, $D=4$, and $E=0$ so we have
+\begin{align*}
+& \int \frac{3x^4+4x^3+16x^2+20x+9}{(x+2)(x^2+3)^2} \, dx \\
+& \quad = \int \frac{1}{x+2} + \frac{2x}{x^2+3} +\frac{4x}{(x^2+3)^2} \, dx \\
+& \quad = \ln |x+2| +\ln (x^2+3) - \frac{2}{x^2+3} +C
+\end{align*}
+where $C$ is an arbitrary constant. 
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Evaluate the following integrals.
+\begin{multicols}{2}
+ - $\ds \int\frac{1}{4x^2-9}\, dx$
+- $\ds \int \frac{x^2+12x+12}{x^3-4x}\, dx$
+- $\ds \int \frac{3x^2+x+4}{x^4+3x^2+2}\, dx$
+- $\ds \int \frac{2x^3-4x^2-15x+5}{x^2-2x-8}\, dx$
+- $\ds \int_0^1 \frac{2u+3}{u^2+4u+3}\, dx$
+- $\ds \int \frac{4x^2+2x-1}{x^3+x^2}\, dx$
+- $\ds \int_0^1 \frac{x}{x^2+4x+13}\,dx$
+- $\ds \int \frac{x^2+3x+2}{x(x^2+2x+2)}\, dx$
+- $\ds \int \frac{x^2+3x-4}{x^3-4x^2+4x}\, dx$
+- $\ds \int_2^3 \frac{x^3-2x+7}{x^2+x-2}\, dx$
+- $\ds \int \frac{x^2}{x^3-x^2+4x-4}\, dx$
+- $\ds \int \frac{1}{(y^2+1)(y^2+2)}\, dy$
+- $\ds \int \frac{x^2-1}{x^3+x}\, dx$
+- $\ds \int\frac{x^4+3x^2+1}{x^5+5x^3+5x}\,dx$
+- $\ds \int \frac{x^2}{x^4-2x^2-8}\, dx$
+- $\ds \int \frac{x^4-3x^2-3x-2}{x^3-x^2-2x}\, dx$
+- $\ds \int \frac{x^2+5}{x^3-x^2+x-3}\, dx$
+- $\ds \int \frac{x^3}{x^3+1}\, dx$
+- $\ds \int \frac{x}{16x^4-1}\, dx$
+- $\ds \int_1^2 \frac{x^2+10x-36}{x(x-3)^2}\, dx$
+- $\ds \int \frac{x^2+6x+4}{x^4+8x^2+16}\, dx$
+- $\ds \int \frac{x^3+2x^3+3x-2}{(x^2+2x+2)^2}\, dx$
+- $\ds \int \frac{1}{(x+1)(x^2+2x+2)^2}\, dx$
+- $\ds \int \frac{x^3+1}{x(x^2+x+1)^2}\, dx$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Find the arc length of the curve $y=\ln x$ from $x=1$ to $x=2$. 
+::: 
+
+::: {#exr- } 
+Find hte area of the region bounded by the graphs of ${y=12/(x^2+5x+6)}$, $y=0$, $x=0$, and $x=1$. 
+::: 
+
+::: {#exr- } 
+Find the ares of the surface generated when the curve $y=\ln x$ is revolved about the $x$-axis. 
+::: 
+
+::: {#exr- } 
+Find the area of the region bounded by the curve ${y=x/(1+x)}$, the $x$-axis, and the line $x=4$. 
+::: 
+
+::: {#exr- } 
+Find the volume of the solid generated when the region enclosed by $x=y(1-y^2)^{1/4}$, $y=0$, $y=1$, and $x=0$ is revolved about the $y$-axis. 
+::: 
+
+::: {#exr- } 
+Find the volume of the solid obtained by revolving the region bounded by ${y=1/(x+1)}$, $y=0$, $x=0$, and $x=2$ about the $y$-axis. 
+::: 
+
+::: {#exr- } 
+Find the volume of the solid obtained by revolving the region bounded by ${y=1/(x+2)}$, $y=0$, $x=0$, and $x=3$ about the line $x=-1$.
+::: 
+
+::: {#exr- } 
+Consider the region bounded by the graphs of 
+$$
+y^2 = \frac{(2-x)^2}{(1+x)^2}
+$$
+on the interval $[0,1]$.
+Find the volume of the solid generated by revolving this region about the $x$-axis. 
+::: 
+
+

@@ -1,0 +1,188 @@
+---
+pagetitle: "Role of the Derivative - Exploring Calculus"
+---
+# Role of the Derivative
+
+## Average Rate of Change
+
+
+In general, suppose an object moves along a straight line according to an equation of motion $s=f(t),$ where $s$ is the \index{displacement} (\index{directed distance} **displacement} (\index{directed distance** ) of the object from the origin at time $t.$  
+The function $f$ that describes the motion is called the \index{position function} **position function**  of the object. 
+In the time interval from $t=a$ to $t=a+h$  the change in position is $f(a+h)-f(a)$ and the \index{average velocity} **average velocity**  over this time interval is 
+\[
+\frac{f(a+h)-f(a)}{h}
+\] 
+which is the same as the slope of the secant line through these two points.
+
+
+::: {#exm- } 
+If a billiard is dropped from a height of 500 feet, its height $s$  at time $t$  is given by the position function $s=-16t^2+500$  where $s$  is measured in feet and $t$  is measured in seconds. 
+Find the average velocity over the intervals $[2,2.5]$ and $[2,2.6]$.  
+::: 
+
+::: {.solution }
+For the interval $[2,2.5],$ the object falls from a height of $s(2)=-16(2)^2+500=436$  feet to a height of $s(2.5)=-16(2.5)^2+500=400.$  
+The average velocity is 
+\[
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.5)-s(2)}{2.5-2}=\frac{400-436}{2.5-2}=-72.
+\]
+For the interval $[2,2.6],$ the object falls from a height of $s(2)=436$  feet to a height of $s(2.6)=391.84.$  
+The average velocity is 
+\[
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.6)-s(2)}{2.6-2}=\frac{391.84-436}{2.6-2}=-73.6.
+\]
+Note that the average velocities are negative indicating that the object is moving downward.
+::: 
+
+## Instantaneous Rate of Change
+
+
+The difference quotient 
+\[
+\frac{\Delta  y}{\Delta  x}=\frac{f\left(x_2\right)-f\left(x_1\right)}{x_2-x_1}
+\]
+is the average rate of change of $y$  with respect to $x$  over the interval $\left[x_1,x_2\right]$ and can be interpreted as the slope of the secant line.
+Its limit as $\Delta x\to 0$  is the derivative at $x=x_1$ and is denoted by $f'\left(x_1\right).$  
+We interpret the limit of the average rate of change as the interval becomes smaller and smaller to be the instantaneous rate of change. 
+Often, different branches of science have specific interpretations of the derivative.
+
+
+As $\Delta  x\to 0$  the average rate of change approaches the \index{instantaneous rate for change} **instantaneous rate for change** ; that
+is, 
+\[
+\lim _{\Delta  x\to 0} \frac{\Delta  y}{\Delta  x} = f'(x)
+\] 
+and is also known as the \index{derivative} **derivative**  of $f$  at $x.$ 
+
+
+## Free-Falling Body
+
+
+Basically, \index{rectilinear motion} refers to the motion of an object that can be modeled along a straight line; and the so-called \index{falling body problems} **rectilinear motion} refers to the motion of an object that can be modeled along a straight line; and the so-called \index{falling body problems**  are a special type of rectilinear motion where the motion of an object is falling (or propelled) in a vertical direction. 
+Another type of rectilinear motion is the \index{free-falling body problem} **free-falling body problem** .
+
+
+The position of a free-falling body (neglect air resistance) under the influence of gravity can be represented by the function  
+\[
+s(t)=\frac{1}{2}g t^2+v_0t+s_0
+\]
+where $g$  is the acceleration due to gravity (on earth $g\approx -32 \text{ft}\left/s^2\right.$) and $s_0$  and $v_0$  are the initial height and velocity of the object (when $t=0$).
+
+
+::: {#exm- } 
+A ball is thrown vertically upward from the ground with an initial velocity of $160 \text{ ft/s}$. 
+\ 
+\item 
+When will it hit the ground?
+\item 
+With what velocity will the ball hit the ground?
+\item 
+When will the ball reach its maximum height and what is the maximum height?
+ 
+::: 
+
+::: {.solution }
+\ 
+\item 
+We can determine when the ball will hit the ground by solving 
+$$
+s(t)=\frac{1}{2}g t^2+v_0t+s_0=0
+$$ 
+for $t$. 
+Using $g=-32$ , $v_0=160$ , and $s_0=0$. 
+We find 
+$$
+s(t)=-16t^2+160 t=16t (-t+10)=0
+$$ 
+when $t=0$  and $t=10$. 
+Thus the ball will hit the ground 10 seconds after it is thrown upwards.
+\item 
+The velocity of the ball at time $t$  is given by the first derivative of $s$, namely 
+$$
+v(t)=s'(t)=g t+v_0.
+$$ 
+When $t=10$ we find, $v(10)=-32 (10)+160=-160$ and so the velocity of the ball is $-160 \text{ ft}/s$ when it hits the ground.
+\item 
+The ball reaches it's maximum height when the velocity is zero, thus we solve 
+$$
+v(t)= g t+v_0=-32 t+160=0
+$$ 
+yielding $t=2$. 
+Its position at $t=2$ is the maximum height which is $s(2)=16(2)(-2+10)=256$. 
+Therefore, 2 seconds after the ball is thrown, the ball reaches it's maximum height of 256 ft.
+ 
+::: 
+
+
+::: {#def- } 
+An object that moves along a straight line with \index{position} $s(t)$  has \index{velocity} $v(t)=\frac{ds}{dt}$  and \index{acceleration} **position} $s(t)$  has \index{velocity} $v(t)=\frac{ds}{dt}$  and \index{acceleration**  
+\[
+a(t)=\frac{dv}{dt}=\frac{d^2 s}{dt ^2}
+\] 
+when these derivatives exist. 
+The \index{speed} **speed**  of an object at time $t$  is $|v(t)|.$ 
+::: 
+
+
+::: {#exm- } 
+A particle moving along the $x$-axis has position 
+$$
+x(t)=2t^3+3t^2-36t+40
+$$ 
+after an elapsed time of $t$ seconds.  
+\ 
+- Find the velocity of the particle at time $t.$ 
+- Find the acceleration at time $t.$
+- What is the \index{total distance travelled} **total distance travelled**  by the particle during the first 3 seconds?
+ 
+::: 
+
+::: {.solution }
+The velocity is given by  $v(t)=x'(t)=6t^2+6 t-36.$  
+The acceleration is given by $a(t)=v'(t)=x''(t)=12 t+6.$  
+Since $v(t)=0$  when  
+\[
+6t^2+6t-36=6(t-2)(t+3)=0
+\] 
+so $t=2, -3$ but $-3$ is not on $[0,3]$. 
+Therefore, the distance covered is
+\[
+|x(2)-x(0)|+|x(3)-x(2)|=|-4-40|+|13-(-4)|=61.
+ \]
+::: 
+
+## Exercises
+
+::: {#exr- } 
+The number of gallons of water in a tank $t$  minutes after the tank has started to drain is $Q(t)=200(30-t)^2.$  How fast is the water running out at the end 19 min? What is the average rate at which the water flows out during the first 10 minutes?
+::: 
+
+::: {#exr- } 
+Suppose that the distance an aircraft travels along a runway before takeoff is given by $D=\frac{10}{9}t^2,$  where $D$  is measured in meters from the starting point an $t$  is measured in seconds from the time the brakes are released. The aircraft will become airborne when its speed reached 200 km/h. How long will it take to become airborne, and what distance will it travel to that time?
+::: 
+
+::: {#exr- } 
+Suppose that the dollar cost of producing $x$  washing machines is $c(x)=2000+100x-0.1x^2.$  (a) Find the average cost per machine of producing the first 100 washing machines. (b) Find the marginal cost when 100 washing machines are produced.  (c) Show that the marginal cost when 100 washing machines are produced is approximately the cost of producing one more washing machine after the first 100 have been made, by calculating the latter cost directly.
+::: 
+
+::: {#exr- } 
+Suppose the revenue from selling $x$  washing machines is  \[r(x)=20000\left(1-\frac{1}{x}\right)\] dollars.  (a) Find the marginal revenue when 100 machines are produced. (b) Use the function $r'(x)$  to estimate the increase in revenue that will result from increasing production from 100 machines a week to 101 machines a week.  (c) Find the limit of $r'(x)$  a $x\to \infty .$  How would you interpret this number?
+::: 
+
+::: {#exr- } 
+How fast does the area of a circle change with respect to its diameter? Its circumference?
+::: 
+
+::: {#exr- } 
+Given a position function $s(t)$  where $t$  represents time, define the displacement, average velocity, instantaneous velocity, speed, and acceleration of an object whose motion along a line is modeled by $s(t)$ .
+::: 
+
+::: {#exr- } 
+A particle moving along the x-axis has position $x(t)=2t^3+3t^2-36t+40$  after an elapsed time of t seconds. (a) Find the velocity of the particle at time $t$ . (b) Find the acceleration at time $t$ . (c) What is the total distance traveled by the particle during the first 3 seconds?
+::: 
+
+::: {#exr- } 
+At time $t\geq 0$ , the velocity of a body moving along the $s$ -axis is $v=t^2-4t+3$. (a) Find the body's acceleration each time the velocity is zero. (b) When is the body moving forward? Backward? (c) When is the body's velocity increasing? Decreasing?
+::: 
+
+

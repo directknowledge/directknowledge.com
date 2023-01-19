@@ -1,0 +1,27 @@
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: "Chapter Contents"
+    toc-depth: 3
+    toc-location: right
+    smooth-scroll: true
+    collapse-level: 1
+    anchor-sections: true
+    link-external-icon: false
+    link-external-newwindow: true
+    title-block-banner: false
+    title-block-style: none
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"	
+    include-in-header: 
+      - ../_html/head.html
+    include-after-body: 
+      - ../_html/organization.html
+      - ../_html/website.html
+      - ../_html/mathjax.html
+      - ../_html/analytics.html
+      - ../_html/mathhead.html
+

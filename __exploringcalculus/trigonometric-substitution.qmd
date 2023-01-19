@@ -1,0 +1,301 @@
+---
+pagetitle: "Trigonometric Substitution - Exploring Calculus"
+---
+# Trigonometric Substitution
+
+
+Trigonometric substitution refers to an integration technique that uses trigonometric functions (mostly tangent, sine, and secant) to reduce an integrand to another expression so that one may utilize another known technique of integration. Here we study these three main forms and also give examples where we can use complete the square to reduce to one of these three methods.
+
+
+Trigonometric substitution are intended to transform integrals containing the expressions  
+\begin{equation}
+a^2+x^2
+\qquad
+a^2-x^2
+\qquad
+x^2-a^2
+\end{equation}
+into trigonometric integrals that can be evaluated using previously discussed methods. 
+
+## Integrals Involving $a^2+x^2$
+
+Here we intend to integrate functions containing the expression $a^2+x^2$ using a tangent substitution.  
+With $x=a \tan\theta$, we have 
+\begin{equation}
+a^2+x^2 =a^2 + a^2\tan^2 \theta= a^2(1+\tan^2 \theta ) =a^2 \sec^2 \theta.
+\end{equation}
+This indicates that an integral containing the expression $a^2+x^2$ may be evaluated by using an integral containing powers of secant. 
+We would like the substitution to be reversible so that we can change back to the original variable when finished. 
+This requires us to know that $x=a \tan \theta$ is solvable for $\theta$. 
+Therefore we require 
+\begin{equation}
+\theta = \tan^{-1}\left(\frac{x}{a}\right)
+\qquad
+\text{with}
+\qquad
+-\frac{\pi}{2} < \theta < \frac{\pi}{2}.
+\end{equation}
+
+::: {#exm- } 
+Find $\ds \int \frac{1}{\sqrt{4+x^2}}\, dx$. 
+::: 
+
+::: {.solution }
+Let $x=2 \tan \theta$ so that $dx = 2\sec^2 \theta \, d\theta$ and 
+\begin{align*}
+\int \frac{1}{\sqrt{4+x^2}}\, dx  
+& =\int \frac{2\sec^2 \theta}{2\sec\theta}\, d\theta
+= \int \sec\theta \, d\theta \\
+& = \ln |\sec \theta + \tan\theta| +C
+= \ln \left|\frac{x+\sqrt{a+x^2}}{2}\right| +C
+\end{align*}
+where $C$ is an arbitrary constant.
+::: 
+
+::: {#exm- } 
+Find $\ds\int \frac{1}{(1+x^2)^2}\, dx$. 
+::: 
+
+::: {.solution }
+Let $x= \tan \theta$ so that $dx = \sec^2 \theta\, d\theta$ and 
+\begin{align*}
+\int \frac{1}{(1+x^2)^2}\, dx 
+& = \int \frac{\sec^2 \theta}{\sec^4 \theta} \, d\theta
+= \int \cos^2 \theta d\theta
+= \frac{\theta}{2} +\frac{\sin 2\theta}{4} +C
+\end{align*}
+where $C$ is an arbitrary constant.
+Using the reference triangle
+\begin{figure}[H]
+\centering
+\includegraphics[width=130pt]{_includes/trigonometric-substitution-1.pdf}
+\end{figure}
+The integration can be completed:
+\begin{align*}
+\int \frac{1}{(1+x^2)^2}\, dx 
+= \frac{\theta}{2} +\frac{\sin 2\theta}{4} +C 
+= \frac{1}{2}\tan^{-1} x + \frac{x}{2(1+x^2)}+C
+\end{align*}
+where $\sin2\theta$ is found using the triangle. 
+::: 
+
+
+
+
+
+## Integrals Involving $a^2-x^2$
+
+Now we intend to integrate functions containing the expression $a^2-x^2$ using a sine substitution.  
+With $x=a \sin\theta$, we have 
+\begin{equation}
+a^2-x^2 
+=a^2 - a^2\sin^2 \theta
+= a^2(1-\sin^2 \theta ) 
+=a^2 \cos^2 \theta.
+\end{equation}
+This indicates that an integral containing the expression $a^2+x^2$ may be evaluated by using an integral containing powers of cosine. 
+We would like the substitution to be reversible so that we can change back to the original variable when finished. 
+This requires us to know that $x=a \sin \theta$ is solvable for $\theta$. 
+Therefore we require 
+\begin{equation}
+\theta = \sin^{-1}\left(\frac{x}{a}\right)
+\qquad
+\text{with}
+\qquad
+-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}.
+\end{equation}
+
+::: {#exm- } 
+Find $\ds\int \frac{1}{x^2 \sqrt{4-x^2}}\, dx$.
+::: 
+
+::: {.solution }
+Let $x=2\sin \theta$ so that $dx= 2\cos \theta\, d\theta$.
+This yields
+\begin{align*}
+\int \frac{1}{x^2 \sqrt{4-x^2}}\, dx 
+& = \int \frac{2\cos \theta }{(2\sin \theta)^2 \sqrt{4-4\sin^2 \theta}}\, d\theta \\
+& = \frac{1}{4} \int \frac{1}{\sin^2 \theta}\, d\theta 
+= \frac{1}{4} \int \csc^2 \theta \, d\theta = -\frac{1}{4}\cot \theta +C
+\end{align*}
+Using the reference triangle
+\begin{figure}[H]
+\centering
+\includegraphics[width=130pt]{_includes/trigonometric-substitution-2.pdf}
+\end{figure}
+we find that $\cot \theta = \frac{\sqrt{4-x^2}}{x}$.
+The integration can be completed:
+\begin{align*}
+\int \frac{1}{x^2 \sqrt{4-x^2}}\, dx
+& = -\frac{1}{4}\frac{\sqrt{4-x^2}}{x} +C
+\end{align*}
+where $C$ is an arbitrary constant.  
+::: 
+
+
+::: {#exm- } 
+Find $\ds \int \frac{\sqrt{9-x^2}}{x^2} \, dx$.
+::: 
+
+::: {.solution }
+Let $x=3\sin \theta$ so that $dx= 3\cos \theta\, d\theta$.
+This yields
+\begin{align*}
+\int \frac{\sqrt{9-x^2}}{x^2} \, dx
+& = \int \frac{3\cos \theta}{9\sin^2 \theta} (3\cos \theta)\, d\theta\\
+& = \int \cot^2 \theta \, d\theta 
+= \int (\csc^2 \theta-1)\, d\theta
+= -\cot \theta -\theta +C
+\end{align*}
+Using the reference triangle
+\begin{figure}[H]
+\centering
+\includegraphics[width=130pt]{_includes/trigonometric-substitution-3.pdf}
+\end{figure}
+we find that $\cot \theta = \frac{\sqrt{9-x^2}}{x}$.
+The integration can be completed:
+\begin{align*}
+\int \frac{\sqrt{9-x^2}}{x^2} \, dx
+& = - \frac{\sqrt{9-x^2}}{x} - \sin^{_1}\left(\frac{x}{3}\right) +C
+\end{align*}
+where $C$ is an arbitrary constant.  
+::: 
+
+
+
+
+
+
+
+
+
+
+## Integrals Involving $x^2-a^2$
+
+Next, we intend to integrate functions containing the expression $x^2-a^2$ using a secant substitution.  
+With $x=a \sec\theta$, we have 
+\begin{equation}
+x^2-a^2 
+= a^2 \sec^2 a -a^2 
+= a^2(\sec^2\theta-1)
+= a^2\tan^2 \theta
+\end{equation}
+This indicates that an integral containing the expression $x^2-a^2$ may be evaluated by using an integral containing powers of tangent. 
+We would like the substitution to be reversible so that we can change back to the original variable when finished. 
+This requires us to know that $x=a \sec \theta$ is solvable for $\theta$. 
+Therefore we require 
+\begin{equation}
+\theta = \sec^{-1}\left(\frac{x}{a}\right)
+\qquad
+\text{with}
+\qquad
+\begin{cases}
+0\leq \theta < \pi/2 & \text{if $x/a \geq 1$} \\
+\pi/2 < \theta \leq \pi & \text{if $x/a \leq -1$.}
+\end{cases}
+\end{equation}
+
+
+::: {#exm- } 
+Find $\ds\int_{\sqrt{3}}^2 \frac{\sqrt{x^2 -3}}{x}\, dx$.
+::: 
+
+::: {.solution }
+Let $x=\sqrt{3}\sec \theta$ so that $dx=\sqrt{3}\sec\theta \tan \theta \, d\theta$. 
+This yields
+\begin{align*}
+\int_{\sqrt{3}}^2 \frac{\sqrt{x^2 -3}}{x}\, dx 
+& = \int_0^{\pi/6} \frac{(\sqrt{3}\tan \theta)(\sqrt{3}\sec\theta \tan \theta)}{\sqrt{3}\sec \theta}\, d\theta \\
+& = \int_0^{\pi/6} \sqrt{3}\tan^2 \theta \, d\theta \\
+& = \sqrt{3} \int_0^{\pi/6} (\sec^2 \theta -1)  \, d\theta
+= 1-\frac{\sqrt{3}\pi}{6}
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Find $\ds \int_1^4\frac{\sqrt{x^2+4x-5}}{x+2}\, dx$.
+::: 
+
+::: {.solution }
+Noting that $x^2+4x-5 = (x+2)^2-9)$ we let $u=x+2$. 
+Then $dx= du$ and we have 
+$$
+\int_1^4\frac{\sqrt{x^2+4x-5}}{x+2}\, dx 
+= \int_3^6 \frac{\sqrt{u^2-9}}{u}\, du.
+$$
+Let $u= 3\sec \theta$ (where $0\leq \theta < \pi/2$), so that $du=3\sec \theta \tan \theta \, d\theta$. 
+This yields
+\begin{align*}
+\int_1^4\frac{\sqrt{x^2+4x-5}}{x+2}\, dx
+& = \int_3^6 \frac{\sqrt{u^2-9}}{u}\, du \\
+&  = \int_0^{\pi/3} \frac{3\tan\theta}{3\sec \theta} (3\sec\theta \tan \theta\, d\theta) \\
+& = 3\int_0^{\pi/3} (\sec^2 \theta-1)\, d\theta \\
+& = 3\sqrt{3}-\pi.
+\end{align*}
+as desired.
+::: 
+
+
+## Exercises
+
+::: {#exr- } 
+Evaluate the following integrals.
+\begin{multicols}{2}
+ - $\ds\int \sqrt{1-9t^2 }\, dt$
+- $\ds\int \frac{1}{x^3 \sqrt{x^2-4}}\, dx$
+- $\ds\int \frac{5}{\sqrt{25x^2-9}}\, dx$, $x> 3/5$
+- $\ds\int x^3 \sqrt{4-x^2}\, dx$
+- $\ds\int \sqrt{25-t^2} \, dt$
+- $\ds\int (4-x^2)^{3/2}\, dx$
+- $\ds\int \frac{\sqrt{y^2-25}}{y^3}\, dy$, $y>5$
+- $\ds\int e^x \sqrt{4-e^{2x}}\, dx$
+- $\ds\int \frac{1}{(1+x^2)^{3/2}}\, dx$
+- $\ds\int \frac{1}{\sqrt{16+4x^2}}\, dx$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Evaluate the following integrals.
+\begin{multicols}{2}
+ - $\ds\int_1^2 \frac{\sqrt{x^2-1}}{x}\, dx$
+- $\ds\int_4^6 \frac{x^2}{\sqrt{x^2-9}}\, dx$
+- $\ds\int_0^1 x \sqrt{x^2+4}\, dx$
+- $\ds\int_0^{\sqrt{3}/2} \frac{1}{(1-t^2)^{5/2}}\, dt$
+- $\ds\int_0^a x^2 \sqrt{a^2-x^2}\, dx$
+- $\ds\int_0^{3/5} \sqrt{9-25x^2}\, dx$
+- $\ds\int_{\sqrt{2}/3}^{2/3} \frac{1}{x^5 \sqrt{9x^2-1}}\, dx$
+- $\ds\int_4^8 \frac{\sqrt{x^2-16}}{x^2}\, dx$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Find the area of the region bounded by the hyperbola ${9x^2-4y^2=36}$ and the line $x=3$. 
+::: 
+
+::: {#exr- } 
+Find the arc length of the curve over $y=\frac{1}{2} x^2$ on the interval $[0,4]$.
+::: 
+
+::: {#exr- } 
+Evaluate the following integrals.
+\begin{multicols}{2}
+ - $\ds\int \frac{1}{2u^2-12u+36}\, dx$
+- $\ds\int \frac{1}{\sqrt{3+2x-x^2}}\, dx$
+- $\ds\int \frac{x^2-2x+1}{\sqrt{x^2-2x+10}}\, dx$
+- $\ds\int \frac{e^x}{\sqrt{1+e^x+e^{2x}}}\, dx$
+- $\ds\int_1^2 \frac{1}{\sqrt{4x-x^2}}\, dx$
+- $\ds\int_0^4 \sqrt{x(4-x)}\, dx$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Verify the special integration formulas ($a > 0$).
+ - $\ds\int \sqrt{a^2 -u^2}\, du =\frac{1}{2} \left( a^2 \arcsin \frac{u}{a} + u \sqrt{a^2-u^2}\right) +C$
+- $\ds\int \sqrt{u^2 -a^2}\, du =\frac{1}{2} \left( u \sqrt{u^2-a^2} -a^2 \ln | u+\sqrt{u^2-a^2} |\right) +C$, $u > a$
+- $\ds\int \sqrt{u^2 +a^2}\, du =\frac{1}{2} \left( u \sqrt{u^2+a^2} +a^2 \ln |u+\sqrt{u^2+a^2}|\right) +C $.
+ ::: 
+

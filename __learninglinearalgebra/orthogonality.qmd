@@ -1,0 +1,59 @@
+---
+pagetitle: "Orthogonality - Learning Linear Algebra"
+---
+# Orthogonality
+
+
+Write a content brief for the book ``Orthogonality (A Lively Introduction with Proofs)." The book covers orthonormal bases, orthogonal projections, Gram-Schmidt process, QR factorization, orthogonal transformations, and orthogonal matrices. It also includes inner-products.
+
+Orthogonality is a vital topic in linear algebra and mathematics as a whole. It is often studied in the context of inner product spaces, where it plays a key role in many important results. In this book, we will give a lively introduction to orthogonality, with an emphasis on proofs and intuition. We will also discuss inner-products and their relationship to orthogonality. This book is aimed at students who are studying linear algebra or related topics. It will be a valuable resource for those who want to deepen their understanding of orthogonality and its many applications.
+
+##  Orthonormal Bases and Orthogonal Projections
+
+Orthonormal bases and orthogonal projections are two of the most important concepts in linear algebra. An orthonormal basis is a set of vectors that are all perpendicular to each other, and an orthogonal projection is a way of computing the projection of a vector onto an orthonormal basis.
+
+In mathematics, an orthonormal basis is a special type of basis for a vector space. It consists of mutually orthogonal unit vectors that are also normalized, meaning that they have a length of 1. An orthogonal projection is a transformation of a vector onto another vector that is perpendicular to it. In other words, it is the process of projecting one vector onto another vector that is at right angles to it. Orthonormal bases and orthogonal projections are important in many areas of mathematics, including linear algebra and geometry.
+
+Together, these concepts allow us to decompose any vector into a series of simple, linearly independent components. This can be helpful for many purposes, including data compression, error correction, and signal processing. In this book, we will discuss these concepts in more detail and show how they can be used in practice.
+
+Orthonormal bases and orthogonal projections are closely related concepts, and understanding both can be helpful in a variety of contexts.
+
+##  Gram-Schmidt Process and QR Factorization
+
+The Gram-Schmidt process is a method for orthogonalizing a set of vectors. It is commonly used in numerical analysis and in particular, in the QR factorization of a matrix.
+
+The Gram-Schmidt process begins with a set of linearly independent vectors $u_1,u_2,...,u_n$ and produces a set of orthonormal vectors $v_1,v_2,...,v_n$ that span the same space as the original vectors.
+
+The $v$'s are constructed iteratively as follows: For $k = 1,2,...,n$, let $v_k$ be the vector $u_k - \text{proj}(v_1) - \text{proj}(v_2) - ... - \text{proj}(v_k)-1$ where $\text{proj}(v_j)$ is the projection of $u_k$ onto $v_j$.
+
+Once the v's have been computed, they can be used to obtain the QR factorization of any matrix $A$ as follows: $A = QR$ where $Q$ is an $n×n$ matrix whose columns are the $v$'s and $R$ is an upper triangular matrix.
+
+The Gram-Schmidt process is sometimes also called the QR algorithm. The name comes from its use in computing the QR factorization of a matrix. However, it should be noted that the Gram-Schmidt process can be used to orthogonalize any set of vectors, not just those that arise from a matrix.
+
+In general, the Gram-Schmidt process is a reliable QR factorization method when used with care.
+
+##  Orthogonal Transformations and Orthogonal Matrices
+
+In mathematics, an orthogonal transformation is a linear transformation that preserves the inner product of vectors. In other words, it preserves angles between vectors. If a transformation is both orthogonal and preserves length, then it is also an isometry. Orthogonal transformations are also known as rigid motions or rotations.
+
+An orthogonal matrix is a square matrix whose columns and rows are orthogonal unit vectors. That is, the transpose of the matrix is equal to its inverse. Every orthogonal matrix has determinant +1 or $-1$, since the determinant of a matrix is equal to the product of its eigenvalues.
+
+Orthogonal transformations arise naturally in many areas of mathematics and physics. For example, they are used to define rotations in space, and they can be used to diagonalize Hermitian matrices. In addition, they are used in many numerical algorithms, such as the QR factorization algorithm for solving linear least squares problems.
+
+Orthogonal matrices have many interesting properties, including the fact that their eigenvectors are always orthogonal to one another. This makes them particularly useful for many applications involving signal processing and image compression.
+
+##  Inner-Products
+
+An inner-product is a mathematical operation that takes two vectors and produces a scalar result. The most common type of inner-product is the dot-product, which simply multiplies the corresponding components of the two vectors and sums the results.
+
+The dot-product can be used to calculate the magnitude of a vector, as well as the angle between two vectors. More generally, an inner-product can be any symmetric bilinear map from a vector space to its underlying field.
+
+Inner-products are often used in machine learning and statistics, where they can be used to measure similarity between data points.
+
+In physics, inner-products are used to define Hermitian operators, which are important in quantum mechanics.
+
+##  Conclusion
+
+Orthogonality is a powerful mathematical tool that has many applications in physics, engineering, and numerical analysis. In this book, you'll learn how the Gram-Schmidt process can be used to orthogonalize a set of vectors, and how orthogonal matrices can be used to define rotations in space. We have also seen how inner-products can be used to measure similarity between vectors, and to define important operators in physics. With this book as your guide, you should now have a good understanding of the basics of orthogonality and its many uses.
+
+

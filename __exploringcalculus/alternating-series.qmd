@@ -1,0 +1,376 @@
+---
+pagetitle: Alternating Series - Exploring Calculus
+---
+# Alternating Series
+
+Infinite series whose terms alternate in sign are called alternating series. We motivate and prove the Alternating Series Test and we also discuss absolute convergence and conditional convergence. Alternating p-series are detailed at the end.
+
+## Alternating Series Test
+
+Infinite series whose terms alternate in sign are called alternating series.
+
+::: {#def- } 
+An \index{alternating series} **alternating series**  has one of the following forms
+\begin{align*}
+\sum_{n=1}^\infty (-1)^{n} a_n
+\qquad \text{or} \qquad
+\sum_{n=1}^\infty (-1)^{n+1} a_n
+\end{align*}
+where the $a_n$'s are positive. 
+::: 
+
+For example, the two series 
+\begin{align*}
+\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n} & 
+= 1 -\frac{1}{2} +\frac{1}{3}-\frac{1}{4} + \frac{1}{5} - \cdots \\
+\sum_{n=1}^\infty (-1)^{n} \frac{1}{n} & 
+= -1 +\frac{1}{2} -\frac{1}{3}+\frac{1}{4} - \frac{1}{5} + \cdots 
+\end{align*}
+are alternating series. 
+
+The next theorem gives sufficient conditions under which an alternating series must converge. 
+The \index{Alternating Series Test} is sometimes called \index{Leibniz's Theorem} **Alternating Series Test} is sometimes called \index{Leibniz's Theorem** . 
+
+::: {#thm- } \label{Alternating Series Test}
+An alternating series converges whenever the following conditions are satisfied
+ - $a_1 \geq a_2 \geq a_3 \geq a_4 \geq \cdots \geq a_n \geq \cdots$
+- $\lim_{n\to +\infty} a_n = 0$
+ 
+::: 
+
+::: {.proof }
+Consider the following diagram.
+First we plot $s_1 = a_1$.
+To find $s_2$ we subtract $a_2$, so $s_2$ is to the left of $s_1$.
+Then to find $s_3$ we add $a_3$, so $s_3$ is to the right of $s_2$.
+Since $a_3 < a_2$, $s_3$ is to the left of $s_1$. 
+Continuing in this pattern, we see that the partial sums oscillate back and forth. 
+However, by the assumption $\lim_{n\to +\infty} a_n = 0$, the successive steps are becoming smaller and smaller. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=250pt]{_includes/alternating-series-1.pdf}
+\end{figure}
+Notice that the odd partial sums $s_1, s_3, s_5, \ldots$ are decreasing and that the even partial sums $s_2, s_4, s_6, \ldots$ are increasing. 
+We now consider the two cases.
+\par
+If $n$ is even, say $n=2m$, then the sum of the first $n$ terms is 
+\begin{align*}
+s_{2m} & = (a_1-a_2) + (a_3-a_4) +\cdots + (a_{2m-1}-a_{2m}) \\
+& = a_1-(a_2-a_3) - (a_4-a_5) - \cdots  - (a_{2m-2}-a_{2m-1}) - a_{2m}
+\end{align*}
+Since each term in parentheses is positive or zero, we notice that $s_{2m}$ is the sum of $m$ nonnegative terms. 
+Thus $s_{2m+2}\geq s_{2m}$, and the sequence $\{s_{2m}\}$ is nondecreasing.
+Also notice that $s_{2m} \leq a_1$ and so the sequence $\{s_{2m}\}$ is nondecreasing and bounded from above. 
+Therefore, it has a limit, say 
+$$
+\lim_{m \to \infty} s_{2m} = L.
+$$
+Next we consider the subsequence of odd terms $\{s_{2m+1}\}$ of $\{s_n\}$.
+Since 
+$$
+s_{2m+1}= s_{2m}+a_{2m+1}
+$$  
+and $\lim_{m\to \infty} a_{2m+1} = 0$ by hypothesis, we have 
+\begin{align*}
+\lim_{m\to \infty} s_{2m+1} 
+& = \lim_{m\to \infty} s_{2m}+a_{2m+1} 
+= \lim_{m\to \infty} s_{2m} +  \lim_{m\to \infty} a_{2m+1}  = L
+\end{align*}
+Since the subsequence $\{s_{2m+1}\}$ and $\{s_{2m}\}$ of the sequence of partial sums $\{s_n\}$ both converge to $L$, we have $\lim_{n\to \infty} s_n =L$ as needed. 
+::: 
+
+::: {#exm- } 
+Show that the alternating harmonic series $\sum_{n=1}^\infty (-1)^{n+1}\frac{1}{n}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Notice that 
+$$
+a_n =\frac{1}{n} > \frac{1}{n+1} = a_{n+1}
+$$ 
+and that 
+$$
+\lim_{n\to\infty} \frac{1}{n}=0.
+$$
+By the Alternating Series Test, the series must converge.
+::: 
+
+::: {#exm- } 
+Show that the alternating harmonic series $\sum_{n=1}^\infty (-1)^{n+1}\frac{n+1}{n}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Notice that $a_{n+1}\leq a_n$, for all $n$.
+However, the Alternating Series Test does not apply because 
+$$
+\lim_{n\to\infty} \frac{\ln n}{n} \neq 0.
+$$
+In fact the series diverges. 
+::: 
+
+::: {#exm- } 
+Show that the series $\sum_{n=1}^\infty (-1)^{n}\frac{\ln n}{n}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Let $f(x)=(\ln x)/x$. 
+By the Quotient Rule, we have $f'(x)=(1-\ln x)/x^2$.
+The fact that $f'(x)<0$, for $x>e$, implies the terms decrease, whenever $n\geq 3$. 
+Also notice that 
+$$
+\lim_{n\to \infty} \frac{\ln n}{n}= 0,
+$$
+and therefore, the condition of the Alternating Series Test are satisifed. 
+By the Alternating Series Test, the series must converge.
+::: 
+
+
+
+
+## Approximating Sums of Alternating Series
+
+
+::: {#thm- } 
+If an alternating series satisfies the hypothesis of the alternating series test, and if $S$ is the sum of the series, then
+ - either $s_n \leq S \leq s_{n+1}$ or $s_{n+1} \leq S \leq s_{n}$, and 
+- if $S$ is approximated by $s_n$, then the absolute error $|S-s_n|$ satisfies 
+$$
+|S-s_n| \leq a_{n+1}.
+$$
+Moreover, the sign of the error $S-s_n$ is the same as $a_{n+1}$. 
+ 
+::: 
+
+::: {.proof }
+From the proof of the Alternating Series Test we know that $S$ lies between any two consecutive partial sums $s_n$ and $s_{n+1}$.
+It follows that 
+$$
+|S-s_n| \leq | s_{n+1} - s_n | \leq a_{n+1}
+$$
+as desired. 
+::: 
+
+
+
+## Absolute and Conditional Convergence
+
+
+::: {#def- } 
+A series $\sum a_n$ is called \index{absolutely convergent} **absolutely convergent**  if the series $\sum |a_n|$ converges. 
+::: 
+
+::: {#thm- } \label{Absolute Convergence Test}
+If a series $\sum a_n$ is absolutely convergent, then it is convergent. 
+::: 
+
+::: {.proof }
+Notice that for each $n$, $-|a_n| \leq a_n \leq |a_n|$ and so $0\leq a_n +|a_n| \leq 2 a_n $.
+If the series $\sum |a_n|$ converges, then the series $\sum 2 |a_n|$ converges, and so the nonnegative series $\sum (a_n+ |a_n|)$ converges. 
+The equality $a_n = (a_n +|a_n|)-|a_n|$ now lets us express the series $\sum a_n$ as the difference of two convergent series:
+$$
+\sum a_n = \sum (a_n +|a_n|)-|a_n| = \sum (a_n +|a_n|) - \sum |a_n|.
+$$
+Therefore $\sum a_n$ converges. 
+::: 
+
+Notice that the alternating harmonic series converges but is not absolutely convergent. 
+
+::: {#def- } 
+A series $\sum a_n$ is \index{conditionally convergent} **conditionally convergent**  if it is convergent but not absolutely convergent. 
+::: 
+
+::: {#exm- } 
+Determine whether the series $\sum_{n=1}^\infty (-1)^{n+1}\frac{1}{\sqrt{n}}$ diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Consider the series 
+$$
+\sum_{n=1}^\infty \left|(-1)^{n+1}\frac{1}{\sqrt{n}}\right| 
+=  \sum_{n=1}^\infty \frac{1}{\sqrt{n}}.
+$$
+This is a divergent $p$-series with $p=1/2<1$. 
+Therefore the series is not absolutely convergent.  
+Now notice that 
+$$
+\lim_{n\to \infty}  \frac{1}{\sqrt{n}} =0
+$$ 
+and that the series is decreasing. 
+By the Alternating Series Test, the given series converges.
+Therefore the given series converges conditionally.
+::: 
+
+::: {#exm- } 
+Determine whether the series $\sum_{n=1}^\infty (-1)^{n+1}\frac{1}{\sqrt{n^3}}$ diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Consider the series 
+$$
+\sum_{n=1}^\infty \left|(-1)^{n+1}\frac{1}{\sqrt{n^3}}\right| 
+=  \sum_{n=1}^\infty \frac{1}{\sqrt{n^3}}.
+$$
+This is a convergent $p$-series with $p=3/2>1$. 
+Therefore the series is absolutely convergent.  
+::: 
+
+::: {#exm- } 
+Determine whether the series $\sum_{n=1}^\infty \frac{\sin n}{n^2}$ diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Notice that the Alternating Series Test does not apply.
+Consider the series 
+$$
+\sum_{n=1}^\infty \left|\frac{\sin n}{n^2}\right| 
+\leq  \sum_{n=1}^\infty \frac{1}{n^2}.
+$$
+Recall that the series $\sum_{n=1}^\infty \frac{1}{n^2}$ is a convergent $p$-series with $p=2>1$. 
+By the Direct Comparison Test, the series $\sum_{n=1}^\infty \left|\frac{\sin n}{n^2}\right|$ converges. 
+Therefore, the given series is absolutely convergent.  
+::: 
+
+::: {#exm- } 
+Determine whether the series $\sum_{n=1}^\infty (-1)^{n+1} \frac{n+3}{n(n+1)}$ diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Consider the series 
+\begin{equation}
+\label{exseven}
+\sum_{n=1}^\infty \left|(-1)^{n+1} \frac{n+3}{n(n+1)}\right| 
+=  \sum_{n=1}^\infty \frac{n+3}{n(n+1)}.
+\end{equation}
+We use the Limit Comparison Test with 
+$$
+a_n = \frac{n+3}{n(n+1)}
+\qquad \text{and}\qquad
+b_n = \frac{1}{n}.
+$$
+We have 
+$$
+\lim_{n\to\infty} \frac{a_n}{b_n} 
+= \lim_{n\to\infty} \frac{n+3}{n+1} 
+= 1.
+$$
+It follows from the Limit Comparison Test that the series in \eqref{exseven} diverges.  
+Therefore the given series converges conditionally. 
+::: 
+
+::: {#exm- } 
+Determine whether the \index{alternating $p$-series} **alternating $p$-series**  
+$$
+\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^p}
+$$ 
+diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Consider the series 
+\begin{equation}
+\label{exeight}
+\sum_{n=1}^\infty \left|(-1)^{n+1}\frac{1}{n^p}\right| 
+=  \sum_{n=1}^\infty \frac{1}{n^p}.
+\end{equation}
+This is a convergent $p$-series whenever $p>1$. 
+Therefore the alternating $p$-series is absolutely convergent if $p>1$.
+Otherwise the series in \eqref{exeight} is divergent, and in this case, when $0 < p\leq 1$, the alternating $p$-series is conditionally convergent. 
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+Which of the alternating series converge, and which diverge? 
+Give reasons for your answers.
+\begin{multicols}{2}
+ - $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^{3/2}}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{\sqrt{n}}{n+5}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{n}{3n-1}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{10^n}{n^{10}}$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{n^2}{2n^2-1}$
+- $\sum_{n=1}^\infty (-1)^{n} \sin\left(\frac{\pi}{n}\right)$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{\ln n}{n}$
+- $\sum_{n=1}^\infty (-1)^{n+1}\frac{n}{\sqrt{n^2+1}}$
+- $\sum_{n=1}^\infty (-1)^{n} \ln\left(1+\frac{1}{n}\right)$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{e^{1/n}}{n}$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{1}{\ln n}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{\sqrt{n}}{1+2\sqrt{n}}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{3\sqrt{n+1}}{\sqrt{n}+1}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{\ln(n+1)}{n+2}$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Which of the series converge absolutely, which converge, and which diverge? 
+Give reasons for your answers.
+\begin{multicols}{2}
+ - $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^2}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n+2}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{1}{n \ln n}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{n}{n^3-5}$
+- $\sum_{n=0}^\infty \frac{\cos n\pi}{n+1} $
+- $\sum_{n=1}^\infty (-1)^{n+1} \arctan n$
+ 
+\end{multicols}
+::: 
+
+
+::: {#exr- } 
+Estimate the magnitude of the error involved in using the sum of the first four terms to approximate the sum of the entire series. 
+\begin{multicols}{2}
+ - $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{10^n}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^6}$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{1}{\sqrt{n}}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{(0.01)^n}{n}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^5}$
+- $\sum_{n=2}^\infty (-1)^{n-1}\frac{1}{n \ln n}$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{n^2}{10^n}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{1}{n!}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{3^n}{n!}$
+ 
+\end{multicols}
+::: 
+
+
+::: {#exr- } 
+Show that if $\sum_{n=1}^\infty a_n$ diverges, then $\sum_{n=1}^\infty |a_n|$ diverges.
+::: 
+
+::: {#exr- } 
+Show that if $\sum_{n=1}^\infty a_n$ converges absolutely, then 
+$$
+\left|\sum_{n=1}^\infty a_n \right| \leq \sum_{n=1}^\infty |a_n|.
+$$
+::: 
+
+
+::: {#exr- } 
+Give an example of an alternating $p$-series that converges, but whose corresponding $p$-series diverges.
+::: 
+
+::: {#exr- } 
+Find all values of $s$ for which the series $\sum_{n=1}^\infty (-1)^n \frac{1}{n^s}$ converges.
+::: 
+
+::: {#exr- } 
+For what values of $p$ is the series $\sum_{n=1}^\infty (-1)^{n-1} \frac{(\ln n)^p}{n}$ convergent?
+::: 
+
+::: {#exr- } 
+Show that if $\sum_{n=1}^\infty a_n$ and $\sum_{n=1}^\infty b_n$ both converge absolutely, then 
+so do ${\sum_{n=1}^\infty a_n+b_n}$, $\sum_{n=1}^\infty a_n-b_n$, and ${\sum_{n=1}^\infty k a_n}$ where $k$ is a real number. 
+::: 
+
+
+::: {#exr- } 
+Find all values of $x$ for which the infinite series 
+$$
+\sum_{n=1}^\infty \frac{x^n}{n}
+$$ 
+(a) converges absolutely and (b) converges conditionally.
+::: 
+
+

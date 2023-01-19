@@ -1,0 +1,329 @@
+---
+pagetitle: "Fundamental Theorem of Calculus - Exploring Calculus"
+---
+# "Fundamental Theorem of Calculus"
+
+Before we begin, let's review the Intermediate Value Theorem and the Extreme Value Theorem. 
+
+::: {#thm- } [Intermediate Value Theorem]
+If $f$ is a continuous function on a closed interval $[a,b]$ and $M$ is a number between $f(a)$ and $f(b)$, inclusive, then there is at least one number $c$ in $[a,b]$ such that $f(c)=M$. 
+::: 
+
+::: {#thm- } [Extreme Value Theorem]
+If $f$ is a continuous function on a  closed interval $[a,b]$, then $f$ attains an absolute maximum value $f(c)$ for some number $c$ in $[a,b]$ and an absolute minimum value $f(d)$ for some number $d$ in $[a,b]$. 
+::: 
+
+::: {#def- } 
+If $f$ is integrable on $[a,b]$, then the \index{average value of $f$} **average value of $f$**  over $[a,b]$ is the number 
+\begin{equation}
+f_{\text{av}}=\frac{1}{b-a} \int_a^b f(x) \, dx.
+\end{equation}
+::: 
+
+If we assume that $f$ is nonnegative, then we have the following geometric interpretation for the average value of a function over $[a,b]$. 
+We see that $f_{\text{av}}$ is the height of the rectangle with base lying on the interval $[a,b]$ and having the same area as the area of the region under the graph of $f$ on $[a,b]$. 
+
+\begin{figure}[hbt]
+\centering
+\includegraphics[width=230pt]{_includes/aveval.png}
+\caption{The area of the rectangle is $(b-a) f_{\text{av}}=\int_a^b f(x)\, dx=$ area of the region under the graph of $f$.}
+\label{fig:}
+\end{figure} 
+
+::: {#exm- } 
+Find the average value of $f(x)=\frac{x}{\sqrt{x^2+1}}$ over the interval $[0,3]$.
+Answer: $\frac{\sqrt{10}-1}{3}$
+::: 
+
+
+
+## Mean Value Theorem for Integrals
+
+
+::: {#thm- } [Mean Value Theorem for Integrals]
+If $f$ is continuous on $[a,b]$, then there exists a number $c$ in $[a,b]$ such that 
+$$
+f(c)=\frac{1}{b-a}\int_a^b f(x) \, dx.
+$$
+::: 
+
+::: {.proof }
+Since $f$ is continuous on the interval $[a,b]$, the Extrema Value Theorem tells us that $f$ attains an absolute minimum value $m$ at some number in $[a,b]$  and an absolute maximum value $M$ at some number in $[a,b]$. 
+So $m\leq f(x) \leq M$ for all $x$ in $[a,b]$.
+Hence the average value holds:
+$$
+m\leq \frac{1}{b-a}\int_a^b f(x) \, dx \leq M
+$$
+Because the average value lies between $m$ and $M$, the Intermediate Value Theorem there exists at least one number $c$ in $[a,b]$ such that 
+$$
+f(c)=\frac{1}{b-a}\int_a^b f(x) \, dx.
+$$
+as needed.
+::: 
+
+::: {#exm- } 
+Show that the inequality
+\begin{equation}
+0\leq \int_0^1 \frac{x^5}{\sqrt[3]{1+x^4}}\, dx \leq \frac{1}{6}
+\end{equation}
+holds.
+::: 
+
+::: {.solution }
+Let $f(x)=\frac{x^5}{\sqrt[3]{1+x^4}}$.
+Since $f$ is continuous on $[0,1]$, we know that $f$ must attain a maximum $M$ and a minimum value $m$. 
+We find, 
+\[
+f'(x)=
+\frac{x^4(19 x^4+15)}{3(x^4+1)^{2/3}}
+\]
+Hence the only critical number is $0$.
+We test and find $m=f(0)=0$ and $M=f(1)=1/\sqrt[3]{2}\approx 0.79$.
+However, we can do better, by observing that $1+x^4\geq 1$ for $x$ in $[0,1]$.
+Then 
+$$
+0\leq \frac{x^5}{\sqrt[3]{1+x^4}} \leq x^5 \implies 
+0=\int_0^ 1 0 \, dx \leq \int_0^ 1  \frac{x^5}{\sqrt[3]{1+x^4}} \, dx  \leq \int_0^ 1  x^5 \, dx=\frac{1}{6}
+$$
+as needed. 
+::: 
+
+## The First Fundamental Theorem of Calculus
+
+::: {#thm- } [First Fundamental Theorem of Calculus]
+\label{thm2}
+If $f$ is continuous on $[a,b]$, then the function $F$ defined by 
+$$F(x)=\int_a^x f(t) \, dt, \quad 
+a\leq x \leq b
+$$
+is differentiable on $(a,b)$ and 
+$$
+F'(x)=\frac{d}{dx} \int_a^x f(t) \, dt = f(x).
+$$
+::: 
+
+::: {.proof }
+Fix $x$ in $(a,b)$ and suppose that $x+h$ is in $(a,b)$, where $h\neq 0$.
+Then 
+\begin{align*}
+F(x+h)-F(x)
+& =\int_a^{x+h} f(t) \, dt -\int_a^x f(t)\, dt  \\
+& = \int_a^x f(t)\, dt +\int_x^{x+h} f(t)\, dt -\int_a^x f(t)\, dt \\
+& =\int_x^{x+h} f(t)\, dt.
+\end{align*}
+By the Mean Value Theorem for Integrals there exists a number $c$ between $x$ and $x+h$ such that 
+$$
+f(c)=\int_x^{x+h} f(t)\, dt 
+$$ 
+Therefore, 
+$$
+\frac{F(x+h)-F(x)}{h}=\frac{1}{h} \int_{x}^{x+h} f(t)\, dt =f(c).
+$$
+Next, observe that as $h$ approaches $0$, the number $c$, which is squeezed between $x$ and $x+h$ approaches $x$, and by continuity, $f(c)$ approaches $f(x)$.
+Therefore,
+$$
+F'(x)=\lim_{h\to 0} \frac{F(x+h)-F(x)}{h} =\lim_{h\to 0} \frac{1}{h} \int_x^{x+h} f(t)\, dt =\lim_{h\to 0} f(c)=f(x).
+$$
+as needed.
+::: 
+
+\noindent
+\begin{minipage}[c]{\textwidth}
+::: {#exm- } 
+Find the derivative of the following functions. 
+ 
+\item 
+$G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt $
+- $G(x)=\int_{0}^{x^2} t \sin t \, dt $
+- $G(x)=\int_{2}^{\sqrt{x}} \frac{\sin t}{t} \, dt $
+- $G(x)=\int_{x^2}^{x^3} \ln t\, dt $, $x>0$
+ 
+::: 
+\end{minipage}
+
+::: {.solution }
+ 
+\item[(a)]
+$G'(x)=x\sqrt{x^2+1}$
+\item[(b)]
+$G'(x)=(x\sin x) (2x)=2x^2\sin x$
+\item[(c)]
+$G'(x)
+=\frac{\sin x}{x} \frac{d}{dx}\left(\frac{1}{x}\right)
+=\frac{\sin x}{x} \left(\frac{-1}{x^2}\right)
+$
+\item[(d)]
+First we write,
+$$
+G(x)=\int_{x^2}^c \ln t\, dt +\int_c^{x^3} \ln t\, dt 
+= -\int_{c}^{x^2} \ln t\, dt +\int_c^{x^3} \ln t\, dt 
+$$ 
+and so we find, 
+$$
+G'(x)
+= - 2x \ln x^2 +3x^2\ln x^3 
+= -4x \ln x+9 x^2\ln x 
+=x(9x-4) \ln x
+$$
+ 
+as requested.
+::: 
+
+::: {#exm- } 
+Evaluate $\lim_{h\to 0} \frac{1}{h} \int_2^{2+h} \sqrt{5+t^2} \, dt$.
+::: 
+
+::: {.solution }
+Let $F(x)=\int_2^x \sqrt{5+t^2}\, dt$.
+Then 
+\begin{align*}
+F'(2)
+& =\lim_{h\to 0} \frac{F(2+h)-F(2)}{h} \\
+& =\lim_{h\to 0} \frac{\int_0^{2+h} \sqrt{5+t^2}\, dt -\int_0^2 \sqrt{5+t^2}\, dt}{h}  \\
+& =\lim_{h\to 0} \frac{\int_2^{2+h} \sqrt{5+t^2}\, dt }{h}.
+\end{align*}
+Next using the Fundamental Theorem, we have
+$$
+F'(x)=\frac{d}{dx} \int_2^x \sqrt{5+t^2}\, dt =\sqrt{5+x^2}
+$$
+and so $F'(2)=3$, hence
+$$
+\lim_{h\to 0} \frac{1}{h} \int_2^{2+h} \sqrt{5+t^2} \, dt=3.
+$$
+as requested. 
+::: 
+
+
+
+## The Second Fundamental Theorem of Calculus
+
+::: {#thm- } [The Second Fundamental Theorem of Calculus]
+If $f$ is continuous on $[a,b]$, then 
+$$
+\int_a^b f(x) \, dx=F(b)-F(a)
+$$
+where $F$ is any antiderivative of $f$, that is $F'=f$. 
+::: 
+
+::: {.proof }
+Let $G(x)=\int_a^x f(t)\, dt$.
+By \ref{thm2}, we know that $G$ is an antiderivative of $f$.
+If $F$ is any other antiderivative of $f$, then $F$ and $G$ must differ by a constant.
+In other words, $F(x)=G(x)+C$.
+To determine $C$, we put $x=a$ to obtain
+$$
+F(a)=G(a)+C=\int_a^a f(t)\, dt +C=C.
+$$
+Therefore, evaluating $F$ at $b$, we have 
+$$
+F(b)=G(b)+C=\int_a^b f(t)\, dt +F(a)
+$$
+from which we conclude that
+$$
+F(b)-F(a)=\int_a^b f(x) \, dx.
+$$
+as needed. 
+::: 
+
+\noindent
+\begin{minipage}[c]{\textwidth}
+::: {#exm- } 
+Evaluate the following integrals.
+ 
+\item 
+$\int_{-2}^0 (2x-3)\, dx$
+- $\int_{0}^2 (2-4u+u^2)\, du$
+- $ \int_1^2 \frac{3x^4-2x^2+1}{2x^2} \, dx$
+- $ \int_2^0 \sqrt{x}(x+1)(x-2) \, dx$
+- $ \int_0^{\pi} \sin 2x \cos x \, dx$
+- $ \int_0^{\pi}  |\cos x| \, dx$
+- $ \int _0^{4\sqrt{3}} \frac{1}{x^2+16}\, dx$
+- $ \int _1^e \frac{\ln x}{x} e^{(\ln x)^2}\, dx$
+ 
+::: 
+\end{minipage}
+
+
+## Exercises
+
+::: {#exr- } 
+Find the derivative of the following functions. 
+ 
+\item 
+$G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt $
+- $G(x)=\int_{0}^{x^2} t \sin t \, dt $
+- $G(x)=\int_{2}^{\sqrt{x}} \frac{\sin t}{t} \, dt $
+- $G(x)=\int_{x^2}^{x^3} \ln t\, dt $
+ 
+::: 
+
+::: {#exr- } 
+Evaluate the following integrals.
+ 
+\item 
+$\int_{-2}^0 (2x-3)\, dx$
+- $\int_{0}^2 (2-4u+u^2)\, du$
+- $ \int_1^2 \frac{3x^4-2x^2+1}{2x^2} \, dx$
+- $ \int_2^0 \sqrt{x}(x+1)(x-2) \, dx$
+- $ \int_0^{\pi} \sin 2x \cos x \, dx$
+- $ \int0^{\pi}  |\cos x| \, dx$
+- $ \int _0^{4\sqrt{3}} \frac{1}{x^2+16}\, dx$
+- $ \int _1^e \frac{\ln x}{x} e^{(\ln x)^2}\, dx$
+ 
+::: 
+
+::: {#exr- } 
+Show that each of the following inequalities hold.
+ 
+- $0\leq \int_0^1 \frac{x^5}{\sqrt[3]{1+x^4}}\, dx \leq \frac{1}{6} $
+- $0\leq \int_0^1 \frac{1}{\sqrt{4-3x+x^2}}\, dx \leq \frac{2}{3} $
+ 
+::: 
+
+::: {#exr- } 
+For each of the following, find the area of the region under the graph of $f$ on $[a,b]$.
+ 
+\item 
+$f(x)=x^2-2x+2; [-1,2]$
+- $f(x)=\frac{1}{x^2}; [1,2]$
+- $f(x)=2+\sqrt{x+1}; [0,3]$
+- $f(x)=\frac{1}{4+x^2}; [0,1]$
+ 
+::: 
+
+::: {#exr- } 
+Find $\frac{dx}{dy}$ if 
+$
+\int_0^x \sqrt{3+2\cos t} \, dt+\int_0^y \sin t \, dt =0.
+$
+::: 
+
+::: {#exr- } 
+Find all functions $f$ on $[0,1]$ such that $f$ is continuous on $[0,1]$ and 
+$\int_0^x f(t) \, dt = \int_x^1 f(t)\, dt$ for every $x$ in $(0,1)$.
+::: 
+
+::: {#exr- } 
+Evaluate $\lim_{h\to 0} \frac{1}{h} \int_2^{2+h} \sqrt{5+t^2} \, dt$.
+::: 
+
+::: {#exr- } 
+Evaluate $\int_{-1}^1 \frac{2x^5+x^4-3x^3+2x^2+8x+1}{x^2+1} \, dx$.
+::: 
+
+::: {#exr- } 
+Use the identity 
+$
+\frac{x \sin\left(n+\frac{1}{2}\right)}{2\sin \frac{x}{2}} = 
+\frac{1}{2} +\cos x +\cos 2x +\cdots + \cos n x
+$
+to show that 
+$
+\int_0^\pi \frac{x \sin\left(n+\frac{1}{2}\right)}{2\sin \frac{x}{2}} \, dx =\pi. 
+$
+::: 
+
+
+
+
+

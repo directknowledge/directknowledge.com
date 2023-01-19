@@ -1,0 +1,371 @@
+---
+pagetitle: "Infinite Series and Convergence - Exploring Calculus"
+---
+# Infinite Series and Convergence
+
+We introduce infinite series and their basic properties such as the Divergence Test and elementary convergence rules. We also discuss the Harmonic Series and Geometric Series.
+
+
+## Infinite Series
+
+Infinite sums occur naturally, for example, when we consider decimal representations of real numbers. 
+Consider the representation of $1/7$: 
+$$
+\frac{1}{7} = 0.\overline{142857} 
+= 0.142857+ 0.000000142857 + 0.000000000000142857 +\cdots 
+$$
+this suggests that the decimal representation can be viewed as a sum of infinitely many real numbers.
+
+::: {#def- } 
+An expression of the form
+$$
+a_1+a_2+a_3+\cdots a_n + \cdots 
+$$
+is called an \index{infinite series} or, more simply, a \index{series} **infinite series} or, more simply, a \index{series** . 
+The numbers $a_1$, $a_2$, $a_3$, are called the \index{terms} of the series; $a_n$ is called the $n$th term, or \index{general term} **terms} of the series; $a_n$ is called the $n$th term, or \index{general term** , of the series; and the series itself is denoted by the symbol
+$$
+\sum_{n=1}^\infty a_n
+$$
+or sometimes as $\sum a_n$.
+::: 
+
+::: {#def- } 
+Given an infinite series
+$$
+\sum_{n=1}^\infty a_n = a_1+a_2+a_3+\cdots +a_n +\cdots 
+$$
+the \index{$n$th partial} **$n$th partial**  sum of the series is
+$$
+S_n = \sum_{k=1}^n a_k = a_1+a_2+a_3+\cdots+ a_n 
+$$
+If the sequence of partial sums $\{S_n\}$ converges to the number $S$, that is, if ${\lim_{n\to\infty} S_n =S}$, then the series $\sum a_n$ \index{converges} **converges**  and has sum $S$, written 
+$$
+\sum_{n=1}^\infty a_n = a_1+a_2+a_3+\cdots +a_n +\cdots =S.
+$$
+If $\{S_n\}$ diverges, then the series $\sum a_n$ \index{diverges} **diverges** .
+::: 
+
+For example, the real number $1/7$ can be approximated using a sequence of partial sums 
+\begin{align*}
+s_1 & = 0.142857 = \frac{142857}{10^6} \\
+s_2 & = s_1 + 0.000000142857 = \frac{142857}{10^6} + \frac{142857}{10^{12}}\\
+s_3 & = s_1 + s_2 + 0.000000000000142857 = \frac{142857}{10^6} + \frac{142857}{10^{12}} + \frac{142857}{10^{18}} \\
+& \vdots 
+\end{align*}
+Notice that the $n$th partial sum is 
+\begin{equation}
+s_n =  \frac{142857}{10^6} + \frac{142857}{10^{12}} + \frac{142857}{10^{18}} + \cdots + \frac{142857}{10^{6n}}.
+\label{nparsum}
+\end{equation}
+Therefore we find 
+$$
+\lim_{n\to \infty} s_n 
+= \lim_{n\to \infty} \left(\frac{142857}{10^6} + \frac{142857}{10^{12}} + \frac{142857}{10^{18}} + \cdots + \frac{142857}{10^{6n}}\right).
+$$
+To calculate this limit we need a closed form, so we multiple by sides of \eqref{nparsum} by $1/10^6$ and obtain
+\begin{equation}
+\frac{1}{10^{6}} s_n =  \frac{142857}{10^{12}} + \frac{142857}{10^{18}} + \frac{142857}{10^{24}} + \cdots + \frac{142857}{10^{6(n+1)}}.
+\label{nparsumtwo}
+\end{equation}
+Now we subtract \eqref{nparsumtwo} from \eqref{nparsum} and obtain
+\begin{equation}
+s_n = \frac{142857}{10^{6}} - \frac{142857}{10^{6(n+1)}}
+= \frac{142857}{10^{6}} \left(1- \frac{1}{10^{6n }}\right).
+\end{equation}
+Whence 
+$$
+\lim_{n\to \infty} s_n 
+= \lim_{n\to \infty}  \frac{142857}{10^{6}} \left(1- \frac{1}{10^{6n }}\right) 
+=
+\frac{1}{7}
+$$
+as desired.
+
+::: {#exm- } 
+Show that the series $\sum_{n=1}^\infty \frac{4}{4n^2-1}$ is convergent, and find its sum. 
+::: 
+
+::: {.solution }
+Use partial fractions to write the general term as
+$$
+a_n =\frac{2}{2n-1}-\frac{2}{2n+1}
+$$
+Then we write the $n$th partial sum of the series as 
+$$
+S_n = 2-\frac{2}{2n+1}
+$$
+Therefore the sum is $2$. 
+::: 
+
+
+
+## Geometric Series
+
+::: {#def- } 
+Let $a$ be a nonzero real number. 
+A series of the form 
+$$
+\sum_{n=0}^\infty a r^n 
+= a + a r + a r^2 + a r^3 + \cdots + a r^n + \cdots
+$$
+is called a \index{geometric series} **geometric series**  with common ratio $r$.
+::: 
+
+::: {#thm- } 
+If $|r|<1$, then the geometric series 
+$$
+\sum_{n=1}^\infty a r^{n-1}
+$$
+converges, and its sum is $\frac{a}{1-r}$.
+The seres diverges if $|r|\geq 1$.
+::: 
+
+::: {.proof }
+Multiply both sides of the $n$th partial sum of the series by $r$ and then subtract from the original partial sums equation to obtain 
+$$
+(1-r)S_n = a(1-r^n) 
+$$
+Now consider each case. 
+::: 
+
+::: {#exm- } 
+Evaluate the geometric series $\sum_{n=0}^\infty 1.1^n$ or state that the series diverges.
+::: 
+
+::: {.solution }
+Notice that $a=1$ and $r=1.1$, and since $|1.1|\geq 1$, the series diverges. 
+::: 
+
+::: {#exm- } 
+Evaluate the geometric series $\sum_{n=0}^\infty e^{-n}$ or state that the series diverges.
+::: 
+
+::: {.solution }
+Notice that $a=1$ and $r=1/e$, and since $|1/e| < 1$, the series converges with 
+$$
+\sum_{n=0}^\infty e^{-n} 
+= \sum_{n=0}^\infty \left(\frac{1}{e}\right)
+= \frac{1}{1-1/e} 
+= \frac{e}{e-1}
+$$
+as desired. 
+::: 
+
+
+
+## Harmonic Series
+
+
+::: {#def- } 
+The series
+$$
+\sum_{n=1}^\infty \frac{1}{n}
+$$
+is called the \index{harmonic series} **harmonic series** .
+::: 
+ 
+::: {#thm- } 
+The harmonic series is divergent.
+::: 
+ 
+::: {.proof }
+Write out the partial sums, for example,
+\begin{align*}
+S_8 & = 1+\frac{1}{2} +\left(\frac{1}{3}+\frac{1}{4}\right) +\left(\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}\right) \\
+& > 1+\frac{1}{2} +\left(\frac{1}{4}+\frac{1}{4}\right) +\left(\frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right) \\
+& = 1 +\frac{1}{2} +\frac{1}{2} +\frac{1}{2} = 1+3\left(\frac{1}{2}\right)
+\end{align*}
+In general $S_{2^n} > 1+n(1/2)$. 
+Therefore, $\lim_{n\to \infty} S_{2^n} = \infty$ and so $\{S_n\}$ is divergent. 
+::: 
+
+
+
+## The Divergence Test
+
+The Divergence Test is a convenient way to determine whether an infinite series diverges.
+For example the series $\sum \sin n$ diverges and which is easily seen from the Divergence Test.
+The following observation leads us to the Divergence Test. 
+
+::: {#lem- } \label{Divergence Lemma}
+If $\sum_{n=1}^\infty a_n$ converges, then $\lim_{n\to \infty} a_n =0$. 
+::: 
+ 
+::: {.proof }
+Notice that $a_n=S_n-S_{n-1}$. 
+Hence
+$$
+\lim_{n\to \infty} a_n = \lim_{n\to \infty} (S_n-S_{n-1}) =\lim_{n\to \infty} S_n - \lim_{n\to \infty} S_{n-1} =S-S=0
+$$
+where $S$ is the sum of the series. 
+::: 
+
+::: {#thm- } \label{Divergence Test}
+If $\lim_{n\to \infty} a_n$ does not exist or $\lim_{n\to \infty} a_n\neq 0$, then the series $\sum_{n=1}^\infty a_n$ diverges. 
+::: 
+
+::: {#exm- } 
+Explain why the series $\sum_{n=1}^\infty n^2$ diverges.
+::: 
+
+::: {.solution }
+If $\sum_{n=1}^\infty n^2$ converges, then we have $\lim_{n\to \infty} n^2=0$ by the Divergence Lemma. 
+Therefore, $\sum_{n=1}^\infty n^2$ must diverge. 
+::: 
+
+
+
+## Convergence Rules
+
+Often times it is easier to determine the convergence of a simpler series. 
+
+::: {#thm- } \label{Convergence Rules}
+If $\sum_{n=1}^\infty a_n=A$ and $\sum_{n=1}^\infty b_n=B$ are convergent and $c$ is any real number, then $\sum_{n=1}^\infty c a_n$ and $\sum_{n=1}^\infty c b_n$ are also convergent, and
+ - $\sum_{n=1}^\infty c a_n = c \sum_{n=1}^\infty a_n = cA$ and
+- $\sum_{n=1}^\infty c (a_n\pm b_n) 
+= \sum_{n=1}^\infty a_n \pm \sum_{n=1}^\infty b_n = A\pm B$. 
+ 
+::: 
+ 
+::: {#exm- } 
+Evaluate the geometric series 
+$$
+\sum_{n=2}^\infty 3(-0.75)^n
+$$ 
+or state that the series diverges.
+::: 
+
+::: {.solution }
+First we consider the geometric series, 
+$$
+\sum_{n=2}^\infty (-0.75)^n.
+$$
+Notice that $r=-0.75$ and $|r| < 1$ and so the series converges. 
+The first term is $a=(-0.75)^2$ and so the sum is 
+$$
+\sum_{n=2}^\infty (-0.75)^n = \frac{(-0.75)^2}{1-(-0.75)} =\frac{9}{28}.
+$$
+Therefore we find that
+$$
+\sum_{n=2}^\infty 3(-0.75)^n = 3\left(\frac{9}{28}\right) =\frac{27}{28}
+$$
+using the Convergence Rules. 
+::: 
+ 
+
+
+## Exercises
+
+::: {#exr- } 
+Determine whether the series converges. 
+If the series converges, find its sum. 
+\begin{multicols}{3}
+ - $\sum_{n=1}^\infty n$
+- $\sum_{n=1}^\infty \left(\frac{1}{2n+3}-\frac{1}{2n+1}\right)$
+- $\sum_{n=1}^\infty \frac{n+1}{2n-3}$
+- $\sum_{n=1}^\infty \left(\frac{1}{n}-\frac{1}{n+1}\right)$.
+- $\sum_{n=1}^\infty \frac{2}{\sqrt{n+1} +\sqrt{n}}$
+- $\sum_{n=1}^\infty \frac{n(n+2)}{(n+3)^2}$
+- $\sum_{n=1}^\infty \frac{4}{(2n+3)(2n+5)}$
+- $\sum_{n=0}^\infty \frac{1}{\sqrt{n+1}}$
+- $\sum_{n=1}^\infty \frac{1+3^n}{2^n}$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Determine whether the series converges or diverges. 
+If it converges, find its sum. 
+\begin{multicols}{2}
+ - $\sum_{n=1}^\infty 3\left(-\frac{1}{2}\right)^{n-1}$
+- $\sum_{n=1}^\infty \frac{1}{n(n+2)}$
+- $\sum_{n=1}^\infty \frac{2n-1}{3n+1}$
+- $\sum_{n=1}^\infty 5\left(\frac{4}{3}\right)^{n-1}$
+- $\sum_{n=1}^\infty \frac{3^n-1}{3^{n+1}}$
+- $\sum_{n=1}^\infty \left[\cos\left(\frac{1}{n}\right)-\cos\left(\frac{1}{n+1}\right) \right]$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Show that the following series are divergent.
+\begin{multicols}{3}
+ - $\sum_{n=1}^\infty (-1)^{n-1}$
+- $\sum_{n=1}^\infty \frac{n}{n+1}$
+- $\sum_{n=1}^\infty \frac{2n^2+1}{3n^2-1}$
+- $\sum_{n=1}^\infty \frac{n}{\sqrt{n^2+1}}$
+- $\sum_{n=1}^\infty \frac{n!}{2^n}$
+- $\sum_{n=1}^\infty \frac{2^n+1}{2^{n+1}}$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Show that the series $\sum_{n=1}^\infty \left[\frac{2}{n(n+1)}-\frac{4}{3^n}\right]$ is convergent, and find its sum. 
+::: 
+ 
+::: {#exr- } 
+Find a formula for the $n$th partial sum of each series and use it to find the series sum of the series converges. 
+ - $\frac{1}{2}+\frac{1}{5}+\frac{1}{10}+\frac{1}{17}+\frac{1}{26} + \cdots $ 
+- $\frac{1}{3}+\frac{1}{7}+\frac{1}{11}+\frac{1}{15}+\frac{1}{19} + \cdots $ 
+- $\frac{9}{100}+\frac{9}{100^2}+ \frac{9}{100^3} +\cdots +\frac{9}{100^n} + \cdots $
+- $\frac{5}{3}-\frac{5}{9} +\frac{5}{27} -\frac{5}{81} +\cdots $
+- $1-2+4-8+\cdots + (-1)^{n-1}2^{n-1}+ \cdots $
+- $1+\frac{4}{3}+\frac{16}{9}+\frac{64}{27}+\cdots $
+ 
+::: 
+
+::: {#exr- } 
+Write out the first few terms of each series to show how the series starts. 
+Then find the sum of the series.
+\begin{multicols}{3}
+ - $\sum_{k=0}^\infty \frac{(-1)^k}{4^k}$
+- $\sum_{k=1}^\infty \frac{1}{\sqrt{k}+4}$
+- $\sum_{k=0}^\infty \left(\frac{2^{k+1}}{5^k}\right)$
+- $\sum_{k=1}^\infty \frac{n}{2^k}$
+- $\sum_{k=1}^\infty \frac{1}{e^{-k} +1}$
+- $\sum_{n=1}^\infty \frac{1}{2n^2+7n+3}$
+ 
+\end{multicols}
+::: 
+
+
+::: {#exr- } 
+Use partial fractions to find the sum of each series.
+\begin{multicols}{2}
+ - $\sum_{n=1}^\infty \frac{6}{(2n-1)(2n+1)}$
+- $\sum_{n=1}^\infty \frac{2n+1}{n^2(n+1)^2}$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Which series converge, and which diverge?  
+Give reasons for your answers. 
+If a series converges, find its sum.
+\begin{multicols}{2}
+ - $\sum_{n=0}^\infty (\sqrt{2})^n$
+- $\sum_{k=0}^\infty \frac{1}{(3k+1)(3k+4)}$
+- $\sum_{n=0}^\infty (-1)^{n+1} n$
+- $\sum_{n=1}^\infty \arctan n$
+- $\sum_{n=1}^\infty (\sqrt{n+1} - \sqrt{n})$
+- $\sum_{n=1}^\infty \left(1-\frac{1}{n}\right)^n$
+- $\sum_{n=1}^\infty \ln \left(\frac{n}{2n+1}\right)$
+- $\sum_{n=0}^\infty \frac{3}{5^n}$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Let $f_n$ denote the Fibonacci sequence.
+Show that each of the following statements is true. 
+\begin{multicols}{2}
+ - $\frac{1}{f_{n-1}f_{n+1}} = \frac{1}{f_{n-1}f_n} - \frac{1}{f_n f_{n+1}}$
+- $\sum_{n=2}^\infty \frac{1}{f_{n-1}f_{n+1}} =1$
+- $\sum_{n=2}^\infty \frac{1}{f_{n-1}f_{n+1}} =2$
+ 
+\end{multicols}
+::: 
+
+
+

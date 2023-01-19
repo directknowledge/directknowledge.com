@@ -1,0 +1,326 @@
+---
+pagetitle: Applications of Double Integrals - Exploring Calculus
+---
+# Applications of Double Integrals
+ 
+We will consider the following applications: average value of a function over a region, mass of a lamina, electric charge, moments and center of mass, moments of inertia, and probability density functions. 
+
+## Average Value
+
+Recall the average value of an integrable function of one variable on a closed interval is the integral of the function over the interval divided by the length if the interval. For an integrable function of two variables defined on a bounded region in the plane, the 
+\index{average value} **average value**  
+is the integral over the region divided by the area of the region. 
+
+::: {#exm- } 
+
+Which do you think will be larger, the average value of $f(x,y)=xy$ over the square $0\leq x\leq 1$, $0\leq y \leq 1$, or over the quarter circle $x^2+y^2\leq 1$ in the first quadrant?
+::: 
+
+::: {.solution }
+The average value of $f$ over the square is 
+\[
+\int_0^1\int_0^1 xy dy dx=\int_0^1\frac{1}{2}x dx=\frac{1}{4}.
+\]
+Using polar coordinates, the average value of $f$ over the quarter circle is 
+\[
+\frac{1}{\pi/4}\int_0^{\pi/2}\int_0^1 r^3\cos \theta \sin \theta dr \, d\theta
+=\frac{4}{\pi}\int_0^{\pi/2} \frac{1}{4}\cos \theta\sin\theta d\theta
+=\frac{1}{2\pi}.
+\]
+Therefore the average value of $xy$ is larger over the square.
+::: 
+
+
+## Mass of a Lamina
+
+A \index{planar lamina} **planar lamina**  is a flat plate that occupies a region $R$ in the plane that is so thin it can be regarded as two dimensional. If $m$ is the
+lamina's mass and $A$ is the area of the region $R,$ then $\delta =m/A$ is the \index{density of the lamina} **density of the lamina**  (in units of mass per unit area). A
+lamina is called \index{homogeneous} if its density $\delta (x,y)$ is constant over $R$ and \index{nonhomogeneous} **homogeneous} if its density $\delta (x,y)$ is constant over $R$ and \index{nonhomogeneous**  if $\delta (x,y)$ varies from point to point.  
+
+::: {#def- } 
+
+If $\delta $ is a continuous density function of the lamina corresponding to a plane region $R$ then the (total) \index{mass} **mass**  $m$ of the planar lamina is given by  
+\[
+m=\iint_R\delta (x,y) \, dA.
+\]
+::: 
+
+::: {#exm- } 
+
+Find the mass of the planar lamina occupying the region $R$ bounded by the parabola 
+$y=2-x^2$ and the line $y=x$ if $\delta (x,y)=x^2.$ 
+::: 
+
+::: {.solution }
+Begin by drawing the parabola and the line, and by finding their points of intersection $(-2,-2)$ and $(1,1)$. Considering the region $R$ as vertically simple, the mass of the lamina is 
+\[
+ m
+ =\iint_R \int_x^{2-x^2}x^2 \, dA
+ =\int^1_{-2}\int_x^{2-x^2}x^2 \, dy \, dx
+ =\int^1_{-2} x^2(2-x^2-x) \, dx =\frac{63}{20}.
+\]
+::: 
+
+## Electric Charge
+
+
+Physicists also consider other types of density that can be treated in the same manner. For example, if an electric charge is distributed over a
+region $R$ and the charge density (in units of charge per unit area) is given by $\delta (x,y)$ at a point $(x,y)$ in $R,$ then the 
+\index{total charge} **total charge**  $Q$ is given by  
+\[ Q=\iint_R\delta (x,y) d A.\]
+
+::: {#exm- } 
+
+Charge is distributed over the triangular region $R$ described by $(0,1),$ $(1,1),$ and $(1,0)$ so that the charge density at $(x,y) $ is $\delta (x,y)= x y,$ measured in coulombs per square meter. Find the total charge.  
+::: 
+
+::: {.solution }
+Considering the region $R$ as a vertically simple region, we have  
+\[Q =\iint_R\delta (x,y) \, d A
+=\int _0^1\int _{1-x}^1x y \, dy \, dx 
+ =\frac{1}{2}\int_0^1 \left(2x^2-x^3\right) \, dx
+ =\frac{5}{24}.\]
+Thus the total charge is $5/24$ C.  
+::: 
+
+## Moments and Center of Mass of a Lamina
+
+The \index{moment} **moment**  of an object about an axis measures the tendency of the object to rotate about that axis. It is defined as the product of the object's mass and the signed distance from the axis. Let $\delta $ denote a continuous density function of a body.
+Then $M_x$ and $M_y,$ the \index{first moments} **first moments**  about the $x$-axis
+and $y$-axis, respectively are 
+\[
+M_x=\iint_Ry \delta (x,y) \, dx \, dy
+\qquad \text{and} \qquad 
+M_y=\iint_Rx \delta (x,y) \, dx \, dy
+\]
+The \index{center of mass} of the lamina covering $R$ is the point $(\overline{x},\overline{y})$ where the mass $m$ can be concentrated without affecting the moments $M_x$ and $M_y$; that is $m \overline{x}=M_y$ and $m \overline{y} **center of mass} of the lamina covering $R$ is the point $(\overline{x},\overline{y})$ where the mass $m$ can be concentrated without affecting the moments $M_x$ and $M_y$; that is $m \overline{x}=M_y$ and $m \overline{y** =M_x$.
+If the density $\delta$ is constant, the point $(\overline{x}, \overline{y})$ is called the \index{centroid} **centroid**  of the region.
+
+::: {#exm- } 
+A lamina occupies a region $R$ in the $xy$-plane bounded by the parabola $y=x^2$ and the line $y=1$. Find the center of mass of the lamina if its mass density at a point $(x,y)$ is directly proportional to the distance between the point and the $x$-axis. 
+::: 
+
+::: {.solution }
+The mass density of the lamina is $\delta(x,y)=ky$ where $k$ is a constant. Since the region $R$ is symmetric with respect to the $y$-axis and the density of the lamina is directly proportional to the distance from the $x$-axis, we see that the center of mass is located on the $y$-axis and so $\overline{x}=0$. To find $\overline{y}$ we view $R$ as a vertically simple region and compute
+\[
+m=\underset{R}{\int \int} \delta d A
+=\int^1_{-1} \int_{x^2}^1 k y \, dy \, dx
+=\frac{k}{2}\int_{-1}^1 (1-x^4)\, dx
+= \frac{4k}{5}.
+\]
+We compute
+\[
+\overline{y}
+=\frac{1}{m} \int^1_{-1} \int_{x^2}^1 k y^2 \, dy \, dx
+=\frac{5}{12} \int^1_{-1} (1-x^6) \, dx 
+=\frac{5}{7}
+\] 
+Therefore, the center of mass is $\left(0,\frac{5}{7}\right)$.
+::: 
+
+## Probability Density Functions
+
+
+Quantities that range continuously over an interval of real numbers are called continuous random variables. Every continuous random variable
+$X$ has a \index{probability density function} **probability density function**  $f$ with the property that the probability of $X$ lying between the numbers $a$ and $b$ is given by the integral  
+\[
+P(a\leq X\leq  b)=\int _a^bf(x) \, dx.
+\]  
+In general, $f(x)\geq 0$ for all $x,$ and since the value of $X$ is always some real number, it follows that $P(-\infty <X<\infty )=1,$ so
+$ \int _{-\infty }^{\infty } f(x)dx=1.$ 
+In geometric terms, the probability $P(a\leq X\leq b)$ is the area under the graph of $f$ over the interval $a\leq x\leq b.$  
+
+ If $X$ and $Y$ are both continuous random variables, then the \index{joint probability density} **joint probability density**  function for two random variables $X$ and $Y$ is a function of two variables $f(x,y)$ such that $f(x,y)\geq 0$ for all $(x,y)$ and 
+\[
+P[(X,Y) \text{ in } D]=\underset{D}{\int \int }f(x,y) \, dA
+\]  
+where $P[(X,Y) \text{ in } D]$ denotes the probability that $(X,Y)$ is in the region $D.$ Note that 
+\[
+P\left[(X,Y) \text{ in } \mathbb{R}^2\right]=\int _{-\infty }^{\infty }\int _{-\infty }^{\infty }f(x,y) \, dx \, dy =1.
+\] 
+Geometrically $P[(X,Y) \text{ in } D]$ may be thought of as the volume under the surface $z=f(x,y)$ above the region $D$. 
+
+::: {#exm- } 
+Suppose the joint probability density function for the random variable $X$ and $Y$ is modeled by  
+\[ 
+f(x,y)=
+\begin{cases}
+ x e^{-x-y} & x\geq 0,y\geq 0  \\
+ 0 & \text{otherwise}.
+\end{cases}
+\]
+Find the probability that $X+Y\leq 1.$  
+::: 
+
+::: {.solution }
+The probability that $X+Y\leq 1$ is given as  
+\begin{align*}
+P(X+Y\leq 1)
+& =\int _0^1\int _0^{1-x} x e^{-x-y} dy\, dx 
+\\[5pt]
+& =\int_0^1 \left(-x\int _0^{1-x}e^{-x-y} (-1)dy\right) \, dx \\[5pt]
+& =\int_0^1 \left(-x \left.e^{-x-y}\right|^{1-x}_0 \right) \, dx 
+\\[5pt]
+& =\int_0^1 \left[\left(-x e^{-x-(1-x)}\right)-\left(-x e^{-x-0}\right)\right] \, dx 
+\\[5pt]
+& =\int_0^1 \left(-\frac{1}{e}+e^{-x}\right) x \, dx 
+\\[5pt]
+& =-\frac{1}{e}\int_0^1 x \, dx+\int _0^1x e^{-x} dx
+\end{align*}
+Let $u=x$ and $dv=e^{-x}dx,$ then $du=dx$ and $v=-e^{-x}$; and so using integration by parts we find 
+\begin{align*}
+P(X+Y\leq 1) 
+&=-\frac{1}{e}\int_0^1 x \, dx-\left.x e^{-x}\right|^1_0 +\int_0^1 e^{-x} \, dx \\
+& =-\frac{1}{e}\left.\frac{x^2}{2}\right|^1_0 -x \left.e^{-x}\right|^1_0 -\left.e^{-x}\right|^1_0 \\
+& =-\frac{1}{e}\left(\frac{1}{2}\right)- \left(\frac{1}{e}\right)-\left(\frac{1}{e}\right)+1
+=1-\frac{5}{2 e} 
+\approx 0.0803014.
+\end{align*}
+::: 
+ 
+::: {#exm- } 
+Suppose the joint probability density function for the random variable $X$ and $Y$ is modeled by 
+\[ f(x,y)=
+\begin{cases}
+ 2e^{-2x-y} & x\geq 0,y\geq 0  \\
+ 0 & \text{otherwise}.
+\end{cases}
+\]
+Find the probability that $X+Y\leq 1.$  
+::: 
+
+::: {.solution }
+We find $P(X+Y\leq 1)$  to be
+\begin{align*}
+& 2\int _0^1\int _0^{1-x} e^{-2x-y} \, dy \, dx
+=2\int_0^1 \left(-e^{-x-1}+e^{-2 x}\right) \, dx 
+\\[5pt]
+& =\frac{1}{ e^2}-\frac{2-e}{e}
+\approx 0.399576.
+\end{align*}
+::: 
+ 
+
+::: {#exm- } 
+Suppose $X$ measures the time (in minutes) that a person stands in line at a certain bank and $Y,$ the duration (in minutes) of a routine transaction at the teller's window. You arrive at the bank to deposit a check. The joint probability density function for $X$ and $Y$ is modeled by  
+\[ 
+f(x,y)=
+\begin{cases}
+ \frac{1}{8} e^{-x/2-y/4} & x\geq 0,y\geq 0 \\
+ 0 & \text{otherwise}
+\end{cases}
+\]
+::: 
+
+::: {.solution }
+Find the probability that you will complete your business at the bank within 8 minutes.  
+ The probability that you will complete your business at the bank within 8 minutes is 
+\begin{align*}
+P(X+Y\leq 8) 
+& 
+=\frac{1}{8}\int _0^8\int _0^{8-x}e^{-x/2-y/4} \, dy \, dx 
+\\[5pt]
+& =(-4)\frac{1}{8}\int _0^8\int _0^{8-x}e^{-x/2-y/4}\left(-\frac{1}{4}\right) \, dy \, dx 
+\\[5pt]
+&  =\left(-\frac{1}{2}\right)\int _0^8\left.\left(e^{-x/2-y/4}\right)\right|^{8-x}_0 dx 
+\\[5pt]
+& =\left(-\frac{1}{2}\right)\int_0^8 \left(e^{-x/2-(8-x)/4}-e^{-x/2}\right) \, dx 
+\\[5pt]
+& =\left(-\frac{1}{2}\right)\int_0^8 \left(e^{\left(-\frac{x}{4}-2\right)}-e^{-x/2}\right) \, dx 
+\\[5pt]
+& =\left(-\frac{1}{2}\right)\left((-4)\int_0^8 e^{\left(-\frac{x}{4}-2\right)}\left(\frac{-1}{4}\right) \, dx-(-2)\int_0^8 e^{\frac{-x}{2}}\left(\frac{-1}{2}\right) \, dx\right) 
+\\[5pt]
+& =\left(-\frac{1}{2}\right)\left(\left.(-4)e^{\left(-\frac{x}{4}-2\right)}\right|^8_0 +\left.2e^{\frac{-x}{2}}\right|^8_0\right) 
+\\[5pt]
+& =2e^{\left(-\frac{x}{4}-2\right)}\left|^8_0-e^{\frac{-x}{2}}\right|^8_0 
+\\[5pt]
+& =2e^{\left(-\frac{8}{4}-2\right)}-2e^{\left(-\frac{0}{4}-2\right)}-\left(e^{\frac{-8}{2}}\right)+\left(e^{\frac{-0}{2}}\right)
+\\[5pt]
+& =e^{-4}-2e^{-2}+1 
+=\left(\frac{1}{e^2}-1\right)^2 
+\approx 0.747645.
+\end{align*}
+::: 
+ 
+ 
+## Exercises
+
+::: {#exr- } 
+Find the centroid for a lamina with $\delta =4$ over the region bounded by the curve $y=\sqrt{x}$ and the line $x=4$ in the first octant.
+::: 
+
+::: {#exr- } 
+Find the centroid for a lamina with $\delta =2$ over the region between the line $y=2x$ and the parabola $y=x^2.$ 
+::: 
+
+::: {#exr- } 
+Use double integration to find the center of mass of a lamina covering the region $x^2+y^2\leq 9,$ $y\geq 0$ with density function $\delta
+(x,y)=x^2+y^2.$ 
+::: 
+
+::: {#exr- } 
+Use double integration to find the center of mass of a lamina covering the region bounded by $y=0,$ $y=x^2,$ and $x=6$ with density function
+$\delta (x,y)=3x.$ 
+::: 
+
+::: {#exr- } 
+Use double integration to find the center of mass of a lamina covering the region bounded by $y=\ln (x),$ $y=0,$ and $x=2$ with density
+function $\delta (x,y)=1/x.$ 
+::: 
+
+::: {#exr- } 
+A lamina has the shape of a semicircular region $x^2+y^2\leq a^2,$ $y\geq 0.$ Find the center of mass of the lamina if the density at each
+point is directly proportional to the square of the distance from the point to the origin.
+ 
+- Find the center of mass of the cardioid $r=1+\sin  \theta $ if the density at each point $(r,\theta )$ is $\delta (r,\theta )=r.$
+::: 
+
+::: {#exr- } 
+Find the centroid of the loop of the lemniscate $r^2=2 \sin  2 \theta $ that lies in the first quadrant. 
+::: 
+
+::: {#exr- } 
+Find the centroid of the part of the large loop of the limacon $r=1+2 \cos  \theta $ that does not include the small loop.
+::: 
+
+::: {#exr- } 
+Find the center of mass of the lamina that covers the triangular region with vertices $(0,0),$ $(a,0),$ $(a,b),$ if $a$ and $b$ are
+both positive and the density at $P(x,y)$ is directly proportional to the distance of $P$ from the $y$-axis. 
+::: 
+
+::: {#exr- } 
+For each of the following joint probability density functions with the random variables $X$ and $Y$ find the indicated probability.
+ 
+- $ f(x,y)=
+\begin{cases}
+ 2e^{-2x}e^{-y} & x\geq 0, y\geq 0  \\
+ 0 & \text{otherwise}
+\end{cases}
+$; 
+$X+Y\leq 1.$
+- $ f(x,y)=
+\begin{cases}
+ x e^{-x}e^{-y} & x\geq 0, y\geq 0  \\
+ 0 & \text{otherwise}
+\end{cases}
+$; 
+$X+Y\leq 1.$
+- $f(x,y)=
+\begin{cases}
+ \frac{1}{6} e^{-x/2}e^{-y/3} & x\geq 0, y\geq 0  \\
+ 0 & \text{otherwise}
+\end{cases}
+$; 
+$X+Y\leq 3.$
+- $ f(x,y)=
+\begin{cases}
+ \frac{1}{300} e^{-x/30}e^{-y/10} & x\geq 0, y\geq 0  \\
+ 0 & \text{otherwise}
+\end{cases}
+$; 
+$X+Y\leq 3.$
+ 
+::: 
+
+
+

@@ -4,7 +4,35 @@
     "href": "index.html",
     "title": "Learning Number Theory",
     "section": "",
-    "text": "Welcome\n\n\nPreface"
+    "text": "Preface"
+  },
+  {
+    "objectID": "index.html#about-this-book",
+    "href": "index.html#about-this-book",
+    "title": "Learning Number Theory",
+    "section": "About this book",
+    "text": "About this book"
+  },
+  {
+    "objectID": "index.html#other-resources",
+    "href": "index.html#other-resources",
+    "title": "Learning Number Theory",
+    "section": "Other resources",
+    "text": "Other resources"
+  },
+  {
+    "objectID": "index.html#update-history",
+    "href": "index.html#update-history",
+    "title": "Learning Number Theory",
+    "section": "Update history",
+    "text": "Update history\n\nFirst draft published on 1/18/2023."
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Learning Number Theory",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements"
   },
   {
     "objectID": "peanos-axioms.html#addition",

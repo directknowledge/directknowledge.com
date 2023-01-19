@@ -1,5 +1,5 @@
 ---
-pagetitle: "Basic Set Theory - Learn set theory"
+pagetitle: "Basic Set Theory - That Anyone Can Learn"
 ---
 # Preface {.unnumbered}
 

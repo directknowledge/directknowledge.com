@@ -1,0 +1,194 @@
+---
+pagetitle: "Taylor Polynomials and Approximations - Exploring Calculus"
+---
+# Taylor Polynomials and Approximations
+
+Recall a tangent line approximation of a function is used to obtain a local linear approximation of the function near the point of tangency. 
+We consider how to improve on the accuracy of tangent linear approximations by using higher-order polynomials as approximating functions. 
+We also discuss the error associated with such approximations. 
+
+
+## Polynomial Approximations
+
+The goal is to show how polynomial functions can be used to approximate other elementary functions. 
+First we investigate local approximations around $x=0$. 
+
+
+## Maclaurin Polynomials
+
+::: {#def- } 
+If $f$ can be differentiated $n$ times at 0, then the polynomial 
+\begin{equation}
+\label{mp}
+p_n(x) =f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \cdots +\frac{f^{(n)}(0)}{n!}x^n 
+\end{equation}
+is called the $n$th \index{Maclaurin polynomial} **Maclaurin polynomial**  for $f$. 
+::: 
+
+Note that a Maclaurin polynomial has the property that its value and the values of its first $n$ derivatives match the values of $f$ and its first $n$ derivatives at $x=0$. 
+
+::: {#exm- } 
+Determine the $n$th Maclaurin polynomial for each of the following functions: $\sin x$, $\cos x$, $\ln x$, and $e^x$. 
+::: 
+
+::: {.solution }
+Respectively we have,
+\begin{align*}
+\sin x \qquad & p_n(x) = x - \frac{x^3}{6}+\frac{x^5}{120} - \frac{x^7}{5040} + \cdots + \frac{(-1)^{(n-1)}}{(2n-1)!} x^{2n-1} \\
+\cos x \qquad & p_n(x) = 1 - \frac{x^2}{2}+\frac{x^4}{24} -\frac{x^6}{720}+\cdots  + \frac{(-1)^{(n-1)}}{(2n-2)!} x^{2n-2} \\
+e^x \qquad & p_n(x) = 1+x +\frac{1}{2!}x^2 +\frac{1}{3!} x^3+\cdots +\frac{1}{n!} x^n 
+\end{align*}
+using \eqref{mp} directly.
+::: 
+
+
+
+## Taylor Polynomials
+
+We want to find an $n$th-degree polynomial $p$ with the property that its value and the values of its first $n$ derivatives match the values of $f$ and its first $n$ derivatives at $x=x_0$. 
+However, rather than expressing $p(x)$ in powers of $x$, it will simplify the computations if we express it in powers of $x-x_0$; that is, we what a polynomial 
+\begin{equation}
+\label{tpdef}
+p(x) = c_0 +c_1(x-x_0)+ c_2 (x-x_0)^2  +\cdots + c_n (x-x_0)^n
+\end{equation}
+such that $f(x_0) = p(x_0)$ and 
+\begin{align}
+\label{cond}
+f'(x_0) = p'(x_0), 
+\quad f''(x_0) = p''(x_0), 
+\quad \ldots, 
+\quad f^{(n)}(x_0) = p^{(n)}(x_0)
+\end{align}
+However notice that
+\begin{align*}
+p(x) & = c_0 +c_1(x-x_0) + c_2 (x-x_0)^2 + c_3 (x-x_0)^3 +\cdots + c_n (x-x_0)^n \\
+p'(x) & = c_1+ 2c_2 (x-x_0) + 3 c_3 (x-x_0)^2  + \cdots + n c_n (x-x_0)^{n-1} \\
+p''(x) & = 2 c_2 + 3 c_3 (x-x_0) +\cdots + n (n-1) c_n (x-x_0)^{n-2} \\
+p'''(x) & = 3 c_3 +\cdots + n (n-1)(n-2) c_n (x-x_0)^{n-3} \\
+& \vdots \\
+p^{(n)}(x) & =  n(n-1)(n-2)\cdots (1) c_n \\
+\end{align*}
+Therefore to satisfy \eqref{cond} we must have 
+\begin{align*}
+f(x_0) & = p(x_0) = c_0 \\
+f'(x_0) & = p(x_0) = c_1 \\
+f''(x_0) & = p(x_0) = 2c_2 =2! \,  c_2 \\
+f'''(x_0) & = p(x_0) = 6 c_3 =3! \, c_3 \\
+& \vdots \\
+f^{(n)}(x_0) & = p^{(n)}(x_0) = n(n-1)(n-2)\cdots (1) c_n = n! c_n.
+\end{align*}
+Solving for the coefficients $c_i$ for \eqref{tpdef} yields $c_0 = f(x_0)$ and 
+\begin{align*}
+\quad c_1 = f'(x_0),
+\quad c_2 = \frac{f''(x_0)}{2!},
+\quad c_3 = \frac{f'''(x_0)}{3!},
+\quad \ldots, 
+\quad c_n = \frac{f^{(n)}(x_0)}{n!},
+\end{align*}
+In other words we have just proven the following theorem.
+
+::: {#thm- } 
+If a function $f$ has a power series expansion at $c$, that is, if 
+$$
+f(x) = \sum_{n=0}^\infty a_n (x-c)^n, \qquad |c-a|< R
+$$
+then its coefficients are given by $c_n = \frac{f^{(n)}(x_0)}{n!}$.
+::: 
+
+::: {#def- } 
+If $f$ can be differentiated $n$ times at $x_0$, then the polynomial 
+\begin{align*}
+p_n(x) = f(x_0) + & f'(x_0)(x-x_0)  + \frac{f''(x_0)}{2!}(x-x_0)^2 \\
+& + \frac{f'''(x_0)}{3!}(x-x_0)^3 + \cdots +\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n 
+\end{align*}
+is called the $n$th \index{Taylor polynomial} **Taylor polynomial**  for $f$. 
+::: 
+
+Note that a Taylor polynomial has the property that its value and the values of its first $n$ derivatives match the values of $f$ and its first $n$ derivatives at $x=x_0$. 
+
+Whenever $n=1$ we say that the Taylor Polynomial $p_1(x)$ for a function $f$ is a \index{local linear approximation} **local linear approximation**  for $f$ around $x=x_0$. 
+Similarly, whenever $n=2$ we say that the Taylor Polynomial $p_2(x)$ for a function $f$ is a \index{local quadratic approximation} **local quadratic approximation**  for $f$ around $x=x_0$. 
+
+::: {#exm- } 
+Find the linear and quadratic approximations to $f(x)=\ln x$ at $x=1$. 
+Use these approximations to estimate $\ln 1.05$. 
+::: 
+
+::: {.solution }
+Notice that $f'(x)=1/x$ and $f''(x)=-1/x^2$. 
+Thus $f'(1)=1$ and $f''(1)=-1$. 
+So the 1st degree Taylor polynomial is 
+$$
+p_1(x) = f(1)+f'(1)(x-1)=x-1.
+$$
+This is the linear (tangent line) approximation of $\ln x$ at $x=1$. 
+Further the 2nd degree Taylor polynomial is 
+$$
+p_2(x) = p_1(x) + \frac{1}{2}f''(1)(x-1)^2 = (x-1) -\frac{1}{2}(x-1)^2.
+$$
+This is the local quadratic approximation of $\ln x$ at $x=1$. 
+Using 
+\begin{align*}
+p_1(1.05) & =1.05-1=0.05 \\
+p_2(1.05) & = (1.05-1) -\frac{1}{2}(1.05-1)^2 = 0.04875. 
+\end{align*}
+The value of $\ln 1.05$ given by calculator is $0.04879$. 
+::: 
+
+
+
+## Exercises
+
+
+::: {#exr- } 
+For each of the following find the Taylor polynomial of orders $0, 1, 2,$ and 3 generated by $f$ at $c$.
+\begin{multicols}{2}
+ - $f(x)=1/x$, $c=2$
+- $f(x)=1/(x+2)$, $c=0$
+- $f(x)=\sqrt{x}$, $c=4$
+- $f(x)=\sin x$, $c=\pi/6$
+ 
+\end{multicols}
+::: 
+
+
+::: {#exr- } 
+For each of the following find the linearization and quadratic approximation of $f$ at $x=0$.
+\begin{multicols}{3}
+ - $f(x)=\ln (\sin x)$
+- $f(x)=1/\sqrt{1-x^2}$
+- $f(x)=e^{\cos x}$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Find the $n$th-order Taylor polynomial $p_n(x)$ at $c$ for the function $f$ and the values of $n$. 
+Plot the graphs of $f$ and the approximating polynomials on the same set of axes.
+ - $f(x)=\cos x$, $c=\pi/4$, $n=0,1,2,3,4$
+- $f(x)=e^x x$, $c=1$, $n=0,1,2,3,4$
+ 
+::: 
+
+::: {#exr- } 
+Use a Taylor polynomial to approximate the given number to within the indicated accuracy. 
+\begin{multicols}{3}
+ - $e^{0.2}$, $0.0001$
+- $-\frac{1}{2.1}$, $0.0005$
+- $\sin 69^\circ$, $0.0001$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Find the Taylor polynomial $p_n(x)$ and the Taylor remainder $r_n(x)$ for the function $f$ and the values of $c$ and $n$.
+ - $f(x)=x^4+3x^2+2x+3$, $c=-1$, $n=4$
+- $f(x) =\tan x$, $c=\pi/4$, $n=2$
+- $f(x)=\sqrt[3]{x}$, $c=-8$, $n=3$
+- $f(x)= x\sin x$, $n=2$, $c=\pi/4$
+- $f(x)=\frac{2}{x}$, $n=3$, $c=1$
+- $f(x)=x^2\cos x$, $n=2$, $c=\pi$
+ 
+::: 
+
+

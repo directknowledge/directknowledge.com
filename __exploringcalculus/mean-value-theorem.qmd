@@ -1,0 +1,307 @@
+---
+pagetitle: "Mean Value Theorem - Exploring Calculus"
+---
+# Mean Value Theorem
+
+## Rolle's Theorem
+
+
+The Extreme Value Theorem guarantees the existence of a maximum and minimum value of a continuous function on a closed bounded interval. 
+The next theorem is called Rolle's Theorem and it guarantees the existence of an extreme value on the interior of a closed interval, under certain conditions. 
+Basically Rolle's theorem states that if a function is differentiable on an open interval, continuous at the endpoints, and if the function values are equal at the endpoints, then it has at least one horizontal tangent. 
+Of course if the function is constant this is automatically true for all points in the interval. 
+So the point is that Rolle's theorem guarantees us at least one point in the interval where there will be a horizontal tangent. 
+Rolle's theorem is a special case of the Mean Value Theorem for when the values of the function are the same at the endpoints of the interval. 
+
+
+::: {#thm- } [Rolle's Theorem] 
+Let $f$ be a function that is continuous on $[a,b]$, differentiable on $(a,b)$, and $f(a)=f(b).$ 
+Then there exists at least one number $c$ in $(a,b)$ such that $f'(c)=0.$ 
+:::  
+
+::: {.proof } 
+If $f$ is a constant function, then the statement is true; in fact $f'(c)=0$ for all $c$ in $(a,b).$ 
+If $f(x)>f(a)=f(b)$ for some $x$ in $(a,b),$ then by the Extreme Value Theorem, $f$ attains its absolute maximum value somewhere in the open interval $(a,b).$ 
+But precisely at this $c$ we have, $f'(c)=0.$ 
+If $f(x)<f(a)=f(b)$ for some $x$ in $(a,b),$ then by the Extreme Value Theorem, $f$ attains its absolute minimum value somewhere in the open interval $(a,b).$ 
+But precisely at this $c$ we have, $f'(c)=0.$ 
+::: 
+
+::: {#exm- }  
+
+Verify Rolle's theorem for $f(x)=4-4 x-x^2+x^3$ on $[-2,2].$ 
+::: 
+
+::: {.solution }
+Notice that $f$ is continuous and differentiable for all real numbers. 
+Also, $f(-2)$ $=\text{f(2)}$ $=0$ and therefore Rolle's theorem applies and so there is at least one $c$ in $(-2,2)$ such that $f'(c)=0.$ 
+We can find it by solving $f'(c)=-4-2 c+3 c^2=0.$ 
+In fact we find two, namely $c=\frac{1}{3} \left(1\pm \sqrt{13}\right)$   (see Figure ~\ref{fig:graph5}). 
+::: 
+
+\begin{figure}[ht]
+\centering
+\subfigure[$f(x)=4-4 x-x^2+x^3$]{
+\includegraphics[width=150pt]{_includes/the-mean-value-theorem-1.pdf}
+\label{fig:graph5}
+}
+\quad
+\subfigure[$x^3+x-1=0$]{
+\includegraphics[width=160pt]{_includes/the-mean-value-theorem-2.pdf}
+\label{fig:graph6}
+}
+\caption{Illustrating Rolle's Theorem}
+\label{fig:graphs}
+\end{figure}
+
+::: {#exm- }  
+Show that the equation $x^3+x-1=0$ has exactly one real root. 
+::: 
+
+::: {.solution }
+Since the function $f(x)=x^3+x-1$ is a polynomial it is continuous and differentiable for all real numbers. 
+Thus, the Intermediate Value Theorem and Rolle's Theorem applies. 
+Since $f(0)=-1<0$ and $f(1)=1>0,$ by the Intermediate Value Theorem there is a $c$ in $(0,1)$ such that $f(x)=0.$ 
+Therefore, the equation has at least one solution. 
+To prove that $f(x)=0$ for only one $x,$ we assume that there are two roots namely, $x_1$ and $x_2$; and we prove that this can not happen. 
+Thus, assume $x_1$ and $x_2$ are solutions, that is $f\left(x_1\right)=f\left(x_2\right)=0$ with $x_1<x_2.$ 
+Then by Rolle's Theorem there exists a $c$ in $\left(x_1,x_2\right)$ such that $f'(c)=0.$ 
+Notice that $f'(c)=3x^2+1>0$ so that in fact such a $c$ can not exist. 
+Therefore, there can not be $x_1<x_2$ and in fact the equation has exactly one real root  (see Figure ~\ref{fig:graph6}).
+::: 
+
+## The Mean Value Theorem
+
+Given a function that is differentiable on an open interval and continuous at the endpoints the Mean Value Theorem states there exists a number in the open interval where the slope of the tangent line at this point on the graph is the same as the slope of the line through the two points on the graph determined by the endpoints of the interval. 
+The \index{mean} **mean**  in the Mean Value Theorem is referring to the mean (average) rate of change of $f$ in the interval. 
+
+Next we detail Rolle's Theorem and the Mean Value Theorem. 
+We provide examples and illustrate why the hypotheses of these two theorems are necessary. 
+We also give applications and detail two other theorems which are consequences of the Mean Value Theorem. 
+We also emphasize that the Mean Value Theorem tells us that between two fixed points of time, the instantaneous velocity is equal to the average velocity. 
+
+
+::: {#thm- } [Mean Value Theorem]
+Let $f$ be a function that is continuous on $[a,b]$ and differentiable on $(a,b).$ 
+Then there exists at least one number $c$ in $(a,b)$ such that 
+\[
+f'(c)=\frac{f(b)-f(a)}{b-a}.
+\]
+::: 
+
+::: {.proof } 
+The equation of the secant line through $(a,f(a))$ and $(b,f(b))$ is 
+\[
+y=\left[\frac{f(b)-f(a)}{b-a}\right](x-a)+f(a).
+\] 
+Let $g(x)$ be the difference between $f(x)$ and $y.$ 
+Then 
+\[
+g(x)=f(x)-\left[\frac{f(b)-f(a)}{b-a}\right](x-a)-f(a).
+\]
+We can see that $g(a)=g(b)=0.$ 
+Because $f$ is continuous on $[a,b]$ and differentiable on $(a,b),$ so is $g.$ 
+By Rolle's Theorem, there exists a number $c$ in $(a,b)$ such that $g'(c)=0,$ which means 
+\[
+g'(c)=f'(c)-\frac{f(b)-f(a)}{b-a}=0
+\] 
+and so $f'(c)=\frac{f(b)-f(a)}{b-a}$ as desired. 
+::: 
+
+
+::: {#exm- }  
+Find all numbers $c$ in the interval $[a,b]$ such that 
+\[
+f'(c)=\frac{f(b)-f(a)}{b-a}
+\] 
+for the function $\ds f(x)=1+\frac{1}{x}$ on $[1,4]$. 
+::: 
+
+\begin{figure}[ht]
+\centering
+\subfigure[$\ds f(x)=1+\frac{1}{x}$]{
+\includegraphics[width=150pt]{_includes/the-mean-value-theorem-3.pdf}
+\label{fig:graph7}
+}
+\quad
+\subfigure[$f(x)=\tan ^{-1}x$]{
+\includegraphics[width=160pt]{_includes/the-mean-value-theorem-4.pdf}
+\label{fig:graph8}
+}
+\caption{Illustrating Mean Value Theorem}
+\label{fig:graphs}
+\end{figure}
+
+::: {.solution }
+Since $f$ is continuous on $[0,1]$ and differentiable on $(0,1)$ we apply the Mean Value Theorem,
+\[
+f'(c)=-\frac{1}{c^2}=\frac{f(b)-f(a)}{b-a}=\frac{\left(1+\frac{1}{4}\right)-\left(1+\frac{1}{1}\right)}{4-1}=-0.25
+\] 
+Solving for $c$ we obtain, $c=2$ since $-2$ is not in $[1,4]$  (see Figure ~\ref{fig:graph7}).  
+::: 
+
+
+::: {#exm- }  
+Find all numbers $c$ in the interval $[a,b]$ such that 
+
+\[
+f'(c)=\frac{f(b)-f(a)}{b-a}
+\]
+for the function $f(x)=\tan ^{-1}x$ on $[0,1]$. 
+::: 
+
+::: {.solution }
+Since $f$ is continuous on $[0,1]$ and differentiable on $(0,1)$ we apply the Mean Value Theorem,
+\[f'(c)=\frac{1}{1+c^2}=\frac{f(b)-f(a)}{b-a}=\frac{\left(\tan^{-1}1\right)-\left(\tan ^{-1}0\right)}{1-0}=\frac{\pi }{4}\]
+Solving for $c$ we obtain, $c=\sqrt{\frac{4-\pi }{\pi }}$ since $-\sqrt{\frac{4-\pi }{\pi }}$ is not in $[0,1]$  (see Figure ~\ref{fig:graph8}). 
+::: 
+
+## Using the Mean Value Theorem
+
+
+::: {#exm- }  
+Using the Mean Value Theorem evaluate, 
+\[
+\lim _{x\to 0}\frac{(1+x)^n-1}{x}
+\] 
+where $n$ is a natural number.
+::: 
+
+::: {.solution }
+We will use the Mean Value Theorem to find all numbers $c$ in the interval $[a,b]$ such that 
+\[
+f'(c)=\frac{f(b)-f(a)}{b-a}
+\] 
+for the function $f(x)=(1+x)^n$ on $[0,x]$. 
+Since $f$ is continuous and differentiable on $[0,x]$, we apply the Mean Value Theorem, 
+\[
+f'(c)=n(1+c)^{n-1}=\frac{f(b)-f(a)}{b-a}=\frac{(1+x)^n-(1+0)^n}{x-0}=\frac{(1+x)^n-1}{x}
+\] 
+Since $f$ is continuous on $[0,x]$ and differentiable on $(0,x)$ we know this $c$ must exist. 
+In fact since $0<c<x$, as $x\to 0$ we see that $c\to 0$ because the Mean Value Theorem says that $c$ is in the open interval $(0,x).$ 
+Thus we can evaluate the limit 
+\[
+\lim _{x\to 0}\frac{(1+x)^n-1}{x}=\lim _{c\to 0}n(1+c)^{n-1}=n
+\]
+as desired. 
+::: 
+
+If an object moves in a straight line with position function $s=f(t),$ then the average velocity between $t=a$ and $t=b$ is 
+\[
+\frac{f(b)-f(a)}{b-a}
+\]
+and the velocity at $t=c$ is $f'(c).$ 
+Thus the Mean Value Theorem tells us that at some time $t=c$ between $a$ and $b$ the instantaneous velocity $f'(c)$ is equal to that average velocity. 
+
+
+::: {#exm- }  
+Two stationary patrol cars equipped with radar are 1.2 miles apart on a street. 
+As a truck passes the first patrol car, its speed is clocked at 35 miles per hour. 
+One and half minutes later, when the truck passes the second patrol car, its speed is clocked at 30 miles per hour. 
+Prove that the truck must have exceeded the speed limit (of 35 miles per hour) at some time during the one and half minutes. 
+::: 
+
+::: {.solution }
+Let $t=0$ be the time when the truck passes the first patrol car. 
+The time when it passes the second patrol car is $1.5/60$ hour. 
+By letting $s(t)$ represent the distance (in miles) travelled by the truck, we have $s(0)=0$ and $s(1.5/60)=1.2.$ 
+So the average velocity is
+\[
+\frac{s\left(\frac{1.5}{60}\right)-s(0)}{\frac{1.5}{60}-0}=\frac{1.2}{\frac{1.5}{60}}=48.0 \text{  mph} 
+\]
+Assuming that the position function is differentiable, we can apply the Mean Value Theorem to conclude that the truck must have been traveling at a rate of 48 miles per hour sometime during the one and half minutes. 
+::: 
+
+
+## Exercises
+
+::: {#exr- } 
+Determine the values of the constants $a,b,c,$ and $d$ such that the functions 
+\[f(x)=\left\{
+\begin{array}{ll}
+ 1 & x=0 \\
+ a x+b & 0<x\leq 1 \\
+ x^2+4x+c & 1<x\leq 3
+\end{array}
+\right.\]
+\[g(x)=\left\{
+\begin{array}{ll}
+ a & x=-1 \\
+ 2 & 0<x\leq 0 \\
+ b x^2+c & 0<x\leq 1 \\
+ d x+4 & 1<x\leq 2
+\end{array}
+\right.\]
+satisfies the hypotheses of the Mean Value Theorem on the intervals  $[0,3]$  and $[-1,2]$  respectively. 
+::: 
+
+::: {#exr- } 
+Find the value(s) of $c$ that satisfy the equation $\frac{f(b)-f(a)}{b-a}=f'(c)$ for $f(x) =x^{2/3}$ in the conclusion of the Mean Value Theorem on $[0,1].$ 
+::: 
+
+::: {#exr- } 
+Find the value(s) of $c$ that satisfy the equation $\frac{f(b)-f(a)}{b-a}=f'(c)$ for $f(x) =\ln (x-1)$ in the conclusion of the Mean Value Theorem on $[2,4].$
+::: 
+
+::: {#exr- } 
+Does the function $f(x) =x^{2/3}$ satisfy the hypotheses of the Mean Value Theorem on the interval $[-1,8]?$ State why or why not. 
+::: 
+
+::: {#exr- } 
+Does the function
+$f(x) =\left\{
+\begin{array}{cc}
+ \frac{\sin  x}{x} & -\pi \leq x\leq 0 \\
+ 0 & x=1
+\end{array}
+\right.
+$ 
+satisfy the hypotheses of the Mean Value Theorem on the interval $[-1,8]?$ State why or why not. 
+::: 
+
+::: {#exr- } 
+Assume $a_1\neq 0.$ Let $f(x)=a_1x^2+a_2 x+a_3.$ Prove that for any interval $[a,b]$ the value of $c$ guaranteed by the Mean Value Theorem for $f$ is the midpoint of the interval. 
+::: 
+
+::: {#exr- } 
+Show that a cubic can have at most three zeros. 
+::: 
+
+::: {#exr- } 
+Show that the function $g(t)=\sqrt{t}+\sqrt{1+t}-4$ has exactly one zero in the interval $(0,+\infty).$ 
+::: 
+
+::: {#exr- } 
+Show that the function $g(t)=2 t-\cos ^2t+\sqrt{2}$ has exactly one zero in the interval $(-\infty ,+\infty ).$ 
+::: 
+
+::: {#exr- } 
+Suppose that $f(-1)=3$ and that $f'(x)=0$ for all $x.$ Must $f(x)=3$ for all $x?$ Why or why not? 
+::: 
+
+::: {#exr- } 
+Suppose that $f'(x)=2x$ for all $x.$ Find $f(2)=3$ if $f(-2)=3.$ 
+::: 
+
+::: {#exr- } 
+Show that the equations $x^5+10x+3=0$ and $x^7+5x^3+x-6=0$ each have exactly one real root.
+::: 
+
+::: {#exr- } 
+Use the Mean Value Theorem to show the following
+\[\lim _{x\to \pi }\frac{\cos  x+1}{x-\pi }=0\] and \[\frac{1}{2x+1}>\frac{1}{5}+\frac{2}{25}(2-x)\] when $0<x<2.$ 
+::: 
+
+::: {#exr- } 
+Let $f(x)=\frac{1}{x}$ and 
+\[g(x)=\left\{
+\begin{array}{cc}
+ \frac{1}{x} & x>0 \\
+ 1+\frac{1}{x} & x<0
+\end{array}
+\right.\] 
+Show that $f'(x)=g'(x)$ for all $x$ in their domains. Can we conclude that $f-g$ is constant? 
+::: 
+
+
+

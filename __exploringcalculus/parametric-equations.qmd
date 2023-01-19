@@ -1,0 +1,379 @@
+---
+pagetitle: "Parametric Equations - Exploring Calculus"
+---
+# Parametric Equations
+
+Parametric equations are a set of functions of one or more independent variables called parameters and are used to express the coordinates of the points that make up a geometric object such as a curve or surface.
+We begin by sketching the graph of a few parametric equations. 
+Tangent lines to parametric curves and motion along a curve is discussed. 
+We end with parametric equations expressed in polar form. 
+
+
+## Sketching Parametric Curves
+
+Let $C$ be a curve defined by 
+$$
+P(t)=(f(t),g(t))
+$$ 
+where $f$ and $g$ are defined on an interval $I.$ 
+The equations 
+$$
+x=f(t) 
+\qquad \text{and}\qquad
+y=g(t) 
+$$
+for $t\in I$ are \index{parametric equations} **parametric equations**  for $C$ with parameter $t.$  
+The \index{orientation} **orientation**  of a parameterized curve $C$ is the direction determined by increasing values of the parameter.
+
+::: {#exm- } 
+(a) Sketch the graph of the curve 
+$$
+C_1: x=t, y=1-t
+$$ 
+on $[0,1]$ by plotting values for $t;$ and then check your graph by finding an equation in $x$ and $y$ only and then graphing. Show the orientation of the curve. 
+(b) Sketch the graph of the curve 
+$$
+C_2: x=1-t^2, y=t^2
+$$ 
+on $[0,1]$ by plotting values for $t;$ and then check your graph by finding an equation in $x$ and $y$ only and then graphing. 
+Show the orientation of the curve. 
+::: 
+ 
+::: {.solution }
+(a) The graph starts at the point $(0,1)$ and follows the line ${y=1-x}$ until it reaches the other endpoint at $(1,0).$ 
+(b) The graph starts at the point $(1,0)$ and follows the line $x=1-y$ until it reaches the other endpoint at $(0,1).$ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=150pt]{_includes/p11-pec.pdf}
+\end{figure}
+Comparing (a) and (b) we see that the graph of a curve may have more than one parametrization. 
+Can you think of another set of parametric equations that gives
+the same graph?   
+::: 
+ 
+::: {#exm- } 
+Sketch the graph of the curve 
+$$
+C_3: x=\cos  2t, y=\sin  2t
+$$ 
+on $\left[0,\frac{\pi }{2}\right]$ by plotting values for $t;$ and then check your graph by finding an equation in $x$ and $y$ only and then graphing. 
+Show the orientation of the curve. 
+::: 
+
+::: {.solution }
+The curve starts at $(1,0)$ and follows the upper part of the unit circle until it reaches the other endpoint of $(-1,0).$ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=150pt]{_includes/p12-pec.pdf}
+\end{figure}
+Can you think of another set of parametric equations that give the same graph? 
+::: 
+
+::: {#exm- } 
+(a) Find a rectangular equation whose graph contains the curve $C$ with the parametric equations 
+$$
+x=\frac{2t}{1+t^2}
+\qquad \text{and}\qquad
+y=\frac{1-t^2}{1+t^2}
+$$ 
+and (b) sketch the curve $C$ and indicate its orientation.
+::: 
+
+::: {.solution } 
+Since 
+\begin{equation}
+x^2+y^2
+=\frac{4t^2+(1-2t^2+t^4)}{(1+t^2)^2}
+=\frac{1+2t^2+t^4}{(1+t^2)^2}=1
+\end{equation}
+and also $x(0)=0$, $y(0)=0$ and $x(1/2)=4/5$, $y(1/2)=3/5$ we see the graph of the given parametric equations represents the unit circle with orientation counterclockwise. 
+\begin{figure}[H]
+\centering
+\includegraphics[width= 150pt]{_includes/p13-pec.pdf}
+\end{figure}
+::: 
+ 
+::: {#exm- } 
+The position of a particle at time $t$ is $(x,y)$ where $x=\sin t$ and $y=\sin^2 t.$ 
+Describe the motion of the particle as $t$ varies over the time interval $[a,b].$
+::: 
+
+::: {.solution } 
+We can eliminate $t$ to see that the motion of the object takes place on the parabola, $y=x^2.$ 
+\begin{figure}[H]
+\centering
+\includegraphics[width= 150pt]{_includes/p14-pec.pdf}
+\end{figure}
+The orientation of the curve is from $(\sin a, \sin^2 a)$ to $(\sin b, \sin^2 b).$ 
+::: 
+ 
+
+## Tangent Lines to Parametric Curves
+
+::: {#thm- } 
+If $f'(t)$ is continuous and $f'(t)\neq 0$ for $a\leq t \leq b$, then the parametric curve defined by $x=f(t)$ and $y=g(t)$ for $a\leq t \leq b$, can be put into the form $y=F(x).$ Moreover, 
+\begin{equation}
+F'(x)=\frac{g'(t)}{f'(t)} \quad \text{ and in Leibniz notation } \quad 
+\frac{dy}{dx}=\frac{dy/dt}{dx/dt}
+\end{equation}
+whenever, $\frac{dx}{dt}\neq 0.$ Also, if the parametric equations $x(t)$ and $y(t)$ define $y$ as a twice differentiable function over some suitable interval, then 
+\begin{equation}
+\frac{d^2 y}{dx^2}=\frac{d}{dx}\left(\frac{dy}{dx}\right)=\frac{  \frac{d}{dt}\left( \frac{dy}{dx}\right)}{  \frac{dx}{dt}}.
+\end{equation}
+::: 
+
+::: {#exm- } 
+Find the slope of the tangent line to the curve defined by the parametric equations $x=2(\theta-\sin \theta)$ and $y=2(1-\cos \theta)$ at the point corresponding to the value of the parameter $\theta=\pi/6.$ 
+::: 
+
+::: {.solution } 
+Since $\frac{dx}{d\theta}=2(1-\cos \theta)$ and $\frac{dy}{d\theta}=2\sin \theta.$ The slope of the tangent line at $\theta=\pi/6$ is
+\begin{align*}
+\left.\frac{dy}{dx}\right|_{\theta=\pi/6}
+& =\left.\frac{dy/d\theta}{dx/d\theta}\right|_{\theta=\pi/6} \\
+& =\left.\frac{2\sin \theta}{2(1-\cos \theta)}\right|_{\theta=\pi/6}
+=\frac{1}{2\left.(1-\frac{\sqrt{3}}{2}\right)}=2+\sqrt{3}.
+\end{align*}
+as desired.
+::: 
+ 
+::: {#exm- } 
+Find an equation of the tangent line to the curve defined by the parametric equations $x=e^t$ and $y=e^{-t}$ at the point $(1,1).$ Then sketch the curve and the tangent line(s).
+::: 
+
+::: {.solution } 
+Since $\frac{dx}{dt}=e^t$ and  $\frac{dy}{dt}=-e^{-t}$, 
+\begin{equation}
+\frac{dy}{dx}=\frac{dy/dt}{dx/dt}=\frac{-e^{-t}}{e^t}=-\frac{1}{e^{2t}}.
+\end{equation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=150pt]{_includes/p15-pec.pdf}
+\end{figure}
+The point $(1,1)$ corresponds to $t=0.$ 
+The slope of the tangent line is 
+$$
+\left.\frac{dy}{dx}\right|_{t=0}=-1,
+$$ 
+so an equation is $y-1=-1(x-1)$ or just $-x+2.$ 
+::: 
+
+::: {#exm- } 
+Find the points on the curve defined by parametric equations $x=t^3-3t$ and $y=t^2$  at which the tangent line is either horizontal or vertical. Then sketch the curve. 
+::: 
+
+::: {.solution } 
+First we find the derivatives of $x$ and $y$ with respect to $t$: $\frac{dx}{dt}=3t^2-3$ and $\frac{dy}{dt}=2t.$ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=150pt]{_includes/p16-pec.pdf}
+\end{figure}
+To find the point(s) where the tangent line is horizontal, set $\frac{dy}{dt}=0$ obtaining $t=0.$ Since $\frac{dx}{dt} \neq 0$ 
+at this $t$ value, the required point is $(0,0).$ 
+To find the point(s) where the tangent line is vertical, set $\frac{dx}{dt}=0$ obtaining $t=\pm 1.$ 
+Since $\frac{dy}{dt}\neq 0$ at either of these $t$-values, the required points are $(2,1)$ and $(-2,1).$
+::: 
+ 
+::: {#exm- } 
+Find $\frac{dy}{dx}$ and $\frac{d^2y}{dx^2}$ given the parametric equations $x=\sqrt{t^2+1}$ and $y=t \ln t.$ 
+::: 
+
+::: {.solution } 
+Since $\frac{dx}{dt}=\frac{t}{\sqrt{t^2+1}}$ and  $\frac{dy}{dt}=1+\ln t$
+\begin{equation}
+\frac{dy}{dx}=\frac{  dy/dt}{  dx/dt}=\frac{1+\ln t}{t/\sqrt{t^2+1}}=\frac{\sqrt{t^2+1}(1+\ln t)}{t}.
+\end{equation}
+Next, 
+\begin{align*}
+& \frac{d}{dt}\left[ \frac{(t^2+1)^{1/2}(1+\ln t)}{t}\right] \\
+& \qquad = \frac{t\left[ \frac{1}{2} (t^2+1)^{-1/2} (2t) (1+\ln t)+\frac{  \left( t^2+1\right)^{1/2}}{t}\right]-(t^2+1)^{1/2}(1+\ln t)}{t^2} \\
+& \qquad =\frac{  \frac{t^2(1+\ln t)}{(t^2+1)^{1/2}}+(t^2+1)^{1/2}-(t^2+1)^{1/2}(1+\ln t)}{t^2} \\
+& \qquad = \frac{  \frac{t^2(1+\ln t)}{(t^2+1)^{1/2}}+\frac{t^2+1}{(t^2+1)^{1/2}}-\frac{(t^2+1)(1+\ln t)}{(t^2+1)^{1/2}}}{t^2} \\
+& \qquad = \frac{t^2+t^2\ln t+t^2+1-t^2-t^2\ln t-1-\ln t}{t^2(t^2+1)^{1/2}} \\
+& \qquad  = \frac{t^2-\ln t}{t^2\sqrt{t^2+1}} 
+  \end{align*}
+and so 
+\begin{equation}
+\frac{d^2y}{dx^2}=\frac{  \frac{d}{dt}\left( \frac{dy}{dx}\right)}{  \frac{dx}{dt}} = \frac{t^2-\ln t}{t^2\sqrt{t^2+1}}\cdot \frac{\sqrt{t^2+1}}{t}=\frac{t^2-\ln t}{t^3}.
+\end{equation}
+::: 
+ 
+::: {#exm- } 
+Show that the curve defined by parametric equations $x=t^2$ and $y=t^3-3t$ crosses itself. Find equations of the tangent lines to the curve at that point.  
+::: 
+
+::: {.solution } 
+Observe that the curve is at the point $(3,0)$ when $t_1=-\sqrt{3}$ and $t_2=\sqrt{3}$, so the curve crosses itself at the point $(3,0).$ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=150pt]{_includes/p17-pec.pdf}
+\end{figure}
+Since $\frac{dx}{dt}=3t^2-3$ and 
+$$
+\frac{dy}{dt}=\frac{3(t^2-1)}{2t},
+$$ 
+at the first point of intersection, 
+$$
+m_1=\left.\frac{dy}{dx}\right|_{t=-\sqrt{3}}
+=\frac{3(3-1)}{2(-\sqrt{3})}
+=-\sqrt{3}
+$$ 
+and an equation of the tangent line is  $y-0=-\sqrt{3}(x-3)$ or $y=-\sqrt{3}(x-3).$ 
+At the second point, 
+$$
+m_2=\left.\frac{dy}{dx}\right|_{t=\sqrt{3}}=\frac{3(3-1)}{2(\sqrt{3})}=\sqrt{3}
+$$ 
+and an equation of the tangent line is $y-0=\sqrt{3}(x-3)$ or $y=\sqrt{3}(x-3).$ 
+::: 
+ 
+ 
+## Motion Along a Curve
+ 
+We can think of $t$ on the closed interval $[a, b]$ as representing time, and in doing so we can interpret the parametric equations in terms of the motion of a particle as follows: at time $t=a$ the particle is at the initial point $(f(a), g(a))$ of the curve or trajectory $C$. 
+As $t$ increases from $t=a$ to $t =b$, the particle traverses the curve in a specific direction called the \index{orientation of a curve} **orientation of a curve** , eventually ending up at the terminal point $(f(b), g(b))$ of the curve.
+ 
+
+::: {#exm- } 
+Use implicit differentiation to find all points on the lemniscate of Bernoulli 
+\begin{equation}
+\label{bereq}
+\left(x^2+y^2\right)^2=4\left(x^2-y^2\right)
+\end{equation}
+where the tangent line is horizontal.
+::: 
+ 
+::: {.solution }
+Using implicit differentiation we have,  
+$$
+2\left(x^2+y^2\right)\left(2x+2y\frac{dy}{dx}\right)=8x-8y\frac{dy}{dx}$$
+and so
+$$
+\frac{dy}{dx}=-\frac{x \left(-2+x^2+y^2\right)}{y \left(2+x^2+y^2\right)}\
+$$
+we need to find all $(x,y)$ where $dy/dx=0.$ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=170pt]{_includes/img-p10-pec.pdf} 
+\end{figure}
+Clearly, the point $(0,0)$ is ruled out and so $-2+x^2+y^2=0$; that is $x^2+y^2=2.$ Using $x^2+y^2=2$ with the original we see $x^2-y^2=1$ also. 
+Therefore, $2x^2=3$ and so $x=\pm \sqrt{3/2}$ and $y=\pm \sqrt{1/2}.$
+::: 
+
+## Parametric Equations in Polar Form
+
+To find the slope of the tangent line to the graph of $r=f(\theta)$ at the point $P(r, \theta)$, let $P(x, y)$ be the rectangular representation of $P$. 
+Then
+\begin{align*}
+& x=r\cos \theta = f(\theta)\cos \theta  \\
+& y=r\sin \theta = f(\theta)\sin \theta  
+\end{align*}
+We can view these equations as parametric equations for the graph of ${r=f(\theta)}$ with parameter $\theta$. 
+We have
+\begin{equation}
+\label{paracurderpol}
+\frac{dy}{dx} 
+=\frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}} 
+= \frac{\frac{dr}{d\theta} \sin \theta+ r \cos \theta}{\frac{dr}{d\theta} \cos \theta- r\sin \theta}
+\qquad \text{ whenever }\ \frac{dx}{d\theta} \neq 0
+\end{equation}
+and this gives the slope of the tangent line to the graph of $r=f(\theta)$ at any point $P(r, \theta)$.
+
+
+## Exercises
+
+::: {#exr- } 
+Find the rectangular equations for the curve represented by 
+ - $x=4\cos \theta$ and $y=3\sin\theta$, $0\leq \theta \leq 2\pi$.
+- $x=\sin t$ and $y=\sin2t$, $0\leq t \leq 2\pi$.
+- $C: x=t^2$, $y=t-1$; $0\leq t \leq 3$
+- $C: x=t^2+1$, $y=2t^2-1$; $-2\leq t\leq 2$
+ 
+::: 
+  
+::: {#exr- } 
+Sketch the graph of the parametric equations $x=\cos (\pi -t)$ and $y=\sin (\pi -t)$, then indicate the direction of increasing $t.$
+::: 
+ 
+::: {#exr- } 
+Sketch the graph of the parametric equations $x=3 t$ and $y=9t^2$, then indicate the direction of increasing $-\infty <t<\infty .$
+::: 
+ 
+::: {#exr- } 
+Sketch the graph of the parametric equations $x=3-3t$ and $y=2t$, then indicate the direction of increasing $0\leq t\leq 1.$
+::: 
+ 
+::: {#exr- } 
+Find parametric equations and a parameter interval for the motion of a particle that starts at $(a,0)$ and traces the ellipse 
+$$
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1.
+$$
+(a) once clockwise (b) once counterclockwise (c) twice clockwise (d) twice counterclockwise. 
+::: 
+ 
+::: {#exr- } 
+Find a parametrization for the curve whose graph is the lower half of the parabola $x-1=y^2.$ 
+::: 
+ 
+::: {#exr- } 
+Find a parametrization for the curve whose graph is the ray (half-line) with initial point $(-1,2)$ that passes through the point $(0,0).$
+::: 
+ 
+::: {#exr- } 
+Find an equation for the line tangent to the curve $x=t$ and $y=\sqrt{t}$ at $t=1/4.$ Also, find the value of $\frac{d^2y}{dx^2}$ at
+this point. 
+::: 
+
+::: {#exr- } 
+Convert  $\left(x^2+y^2\right)^2=4\left(x^2-y^2\right)$  to polar form to find all points on the lemniscate of Bernoulli where the tangent line is horizontal.
+::: 
+
+::: {#exr- } 
+Consider the cardioid $r= 1 + \cos \theta$.
+ 
+- Find the slope of the tangent line to the cardioid at the point where $\theta=\pi/6$.
+- Find the points on the cardioid where the tangent lines are horizontal and where the tangent lines are vertical.
+ 
+::: 
+
+::: {#exr- } 
+Find the slope of the tangent line to the curve $x=2\sin \theta$, $y=3\cos \theta$ at the point corresponding to the value of the parameter $\theta=\pi/4$. 
+::: 
+
+::: {#exr- } 
+Find the slope of the tangent line to the curve $x=2(\theta-\sin \theta)$, $y=2(1-\cos \theta)$ at the point corresponding to the value of the parameter $\theta=\pi/6$. 
+::: 
+
+::: {#exr- } 
+Find $d^2y/dx^2$ given $x=\sqrt{t}$, $y=1/t$.
+::: 
+
+::: {#exr- } 
+Find $d^2y/dx^2$ given $x=\sin 2t$, $y=\cos 2t$.
+::: 
+
+::: {#exr- } 
+Find an equation of the tangent line to the curve $x=t^2+t$, $y=t^2-t^3$ at the given point $(0,2)$.
+::: 
+
+::: {#exr- } 
+Find an equation of the tangent line to the curve $x=e^t$, $y=e^{-t}$ at the given point $(1,1)$.
+::: 
+
+::: {#exr- } 
+Find an equation for the line tangent to the curve $x=t$ and $y=\sqrt{t}$ at $t=1/4.$ 
+Also, find the value of $\frac{d^2y}{dx^2}$ at
+this point. 
+::: 
+
+::: {#exr- } 
+Find an equation for the line tangent to the curve $x=t-\sin  t$ and $y=1-\cos  t$ at $t=\pi /3.$ 
+Also, find the value of $\frac{d^2y}{dx^2}$
+at this point. 
+::: 
+
+::: {#exr- } 
+Suppose that $u=g(x)$ is differentiable at $x=-5,$ $y=f(u)$ is differentiable at ${u=g(-5)}$ and $(f\circ g)'(-5)$ is negative. What,
+if anything, can be said about the values of $g'(-5)$ and $f'(g(-5))?$ 
+::: 
+
+

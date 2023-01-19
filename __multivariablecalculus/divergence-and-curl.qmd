@@ -1,0 +1,234 @@
+---
+pagetitle: "Divergence and Curl - Exploring Calculus"
+---
+# Divergence and Curl
+
+
+
+
+## The Divergence and Curl of a Vector Field
+
+::: {#def- } 
+
+Let $\mathbf{V}$ be a given vector field. The \index{divergence} of $\mathbf{V}$ is defined by div $\mathbf{V}=\nabla \cdot \mathbf{V}$ and the \index{curl} of $\mathbf{V}$ is defined by curl $\mathbf{V}=\nabla \times \mathbf{V} **divergence} of $\mathbf{V}$ is defined by div $\mathbf{V}=\nabla \cdot \mathbf{V}$ and the \index{curl} of $\mathbf{V}$ is defined by curl $\mathbf{V}=\nabla \times \mathbf{V** $ where 
+\[
+\nabla =\frac{\partial }{\partial x}\mathbf{i}+\frac{\partial }{\partial y}\mathbf{j}+\frac{\partial }{\partial z}k\]
+is the \index{del operator} **del operator** .
+::: 
+
+::: {#exm- } 
+
+Find the divergence and curl of a constant vector field.
+::: 
+
+::: {.solution }
+Let $\vec{V}=a  \vec{i}+b \vec{j}+c \vec{k}$ for constants $a,$ $b,$ and $c.$ Then 
+\[
+\Div  \vec{V}=\frac{\partial }{\partial x}(a)+\frac{\partial }{\partial y}(b)+\frac{\partial }{\partial z}(c)=\vec{0}\]
+and 
+\[
+\Curl  \vec{V}=\left|
+\begin{array}{cc}
+ \begin{array}{c}
+ \vec{i} \\
+\begin{array}{c}
+ \frac{\partial }{\partial x} \\
+ a
+\end{array}
+\end{array}
+ & 
+\begin{array}{cc}
+ \vec{j} & \vec{k} \\
+\begin{array}{c}
+ \frac{\partial }{\partial y} \\
+ b
+\end{array}
+ & 
+\begin{array}{c}
+ \frac{\partial }{\partial z} \\
+ c
+\end{array}
+\end{array}
+\end{array}
+\right|=0 \vec{i}-0 \vec{j}+0 \vec{k}=0.
+\]
+::: 
+
+::: {#exm- } 
+
+Find the divergence and curl of the vector field
+\[
+\vec{V}(x,y,z)=x z \vec{i}+x y z \vec{j}-y^2 \vec{k}.
+\]
+::: 
+
+::: {.solution }
+The divergence of $\mathbf{V}$ is 
+\[
+\Div \mathbf{V}=\nabla \cdot \mathbf{V}=\frac{\partial }{\partial x}(x z)+\frac{\partial }{\partial y}(x y z)+\frac{\partial }{\partial z}\left(-y^2\right)=z+x z.\]
+and the curl of $\mathbf{V}$ is
+\begin{align*}
+& \Curl \mathbf{V} =\left|
+\begin{array}{ccc}
+\vec{i} &  \vec{j} & \vec{k} \\
+\frac{\partial }{\partial x} & \frac{\partial }{\partial y}  & \frac{\partial }{\partial z} \\
+ x z &  x y z &  -y^2
+\end{array}
+\right|
+=\left[\frac{\partial }{\partial y}\left(-y^2\right)-\frac{\partial }{\partial z}(x y z)\right]\vec{i} 
+\\ & \qquad \quad  \qquad 
+-\left[\frac{\partial }{\partial x}\left(-y^2\right)-\frac{\partial }{\partial z}(x z)\right]\vec{j}+\left[\frac{\partial }{\partial x}(x y z)-\frac{\partial }{\partial y}(x z)\right]\vec{k} 
+\\ & \qquad 
+=(-2y-x y)\vec{i}-(0-x)\vec{j}+(y z-0)\vec{k} 
+=-y(2+x) \vec{i}+x \vec{j}+y z \vec{k}. 
+\end{align*}
+::: 
+
+::: {#thm- } [Properties of Divergence and Curl]
+Let $\vec{U}$ and $\vec{V}$ be vector fields with component functions that have continuous first and second partial derivatives.
+Then
+\ 
+\item 
+$\mathrm{div} (c  \vec{U})= c \, \mathrm{div} \vec{U}$
+\item 
+$\mathrm{div} (\vec{U}+\vec{V})= \mathrm{div} \vec{U}+ \mathrm{div} \vec{V}$
+\item 
+$\mathrm{div} (f  \vec{U})= f \mathrm{div} \vec{U}+(\nabla f\cdot \vec{U})$
+\item 
+$\mathrm{div} (f\nabla g)=f \mathrm{div} \nabla g+\nabla  f \cdot  \nabla  g$
+\item 
+$\mathrm{curl} (c  \vec{U})= c \mathrm{curl} \vec{U}$
+\item  $\mathrm{curl} (\vec{U}+\vec{V})= \mathrm{curl} \vec{U}+ \mathrm{curl} \vec{V}$
+\item 
+$\mathrm{curl} (f  \vec{U})=f \mathrm{curl} \vec{U}+(\nabla f\times \vec{U})$
+\item  
+$\mathrm{curl} (\nabla f+ \mathrm{curl}  \vec{U})= \mathrm{curl}(\nabla  f)+ \mathrm{curl}(\mathrm{curl}  \vec{U})$
+\item 
+$\nabla \times (\nabla  f)=0$
+\item  
+$\mathrm{div} (\mathrm{curl}  \vec{U})=0$
+ 
+::: 
+
+::: {#exm- } 
+
+Show that the divergence of the curl of a vector field is $0.$ 
+::: 
+
+::: {.solution }
+Let $\vec{V}=u(x,y,z)\vec{i}+v(x,y,z)\vec{j}+w(x,y,z)\vec{k}$  be a vector field, then   
+\[
+\Curl \vec{V}=\left|
+\begin{array}{ccc}
+ \vec{i} & \vec{j} & \vec{k}  \\[3pt]
+ \frac{ \partial }{\partial x} & \frac{ \partial }{\partial y} & \frac{ \partial }{\partial z}  \\[3pt]
+ u & v & w
+\end{array}
+\right|=\left(w_y-v_z\right)\vec{i}-\left(w_x-u_z\right)\vec{j}+\left(v_x-u_y\right)\vec{k}\]
+Therefore
+\[
+\nabla \cdot \vec{V}=\partial _x \left(w_y-v_z\right)-\partial _y \left(w_x-u_z\right)+\partial _z \left(v_x-u_y\right)=0
+\] 
+as desired.  
+::: 
+
+::: {#exm- } 
+Show that the curl of the gradient of a function is always $\vec{0}.$ 
+::: 
+
+::: {.solution }
+Let $\nabla f=f_x\vec{i}+f_y\vec{j}+f_z\vec{k}$ then   
+\[
+\Curl \nabla f=\left|
+\begin{array}{ccc}
+\vec{i} & \vec{j} & \vec{k}  \\[3pt]
+ \frac{ \partial }{\partial x} & \frac{ \partial }{\partial y} & \frac{ \partial }{\partial z}  \\[3pt]
+ f_x & f_y & f_z
+\end{array}
+\right| =\left(f_{z y}-f_{y z}\right)\vec{i}-\left(f_{x z}-f_{z x}\right)\vec{j}+\left(f_{y x}-f_{x y}\right)\vec{k}=\vec{0}.
+\]
+::: 
+
+::: {#exm- } 
+Let $\vec{F}=\langle x^2y,y z^2,z y^2\rangle.$ Either find a vector field $\vec{G}$ such that $\vec{F}=\Curl \vec{G}$ or show that no such $\vec{G}$ exists.
+::: 
+
+::: {.solution }
+If  a vector field $\vec{G}$ does exist then, then $\Div \vec{F}=\Div (\Curl \vec{G}) $ but  
+$$
+\Div \vec{F}=\partial _x \left(x^2y\right)+\partial _y \left(y z^2\right)+\partial _y \left(z y^2\right)=2 x y+z^2+2 y z
+$$
+and since the div of the curl of a vector field is always zero we see there can be no vector $\vec{G}$ with $\vec{F}=\Curl \vec{G}$ for this vector field $F.$  
+::: 
+
+::: {#def- } 
+Let $f(x,y,z)$ define a function with continuous first and second partial derivatives. Then the \index{Laplacian} **Laplacian**  of $f$
+is 
+\[
+\nabla ^2f=\nabla \cdot \nabla  f=\frac{\text{  }\partial ^2f}{\partial x^2}+\frac{\text{  }\partial ^2f}{\partial y^2}+\frac{\text{  }\partial ^2f}{\partial z^2}.\] 
+The equation $\nabla ^2f=0$ is called \index{Laplacian's equation} and a function that satisfies it in a region $D$ is said to be \index{harmonic} **Laplacian's equation} and a function that satisfies it in a region $D$ is said to be \index{harmonic**  on $D.$
+::: 
+
+## Exercises
+
+::: {#exr- } 
+If $\vec{F}(x,y)=u(x,y)\vec{i}+v(x,y)\vec{j}$ where $u$ and $v$ are differentiable functions, show that $\text{curl} \, \vec{F}=0$ if and only if $\frac{\partial u}{\partial y}=\frac{\partial v}{\partial x}.$
+::: 
+
+::: {#exr- } 
+Show that $\text{div}(f\nabla g)=f \text{div} \nabla g+\nabla f \cdot \nabla  g.$
+::: 
+
+::: {#exr- } 
+Show that the curl of the gradient of a function is always $0.$
+::: 
+
+::: {#exr- } 
+Show that the divergence of the curl of a vector field is $0.$
+::: 
+
+::: {#exr- } 
+Let $\vec{F}=<x^2y,y z^2,z y^2>.$ Either find a vector field $\vec{G}$ such that $\vec{F}=\text{curl} \, \vec{G}$ or show that no such $\vec{G}$ exists.
+::: 
+
+::: {#exr- } 
+Find the divergence and the curl for the following vector field.
+\ 
+- $\vec{F}(x,y)=x^2 \vec{i}+ x y \vec{j}+ z^3 \vec{k}.$
+- $\vec{F}(x,y,z)= z \, \vec{i}-\vec{j}+2y\, \vec{k}.$
+- $\vec{F}(x,y,z)= x y z\, \vec{i}+y\, \vec{j}+ x \, \vec{k}.$
+- $\vec{F}(x,y,z)= e^{-x}\sin  y \, \vec{i}+ e^{-x}\cos y\, \vec{j}+\vec{k}.$
+- $\vec{F}(x,y)= x \, \vec{i}+y \, \vec{j}.$
+- $\vec{F}(x,y)= x^2 \, \vec{i}-y^2 \, \vec{j}.$
+- $\vec{F}(x,y,z)= x^2\, \vec{i}+ y^2 \, \vec{j}+ z^2 \, \vec{k}.$
+- $\vec{F}(x,y,z)= 2x z\, \vec{i}+ y z^2\, \vec{j}-\, \vec{k}.$
+- $\vec{F}(x,y,z)= z^2e^{-x}\, \vec{i}+ y^3\ln z\, \vec{j}+ x e^{-y} \, \vec{k}.$
+ 
+::: 
+
+::: {#exr- } 
+Find the divergence of $\vec{F}$ given that $\vec{F}=\nabla f$ where $f(x,y,z)=x y^3z^2.$
+::: 
+
+::: {#exr- } 
+If $\vec{F}(x,y,z)=x y \, \vec{i}+y z \, \vec{j}+z^2\, \vec{k}$ and $\vec{G}(x,y,z)=x \, \vec{i}+y \, \vec{j}-z \, \vec{k}$ find $\text{curl}(\vec{F}\times \vec{G}).$
+::: 
+
+::: {#exr- } 
+Determine whether or not the following vector fields are conservative.
+\ 
+- $\vec{F}(x,y)=y^2\, \vec{i}+2 x y\, \vec{j}$
+- $\vec{F}(x,y)=2x y^3\, \vec{i}+3y^2x^2\, \vec{j}$ 
+- $\vec{F}(x,y)=x e^{x y}\sin  y \, \vec{i}+ \left(e^{x y}\cos  x y+y\right) \vec{j} $ 
+- $\vec{F}(x,y)=\left(-y+e^x\sin  y\right)\vec{i}+\left((x+2)e^x\cos  y\right)\vec{j}$ 
+- $\vec{F}(x,y)=\left(y-x^2\right)\vec{i}+\left(2x+y^2\right)\vec{j}$
+- $\vec{F}(x,y)= e^{2x}\sin  y \, \vec{i}+ e^{2x}\cos  y \, \vec{j} $ 
+    
+::: 
+
+
+
+
+
+
+

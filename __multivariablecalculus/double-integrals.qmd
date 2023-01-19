@@ -1,0 +1,621 @@
+---
+pagetitle: "Double Integrals - Exploring Calculus"
+---
+# Double Integrals
+
+
+Multivariable calculus is a critical tool for solving problems in physics, engineering, and other sciences. However, before delving into the higher-dimensional world of multivariable calculus, it's important to have a strong foundation in the basics.
+
+In this book, we focus on the fundamentals of multiple integration-the processes of integrating functions of several variables. We'll discuss both Cartesian and polar coordinate systems, along with the various techniques for evaluating integrals. With a solid understanding of these basic concepts, you'll be ready to tackle the more challenging problems in multivariable calculus.
+
+## What is multivariable calculus and why is it important?
+
+Multivariable calculus is the study of functions of multiple variables. It allows for the determination of maxima and minima, as well as other important information about how a function behaves. In many cases, multiple variables can be treated as a single variable, allowing for the use of traditional calculus methods. However, in other cases, multiple variables require a more sophisticated approach.
+
+This is where multivariable calculus comes in. Multivariable calculus is particularly important in physics and engineering, where multiple physical quantities often need to be considered simultaneously. It is also useful in economics, where multiple factors can affect the behavior of a market or individual consumers. In short, multivariable calculus is a powerful tool that can be used to analyze complicated situations involving multiple variables.
+
+## Double Integrals
+
+Double integrals are a type of multiple integration, meaning they allow you to integrate over multiple variables simultaneously. In other words, double integrals let you find the total amount of something (like area or volume) that is spread out over multiple dimensions.
+
+To calculate a double integral, you first need to choose an appropriate coordinate system. Once you've done that, you can divide the region into smaller pieces and then add up the integrals over each of those pieces. Double integrals can be used to calculate all sorts of things, from the volume of an irregular solid to the probability of two random variables taking on certain values. So whatever it is you're trying to integrate, a double integral is probably the way to go!
+
+## Iterated Integrals
+
+Integrals are a fundamental tool in calculus, and iterated integrals are a powerful extension of this concept. With multiple integration, we can calculate the volume of a solid region bounded by multiple surfaces. This technique can also be used to calculate the moments of a 3D object, or to find the center of mass of an irregular shape.
+
+In short, iterated integrals are a versatile tool that can be used in a wide range of applications. So if you're ever feeling lost in a sea of multiple integrals, just remember that each one is just an extension of the basic concept of integration. And with a little practice, you'll be iterating your way to success in no time!
+
+## Double Integrals In Polar Coordinates
+
+Double integrals in polar coordinates can be a bit of a pain to wrap your head around. After all, multiple integration is already confusing enough - now you have to do it in a different coordinate system? But once you understand the basics, it's not so bad. And who knows, you might even find it fun.
+
+To understand multiple integrals in polar coordinates, it helps to think about a two-dimensional coordinate system like a cake. The x-axis is like the diameter of the cake, and the y-axis is like the height. If we want to find the volume of the cake, we need to integrate both the diameter and the height. That's where multiple integrals come in.
+
+With multiple integrals in polar coordinates, we're essentially doing the same thing - but with a twist. Instead of using a rectangular coordinate system, we're using a polar coordinate system. This means that our x-axis is now the angle, and our y-axis is now the radius. And just like before, if we want to find the volume (or more accurately, the area) of our cake, we need to integrate both the angle and the radius.
+
+## Applications of Double Integrals
+
+Integrals are a fundamental tool in calculus, and the double integral is a powerful extension of the single integral. Double integrals can be used to calculate the area of irregular shapes, the volume of solids with curved surfaces, and the amount of flow through an orientable surface. In fact, multiple integrals can be applied in countless ways to solve problems in physics, engineering, and other fields.
+
+In many ways, multiple integrals are the natural extension of single integrals. Just as a single integral can be thought of as the area under a curve, a double integral can be thought of as the volume under a surface.
+
+More generally, multiple integrals can be used to calculate the measure of any region in space. This makes them a powerful tool for solving problems in physics and engineering. In addition, multiple integrals can be used to calculate more complex quantities than their single-variable counterparts.
+
+For example, double integrals can be used to calculate moments and centroids. As a result, multiple integrals are an essential tool for anyone looking to tackle problems in mathematics or the sciences.
+
+So next time you're struggling with a difficult integral, remember that you're not alone - and that there's probably a multiple integral out there that can help.
+
+## Triple Integrals in Cylindrical and Spherical Coordinates
+
+Triple integrals are multiple integrals where the domain of integration is three-dimensional. In other words, they're integrals over three variables. These integrals can be difficult to calculate, but using cylindrical or spherical coordinates can make the process much simpler. Cylindrical coordinates are particularly well-suited for problems involving cylindrical objects, such as cylinders and cones. Spherical coordinates are best for problems involving spheres or other round objects.
+
+We've all been there. We're given a multiple integral to solve, and we just don't know where to start. Should we use cylindrical coordinates? Or spherical coordinates? How do we even set up the integral in those coordinate systems? And what if the region of integration isn't nice and simple like a box or a cylinder?
+
+Thanks to the magic of triple integrals, we can solve multiple integrals no matter what the coordinate system or the shape of the region. In this article, we'll look at how to set up triple integrals in both cylindrical and spherical coordinate systems.
+
+With a little practice, you'll be able to tackle any multiple integral, no matter how complicated it might seem at first. Either way, these multiple integrals can be tricky, but with a little practice, you'll be a pro in no time!
+
+## Change of Variables in Multiple Integrals
+
+Multiple integration is a powerful tool that can be used to calculate integrals of many different functions. However, it is sometimes necessary to change the variables in a multiple integral in order to make the calculation easier. This process is known as a change of variables.
+
+There are many different ways to change the variables in a multiple integral, but the most common method is to use a substitution. This involves replacing the original variables with new ones that are more suitable for the particular problem.
+
+For example, if we want to integrate a function that is only defined on a certain region of space, we can use a change of variables to transform the integral into one that is defined on all of space. This can be a very useful technique when dealing with multiple integrals.
+
+## What are some of the challenges in multivariable calculus, and how can they be overcome?
+
+Multivariable calculus may sound like a mouthful, but it's just a fancy way of saying "calculus with more than one variable." And as anyone who's taken calculus knows, one variable is already plenty. So what's the big deal with multiple variables? Well, for starters, multiple integration can be a real pain. You've got multiple integrals, double integrals, triple integrals... it can all get pretty confusing pretty quickly.
+
+And then there's the issue of finding critical points. With multiple variables comes multiple partial derivatives, and keeping track of them all can be a challenge. But don't despair! These challenges can be overcome with practice and patience. After all, there's nothing wrong with taking things one step at a time. Just remember: take a deep breath, relax, and trust in the process. You'll get there eventually.
+
+## How I teach in this book
+
+I hope that this tour has given you a better understanding of how I teach calculus in this book. I take a step-by-step approach, breaking down each concept and providing plenty of examples along the way. My goal is to make the process as easy and painless as possible, so you can focus on learning the material and not worrying about the mechanics of the math. With a little practice, you'll be able to tackle any calculus problem that comes your way!
+
+
+
+## The Volume Under a Surface
+
+Consider the rectangle given by 
+$$
+R=[a,b]\times[c,d]=\{(x,y)\mid a\leq x\leq b, c\leq x\leq d\}.
+$$
+We wish to construct a (regular) partition of $R$. 
+To do so, let 
+$$
+a=x_0 < x_1 < x_2 < \cdots < x_{i-1} < x_i < \cdots < x_n=b
+$$
+be a partition of $[a,b]$ into subintervals each of width $\Delta x=(b-a)/n$. 
+Similarly let 
+$$
+c=y_0 < y_1 < y_2 < \cdots < y_{j-1} < y_j < \cdots < y_m=d
+$$
+be a partition of $[c,d]$ into subintervals each of width $\Delta y=(d-c)/m$. 
+The vertical lines $x=x_i$ for $0\leq i \leq n$ and the horizontal lines $y=y_j$ for $0\leq j \leq m$ form subrectangles which partition $R$ as shown in \ref{2dpartition}. 
+Since each of the subrectangles have the same area, namely $\Delta A=\Delta x \, \Delta y$ we call this type of partition $\mathcal{P}$ a \index{regular partition} **regular partition**  of the rectangle $R$. 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=2in]{_includes/R-sum-3-surface-pics.pdf}
+\caption{Approximating the volume between the surface $z=5 - (1/4)x^2 - (1/5)y^2$ and the $xy$-plane over the rectangular region $R=[0,2]\times [0,3]$.}
+\label{fig:surboundvolfunc}
+\end{figure} 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=300pt]{_includes/partition-pics.pdf}
+\caption{A regular partition of $[a,b]\times[c,d]$ with subrectangles $R_{ij}$ with $1\leq i \leq n$, $1\leq j \leq m$.}
+\label{2dpartition}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=2in]{_includes/partition-xy-pics.pdf}
+\caption{The regular partition of $[-1,2]\times[-2,2]$ with $n=6$ and $m=8$.}
+\label{fig:part1}
+\end{figure} 
+
+For example, let $R=[-1,2]\times[-2,2]$. 
+In \ref{fig:part1} we have sketched the graph of the regular partition of $R$ with $n=6$ subintervals of $[-1,2]$ and $m=8$ subintervals of $[-2,2]$. 
+For this partition we have $\Delta x=1/2$ and $\Delta y=1/2$, making the area for each subrectangle $\Delta A =1/4$.  
+
+If we increase the number of subintervals of both $[a,b]$ and $[c,d]$, then the number of subrectangles of $R$ increases. 
+This process is illustrated in \ref{fig:part234}. 
+
+\begin{figure}[htb]
+\centering
+\hspace{-1in}
+\subfigure[$n=12$ and $m=16$]{\includegraphics[width=100pt]{_includes/partition-xy-2-pics.pdf}}
+\subfigure[$n=24$ and $m=32$]{\includegraphics[width=100pt]{_includes/partition-xy-3-pics.pdf}}
+\subfigure[$n=30$ and $m=40$]{\includegraphics[width=100pt]{_includes/partition-xy-4-pics.pdf}}
+\caption{Regular partitions of $R=[-1,2]\times[-2,2]$ are getting finer and finer.}
+\label{fig:part234}
+\end{figure}  
+
+Now we assume that we have a function $f$ of two variables whose domain contains a rectangle $R$ and that we have a regular partition $\mathcal{P}$ of $R$ as described above.
+From each subrectangle in $\mathcal{P}$ we choose a \index{representative point} $\left(x_{ij}^*,y_{ij} **representative point} $\left(x_{ij}^*,y_{ij** ^*\right)$ 
+and form the sum,  
+
+\begin{equation}
+\label{dbrmsum}
+\sum _{i=1}^n \sum _{j=1}^m f\left(x_{ij}^*,y_{ij}^*\right)\Delta  A
+\end{equation}
+where $\Delta  A$ is the area of each subrectangle. 
+A summation of this form is called a \index{Riemann sum} of $f$ with respect to the partition $\mathcal{P}$ and the subrectangle representatives $(x_{ij}^*,y_{ij} **Riemann sum} of $f$ with respect to the partition $\mathcal{P}$ and the subrectangle representatives $(x_{ij}^*,y_{ij** ^*).$ 
+Notice that a regular partition of $R$ is completely determined by $n$ and $m$.
+
+The next three examples are an illustration of how Riemann sums can be used to estimate the volume of the 3-dimensional solid region over the $xy$-plane bound below by $R$ and above by the surface $z=f(x,y)$ (see \ref{fig:surboundvolfunc}). 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=100pt]{_includes/partition-xy-5-pics.pdf}
+\quad
+\includegraphics[width=110pt]{_includes/R-sum-1-pics.pdf}
+\caption{A regular partition of $R$ with $n=2, m=3$.}
+\label{figex:surboundvolone}
+\end{figure} 
+
+
+::: {#exm- } 
+Consider the surface and the rectangle 
+\begin{equation}
+z=5 - \frac{1}{4} x^2 - \frac{1}{5} y^2
+\qquad
+R=\{(x,y)\mid 0\leq x \leq 2, 0\leq y\leq 3\}\end{equation}
+Using the lower left corners as subrectangle representatives, determine the Riemann sums when $n=2$ and $m=3$.
+ ::: 
+
+::: {.solution }
+When $n=2$ and $m=3$ we have 
+$$
+\Delta x=\frac{2-0}{2}=1,
+\qquad 
+\Delta y=\frac{3-0}{2}=1, 
+\qquad \text{and} \qquad
+\Delta A=\Delta x \Delta y =1.
+$$
+We are choosing the lower left corners as subrectangle representatives (using $0<1<2$ and $0<1<2<3$), that is, 
+\begin{align*}
+\left(x_{11}^*,y_{11}^*\right)=(0,0) \qquad 
+\left(x_{12}^*,y_{12}^*\right)=(0,1) \qquad  
+\left(x_{13}^*,y_{13}^*\right)=(0,2) \\[5pt]
+\left(x_{21}^*,y_{21}^*\right)=(1,0) \qquad 
+\left(x_{22}^*,y_{22}^*\right)=(1,1) \qquad 
+\left(x_{24}^*,y_{23}^*\right)=(1,2) 
+\end{align*}
+as depicted in \ref{figex:surboundvolone}. 
+Now we find the Riemann sum for this partition and chosen representatives:
+\begin{align*}
+& \sum _{i=1}^2 \sum _{j=1}^3 f\left(x_{ij}^*,y_{ij}^*\right)\Delta  A
+=
+\sum _{i=1}^2 \sum _{j=1}^3 f\left(x_{ij}^*,y_{ij}^*\right)
+\\[5pt]
+& =  
+\sum _{i=1}^2 \left[ f\left(x_{i1}^*,y_{i1}^*\right) + f\left(x_{i2}^*,y_{i2}^*\right)+ f\left(x_{i3}^*,y_{i3}^*\right)\right] 
+\\[5pt]
+& =  
+f\left(x_{11}^*,y_{11}^*\right) + f\left(x_{12}^*,y_{12}^*\right)+ f\left(x_{13}^*,y_{13}^*\right) +
+f\left(x_{21}^*,y_{21}^*\right) + f\left(x_{22}^*,y_{22}^*\right) + f\left(x_{23}^*,y_{23}^*\right) 
+\\[5pt]
+& =  
+f(0,0) + f(0,1)+ f(0,2)+f(1,0) + f(1,1) + f(1,2) 
+\\[5pt]
+& =  
+5+\frac{24}{5}+\frac{21}{5}+\frac{19}{4}+\frac{91}{20}+\frac{79}{20}
+= \frac{109}{4}=27.25.
+\end{align*}
+::: 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=100pt]{_includes/partition-xy-6-pics.pdf}
+\quad
+\includegraphics[width=110pt]{_includes/R-sum-2-pics.pdf}
+\caption{A regular partition of $R$ with $n=4, m=6$.}
+\label{figex:surboundvoltwo}
+\end{figure} 
+
+::: {#exm- } 
+Consider the surface and the rectangle 
+\begin{equation}
+z=5 - \frac{1}{4} x^2 - \frac{1}{5} y^2
+\qquad
+R=\{(x,y)\mid 0\leq x \leq 2, 0\leq y\leq 3\}\end{equation}
+Using the lower left corners as subrectangle representatives, determine the Riemann sums when 
+$n=4$ and $m=6$.
+ ::: 
+
+::: {.solution }
+When $n=4$ and $m=6$ we have 
+$$
+\Delta x=\frac{2-0}{4}=\frac{1}{2},
+\qquad 
+\Delta y=\frac{3-0}{6}=\frac{1}{2}, 
+\qquad \text{and} \qquad
+\Delta A=\Delta x \Delta y =\frac{1}{4}
+$$
+Again using lower left corners as subrectangle representatives (see \ref{figex:surboundvoltwo}) we find the Riemann sum for this partition to be: 
+\begin{align*}
+& \sum _{i=1}^4 \sum _{j=1}^6 f\left(x_{ij}^*,y_{ij}^*\right)\Delta  A 
+= \frac{1}{4}\left[\sum _{i=1}^4 \sum _{j=1}^6 f\left(x_{ij}^*,y_{ij}^*\right)\right]
+\\[5pt] 
+ & \qquad =  
+\frac{1}{4}
+\left[
+f\left(0,0\right) 
++ f\left(0,\frac{1}{2}\right) 
++ f\left(0,1\right) 
++ f\left(0,\frac{3}{2}\right) 
++ f\left(0,2\right) 
++ f\left(0,\frac{5}{2}\right) 
+\right.
+\\[5pt] 
+ &\qquad\qquad 
++ f\left(\frac{1}{2},0\right)
++ f\left(\frac{1}{2},\frac{1}{2}\right)
++ f\left(\frac{1}{2},1\right)
++ f\left(\frac{1}{2},\frac{3}{2}\right)
++ f\left(\frac{1}{2},2\right)
++ f\left(\frac{1}{2},\frac{5}{2}\right)
+\\[5pt] 
+ &\qquad\qquad\qquad 
++ f\left(0,1\right)
++ f\left(1,\frac{1}{2}\right)
++ f\left(1,1\right)
++ f\left(1,\frac{3}{2}\right)
++ f\left(1,2\right)
++ f\left(1,\frac{5}{2}\right)
+\\[5pt] 
+ & \qquad\qquad\qquad\qquad
+\left.
++f\left(\frac{3}{2},0\right) 
++f\left(\frac{3}{2},\frac{1}{2}\right) 
++f\left(\frac{3}{2},1\right)
++f\left(\frac{3}{2},\frac{3}{2}\right)
++f\left(\frac{3}{2},2\right) 
++f\left(\frac{3}{2},\frac{5}{2}\right)  
+\right]
+\\[5pt] 
+ & \qquad =  
+\left(\frac{1}{4}\right)\frac{415}{4}=25.9375.
+\end{align*}
+::: 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=100pt]{_includes/partition-xy-7-pics.pdf}
+\quad
+\includegraphics[width=110pt]{_includes/R-sum-3-pics.pdf}
+\caption{A regular partition with $n=6, m=12$.}
+\label{figex:surboundvolthree}
+\end{figure} 
+ 
+
+::: {#exm- } 
+Consider the surface and the rectangle 
+\begin{equation}
+z=5 - \frac{1}{4} x^2 - \frac{1}{5} y^2
+\qquad
+R=\{(x,y)\mid 0\leq x \leq 2, 0\leq y\leq 3\}\end{equation}
+Using the lower left corners as subrectangle representatives, determine the Riemann sums when $n=6$ and $m=12$.
+ ::: 
+
+::: {.solution }
+When $n=6$ and $m=12$ we have 
+$$
+\Delta x=\frac{2-0}{6}=\frac{1}{3},
+\qquad 
+\Delta y=\frac{3-0}{12}=\frac{1}{4}, 
+\qquad \text{and} \qquad
+\Delta A=\Delta x \Delta y =\frac{1}{12}
+$$
+Using lower left corners as subrectangle representatives we find the Riemann sum for this partition to be 
+\begin{align*}
+& \sum _{i=1}^6 \sum _{j=1}^{12} f\left(x_{ij}^*,y_{ij}^*\right)\Delta  A 
+= \frac{1}{12}\left[\sum _{i=1}^6 \sum _{j=1}^{12} f\left(x_{ij}^*,y_{ij}^*\right)\right]
+\\[5pt] 
+ &\qquad =  
+\frac{1}{12}
+\left[
+f\left(0,0\right) + \cdots +f\left(0,\frac{11}{4}\right) 
++ f\left(\frac{1}{3},0\right) + \cdots +f\left(\frac{1}{3},\frac{11}{4}\right) 
+\right.
+\\[5pt] 
+& \qquad \qquad\qquad\left.
++  
+\cdots 
++ f\left(\frac{4}{3},0\right) + \cdots +f\left(\frac{4}{3},\frac{11}{4}\right)  
++ f\left(\frac{5}{3},0\right) + \cdots +f\left(\frac{5}{3},\frac{11}{4}\right)  
+\right]
+\\[5pt] 
+& 
+\qquad= \frac{1}{12}\left(\frac{18223}{60}\right)=\frac{14923}{60} =25.3097.
+\end{align*}
+As depicted in \ref{figex:surboundvolthree}, the volume of the solid region that lies directly above $R$ and below the surface $z=f(x,y)$ is approximately $25.3097$.
+::: 
+
+\begin{figure}[htb]
+\centering
+\subfigure[Riemann sum approximation for volume is $25.3097$]{\includegraphics{_includes/R-sum-3-axes-pics.pdf}}
+\subfigure[Exact value of volume is $24.4$]{\includegraphics{_includes/R-sum-4-pics.pdf}}
+\caption{The three-dimensional solid that lies directly above $R=[0,2]\times [0,3]$ and below the surface $z=5 - (1/4)x^2 - (1/5)y^2$.}
+\label{fig:3d-solidsur}
+\end{figure}  
+
+::: {#def- } 
+Let $f$ be defined on the rectangle $R$ and suppose that $f(x,y)\geq 0$ on $R$.
+Then the volume $V$ of the solid region that lies directly above $R$ and below the surface $z=f(x,y)$ is 
+\begin{equation}
+\label{defvolurie}
+V=\lim_{m,n \to \infty} \sum_{i=1}^n \sum_{j=1}^m f(x_{ij}^*,y_{ij}^*) \, \Delta A
+\end{equation}
+if this limit exists. 
+::: 
+
+## Midpoint Rule
+
+It can be proven that if $f$ is a continuous function on $R$, then the limit in \ref{defvolurie} always exists, no matter how the subrectangle representatives $(x_{ij}^*, y_{ij}^*)$ are chosen. 
+For example, if $a=x_0 < x_1 < x_2 < \cdots < x_{i-1} < x_i < \cdots < x_n=b$ is a regular partition of $[a,b]$ and $c=y_0 < y_1 < y_2 < \cdots < y_{j-1} < y_j < \cdots < y_m=d$ is a regular partition of $[c,d]$, then we can use midpoints, namely, from each subrectangle $[x_i,x_{i+1}]\times [y_j, y_{j+1}]$ we choose 
+\[
+\small
+(x_{ij}^*, y_{ij}^*)
+=
+\left( 
+\frac{\overbrace{ (a+\Delta x (i-1))}^{\text{left endpoint}}\, +
+\overbrace{(a+(\Delta x) i)}^{\text{right endpoint}}}{2} 
+,
+\frac{
+\overbrace{(c+\Delta y (j-1))}^{\text{lower endpoint}}+\overbrace{(c+(\Delta y) j)}^{\text{upper endpoint}}}{2}
+\right)
+\]
+as subrectangle representatives. 
+This is called the \index{midpoint rule} **midpoint rule** .
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=2in]{_includes/partition-xy-8-pics.pdf}
+\caption{Using midpoints as subrectangle representatives.}
+\label{fig:midsubrep}
+\end{figure} 
+ 
+
+::: {#exm- } 
+Consider the surface and the rectangle 
+\begin{equation}
+z=2+\frac{1}{2}x^2+\frac{1}{3}y^2 
+\qquad
+R=\{(x,y)\mid -1\leq x \leq 2, -3\leq y\leq 4\}\end{equation}
+Use the midpoint rule to find the Riemann sum determined by the regular partition of $R$ with $n=12$ and $m=28$ to estimate the volume of the solid that lies under the graph of the surface $z=f(x,y)$ and directly above the rectangle $R$. 
+::: 
+
+::: {.solution }
+When $n=12$ and $m=28$ we have 
+$$
+\Delta x=\frac{2-(-1)}{12}=\frac{1}{4},
+\quad 
+\Delta y=\frac{4-(-3)}{28}=\frac{1}{4}, 
+\quad \text{and} \quad
+\Delta A=\Delta x \Delta y =\frac{1}{16}.
+$$
+The subrectangle representations are:
+\begin{align*}
+(x_{ij}^*, y_{ij}^*)
+& =
+\left( 
+\frac{(-1+\frac{1}{4}(i-1))+(-1+\frac{1}{4} i)}{2},
+\frac{-3+\frac{1}{4}(j-1))+(-3+\frac{1}{4} j)}{2}
+\right) \\
+& =\left(
+-\frac{9}{8}+\frac{1}{4}i,
+-\frac{25}{8}+\frac{1}{4} j
+\right)
+\end{align*}
+Using midpoints we find the Riemann sum for this partition to be: 
+\begin{align*}
+& \sum _{i=1}^{12} \sum _{j=1}^{28} f\left(x_{ij}^*,y_{ij}^*\right)\Delta  A 
+= \frac{1}{16}\left[\sum _{i=1}^{12} \sum _{j=1}^{28} f\left(-\frac{9}{8}+\frac{1}{4}i, -\frac{25}{8}+\frac{1}{4} j \right)\right]
+\\[5pt] 
+ & \qquad =  
+\frac{1}{16}
+\left[
+f\left(-\frac{7}{8},-\frac{23}{8}\right)
++f\left(-\frac{7}{8},-\frac{21}{8}\right)
++ f\left(-\frac{7}{8},-\frac{19}{8}\right)
+\right.
+\\[5pt] & \qquad  \qquad  \qquad  \qquad  
+\left.+\cdots +f\left(\frac{15}{8},\frac{27}{8}\right)
++ f\left(\frac{15}{8},\frac{29}{8}\right)
++f\left(\frac{15}{8},\frac{31}{8}\right)
+\right]
+\\[5pt] 
+ & \qquad =  
+\frac{1}{16}\left(\frac{10591}{8}\right)=82.7421875.
+\end{align*}
+::: 
+
+\begin{figure}[htb]
+\centering
+%\hspace{-1in}
+\subfigure[Riemann sum approximation for volume is $82.7422$]{\includegraphics[width=150pt]{_includes/R-sum-5-surface-pics.pdf}}
+\qquad 
+\subfigure[Exact value of volume is $82.8\overline{3}$]{\includegraphics[width=150pt]{_includes/R-sum-5-solid-pics.pdf}}
+\caption{The three-dimensional solid that lies directly above $R=[-1,2]\times [-3,4]$ and below the surface $z=2+(1/2)x^2+(1/3)y^2 $.}
+\label{fig:3d-solidsurmid}
+\end{figure}  
+
+
+
+## Definition of Double Integral
+
+In our previous examples, we used regular partitions to form Riemann sums for functions defined over rectangular regions. 
+This is not necessity.
+To measure the size of the rectangles in the partition $P,$ we define the \index{norm} **norm**  $\|P\|$ of the partition to be the length of the longest diagonal of any of the subrectangles in the partition. 
+Refine a partition $P$ by subdividing the cells in such a way that the norm decreases. 
+When this process is applied to the Riemann sum and the norm decreases to zero we have the \index{double integral} **double integral**  of $f$ over $R$.  
+
+::: {#def- } 
+
+If a function $f$ is defined on a closed, bounded
+rectangular region $R$ in the $x y$-plane, then the double integral of $f$ over $R$ is defined by
+\[
+\iint_R f(x,y)d A=\lim _{\|P\|\to  0}\sum _{k=1}^N f\left(x_k^*,y_k^*\right)\triangle  A_k\]
+provided this limit exists, in which case, $f$ is said to be \index{integrable} **integrable**  over $R.$
+::: 
+
+Let $f(x,y)$ be a function that is continuous on the region $D$ that can be contained in a rectangle $R.$ Define the function $F(x,y)$
+on $R$ as $f(x,y)$ if $(x,y)$ is in $D$ and 0 otherwise. 
+If $F$ is integrable over $R$, we say that $f$ is \index{integrable} **integrable**  over $D$,
+and the double integral of $f$ over $D$ is defined as 
+\begin{equation}
+\label{leftrightint}
+\iint_D f(x,y)d A=\iint_R F(x,y)d A.
+\end{equation}
+
+The function $F(x,y)$ may have discontinuities on the boundary of $D,$ but if $f(x,y)$ is continuous on $D$ and the boundary of $D$ is fairly ``well behaved", then it can be shown that the double integral of the right side of \ref{leftrightint} exists and hence that the double integral of the left side of \ref{leftrightint} exists. 
+
+
+
+## Properties of Double Integrals
+
+::: {#thm- } 
+
+Assume that all the given integrals exist on a rectangular region $R.$  
+ 
+- For constants $a$ and $b$, 
+$$
+\iint_R [a f(x,y)+b g(x,y)]\, dA =a \iint_R f(x,y) \, d A+b\iint_R  g(x,y) \, dA.
+$$
+- If $f(x,y)\geq g(x,y)$ throughout a rectangular region $R,$ then 
+$$
+\iint_R  f(x,y)d A\geq \iint_R  g(x,y)d A.
+$$
+- If the rectangular region of integration $R$ is subdivided into two (disjoint) subrectangles $R_1$and $R_2,$ then 
+$$
+\iint_R  f(x,y)d A= \iint_{R_1}  f(x,y)d A+\iint_{R_2}  f(x,y)d A.
+$$
+ 
+::: 
+
+## Exercises
+
+::: {#exr- } 
+If $f$ is a constant function, say $f(x,y)=k$ and $R = [a,b] \times [c,d] $ show that 
+\[ 
+\iint_R k dA=k(b-a)(d-c).
+\]
+::: 
+
+::: {#exr- } 
+Approximate the given double integral by dividing the rectangle $R$ with vertices $(0,0)$, $(4,0)$, $(4,2)$, and $(0,2)$ into eight squares and find the sum.
+ 
+- $\iint_R (x+y) \, dA$
+- $\iint_R x y  \, dA$
+- $\iint_R (x^2+y^2) \, dA$
+- $\iint_R\frac{1}{(x+1)(y+1)} \, dA$
+ 
+::: 
+
+::: {#exr- } 
+Find an approximation for the volume $V$ of the solid lying under the graph of the elliptic paraboloid $z=8-2x^2-y^2$ and above the rectangular region $R=[0,1]\times [0,2]$.
+Use a regular partition $\mathcal{P}$ of $R$ with $m=n=2$, and choose the subrectangular representation point $(x_{ij}^*,y_{ij}^*)$ as indicated. 
+ 
+- The lower left-hand corner of $R_{ij}$.
+- The upper left-hand corner of $R_{ij}$.
+- The lower right-hand corner of $R_{ij}$.
+- The upper right-hand corner of $R_{ij}$.
+- The center of $R_{ij}$.
+ 
+::: 
+
+::: {#exr- } 
+Calculate the double Riemann sum of $f$ for the partition of $R$ given by the indicated lines and the given choice of $(x_{ij}^*,y_{ij}^*)$. 
+Also calculate the norm of the partition. 
+ 
+- $f(x,y)=x^2+4y$, 
+$R=[0,2]\times[0,3]$, 
+$x=1, y=1, y=2$; 
+$(x_{ij}^*,y_{ij}^*)$ is the upper right corner of $R_{ij}$
+- $f(x,y)=x^2+4y$, 
+$R=[0,2]\times[0,3]$, 
+$x=1, y=1, y=2$; 
+$(x_{ij}^*,y_{ij}^*)$ is the center of $R_{ij}$
+- $f(x,y)=xy-y^2$, 
+$R=[0,5]\times[0,4]$, 
+$x=1, x=2, x=3, x=4, y=2$; 
+$(x_{ij}^*,y_{ij}^*)$ is the center of $R_{ij}$
+- $f(x,y)=2x+x^2y$, 
+$R=[-2,2]\times[-1,1]$, 
+$x=-1, x=0, x=1, y=-1/2, y=0, y=1/2$;
+$(x_{ij}^*,y_{ij}^*)$ is the lower left corner of $R_{ij}$
+- $f(x,y)=x^2-y^2$, 
+$R=[0,5]\times[0,2]$, 
+$x=1, x=3, x=4, y=1/2, y=1$; 
+$(x_{ij}^*,y_{ij}^*)$ is the upper left corner of $R_{ij}$
+- $f(x,y)=5xy^2$, 
+$R=[1,3]\times[1,4]$, 
+$x=1.8, x=2.5, y=2, y=3$; 
+$(x_{ij}^*,y_{ij}^*)$ is the lower right corner of $R_{ij}$
+ 
+::: 
+
+::: {#exr- } 
+Find the Riemann sum 
+$$
+\sum_{i=1}^m\sum_{j=1}^n f(x_{ij}^*,y_{ij}^*) \Delta A
+$$
+of $f$ over the region $R$ with respect to the regular partition $\mathcal{P}$ with the indicated values of $m$ and $n$. 
+ 
+- $f(x,y)=2x+3y$,
+$R=[0,1]\times[0,3]$,
+$m=2, n=3$;
+$(x_{ij}^*,y_{ij}^*)$ is the lower left-hand corner of $R_{ij}$
+- $f(x,y)=x^2-2y$,
+$R=[1,5]\times[1,3]$,
+$m=4, n=2$;
+$(x_{ij}^*,y_{ij}^*)$ is the upper right-hand corner of $R_{ij}$
+- $f(x,y)=x^2+2y^2$,
+$R=[-1,3]\times[0,4]$,
+$m=4, n=2$;
+$(x_{ij}^*,y_{ij}^*)$ is the upper right-hand corner of $R_{ij}$
+- $f(x,y)=2xy$,
+$R=[-1,1]\times[-2,2]$,
+$m=4, n=4$;
+$(x_{ij}^*,y_{ij}^*)$ is the center of $R_{ij}$
+ 
+::: 
+
+::: {#exr- } 
+Evaluate the integral $\iint_R (4-2y)\, dA$, where $R=[0,1]\times [0,1]$, by identifying it as the volume of a solid. 
+::: 
+
+::: {#exr- } 
+The integral 
+$$
+\iint_R \sqrt{9-y^2} \, dA, 
+$$
+where $R=[0,4]\times[0,2]$, represents the volume of a solid. Sketch the solid. 
+::: 
+
+::: {#exr- } 
+If $f$ is a constant function, $f(x,y)=k$, and $R=[a,b]\times [c,d]$, show that 
+$$
+\iint_R k \, dA =k(b-a)(d-c).
+$$
+::: 
+
+::: {#exr- } 
+If $R=[0,1]\times [0,1]$, show that 
+$$
+0\leq \iint_R \sin(x+y) \, dA \leq 1.
+$$
+::: 
+
+::: {#exr- } 
+Evaluate $\iint_{R} y e^{xy} \, dA$ where $R=[0,2]\times [0,1]$.
+::: 
+
+
+
+

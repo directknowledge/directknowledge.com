@@ -1,0 +1,360 @@
+---
+pagetitle: "Applied Optimization Problems - Exploring Calculus"
+---
+# "Applied Optimization Problems"
+
+## Optimization Procedures
+
+In this section we give a few examples on how to set up a function to be optimized using its derivative. 
+In general, the first step in solving an application problem is to understand the problem; maybe ask what are the unknowns? and what are the given quantities? Then the next best step is usually to draw a picture, labeling the unknowns and introducing notation. 
+The final step should always be to check the solution to see that it makes sense for the given questions. 
+
+
+An optimization procedure is a step-by-step procedure to solve an application problem using calculus; and in particular, using derivatives. 
+Here is a typical optimization procedure: 
+ 
+\item 
+Sketch a graph or draw a diagram.
+\item 
+Introduce mathematical notation.
+\item 
+Express information as expressions, equations and functions.
+\item 
+Formulate the problem mathematically by stating the knowns and unknowns.
+\item 
+State the knowns and unknowns.
+\item 
+Identify needed theorems and validate their hypotheses. Apply the theorem. 
+\item 
+Solve the mathematical problem.
+\item 
+Answer the original problem in terms of the given language.
+ 
+
+We will illustrate this optimization procedure in the following examples. 
+
+## Optimizing with Numbers
+
+::: {#exm- } 
+
+Find two nonnegative numbers whose sum is $8$ and the product of whose squares is as large as possible.
+::: 
+
+::: {.solution } 
+We are looking for two nonnegative numbers, say $x$ and $y$ with $x\geq 0,$ $y\geq 0,$ and $x+y=8.$ 
+We want to maximize the function 
+\[
+P(x)=x^2y^2=x^2(8-x)^2
+\] 
+with $x\geq 0.$
+Since the derivative of $P$,
+\[
+P'(x)=128 x-48 x^2+4 x^3=4 (-8+x) (-4+x) x
+\] 
+is continuous, the only critical numbers are $x=0, 4, 8.$ 
+We evaluate $P$ to find $P(0)=0=P(8)$ and so the largest possible value is $P(4)=256$ with $x=y=4.$ 
+::: 
+
+::: {#exm- } 
+
+Under the condition that $2x-5y=18,$ minimize $x^2y$ when $x\geq 0$ and $y\geq 0.$
+::: 
+
+::: {.solution } 
+We want to minimize 
+\[
+P(x)=x^2y=x^2\left(\frac{1}{5}\right) (-18+2 x).
+\] 
+Since the derivative of $P$,
+\[
+P'(x)=\frac{6}{5} \left(-6 x+x^2\right)=\frac{6}{5} (-6+x) x
+\]
+is continuous, the only critical numbers are $x=0$ and $x=6$. 
+We evaluate to find $P(0)=0$ and the smallest possible value to be $P(6)=-\frac{216}{5}.$ 
+Thus the values are $x=6$ and $y=\frac{-6}{5}.$ 
+::: 
+
+
+## Optimizing Volume
+
+::: {#exm- }  
+
+Find the dimensions of the right circular cylinder of largest volume that can be inscribed in a sphere of radius $R.$ 
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width=150pt]{_includes/p31.pdf}}
+\caption{cylinder inscribed in sphere}
+\label{fig:graph31}
+\end{center}
+\end{figure}
+
+::: {.solution } 
+Let $R$ be the radius of the sphere and $r$ the radius of the cylinder with height $2h$ so that $0\leq h\leq R.$ 
+Since $r^2+h^2=R^2,$ the volume of the cylinder is given by  
+\[
+V(h)=\pi  r^22h=2\pi  h\left(R^2-h^2\right)=2\pi \left(R^2h-h^3\right).
+\] 
+Using the Extreme Value Theorem, we wish to maximize the continuous function $V(h)$ on the closed interval $[0,R]$. 
+The derivative of $V$ is $V'(h)=2\pi \left(R^2-3h^2\right).$
+Since $V'$ is continuous the only critical numbers are found by solving $V'(h)=0$ for $0\leq h\leq R$. 
+Thus the only critical number is $h=R\left/\sqrt{3}.\right.$ 
+Since $V(0)=V(R)=0$, $h=0$ and $h=R$ give minima, it follows by the Extreme Value Theorem that $h=R\left/\sqrt{3}\right.$ must be a maximum.
+After solving for $r$ we find the dimensions of the cylinder are, height: $2 R\frac{\sqrt{3}}{3}$ and radius: $\frac{R}{3}\sqrt{6}.$ 
+::: 
+
+## Optimizing with Geometry
+
+::: {#exm- } 
+Find all points on the circle $x^2+y^2=a^2$ such that the product of the $x$-coordinate and the $y$-coordinate is as large as possible. 
+::: 
+
+::: {.solution } 
+In the first quadrant we have $y=\sqrt{a^2-x^2}$ and so we want to maximize $f(x)=x\sqrt{a^2-x^2}$ subject to $x>0$. 
+The derivative of $f$ is, 
+\[
+f'(x)=\frac{a^2-2 x^2}{\sqrt{a^2-x^2}}.
+\] 
+Thus the critical number is $x=\frac{a}{\sqrt{2}}.$ 
+The maximum value of the function $f$ is  
+\[
+f\left(\frac{a}{\sqrt{2}}\right)=\frac{a}{\sqrt{2}}\sqrt{a^2-\frac{a^2}{2}}=\frac{a^2}{2}.
+\] 
+Thus the points are 
+\[
+\left(\frac{a}{\sqrt{2}},\frac{a}{\sqrt{2}}\right) \text{   and   } \left(\frac{-a}{\sqrt{2}},\frac{-a}{\sqrt{2}}\right).
+\]
+::: 
+
+## Optimizing Area
+
+::: {#exm- } 
+
+A woman plans to fence off a rectangular garden whose area is 64 $\text{ft}^2.$ 
+What should be the dimensions of the garden if she wants to minimize the amount of fencing used?
+::: 
+
+::: {.solution } 
+Let $x$ and $y$ be the dimensions of the rectangular plot. 
+The fencing (perimeter) is $P=2x+2y$ and the area is   $A=x y=64$ with domain $x>0.$ 
+We want to minimize $P$ so we write $P$ as a function of one variable, say 
+\[
+P=2x+\frac{2(64)}{x}.
+\] 
+Since the derivative of $P$ is, 
+\[
+P'=2-\frac{128}{x^2}=\frac{2x^2-128}{x^2}
+\] 
+and is continuous the only critical number is  when $P'=0$ with $x>0$ which is when $x=8$. 
+In this example we apply the First Derivative Test to verify that the critical number $x=8$ is useful as follows
+\[
+\begin{array}{c|c|c|l}
+\text{Interval} & f & f' & \text{Conclusion} \\ \hline
+0<x<8 & & - & \text{decreasing}\\
+x=8 & 8 & 0 & \text{local minimum}\\
+x>8 & & + & \text{increasing}\\
+\end{array}
+\]
+Since $P$ is decreasing on $(0,8)$ and increasing on $(0,\infty)$, the function $P$ has an absolute minimum at $x=8$; and the dimensions of the garden should be $8$ ft by $8$ ft.
+::: 
+
+::: {#exm- } [Optimizing with Area] 
+Someone with 750 ft of fencing wants to enclose a rectangular area and then divide it into four pens with fencing parallel to one side of the rectangle. 
+What is the largest possible total area of the four pens?
+::: 
+
+::: {.solution } 
+Let $x$ be the lengths of the 2 sides and let $y$ be the lengths of the other 5 sides. 
+Since there are three divides making the four pens $2x+2y+3y=750$. 
+The area of the four pens is $A=x y,$ thus we can solve $2x+2y+3y=750$ for $y$ obtaining $y=\frac{1}{5} (750-2 x).$ 
+So a function of the area is 
+\[
+A(x)=\frac{1}{5}x (750-2 x).
+\] 
+The derivative of $A$ is, $A'(x)=\frac{1}{5} (750-4 x)$ and so the critical number is $x=750/4.$ 
+The largest possible area is $A\left(\frac{750}{4}\right)=14062.5$ square feet.
+::: 
+
+
+## Optimizing Angles
+
+::: {#exm- } 
+
+The bottom of an 8-ft-high mural painted on a vertical wall is 13 ft above the ground. 
+The lens of a camera fixed to a tripod is 4 ft above the ground. 
+How far from the wall should the camera be placed to photograph the mural with the largest possible angle? 
+::: 
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=220pt]{_includes/app1.pdf}
+\caption{Photographing a mural.}
+\label{fig:app}
+\end{figure} 
+
+
+::: {.solution } 
+Let the horizontal distance from the camera to the wall be $x.$ 
+Let $\alpha $ be the angle of elevation from the camera lens to the top of the mural and let $\beta $ the angle of elevation from the camera to the bottom of the mural. 
+Also, let $\theta =\alpha -\beta .$ 
+Then  
+\[
+\theta (x)=\tan ^{-1}\frac{17}{x}-\tan ^{-1}\frac{9}{x}.
+\] 
+Since the first derivative of $\theta$ is, 
+\begin{align*}
+\frac{d\theta }{dx} & = \frac{1}{1+\left(\frac{17}{x}\right)^2}\left(\frac{-17}{x^2}\right)-\frac{1}{1+\left(\frac{9}{x}\right)^2}\left(\frac{-9}{x^2}\right) \\
+& =\frac{-17}{x^2+289}+\frac{9}{x^2+81} \\
+& =-\frac{8 \left(x^2-153\right)}{\left(x^2+81\right) \left(x^2+289\right)}
+\end{align*}
+we see that $\frac{d\theta }{dx}=0$ and $x>0$ when $x=\sqrt{153}.$ 
+Applying the First Derivative Test, the largest possible angle is when
+$x=\sqrt{153}$ $=3\sqrt{17}$ or approximately $12.4$ feet. 
+::: 
+
+## Optimizing Distance
+
+::: {#exm- } 
+A truck is 250 mi due east of a sports car and is traveling west at a constant speed of 60 mi/h. 
+Meanwhile, the sports car is going north at 80 mi/h. 
+When will the truck and the car be closest to each other? What is the minimum distance between them?
+::: 
+
+::: {.solution } 
+Draw a figure with the car at the origin of a Cartesian coordinate system and the truck at $(250,0).$ 
+At time $t,$ (in hours) the truck is at position $(250-x,0),$ while the car is at $(0,y).$ 
+Let $D$ be the distance that separates them. 
+Then $\frac{dx}{dt}=60$ and $\frac{dy}{dt}=80$ so that $x=60 t$ and $y=80 t.$ 
+We will minimize the square of the distance, $D^2=(250-x)^2+y^2$,
+\[ D^2=(250-60 t)^2+(80t)^2=2500 \left(25-12 t+4 t^2\right)\] 
+Since $\frac{dD^2}{dt}=10,000(2t-3)$ the derivative of the distance squared is 0 when $t=1.5 \text{hr}.$ 
+Substituting into the equation for $D^2$ produces the shortest distance: $x=60(1.5)=90$ and $y=80(1.5)=120$.  
+Thus, $D^2=(250-90)^2+120^2=1600(25)$ and so $D=40(5)=200$ which is the minimum distance (because there is no maximum distance and the Extreme Value Theorem applies). 
+::: 
+
+## Optimizing Time
+
+::: {#exm- } 
+A jeep is on the desert at a point $P$ located 40 km from a point $Q$, which lies on a long straight road. 
+The driver can travel at 45 km/h on the desert and 75 km/h on the road. 
+The driver will win a prize if he arrives at the finish line at point $F$, 50 km from $Q$, in 84 minutes or less. 
+What route should he travel to minimize the time of travel? Does he win the prize?
+::: 
+
+::: {.solution } 
+Suppose that the driver heads for a point $S$ located $x$ km down the road from $Q$ towards his destination. 
+We want to minimize the time. 
+We will need to remember the formula $d=r t,$ or in terms of time $t=d/r.$ 
+Since the distance between $P$ and $S$ is  $\sqrt{x^2+1600}$ and the distance between $S$ and $F$ is $50-x,$ the total time is given by  
+\[
+T(x)=\frac{\sqrt{x^2+1600}}{45}+\frac{50-x}{75} \text{where  } 0\leq x\leq 50.
+\]
+Since 
+\[T'(x)=\frac{x}{45 \sqrt{x^2+1600}}-\frac{1}{75}=\frac{5 x-3 \sqrt{1600+x^2}}{225 \sqrt{1600+x^2}}\] 
+we find that $x=30$ is the only critical number of $T.$ 
+To find the extreme values we evaluate $T$ at the endpoints, we find 
+\[
+T(30)=\frac{\sqrt{(30)^2+1600}}{45}+\frac{50-30}{75}=\frac{62}{45}=1.37778 \text{ hr}
+\]
+\[
+T(0)=\frac{\sqrt{(0)^2+1600}}{45}+\frac{50-0}{75}=\frac{14}{9}=1.55556 \text{ hr}
+\] 
+\[
+T(50)=\frac{\sqrt{(50)^2+1600}}{45}+\frac{50-50}{75}=\frac{2 \sqrt{41}}{9}=1.42292 \text{ hr}
+\]
+Therefore, the driver can minimize the total driving time by heading for a point that is $30 \text{km}$ from the point $Q$ and then traveling on the road to point $D.$ 
+He wins the prize because the minimal route is only 83 minutes. 
+::: 
+
+## Marginal Analysis
+
+Marginal analysis is concerned with the way quantities such as price, cost, revenue, and profit vary with small changes in the level of production. 
+The demand function $p(x)$ is defined to be the price that consumers will pay for each unit of the commodity when $x$ units are brought to market. 
+Then $R(x)=x p(x)$ is the total revenue function derived from the sale of the $x$ units and $P(x)=R(x)-C(x)$ is the total profit function where $C(x)$ is the total cost function for producing $x$ units.
+
+::: {#exm- } [Optimizing Profits] 
+A toy manufacturer produces an inexpensive doll (Dolly) and an expensive doll (Polly) in units of $x$ hundred and $y$ hundred, respectively. 
+Suppose it is possible to produce the dolls in such a way that $y=\frac{82-10x}{10-x}$ with  $0\leq x\leq 8$ and that the company receives twice as much for selling a Polly doll as for selling a Dolly doll. 
+Find the level of production for both $x$ and $y$ for which total revenue derived from selling these dolls is maximized. 
+What vital assumption must be made about sales in the model?
+::: 
+
+::: {#exm- } [Optimizing Revenue] 
+A business manager estimates that when $p$ dollars are charged for every unit of a product, the sales will be $x=380-20p$ units. 
+At this level of production, the average cost is modeled by 
+\[
+A(x)=5+\frac{x}{30}.
+\] 
+\ 
+\item 
+Find the total revenue and total cost functions, and express the profit as a function of $x.$ 
+\item 
+What price should the manufacturer charge to maximize profit? 
+\item 
+What is the maximum profit? 
+ 
+::: 
+
+::: {#exm- } [Optimizing Costs] 
+Suppose the total cost (in dollars) of manufacturing $x$ units of a certain commodity is $C(x)=3x^2+5x+75$. 
+\ 
+\item 
+At what level of production is the average cost per unit the smallest? 
+\item 
+At what level of production is the average cost per unit equal to the marginal cost? 
+\item 
+Graph the average cost and the marginal cost on the same set of axes, for $x>0.$
+ 
+::: 
+
+
+## Exercises
+
+::: {#exr- } 
+You are planning to close off a corner of the first quadrant with a line segment 20 units long running from $(a,0)$ to $(0,b).$ Show that the area of the triangle enclosed by the segment is largest when $a=b.$ 
+::: 
+
+::: {#exr- } 
+Your iron work has contracted to design and build a $500 \text{ft}^3,$ square-based, open-top, rectangular steel holding tank for a paper company. The tank is to be made by welding thin stainless steel plates together along their edges. As the production engineer, your job is to find dimensions for the base and height that will make the tank weigh as little as possible. (a) What dimensions do you tell the shop to use? (b) Briefly describe how you took weight into account. 
+::: 
+
+::: {#exr- } 
+The bottom of an 8-ft-high mural painted on a vertical wall is 13 ft above the ground. The lens of a camera fixed to a tripod is 4 ft above the ground. How far from the wall should the camera be placed to photograph the mural with the largest possible angle? 
+::: 
+
+::: {#exr- } 
+A 1125 $\text{ft}^3$ open-top rectangular tank with a square base $x$ ft on a side and $y$ ft deep is to be built with its top flush with the ground to catch runoff water. The costs associated with the tank involve not only the material from which the tank is made but also an excavation charge proportional to the product $x y.$ (a) If the total cost is $c=5\left(x^2+ 4 x y\right)+10 x y$ what values of $x$ and $y$ will minimize it? (b) Give a possible scenario fro the cost function in part (a).
+::: 
+
+::: {#exr- } 
+Two sides of a triangle have lengths $a$ and $b$, and the angle between then $\theta .$ What value of $\theta $ will maximize the triangle's area? 
+::: 
+
+::: {#exr- } 
+The height of an object moving vertically is given by $s=-16 t^2+96 t+112$ with $s$ in feet and $t$ in seconds. Find the object's velocity when $t=0.$ Find its maximum height and when it occurs. Also find its velocity when $s=0.$ 
+::: 
+
+::: {#exr- } 
+Find the dimensions of the right circular cylinder of largest volume that can be inscribed in a sphere of radius $R.$
+::: 
+
+::: {#exr- } 
+Jane is 2 mi offshore in a boat and wishes to reach a coastal village 6 mi down a straight shoreline from the point nearest the boat. She can now row 2 mph can walk 5 mph. Where should she land her boat to reach the village in the least amount of time? 
+::: 
+
+::: {#exr- } 
+The positions of two particles on the $s$-axis are $s_1=\sin  t$ and $s_2=\sin (t+\pi /3)$ with $s_1$ and $s_2$ in meters and $t$ in seconds. (a) At what time(s) in the interval $0\leq t\leq 2\pi $ do the particles meet? (b) What is the farthest apart that the particles ever get? (c) When in the interval $0\leq t\leq 2\pi $ is the distance between the particles chaining the fastest?
+::: 
+
+::: {#exr- } 
+A truck is 250 mi due east of a sports car and is traveling west at a constant speed of 60 mi/h. Meanwhile, the sports car is going north at 80 mi/h. When will the truck and the car be closest to each other? What is the minimum distance between them? 
+::: 
+
+::: {#exr- } 
+A jeep is on the desert at a point $P$ located 40 km from a point $Q$, which lies on a long straight road. The driver can travel at 45 km/h on the desert and 75 km//h on the road. The driver will win a prize if he arrives at the finish line at point $F$, 50 km from $Q$, in 84 minutes or less. What route should he travel to minimize the time of travel? Does he win the prize? 
+::: 
+
+
+

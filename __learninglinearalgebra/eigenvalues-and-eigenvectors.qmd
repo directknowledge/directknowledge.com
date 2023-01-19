@@ -1,0 +1,474 @@
+---
+pagetitle: "Eigenvalues and Eigenvectors - Learning Linear Algebra"
+---
+# Eigenvalues and Eigenvectors
+
+Let $\mathbb{F}$ be either the real numbers or the complex numbers. A nonzero vector $\vec v$ in $\mathbb{F}^n$ is called an \index{eigenvector} of an $n\times n$ matrix $A$ if $A \vec v$ is a scalar multiple of $\vec v$, that is $A \vec v= \lambda \vec v$ for some scalar $\lambda$. Note that this scalar $\lambda$ may be zero. The scalar $\lambda$ is called the \index{eigenvalue} **eigenvalue** associated with the eigenvector $\vec v$.
+Even though, $A\vec 0=\lambda \vec 0$ we do not call $\vec 0$ an eigenvector. 
+Of course a matrix need not have any eigenvalues or eigenvectors, but notice if $\vec v$ is an eigenvector of matrix $A$, then $\vec v$ is an eigenvector of matrices $A^2$, $A^3$, \ldots as well, with $A^t\vec v=\lambda^t \vec v,$ for all positive integers $t$. If $\mathbb{F}=\mathbb{C}$, then counting multiplicities, every $n\times n$ matrix has exactly $n$ eigenvalues. 
+
+If $\vec v$ is an eigenvector of the $n\times n$ matrix $A$ with associated eigenvalue $\lambda$, what can you say about $\ker(A-\lambda I_n)$? Is the matrix $A-\lambda I_n$ invertible?
+We know $A \vec v=\lambda \vec v$ so $(A-\lambda I_n)\vec v=A \vec v-\lambda I_n\vec v=\lambda\vec v-\lambda \vec v=0$. Thus a nonzero vector $\vec v$ is in the kernel of $(A-\lambda I_n)$.
+Therefore, $\ker(A-\lambda I_n)\neq \{\vec 0\}$ and so $A-\lambda I_n$ is not invertible.
+
+::: {#lem- } 
+\label{eigenprop}
+Let $A$ be an $n\times n$ matrix $A$ and $\lambda$ a scalar. Then $\lambda$ is an eigenvalue of $A$ if and only if $\det(A-\lambda I_n)=0$.
+::: 
+
+::: {.proof }
+The proof follows from the chain of equivalent statements:
+
+- $\lambda$ is an eigenvalue of  $A$, 
+- there exists a nonzero vector $\vec v$ such that $(A -\lambda I_n ) \vec v=0,$ 
+- $\ker(A -\lambda I_n )\neq \{\vec 0\}$, 
+- matrix $A-\lambda I_n$ fails to be invertible, and
+- $\det(A -\lambda I_n )=0$.
+::: 
+
+::: {#exm- } 
+Find all eigenvectors and eigenvalues of the identity matrix $I_n$.
+Since $I_n \vec v = \lambda \vec v= 1 \vec v$ for all $\vec v\in \mathbb{R}^n$, all nonzero vectors in $\mathbb{R}^n$ are eigenvectors of $I_n$, with eigenvalues $\lambda=1$.
+::: 
+
+::: {#lem- } 
+\label{diaentries}
+The eigenvalues of a triangular matrix are its diagonal entries. 
+::: 
+
+::: {.proof }
+Let $A$ be a triangular matrix. Then $A-\lambda I_n$ is also a triangular matrix, and so 
+$\det(A-\lambda I_n)$ is the product of its diagonal entries. 
+Let $a_{ii}$ be any diagonal entry of $A$. Then $a_{ii}-\lambda$ is the corresponding diagonal entry of $A-\lambda I_n$. Thus $\lambda$ is an eigenvalue of $A$ if and only if $a_{ii}-\lambda=0$ by \ref{eigenprop}.
+::: 
+
+::: {#exm- } 
+Find a basis of the linear space $V$ of all $2\times 2$ matrices for which $\vec e_1$ is an eigenvector. 
+For an arbitrary $2\times 2$ matrix we want
+$$
+\begin{bmatrix} a & b \\c & d\end{bmatrix} \vectortwo{1}{0}=\vectortwo{a}{c}=\vectortwo{\lambda}{0}=\lambda \vectortwo{1}{0}
+$$ 
+for any $\lambda$. Hence $a, b, d$ are free and $c=0$; thus a desired basis of $V$ is
+$$
+\left( 
+\begin{bmatrix} 1 & 0 \\ 0 & 0\end{bmatrix},
+\begin{bmatrix} 0 & 1 \\ 0 & 0\end{bmatrix},
+\begin{bmatrix} 0 & 0 \\ 0 & 1\end{bmatrix}
+\right).
+$$
+::: 
+
+::: {#exm- } 
+Find a basis of the linear space $V$ of all $4\times 4$ matrices for which $\vec e_2$ is an eigenvector.
+We want to find all $4 \times 4$ matrices $A$ such that $A \vec e_2=\lambda e_2$. Thus the second column of an arbitrary $4 \times 4$ matrix $A$ must be of the form $\vectorfour{0}{\lambda}{0}{0}^T$, so
+$$
+A=\begin{bmatrix} a & 0 & c & d \\ e & \lambda & f & g \\ h & 0 & i & j \\ k & 0 & l & m\end{bmatrix}.
+$$
+Let $E_{ij}$ denote the $4\times 4$ matrix with all entries zero except for a 1 in the $i$-th row and $j$-th column. Then a basis for $V$ is
+$$
+\left(
+E_{11}, E_{21}, E_{31}, E_{41}, E_{22}, E_{13}, E_{23}, E_{33}, E_{34}, E_{41}, E_{42}, E_{43}, E_{44} 
+\right)
+$$
+and so the dimension of $V$ is 13.
+::: 
+
+
+::: {#exm- } 
+Find the eigenvalues and find a basis for each eigenspace given 
+$A=\begin{bmatrix}1 & 0 & 0 \\ -5 & 0 & 2 \\ 0 & 0 & 1 \end{bmatrix}$.
+Find an eigenbasis for $A$.
+The eigenvalues are $\lambda_1=0$ and $\lambda_2=\lambda_3=1$. A basis for $E_{0}$ is $\left(\vectorthree{0}{1}{0}\right)$.
+A basis for $E_{1}$ is $\left(\vectorthree{1}{-5}{0},\vectorthree{0}{2}{1}\right)$.
+An eigenbasis for $A$ is 
+$\left(\vectorthree{0}{1}{0},\vectorthree{1}{-5}{0},\vectorthree{0}{2}{1}\right)$.
+::: 
+
+::: {#exm- } 
+Find a basis of the linear space $V$ of all $2\times 2$ matrices $A$ for which $\vectortwo{1}{-3}$ is an eigenvector. For an arbitrary $2\times 2$ matrix we want
+$$
+\begin{bmatrix} a & b \\c & d \end{bmatrix} \vectortwo{1}{-3}=\lambda\vectortwo{1}{-3}=\vectortwo{\lambda}{-3\lambda}.
+$$
+Thus $a-3b=\lambda$, $c-3d=-3\lambda$ and so $c=-3a+9b+3d$. Thus $A$ must be of the form
+$$
+\begin{bmatrix} a & b \\ -3a+9b+3d & d\end{bmatrix}=a\begin{bmatrix} 1 & 0 \\-3 & 0 \end{bmatrix}+b \begin{bmatrix} 0 & 1 \\ 9 & 0 \end{bmatrix}+ d\begin{bmatrix} 0 & 0 \\ 3 & 1\end{bmatrix}.
+$$
+Thus a basis of $V$ is
+$$
+\left( \begin{bmatrix} 1 & 0 \\ -3 & 0 \end{bmatrix}, \begin{bmatrix} 0 & 1 \\ 9 & 0 \end{bmatrix}, \begin{bmatrix} 0 & 0 \\ 3 & 1\end{bmatrix} \right)
+$$
+and so the dimension of $V$ is $3$.
+::: 
+
+::: {#exm- } 
+Find a basis of the linear space $V$ of all $3\times 3$ matrices $A$ for which both $\vectorthree{1}{0}{0}^T$ and $\vectorthree{0}{0}{1}^T$ are eigenvectors. Since $A \vectorthree{1}{0}{0}^T$ is simply the first column of $A$, the first column must be a multiple of $\vec e_1$. Similarly, the third column must be a multiple of $\vec e_3$. There are no other restrictions on the form of $A$, meaning it can be any matrix of the form
+$$
+\begin{bmatrix} a & b & 0 \\ 0 & c & 0 \\ 0 & d & e \end{bmatrix}
+$$
+Thus a basis of $V$ is
+$$
+\left( 
+\begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix},
+\begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix},
+\begin{bmatrix} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{bmatrix},
+\begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix},
+\begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+\right)
+$$
+and so the dimension of $V$ is 5.
+::: 
+
+::: {#thm- } 
+\label{charform}
+If $A$ is an $n\times n$ matrix, then $\det(A-\lambda I_n)$ is a polynomial of degree $n$, of the form 
+\begin{equation} \label{chpo}
+f_A(\lambda)=(-\lambda)^n+\text{trace} (A) (-\lambda)^{n-1}+\cdots +\det(A). 
+\end{equation}
+::: 
+
+::: {.proof }
+This proof is left for the reader.
+::: 
+
+The equation $\det(A-\lambda I_n)=0$ is called the \index{characteristic equation} **characteristic equation** of $A$.  The polynomial in  \ref{chpo} is called the \index{characteristic polynomial} **characteristic polynomial** and is denoted by $f_A(\lambda)$. 
+We say that an eigenvalue $\lambda_0$ of a square matrix $A$ has \index{algebraic multiplicity} **algebraic multiplicity** $k$ if $\lambda_0$ is a root of multiplicity $k$ of the characteristic polynomial $f_A(\lambda)$ meaning that we can write
+$$
+f_A(\lambda)=(\lambda_0-\lambda)^k g(\lambda)
+$$
+for some polynomial $g(\lambda)$ with $g(\lambda_0)\neq 0$.
+
+::: {#exm- } 
+Find the characteristic equation for a $2\times 2 $ matrix $A$. 
+The characteristic equation of $A=\begin{bmatrix} a& b \\c & d\end{bmatrix}$ is
+$$
+f_A(\lambda)
+=\det \begin{bmatrix} a-\lambda& b \\c & d-\lambda \end{bmatrix}
+%=(a-\lambda)(d-\lambda)-bc
+=\lambda^2-(a+d)\lambda +(ad-bc)=0.
+$$
+::: 
+
+::: {#exm- } 
+Use the characteristic polynomial $f_A(\lambda)$ to determine the eigenvalues and their multiplicities  of
+$$
+A=\begin{bmatrix} -1 & -1 & -1 \\ -1 & -1 & -1 \\ -1 & -1 & -1 \end{bmatrix}.
+$$
+The characteristic equation is $f_A(\lambda)=-\lambda^2(\lambda+3)$. So $\lambda_1=0$ with algebraic multiplicity of 2 and $\lambda_2=-3$ with algebraic multiplicity of 1 are the eigenvalues of $A$. 
+::: 
+
+::: {#exm- } 
+Consider the matrix $A=\begin{bmatrix} a & b \\ b & c \end{bmatrix}$, where $a, b, c$ are nonzero constants. For which values of $a, b, c $ does $A$ have two distinct eigenvalues?
+The characteristic equation is $f_A(\lambda)=\lambda^2-(a+c)\lambda+(a c-b^2)$. The discriminant of this quadratic equation is
+$$
+(a+c)^2-4(ac-b^2)=a^2+2ac+c^2-4ac+4b^2=(a-c)^2+4b^2.
+$$
+The discriminant is always positive since $b\neq 0$. Thus, the matrix $A$ there will always have two distinct real eigenvalues. 
+::: 
+
+::: {#exm- } 
+In terms of eigenvalues of $A$, which $2\times 2$ matrices $A$ does there exist an invertible matrix $S$ such that $AS=SD$, where $D=\begin{bmatrix} 2 & 0 \\ 0 & 3 \end{bmatrix}$?
+If we let $S=\begin{bmatrix} \vec v_1 & \vec v_2\end{bmatrix}$, then $AS=\begin{bmatrix} A \vec v_1 & A \vec v_2\end{bmatrix}$ and $SD=\begin{bmatrix} 2 \vec v_1 & 3\vec v_2\end{bmatrix}$. So that $\vec v_1$ must be an eigenvector of $A$ with eigenvalue  2, and $\vec v_2$ must be an eigenvector  of $A$ with eigenvalue 3. Thus, the matrix $S$ will exist and will have first column has an eigenvector of $A$ with eigenvalue 2, and have second column is an eigenvector of $A$ with eigenvalue of 3. Therefore, $A$ can be any matrix satisfying these requirements. 
+::: 
+
+::: {#exm- } 
+Let $A$ be a matrix with eigenvalues $\lambda_1, \ldots, \lambda_k$. 
+
+- Show the eigenvalues of $A^T$ are $\lambda_1, \ldots, \lambda_k$. 
+- Show the eigenvalues of $\alpha A$ are $\alpha\lambda_1, \ldots, \alpha \lambda_k$. 
+
+Show $A^{-1}$ exists if and only if $\lambda_1 \cdots \lambda_k\neq 0$.
+- Also, show that if $A^{-1}$ exists then its eigenvalues are $1/\lambda_1,\ldots,1/\lambda_k$.
+::: 
+
+
+
+
+::: {#exm- } 
+Let $A$ be a matrix with eigenvalues $\lambda_1, \ldots, \lambda_k$ and let $m$ be a positive integer. 
+Show that the eigenvalues of $A^m$ are $\lambda^m_1, \ldots, \lambda^m_k$.
+::: 
+
+::: {#exm- } 
+By using the matrix 
+$$
+\begin{bmatrix}
+0 & 1 & 0 & \cdots & 0\\
+0 & 0 & 1 & \cdots & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1 \\
+\frac{-a_n}{a_0} & \frac{-a_{n-1}}{a_0}& \frac{-a_{n-2}}{a_0} & \cdots & \frac{-a_1}{a_0} 
+\end{bmatrix}
+$$
+Show that any given polynomial $a_o \lambda^n+a_1\lambda^{n-1}+\cdots +a_{n-1}\lambda +a_n$
+where $a_0\neq 0$, of degree $n$ may be regarded as the characteristic polynomial of a matrix of order $n$. This matrix is called the \index{companion matrix} **companion matrix** of the given polynomial. 
+::: 
+
+::: {#exm- } 
+Let $A$ and $B$ be $n\times n$ matrices. Show that $AB$ and $BA$ have the same eigenvalues.
+::: 
+
+::: {#exm- } 
+Let $A$ and $B$ be real $n\times n$ matrices with distinct eigenvalues. Prove that $AB=BA$ if and only if $A$ and $B$ have the same eigenvectors. 
+::: 
+
+::: {#exm- } 
+Prove that the characteristic polynomial of the block-triangular matrix $A=\begin{bmatrix} B & C\\ 0 & D\end{bmatrix}$ is the product of the characteristic polynomials of $B$ and $D$. 
+::: 
+
+::: {#exm- } 
+Suppose that $A$ is an invertible $n\times n$ matrix. Prove that 
+\begin{equation}
+f_{A^{-1}}(x)=(-x)^n\det(A^{-1})f_A\left(\frac{1}{x}\right).
+\end{equation}
+::: 
+
+::: {#exm- } 
+Let $A$ be an $n\times n$ matrix. Prove that $A$ and $A^T$ have the same characteristic polynomial and hence the same eigenvalues. 
+::: 
+
+If$\lambda$ is an eigenvalue of an $n\times n$ matrix $A$, then the kernel of the matrix $A-\lambda I_n$ is called the \index{eigenspace} **eigenspace** associated with $\lambda$ and is denoted by $E_\lambda$. The dimension of the eigenspace is called the \index{geometric multiplicity} **geometric multiplicity** of eigenvalue $\lambda$. In other words, the geometric multiplicity is the nullity of the matrix $A-\lambda I_n$. 
+
+::: {#thm- } 
+\label{eigenveceigenvallemma}
+Let $A$ be an $n\times n$ matrix.
+If $\lambda_1, \ldots, \lambda_k$ are distinct eigenvalues of $A$, and $\vec v_1, \ldots, \vec v_k$ are any nonzero eigenvectors associated with these eigenvalues respectively, then $\vec v_1, \ldots, \vec v_k$ are linearly independent. 
+::: 
+
+::: {.proof }
+Suppose there exists constants $c_1, \ldots, c_k$ such that 
+\begin{equation}
+\label{eigenveclin}
+c_1 \vec v_1+\cdots +c_k \vec v_k=0 
+\end{equation}
+Using the fact that $A \vec v_i=\lambda_i \vec v_i$ we multiply \ref{eigenveclin} by $A$ to obtain 
+\begin{equation}
+\label{eigenveclin2}
+c_1 \lambda_1\vec v_1+\cdots c_k \lambda_k \vec v_k=0. 
+\end{equation}
+Repeating this again we obtain
+\begin{equation}
+\label{eigenveclin3}
+c_1 \lambda^2_1\vec v_1+\cdots +c_k \lambda^2_k \vec v_k=0. 
+\end{equation}
+Repeating, we are lead to the system in the vector unknowns $\vec v_1, \ldots, \vec v_k$ 
+\begin{equation}
+\begin{bmatrix}
+c_1 \vec v_1 & \cdots & c_k \vec v_k
+\end{bmatrix}_{n\times k}
+\begin{bmatrix}
+1 & \lambda_1 & \lambda_1^2 & \cdots \lambda_1^{k-1} \\
+1 & \lambda_2 & \lambda_2^2 & \cdots \lambda_2^{k-1} \\
+1 & \lambda_3 & \lambda_3^2 & \cdots \lambda_3^{k-1} \\
+\vdots & \vdots & \vdots & \ddots \vdots \\
+1 & \lambda_k & \lambda_k^2 & \cdots \lambda_k^{k-1} \\
+\end{bmatrix}_{k\times k}
+=0_{n\times k}.
+\end{equation}
+Since the eigenvalues are distinct, the coefficient matrix is an invertible Vandermonde matrix. Multiplying on the right by its inverse shows that 
+$$
+\begin{bmatrix}
+c_1 \vec v_1 & \cdots & c_k \vec v_k
+\end{bmatrix}
+=0_{n\times k}.
+$$ 
+It follows that every $c_i$ must be zero. Hence $\vec v_1, \ldots, \vec v_k$ are linearly independent. 
+::: 
+
+A basis of $\mathbb{F}^n$ consisting of eigenvectors of $A$ is called an \index{eigenbasis} **eigenbasis** for $A$.   
+In particular, if an $n\times n$ matrix $A$ has $n$ distinct eigenvalues, then there exists an eigenbasis for $A$, namely, construct an eigenbasis by finding an eigenvector for each eigenvalue. 
+
+::: {#exm- } 
+Find the characteristic equation, the eigenvalues, and a basis for the eigenspace.
+$$A=\begin{bmatrix}
+3 & 2 & 4 \\
+2 & 0 & 2\\
+4 & 2 & 3
+\end{bmatrix}
+$$
+The eigenvalues are $\lambda_1=8$ (with algebraic multiplicity 1) and $\lambda_2=-1$ (with algebraic multiplicity 2) since
+$$
+\det(A-\lambda I)
+=\begin{vmatrix}
+3-\lambda & 2 & 4 \\
+2 & -\lambda & 2\\
+4 & 2 & 3-\lambda
+\end{vmatrix}
+=-\lambda^3+6\lambda^2+15\lambda+8=0.
+$$
+For $\lambda_1=8$ we obtain 
+$$
+\begin{bmatrix}
+-5 & 2 & 4 \\
+2 & -8 & 2\\
+4 & 2 & -5
+\end{bmatrix}
+\vectorthree{x_1}{x_2}{x_3}=\vectorthree{0}{0}{0}
+$$
+and we obtain the eigenvector $\vec v_1=\vectorthree{2}{1}{2}^T$ with $E_8=\text{span}(\vec v_1)$. Therefore the geometric multiplicity of $\lambda_1=8$ is 1.
+For $\lambda_1=-1$ we obtain 
+$$
+\begin{bmatrix}
+4 & 2 & 4 \\
+2 & 1 & 2\\
+4 & 2 & 4
+\end{bmatrix}
+\vectorthree{x_1}{x_2}{x_3}=\vectorthree{0}{0}{0}
+$$
+and we obtain the eigenvectors $\vec v_2=\vectorthree{1}{-2}{0}^T$ and  $\vec v_3=\vectorthree{0}{-2}{1}^T$ with $E_{-1}=\text{span}(\vec v_2, \vec v_3)$.
+Therefore the geometric multiplicity of $\lambda_2=-1$ is 2.
+::: 
+
+::: {#exm- } 
+Show that for each of the following matrices, $\lambda=3$ is an eigenvalue of algebraic multiplicity 4. In each case, compute the geometric multiplicity of $\lambda$.
+$$
+\begin{bmatrix}
+3 & 0 & 0 & 0 \\
+0 & 3 & 0 & 0 \\
+0 & 0 & 3 & 0\\
+0 & 0 & 0 & 3
+\end{bmatrix}
+\qquad
+\begin{bmatrix}
+3 & 1 & 0 & 0 \\
+0 & 3 & 0 & 0 \\
+0 & 0 & 3 & 0\\
+0 & 0 & 0 & 3
+\end{bmatrix}
+\qquad
+\begin{bmatrix}
+3 & 1 & 0 & 0 \\
+0 & 3 & 1 & 0 \\
+0 & 0 & 3 & 0\\
+0 & 0 & 0 & 3
+\end{bmatrix}
+\qquad
+\begin{bmatrix}
+3 & 1 & 0 & 0 \\
+0 & 3 & 1 & 0 \\
+0 & 0 & 3 & 1\\
+0 & 0 & 0 & 3
+\end{bmatrix}
+$$
+::: 
+
+::: {#thm- } 
+\label{invsimmatrix}
+Similar matrices $A$ and $B$ have the same determinant, trace, characteristic polynomial, rank, nullity, and the same eigenvalues with the same algebraic  multiplicities. 
+::: 
+
+::: {.proof }
+The case for the determinant and trace are proven in \ref{propdettrace}.
+Since $A$ and $B$ are similar, there exists an invertible matrix $P$ such that $B=P^{-1}AP$. Using \ref{propdettrace} we find
+\begin{align*}
+\det(B-\lambda I)
+&=\det(P^{-1}AP-\lambda I)
+=\det(P^{-1}AP-P^{-1}\lambda I P) 
+=\det(P^{-1}(A-\lambda I) P) \\
+& =\det(P^{-1})\det(A-\lambda I) \det(P) 
+=\det(P^{-1})\det(P) \det(A-\lambda I) \\
+& =\det(P^{-1}P)\det(A-\lambda I) 
+=\det(A-\lambda I) 
+\end{align*}
+Thus $A$ and $B$ have the same characteristic equation. Therefore also the same eigenvalues with the same algebraic multiplicities according to \ref{eigenprop} and \ref{charform}.
+::: 
+
+In light of \ref{invsimmatrix}, if $T$ is a linear transformation from $V$ to $V$ then a scalar $\lambda$ is called an \index{eigenvalue} **eigenvalue** of $T$ if there exists a nonzero element 
+$\vec v$ in $V$ such that $T(\vec v)=\lambda \vec v$. 
+Assuming $V$ is finite-dimensional then a basis $\mathcal{D}$ of $V$ consisting of eigenvectors of $T$ is called an \index{eigenbasis} **eigenbasis** for $T$. 
+
+::: {#thm- } 
+Let $T$ be a linear transformation on a finite-dimensional vector space $V$, and 
+let $\lambda$ be an eigenvalue of $T$. The geometric multiplicity of $\lambda$ is less than or equal to the algebraic multiplicity of $\lambda$. 
+::: 
+
+::: {.proof }
+Let $k$ represent the geometric multiplicity of $\lambda$ and assume $\dim V=n$. 
+First notice, by definition, the eigenspace $E_{\lambda}$ must contain at least one nonzero vector, and thus 
+$k=\dim E_{\lambda} \geq 1$. Choose a basis $\vec v_1, \ldots,\vec v_k$ for $E_{\lambda}$ and, by \ref{basisspacethm}, extend it to a basis $\mathcal{B}=(\vec v_1, \ldots, \vec v_k, \vec v_{k+1},\ldots,\vec v_n)$ of $V$. 
+For $1\leq i \leq k$, notice
+$$
+[T(\vec v_i)]_{\mathcal{B}}
+=[\lambda \vec v_i]_{\mathcal{B}}
+=\lambda[\vec v_i]_{\mathcal{B}}
+=\lambda \vec e_i.
+$$
+Thus the matrix representation for $T$ with respect to $\mathcal{B}$ has the form 
+\begin{equation}
+B=
+\begin{bmatrix}
+\lambda I_k & C\\ 0 & D
+\end{bmatrix}
+\end{equation}
+where $C$ is a $k\times (n-k)$ submatrix, $O$ is an $(n-k)\times k$ zero submatrix, and $D$ is an $(n-k)\times (n-k)$ submatrix.  
+Using \ref{blockdetprod} we determine the characteristic polynomial of $T$
+$$
+f_T(x)
+%=f_B(x)
+=|x I_n-B|
+=\left|xI_n-
+\begin{bmatrix}
+\lambda I_k & C\\ 0 & D
+\end{bmatrix}
+\right|
+=
+\begin{vmatrix}
+(x-\lambda)I_k & C\\ 0 & xI_{n-k}-D
+\end{vmatrix}
+=(x-\lambda)^k f_D(x).
+$$
+It follows that $f_T(x)=(x-\lambda)^{k+m} g(x)$ where $g(\lambda)\neq 0$ and $m$ is the number of factors of $x-\lambda$ in $f_D(x)$. Hence $k\leq k+m$ leading to the desired conclusion. 
+::: 
+
+::: {#exm- } 
+Let $T(M)=M-M^T$ be a linear transformation from $\mathbb{R}^{2\times2}$ to $\mathbb{R}^{2\times2}$.
+For each eigenvalue find a basis for the eigenspace and state the geometric multiplicity.
+Since $A=A^T$ for every symmetric matrix, we notice $T(M)=M-M^T=M-M=0$ whenever $M$ is a symmetric matrix. 
+Thus the nonzero symmetric matrices are eigenmatrices with eigenvalue $0$.  
+Also notice the nonzero skew-symmetric matrices have eigenvalue $2$ since $L(M)=M-M^T=M+M=2M$. 
+For eigenvlaue $\lambda=0$ we have eigenspace $E_0$ with basis 
+$$
+\left(
+\begin{bmatrix}
+1 & 0 \\ 0 & 0 
+\end{bmatrix},
+\begin{bmatrix}
+0 & 1 \\ 1 & 0 
+\end{bmatrix},
+\begin{bmatrix}
+0 & 0 \\  0 & 1
+\end{bmatrix}
+\right).
+$$
+This follow from the condition $A=A^T$ in $\mathbb{R}^{2\times2}$.
+Therefore the geometric multiplicity of $\lambda=0$ is 3.
+For eigenvalue $\lambda=2$ we have eigenspace $E_2$ with basis 
+$$
+\left(
+\begin{bmatrix}
+0 & 1 \\ -1 & 0
+\end{bmatrix}
+\right).
+$$
+which follows from the condition $A=-A^T$ in $\mathbb{R}^{2\times2}$.
+Therefore the geometric multiplicity of $\lambda=2$ is 1.
+By \ref{eigenveceigenvallemma} we have an eigenbasis 
+$$
+\left(
+\begin{bmatrix}
+1 & 0 \\ 0 & 0 
+\end{bmatrix},
+\begin{bmatrix}
+0 & 1 \\ 1 & 0 
+\end{bmatrix},
+\begin{bmatrix}
+0 & 0 \\  0 & 1
+\end{bmatrix},
+\begin{bmatrix}
+0 & 1 \\ -1 & 0
+\end{bmatrix}
+\right).
+$$
+for $T$. 
+::: 
+
+

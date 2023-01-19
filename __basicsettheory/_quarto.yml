@@ -1,5 +1,4 @@
 # Basic Set Theory
-# python -m http.server 8000
 
 project:
   type: book
@@ -22,87 +21,28 @@ book:
     - connect-everything.qmd
     - concept-theory.qmd
     - references.qmd
-  page-navigation: true
-  search: 
-    location: sidebar
-    type: textbox
   sidebar:
     title: "Basic Set Theory"
-    style: "floating"
-    collapse-level: 0
-  navbar:
-    title: "Direct Knowledge"
-    background: light
-    foreground: dark
-    logo: ../assets/directknowledge-logo.svg
-    logo-alt: Direct Knowledge Logo
-    right: 
-      - text: "Books"
-        menu: 
-          - text: "Basic Set Theory"
-            href: https://directknowledge.com/basic-set-theory/
-            icon: book
-            aria-label: Basic Set Theory Book
-          - text: "Learning Number Theory"
-            href: https://directknowledge.com/learning-number-theory/
-            icon: book
-            aria-label: Learning Number Theory Book
-      - href: http://directknowledge.com/about.html
-        text: "About"
-      - href: https://youtube.com/@directknowledge
-        icon: youtube
-        aria-label: YouTube
-      - href: https://github.com/directknowledge
-        icon: github
-        aria-label: GitHub
-  favicon: "../assets/favicon.ico"
-  open-graph: true
   site-url: https://directknowledge.com/basic-set-theory/
-  page-footer:
-    center: 
-      - text: "&copy; Copyright 2023, All Rights Reserved. DirectKnowledge.com"
-        href: "https://directknowledge.com"
   description: "Basic Set Theory"
-
-bibliography: 
-  - references.bib
-  - logic.bib
 
 format:
   html:
-    theme: cosmo
-    toc: true
-    toc-title: "Chapter Contents"
-    toc-depth: 3
-    toc-location: right
-    smooth-scroll: true
-    collapse-level: 1
-    anchor-sections: true
-    link-external-icon: false
-    link-external-newwindow: true
-    title-block-banner: false
-    title-block-style: none
-    html-math-method:
-      method: mathjax
-      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"	
     include-in-header: 
-      - ../_html/head.html
       - ../_html/head-bst.html
-    include-after-body: 
-      - ../_html/organization.html
-      - ../_html/website.html
-      - ../_html/mathjax.html
-      - ../_html/analytics.html
-      - ../_html/mathhead.html
   pdf:
     keep-tex: true
     toc: false
     documentclass: book
     classoption: [10pt,reqno,twopage,openany]
     include-in-header: 
-      - ../_control/packages.tex
+      - ../_control/packages-bst.tex
       - ../_control/commands.tex
     include-before-body:
       - ../_control/topmatter.tex
     include-after-body: 
       - ../_control/makeindex.tex
+
+metadata-files:
+  - ../_meta/book.yml
+  - ../_meta/format.yml

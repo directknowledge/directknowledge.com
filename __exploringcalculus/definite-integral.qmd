@@ -1,0 +1,521 @@
+---
+pagetitle: "Definite Integral - Exploring Calculus"
+---
+# Definite Integral
+
+## The Definition of the Definite Integral
+
+Suppose a bounded function $f$ is given along with a closed interval $[a,b]$ on which $f$ is defined. 
+First we will partition the interval $[a,b]$ into $n$ subintervals by choosing points $\{x_0, x_1, \ldots, x_n\}$ arranged in such a way that 
+\[
+a=x_0 < x_1 < x_2 < \cdots <x_{n-1}< x_n =b. 
+\]
+Call this partition $P$. 
+Now for $i=1, 2, \ldots, n$ the $i^{\text{th}}$ subinterval width is $\Delta_i=x_i-x_{i-1}$. 
+The largest of these widths is called the \index{norm} of the partition $P$ and is denoted by $\norm{P}$; that is, $\norm{P}=\max_{i=1,2,\ldots,n} \{\Delta_i\} **norm} of the partition $P$ and is denoted by $\norm{P}$; that is, $\norm{P}=\max_{i=1,2,\ldots,n} \{\Delta_i\** $. 
+Choose a number (arbitrarily) from each subinterval, say $x_i^*$. 
+For $i=i,2,\ldots,n$ the number $x_i^*$ chosen from the $i^{\text{th}}$ is called the $i^{\text{th}}$ \index{subinterval representative} **subinterval representative**  of the partition $P$. 
+Then the sum 
+\[
+\sum_{i=1}^n f(x_i^*) \Delta x_i
+\]
+is called the \index{Riemann sum} **Riemann sum**  associated with $f$, the partition $P$, the chosen subinterval representatives. 
+
+
+::: {#def- } 
+Let $f$ be a bounded function defined on an interval $[a,b]$. 
+Then the \index{definite integral} **definite integral**  of $f$ over $[a,b]$ is defined as 
+\[
+\int_a^b f(x)\, dx := \lim_{\norm{P} \to 0} \sum_{k=1}^n f(c_k) \Delta x.
+\]
+if the limit exists for all partitions $P$ of $[a,b]$ and all choices of $c_k$ in 
+$[x_{k-1},x_k]$.  
+When the above limit exists, we say the Riemann sums of $f$ on $[a,b]$ converge to the definite integral $I=\int_a^b f(x) \, dx$ and that $f$ is \index{integrable} **integrable**  over $[a,b]$.
+::: 
+
+For special cases we can define particular kinds of Riemann sums. 
+For example, if we choose equally spaced subintervals using $\Delta x_i= \Delta x =\frac{b-a}{n}$ and $x_i^*=a+k \Delta x$ for $i=1,2,\ldots,n$ then the Riemann sum formed is 
+\[
+\sum_{i=1}^n f(a+k \Delta x) \Delta x
+\]
+and the partition $P$ used to form this Riemann sum is called a \index{regular partition} **regular partition** . 
+For regular partitions, $\norm{P}\to 0$ if and only if $n\to \infty$ and so the definition of the definite integral sometimes is given as 
+\[
+\int_a^b f(x)\, dx := \lim_{n \to \infty } \sum_{k=1}^n f(c_k) \Delta x.
+\]
+
+::: {#thm- } 
+
+If a function $f$ is continuous on an interval $[a,b]$ then its definite integral over $[a,b]$ exists. 
+::: 
+
+::: {#exm- }  
+Express
+$
+\lim_{\norm{P}\to 0 } \sum_{k=1}^n \sqrt{4-c_k^2} \Delta x_k
+$
+where $P$ is a partition of $[0,1]$, as a definite integral and find its value using geometry. 
+::: 
+
+\begin{figure}[htp]
+\begin{center}
+\subfigure[The graph of $f(x)=\sqrt{4-x^2}$.]{\label{fig:graph41}
+\includegraphics[width= 150pt]{_includes/p41.pdf}}
+\subfigure[The graph of $f(x)=\tan x$.]{\label{fig:graph42}
+\includegraphics[width= 150pt]{_includes/p42.pdf}}
+\end{center}
+\caption{Using geometry to evaluate a definite integral.}
+\label{fig:edge}
+\end{figure}
+
+::: {.solution }
+See Figure \ref{fig:graph41}. 
+Recall the area of a circle with radius 2 is $4\pi$. 
+Let $f(x)=\sqrt{4-x^2}$. 
+Since $f$ is continuous on $[0,1]$,  
+\[
+\pi =\int_0^1 \sqrt{4-x^2}\, dx = \lim_{\norm{P}\to 0 } \sum_{k=1}^n \sqrt{4-c_k^2} \Delta x_k.
+\square
+\]
+::: 
+
+::: {#exm- } 
+Express
+\[
+\lim_{\norm{P}\to 0 } \sum_{k=1}^n (\tan c_k) \Delta x_k
+\]
+where $P$ is a partition of $[0,\pi/4]$, as a definite integral and find its approximate value using geometry. 
+
+::: 
+::: {.solution }
+Let $f(x)=\tan x$. 
+Since $f$ is continuous on $[0,\pi/4]$,  
+\[
+\frac{\pi}{8}\approx \int_0^{\pi/4} \tan x\, dx = \lim_{\norm{P}\to 0 } \sum_{k=1}^n (\tan c_k) \Delta x_k
+\]
+since the area under the curve is approximately equal to the area under the triangle with vertices $(0,0)$, $(\pi/4,0)$, and  $(\pi/4,1)$.
+::: 
+
+## Properties of the Definite Integral
+
+Being familiar with the basic properties of finite sums and limits many of the properties listed below are straightforward to understand.
+
+
+::: {#thm- } 
+Suppose $f$ and $g$ are integrable functions on $[a,b]$. 
+Then 
+ 
+\item 
+$\ds \int_a^b f(x) \, dx =-\int_b^a f(x) \, dx$, 
+- $\ds \int_a^a f(x) \, dx =0$, 
+- $\ds \int_a^b k f(x) \, dx = k \int_a^b f(x) \, dx$, 
+- $\ds \int_a^b ( f(x) \pm g(x) ) \, dx = \int_a^b f(x) \, dx \pm \int_a^b g(x) \, dx$, and
+- $\ds \int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx$.
+- If $f$ has a maximum value $M$ and a minimum value $m$, then 
+\[
+m(b-a)\leq \int_a^b f(x) \, dx \leq M(b-a).
+\]
+- If $f(x)\leq g(x)$ on $[a,b]$, then 
+\[
+\int_a^b f(x)\, dx \leq \int_a^b g(x) \, dx.
+\]
+ 
+::: 
+
+::: {#exm- }  
+
+Suppose $\int_0^2 f(x) \, dx=3$, $\int_0^2 g(x) \, dx=-1$, and $\int_0^2 h(x) \, dx=3$. 
+Evaluate 
+\[
+\int_0^2 [2f(x)+5g(x)-6h(x)] \, dx
+\] 
+and then find a constant $s$ such that 
+\[
+\int_0^2 [5 f(x)+s g(x)-7 h(x)] \, dx=0.
+\]
+::: 
+::: {.solution }
+Using the basic properties of the definite integral
+\begin{align*}
+\int_0^2 [2f(x)+5g(x)-7h(x)] \, dx
+& =2 \int_0^2 f(x)\, dx +5\int_0^2g(x)\, dx -7\int_0^2h(x) \, dx \\
+& = 2(3)+5(-1)-7(3)=-20.
+\end{align*}
+Also
+\begin{align*}
+\int_0^2 [5 f(x)+s \, g(x)-6 h(x)] \, dx & = 5\int_0^2 f(x)\, dx +s \int_0^2 g(x)\, dx -7 \int_0^2h(x) \, dx \\
+& =5(3) +s (-1) -6 (3) \, dx =-s-3=0
+\end{align*}
+which implies $s=-3$.
+::: 
+
+
+::: {#exm- }  
+Sketch the graph of $f$ and use it to evaluate $\int_{-1}^5 f(x) \, dx$ given
+\[
+f(x)=
+\begin{cases}
+2 & \text{for } -1\leq x \leq 1 \\
+3-x & \text{for } 1\leq x \leq 4 \\
+2x-9 & \text{for } 4\leq x \leq 5.
+\end{cases}
+\]
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 200pt]{_includes/p37.pdf}}
+\caption{Evaluating an integral of a piecewise function.}
+\label{fig:graph37}
+\end{center}
+\end{figure}
+
+::: {.solution }
+Figure \ref{fig:graph37} is a sketch of the graph of $f$. 
+Using the basic properties of the definite integral
+\begin{align*}
+\int_{-1}^5 f(x) \, dx & =\int_{-1}^1 f(x) \, dx +\int_{1}^4 f(x) \, dx+\int_{4}^5 f(x) \, dx \\
+& =\int_{-1}^1 2 \, dx +\int_{1}^4 (3-x) \, dx+\int_{4}^5 (2x-9) \, dx \\
+& = 2(2)+\frac{3}{2}-0=\frac{11}{2}.
+\square
+\end{align*}
+::: 
+
+
+::: {#exm- }  
+Suppose that $f$ and $h$ are integrable and that $\int_1^9 f(x) \, dx=-1$, $\int_7^9 f(x) \, dx=5$, and $\int_7^9 h(x) \, dx=4$. 
+Find 
+ 
+- $\int_1^9 -2f(x) \, dx$
+- $\int_7^9 [f(x)+h(x)] \, dx $
+- $\int_7^9 [2f(x)-3h(x)] \, dx $
+- $\int_1^7  f(x) \, dx $
+- $\int_9^1 f(x) \, dx $
+- $\int_9^7  [h(x)-f(x)] \, dx $
+ 
+::: 
+
+::: {.solution }
+Using the basic properties of the definite integral
+\ 
+- $\int_1^9 -2f(x) \, dx =-2 \int_1^9 f(x) \, dx =-2 (-1)=2$
+- $\int_7^9 [f(x)+h(x)] \, dx =\int_7^9 f(x)\, dx +\int_7^9 h(x) \, dx =5+4=9$
+- $\int_7^9 [2f(x)-3h(x)] \, dx = 2 \int_7^9 f(x)\, dx -3\int_7^9h(x)] \, dx =2(5)-3(4)=-2$
+- $\int_1^7  f(x) \, dx =\int_1^9  f(x) \, dx -\int_7^9 f(x) \, dx =-1-5=-6$
+- $\int_9^1 f(x) \, dx =-\int_1^9 f(x) \, dx =-(-1)=1$
+- $\int_9^7  [h(x)-f(x)] \, dx =\int_7^9  f(x)\, dx-\int_7^9 h(x)] \, dx =5-4=1$
+ 
+::: 
+
+
+::: {#exm- }  
+What values of $a$ and $b$ minimize the value of $\int_a^b(x^4-2x^2)\, dx$?
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 200pt]{_includes/p38.pdf}}
+\caption{The graph of the function $f(x)=x^4-2x^2.$}
+\label{fig:graph38}
+\end{center}
+\end{figure}
+
+::: {.solution }
+By solving $x^4-2x^2=0$ we determine that $x^4-2x^2\leq 0$ on $[-\sqrt{2},\sqrt{2}]$. Thus we find that $a=-\sqrt{2}$ and $b=\sqrt{2}$ will minimize the value of $\int_a^b(x^4-2x^2)\, dx$. See Figure \ref{fig:graph38}.
+::: 
+
+::: {#exm- }  
+(a) Find upper and lower bounds for $\int_0^1 \frac{1}{1+x^2} \, dx$. 
+(b) Find upper and lower bounds for $\int_0^{1/2} \frac{1}{1+x^2} \, dx$ and  $\int_{1/2}^1 \frac{1}{1+x^2} \, dx$. 
+Use (b) to find another estimate of the integral in (a). 
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 200pt]{_includes/p39.pdf}}
+\caption{The graph of the function $f(x)=\frac{1}{1+x^2}.$}
+\label{fig:graph39}
+\end{center}
+\end{figure}
+
+::: {.solution }
+For (a) Since $f(x)=\frac{1}{1+x^2}$ is decreasing on $[0,1]$, it follows the maximum of $f$, $M$ occurs at 0 with $M=1$ and the minimum value of $f$, $m$ occurs at 1 with $m=1/2$. Therefore, 
+\[
+\frac{1}{2}(1-0) =\frac{1}{2} \leq \int_0^1 \frac{1}{1+x^2} \, dx \leq 1 (1-0) =1.
+\]
+For (b) with $[0,1/2]$ we find, $M=1$ and $m=4/5$ and so 
+\[
+\frac{4}{5} \left(\frac{1}{2}-0\right) =\frac{2}{5} \leq \int_0^{1/2} \frac{1}{1+x^2} \, dx \leq 1 (\frac{1}{2}-0) =\frac{1}{2}.
+\]
+For (b) with $[0,1/2]$ we find, $M=4/5$ and $m=1/2$ and so 
+\[
+\frac{1}{2} \left(1-\frac{1}{2}\right) =\frac{1}{4} \leq \int_{1/2}^1 \frac{1}{1+x^2} \, dx \leq \frac{4}{5} (1-\frac{1}{2}) =\frac{2}{5}
+\]
+Then for part (c), we have a better estimate on the bounds of the original  integral
+\[
+\frac{13}{20}=\frac{1}{4}+\frac{2}{5}\leq 
+\int_0^{1/2} \frac{1}{1+x^2} \, dx + \int_{1/2}^1 \frac{1}{1+x^2} \, dx \leq
+\frac{1}{2}+\frac{2}{5}=\frac{9}{10}.
+\]
+namely,
+\[
+\frac{13}{20}\leq  \int_0^1 \frac{1}{1+x^2} \, dx \leq \frac{9}{10}.
+\square
+\]
+::: 
+
+
+::: {#exm- }  
+Show that the value of $\int_0^1 \sqrt{x+8} \, dx$ lies between $2\sqrt{2}\approx 2.8$ and 3.
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 200pt]{_includes/p40.pdf}}
+\caption{The graph of $f(x)=\sqrt{x+8}$.}
+\label{fig:graph40}
+\end{center}
+\end{figure}
+
+::: {.solution }
+See Figure \ref{fig:graph40}. 
+Since $f(x)=\sqrt{x+8}$ is increasing on $[0,1]$ it follows the maximum of $f$ is $f(1)=\sqrt{1+8}=3$ and the minimum of $f$ is $f(0)=\sqrt{0+8}=2\sqrt{2}$.
+Therefore, 
+\[
+2\sqrt{2} =2\sqrt{2} (1-0)\leq \int_0^1 \sqrt{x+8} \, dx\leq 3 (1-0)=3.
+\square
+\]
+::: 
+
+
+## Displacement
+
+Consider an object moving along a straight line. 
+Assume the position of the object at time $t$ is given by the position function $s(t)$ and that its velocity at time $t$ is given by $v(t)=s'(t)$. 
+If we happen to know that the object is always moving forward from $t=a$ to $t=b$, that is, $v(t)> 0$ on $[a,b]$, then the total distance travelled is $s(b)-s(a)$.
+
+
+::: {#thm- } 
+The \index{total distance travelled} **total distance travelled**  by an object with continuous velocity $v(t)$ along a straight line from $t=a$ to $t=b$ is $S=\int_a^b |v(t)| \, dt.$
+::: 
+
+
+::: {#exm- }  
+Suppose $v(t)=\frac{1}{t+1}$ is the velocity of an object moving along a straight line. 
+Use the formula $S_n=\sum_{k=1}^n | v(a+k \Delta t) | \Delta t$ where $\Delta t =\frac{b-a}{n}$ to estimate (using right endpoints) the total distance travelled by the object during the time interval $[0,1]$.
+::: 
+
+::: {.solution }
+Let $a=0$ with $\Delta t=\frac{1}{4}$. 
+Then 
+\[
+v(a+k \Delta t)=v \left(\frac{k}{4}\right) = \frac{1}{1+\frac{k}{4}} =\frac{4}{k+4}
+\]
+Thus the total distance travelled by the object during the time interval $[0,1]$ is 
+\[
+S_4=\sum_{k=1}^4 \frac{4}{k+4}\left(\frac{1}{4}\right)\approx 0.635.
+\square
+\]
+::: 
+
+
+## Area Under a Curve
+
+
+::: {#thm- } 
+Suppose $f$ is a continuous function and $f(x)\geq 0$ on the closed interval $[a,b]$. 
+Then the area under the curve $y=f(x)$ on $[a,b]$ is given by the definite integral of $f$ on $[a,b]$. 
+::: 
+
+
+::: {#exm- } 
+Use the definition of the definite integral to find the area of the region between the curve $y=3x^2$ and the $x$-axis on the interval $[0,b]$.
+::: 
+
+::: {.solution }
+Let $\Delta x=\frac{b-0}{n}=\frac{b}{a}$ and let $x_0=0$, $x_1=\Delta x$, $ x_2=2 \Delta x$, \ldots, $x_{n-1}=\Delta x$, $ x_n=n \Delta x=b$. 
+Let the subinterval representatives, the $c_k's$ be the right endpoints of the subintervals, so $c_1=x_1$, $c_2=x_2$, and so on. 
+The rectangles defined have areas:
+\begin{align*}
+& f(c_1)\Delta x = f(\Delta x)\Delta x =3(\Delta x)^2\Delta x=3 (\Delta x)^3 \\
+& f(c_2)\Delta x = f(2\Delta x)\Delta x =3(2\Delta x)^2\Delta x=3 (2)^2 (\Delta x)^3 \\
+& f(c_3)\Delta x = f(3\Delta x)\Delta x =3(3\Delta x)^2\Delta x=3 (3)^2 (\Delta x)^3 \\
+& \vdots \\
+& f(c_n)\Delta x = f(n\Delta x)\Delta x =3(n\Delta x)^2\Delta x=3 (n)^2 (\Delta x)^3
+\end{align*}
+Then forming the Riemann sum 
+\begin{align*}
+S_n
+& =\sum_{k=1}^n f(c_k) \Delta x 
+= \sum_{k=1}^n 3 k^2(\Delta x) ^3 \\
+& =3(\Delta x)^3 \sum_{k=1}^n k^2 
+=3\left(\frac{b^3}{n^3}\right) \left(\frac{n(n+1)(2n+1)}{6}\right)
+=\frac{b^3}{2}\left(2+\frac{3}{n}+\frac{1}{n^2}\right).
+\end{align*}
+Therefore, applying the definition of the definite integral
+\[
+\int_0^b 3x^2 \, dx =\lim_{n\to \infty } \frac{b^3}{2}\left(2+\frac{3}{n}+\frac{1}{n^2}\right) =b^3.
+\square
+\]
+::: 
+
+
+
+## Average Value
+
+Let $f$ be a continuous function defined on $[a,b]$. 
+We will ask the question: what are the average values that $f$ takes on over the interval $[a,b]$? To answer this, we will sample a finite number of values of $f$. 
+For example, say we sample $n$ values of $f$ by dividing $[a,b]$ into $n$ subintervals of equal width $\Delta x=\frac{b-a}{n}$ and evaluating $f$ at a point $c_k$ in each subinterval.
+ The average of the $n$ sampled values is 
+\begin{align*}
+\frac{f(c_1)+f(c_2)+\cdots +f(c_n)}{n}
+& = \frac{1}{n} \sum_{k=1}^n f(c_k)  \\
+& = \frac{\Delta x}{b-a}  \sum_{k=1}^n f(c_k) = \frac{1}{b-a} \sum_{k=1}^n f(c_k).
+\end{align*}
+If we pass the limit, if possible, as $n\to \infty$ we arrive at the following definition.
+
+::: {#def- } 
+If $f$ is integrable on $[a,b]$ then its \index{average value} on $[a,b]$, denoted by the function $\text{av}(f)$, sometimes called its \index{mean value} **average value} on $[a,b]$, denoted by the function $\text{av}(f)$, sometimes called its \index{mean value** , is 
+\[
+\text{av}(f) = \frac{1}{b-a}\int_a^b f(x) \, dx.
+\]
+::: 
+
+::: {#exm- }  
+Find the average value of the function $f(x)=3x^2-3$ over the interval $[0,1]$.
+::: 
+::: {.solution }
+The average value of the function $f(x)=3x^2-3$ over the interval $[0,1]$ is 
+\begin{align*}
+\left(\frac{1}{1-0}\right) \int_0^1 (3x^2-3)\, dx 
+& =3 \int_0^1 x^2 \, dx - \int_0^1 3 \, dx  \\
+& =3\left(\frac{1}{3}\right)-3(1-0)
+=-2.
+\square
+\end{align*}
+::: 
+
+::: {#exm- }  
+If $\text{av}(f)$ really is a typical value of the integrable function $f(x)$ on $[a,b]$, then the number $\text{av}(f)$ should have the same integral over $[a,b]$ that $f$ does. 
+Show that $\int_a^b \text{av}(f)\, dx= \int_a^b f(x) \, dx$.
+::: 
+
+::: {.solution }
+Notice that 
+\[
+\text{av}(f)=\frac{1}{b-a}\int_a^b f(x)\, dx:=K
+\]
+is a constant, say $K$. 
+Then 
+\[
+\int_a^b K \, dx= K \int_a^b \, dx=K (b-a) = (b-a) \frac{1}{b-a}\int_a^b f(x)\, dx=\int_a^b f(x) \, dx
+\]
+and so yes the number $\text{av}(f)$ has the same integral over $[a,b]$ that $f$ does. 
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+For each of the following you are given a function $f$ defined on an interval $[a,b]$, then number $n$ of subintervals of equal length $\Delta x=(b-a)/n$, and the evaluation points $c_k$ in $[x_{k-1}, x_k]$. For each of the following, (a) sketch the graph of $f$ and the rectangles associated with the Riemann sum for $f$ on $[a,b]$, and (b) find the Riemann sum. 
+\ 
+\item 
+$f(x)=2x-3, [0,2], n=4, c_k \text{ is the midpoint}$
+\item 
+$f(x)=-2x+1, [-1,2], n=6, c_k \text{ is the left endpoint}$
+\item 
+$f(x)=\sqrt{x}-1, [0,3], n=6, c_k \text{ is the right endpoint}$
+\item 
+$f(x)=2\sin x, [0,5\pi/4], n=5, c_k \text{ is the right endpoint}$
+ 
+::: 
+
+::: {#exr- } 
+Use the definition of the definite integral to evaluate the following integrals.
+ 
+\item 
+$ \int_{-1}^2 x^2 \, dx$
+\item 
+$ \int_{-1}^3 (x-2) \, dx$
+\item 
+$ \int_{-1}^1 (2x+1) \, dx$
+\item 
+$ \int_{-2}^1 (x^3+2x) \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Each of the following is given as the limit of a Riemann sum of a function $f$ on $[a,b]$. Write this expression as a definite integral on $[a,b]$.
+ 
+\item 
+$\lim_{n\to \infty} \sum_{k=1}^n (4 c_k-3)\Delta x, [-3,-1]$
+\item 
+$\lim_{n\to \infty} \sum_{k=1}^n 2c_k(1-c_k)^2\Delta x, [0,3]$
+\item 
+$\lim_{n\to \infty} \sum_{k=1}^n \frac{2c_k}{c_k^2+1} \Delta x, [1,2]$
+\item 
+$\lim_{n\to \infty} \sum_{k=1}^n c_k(\cos c_k)\Delta x, [0,\frac{\pi}{2}]$
+ 
+::: 
+
+::: {#exr- } 
+For each of the following make a sketch of $f$ on $[a,b]$ and then use the geometric interpretation of the integral to evaluate it. 
+ 
+\item 
+$\int_{-2}^3 (2x+1) \, dx$
+\item 
+$\int_{-1}^2 |x| \, dx$
+\item 
+$\int_{-2}^2 \sqrt{4-x^2}  \, dx$
+\item 
+$\int_{0}^2 \sqrt{-x^2+2x} \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Given that $\int_{-1}^3 f(x) \, dx =4$ and $\int_3^6 f(x) \, dx=2$, evaluate the following integrals. 
+ 
+\item 
+$\int_{-1}^3 [f(x)+g(x)] \, dx$
+\item 
+$\int_{-1}^3 [g(x)-f(x)] \, dx$
+\item 
+$\int_{-1}^3 [3f(x)-2g(x)] \, dx$
+\item 
+$\int_{3}^{-1} [f(x)+5g(x)] \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Given that $\int_{-2}^2 f(x) \, dx =3$ and $\int_0^2 f(x) \, dx=2$, evaluate the following integrals. 
+ 
+\item 
+$\int_{2}^0 f(x) \, dx$
+\item 
+$\int_{-2}^0 [f(x)+3] \, dx$
+\item 
+$\int_{2}^0 3f(x)\, dx-\int_0^{-2} 2f(x) \, dx$
+ 
+::: 
+
+::: {#exr- } 
+For each of the following use the properties of the integral to prove that the inequality without evaluating the integral. 
+\ 
+\item 
+$\int_0^1 \frac{\sqrt{x^3+x}}{x^2+1}\, dx \geq 0$
+\item 
+$\int_0^1 x^2\, dx \leq \int_0^1 \sqrt{x} \, dx$
+\item 
+$\int_0^{\pi/4} \sin^2 x \cos x \, dx \leq \int_0^{\pi/4} \sin^2 x \, dx$
+\item 
+$\int_0^{\pi/2} \cos x \, dx \leq \int_0^{\pi/2} (x^2+1) \, dx $
+ 
+::: 
+
+
+
+
+
+
+

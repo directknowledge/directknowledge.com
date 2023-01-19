@@ -1,0 +1,445 @@
+---
+pagetitle: "Kernel and Image of a Linear Transformation - Learning Linear Algebra"
+---
+# Kernel and Image of a Linear Transformation
+
+
+In this section we introduce the kernel and image of a linear transformation. We show how they can be realized as geometric objects and demonstrate how to find spanning sets for them. 
+
+::: {#def- } 
+Let $T$ be a linear transformation from $\mathbb{R}^m$ to $\mathbb{R}^n$ with $n\times m$ matrix $A$. 
+ 
+- The \index{kernel} **kernel** of $T$, denoted by $\ker(T)$, is the set of all vectors $\vec x$ in $\mathbb{R}^n$ such that $T(\vec x)=A \vec x = \vec 0$.
+- The \index{image} **image** of $T$, denoted by $\text{im}(T)$, is the set of all vectors in $\mathbb{R}^n$ of the form $T (\vec x)=A\vec x$. 
+ 
+The kernel and image of a matrix $A$ of $T$ is defined as the kernel and image of $T$. 
+::: 
+
+Now to adequately describe the kernel and image of a linear transformation we need the concept of the span of a collection of vectors. 
+We will see that one of the best ways to describe the kernel and image of a linear transformation is to describe them in terms of collections of linear combinations of vectors. 
+
+The next three lemmas describe basic properties of kernel and image.
+
+::: {#lem- } 
+The kernel of any linear transformation $T$ has the following properties:
+ 
+- $\vec 0 \in \ker(T)$, 
+- if $\vec v, \vec w\in \ker(T)$, then $\vec v+\vec w\in \ker(T)$, and 
+- if $\vec v\in \ker(T)$ and $k\in \mathbb{R}$, then $k\vec v\in \ker(T)$.
+ 
+::: 
+
+::: {.proof }
+Let $A$ be the matrix for $T$. Then $A\vec 0=\vec 0$ which shows $\vec 0 \in \ker(T)$. If $\vec v, \vec w\in \ker(T)$, then 
+$A\vec v=\vec 0$ and $A\vec w=\vec 0$. Thus, $A\vec v+A\vec w=A(\vec v+\vec w)=\vec 0$ implying $\vec v+\vec w\in \ker(T)$. If $\vec v\in \ker(T)$ and $k\in \mathbb{R}$, then $\vec 0=A\vec v$ implying $A(k \vec v)=\vec 0$. Thus, $k\vec v\in \ker(T)$.
+::: 
+
+::: {#lem- }  
+Let $T$ be a linear transformation with matrix $A$. 
+ 
+- If $A$ is an $n\times n$ matrix, then $\ker(A)=\{\vec 0\}$ if and only if $\text{rank} (A)=n$.
+- If $A$ is an $n\times m$ matrix, then 
+ 
+- $\ker(A)=\{\vec 0\} \implies m\geq n$
+- $m>n \implies \ker(A)$ contains non-zero vectors
+ 
+- If $A$ is a square matrix, then $\ker(A)=\{\vec 0\}$ if and only if $A$ is invertible. 
+ 
+::: 
+
+::: {.proof }
+If $T$ is a linear transformation $T(\vec x )=A\vec x$ from $\mathbb{R}^m$ to $\mathbb{R}^n$ where $m>n$, then there will be free variables for the equation $T(\vec x)=A\vec x=\vec 0$; that is the system will have infinitely many solutions. Therefore, the kernel of $T$ will consists of infinitely many vectors. If $m=n$ and for an invertible $n\times n$ matrix $A$, how do we find $\ker(A)$? Since $A$ is invertible, $A\vec x=\vec 0$ can be solved by $A^{-1}(A \vec x)=A^{-1}\vec 0$ showing $\vec x=\vec 0$; that is the only solution to the system $A \vec x=\vec 0$ is $\vec 0$ so that $\ker(A)=\{\vec 0\}$ whenever $A$ is invertible. 
+::: 
+
+::: {#lem- } 
+The image of any linear transformation $T$ has the following properties:
+ 
+- $\vec 0 \in \text{im}(T)$, 
+- if $\vec v, \vec w\in \text{im}(T)$, then $\vec v+\vec w\in \text{im}(T)$, and 
+- if $\vec v\in \text{im}(T)$ and $k\in \mathbb{R}$, then $k\vec v\in \text{im}(T)$.
+ 
+::: 
+
+::: {.proof }
+Let $A$ be the matrix for $T$. Then $A\vec 0=\vec 0$ which shows $\vec 0 \in \text{im}(T)$. 
+If $\vec v, \vec w\in \text{im}(T)$, then there exists $\vec x$ and $\vec y$ such that 
+$A\vec x=\vec v$ and $A\vec y=\vec w$. 
+Thus, $\vec v+\vec w=A\vec x+A\vec y=A(\vec x+\vec y)$ implying $\vec v+\vec w\in \text{im}(T)$. If $\vec v\in \text{im}(T)$ and $k\in \mathbb{R}$, then there exists $\vec u$ such that $\vec v=A\vec u$ implying $A(k \vec u)=k \vec v$. Thus, $k\vec v\in \text{im}(T)$.
+::: 
+
+::: {#thm- } 
+\label{imspan}
+Let $T:\mathbb{R}^m\to \mathbb{R}^n$ be a linear transformation with matrix $A$. Then 
+$\text{im}(T)=\text{span}(\vec v_1, ....,\vec v_m)$ where $\vec v_1, ..., \vec v_m$ are the column vectors of $A$.
+::: 
+
+::: {.proof }
+Since $\vec v_1,...,\vec v_m$ are the column vectors of $A$ 
+\begin{equation}
+\label{lineq}
+T(\vec x)=
+A \vec x =
+\begin{bmatrix}
+\vec v_1 & \cdots & \vec v_m
+\end{bmatrix}
+\vectorthree{x_1}{\vdots}{x_m}=x_1 v_1+\cdots + x_m v_m. 
+\end{equation}
+If $\vec u\in \text{span}(\vec v_1, ....,\vec v_m)$ then there exists $x_1, ..., x_m$ such that $u=x_1 v_1+\cdots +x_m v_m$. By  \ref{lineq}, $u=T(\vec x)$ for $\vec x\in \mathbb{R}^m$. Thus, $\vec u\in \text{im}(T)$. Conversely, assume $\vec u\in\text{im}(T)$. Then there exists $\vec x$ such that $\vec u=T(\vec x)$. By  \ref{lineq}, there exists $x_1, ...,x_m$ such that $u=x_1 v_1+\cdots +x_m v_m$. Therefore, $\vec u \in \text{span}(\vec v_1, ....,\vec v_m)$ and so $\text{im}(T)=\text{span}(\vec v_1, ....\vec v_m)$ follows.::: 
+
+::: {#exm- } 
+Find vectors that span $\ker(A)$ and $\text{im}(A)$ given 
+$$
+A=
+\begin{bmatrix}
+2 & 1 & 3 \\
+3 & 4 & 2 \\
+6 & 5 & 7
+\end{bmatrix}.
+$$
+Describe $\text{im}(A)$ geometrically.
+To first find a spanning set of $\ker(A)$ we solve the system $A\vec x=\vec 0$. We use the augmented matrix and elementary row operations and find reduced row-echelon form
+$$
+\text{rref}(A)=
+\begin{bmatrix}
+1 & 0 & 2 & 0 \\
+0 & 1 & -1 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}.
+$$
+Thus the solution set is 
+$$
+\vectorthree{x_1}{x_2}{x_2}=t\vectorthree{-2}{1}{1}:=t\vec{w}
+$$ 
+where $t\in \mathbb{R}$. 
+Therefore $\ker(A)=\text{span}(\vec{w})$. 
+Next we find $\text{im}(A).$ To do so let $\vec v_1, \vec v_2, \vec v_3$ be the column vectors of the matrix 
+$A$. 
+Since $\text{im}(A)$ is spanned by the columns of $A$ and 
+$\vec v_3=2\vec v_1+(-1)\vec v_2$, we find  $\text{im}(A)=\text{span}\left(\vec v_1, \vec v_2\right)$.
+Therefore the image of $A$ is a plane in $\mathbb{R}^3$ that passes through the origin.
+
+::: 
+
+::: {#exm- } 
+Give an example of a matrix $A$ such that $\text{im}(A)$ is the plane with normal vector $\vec w=\vectorthree{1}{3}{2}$ in $\mathbb{R}^3$.
+Since $\vec w$ is a normal vector we let $A=\begin{bmatrix} 1& 3 & 2\end{bmatrix}$. First we find 
+$\ker(A)$ because 
+$$
+\begin{bmatrix} 1& 3 & 2\end{bmatrix} \vectorthree{x}{y}{z}=\vectorthree{0}{0}{0}
+$$ 
+is the plane $x+3y+2z=0$ where  $\vec w$ is a normal vector.
+Let $z=t$ and $y=s$, then $x=-3s-2t$ so the solutions to the system $A\vec x=\vec 0$ are 
+$$
+\vectorthree{x}{y}{z}=\vectorthree{-3s-2t}{s}{t}=s\vectorthree{0}{1}{-3}+t\vectorthree{1}{0}{-2}
+:=s\vec u+t \vec v
+$$ 
+where $s$ and $t$ are real numbers; and thus $\ker(A)=\text{span}(\vec{u}, \vec{v})$. 
+These vectors yield the image of $A$ since $\text{im}(A)$ is the plane with normal vector $\vec w$ so 
+$A$ is one such matrix; and $\text{im}(A)=\text{span}(\vec{u}, \vec{v})$ 
+is the plane in $\mathbb{R}^3$ with normal vector $\vec{w}$.
+
+::: 
+
+The kernel, being the most important subspace, has a special name for its dimension; namely, the dimension of $\ker A$ is called the \index{nullity} **nullity** of $A$. 
+
+::: {#exm- } 
+Find the reduced row-echelon form of the matrix
+$$
+A=
+\begin{bmatrix}
+1 & 2 & 3 & 2 & 1 \\
+3 &  6 & 9 & 6 & 3 \\
+1 & 2 & 4 & 1 & 2 \\
+2 & 4 & 9 & 1 & 2
+\end{bmatrix}.
+$$
+Find a basis and state the dimension for the image and kernel of 
+$A$.  
+
+::: 
+
+
+
+::: {#exm- } 
+Find vectors that span $\ker(A)$ and $\text{im}(A)$ given 
+$$
+A=
+\begin{bmatrix}
+1 & -1 & -1 & 1 & 1 \\
+-1 & 1 & 0 & -2 & 2 \\
+1 & -1 & -2 & 0 & 3 \\
+2 & -2 & -1 & 3 & 4
+\end{bmatrix}.
+$$
+We will solve the system $A\vec x=\vec 0$ to find $\ker(A)$.
+Using the augmented matrix and elementary row operations, we find 
+$$
+\text{rref}(A)=
+\begin{bmatrix}
+1 & -1 & 0 & 2 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0
+\end{bmatrix}.
+$$
+So the solutions to the system $A\vec x=\vec 0$ are 
+$$
+\vectorfive{x_1}{x_2}{x_3}{x_4}{x_5}=\vectorfive{s-2t}{s}{-t}{t}{0}=s\vectorfive{1}{1}{0}{0}{0}+t\vectorfive{-2}{0}{-1}{1}{0}:=s\vec{u}+t\vec{v}
+$$
+where $s,t\in \mathbb{R}$. Therefore $\ker(A)=\text{span}(\vec{u},\vec{v}).$
+Since $\text{im}(A)$ is the span of the column vectors of $A$, we let 
+$\vec{v}_1,\vec{v}_2,\vec{v}_3,\vec{v}_4,\vec{v}_5$ be the column vectors of $A$. By \ref{imspan}, 
+$\text{im}(A)=\text{span}(\vec{v}_1,\vec{v}_2,\vec{v}_3,\vec{v}_4,\vec{v}_5).$
+Using $\text{rref}(A)$ as a guide, we notice $\vec{v}_2=(-1)\vec{v}_1$ so we eliminate $\vec{v}_2$. Also, 
+$\vec{v}_4=(2)\vec{v}_1+\vec{v}_3$ so we also eliminate $\vec{v}_4$.
+Therefore, $\text{im}(A)=\text{span}(\vec{v}_1,\vec{v}_2,\vec{v}_5)$.
+
+::: 
+
+::: {#exm- } 
+Give an example of a linear transformation whose kernel is the line spanned by 
+$\vec{w}=\begin{bmatrix}-1 \\ 1 \\2\end{bmatrix}$.
+Considering the intersection of the planes $x+y=0$ and $2x+z=0$, we try to use the linear transformation, $$
+T(\vec{x})
+=T\vectorthree{x}{y}{z}=\vectortwo{x+y}{2x+z}
+=\begin{bmatrix}
+1 & 1 & 0\\
+2 & 0 & 1 
+\end{bmatrix}\vec{x}:=A\vec{x}. $$
+To find the kernel of $T$ we solve $A \vec x= \vec 0$. Since
+$\text{rref}(A)=\begin{bmatrix}
+ 1 & 0 & 1/2 \\
+ 0 & 1 & -1/2
+\end{bmatrix}$
+the solutions are of the form $t \vec{w}$ where $t$ is a real number. Therefore it suffices to let $T$ be the requested linear transformation. 
+
+::: 
+
+::: {#exm- } 
+Express the line $L$ in $\mathbb{R}^3$ spanned by the vector 
+$\vec{w}=\begin{bmatrix} 1 \\1 \\1  \end{bmatrix}$ 
+as the image of a matrix $A$ and as the kernel of a matrix $B$.
+Let $A=\vec{w}$, then $L=\text{im}(A)=\text{span}(\vec{w})$. 
+Therefore it suffices to let $A$ be the requested matrix. 
+Considering the intersection of the planes $x=y$ and $y=z$, we try to find $B$ using the linear transformation 
+$$
+T(\vec{x})
+=T\vectorthree{x}{y}{z}=\vectortwo{x-y}{y-z}
+=\begin{bmatrix}
+1 & -1 & 0\\
+0 & 1 & -1
+\end{bmatrix}
+:= B \vec{x}
+$$ 
+To find the kernel of $T$ we solve $B \vec x= \vec 0$. Since 
+$\text{rref}(B)=\begin{bmatrix}
+ 1 & 0 & -1 \\
+ 0 & 1 & -1
+\end{bmatrix}$ 
+the solutions are of the form $t \vec{w}$ where $t$ is a real number. 
+Therefore it suffices to let $B$ be the other requested matrix. 
+
+::: 
+
+::: {#exm- } 
+Find a basis for the kernel and the image of the linear transformations defined by
+$$
+T_1 = \left \{
+\begin{array}{rl} 
+y_1 = & x_1+x_2+3x_3 \\
+y_2 = & 2x_1+x_2+4x_3 
+\end{array} 
+\right . 
+\qquad \text{with} \qquad 
+\text{rref}(T_1)  = \begin{bmatrix}
+1 & 0 &1 \\
+0 & 1 & 2
+\end{bmatrix}.
+$$
+All solutions to the system $A\vec x=\vec 0$ are 
+$\vectorthree{x_1}{x_2}{x_3}=t\vectorthree{-1}{-2}{1}$
+where $t\in\mathbb{R}$.
+Since $\vectorthree{-1}{-2}{1}$ is linearly independent and spans the kernel, the vector $\vectorthree{-1}{-2}{1}$ forms a basis of $\ker(A)$. Since the columns of $A$ spans the image of $A$ and $\vectortwo{3}{4}=(1)\vectortwo{1}{2}+(2)\vectortwo{1}{1}$ we find the vector $\vectortwo{3}{4}$ redundant. Since the remaining vectors are linearly independent and span $\text{im}(A)$, they form a basis for $\text{im}(A)$.
+
+::: 
+
+::: {#exm- } 
+Find a basis for the kernel and the image of the linear transformations defined by
+$$
+T_2 = 
+\left \{
+\begin{array}{rlll}
+y_1= & x_1 +3x_2 +9x_3  \\
+y_2= & 4x_1+5 x_2 +8x_3  \\
+y_3= & 7x_1+6 x_2 +3x_3  \\
+\end{array}
+\right . 
+\qquad \text{with} \qquad 
+\text{rref}(T_2)  = \begin{bmatrix}
+ 1 & 0 & -3 \\
+ 0 & 1 & 4 \\
+ 0 & 0 & 0
+\end{bmatrix}
+$$
+To find a basis of the kernel we solve $A\vec x = \vec 0$ where $A$ is the matrix of the given transformation. Since 
+$$
+\text{rref(A)}=
+\begin{bmatrix} 1 & 0 &-3 \\ 0 & 1 & 4 \\ 0 & 0 & 0 \end{bmatrix}
+$$
+all solutions have the form $\vectorthree{3t}{-4t}{t}$. Therefore a basis of the kernel of $A$ is $\vectorthree{3}{-4}{1}$.
+In the original matrix $A$ the third column is redundant since $\vectorthree{9}{8}{3}=(-3)\vectorthree{1}{4}{7}+(4)\vectorthree{3}{5}{6}$, and since the vectors $\vectorthree{1}{4}{7}$ and $\vectorthree{3}{5}{6}$ are linearly independent and span, they form a basis of $\text{im}(A)$.
+
+::: 
+
+::: {#exm- } 
+Find a basis for the kernel and the image of the linear transformations defined by
+$$
+T_3 = 
+\left \{
+\begin{array}{rlllll}
+y_1= & 4x_1+8 x_2 +x_3 +x_4+6x_5 \\
+y_2= & 3x_1+6 x_2 +x_3 +2x_4+5x_5 \\
+y_3= & 2x_1+4 x_2 +x_3 +9x_4+10x_5 \\
+y_4= & x_1+ 2x_2 + 3x_3 +2x_4 \\
+\end{array}
+\right . 
+\quad \text{with} \quad 
+\text{rref}(T_3)  = \begin{bmatrix}
+1 & 2 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 &1
+\end{bmatrix}
+$$
+The solutions to the system $A\vec x=\vec 0$ are 
+$$
+\vec x=\vectorfive{x_1}{x_2}{x_3}{x_4}{x_5}=t \vectorfive{-2}{1}{0}{0}{0}=t \vec v \qquad \text{where $t\in\mathbb{R}$.}
+$$
+The vector $\vec v$ is linearly independent and spans $\ker(A)$; thus it forms a basis for $\ker(A)$. Since $\vectorfour{8}{6}{4}{2}=2\vectorfour{4}{3}{2}{1}$ the vector $\vectorfour{8}{6}{4}{2}$ is redundant and since the column vectors of $A$ are linearly independent and span $\text{im}(A)$, we have that the vectors $\vectorfour{4}{3}{2}{1}$,  $\vectorfour{1}{1}{1}{3}$,  $\vectorfour{1}{2}{9}{2}$, and  $\vectorfour{6}{5}{10}{0}$ form a basis of $\text{im}(A)$.
+
+::: 
+
+::: {#exm- } 
+Show $\ker(A)\neq \ker(B)$ where
+$$
+A=
+\begin{bmatrix}
+1 & 0 & 2 & 0 & 4 & 0 \\
+0 & 1 & 3 & 0 & 5 & 0 \\
+0 & 0 & 0 & 1 & 6 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1
+\end{bmatrix}
+\qquad \text{and} \qquad
+%$ and $
+B=
+\begin{bmatrix}
+1 & 0 & 2 & 0 & 0 & 4 \\
+0 & 1 & 3 & 0 & 0 & 5 \\
+0 & 0 & 0 & 1 & 0 & 6 \\
+0 & 0 & 0 & 0 & 1 & 7
+\end{bmatrix}.
+$$
+We solve the system $A\vec x=\vec 0$, written out we find:
+$$
+\begin{bmatrix}
+x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6
+\end{bmatrix}
+= s
+\begin{bmatrix}
+-4 \\ -5 \\ 0 \\ 6 \\ 1 \\ 0
+\end{bmatrix}
++t
+\begin{bmatrix}
+-2 \\ -3 \\ 1\\ 0 \\ 0 0 
+\end{bmatrix}
+=s\vec v_1+t\vec v_2
+\quad \text{ where $s,t\in \mathbb{R}$}.
+$$
+Since $v_1$ and $v_2$ are linearly independent and span 
+$\ker(A)$, they form a basis of the kernel of $A$. By noticing 
+$B \vec v_1\neq \vec 0$ we conclude $\ker(A)\neq \ker(B)$.
+
+::: 
+
+::: {#thm- } 
+\label{dimenimgrank}
+For any matrix $A$, $\dim(\text{im} A )=\text{rank}(A)$. 
+::: 
+
+::: {.proof }
+::: 
+
+::: {#thm- } [Rank-Nullity]
+Let $T$ be a linear transformation from $\mathbb{R}^m$ to $\mathbb{R}^n$ with $n\times m$ matrix $A$. Then 
+$$
+\text{rank}(A)+\text{nullity}(A)
+=\dim(\text{im} A)+\dim(\ker A)=m.
+$$
+::: 
+
+::: {.proof }
+Let $\vec{y}=A\vec{x}$ be the corresponding system of linear equations. Recall,  
+\begin{equation}
+\label{varequ} \small
+\begin{tabular}{ccccccc} 
+$\left(\parbox[c]{1.55cm}{\begin{center}
+number of free variables
+\end{center}}\right)$ & $=$  & 
+$\left(\parbox[c]{1.55cm}{\begin{center}
+total number of variables
+\end{center}}\right)$ & $-$  & 
+$\left(\parbox[c]{1.55cm}{\begin{center}
+number of leading variables
+\end{center}}\right)$ & $=$  
+& $\parbox[c]{1.75cm}{\begin{center}
+\normalsize
+$m-\text{rank}(A)$
+\end{center}}$
+\end{tabular} 
+\end{equation}
+Apparently, the number of free variables is the dimension of the kernel of $A$. Thus \ref{varequ} becomes $\text{nullity}(A)=m-\text{rank}(A)$. By \ref{dimenimgrank} we arrive at the conclusion $\text{rank}(A)+\text{nullity}(A)=m$.
+::: 
+
+::: {#exm- } 
+If possible, find a $3\times 3$ matrix such that $\text{im} A=\ker A$.
+
+::: 
+
+::: {#exm- } 
+If possible, find a $4\times 4$ matrix such that $\text{im} A=\ker A$.
+
+::: 
+
+::: {#exm- } 
+Give an example of a $4\times 5$ matrix $A$ with 
+$\dim(\ker A)=3$.
+
+::: 
+
+::: {#thm- } 
+The vectors $\vec{v}_1,\ldots,\vec{v}_n$ in $\mathbb{R}^n$ form a basis of $\mathbb{R}^n$ if and only if the matrix whose columns consists of $\vec{v}_1,...,\vec{v}_n$ is invertible. 
+::: 
+
+::: {.proof }
+::: 
+
+For example, consider the matrix 
+$$
+A=
+\begin{bmatrix}
+1 & 2 & 1 & 2 \\
+1 & 2 & 2 & 3 \\
+1 & 2 & 3 & 4
+\end{bmatrix}
+$$ 
+What is the smallest number of vectors needed to span the image of $A$? Of course we know, 
+$$
+\text{im}(A)=\text{span}\left(\vectorthree{1}{1}{1},\vectorthree{2}{2}{2},\vectorthree{1}{2}{3},\vectorthree{2}{3}{4}\right).
+$$
+However, it is easy to show that $\vectorthree{2}{3}{4}$ and $\vectorthree{2}{2}{2}$ are redundant; and that the remaining vectors are linearly independent. Thus, 
+$$
+\text{im}(A)=\text{span}\left(\vectorthree{1}{1}{1},\vectorthree{1}{2}{3}\right).
+$$
+Clearly, the image of the linear transformation defined by $A$ is more easily understood by having a spanning set of linearly independent vectors.
+
+

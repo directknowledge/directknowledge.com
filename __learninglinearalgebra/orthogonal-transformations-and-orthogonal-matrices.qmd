@@ -1,0 +1,265 @@
+---
+pagetitle: "Orthogonal Transformations and Orthogonal Matrices - Learning Linear Algebra"
+---
+# Orthogonal Transformations and Orthogonal Matrices
+
+
+A linear transformation $T$ from $\mathbb{R}^n$ to $\mathbb{R}^n$ is called an \index{orthogonal transformation} **orthogonal transformation**  if it preserves the length of vectors: 
+$\norm{T(\vec x)}=\norm{x}$ for all $\vec x\in \mathbb{R}^n.$ If $T(\vec x)=A\vec x$ is an orthogonal transformation, we say $A$ is an \index{orthogonal matrix} **orthogonal matrix** . 
+
+::: {#lem-orthogonal-transformation } 
+Let $T$ be an orthogonal transformation from $\mathbb{R}^n$ to $\mathbb{R}^n$. If $\vec v, \vec w \in \mathbb{R}^n$ are orthogonal, then $T(\vec v), T(\vec w) \in \mathbb{R}^n$ are orthogonal.
+::: 
+
+::: {.proof }
+We want to show  $T(\vec v), T(\vec w)$ are orthogonal, and by the Pythagorean theorem, we have to show
+$$
+\norm{T(\vec v)+T(\vec w)}^2=\norm{T(\vec v)}^2+\norm{T(\vec w)}^2.
+$$
+This equality follows 
+\begin{align*}
+\norm{T(\vec v)+T(\vec w)}^2
+& =\norm{T(\vec v+\vec w)}^2
+=\norm{\vec v+\vec w}^2 \\
+& =\norm{\vec v}^2+\norm{\vec w}^2
+=\norm{T(\vec v)}^2+\norm{T(\vec w)}^2
+\end{align*}
+since $T$ is linear, orthogonal and that $\vec v, \vec w$ are orthogonal, respectively.
+::: 
+
+::: {#thm- } 
+A linear transformation $T$ from $\mathbb{R}^n$ to $\mathbb{R}^n$ is orthogonal if and only if the vectors $T(\vec e_1)$, \ldots, $T(\vec e_n)$ form an orthonormal basis.
+::: 
+
+::: {.proof }
+If $T$ is an orthogonal transformation, then by definition, the $T(\vec e_i)$ are unit vectors, and also, by \ref{orthogonal transformation} they are orthogonal. Therefore, $T(\vec e_1)$, \ldots, $T(\vec e_n)$ form  an orthonormal basis. 
+
+Conversely, suppose $T(\vec e_1)$, \ldots, $T(\vec e_n)$ form an orthonormal basis. Consider a vector $\vec x=x_1 \vec e_1+\cdots +x_n \vec e_n$. Then 
+\begin{align*}
+\norm{T(\vec x)}^2
+&=\norm{T(x_1 \vec e_1+\cdots + x_n \vec e_n)}^2 
+=\norm{x_1 T(\vec e_1)+\cdots + x_n T(\vec e_n)}^2 \\
+&=\norm{x_1T(\vec e_1)}^2+\cdots + \norm{x_nT(\vec e_n)}^2 = x_1^2+\cdots + x_n^2
+=\norm{x}^2.
+\end{align*}
+Taking the square root of both sides shows that $T$ preserves lengths and therefore, $T$ is an orthogonal transformation.
+::: 
+
+::: {#cor-oob } 
+An $n \times n$ matrix $A$ is orthogonal if and only if its columns form an orthonormal basis.
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+The \index{transpose} **transpose** $A^T$ of an $n\times n$ matrix $A$ is the $n\times n$ matrix whose $ij$-th entry is the $ji$-th entry of $A$.  We say that a square matrix $A$ is \index{symmetric} **symmetric** if $A^T=A$, and $A$ is called \index{skew-symmetric} **skew-symmetric** if $A^T=-A$.
+
+::: {#thm-orthogonal-and-transpose-properties } 
+
+## Orthogonal and Transpose Properties
+ 
+- The product of two orthogonal $n\times n$ matrices is orthogonal.
+- The inverse of an orthogonal matrix is orthogonal.
+- If the products $(A B)^T$  and $B^T A^T$ are defined then they are equal.
+- If $A$ is invertible then so is $A^T$, and $(A^T)^{-1}=(A^{-1})^T$.
+- For any matrix $A$, $\text{rank}\,(A) = \text{rank} \,(A^T)$.
+- If $\vec v$ and $\vec w$ are two column vectors in $\mathbb{R}^n$, then $\vec v \cdot \vec w = \vec v^T \vec w$.
+- The $n \times n$ matrix $A$ is orthogonal if and only if $A^{-1}=A^T$.
+::: 
+
+::: {.proof }
+The proof of each part follows.
+ 
+- Suppose $A$ and $B$ are orthogonal matrices, then $AB$ is an orthogonal matrix since $T(\vec x)=AB \vec x$ preserves length  because  $\norm{T(\vec x)}=\norm{AB \vec x}=\norm{A(B \vec x)}=\norm{B \vec x}=\norm{\vec x}.$
+- Suppose $A$ is an orthogonal matrix, then $A^{-1}$ is orthogonal  an matrix since $T(\vec x)=A^{-1} \vec x$ preserves length because $\norm{A^{-1}\vec x}=\norm{A(A^{-1}\vec x)}=\norm{\vec x}$.
+- We will compare entries in the matrices $(AB)^T$ and $B^T A^T$ as follows:
+$$
+\begin{array}{rl}
+i j \text{-th entry of }(AB)^T &= ji \text{-th entry of }AB\\
+& = (j \text{-th row of } A) \cdot (i \text{-th column of } B)\\ \\
+i j \text{-th entry of }B^TA^T &=(i \text{-th row of } B^T) \cdot (j \text{th column of } A^T)\\
+& = (i \text{-th column of } B) \cdot (j \text{-th row of } A)\\
+& = (j \text{-th row of } A) \cdot (i \text{-th column of } B).
+\end{array}
+$$
+Therefore, the $ij$-th entry of $(AB)^T$ is the same of the $ij$-th entry of $B^T A^T$.
+- Suppose $A$ is invertible, then $A A^{-1}=I_n$. Taking the transpose of both sides along with (iii) it yields, $(A A^{-1})^T=(A^{-1})^T A^T=I_n$. Thus $A^T$ is invertible and since inverses are unique, it follows $(A^T)^{-1}=(A^{-1})^T$.
+- Exercise.
+- If $\vec v=\vectorthree{a_1}{\vdots}{a_n}$ and $\vec w=\vectorthree{b_1}{\vdots}{b_n}$, then
+$$
+\vec v \cdot \vec w=\vectorthree{a_1}{\vdots}{a_n}\cdot \vectorthree{b_1}{\vdots}{b_n}=a_1b_1+\cdots +a_n b_n
+=\begin{bmatrix}a_1 & \cdots & a_n\end{bmatrix}  \vectorthree{b_1}{\vdots}{b_n}
+=\vectorthree{a_1}{\vdots}{a_n}^T \vec w=\vec v^T \vec w.
+$$
+- Let's write $A$ in terms of its columns: $A=\begin{bmatrix} \vec v_1 & \cdots & \vec v_n \end{bmatrix}$. Then 
+\begin{equation}
+\label{ata}
+A^T A=
+\begin{bmatrix}  \vec v_1^T  \\  \vdots \\  \vec v_n^T \end{bmatrix}
+\begin{bmatrix} \vec v_1 & \cdots & \vec v_n  \end{bmatrix}
+=\begin{bmatrix}\vec v_1 \cdot \vec v_1 & & \vec v_1 \cdot \vec v_n \\ \vdots & \cdots & \vdots \\ \vec v_n \cdot \vec v_1 & & \vec v_n \cdot \vec v_n\end{bmatrix}.
+\end{equation}
+Now $A$ is orthogonal, by \ref{oob}, if and only if $A$ has orthonormal columns, meaning $A$ is orthogonal if and only if $A^TA=I_n$ by \ref{ata}. Therefore, $A$ is orthogonal if and only if $A^{-1}=A^T$.
+::: 
+
+
+
+::: {#thm-orthogonal-projection-matrix }
+
+## Orthogonal Projection Matrix
+ 
+- Let $V$ be a subspace of $\mathbb{R}^n$ with orthonormal basis $\vec u_1$, \ldots, $\vec u_m$.
+The matrix of the orthogonal projection onto $V$ is $Q Q^T$ where $Q= \begin{bmatrix}  \vec u_1 & \cdots & \vec u_m \end{bmatrix}.$
+- Let $V$ be a subspace of $\mathbb{R}^n$ with basis $\vec v_1,\ldots,\vec v_m$ and let $A=\begin{bmatrix}\vec v_1 & \cdots \vec v_m \end{bmatrix}$, then the orthogonal projection matrix onto $V$ is $A(A^T A)^{-1}A^T$.
+::: 
+
+::: {.proof }
+The proof of each part follows.
+ 
+- Since  $\vec u_1$, \ldots, $\vec u_m$ is an orthonormal basis of $V$ we can, by \ref{Orthogonal Projection}, write, 
+\begin{align*}
+\text{proj}_V (\vec x) 
+& =(\vec u_1 \cdot \vec x) \vec u_1 + \cdots + (\vec u_m \cdot \vec x) \vec u_m 
+=\vec u_1 \vec u_1^T \vec x + \cdots +\vec u_m \vec u_m^T \vec x &  \\
+&=(\vec u_1 \vec u_1^T  + \cdots +\vec u_m \vec u_m^T) \vec x 
+= \begin{bmatrix} \vec u_1 & \cdots & \vec u_m  \end{bmatrix} 
+\begin{bmatrix} \vec u_1^T  \\  \vdots \\  \vec u_m^T  \end{bmatrix} \vec x
+=QQ^T\vec x.
+\end{align*}
+
+- Since $\vec v_1,\ldots,\vec v_m$ form a basis of $V$, there exists unique scalars $c_1,\ldots,c_m$ such that $\text{proj}_V(\vec x)=c_1 \vec v_1+\cdots +c_m \vec v_m$. Since  $A=\begin{bmatrix}\vec v_1 & \cdots & \vec v_m \end{bmatrix}$ we can write $\text{proj}_V(\vec x)=A \vec c$. Consider the system $A^TA\vec c =A^T \vec x$ where $A^TA$ is the coefficient matrix and $\vec c$ is the unknown. Since $\vec c$ is the coordinate vector of $\text{proj}_V(\vec x)$ with respect to the basis $(v_1,\ldots,v_m)$, the system has a unique solution. Thus, $A^TA$ must be invertible, and so we can solve for $\vec c$, namely $\vec c=(A^T A)^{-1}A^T\vec x$. Therefore, $\text{proj}_V(\vec x)=A \vec c =A (A^T A)^{-1}A^T$ as desired. Notice it suffices to consider the system $A^TA\vec c =A^T \vec x$, or equivalently $A^T(\vec x-A \vec c)=\vec 0$, because 
+$$
+A^T(\vec x -A \vec c)=A^T(\vec x-c_1 \vec v_1-\cdots - c_m \vec v_m)
+$$ 
+is the vector whose $i$th component is
+$$
+(\vec v_i)^T(\vec x-c_1 \vec v_1-\cdots -c_m \vec v_m)=\vec v_i\cdot(\vec x-c_1\vec v_1-\cdots -c_m \vec v_m)
+$$
+which we know to be zero since $\vec x-\text{proj}_V(\vec x)$ is orthogonal to $V$.
+::: 
+
+::: {#exm- } 
+Is there an orthogonal transformation $T$ from $\mathbb{R}^3$ to $\mathbb{R}^3$ such that
+$$
+T\vectorthree{2}{3}{0}=\vectorthree{3}{0}{2} \hspace{1cm} \text{and}  \hspace{1cm} T\vectorthree{-3}{2}{0}=\vectorthree{2}{-3}{0}?
+$$
+No, since the vectors $\vectorthree{2}{3}{0}$ and $\vectorthree{-3}{2}{0}$ are orthogonal, whereas $\vectorthree{3}{0}{2}$ and $\vectorthree{2}{-3}{0}$ are not, by \ref{orthogonal transformation}.
+::: 
+
+::: {#exm- } 
+Find an orthogonal transformation $T$ from $\mathbb{R}^3$ to $\mathbb{R}^3$ such that 
+$$
+T\vectorthree{2/3}{2/3}{1/3}=\vectorthree{0}{0}{1}.
+$$
+Let's think about the inverse of $T$ first. The inverse of $T$, if it exists, must satisfy $T^{-1}(\vec e_3)=\vectorthree{2/3}{2/3}{1/3}=\vec v_3$. Furthermore, the vectors $\vec v_1, \vec v_2, \vec v_3$ must form an orthonormal basis of $\mathbb{R}^3$ where $T^{-1}\vec x=\begin{bmatrix}\vec v_1 & \vec v_2 & \vec v_3\end{bmatrix} \vec x$. We require a vector $\vec v_1$ with $\vec v_1\cdot \vec v_3=0$ and $\norm{\vec v_1}=1$. By inspection, we find $\vec v_1=\vectorthree{-2/3}{1/3}{2/3}$. Then 
+$$
+\vec v_2=\vec v_1\times \vec v_3=\vectorthree{-2/3}{1/3}{2/3} \times \vectorthree{2/3}{2/3}{1/3}=\vectorthree{1/9-4/9}{-(-2/9-4/9)}{-4/9-2/9}=\vectorthree{-1/3}{2/3}{-2/3}
+$$ 
+does the job since $\norm{v_1}=\norm{v_2}=\norm{v_3}=1$ and $\vec v_1\cdot \vec v_2=\vec v_1\cdot \vec v_3=\vec v_2\cdot \vec v_3=0$. 
+In summary 
+$$
+T^{-1}=\begin{bmatrix}-2/3 & -1/3 & 2/3 \\ 1/3 & 2/3 & 2/3 \\\ 2/3 & -2/3 & 1/3\end{bmatrix}\vec x.
+$$
+By \ref{Orthogonal and Transpose Properties} the matrix of $T^{-1}$ is orthogonal and the matrix $T=(T^{-1})^{-1}$ is the transpose of the matrix of $T^{-1}$. Therefore, it suffices to use
+$$
+T=\begin{bmatrix}-2/3 & -1/3 & 2/3 \\ 1/3 & 2/3 & 2/3 \\\ 2/3 & -2/3 & 1/3\end{bmatrix}^T\vec x=\begin{bmatrix}-2/3 & 1/3 & 2/3 \\ -1/3 & 2/3 & -2/3 \\\ 2/3 & 2/3 & 1/3 \end{bmatrix} \vec x.
+$$
+::: 
+
+::: {#exm- } 
+Show that a matrix with orthogonal columns need not be an orthogonal matrix.
+For example $A=\begin{bmatrix}4 & -3 \\ 3 & 4 \end{bmatrix}$ is not an orthogonal matrix $T\vec x=A\vec x$ does not preserve length by comparing the lengths of $\vec x$ and $T\vec x$ with 
+$\vectortwo{-3}{4}$.
+::: 
+
+::: {#exm- } 
+Find all orthogonal $2\times 2$ matrices.
+Write $A=\begin{bmatrix}\vec v_1 & \vec v_2\end{bmatrix}$. The unit vector $\vec v_1$ can be expressed as $\vec v_1=\vectortwo{\cos \theta}{\sin \theta}$, for some $\theta$. Then $v_2$ will be one of the two unit vectors orthogonal to $\vec v_1$, namely $\vec v_2=\vectortwo{-\sin \theta}{\cos \theta}$ or $\vec v_2=\vectortwo{\sin \theta}{-\cos \theta}$. Therefore, an orthogonal $2\times 2$ matrix is either of the form 
+$$
+A=\begin{bmatrix}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix}\hspace{1cm} \text{or} \hspace{1cm} A=\begin{bmatrix}\cos \theta & \sin \theta \\ \sin \theta & -\cos \theta \end{bmatrix}
+$$
+representing a rotation or a reflection, respectively.
+::: 
+
+::: {#exm- } 
+Given $n\times n$ matrices $A$ and $B$  which of the following must be symmetric?
+ 
+- $B  B^T$
+- $A^T B^TB A$
+- $B(A+A^T)B^T$
+ 
+The solution to each part follows.
+ 
+- \ref{Orthogonal and Transpose Properties}, $B  B^T$ is symmetric because 
+$$
+(B B^T)^T=(B^T)^TB^T=B B^T.
+$$
+- \ref{Orthogonal and Transpose Properties}, $A^T B^TB A$ is symmetric because 
+$$
+(A^TB^TBA)^T=A^TB^T(B^T)^T(A^T)^T=A^TB^TBA.
+$$
+- \ref{Orthogonal and Transpose Properties}, $B(A+A^T)B^T$ is symmetric because 
+$$
+(B(A+A^T)B^T)^T=((A+A^T)B^T)^TB^T=B(A+A^T)^TB^T
+$$
+$$
+=B(A^T+A)^TB^T=B((A^T)^T+A^T)B^T=B(A+A^T)B^T.
+$$
+::: 
+
+::: {#exm- } 
+If the $n\times n$ matrices $A$ and $B$ are symmetric which of the following must be symmetric as well?
+ 
+- $2I_n+3A-4 A^2$,
+- $A B^2 A$.
+ 
+The solution to each part follows.
+ 
+- First note that $(A^2)^T=(A^T)^2=A^2$ for a symmetric matrix $A$. Now we can use the linearity of the transpose,
+$$
+(2I_n+3A-4 A^2)^T=2I_n^T+3A^T-4 (A^2)^T=2I_n+3A-4 A^2
+$$
+showing that the matrix $2I_n+3A-4 A^2$ is symmetric. 
+- The matrix $A B^2 A$ is symmetric since,
+$$
+(AB^2A)^T=(ABBA)^T=(BA)^T(AB)^T=A^TB^TB^TA^T=AB^2A.
+$$
+::: 
+
+::: {#exm- } 
+Use \ref{Orthogonal Projection Matrix} to find the matrix $A$ of the orthogonal projection onto 
+$$
+W=\text{span} \left(\vectorfour{1}{1}{1}{1},\vectorfour{1}{9}{-5}{3}\right).
+$$
+Then find the matrix of the orthogonal projection onto the subspace of $\mathbb{R}^4$ spanned by the vectors $\vectorfour{1}{1}{1}{1}$ and $\vectorfour{1}{2}{3}{4}$.
+First we apply \ref{Gram-Schmidt Process}, the Gram-Schmidt process, to $W=\text{span}(\vec v_1, \vec v_2)$, to find that the vectors
+$$
+\vec u_1=\frac{\vec v_1}{\norm{\vec v_1}}
+=\vectorfour{1/2}{1/2}{1/2}{1/2}, \hspace{1cm}\vec u_2
+=\frac{\vec v_2^\perp}{\norm{\vec v_2^\perp}}
+=\frac{\vec v_2-\left(\vec u_1 \cdot \vec v_2\right) \vec u_1}{\norm{\vec v_2-\left(\vec u_1 \cdot \vec v_2\right)\vec u_1}}
+=\vectorfour{-1/10}{7/10}{-7/10}{1/10}
+$$
+form an orthonormal basis of $W$.
+By \ref{Orthogonal Projection Matrix}, the matrix of the projection onto $W$ is $A=Q Q^T$ where $Q=\begin{bmatrix}\vec u_1 & \vec u_2\end{bmatrix}$. Therefore the orthogonal projection onto $W$ is 
+$$
+A=
+\begin{bmatrix} 1/2 & -1/10 \\ 1/2 & 7/10 \\ 1/2 & -7/10 \\ 1/2 & 1/10 \end{bmatrix} 
+\begin{bmatrix} 1/2 & 1/2 & 1/2 & 1/2  \\ -1/10 & 7/10 & -7/10 & 1/10 \end{bmatrix}
+=\frac{1}{100}
+\begin{bmatrix} 
+26 & 18 & 32 & 24 \\
+18 & 74 & -24 & 32 \\
+32 & -24 & 74 & 18 \\
+24 & 32 & 18 & 26
+\end{bmatrix}.
+$$
+Let $A=\begin{bmatrix}1 & 1 \\ 1 & 2 \\1 & 3 \\1 & 4 \end{bmatrix}$ and then the orthogonal projection matrix is 
+$$
+A(A^TA)^{-1}A^T
+=\frac{1}{10}\begin{bmatrix}7 & 4 & 1 & -2 \\4 & 3 & 2 & 1 \\ 1 & 2 & 3 & 4 \\ -2 & 1 & 4 & 7 \end{bmatrix}.
+$$
+::: 
+
+

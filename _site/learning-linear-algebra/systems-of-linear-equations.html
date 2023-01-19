@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Learning Linear Algebra">
+<title>Systems of Linear Equations - Learning Linear Algebra</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./matrices-and-vectors.html" rel="next">
+<link href="./index.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+.book-title, #quarto-search svg {
+    color: #0047AB!important;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
+    font-weight: 500!important;
+    color:#0047AB;
+ }
+ #quarto-sidebar .text-start {
+    font-variant: small-caps;
+    font-size: 120%;
+ }
+ #quarto-sidebar .active, .active .chapter-number {
+    color:#000000!important;
+    font-weight: 700!important;
+ }
+</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+</style>
+  
+<meta property="og:title" content="Systems of Linear Equations - Learning Linear Algebra">
+<meta property="og:description" content="Learning Linear Algebra">
+<meta property="og:site-name" content="Learning Linear Algebra">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Learning Linear Algebra" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
+</i> 
+ <span class="dropdown-text">Exploring Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Systems of Linear Equations</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/learning-linear-algebra/">Learning Linear Algebra</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./systems-of-linear-equations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Systems of Linear Equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./matrices-and-vectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matrices and Vectors</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./on-the-solutions-of-linear-systems.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On the Solutions of Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Vector Spaces</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction-to-linear-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to Linear Transformations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-transformations-in-geometry.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Linear Transformations in Geometry</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./invertible-linear-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Invertible Linear Transformations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./subspaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Subspaces</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kernel-and-image-of-a-linear-transformation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kernel and Image of a Linear Transformation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./coordinates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Coordinates</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction-to-linear-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Linear Spaces</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-independence-and-bases.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Linear Independence and Bases</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./finite-dimensional-linear-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Finite-dimensional Linear Spaces</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./infinite-dimensional-linear-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Infinite-dimensional Linear Spaces</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction-to-linear-maps.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Introduction to Linear Maps</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./coordinates-and-the-matrix-of-a-linear-map.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Coordinates and the Matrix of a Linear Map</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./orthonormal-bases-and-orthogonal-projections.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Orthonormal Bases and Orthogonal Projections</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gram-schmidt-process-and-qr-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Gram-Schmidt Process and QR Factorization</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./orthogonal-transformations-and-orthogonal-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Orthogonal Transformations and Orthogonal Matrices</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inner-products.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Inner Products</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./determinants-and-trace.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Determinants and Trace</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eigenvalues-and-eigenvectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diagonalization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Diagonalization</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./invariant-subspaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Invariant Subspaces</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./jordan-canonical-form.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Jordan Canonical Form</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/learning-linear-algebra/"><picture><source type="image/webp" srcset="../../assets/learning-linear-algebra-cover.webp"><source type="image/webp" srcset="../../assets/learning-linear-algebra-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/learning-linear-algebra-cover.png" alt="Learning Linear Algebra Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#introducing-systems-of-linear-equations" id="toc-introducing-systems-of-linear-equations" class="nav-link active" data-scroll-target="#introducing-systems-of-linear-equations"><span class="toc-section-number">1.1</span>  Introducing Systems of Linear Equations</a></li>
+  <li><a href="#the-graphical-method" id="toc-the-graphical-method" class="nav-link" data-scroll-target="#the-graphical-method"><span class="toc-section-number">1.2</span>  The Graphical Method</a></li>
+  <li><a href="#the-substitution-method" id="toc-the-substitution-method" class="nav-link" data-scroll-target="#the-substitution-method"><span class="toc-section-number">1.3</span>  The Substitution Method</a></li>
+  <li><a href="#the-elimination-method" id="toc-the-elimination-method" class="nav-link" data-scroll-target="#the-elimination-method"><span class="toc-section-number">1.4</span>  The Elimination Method</a></li>
+  <li><a href="#row-operations-and-similar-matrices" id="toc-row-operations-and-similar-matrices" class="nav-link" data-scroll-target="#row-operations-and-similar-matrices"><span class="toc-section-number">1.5</span>  Row Operations and Similar Matrices</a></li>
+  <li><a href="#gaussian-elimination-method" id="toc-gaussian-elimination-method" class="nav-link" data-scroll-target="#gaussian-elimination-method"><span class="toc-section-number">1.6</span>  Gaussian Elimination Method</a></li>
+  <li><a href="#gauss-jordan-elimination-method" id="toc-gauss-jordan-elimination-method" class="nav-link" data-scroll-target="#gauss-jordan-elimination-method"><span class="toc-section-number">1.7</span>  Gauss-Jordan Elimination Method</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="toc-section-number">1.8</span>  Conclusion</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">1.9</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<div style="display:none;">
+\(
+\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}
+\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}
+\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
+\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}
+\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}
+\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}
+\newcommand{\norm}[1]{\left|\left |#1\right|\right |}
+\newcommand{\ip}[1]{\left \langle #1\right \rangle}
+\)
+</div>
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Systems of Linear Equations</span></h1>
+</header>
+<p>Systems of Linear Equations (A Student’s Guide) is a comprehensive guide written for students. This book provides in-depth explanations of how to solve systems of linear equations using various methods, including graphing, substitution, and elimination. It also includes examples and practice problems to help you master systems for linear equations.</p>
+<section id="introducing-systems-of-linear-equations" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="introducing-systems-of-linear-equations"><span class="header-section-number">1.1</span> Introducing Systems of Linear Equations</h2>
+<p>A system of linear equations is a set of two or more linear equations that share the same set of unknowns. In other words, a system of linear equations is a collection of linear equations that you must solve together. There are three main types of systems of linear equations:</p>
+<ol type="1">
+<li><p>Consistent and independent: A consistent and independent system of linear equations has a unique solution. This means that there is only one way to solve the system, and the solution will not change if different values are used for the unknowns.</p></li>
+<li><p>Consistent and dependent: A consistent and dependent system of linear equations has infinitely many solutions. This means that there is more than one way to solve the system, and the solution will change if different values are used for the unknowns.</p></li>
+<li><p>Inconsistent: An inconsistent system of linear equations has no solution. This means that there is no way to solve the system.</p></li>
+</ol>
+</section>
+<section id="the-graphical-method" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="the-graphical-method"><span class="header-section-number">1.2</span> The Graphical Method</h2>
+<p>The graphing method is a visual way to find the solution to a system of linear equations. To use the graphing method, graph both equations on the same coordinate plane. The point of intersection is the solution to the system.</p>
+<p>To graph a linear equation, start by plotting the y-intercept. This is the point where the line crosses the y-axis. To find the y-intercept, set x=0 and solve for y. Then, use the slope to find additional points on the line. The slope is the ratio of the change in y to the change in x. To find the slope, pick two points on the line and calculate the rise (the change in y) divided by the run (the change in x).</p>
+<p>Once you have the y-intercept and the slope, you can plot additional points on the line and connect them with a straight line.</p>
+</section>
+<section id="the-substitution-method" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="the-substitution-method"><span class="header-section-number">1.3</span> The Substitution Method</h2>
+<p>The substitution method is an algebraic way to find the solution to a system of linear equations. To use the substitution method, solve one of the equations for one of the unknowns. Then, substitute this value into the other equation. This will give you a new equation with one unknown. Solve this equation for the unknown. Now, substitute the value of the unknown back into one of the original equations. This will give you the solution to the system.</p>
+<p>The substitution method is usually easiest when one of the equations is already solved for one of the unknowns. However, it is sometimes necessary to solve one of the equations for an unknown before you can substitute.</p>
+</section>
+<section id="the-elimination-method" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="the-elimination-method"><span class="header-section-number">1.4</span> The Elimination Method</h2>
+<p>The elimination method is an algebraic way to find the solution to a system of linear equations. To use the elimination method, add or subtract the equations so that one of the unknowns cancels out. This will give you a new equation with one fewer unknown. Repeat this process until you are left with an equation that has only one unknown. Solve this equation for the unknown. Now, substitute the value of the unknown back into one of the original equations. This will give you the solution to the system.</p>
+<p>The elimination method is usually easiest when the coefficients (the numbers in front of the unknowns) are already opposites. However, it is sometimes necessary to multiply one or both equations by a constant before you can eliminate an unknown.</p>
+<p>There are many ways to solve a system of linear equations. The best way to choose a method is to look at the equations and decide which one will be the easiest to work with. In general, the substitution method is best when one equation is already solved for one unknown. The elimination method is best when the coefficients of one unknown are opposites. The graphing method is a good way to check your work, but it can be difficult to find the intersection of two lines.</p>
+</section>
+<section id="row-operations-and-similar-matrices" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="row-operations-and-similar-matrices"><span class="header-section-number">1.5</span> Row Operations and Similar Matrices</h2>
+<p>In solving systems of linear equations, we will often need to use row operations. Row operations are mathematical operations that can be performed on the rows of a matrix. There are three types of row operations:</p>
+<ul>
+<li>Interchange two rows</li>
+<li>Multiply a row by a nonzero constant</li>
+<li>Add a multiple of one row to another row</li>
+</ul>
+<p>Row operations do not change the solution set of a system of linear equations. This means that if we perform row operations on a matrix, the new matrix will have the same solution set as the original matrix. We can use row operations to transform a matrix into an equivalent matrix. Two matrices are equivalent if they have the same solution set.</p>
+<p>We can use row operations to solve systems of linear equations. In general, we will use row operations to transform the coefficient matrix into an upper triangular matrix. An upper triangular matrix is a matrix where all the elements below the main diagonal are zero. Once we have transformed the coefficient matrix into an upper triangular matrix, we can use back substitution to solve the system.</p>
+<p>We can use row operations to transform a matrix into any equivalent matrix. However, some matrices are more difficult to work with than others. In general, it is easier to work with matrices that are in reduced row echelon form. A matrix is in reduced row echelon form if it is upper triangular and if the leading entry in each nonzero row is a 1. The leading entry in a row is the first nonzero entry in the row.</p>
+<p>We can use row operations to transform any matrix into an equivalent matrix that is in reduced row echelon form. Once we have transformed the matrix into reduced row echelon form, we can use back substitution to solve the system of linear equations.</p>
+</section>
+<section id="gaussian-elimination-method" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="gaussian-elimination-method"><span class="header-section-number">1.6</span> Gaussian Elimination Method</h2>
+<p>The Gaussian elimination method is another way to solve a system of linear equations. To use the Gaussian elimination method, you must first arrange the equations into row form. This will make it easier to see how to eliminate an unknown. Next, multiply each equation by a constant so that one of the unknowns cancels out. Then, add or subtract these equations so that another unknown cancels out. Finally, solve the equation resulting from this process for the last unknown. Now, substitute this value back into one of the original equations and you have the solution to the system!</p>
+<p>The Gaussian Elimination Method is a procedure used to solve systems of linear equations. The method is named after German mathematician Carl Friedrich Gauss and Irish mathematician William Rowan Hamilton, who developed it independently in the early 19th century.</p>
+</section>
+<section id="gauss-jordan-elimination-method" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="gauss-jordan-elimination-method"><span class="header-section-number">1.7</span> Gauss-Jordan Elimination Method</h2>
+<p>The Gauss-Jordan Elimination Method is similar to the traditional Gaussian Elimination Method, but it is more efficient and easier to use. The method works by first transforming the system of equations into an equivalent system with a triangular form. Then, the solution is obtained by a backward substitution.</p>
+<p>This method is called Gauss-Jordan Elimination because it was developed by two mathematicians, Carl Friedrich Gauss and Wilhelm Jordan. Although it is not the quickest or most intuitive method, it is a robust way to solve linear equations. When done correctly, it will always give you the correct answer.</p>
+</section>
+<section id="conclusion" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">1.8</span> Conclusion</h2>
+<p>There are many ways to solve a system of linear equations. The best way to choose a method is to look at the equations and decide which one will be the easiest to work with. In general, the substitution method is best when one equation is already solved for one unknown. The elimination method is best when the coefficients of one unknown are opposites. The Gaussian elimination method is best when there are a lot of equations and unknowns. Lastly, the Gauss-Jordan elimination method is the most robust way to solve linear equations. It is not always the quickest or easiest method, but it will always give you the correct answer.</p>
+<p>No matter which method you choose, make sure you understand the steps involved and why they work. This will help you not only solve the equations correctly but also to understand what is happening behind the scenes. With a little practice, you will be solving systems of linear equations like a pro!</p>
+<p>A linear system of equations in two variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> has the form <span class="math display">\[
+\begin{cases}
+a x + b y =c\\
+d x+ e y =f
+\end{cases}
+\]</span> where <span class="math inline">\(a, b, c, d, e, f\)</span> are given numbers such as real numbers or complex numbers. Sometimes a linear system is also written using indices</p>
+<p><span class="math display">\[\begin{equation}
+\label{2by2sys}
+\begin{cases}
+a_{11} x+a_{12} y=b_1\\
+a_{21}x+ a_{22} y =b_2
+\end{cases}
+\end{equation}\]</span></p>
+<p>to help reduce on the number of letters used. For simplicity let’s temporally assume that the coefficients are nonzero real numbers and ask the question: how many solutions can there be to a <span class="math inline">\(2\times 2\)</span> system? The key idea is to realize that each linear equation in <span class="math inline">\(\ref{2by2sys}\)</span> represents a line in the Cartesian plane. If we consider the possible ways lines can intersect in the plane we come to the conclusion that there must either be no solutions, one unique solution, or infinitely many points <span class="math inline">\((x,y)\)</span> that solves the system in <span class="math inline">\(\ref{2by2sys}\)</span>.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.1 </strong></span> Determine whether the linear system <span class="math display">\[
+\begin{cases}
+2x+3y =0 \\
+4x+5y=0.
+\end{cases}
+\]</span> has no solutions, exactly one solution, or infinitely many solutions. If we multiple the first equation, namely <span class="math inline">\(2x+3y=0\)</span> by 2 and subtract from the second equation, <span class="math inline">\(4x+5y=0\)</span>, we obtain <span class="math inline">\(y=0\)</span>. Therefore the solution is unique and is <span class="math inline">\((x,y)=(0,0)\)</span>.</p>
+</div>
+<p>A <span class="math inline">\(3\times 3\)</span> linear system has the form <span class="math display">\[\begin{equation}
+\label{3by3sys}
+\begin{cases}
+a_{11} x+a_{12} y+a_{13}z =b_1\\
+a_{21} x+a_{22} y+a_{23}z =b_2\\
+a_{31} x+a_{32} y+a_{33}z =b_3\\
+\end{cases}
+\end{equation}\]</span> where <span class="math inline">\(a_{ij}\)</span> and <span class="math inline">\(b_1, b_2, b_3\)</span> are numbers and <span class="math inline">\(x, y, z\)</span> are variables. Geometrically, linear equations in three variables are just planes in three dimensions. So what are the different types of solution sets for the system in <span class="math inline">\(\ref{3by3sys}\)</span>? By considering the possible ways three planes might intersect in three dimensions we come to the conclusion that there must either be no solutions, one unique solution, or infinitely many points <span class="math inline">\((x,y,z)\)</span> that solves the system in <span class="math inline">\(\ref{3by3sys}\)</span>.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.2 </strong></span> Determine whether the linear system <span class="math display">\[\begin{equation}
+\label{linesysex1}
+\begin{cases}
+x+2y+3z=0 \\
+4x+5y+6z=3 \\
+7x+8y+9z =0
+\end{cases}
+\end{equation}\]</span> has no solutions, exactly one solution, or infinitely many solutions. Multiply the first equation by <span class="math inline">\(-2\)</span> and add to the second equation obtaining the equation <span class="math inline">\(2x+y=3\)</span>. Eliminating <span class="math inline">\(z\)</span> from the first and third equations we obtain <span class="math inline">\(4x+2y=0\)</span> by multiplying the first equation by <span class="math inline">\(-3\)</span> and adding to the third equation. The <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> that satisfies <span class="math inline">\(\ref{linesysex1}\)</span> must also satisfy the system <span class="math display">\[\begin{equation}
+\label{linesysex1b}
+\begin{cases}
+2x+y=3 \\
+4x+2y=0.
+\end{cases}
+\end{equation}\]</span> Multiply the first equation of <span class="math inline">\(\ref{linesysex1b}\)</span> by <span class="math inline">\(2\)</span> yields <span class="math inline">\(4x+2y=6\)</span>. Notice there are no <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> that satisfies both <span class="math inline">\(4x+2y=6\)</span> and <span class="math inline">\(4x+2y=0\)</span>. Thus the system in <span class="math inline">\(\ref{linesysex1b}\)</span> has no solutions; therefore the system in <span class="math inline">\(\ref{linesysex1}\)</span> also has no solutions.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.3 </strong></span>Given numbers <span class="math inline">\(a, b\)</span>, and <span class="math inline">\(c\)</span>, show that the linear system <span class="math display">\[
+\begin{cases}
+x+2y +3z = a\\
+x+3y +8z = b\\
+x+2y +2z = c
+\end{cases}
+\]</span> either has no solutions, exactly one solution, or infinitely many solutions. We choose to eliminate <span class="math inline">\(x\)</span> first and we obtain the system <span class="math display">\[
+\begin{cases}
+-y-5z  =a-b\\
+z  =a-c.
+\end{cases}
+\]</span> Next we eliminate <span class="math inline">\(z\)</span> obtaining <span class="math inline">\(y=-6a+b+5c\)</span>. Therefore the unique solution is <span class="math inline">\((x,y,z)=(10a-2b-7c,-6a+b+5c,a-c)\)</span>.</p>
+</div>
+<p>Let’s consider a set of linear equations that involves <span class="math inline">\(n\)</span> unknown quantities represented by <span class="math inline">\(\vlist{x}{n}\)</span>. Let <span class="math inline">\(a_{ij}\)</span> represent the number that is the coefficient of <span class="math inline">\(x_j\)</span> in the <span class="math inline">\(i\)</span>th equation. Let <span class="math inline">\(\vlist{b}{m}\)</span> be given numbers. The linear system of equations <span class="math display">\[\begin{equation}
+\label{syseq}
+\begin{cases}
+a_{11} x_1+a_{12} x_2+\cdots +a_{1n} x_n =  b_1 \\
+a_{21} x_1+a_{22} x_2+\cdots +a_{2n} x_n =  b_2 \\
+\hfill \vdots \hfill \\
+a_{m1} x_1+a_{m2} x_2+\cdots +a_{mn} x_n =  b_m \\
+\end{cases}
+\end{equation}\]</span> is called a <strong>system of simultaneous linear algebraic equations</strong>. A <strong>solution</strong> of this system is an ordered set of <span class="math inline">\(n\)</span> numbers that satisfies each of the <span class="math inline">\(m\)</span> statements in the system. A linear system of equations with no solution is called and a system with at least one solution is called <strong>inconsistent</strong> . The array<br>
+<span class="math display">\[
+\left[
+\begin{array}{l|l}
+\begin{matrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\
+&amp; &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots  &amp; a_{mn}\\
+\end{matrix}
+&amp;
+\begin{matrix}
+b_1 \\ b_2 \\ \vdots \\ b_m
+\end{matrix}
+\end{array}
+\right]
+\]</span> is called the corresponding to the linear system in <span class="math inline">\(\ref{syseq}\)</span> <strong>augmented matrix</strong>.</p>
+<p>For example, the linear system in <span class="math inline">\(\ref{example:2by2system}\)</span> was shown to be consistent and the linear system in <span class="math inline">\(\ref{example:3by3system}\)</span> was shown to be inconsistent. The augmented matrices for these systems are as follows. <span class="math display">\[
+\left[
+\begin{array}{l|l}
+\begin{matrix}
+2 &amp; 3 \\
+4 &amp; 5
+\end{matrix}
+&amp;
+\begin{matrix}
+0 \\ 0
+\end{matrix}
+\end{array}
+\right]
+\qquad
+%\text{and}
+\qquad
+\left[
+\begin{array}{l|l}
+\begin{matrix}
+1&amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{matrix}
+&amp;
+\begin{matrix}
+0 \\ 3 \\0
+\end{matrix}
+\end{array}
+\right]
+\]</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.4 </strong></span> Find all solutions to the following linear system. <span class="math display">\[
+\begin{cases}
+-150 x+500y=z \\
+50x+100y+z =200
+\end{cases}
+\]</span> The given system is equivalent to <span class="math display">\[
+\begin{cases}
+-150 x+500y-z=0 \\
+50x+100y+z =200.
+\end{cases}
+\]</span> Adding these equations yields <span class="math inline">\(-100x+600y=200\)</span>. Since we have one equation with two variables, one of the variables is free. We choose to let <span class="math inline">\(y\)</span> be free. Let <span class="math inline">\(y=t\)</span> for an arbitrary number <span class="math inline">\(t\)</span>. Then solving for <span class="math inline">\(x\)</span> we obtain <span class="math inline">\(-100x=200y-600y\)</span>, or equivalently <span class="math inline">\(x=-2+6t\)</span>. By substituting into the original system, we find <span class="math inline">\(z=-150(-2+6t)+500t=300-400t.\)</span> Therefore, there are an infinitely many solutions, which can be represented by the set <span class="math display">\[
+\{(x,y,z) \mid x=-2+6t, y=t, z=300-400t \text{ where $t\in \mathbb{R} $} \}.
+\]</span></p>
+</div>
+<p>The augmented matrix for the system in <span class="math inline">\(\ref{example:2by3system}\)</span> is <span class="math display">\[
+\left[
+\begin{array}{l|l}
+\begin{matrix}
+-150 &amp; 500 &amp; -1 \\
+50 &amp; 100 &amp; 1
+\end{matrix}
+&amp;
+\begin{matrix}
+0 \\ 200
+\end{matrix}
+\end{array}
+\right]
+\]</span> Do you think it is possible to decide, by inspection of an augmented matrix, whether or not the corresponding linear system will be consistent or inconsistent?</p>
+<p>In our examples so far we have seen linear systems having no solutions, a unique solution, or perhaps an infinite number of solutions. These examples suggest the following definition.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.1 </strong></span>Two linear systems are called <strong>equivalent</strong> if they have the same solution set.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.5 </strong></span>Find a system of linear equations with three unknowns <span class="math inline">\(x,y,z\)</span> whose solutions are <span class="math inline">\(x=6+5t\)</span>, <span class="math inline">\(y=4+3t\)</span>, <span class="math inline">\(z=2+t\)</span> where <span class="math inline">\(t\)</span> is arbitrary. We want to eliminate <span class="math inline">\(t\)</span>. Solving for <span class="math inline">\(t\)</span> yields <span class="math inline">\(t=z-2\)</span>. By substitution, <span class="math inline">\(x=6+5(z-2)\)</span> and <span class="math inline">\(y=4+3(z-2)\)</span>. Thus we have a linear system <span class="math display">\[
+\begin{cases}
+x-5z=-4\\
+y-3z =-2
+\end{cases}
+\]</span> which has an infinitely many solutions.</p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.1 </strong></span> Linear systems of equations are equivalent if each can be obtained from the other by one or more of the following operations.</p>
+<ul>
+<li>Interchange the order of the equations.</li>
+<li>Multiply (or divide) one equation by a nonzero scalar.</li>
+<li>Add one multiple of one equation to another.</li>
+</ul>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If we consider the solution set as a geometric object, it should be very easy to understand that they way in which we write the equations that represents the object does not change the object. Thus it should be obvious that interchanging the order of the equations will not change the solutions to a linear system. Neither will multiplying (or dividing) both sides of an equation by a nonzero constant.</p>
+<p>Let system <span class="math inline">\(A\)</span> be an <span class="math inline">\(m\times n\)</span> system represented by <span class="math display">\[\begin{equation}
+\label{syseqA}
+\begin{cases}
+a_{11} x_1+a_{12} x_2+\cdots +a_{1n} x_n =  b_1 \\
+\hfill \vdots \hfill \\
+a_{i1} x_1+a_{i2} x_2+\cdots +a_{in} x_n =  b_i  \\
+\hfill \vdots \hfill \\
+a_{m1} x_1+a_{m2} x_2+\cdots +a_{mn} x_n =  b_m &amp; \\
+\end{cases}
+\end{equation}\]</span> Consider system <span class="math inline">\(B\)</span> obtained from system <span class="math inline">\(A\)</span> by adding <span class="math inline">\(k\)</span> times equation <span class="math inline">\(i\)</span> to equation <span class="math inline">\(j\)</span> as follows: <span class="math display">\[\begin{equation}
+\label{syseqB}
+\begin{cases}
+a_{11} x_1+a_{12} x_2+\cdots +a_{1n} x_n =  b_1  \\
+\qquad \qquad \vdots \qquad \qquad \qquad  \vdots \\
+(a_{j1}+k a_{i1}) x_1+(a_{j2}+k a_{i2}) x_2+\cdots +(a_{jn}+k a_{in}) x_n =  b_j +k b_i\\ \qquad \qquad  \vdots \qquad \qquad \qquad  \vdots \\
+a_{m1} x_1+a_{m2} x_2+\cdots +a_{mn} x_n =  b_m \\
+\end{cases}
+\end{equation}\]</span> Let <span class="math inline">\(S_A\)</span> and <span class="math inline">\(S_B\)</span> be the solutions sets of systems <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively. We will show <span class="math inline">\(S_A=S_B\)</span>. Let <span class="math inline">\(x_0=(\vlist{x}{n})\)</span> be a solution of system <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(x_0\)</span> satisfies every linear equation in <span class="math inline">\(\ref{syseqA}\)</span>. So <span class="math inline">\(x_0\)</span> satisfies every equation in system B except possibly the <span class="math inline">\(j\)</span>th equation. Working with the <span class="math inline">\(j\)</span>th equation in system <span class="math inline">\(B\)</span> we find <span class="math display">\[\begin{align*}
+&amp; (a_{j1}+k a_{i1}) x_1+(a_{j2}+k a_{i2}) x_2+\cdots +(a_{jn}+k a_{in}) x_n \\
+&amp; \qquad = a_{j1}x_1+\cdots +a_{jn} x_n+k (a_{i1}x_1+\cdots a_{jn}x_n)\\
+&amp; \qquad =  b_j +k b_i.\end{align*}\]</span> This shows <span class="math inline">\(x_0\)</span> also satisfies the <span class="math inline">\(j\)</span>th equation of system <span class="math inline">\(B\)</span>. Since <span class="math inline">\(x_0\)</span> satisfies every equation in <span class="math inline">\(\ref{syseqB}\)</span>, <span class="math inline">\(x_0\)</span> is also a member of <span class="math inline">\(S_B\)</span>. So far we have shown <span class="math inline">\(S_A\subseteq S_B\)</span>. Conversely, assume <span class="math inline">\(x_0\)</span> is a solutions to every equation in <span class="math inline">\(\ref{syseqB}\)</span>. Working with the <span class="math inline">\(j\)</span>th equation of system <span class="math inline">\(A\)</span> we find, <span class="math display">\[\begin{align}
+&amp; a_{j1} x_1+a_{j2} x_2+\cdots +a_{jn}x_n=b_j \notag \\
+\Longleftrightarrow \quad &amp; a_{j1} x_1+ (k a_{i1}-ka_{i1})x_1
+%+ a_{j2} x_2+ (k a_{21}-ka_{21})x_2
++\cdots +a_{jn} + (k a_{i1}-ka_{i1})x_n=b_j \label{eqsys}\notag \\
+\Longleftrightarrow \quad &amp; (a_{j1}+k a_{i1}) x_1+(a_{j2}+k a_{i2}) x_2+\cdots +(a_{jn}+k a_{in}) x_n = b_j+k b_i.
+\end{align}\]</span> Notice <span class="math inline">\(\ref{eqsys}\)</span> holds since <span class="math inline">\(x_0\)</span> satisfies system <span class="math inline">\(B\)</span>; and thus <span class="math inline">\(x_0\)</span> satisfies the <span class="math inline">\(j\)</span>th equation of system <span class="math inline">\(A\)</span>. Therefore <span class="math inline">\(S_A=S_B\)</span> as desired.</p>
+</div>
+<p>While working through the details of the following two examples, notice how the operations in <span class="math inline">\(\ref{proprowoperations}\)</span> are being used.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.6 </strong></span>Let <span class="math inline">\(a, b\)</span>, and <span class="math inline">\(c\)</span> be constants. Solve the linear system <span class="math display">\[
+\begin{cases}
+y+z  =a \\
+x+z =b \\
+x+y = c.
+\end{cases}
+\]</span> Eliminating <span class="math inline">\(z\)</span> from the first and second equations we obtain the system <span class="math display">\[
+\begin{cases}
+x-y = b-a \\
+x+y=c
+\end{cases}
+\]</span> Solving for <span class="math inline">\(x\)</span> yields <span class="math inline">\(x=(c+b-a)/2\)</span>. Using the original system we find <span class="math inline">\(y\)</span> and <span class="math inline">\(z\)</span> to be <span class="math display">\[
+y= c-x=c-(c+b-a)/2=(c-b+a)/2
+\]</span> <span class="math display">\[
+z=a-y=a-(c-b+a)/2=(a+b-c)/2
+\]</span> Therefore, the solution to the system is <span class="math display">\[
+(x,y,z)=\left(\frac{c+b-a}{2},\frac{a+c-b}{2},\frac{a+b-c}{2}\right).
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.7 </strong></span>Find the smallest positive integer <span class="math inline">\(C\)</span> such that <span class="math inline">\(x, y, z\)</span> are integers and satisfies the linear system of equations <span class="math display">\[
+\begin{cases}
+2x+y =C \\
+3y+z =C \\
+x+4z = C.
+\end{cases}
+\]</span> Multiply the third equation by <span class="math inline">\(-2\)</span> and add to the first equation, obtaining <span class="math inline">\(y-8z=-C\)</span>. Multiplying the second equation by 8 and adding to <span class="math inline">\(y-8z=-C\)</span>, yields <span class="math inline">\(25y=7C\)</span>. Solving for <span class="math inline">\(y\)</span> we obtain <span class="math inline">\(y=(7/25)C\)</span>. By substitution, <span class="math inline">\(x=(9/25)C\)</span> and <span class="math inline">\(z=(4/25)C\)</span>. Therefore, 25 is the smallest integer <span class="math inline">\(C\)</span> such that <span class="math inline">\(x,y,z\)</span> are integers and solves the system.</p>
+</div>
+<p>We will solve a linear system of equations using elementary row operations on matrices using a procedure known as <strong>Gaussian elimination</strong> . The solution set will be a collection of vectors. Here is the overall strategy to solving linear systems using matrices. <span class="math display">\[
+\small
+\begin{tabular}{c}
+$\left\{\parbox[c]{1.75cm}{\begin{center}linear system of equations\end{center}}\right\}$  $\rightarrow$  
+$\left\{\parbox[c]{1.75cm}{\begin{center}matrix representation of system\end{center}}\right\}$
+$\rightarrow$
+$\left\{\parbox[c]{1.75cm}{\begin{center}row echelon form of system\end{center}}\right\}$
+$\rightarrow$  
+$\left\{\parbox[c]{1.75cm}{\begin{center}solutions of system as a set of vectors\end{center}}\right\}$
+\end{tabular}\]</span></p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.2 </strong></span>The following operations are collectively known as <strong>elementary row operations</strong> .</p>
+<ul>
+<li>Interchange two rows.</li>
+<li>Multiply a row by a nonzero scalar.</li>
+<li>Add a multiple of a row from another row.</li>
+</ul>
+</div>
+<p>From <span class="math inline">\(\ref{proprowoperations}\)</span> it is obvious that applying elementary row-operations to a linear system of equations leads to an equivalent system. Reducing a linear system of equations, while preserving the solutions set, is an extremely useful idea that we will develop extensively.</p>
+<p>For example, in <span class="math inline">\(\ref{gjeunique}\)</span> (see below) we find that the linear systems <span class="math display">\[\begin{equation}
+\label{refex}
+\begin{cases}
+x+2y+z =3 \\
+2x+5y-z =-4 \\
+3x-2y-z =5
+\end{cases}
+\qquad
+\qquad
+\begin{cases}
+x=2 \\
+y=-1 \\
+z=3
+\end{cases}
+\end{equation}\]</span> are equivalent. In <span class="math inline">\(\ref{gjeunique}\)</span> we will show how to apply elementary row-operations to obtain the system on the right. While the system on the left might be a given linear system of equations, the system on the right is solved.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.3 </strong></span>A matrix is said to be in <strong>row echelon form</strong> if it satisfies all the following conditions.</p>
+<ul>
+<li>All rows with at least one nonzero coefficient are above any rows of all zeroes.</li>
+<li>The first nonzero number from the left, (called the <strong>leading coefficient</strong> ) of a nonzero row is always strictly to the right of the leading coefficient of the row above it.</li>
+<li>All entries in a column below a leading coefficient are zeroes.</li>
+</ul>
+<p>Further, a matrix is said to be in <strong>reduced row echelon form</strong> if it is in row echelon form and the additional condition holds.</p>
+<ul>
+<li>Every leading coefficient is 1 and is the only nonzero entry in its column.</li>
+</ul>
+</div>
+<p>For example, the augmented matrices for the linear systems in <span class="math inline">\(\ref{refex}\)</span> are <span class="math display">\[
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 &amp; 2 &amp; 1 &amp; 3 \\
+2 &amp; 5 &amp; -1 &amp; -4 \\
+3 &amp; -2 &amp; -1 &amp; 5
+\end{array}
+\end{bmatrix}\qquad
+\qquad
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 &amp; 0 &amp; 0 &amp; 2 \\
+0 &amp; 1 &amp; 0 &amp; -1 \\
+0 &amp; 0 &amp; 1&amp; 3
+\end{array}
+\end{bmatrix}.
+\]</span> By checking conditions (i)-(iv) we can see that the matrix on the right is in reduced row echelon form. For more examples, consider the following matrices. <span class="math display">\[
+A = \begin{bmatrix} 0 &amp; 5 \\ 2 &amp; 3 \end{bmatrix}
+\qquad
+B = \begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 0 \end{bmatrix}
+\qquad
+C = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+\]</span> <span class="math display">\[
+D = \begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}
+\qquad
+E = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+\qquad
+F = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{bmatrix}
+\]</span> Notice that matrices <span class="math inline">\(D\)</span> and <span class="math inline">\(E\)</span> are in reduced row echelon form and the others are not.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.8 </strong></span> Use Gauss-Jordan elimination to solve the system. <span class="math display">\[
+\begin{cases}
+x+2y+z =3 \\
+2x+5y-z =-4 \\
+3x-2y-z =5
+\end{cases}
+\]</span> Using row operations on the augmented matrix we obtain the reduced row echelon form. <span class="math display">\[\begin{align*}
+&amp; \begin{bmatrix}
+\begin{array}{ccc|c}
+1 &amp; 2 &amp; 1 &amp; 3 \\
+2 &amp; 5 &amp; -1 &amp; -4 \\
+3 &amp; -2 &amp; -1 &amp; 5
+\end{array}
+\end{bmatrix}\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_1+R_2}
+\\
+\stackrel{\longrightarrow}{\scriptstyle -3R_1+R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 &amp; 2 &amp; 1 &amp; 3 \\
+0 &amp; 1 &amp; -3 &amp; -10 \\
+0 &amp; -8 &amp; -4 &amp; -4
+\end{array}
+\end{bmatrix}
+\\ &amp; \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle 8 R_2+R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 &amp; 2 &amp; 1 &amp; 3 \\
+0 &amp; 1 &amp; -3 &amp; -10 \\
+0 &amp; 0 &amp; -28 &amp; -84
+\end{array}
+\end{bmatrix}
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -\frac{1}{28}R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 &amp; 2 &amp; 1 &amp; 3 \\
+0 &amp; 1 &amp; -3 &amp; -10\\
+0 &amp; 0 &amp; 1 &amp; 3
+\end{array}
+\end{bmatrix}
+\\ &amp;  \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle 3R_3+R_2}
+\\
+\stackrel{\longrightarrow}{\scriptstyle -R_3+R_1}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 &amp; 2 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; -1 \\
+0 &amp; 0 &amp; 1 &amp; 3
+\end{array}
+\end{bmatrix}\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_2+R_1}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 &amp; 0 &amp; 0 &amp; 2 \\
+0 &amp; 1 &amp; 0 &amp; -1 \\
+0 &amp; 0 &amp; 1&amp; 3
+\end{array}
+\end{bmatrix}.
+\end{align*}\]</span> Therefore the unique solution is <span class="math inline">\(x=2\)</span>, <span class="math inline">\(y=-1\)</span>, and <span class="math inline">\(z=3\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.9 </strong></span>Use the Gauss-Jordan elimination method to solve the following linear system. <span class="math display">\[\begin{equation}
+\label{gjee1}
+\begin{cases}
+x+y -2z+4t =5 \\
+2x+2y-3z+t =3 \\
+3x+3y-4z-2t  = 1
+\end{cases}
+\end{equation}\]</span> Using row operations on the augmented matrix we obtain the reduced row echelon form. <span class="math display">\[\begin{align*}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 &amp; 1 &amp; -2 &amp; 4 &amp; 5 \\
+2 &amp; 2 &amp; -3 &amp; 1 &amp; 3 \\
+3 &amp; 3 &amp; -4 &amp; -2 &amp; 1
+\end{array}
+\end{bmatrix}
+&amp; \begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_1+R_2}
+\\
+\stackrel{\longrightarrow}{\scriptstyle -3R_1+R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 &amp; 1 &amp; -2 &amp; 4 &amp; 5 \\
+0 &amp; 0 &amp; 1 &amp; -7  &amp; -7 \\
+0 &amp; 0 &amp; 2 &amp; -14 &amp; -14
+\end{array}
+\end{bmatrix}
+\\ &amp;
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_2+R_3}
+\\
+\stackrel{\longrightarrow}{\scriptstyle 2R_2+R_1}
+\end{array}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 &amp; 1 &amp; 0 &amp; -10 &amp; -9 \\
+0 &amp; 0 &amp; 1 &amp; -7 &amp; -7 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{array}
+\end{bmatrix}
+\end{align*}\]</span> The system in <span class="math inline">\(\ref{gjee1}\)</span> is equivalent to <span class="math display">\[
+\begin{cases}
+x+y-10t =-9 \\
+z-7t  = -7
+\end{cases}
+\quad \text{ or more simply } \quad
+\begin{cases}
+x =-9-y+10t \\
+z =-7+7t.
+\end{cases}
+\]</span> Therefore <span class="math display">\[
+\{(x,y,z,w)\in \mathbb{R}^4 \mid x=-9-y+10t, y=s, z=-7+7t, w=t,
+\text{ for } s,t\in \mathbb{R}\}.
+\]</span> is the solution set.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.10 </strong></span>Use the Gauss-Jordan elimination method to solve the following linear system. <span class="math display">\[
+\begin{cases}
+x_1+x_2-2x_3+3x_4 =4 \\
+2x_1+3x_2+3x_3-x_4=3 \\
+5 x_1+7 x_2+4 x_3+x_4 = 5
+\end{cases}
+\]</span> Using row operations on the augmented matrix we obtain the reduced row echelon form. <span class="math display">\[\begin{align*}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 &amp; 1 &amp; -2 &amp; 3 &amp; 4 \\
+2 &amp; 3 &amp; 3 &amp; -1 &amp; 3 \\
+5 &amp; 7 &amp; 4 &amp; 1 &amp; 5
+\end{array}
+\end{bmatrix}
+&amp; \begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_1+R_2}
+\\
+\stackrel{\longrightarrow}{\scriptstyle -5R_1+R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 &amp; 1 &amp; -2 &amp; 3 &amp; 4 \\
+0 &amp; 1 &amp; 7 &amp; -7 &amp; -5 \\
+0 &amp; 2 &amp; 14 &amp; -14 &amp; 15
+\end{array}
+\end{bmatrix}
+\\ &amp; \begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_2+R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 &amp; 1 &amp; -2 &amp; 3 &amp; 4\\
+0 &amp; 1 &amp; 7 &amp; -7 &amp; -5 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 25
+\end{array}
+\end{bmatrix}
+\end{align*}\]</span> Notice the last row corresponds to the equation <span class="math inline">\(0x_1+0x_2+0x_3+0x_4=25\)</span>. Therefore there are no solutions to this system. Actually using Gauss-Jordan elimination means reaching reduced row echelon form; however, once we encounter the row <span class="math inline">\([0 \, \, \, 0 \, \, \, 0 \, \, \, 0 \, \, \, 25 ]\)</span> we immediately stop and reach the correct conclusion: no solutions to the system.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.11 </strong></span>Find the polynomial of degree 2 whose graph goes through the points <span class="math inline">\((1,-1)\)</span>, <span class="math inline">\((2,3)\)</span>, and <span class="math inline">\((3,13)\)</span>. Let <span class="math inline">\(f(t)=a+b t+ c t^2\)</span> be such a polynomial. Using the given points we setup a system and solve. <span class="math display">\[\begin{align*}
+&amp;
+\left[ \begin{array}{c|c}
+\begin{matrix}
+a &amp; b &amp; c\\
+a &amp; 2b &amp; 4c \\
+a &amp; 3b &amp; 9c
+\end{matrix} &amp;  
+\begin{matrix}
+-1 \\ 3 \\ 13
+\end{matrix}
+\end{array} \right]
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -R_1+R_2} \\
+\stackrel{\longrightarrow}{\scriptstyle -R_1+R_3}
+\end{array}
+\left[ \begin{array}{c|c}
+\begin{matrix}
+a &amp; b &amp; c\\
+0 &amp; b &amp; 3c \\
+0 &amp; 2b &amp; 8c
+\end{matrix} &amp;  
+\begin{matrix}
+1 \\ 4 \\ 14
+\end{matrix}
+\end{array} \right]
+\\ &amp; \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_2+R_3}
+\end{array}
+\left[ \begin{array}{c|c}
+\begin{matrix}
+a &amp; b &amp; c\\
+0 &amp; b &amp; 3c \\
+0 &amp; 0 &amp; 2c
+\end{matrix} &amp;  
+\begin{matrix}
+-1 \\ 4 \\ 6
+\end{matrix} \end{array} \right]
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle \frac{1}{2}R_3}
+\end{array}
+\left[ \begin{array}{c|c}
+\begin{matrix}
+a &amp; b &amp; c\\
+0 &amp; b &amp; 3c \\
+0 &amp; 0 &amp; c
+\end{matrix} &amp;  
+\begin{matrix}
+-1 \\ 4 \\ 3
+\end{matrix}
+\end{array} \right]
+\\ &amp; \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -3R_3+R_2}
+\end{array}
+\left[ \begin{array}{c|c}
+\begin{matrix}
+a &amp; b &amp; c\\
+0 &amp; b &amp; 0 \\
+0 &amp; 0 &amp; c
+\end{matrix} &amp;  
+\begin{matrix}
+-1 \\ -5 \\ 3
+\end{matrix}
+\end{array} \right]
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -R_2+R_1}
+\end{array}
+\left[ \begin{array}{c|c}
+\begin{matrix}
+a&amp; 0 &amp; c\\
+0 &amp; b &amp; 0 \\
+0 &amp; 0 &amp; c
+\end{matrix} &amp;  
+\begin{matrix}
+4 \\ -5 \\ 3
+\end{matrix}
+\end{array} \right]
+\\ &amp; \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -R_3+R_1}
+\end{array}
+\left[ \begin{array}{c|c}
+\begin{matrix}
+a &amp; 0 &amp; 0 \\
+0 &amp; b &amp; 0 \\
+0 &amp; 0 &amp; c
+\end{matrix} &amp;  
+\begin{matrix}
+1 \\ -5 \\ 3
+\end{matrix}
+\end{array} \right].
+\end{align*}\]</span> Therefore the required polynomial is <span class="math inline">\(f(t)=3t^2-5t+1\)</span>.</p>
+</div>
+</section>
+<section id="exercises" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">1.9</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.1 </strong></span>Verify that <span class="math inline">\((2,3,-1)\)</span> is a solution of the linear system.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases}x+2y+z=7 \\ x-y=-1 \\ 4x+y+z=10 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} x+y=5 \\ x-z=3 \\ y+z=2 \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.2 </strong></span>Verify that every triple of the form <span class="math inline">\((7-2k,8+6k,k)\)</span> is a solution of the linear system of equations</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} x_1+2x_3=7 \\ x_2-6x_3=8 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 2x_1+4x_3=14 \\ x_1+3x_2-16x_3=31 \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.3 </strong></span>Do the following systems have no solutions, exactly one solution, or infinitely many solutions? Justify your answer.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases}x+y=1\\ x+2y=1 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 3x+y=1\\ y=-2 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases}x+y=1\\ 2x+2y=2 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases}3x+y=2 \\ 6x+2y=4 \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.4 </strong></span>Sketch the graph of each equation of the linear system and decide whether it has no solutions, exactly one solution, or infinitely many solutions.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} x+y=2\\ 2x+3y=0 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} -x+3y=2\\ 2x-6y=-4 \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.5 </strong></span>Find the solutions, if any, of the following linear systems of equations without using matrices. If an equation has more than one solution, write the general solution.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} 3x-2y= 7 \\ 2x+y=15 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} x+y=7\\ 3x+4y=12 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 2x_1-3x_2=1\\ 4x_1-6x_2=-2\\ x_1+x_2=1 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 2x_1-5x_2=12 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} i x_1-3ix_2= 1\\ (2+i)x_1-x_2=-1 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} (1+i)x_1-2ix_2=2\\ 2x_1-3i x_2=4-3i \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.6 </strong></span>If possible, find the point(s) of intersection.</p>
+<ul>
+<li><span class="math inline">\(x-4y=11\)</span> and <span class="math inline">\(7x-2y=9\)</span></li>
+<li><span class="math inline">\(x-4y+3z=11\)</span>, <span class="math inline">\(7x-2y-z=-1\)</span>, <span class="math inline">\(7x-2y+z=-2\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.7 </strong></span>Let <span class="math inline">\(u=(1,1,2,-1)\)</span> and <span class="math inline">\(v=(1,1,1,0)\)</span>. For which scalars <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is it true that <span class="math inline">\(a u+b v\)</span> is a solution to the following system?</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} 4x-2y-z-w=1 \\ x+3y-2z-2w=2 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases}x-4y-z-2w=4 \\ 7x+y-5z-2w=12 \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.8 </strong></span>Find all solutions, if any exist, for the following linear systems of equations.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} x-y=1\\ 2x=4 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 2x+3y-z=19\\ 3x-2y+3z=7\end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases}x-3y=2 \\-2x+6y=-4\end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases}x-y+2z-2w=1\\2x+y+3w=4 \\2x+y+3w=6\end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.9 </strong></span>Find all solutions, if any exist, for the following linear systems of equations.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases}2x-z=-1\\x+y-z=0\\2x-y+2z=3\end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases}2x-3y+2z=1\\x-6y+z=2\\-x-3y-z=1\end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.10 </strong></span>Find all solutions, if any exist, for the following linear systems of equations.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} x_1+2x_2-x_3=0\\ 2x_1+5x_2+5x_3=0\\ x_1+4x_2+7x_3=0\\ x_1+3x_2+3x_3=0 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} x+y+z+w=1\\ 2x-2y+z+2w=3\\ 2x+6y+3z+2w=1\\ 5x-3y+3z+5w=8 \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.11 </strong></span>For what values of the constant <span class="math inline">\(k\)</span> do the systems have no solution, exactly one solution, or infinity many solutions.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} x+y=1\\ 3x+3y=k \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} x+ky=1\\ 2x-y=k \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.12 </strong></span>Find <span class="math inline">\(a, b, c\)</span> such that <span class="math display">\[
+\frac{x^2-x+3}{(x^2+2)(2x-1)}=\frac{a x+b}{x^2+2}+\frac{c}{2x-1}.
+\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.13 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be arbitrary constants. Find all solutions to the linear system.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} x+2y=a\\ 3x+5y=b \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} a x+2y=1\\ 3x+by=4 \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.14 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be arbitrary constants. Find all solutions to the linear system.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases}x+2y+3z=a\\ x+3y+8z=b\\ x+2y+2z=c \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} x-2y+4z=a\\ x-3y+5z=b\\ x-2y+6z=c \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.15 </strong></span>A system of linear equations all of whose constant terms are zero is called a <strong>homogenous system</strong>.</p>
+<ul>
+<li>Show that a homogenous system always has at least one solution.</li>
+<li>Give examples to show that a homogenous system may have more than one solution or exactly one solution.</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.16 </strong></span>Write the system corresponding to each augmented matrix.</p>
+<ul>
+<li><span class="math inline">\(\left[\begin{array}{ccc|c} 1 &amp; 2 &amp; 1 &amp; 1 \\ 0 &amp; 4 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 3 &amp; 3 \end{array}\right]\)</span></li>
+<li><span class="math inline">\(\left[\begin{array}{cccc|c} 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right]\)</span></li>
+<li><span class="math inline">\(\left[\begin{array}{ccc|c} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \end{array}\right]\)</span></li>
+<li><span class="math inline">\(\left[\begin{array}{c|c} 2 &amp; 1 \\ 0 &amp; 1 \\ 1 &amp; 2 \end{array}\right]\)</span></li>
+<li><span class="math inline">\(\left[\begin{array}{c|c} 1 &amp; 1 \\ 1 &amp; 0 \end{array}\right]\)</span></li>
+<li><span class="math inline">\(\left[\begin{array}{cccc|c} 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \end{array}\right]\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.17 </strong></span>Which of the following matrices are in reduced row echelon form?</p>
+<ul>
+<li><span class="math inline">\(\begin{bmatrix} 0 &amp; 1 &amp; 2 &amp; 0 &amp; 3 \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix}\)</span></li>
+<li><span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \end{bmatrix}\)</span></li>
+<li><span class="math inline">\(\begin{bmatrix} 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1\\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix}\)</span></li>
+<li><span class="math inline">\(\begin{bmatrix} 0 &amp; 0 &amp; 1\\ 0 &amp; 0 &amp; 1\\ 0 &amp; 0 &amp; 1\\ \end{bmatrix}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.18 </strong></span>Which of the following matrices are in reduced row echelon form?</p>
+<ul>
+<li><span class="math inline">\(\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 0\\ \end{bmatrix}\)</span></li>
+<li><span class="math inline">\(\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ \end{bmatrix}\)</span></li>
+<li><span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 3 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \\ 0 &amp;0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\)</span></li>
+<li><span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.19 </strong></span>Find all solutions of the linear system using the Gauss-Jordan elimination method.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} x_2+2x_4+3x_5=0\\ 4x_4+8x_5=0 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 3x+4y =0\\ -2x+7y=0 \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.20 </strong></span>Find all solutions of the linear system using the Gauss-Jordan elimination method.</p>
+<ul>
+<li><span class="math inline">\(\begin{cases} x_4+2x_5-x_6=2 \\ x_1+2x_2+x_5-x_6=0\\ x_1+2x_2+2x_3-x_5+x_6=2 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 3x_1+3x_2-4x_3+x_4=2 \\ x_1+x_2-x_3-x_4=5 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 2 x_1+3x_2+4x_3=6-x_4 \\ 3x_1-2x_2-x_4=1+4x_3 \\ 3x_1+3x_3+x_4=4-x_2 \\ x_2+x_3-4x_4=-3-4x_1\end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 4x_1+3x_2+2x_3-x_4=4 \\ 5x_1+4x_2+3x_3-x_4=4\\ -2x_1-2x_2-x_3+2x_4=-3\\ 11x_1+6x_2+4x_3+x_4=11 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} 2x_1-3x_2+x_3=5 \\ x_1+x_2-x_3=3\\ 4x_1-x_2-x_3=1 \end{cases}\)</span></li>
+<li><span class="math inline">\(\begin{cases} x_1-x_2=4\\ 2x_1+x_2=7\\ 5x_1-2x_2=19 \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.21 </strong></span>Find all <span class="math inline">\(4\times 1\)</span> matrices in reduced row echelon form.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.22 </strong></span>How many types of <span class="math inline">\(3\times 2\)</span> matrices in reduced row echelon form are there? - How many types of <span class="math inline">\(2\times 3\)</span> matrices in reduced row echelon form are there?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.23 </strong></span>&nbsp;</p>
+<ul>
+<li>Describe the possible reduced row echelon forms for a matrix with two rows and two columns.</li>
+<li>Describe the possible reduced row echelon forms for a matrix with three rows and three columns.</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.24 </strong></span>Find the polynomial of degree 3 whose graph passes through the points <span class="math inline">\((0,1)\)</span>, <span class="math inline">\((1,0)\)</span>, <span class="math inline">\((-1,0)\)</span>, and <span class="math inline">\((2,-15)\)</span>. Sketch the graph of this cubic.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.25 </strong></span>Find the polynomial of degree 4 whose graph passes through the points <span class="math inline">\((1,1)\)</span>, <span class="math inline">\((2,-1)\)</span>, <span class="math inline">\((3,-59)\)</span>, and <span class="math inline">\((-2, -29)\)</span>. Sketch the graph of this quartic.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.26 </strong></span>Find the values of <span class="math inline">\(k\)</span>, if any, for which the system has</p>
+<ul>
+<li><p>only one solution,</p></li>
+<li><p>no solutions,</p></li>
+<li><p>an infinite number of solutions</p></li>
+<li><p><span class="math inline">\(\begin{cases} x_1-x_2=3 \\ 3x_1+kx_2=6 \end{cases}\)</span></p></li>
+<li><p><span class="math inline">\(\begin{cases}x_1+2k x_2 =7\\ x_1+(k^2+1)x_2=3 \end{cases}\)</span></p></li>
+<li><p><span class="math inline">\(\begin{cases}k x_1-x_2=1 \\ x_1+k x_2=i\end{cases}\)</span></p></li>
+<li><p><span class="math inline">\(\begin{cases} k x+|k| y=1 \\ |k|x-ky=-1 \end{cases}\)</span></p></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.27 </strong></span>Find values for <span class="math inline">\(a\)</span> such that the system of linear equations <span class="math display">\[\begin{cases} x_1-3x_2+x_3=1 \\ 2x_1+x_2-x_3=-1 \\ 5x_1-8x_2+(a^2-2)x_3=a  \end{cases}\]</span> will have</p>
+<ul>
+<li>infinitely many solutions,</li>
+<li>no solutions</li>
+<li>exactly one solution.</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.28 </strong></span>Use Gauss-Jordan elimination to solve the linear system <span class="math display">\[
+\left\{ \begin{array}{lll}
+a x_1+ b x_2 &amp; &amp; =r \quad (a\neq 0) \\
+c x_1+ d x_2 &amp; &amp; =s \quad (e\neq 0)\\
+&amp; e x_3+f x_4 &amp; =t \\
+&amp; g x_3+h x_4 &amp; =u \\
+\end{array}\right.\]</span> State conditions on <span class="math inline">\(a, b, c, d, e, f, g\)</span> and <span class="math inline">\(h\)</span> which guarantee a unique solution.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.29 </strong></span>Show that the system <span class="math display">\[\begin{cases}a_1 x+ b_1 y+c_1 z=0 \\ a_2 x+b_2 y +c_2 z=0 \end{cases}\]</span> always has a solution other than <span class="math inline">\(x=0\)</span> and <span class="math inline">\(y=0\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.30 </strong></span>What can you say about the last row of the reduced row echelon form of the following matrix? <span class="math display">\[
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; \cdots &amp; n\\
+n+1 &amp; n+2 &amp; n+3 &amp; \cdots &amp; 2n \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp;  \vdots \\
+n^2-n+1 &amp; n^2-n+2 &amp; n^2-n+3 &amp; \cdots &amp; n^2
+\end{bmatrix}
+\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.31 </strong></span>Show that the linear system of equations <span class="math display">\[\begin{cases} 3x_1+2x_2-4x_3=a \\ -4x_1+x_2-x_3 =b \\ 7x_1+12x_2-22x_3 =c \end{cases}\]</span> will have infinitely many solutions if <span class="math inline">\(c=5a+2b\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.32 </strong></span>Find an equation of the form <span class="math inline">\(x^2+y^2+a x+by+c=0\)</span> of the circle passing through the following points.</p>
+<ul>
+<li><span class="math inline">\((-2,1)\)</span>, <span class="math inline">\((5,0)\)</span>, and <span class="math inline">\((4,1)\)</span></li>
+<li><span class="math inline">\((1,1)\)</span>, <span class="math inline">\((5,-3)\)</span>, and <span class="math inline">\((-3,-3)\)</span></li>
+</ul>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/learning-linear-algebra\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./matrices-and-vectors.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matrices and Vectors</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

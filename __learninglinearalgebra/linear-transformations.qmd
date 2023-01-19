@@ -1,0 +1,66 @@
+---
+pagetitle: "Linear Transformations - Learning Linear Algebra"
+---
+# Linear Transformations
+
+This book is designed to help students from beginners to pro as they learn and grow in their understanding of linear transformations. Linear transformations are a powerful tool that can be used in a variety of settings, from solving equations to graphing functions.
+
+In this book, students will learn the basics of linear transformations and how to apply them in various situations. By the end of this book, students will be well-prepared to tackle any problem that involves linear transformations.
+
+##  Vector Spaces
+
+Linear transformations are a critical tool in mathematics, allowing us to understand how certain objects change under certain conditions. In particular, they help us to understand how vector spaces change when we apply a linear transformation to them.
+
+A vector space is a set of vectors that can be added together and scaled by real numbers. Linear transformations preserve the structure of vector spaces, meaning that they preserve the concept of addition and scalar multiplication.
+
+In other words, if we have a vector space $V$ and a linear transformation $T$, then the transformed vector space $T(V)$ will also be a vector space. This property is what makes linear transformations so powerful: they allow us to study how objects change without losing any important information about them.
+
+The range of the transformation may be the same as the domain, and when that happens, the transformation is known as an endomorphism or, if invertible, an automorphism.
+
+Vector spaces and linear transformations are important in physics because they provide a way to describe how physical quantities change under the influence of external forces.
+
+For example, the motion of a particle in a straight line can be described as a vector in a vector space, and the force that causes the particle to accelerate can be described as a linear transformation of that vector. Similarly, the electric field in an insulating material can be described as a vector, and the charge that produces that field can be described as a linear transformation of that vector.
+
+##  Linear Transformations in Geometry
+
+Linear transformations are one of the most important tools in mathematical geometry, and they can be used to describe a wide variety of geometric operations. The best-known linear transformation is the translation, which simply moves a figure from one point to another. But there are many other possibilities, including scaling (which changes the size of a figure), rotation (which turns a figure around a fixed point), and reflection (which flips a figure over a line or plane).
+
+Linear transformations can be represented by matrices, which makes them easy to work with in computer programs. And because they preserve straight lines and angles, they are often very useful for solving problems in physics and engineering. In short, linear transformations are a powerful tool for understanding and manipulating the shapes of objects in our world.
+
+##  Invertible Linear Transformations
+
+Invertible linear transformations are a special type of linear transformation that has an inverse function. This means that it can be undone and that it is reversible. Invertible linear transformations are important in many fields, such as engineering and physics. They are used to model systems that can be reversed, such as springs and magnets. Invertible linear transformations are also used in computer graphics and image processing, where they are used to rotate and resize images.
+
+##  The Kernel and Image of a Linear Transformation
+
+Linear transformations are a critical tool in mathematics, used to abstract and study problems in a wide variety of fields. In this book, you'll learn about the kernel and image of a linear transformation.
+
+First, let's recall the definition of a linear transformation. A linear transformation is a function that satisfies the following two properties:
+
+ 
+- It is additive: for any two vectors x and y in its domain, the function produces a new vector that is the sum of x and y. That is, $T(x+y) = T(x)+T(y)$.
+- It is homogeneous: for any vector x in its domain and scalar c, the function produces a new vector that is equal to cx. That is, $T(cx) = cT(x)$.
+ 
+
+Now let's turn our attention to the kernel of a linear transformation. The kernel of a linear transformation $T$ is the set of all vectors x in the domain of $T$ such that $T(x)=0$. In other words, it is the set of all vectors that are mapped to $0$ by $T$. It's important to note that the kernel is always a subspace of the domain of $T$. This means that it must be closed under addition and scalar multiplication.
+
+The image of a linear transformation $T$ is the set of all vectors $y$ in the codomain of $T$ such that there exists some vector $x$ in the domain of $T$ such that $T(x)=y$. In other words, it is the set of all vectors that can be reached from some vector in the domain by applying $T$. Like the kernel, the image is always a subspace of the codomain of $T$.
+
+The kernel and image of a linear transformation encode important information about how that transformation behaves. By understanding these concepts, we can better analyze and work with linear transformations.
+
+##  Coordinates
+
+In mathematics, a coordinate matrix is a matrix whose elements are the coordinates of a given vector with respect to a given basis. In other words, if $v$ is a vector in $\mathbb{R}^n$ and $B$ is an $n×n$ matrix, then the product $Bv$ is another vector in $\mathbb{R}^n$ whose coordinates with respect to the standard basis are precisely the entries of the matrix $B$.
+
+Coordinate matrices are used to represent linear transformations. Given a linear transformation $T:V\to W$ between two finite-dimensional vector spaces $V$ and $W$, there is a unique coordinate matrix $A$ such that for any vector $v\in V$, we have $T(v)=Av$.
+
+In particular, this means that the columns of $A$ are precisely the images of the vectors in some basis for $V$. Similarly, the rows of $A$ are the coordinates of the vectors in some basis for $W$ with respect to the standard basis. Thus, coordinate matrices can be used to change between different bases.
+
+For instance, if $B$ is a basis for $V$ and $C$ is a basis for $W$, then the matrix $CB$ is a coordinate matrix for $T$ with respect to the bases $B$ and $C$. Conversely, every matrix can be viewed as a coordinate matrix; simply choose any bases for $V$ and $W$ and view the matrix as a transformation between these spaces.
+
+In short, coordinate matrices are useful when working with linear transformations because they make it easy to change between different bases.
+
+##  Conclusion
+
+In this book, we've learned about linear transformations and their properties. We've seen how to represent them using matrices, and how to use these matrices to change between different bases. We've also learned about the kernel and image of a linear transformation, and how these concepts can be used to better understand the behavior of linear transformations. With this knowledge in hand, we're now ready to tackle more advanced topics in linear algebra.
+

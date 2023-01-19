@@ -1,0 +1,243 @@
+---
+pagetitle: "Linearization and Differentials - Exploring Calculus"
+---
+# "Linearization and Differentials"
+
+
+## Differentials
+
+In this section differentials are motivated, defined, and then used to approximate real numbers. 
+The linearization of a function around a point (via the
+tangent line) is illustrated.  
+
+
+Let $y=f(x)$ where $f$ is a differentiable function. 
+The \index{differential} **differential**  $d y$ represents the amount that the tangent line rises or falls, whereas $\Delta  y$ represents the amount that the curve $y=f(x)$ rises or falls when $x$ changes by an amount $d x.$ 
+Since 
+\[
+\frac{d y}{d x}=\lim _{\Delta  x\to 0}\frac{\Delta  y}{\Delta  x}
+\] 
+we have 
+\[
+\frac{\Delta  y}{\Delta  x}\approx \frac{d y}{d x} \qquad \text{whenever} \qquad  
+\Delta  x \approx 0
+\]
+If we take $d x=\Delta  x,$ then we have $\Delta  y\approx d y$ which says that the actual change in $y$ is approximately equal to the differential $d y.$ 
+
+If $f\left(x_1\right)$ is a known number and it is desired to calculate an approximate value for $f\left(x_1+\Delta  x\right)$ where $\Delta  x$ is small, then 
+\[
+f\left(x_1+\Delta  x\right)\approx f\left(x_1\right)+d y.
+\]
+
+
+::: {#def- } 
+If $y=f(x)$ is a differentiable function then the \index{differential} **differential**  $d y$ is defined by the equation $d y=f'(x)d x$ where $d x$ is an independent variable.
+::: 
+
+
+::: {#exm- } 
+Find the differential for $y=\sqrt[4]{x}$.
+::: 
+
+::: {.solution }
+For $y=\sqrt[4]{x}$ the derivative is  $\frac{d y}{d x}=\frac{1}{4 x^{3/4}}$  and so the differential of  $y$ is 
+\[
+d y=\left(\frac{1}{4 x^{3/4}}\right)d x.
+\square
+\]
+::: 
+
+
+::: {#exm- } 
+Find the differential for $y=\left(x^2-2x-3\right)^{10}$.
+::: 
+
+::: {.solution }
+For $y=\left(x^2-2x-3\right)^{10}$ the derivative is  
+\[
+\frac{d y}{d x}=10 (-2+2 x) \left(-3-2 x+x^2\right)^9
+\]
+and so the differential of $y$ is  
+\[
+d y=\left(10 (-2+2 x) \left(-3-2 x+x^2\right)^9\right)d x.
+\square
+\]
+::: 
+
+::: {#exm- } 
+Find the differential for $y=\sqrt{x+\sqrt{2x-1}}.$
+::: 
+
+::: {.solution }
+For $y=\sqrt{x+\sqrt{2x-1}}$ the derivative is  
+\[
+\frac{d y}{d x}=\frac{1+\sqrt{-1+2 x}}{2 \sqrt{-1+2 x} \sqrt{x+\sqrt{-1+2 x}}}
+\]
+and so the differential of $y$ is  
+\[
+d y=\left(\frac{1+\sqrt{-1+2 x}}{2 \sqrt{-1+2 x} \sqrt{x+\sqrt{-1+2 x}}}\right)d x.
+\square
+\]
+::: 
+
+## Approximating Decimals
+
+
+::: {#exm- } 
+Use differentials to approximate the real number $\sqrt[3]{218}$.
+::: 
+
+::: {.solution }
+If $y=f(x)=\sqrt[3]{x},$ then $d y=\left(\frac{1}{3 x^{2/3}}\right)d x$ and using $d x=\Delta  x$ $=\text{218-216}$ $=2$ the linear approximation is,   
+\[
+\sqrt[3]{218}=f(216+2)\approx f(216)+d y=6+\left(\frac{1}{3 (216)^{2/3}}\right)(2)=\frac{325}{54}=6.01852.
+\square
+\]
+::: 
+
+
+::: {#exm- } 
+Use differentials to approximate the real number $\sqrt[3]{1.02}+\sqrt[4]{1.02}$.
+::: 
+
+::: {.solution }
+If $y=f(x)=x^{1/3}+x^{1/4},$ then $d y=\left(\frac{1}{4 x^{3/4}}+\frac{1}{3 x^{2/3}}\right) d x$ and using $d x=\Delta  x$ $=\text{1.02-1}$ $=0.02$ the linear approximation is,  
+\[
+\sqrt[3]{1.02}+\sqrt[4]{1.02}=f(1+0.02)\approx f(1)+d y =2+\left(\frac{1}{4}+\frac{1}{3}\right)(0.02)=\frac{1207}{600}=2.011\overline{6}
+\square
+\]
+::: 
+
+## Linearization
+
+
+::: {#def- } 
+The approximation  
+\[
+f(x)\approx f(a)+f'(a)(x-a)
+\] 
+is called the \index{linear approximation} (or sometimes the \index{tangent line approximation} **linear approximation} (or sometimes the \index{tangent line approximation** ) of $f$ at $a$ and the function  
+\[
+L(x)=f(a)+f'(a)(x-a)
+\] 
+is called the \index{linearization} **linearization**  of $f$ at $a.$ 
+::: 
+
+The equation of the tangent line to the curve $y=f(x)$ at $(a, f(a))$ is  $y=f(a)+f'(a)(x-a)$  which is $y=f(a)+f'(a)d x$ so that in fact we have $y=f(a)+d y.$ 
+Thus when using differentials to approximate, that is, when using $f(x+\Delta  x)\approx f(x)+d y$ to approximate we are using the tangent line at $(a, f(a))$ as an approximation to the curve $y=f(x)$ when $a$ is near $x.$
+
+Next we find the linearization for a given function at a given value. 
+
+
+::: {#exm- } 
+Find the linearization of $\ds f(x)=\frac{1}{\sqrt{2+x}}$ at $x_1=0.$
+::: 
+
+::: {.solution }
+The linearization of the function $\ds f(x)=\frac{1}{\sqrt{2+x}}$at $x_1=0$ is  
+\begin{align*}
+L(x) & =f\left(x_1\right)+f'\left(x_1\right)\left(x-x_1\right) \\
+L(x) & =f(0)+\left[-\frac{1}{2 (2+0)^{3/2}}\right](x-0) \\
+L(x) & =\frac{1}{\sqrt{2}}+\left(-\frac{1}{4 \sqrt{2}}\right)x 
+\end{align*}
+Therefore, we have the linear approximation 
+\[
+\frac{1}{\sqrt{2+x}}\approx \frac{\sqrt{2}}{2}+\left(-\frac{\sqrt{2}}{8}\right)x
+\]
+for when $x$ is near 0. 
+::: 
+
+
+::: {#exm- } 
+Find the linearization of $\ds f(x)=\frac{1}{(1+2x)^4}$ at $x_1=0.$
+::: 
+
+::: {.solution }
+The linearization of the function $\ds f(x)=\frac{1}{(1+2x)^4}$at $x_1=0$ is  
+\begin{align*}
+L(x) & =f\left(x_1\right)+f'\left(x_1\right)\left(x-x_1\right)
+=f(0)+\left[-\frac{8}{(1+2 (0))^5}\right](x-0) =1-8x. 
+\end{align*} 
+Therefore, we have the linear approximation 
+\[
+\frac{1}{(1+2x)^4}\approx 1-8x
+\] 
+for when $x$ is near 0.
+::: 
+
+## Exercises
+
+
+::: {#exr- } 
+(a) Given $f(x)=x^2+2x,$ $x_0=1,$ and $\Delta  x=0.1,$ find the change $\Delta  f=f\left(x_0+\Delta  x\right)-f\left(x_0\right)$ and the
+value of the estimate $df=f'\left(x_0\right)dx.$
+(b) Given $f(x)=x^4,$ $x_0=1,$ and $\Delta  x=0.1,$ find the change $\Delta  f=f\left(x_0+\Delta  x\right)-f\left(x_0\right)$ and the value
+of the estimate $df=f'\left(x_0\right)dx.$
+(c) Given $f(x)=x^3-2x+3$ $x_0=2,$ and $\Delta  x=0.1,$ find the change $\Delta  f=f\left(x_0+\Delta  x\right)-f\left(x_0\right)$ and the
+value of the estimate $df=f'\left(x_0\right)dx.$
+::: 
+
+::: {#exr- } 
+Write a differential formula that estimates the change in the volume $V=\frac{4}{3}\pi  r^3$ of a sphere when the radius changes from $r_0$ to $r_0+dr.$
+::: 
+
+::: {#exr- } 
+Write a differential formula that estimates the change in the lateral surface area $S=\pi  r\sqrt{r^2+h^2}$ of a right circular cone when the radius changes from $r_0$ to $r_0+dr.$
+::: 
+
+::: {#exr- } 
+Find the differential $dy$ of the functions 
+ 
+- $  y=f(x)=\frac{1}{3}\cos \left(\frac{6\pi  x-1}{2}\right)$
+- $  y=f(x)=\sqrt{\sqrt{x}+\frac{1}{\sqrt{x}}}.$
+ 
+::: 
+
+::: {#exr- } 
+Find the differential $dy$ of each of the following functions 
+ 
+\item $  y=f(x)=\frac{2x}{1+x^2}$
+\item  $  x y^2-4x^{3/2}-y=0$
+\item $  y=f(x)=4 \tan  \left(\frac{x^2}{3}\right)$
+\item  $  y=f(x)=2 \cot  \left(\frac{1}{\sqrt{x}}\right)$
+\item  $  y=f(x)=x e^{-x}$
+\item  $  y=f(x)=\ln \left(1+x^2\right)$
+ 
+::: 
+
+::: {#exr- } 
+Use differentials to find an approximate value for the following real numbers  
+- $\cos  31.5{}^{\circ}$
+- $\sqrt[4]{624}$
+- $(2.99)^3.$
+ 
+::: 
+
+::: {#exr- } 
+Find the linearization for each of the following functions at the given value of $x$. 
+ 
+\item $  f(x)=\frac{1}{\sqrt{2+x}}$ at $x_1=0$
+\item  $  f(x)=\frac{1}{(1+2x)^4}$ at $x_1=0$
+\item $  f(x)=x+\frac{1}{x}$ at $x=a$
+\item  $  f(x)=x^2$ at $x=a$
+\item $  f(x)=\cos  x$ at $x=a$
+\item $  f(x)=\tan  x$ at $x=a$
+\item $  f(x)=e^x$ at $x=a$
+\item $  f(x)=\ln (1+x)$ at $x=a$
+\item $  f(x)=x+\frac{1}{x}$ at $x=a$
+%\item $  f(x)=2x^2+4x-3$ at $x_0=-0.9$
+\item $  f(x)=\frac{x}{x+1}$ at $x_0=1.3$
+ 
+::: 
+
+::: {#exr- } 
+Show that the linearization of $f(x)=(1+x)^k$ at $x=0$ is $L(x)=1+ k x$ for a constant $k.$
+::: 
+
+::: {#exr- } 
+Find the linearization of $f(x)=\sqrt{x+1}+\sin  x$ at $x=0.$ How is it related to the individual linearization of $\sqrt{x+1}$ and $\sin
+ x$ at $x=0?$
+::: 
+
+
+

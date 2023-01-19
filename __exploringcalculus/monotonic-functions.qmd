@@ -1,0 +1,225 @@
+---
+pagetitle: "Monotonic Functions - Exploring Calculus"
+---
+# "Monotonic Functions"
+
+
+## Increasing and Decreasing Functions
+
+To determine where a function $f$ is increasing or decreasing, we begin by finding the critical numbers. 
+These numbers divide the $x$-axis into intervals, and we test the sign of $f'(x)$ in each of these intervals. 
+This procedure is often called the first derivative test and can be used to determine local extrema and intervals of monotonicity.
+
+
+::: {#def- }  
+A function $f$ is called \index{increasing} **increasing**  on an interval $I$ if $f\left(x_1\right)<f\left(x_2\right)$ whenever $x_1<x_2$ in $I.$ 
+A function $f$ is called \index{decreasing} **decreasing**  on an interval $I$ if $f\left(x_1\right)>f\left(x_2\right)$ whenever $x_1<x_2$ in $I.$ 
+::: 
+
+
+::: {#def- }  
+A function $f$ is called \index{monotonic} **monotonic**  on an interval $I$ if it is either increasing or decreasing on $I.$ 
+::: 
+
+
+::: {#thm- }  
+Suppose $f$ is continuous on $[a,b]$ and differentiable on $(a,b).$
+ 
+- If $f'(x)>0$ for all $x$ in $(a,b),$ then $f$ is increasing on $(a,b).$
+- If $f'(x)<0$ for all $x$ in $(a,b),$ then $f$ is decreasing on $(a,b).$ 
+ 
+::: 
+
+
+::: {#exm- }  
+Find where the function $f(x)=3x^4-4x^3-12x^2+5$ is increasing and decreasing; that is determine the intervals where $f$ is monotonic.
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 120pt,height= 120pt]{_includes/monotonic-functions-and-the-first-derivative-test-1.pdf}}
+\caption{$f(x)=3x^4-4x^3-12x^2+5$}
+\label{fig:graph9}
+\end{center}
+\end{figure}
+
+::: {.solution } 
+The derivative of $f$ is 
+\[
+f'(x)=12x^3-12x^2-24x=12x(x-2)(x+1).
+\] 
+Since $f$ is continuous and differentiable, to test where the function is monotonic we divide the $x$-axis according to the sign of $f'(x)$ which depending on the signs of $12x,$ $x-2,$ and $x+1.$ 
+We put our results into the following table: 
+\[
+\begin{array}{c|c|c|c|c|l}
+  \text{Interval}  &  12x  &  x-2  &  x+1  &  f'(x)\text{
+   } & f \\ \hline
+ x<-1 & - & - & - & - & \text{decreasing on } (-\infty ,-1) \\
+ -1<x<0 & - & - & + & + & \text{increasing on } (-1,0) \\
+ 0<x<2 & + & - & + & - & \text{decreasing on } (0,2) \\
+ x>2 & + & + & + & + & \text{increasing on } (2,\infty )
+\end{array}
+\]
+(see Figure ~\ref{fig:graph9}). 
+ ::: 
+
+## The First Derivative Test
+
+
+::: {#thm- } [First Derivative Test] 
+Suppose that $c$ is a critical number of a function that is continuous on $[a,b].$ 
+Then the following statements hold: 
+ 
+\item If $f'(x)>0$ for $a<x<c$ and $f'(x)<0$ for $c<x<b,$ then $f$ has a relative (local) minimum at $c.$ 
+\item If $f'(x)<0$ for $a<x<c$ and $f'(x)>0$ for $c<x<b,$ then $f$ has a relative (local) maximum at $c.$ 
+\item If neither hold then $f$ has no relative (local) extremum at $c.$ 
+ 
+::: 
+
+
+::: {#exm- }  
+Apply the First Derivative Test to find the local extrema of the function $f(x)=x(1-x)^{2/5}$ and sketch its graph.
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 120pt,height= 120pt]{_includes/monotonic-functions-and-the-first-derivative-test-2.pdf}}
+\caption{$f(x)=x(1-x)^{2/5}$}
+\label{fig:graph10}
+\end{center}
+\end{figure}
+
+::: {.solution } 
+First we find the critical numbers of $f$ by solving $f'(x)=0$ and determining where $f'(x)$ is undefined but
+$f(x)$ is defined. 
+The derivative of $f$ is 
+\[
+f'(x)=(1-x)^{2/5}+\frac{2x}{5}(1-x)^{-3/5}(-1)=\frac{5(1-x)-2x}{5(1-x)^{3/5}}=\frac{5-7x}{5(1-x)^{3/5}}.
+\] 
+Solving $f'(x)=0$ we find $x=5/7.$ 
+Also $f'(1)$ does not exist but $f(1)=0;$ and therefore the only critical numbers of $f$ are $x=5/7$ and $x=0.$ 
+We determine the local extrema using the following table 
+\[
+\begin{array}{c|c|c|c|l}
+  \text{Interval}  &  5-7x  &  (1-x)^{3/5}  &  f'(x)  & f(x) \\ \hline
+ x<\frac{5}{7} & + & + & + & \text{ increasing on} \left(-\infty ,\frac{5}{7}\right) \\
+ \frac{5}{7}<x<1 & - & + & - & \text{ decreasing on} \left(\frac{5}{7},1\right) \\
+ x>1 & - & - & + & \text{ increasing on }(1,+\infty )
+\end{array}
+\] \\
+Therefore, $\left(\frac{5}{7},f\left(\frac{5}{7}\right)\right)$ is a local maximum and $(1,f(1))$ is a local minimum. 
+Here is the graph of the function $f(x)=x(1-x)^{2/5}.$ 
+Notice there is a corner at $(1,f(1))$ because $f$ is defined there but $f'$ is not (see Figure ~\ref{fig:graph10}). 
+::: 
+
+
+::: {#exm- }  
+Find the local and absolute extrema values of the function $f(x)=x^3(x-2)^2$ on the interval $-1\leq  x\leq  3.$ 
+Sketch the graph. 
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 180pt]{_includes/monotonic-functions-and-the-first-derivative-test-3.pdf}}
+\caption{$f(x)=x^3(x-2)^2$}
+\label{fig:graph11}
+\end{center}
+\end{figure}
+
+::: {.solution } 
+First we notice that $f$ is a polynomial and so is continuous and differentiable for all real numbers. 
+Next we find the critical numbers of $f$ by solving $f'(x)=0$ and determining where $f'(x)$ is undefined, but $f(x)$ is defined. 
+The derivative of $f$ is 
+\[
+f'(x)=3x^2(x-2)^2+2x^3(x-2)=x^2(x-2)(5x-6).
+\] 
+To find the critical numbers we set $f'(x)=0$ and obtain $x=0,2,6/5.$ 
+We determine the local extrema and absolute extrema using the following table:
+\[
+\begin{array}{c|c|c|c|c|l}
+  \text{Interval}  &  x^2  &  x-2  &  5x-6  &  f'(x)\text{ } & f \\ \hline
+ -1<x<0 & + & - & - & + & \text{ increasing on} (-1,0) \\
+ 0<x<\frac{6}{5} & + & - & - & + & \text{ increasing on } \left(0,\frac{6}{5}\right) \\
+ \frac{6}{5}<x<2 & + & - & + & - & \text{ decreasing on }\left(\frac{6}{5},2\right) \\
+ 2<x<3 & + & + & + & + & \text{ increasing on } (2,3)
+\end{array}
+\] \\
+The function $f$ does not have a local extrema at $x=0.$ 
+The local maximum is 
+$$
+\left(\frac{6}{5},f\left(\frac{6}{5}\right)\right)
+$$ 
+and the local minimum is $(2,f(2)).$  
+Since $f$ is a continuous function we can use the extreme value theorem to determine absolute extrema. 
+We compute the functional values at the endpoints, namely $f(-1)=-9$ and $f(3)=27.$
+Therefore, the absolute maximum is $f(3)=27$ and the absolute minimum is $f(-1)=-9$ (see Figure ~\ref{fig:graph11}). 
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+For each of the following functions determine the critical points and apply the first derivative test to determine the intervals where the function is increasing or decreasing, and all local extrema. 
+ 
+\item 
+$f(x)=(x-1)^2(x+2)$
+\item 
+$f(x)=(x-1)e^{-x}$
+\item 
+$f'(x)=x^{-1/3}(x+2)$
+\item 
+$f(\theta )=3\theta ^2-4\theta ^3$ 
+\item 
+$h(r)=(r+7)^3$
+\item 
+$g(x)=x^2\sqrt{5-x}$
+\item 
+$f(x)=\frac{x^3}{3x^2+1}$ 
+\item 
+$h(x)=x^{1/3}\left(x^2-4\right)$ 
+\item 
+$f(x)=e^{2x}+e^{-x}$ 
+\item 
+$f(x)=x \ln  x$ 
+\item 
+$f(x)=(x+1)^2$
+\item 
+$f(x)=-x^2-6x-9$ 
+\item 
+$k(x)=x^3+3x^2+3x+1$ 
+ 
+::: 
+
+::: {#exr- } 
+Sketch the graph of a differentiable function $y=f(x)$ through the point $(1,1)$ such that 
+ 
+\item $f'(1)=0$
+\item $f'(x)>0$ for $x<1$ 
+\item $f'(x)<0$ for $x>1$
+\item $f'(x)>0$ for $x\neq 1$ 
+\item $f'(x)<0$ for $x\neq 1$ 
+ 
+::: 
+
+::: {#exr- } 
+Sketch the graph of a differentiable function $y=f(x)$ that satisfies all of the following conditions.
+ 
+\item a local minimum at $(1,1)$
+\item a local maximum at $(3,3)$
+\item local maximum at $(1,1)$
+\item a local minimum at $(3,3)$ 
+ 
+::: 
+
+::: {#exr- } 
+Sketch the graph of a differentiable function $y=h(x)$ that satisfies all of the following conditions.
+ 
+\item $h(0)=0$ 
+\item  for all $x$, $-2\leq h(x)\leq 2$ 
+\item $h'(x)\to +\infty $ as $x\to 0^-$
+\item $h'(x)\to +\infty $ as $x\to 0^+$ 
+ 
+::: 
+
+

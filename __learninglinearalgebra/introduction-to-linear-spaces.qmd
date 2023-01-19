@@ -1,0 +1,351 @@
+---
+pagetitle: "Introduction to Linear Spaces - Learning Linear Algebra"
+---
+# Introduction to Linear Spaces
+
+::: {#exm- } 
+Show that the set of solution to a homogenous system form a linear space with standard operations.
+
+::: 
+
+::: {#exm- } 
+Show that the set of vectors for which a particular linear system has a solution is a linear space. 
+
+::: 
+
+::: {#def- } 
+Let $\mathbb{F}$ be a field (whose elements are called \index{scalars} **scalars** ) and 
+let $V$ be a nonempty set (whose elements are called \index{vectors} **vectors**) on which two operations, called \index{addition} **addition** and \index{scalar multiplication} **scalar multiplication**, have been defined. 
+The addition operation (denoted by $+$), assigns to each pair $(u,v)\in V\times V$, a unique vector $u+v$ in $V$. 
+The scalar multiplication operation (denoted by juxtaposition), assigns to each pair $(a,v)\in \mathbb{F}\times V$ a unique vector $a v$ in $V$.  
+We call $V$ a \index{linear space} **linear space**  if the following axioms (A1)-(A8) are also satisfied. 
+  
+- For all $u, v\in V$, $u+v=v+u$.
+- For all $u, v, w \in V$, $(u+v)+w=u+(v+w)$.
+- There exists $0\in V$ such that $v+0=v$ for all $v\in V$.
+- For every $v\in V$, there exists $w\in V$ such that $v+w=0$.
+- For all $v\in V$, $1 v=v$.
+- For all $a, b\in \mathbb{F}$ and $u\in V$, $(a b) v=a (b v)$.
+- For all $a \in \mathbb{F}$ and $u, v\in V$, $a(u+v)=a u+av$.
+- For all $a, b \in \mathbb{F}$ and $u\in V$, $(a+b)u=a u+ b u$.
+ 
+If $\mathbb{F}=\mathbb{R}$ then $V$ is a called a \index{real linear space} **real linear space** . 
+If  $\mathbb{F}=\mathbb{C}$ then $V$ is called a \index{complex linear space} **complex linear space** . 
+We denote the zero vector (A3) as $0$, to distinguish between the zero vector and the zero $0$ in the field of scalars.
+::: 
+ 
+::: {#exm- } 
+Let $V=\{(x,y)\mid y=mx\}$, where $m$ is a fixed real number and $x$ is an arbitrary real number. Show that $V$ is a linear space. 
+
+::: 
+
+::: {#exm- } 
+Let $V=\{(x,y,x)\mid ax+by+cz=0\}$ where $a, b$ and $c$ are fixed real numbers. 
+Show that $V$ is a linear space with the standard operations. 
+
+::: 
+ 
+::: {#exm- } [Matrix Space]
+Show that the set $M_{m\times n}$ of all $m\times n$ matrices, with ordinary addition of matrices and scalar multiplication, forms a linear space. 
+
+::: 
+
+::: {#exm- } [Polynomial Space]
+Show that the set  $P(t)$ of all polynomials with real coefficients, under the ordinary operations of addition of polynomials and multiplication of a polynomial by a scalar, forms a linear space. 
+Show that the set of all polynomials with real coefficients of degree less than or equal to $n$, under the ordinary operations of addition of polynomials and multiplication of a polynomial by a scalar, forms a linear space. 
+
+::: 
+
+::: {#exm- } [Function Space]
+Show that the set $F(x)$ of all functions that map the real numbers into itself is a linear space.
+Show that the set $F[a,b]$ of all functions on the interval $[a,b]$ using the standard operations is a linear space.
+
+::: 
+ 
+::: {#exm- } [The Space of Infinite Sequences]
+Show that the set of all infinite sequences of real numbers is a linear space, where addition and scale multiplication are defined term by term. 
+
+::: 
+  
+::: {#exm- } [The Space of Linear Equations]
+Show that the set $L_n$ of all linear equations with $n$ variables, forms a linear space.  
+
+::: 
+ 
+::: {#lem- } 
+Every linear space $V$ has a unique additive identity (denoted by $0$).
+::: 
+
+::: {.proof }
+Let $u_1$ and $u_2$ be additive identities in $V$, then $v+u_1=v$ and $v+u_2=v$ for every $v\in V$. Thus, $u_1=u_1+u_2=u_2+u_1=u_2$ as desired. 
+::: 
+
+::: {#lem- } 
+Every $v\in V$ has a unique additive inverse, (denoted by $-v$).
+::: 
+
+::: {.proof }
+Let $v_1$ and $v_2$ be additive inverses of $w$ in $V$, then $w+v_1=\mathbf{0}$ and $w+v_2=\mathbf{0}$.
+Thus, 
+$$ 
+v_1=v_1+\mathbf{0}=v_1+(w+v_2)=(v_1+w)+v_2=(w+v_1)+v_2=\mathbf{0}+v_2=v_2 
+$$ 
+as desired.
+::: 
+
+::: {#lem- } 
+If $v\in V$, then $0\, v=0$.
+::: 
+
+::: {.proof }
+Let $v\in V$, then $v=1 v=(1+0) v= 1 v+0 v= v+0v$ which shows that $0 v$ is the additive identity of $V$, namely $0 v=\mathbf{0}$.
+::: 
+
+::: {#lem- } 
+If $a\in \mathbb{F}$, then $a\, 0=0$.
+::: 
+
+::: {.proof }
+Let $a\in \mathbb{F}$, then 
+$$
+a \mathbf{0}=a(\mathbf{0}+\mathbf{0})=a\mathbf{0}+a\mathbf{0}
+$$ 
+which shows that $a \mathbf{0}$ is the additive identity of $V$, namely $a \mathbf{0}=\mathbf{0}$.
+::: 
+
+::: {#lem- } 
+If $v\in V$, then $-(-v)=v$.
+::: 
+
+::: {.proof }
+Let $v\in V$, then 
+$$
+v+(-1)v=1 v+(-1) v=(1+(-1)) v=0 v= \mathbf{0}
+$$ 
+which shows that $(-1)v$ is the unique additive inverse of $v$ namely, $(-1)v=-v$.
+::: 
+
+::: {#lem- } 
+If  $v\in V$, then $(-1)\, v=-v$.
+::: 
+
+::: {.proof }
+Since $-v$ is the unique additive inverse of $v$, $v+(-v)=\mathbf{0}$. Then $(-v)+v=\mathbf{0}$ shows that $v$ is the unique additive inverse of $-v$, namely, $v=-(-v)$ as desired.
+::: 
+
+::: {#lem- } 
+If $a\,v=0$, then $a=0$ or $v=0$.
+::: 
+
+::: {.proof }
+Suppose $a\neq 0$. If $a v =\mathbf{0}$ then $v=1 v=(a^{-1} a) v=a^{-1} (a v)=a^{-1} \mathbf{0}=\mathbf{0}$. Otherwise $a=0$ as desired.
+::: 
+
+::: {#exm- } 
+Let $V$ be a linear space with $u\in V$ and let $a$ and $b$ be scalars. Prove that if $a u=bu$ and $u\neq 0$, then $a=b$.
+
+::: 
+
+Let $V$ be a linear space and $U$ a nonempty subset of $V$. If $U$ is a linear space with respect to the operations on $V$, then $U$ is called a subspace of $V$. 
+
+::: {#thm- } 
+A subset $U$ of $V$ is a \index{linear subspace} **linear subspace** of $V$ if and only if $U$ has the following properties:
+ 
+- $U$ contains the zero vector of $V$, 
+- $U$ is closed under the addition defined on $V$, and 
+- $U$ is closed under the scalar multiplication defined on $V$.
+ 
+::: 
+
+::: {.proof }
+Koman pg 103.
+::: 
+
+
+More generally, a subset $U$ of $V$ is called a \index{subspace} **subspace** of $V$ if $U$ is also a vector space using the same addition and scalar multiplication as on $V$.
+Any vector space is a subspace of itself. The set containing just the $0$ vector is also a subspace of any vector space. Given any vector space with a nonzero vector $v$, the scalar multiples of $v$ is a vector subspace of $V$ and is denoted by $\langle v \rangle$.
+Because any linear space $V$ has $V$ and $0$ as subspaces, these subspaces are called the \index{trivial subspaces} **trivial subspaces** of $V$. All other subspaces are called \index{proper subspaces} **proper subspaces** of $V$.
+
+::: {#exm- } 
+Give an example of a real linear space $V$ and a nonempty set $S$ of $V$ such that, whenever $u$ and $v$ are in $S$, $u+v$ is in $S$ but $S$ is not a subspace of $V$. 
+::: 
+
+::: {#exm- } 
+Give an example of a real linear space $V$ and a nonempty set $S$ of $V$ such that, whenever $u$ and $v$ are in $S$, $c u$ is in $S$ for every scalar $c$ but $S$ is not a subspace of $V$. 
+::: 
+
+::: {#exm- } 
+Show that $P_n[0,1]$ is a proper subspace of $C[0,1]$.
+::: 
+
+::: {#exm- } 
+Show that $C'[0,1]$ (continuous first derivative) is a proper subspace of $C[0,1]$.
+::: 
+
+::: {#exm- } 
+Show that $R[0,1]$ (Riemann integrable) is a proper subspace of $C[0,1]$.
+::: 
+
+::: {#exm- } 
+Show that $D[0,1]$ (Differenable functions) is a proper subspace of $C[0,1]$.
+::: 
+
+::: {#def- } 
+A \index{linear combination} **linear combination**  of a list  of vectors 
+$(\vlist{v}{m})$ in $V$ is a vector of the form 
+$\lincomb{a}{v}{m}$ where 
+$\vlist{a}{m} \in k$.
+::: 
+
+::: {#lem- } 
+Let $U$ be a nonempty subset of a vector space 
+$V$. Then $U$ is a subspace of $V$ if and only if every linear combination of vectors in $U$ is also in $U$.
+:::  
+
+::: {.proof } 
+If $U$ is a subspace of $V$, then $U$ is a vector space and so is closed under linear combinations by definition of vector space. 
+Conversely, suppose every linear combination of vectors in $U$ is also in $U$. 
+Thus for any $a, b \in k$, $a u+b v \in U$ for every $u, v\in U$. 
+In particular, when $a=b=1$ then $u+v \in U$ and so $U$ is closed with respect to addition. 
+Notice when $b=0$ and $a=-1$, then $-u\in U$ for every $u\in U$ and so $U$ is closed under inverses. 
+Notice when $u=v$, $a=1$, and $b=-1$ then $u+(-u)=0\in U$ so $U$ contains the identity element. The rest of the axioms in the definition of a vector space hold by containment.
+::: 
+
+::: {#def- } 
+The intersection and union of subspaces is just the intersection and union of the subspaces as sets. The \index{sum of subspaces} **sum of subspaces** $\vlist{U}{m}$ of a vector space $U$ is defined by  
+$$
+U_1+ U_2+\cdots +U_m 
+= \{ u_1 + u_2+\cdots + u_m \mid u_i \in U_i \text{ for } 1\leq i \leq m \}.
+$$
+::: 
+
+::: {#lem- }  
+Let $V$ be a linear space over a field $k$. 
+The intersection of any collection of subspaces of 
+$V$ is a subspace of $V$.
+:::  
+
+::: {.proof } 
+Let $\{U_i\, |\, i \in I\}$ be a collection of subspaces where $I$ is some indexed set. 
+Let $a,b\in k$ and $u,v\in \cap_{i\in I} U_i$. 
+Since each $U_i$  is a subspace of $V$, 
+$a u +b v\in U_i$ for every $i\in I$. 
+Thus $a u+b v\in \cap_{i\in I} U_i$ and therefore 
+$\cap_{i\in I} U_i$ is a subspace of $V$.
+::: 
+
+::: {#exm- } 
+Show that the $x$-axis and the $y$-axis are subspaces on $\mathbb{R}^2$, yet the union of these axis is not. 
+::: 
+
+
+::: {#lem- }  
+Let $V$ be a linear space over a field $k$.
+The union of two subspaces of $V$ is a subspace of $V$ if and only if one of the subspaces is contained in the other.
+:::  
+
+::: {.proof } 
+Suppose $U$ and $W$ are subspaces of $V$ with $U\subseteq W$. Then $U\cup W=W$ and so $U\cup W$ is also a subspace of $V$. 
+Conversely, suppose $U$, $W$, $U\cup W$ are subspaces of $V$ and suppose $u\in U$. 
+If $u\in W$ then $U$ is contained in $W$ as desired. 
+Thus we assume, $u\not\in W$. If $w\in W$, then $u+w \in U\cup W$ and either $u+w\in U$ or $u+w\in W$. Notice $u+w\in W$ and $w\in W$ together yield $u\in W$ which is a contradiction. 
+Thus $u+w\in U$ and so $w\in U$ which yields 
+$W\subseteq U$ as desired.
+::: 
+
+::: {#lem- }  
+Let $V$ be a linear space over a field $k$. 
+The sum $U_{1}+ U_2+\cdots +U_{m}$ is the smallest subspace containing each of the subspaces $\vlist{U}{m}$.
+:::  
+
+::: {.proof } 
+The sum of two subspaces is a subspace since the sum of two subspaces is closed under linear combinations. Thus $\vlist{U}{m}$ is a subspace containing $U_i$ for each $1\leq i \leq m$. 
+Let $U$ be another subspace containing $U_{i}$  for each $1\leq i \leq m$. If $u\in U_{1}+ \cdots +U_{m}$, then $u$ has the form $u=u_1+\cdots + u_m$ where each $u_i\in U_i\subseteq U$. 
+Since $U$ is a subspace $u\in U$ and so $U_{1}+U_{2}+ \cdots +U_{m}$ is the smallest such subspace.  
+::: 
+
+::: {#def- } 
+If $\{\vlist{v}{m}\}$ is a subset of a linear space $V$, then the subspace of all linear combinations of these vectors is called the \index{subspace generated} **subspace generated** (\index{spanned} **spanned**) by $\vlist{v}{m}.$ 
+The \index{spanning set} **spanning set**  of the list of vectors 
+$(\vlist{v}{m})$ in $V$ is denoted by 
+$$
+\text{span}(\vlist{v}{m})=
+\{\lincomb{a}{v}{m} \mid \vlist{a}{m}\in \mathbb{F} \}.
+$$
+::: 
+ 
+::: {#lem- } 
+The \index{span} **span**  of a list of vectors in $V$ is the smallest subspace of $V$ containing all the vectors in the list.
+:::  
+
+::: {.proof } 
+Let $(\vlist{v}{n})$ be a list of vectors in $V$ and let $S$ denote $\text{span}(\vlist{v}{n})$. 
+Clearly, $S$ contains $v_i$ for each $1\leq i \leq n$. 
+Let $u,v \in S$ and $a,b\in k$. 
+Then there exists $\vlist{a}{n}$ in 
+$k$ and $\vlist{b}{n}$ in $k$ such that 
+$u=a_1 v_1+\cdots a_n  v_n$ and 
+$v=b_1 v_1+ \cdots b_n v_n$.  
+Then 
+$$
+a u+b v
+=(a a_1 +b b_1) v_1+ \cdots +(a a_n+b b_n) v_n
+$$ 
+which shows $a u+b v\in S$ since
+$a a_i+b b_i \in k$ for each $1\leq i \leq n$. 
+Thus $S$ is a subspace containing each of the 
+$v_i$. 
+Let $T$ be a subspace containing $v_i$ for 
+$1 \leq i \leq n$. 
+If $s\in S$, then there exists 
+$\vlist{c}{n} \in k$ such that 
+$s=c_1 v_1+\cdots + c_n v_n$. 
+Since $v_i\in T$ for each $i$ and $T$ is closed under linear combinations (since $T$ is a subspace), $s\in T$. 
+Meaning $S \subseteq T$, 
+so indeed $S$ is the smallest subspace of $V$ containing all the vectors $v_i$.
+::: 
+
+::: {#def- } 
+Let $\emptyset$ denote the empty set. Then 
+$\text{span}(\emptyset)=\{0\}$.
+::: 
+
+::: {#exm- } 
+Let $A=\begin{matrix}1 & 1 \ 0 & 0 \end{matrix}$. Show that 
+$S=\{X\in M_{2\times 2} \mid AX=XA\}$ 
+is a subspace of $M_{2\times 2}$ under the standard operations. 
+::: 
+
+::: {#exm- } 
+Let $f_1=x^2+1, f_2=3x-1, f_3=2$. Determine the subspace generated by $f_1, f_2, f_3$ in $P_4$.
+::: 
+
+::: {#exm- } 
+Let 
+$A_1=\begin{bmatrix} 1 & 0 & 0 & 3 \\ 0 & 0 & 2 & 0\end{bmatrix}$
+and
+$A_2=\begin{bmatrix} 0 & 2 & 0 & 1 \\ 0 & 0 & 0 & 1 \end{bmatrix}.$
+Determine the subspace generated by $A_1$ and $A_2$ in $R_{2\times 4}$.
+::: 
+
+::: {#exm- } 
+Describe $\text{span}(0)$.
+::: 
+
+::: {#exm- } 
+Consider the subset $S=\{x^3-2x^2+x-3, 2x^3-3x^2+2x+5, 4x^3-7x^2+4x-1, 4x^2+x-3\}$ of 
+$P$. Show that $3x^3-8x^2+2x+16$ is in $\text{span} (S)$ by expressing it as a linear combination of the elements of $S$. 
+::: 
+
+::: {#exm- } 
+Determine if the matrices 
+$$
+\begin{bmatrix} 2 & -1 \\ 0 & 2 \end{bmatrix}, 
+\begin{bmatrix} -4 & 2 \\ 3 & 0 \end{bmatrix},  
+\begin{bmatrix} -1 & 0 \\ 2 & 1 \end{bmatrix},  
+\begin{bmatrix} 0 & 0 \\ 0 & 3 \end{bmatrix}
+$$
+span $M_{2\times 2}$. 
+::: 
+
+

@@ -1,0 +1,647 @@
+---
+pagetitle: "Area - Exploring Calculus"
+---
+# "Area"
+
+## Sigma Notation
+In order to understand Riemann sums and integration theory correctly it is important to understand summations using sigma notation. 
+
+
+
+::: {#def- }  If $a_m,$ $ a_{m+1},$ $\ldots,$ $ a_n$ are real numbers such that $m\leq n,$ then the summation of these numbers written in \index{sigma notation} **sigma notation**  is 
+\[
+\sum _{i=m}^n a_i=a_m+a_{m+1}+\cdot \cdot \cdot +a_{n-1}+a_n
+\]
+and also using functional notation, 
+\[
+\sum _{i=m}^n f(i)=f(m)+f(m+1)+\cdot \cdot \cdot +f(n-1)+f(n)
+\]
+where $f(i)=a_i.$ 
+The $i$ is called the \index{index of summation} **index of summation** , the $a_i$ are called the $i$th term of the sum, and the upper and lower bounds
+of the summation are $n$ and $m,$ respectively.
+::: 
+
+
+::: {#exm- }  
+Write the sum  
+$\ds \sum _{k=0}^4 \frac{2k-1}{2k+1}$
+in expanded form.
+::: 
+
+::: {.solution } 
+In expanded form the sum is
+\begin{align*}
+\sum _{k=0}^4 \frac{2k-1}{2k+1} & =\frac{2(0)-1}{2(0)+1}+\frac{2(1)-1}{2(1)+1}+\frac{2(2)-1}{2(2)+1}+\frac{2(3)-1}{2(3)+1}+\frac{2(4)-1}{2(4)+1} \\
+& =-1+\frac{1}{3}+\frac{3}{5}+\frac{5}{7}+\frac{7}{9} =\frac{449}{315}.
+\square
+\end{align*}.
+::: 
+
+
+::: {#exm- }  
+Write the sum  
+$\ds \left(\sum _{i=1}^6 \frac{i}{i+1}\right)-40$
+in expanded form.
+::: 
+
+::: {.solution } 
+In expanded form, the sum is 
+\begin{align*}
+\left(\sum _{i=1}^6 \frac{i}{i+1}\right)-40  & =\frac{1}{1+1}+\frac{2}{2+1}+\frac{3}{3+1}+\frac{4}{4+1}+\frac{5}{5+1}+\frac{6}{6+1}-40 \\
+& =\frac{1}{2}+\frac{2}{3}+\frac{3}{4}+\frac{4}{5}+\frac{5}{6}+\frac{6}{7}-40 
+ =-\frac{4983}{140}.
+ \square
+\end{align*}
+::: 
+
+
+::: {#exm- }  
+Write the sum 
+$\ds \frac{1}{1}+\frac{1}{4}+\frac{1}{9}+\cdot \cdot \cdot +\frac{1}{7225} $ 
+in sigma notation.
+::: 
+
+::: {.solution } 
+In sigma notation, the sum is
+\[
+\frac{1}{1}+\frac{1}{4}+\frac{1}{9}+\cdot \cdot \cdot +\frac{1}{7225}=\sum _{k=1}^{85} \frac{1}{k^2}.
+\square
+\]
+::: 
+
+
+::: {#exm- }  
+Write the sum  
+$\ds
+\frac{3}{7}+\frac{4}{8}+\frac{5}{9}+\frac{6}{10} +\cdot \cdot \cdot +\frac{23}{27}
+$ in sigma notation.
+::: 
+
+::: {.solution } 
+In sigma notation the sum is
+\[
+\sum _{k=7}^{27} \frac{k-4}{k}.
+\square
+\]
+::: 
+
+
+::: {#exm- }  
+Write the sum
+\[
+\left[1-\left(\frac{1}{4}\right)^2\right]+\left[1-\left(\frac{2}{4}\right)^2\right]+\left[1-\left(\frac{3}{4}\right)^2\right]+ \cdots +\left[1-\left(\frac{4}{4}\right)^2\right]
+\]
+in sigma notation.
+::: 
+
+::: {.solution } 
+In sigma notation the sum is
+\[
+\sum _{k=1}^4 \left[1-\left(\frac{k}{4}\right)^2\right].
+\square
+\]
+::: 
+
+::: {#exm- }  
+Write the sum
+\[
+\left(\frac{1}{n}\right)\sqrt{1-\left(\frac{0}{n}\right)^2}+\left(\frac{1}{n}\right)\sqrt{1-\left(\frac{1}{n}\right)^2}+\cdots +\left(\frac{1}{n}\right)\sqrt{1-\left(\frac{n-1}{n}\right)^2}
+\]
+in sigma notation. 
+::: 
+
+::: {.solution } 
+In sigma notation the sum is
+\[
+\sum _{k=0}^{n-1} \left(\frac{1}{n}\right)\sqrt{1-\left(\frac{k}{n}\right)^2}
+\]
+::: 
+
+## Properties of Finite Sums
+The linearity rule, subtotal rule, and the dominance rule are the basic properties of summations illustrated below. 
+We also give summation formulas for 
+\[
+\sum _{k=1}^n k^i
+\] 
+when $i=1,2,\ldots,6$ followed by some examples on taking limits of sums. 
+
+::: {#thm- }  
+If $c$ and $d$ are real numbers that do not depend on integers $m$ and $n$, then 
+ 
+% \item $\ds \sum _{k=1}^n c=n c$
+% \item  $\ds \sum _{k=1}^n \left(a_k+b_k\right)=\sum _{k=1}^n a_k+\sum _{k=1}^n b_k$
+% \item  $\ds \sum _{k=1}^n c a_k=c\left( \sum _{k=1}^n a_k \right)$
+\item 
+$\ds \sum _{k=1}^n \left(c a_k+d b_k\right)=c\left( \sum _{k=1}^n a_k \right)+d\left( \sum _{k=1}^n b_k \right)$
+\item 
+If $1<m<n,$ then $\ds \sum _{k=1}^n  a_k=\sum _{k=1}^m  a_k+\sum _{k=m+1}^n  a_k $
+\item 
+If $a_k\leq  b_k $ for all $k,$ then $\ds \sum _{k=1}^n  a_k\leq  \sum _{k=1}^n  b_k.$
+ 
+::: 
+
+The following formulas will be necessary when determining limits of Riemann sums to find the area under a curve of a polynomial. 
+
+
+::: {#thm- }  
+The summation formulas for $\sum _{k=1}^n k^i$ when $i=1,2,\ldots,7.$ 
+ 
+\item[] 
+$\ds \sum _{k=1}^n k=\frac{1}{2} n (n+1)$
+\item[] 
+$\ds \sum _{k=1}^n k^2=\frac{1}{6} n (n+1) (2 n+1)$
+\item[] 
+$\ds \sum _{k=1}^n k^3=\frac{1}{4} n^2 (n+1)^2$
+\item[] 
+$\ds \sum _{k=1}^n k^4=\frac{1}{30} n (n+1) (2 n+1) \left(3 n^2+3 n-1\right)$
+\item[] 
+$\ds \sum _{k=1}^n k^5=\frac{1}{12} n^2 (n+1)^2 \left(2 n^2+2 n-1\right)$
+\item[] 
+$\ds \sum _{k=1}^n k^6=\frac{1}{42} n (n+1) (2 n+1) \left(3 n^4+6 n^3-3 n+1\right)$
+%\item[]  $\ds \sum _{k=1}^n k^7=\frac{1}{24} n^2 (n+1)^2 \left(3 n^4+6 n^3-n^2-4 n+2\right)$
+ 
+::: 
+
+
+::: {#exm- }  
+Find the value of the sum  $\ds \sum _{i=1}^{100} i \left(i^2+1\right).$
+::: 
+
+::: {.solution } 
+The value of the sum is 
+\begin{align*}
+& \sum _{i=1}^{100} i \left(i^2+1\right)  
+=\sum _{i=1}^{100}  \left(i^3+i\right)
+=\sum _{i=1}^{100}  i^3+\sum _{i=1}^{100} i \\
+& \qquad =\frac{1}{4} 100^2 (100+1)^2+\frac{1}{2} 100 (100+1) \\
+& \qquad =25502500+5050 
+=25507550.
+\square
+\end{align*}
+::: 
+
+::: {#exm- }  
+Find the value of the sum  $\ds \sum _{i=1}^4 \left(2^i+i^2\right).$
+::: 
+
+::: {.solution } 
+The value of the sum is 
+\begin{align*}
+\sum _{i=1}^4 \left(2^i+i^2\right) & =\left(2^1+1^2\right)+\left(2^2+2^2\right)+\left(2^3+3^2\right)+\left(2^4+4^2\right) \\
+& =3+8+17+32
+=60.
+\square
+\end{align*}
+::: 
+
+::: {#exm- }  
+Find the value of the sum  $\ds \sum _{i=1}^n i^2 \left(i^2-i+1\right).$
+::: 
+
+::: {.solution } 
+The value of the sum is
+\begin{align*}
+& \sum _{i=1}^n i^2 \left(i^2-i+1\right)
+=\sum _{i=1}^n  \left(i^4-i^3+i^2\right) 
+=\sum _{i=1}^n  i^4-\sum _{i=1}^n i^3+\sum _{i=1}^n i^2 \\
+& \qquad =\frac{1}{30} n (n+1) (2 n+1) \left(3 n^2+3 n-1\right)-\frac{1}{4} n^2 (n+1)^2+\frac{1}{6} n (n+1) (2 n+1) \\
+& \qquad =\frac{1}{60} n (n+1) \left(12 n^3+3 n^2+7 n+8\right). 
+\square
+\end{align*}
+::: 
+
+
+## Definition of Riemann Sum
+
+In this topic we illustrate how a Riemann sum can be used to approximate the area under a curve and in doing so, we anticipate the notion
+of definite integral. 
+We will investigate the area under the curve $y=2+6 x-5 x^2+x^3,$ above the $x$-axis and between the vertical lines $x=0$ and 
+$x=5.$ 
+
+::: {#def- }  
+
+A \index{Riemann sum} **Riemann sum**  for a function $f$ on the closed bounded interval $[a,b]$ is a sum of the form 
+\[
+\sum _{k=1}^n f\left(x_i{}^*\right)\Delta  x_i
+\] 
+where  $a=x_0<x_1<\cdot \cdot \cdot <x_n=b$ and $x_{i-1}\leq x_i{}^*\leq x_i$ 
+for $i=1,\ldots,n$. 
+Let $\Delta  x_i=x_i-x_{i-1} $ denote the width of each subinterval. 
+The set 
+\[
+\mathcal{P}=\left\{x_0,x_1,\ldots.,x_n\right\}
+\] 
+is called a partition of $[a,b]$, the largest of the $\Delta  x_i$
+is called the \textit{norm} of $\mathcal{P}$, and the $x_i{}^*$ are called the \textit{subinterval representatives} for the Riemann sum.
+::: 
+
+::: {#exm- }  
+Given the function $f(x)=x^3,$ the closed bounded interval $[0,1],$ and the partition $\left\{0,\frac{1}{2},\frac{3}{4},\frac{5}{6},1\right\}$, compute a Riemann sum.
+::: 
+
+::: {.solution } 
+Organizing into a table we determine the values, 
+\[ 
+\begin{array}{c|c|c|c|c}
+ i & \text{subinterval} & x_i{}^* & f\left(x_i{}^*\right) & \Delta  x_i \\ \hline
+ 1 & \left[0,\frac{1}{2}\right] & \frac{1}{3} & \left(\frac{1}{3}\right)^3=\frac{1}{27} & \frac{1}{2}-0=\frac{1}{2} \\
+ 2 & \left[\frac{1}{2},\frac{3}{4}\right] & \frac{2}{3} & \left(\frac{2}{3}\right)^3=\frac{8}{27} & \frac{3}{4}-\frac{1}{2}=\frac{1}{4} \\
+ 3 & \left[\frac{3}{4},\frac{5}{6}\right] & \frac{8}{10} & \left(\frac{8}{10}\right)^3=\frac{64}{125} & \frac{5}{6}-\frac{3}{4}=\frac{1}{12} \\
+ 4 & \left[\frac{5}{6},1\right] & \frac{9}{10} & \left(\frac{9}{10}\right)^3=\frac{729}{1000} & 1-\frac{5}{6}=\frac{1}{6}
+\end{array}
+\]
+So the Riemann sum for these $x_i^*$ is
+\begin{align*}
+\sum _{i=1}^4 f\left(x_i{}^*\right)\Delta  x_i 
+& =f\left(x_1{}^*\right)\Delta  x_1+f\left(x_2{}^*\right)\Delta  x_2+f\left(x_3{}^*\right)\Delta  x_3+f\left(x_4{}^*\right)\Delta  x_4 \\[10pt]
+& =\left(\frac{1}{27}\right)\left(\frac{1}{2}\right)+\left(\frac{8}{27}\right)\left(\frac{1}{4}\right)+\left(\frac{64}{125}\right)\left(\frac{1}{12}\right)+
+\left(\frac{729}{1000}\right)\left(\frac{1}{6}\right)  \\[10pt]
+& =\frac{2773}{10800}.
+\square
+\end{align*}
+::: 
+
+## Estimating the Area Under a Curve
+
+
+::: {#exm- }  
+Given the function $f(x)=2+6 x-5 x^2+x^3,$ the closed bounded interval $[0,5],$ and the partition $\{0,1,2,3,4,5\},$
+compute a Riemann sum to approximate the area. 
+::: 
+
+::: {.solution } 
+Organizing into a table we determine the values, 
+\[ 
+\begin{array}{c|c|c|c|c}
+ i & \text{subinterval} & x_i{}^* & f\left(x_i{}^*\right) & \Delta  x_i \\ \hline
+ 1 & [0,1] & 0 & 2+6 (0)-5 (0)^2+(0)^3=2 & 1 \\
+ 2 & [1,2] & 1 & 2+6 (1)-5 (1)^2+(1)^3=4 & 1 \\
+ 3 & [2,3] & 2 & 2+6 (2)-5 (2)^2+(2)^3=2 & 1 \\
+ 4 & [3,4] & 3 & 2+6 (3)-5 (3)^2+(3)^3=2 & 1 \\
+ 5 & [4,5] & 4 & 2+6 (4)-5 (4)^2+(4)^3=10 & 1
+\end{array}
+\]
+So the Riemann sum for these $x_i{}^*$ is 
+\[
+\sum _{i=1}^5 f\left(x_i{}^*\right)\Delta  x_i
+=\text{(2)(1)+(4)(1)+(2)(1)+(2)(1)+(10)(1)}
+=20.
+\]
+Figure \ref{fig:graph32} shows the Riemann sum as the approximate area under the given curve.
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 200pt]{_includes/p32.pdf}}
+\caption{The approximate area under $f(x)=2+6 x-5 x^2+x^3$.}
+\label{fig:graph32}
+\end{center}
+\end{figure}
+
+
+
+
+## Refining Partitions
+
+For our next example we will use a finer partition, say a partition using 14 subintervals between $x=0$ and $x=5$ (also with uniform
+width). 
+We will still use left-endpoints for our subinterval representatives. 
+Our second estimate for the area is $28.1481$. 
+
+
+::: {#exm- }  
+Given the function $f(x)=2+6 x-5 x^2+x^3,$ the closed bounded interval $[0,5],$ and the partition 
+\[
+\left\{0,\frac{1}{3},\frac{2}{3},1,\frac{4}{3},\frac{5}{3},2,\frac{7}{3},\frac{8}{3},3,\frac{10}{3},\frac{11}{3},4,\frac{13}{3},\frac{14}{3},5\right\},
+\] 
+compute a Riemann sum to approximate the area. 
+::: 
+
+::: {.solution } 
+Organizing into a table we determine the values, 
+\[
+\begin{array}{c|c|c|c|c}
+ i & \text{subinterval} & x_i{}^* & f\left(x_i{}^*\right) & \Delta  x_i \\ \hline
+ 1 & \left[0,\frac{1}{3}\right] & 0 & 2+6 (0)-5 (0)^2+(0)^3=2 & \frac{1}{3} \\
+ 2 & \left[\frac{1}{3},\frac{2}{3}\right] & \frac{1}{3} & 2+6 \left(\frac{1}{3}\right)-5 \left(\frac{1}{3}\right)^2+\left(\frac{1}{3}\right)^3=\frac{94}{27}
+& \frac{1}{3} \\
+ 3 & \left[\frac{2}{3},1\right] & \frac{2}{3} & 2+6 \left(\frac{2}{3}\right)-5 \left(\frac{2}{3}\right)^2+\left(\frac{2}{3}\right)^3=\frac{110}{27}
+& \frac{1}{3} \\
+ 4 & \left[1,\frac{4}{3}\right] & 1 & 2+6 (1)-5 (1)^2+(1)^3=4 & \frac{1}{3} \\
+ 5 & \left[\frac{4}{3},\frac{5}{3}\right] & \frac{4}{3} & 2+6 \left(\frac{4}{3}\right)-5 \left(\frac{4}{3}\right)^2+\left(\frac{4}{3}\right)^3=\frac{94}{27}
+& \frac{1}{3} \\
+ 6 & \left[\frac{5}{3},2\right] & \frac{5}{3} & 2+6 \left(\frac{5}{3}\right)-5 \left(\frac{5}{3}\right)^2+\left(\frac{5}{3}\right)^3=\frac{74}{27}
+& \frac{1}{3} \\
+ 7 & \left[2,\frac{7}{3}\right] & 2 & 2+6 (2)-5 (2)^2+(2)^3=2 & \frac{1}{3} \\
+ 8 & \left[\frac{7}{3},\frac{8}{3}\right] & \frac{7}{3} & 2+6 \left(\frac{7}{3}\right)-5 \left(\frac{7}{3}\right)^2+\left(\frac{7}{3}\right)^3=\frac{40}{27}
+& \frac{1}{3} \\
+ 9 & \left[\frac{8}{3},3\right] & \frac{8}{3} & 2+6 \left(\frac{8}{3}\right)-5 \left(\frac{8}{3}\right)^2+\left(\frac{8}{3}\right)^3=\frac{38}{27}
+& \frac{1}{3} \\
+ 10 & \left[3,\frac{10}{3}\right] & 3 & 2+6 (3)-5 (3)^2+(3)^3=2 & \frac{1}{3} \\
+ 11 & \left[\frac{10}{3},\frac{11}{3}\right] & \frac{10}{3} & 2+6 \left(\frac{10}{3}\right)-5 \left(\frac{10}{3}\right)^2+\left(\frac{10}{3}\right)^3=\frac{94}{27}
+& \frac{1}{3} \\
+ 12 & \left[\frac{11}{3},4\right] & \frac{11}{3} & 2+6 \left(\frac{11}{3}\right)-5 \left(\frac{11}{3}\right)^2+\left(\frac{11}{3}\right)^3=\frac{164}{27}
+& \frac{1}{3} \\
+ 13 & \left[4,\frac{13}{3}\right] & 4 & 2+6 (4)-5 (4)^2+(4)^3=10 & \frac{1}{3} \\
+ 14 & \left[\frac{13}{3},\frac{14}{3}\right] & \frac{13}{3} & 2+6 \left(\frac{13}{3}\right)-5 \left(\frac{13}{3}\right)^2+\left(\frac{13}{3}\right)^3=\frac{418}{27}
+& \frac{1}{3} \\
+ 15 & \left[\frac{14}{3},5\right] & \frac{14}{3} & 2+6 \left(\frac{14}{3}\right)-5 \left(\frac{14}{3}\right)^2+\left(\frac{14}{3}\right)^3=\frac{614}{27}
+& \frac{1}{3}
+\end{array}
+\]
+So the Riemann sum $\sum _{i=1}^{15} f\left(x_i{}^*\right)\Delta  x_i $ for these $x_i{}^*$ is $\frac{760}{27}$.
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 200pt]{_includes/p33.pdf}}
+\caption{The approximate area under $f(x)=2+6 x-5 x^2+x^3$.}
+\label{fig:graph33}
+\end{center}
+\end{figure}
+
+::: {#exm- }  
+Use a Riemann sum to approximate the area under the graph of $f(x)=6x^2+2x+4$ on $[1,3]$ with 8 subintervals.
+::: 
+
+::: {.solution } 
+As a partition we choose $\mathcal{P}=\left\{1,\frac{5}{4},\frac{3}{2},\frac{7}{4},2,\frac{9}{4},\frac{5}{2},\frac{11}{4},3\right\}.$
+Organizing our computations and choices for our subinterval representations we have
+\[ 
+\begin{array}{c|c|c|c|c|c}
+ i & \text{subinterval} & x_i{}^* & f\left(x_i{}^*\right) & \Delta  x_i & f\left(x_i{}^*\right)\Delta  x_i \\ \hline
+ 1 & \left[1,\frac{5}{4}\right] & 1 & 6(1)^2+2(1)+4=12 & \frac{1}{4} & 3 \\
+ 2 & \left[\frac{5}{4},\frac{3}{2}\right] & \frac{5}{4} & 6\left(\frac{5}{4}\right)^2+2\left(\frac{5}{4}\right)+4=\frac{127}{8} & \frac{1}{4} & \frac{127}{32}
+\\
+ 3 & \left[\frac{3}{2},\frac{7}{4}\right] & \frac{3}{2} & 6\left(\frac{3}{2}\right)^2+2\left(\frac{3}{2}\right)+4=\frac{41}{2} & \frac{1}{4} & \frac{41}{8}
+\\
+ 4 & \left[\frac{7}{4},2\right] & \frac{7}{4} & 6\left(\frac{7}{4}\right)^2+2\left(\frac{7}{4}\right)+4=\frac{207}{8} & \frac{1}{4} & \frac{207}{32}
+\\
+ 5 & \left[2,\frac{9}{4}\right] & 2 & 6(2)^2+2(2)+4=32 & \frac{1}{4} & 8 \\
+ 6 & \left[\frac{9}{4},\frac{5}{2}\right] & \frac{9}{4} & 6\left(\frac{9}{4}\right)^2+2\left(\frac{9}{4}\right)+4=\frac{311}{8} & \frac{1}{4} & \frac{311}{32}
+\\
+ 7 & \left[\frac{5}{2},\frac{11}{4}\right] & \frac{5}{2} & 6\left(\frac{5}{2}\right)^2+2\left(\frac{5}{2}\right)+4=\frac{93}{2} & \frac{1}{4} & \frac{93}{8}
+\\
+ 8 & \left[\frac{11}{4},3\right] & \frac{11}{4} & 6\left(\frac{11}{4}\right)^2+2\left(\frac{11}{4}\right)+4=\frac{439}{8} & \frac{1}{4} & \frac{439}{32}
+\end{array}
+\]
+So the Riemann sum for this partition $\mathcal{P}$ and these $x_i^*$ is
+$\sum _{i=1}^8 f\left(x_i{}^*\right)\Delta x_i  =493/8. $ 
+Thus, the approximate the area under the graph of $f(x)=6x^2+2x+4$ on $[1,3]$ with 8 subintervals is $\frac{493}{8}$ as shown in Figure 
+\ref{fig:graph34}.
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 200pt]{_includes/p34.pdf}}
+\caption{The approximate the area under the graph of $f(x)=6x^2+2x+4$ on $[1,3]$ with 8 subintervals}
+\label{fig:graph34}
+\end{center}
+\end{figure}
+
+::: {#exm- }  
+Use a Riemann sum to approximate the area under the graph of $f(x)=\sqrt{1+x^2} $ on $[0,1]$ with 10 subintervals.
+::: 
+
+::: {.solution } 
+As a partition we choose 
+\[
+\mathcal{P}=\left\{0,\frac{1}{10},\frac{1}{5},\frac{3}{10},\frac{2}{5},\frac{1}{2},\frac{3}{5},\frac{7}{10},\frac{4}{5},\frac{9}{10},1\right\}.
+\]
+Organizing our computations and choices for our subinterval representations we have
+\[ 
+\begin{array}{c|c|c|c|c|c}
+ i & \text{subinterval} & x_i{}^* & f\left(x_i{}^*\right) & \Delta  x_i & f\left(x_i{}^*\right)\Delta  x_i \\ \hline
+ 1 & \left[0,\frac{1}{10}\right] & \frac{1}{10} & \sqrt{1+\left(\frac{1}{10}\right)^2}=\frac{\sqrt{101}}{10} & \frac{1}{10} & \frac{\sqrt{101}}{100}
+\\
+ 2 & \left[\frac{1}{10},\frac{1}{5}\right] & \frac{1}{5} & \sqrt{1+\left(\frac{1}{5}\right)^2}=\frac{\sqrt{26}}{5} & \frac{1}{10} & \frac{\sqrt{\frac{13}{2}}}{25}
+\\
+ 3 & \left[\frac{1}{5},\frac{3}{10}\right] & \frac{3}{10} & \sqrt{1+\left(\frac{3}{10}\right)^2}=\frac{\sqrt{109}}{10} & \frac{1}{10} & \frac{\sqrt{109}}{100}
+\\
+ 4 & \left[\frac{3}{10},\frac{2}{5}\right] & \frac{2}{5} & \sqrt{1+\left(\frac{2}{5}\right)^2}=\frac{\sqrt{29}}{5} & \frac{1}{10} & \frac{\sqrt{29}}{50}
+\\
+ 5 & \left[\frac{2}{5},\frac{1}{2}\right] & \frac{1}{2} & \sqrt{1+\left(\frac{1}{2}\right)^2}=\frac{\sqrt{5}}{2} & \frac{1}{10} & \frac{1}{4 \sqrt{5}}
+\\
+ 6 & \left[\frac{1}{2},\frac{3}{5}\right] & \frac{3}{5} & \sqrt{1+\left(\frac{3}{5}\right)^2}=\frac{\sqrt{34}}{5} & \frac{1}{10} & \frac{\sqrt{\frac{17}{2}}}{25}
+\\
+ 7 & \left[\frac{3}{5},\frac{7}{10}\right] & \frac{7}{10} & \sqrt{1+\left(\frac{7}{10}\right)^2}=\frac{\sqrt{149}}{10} & \frac{1}{10} & \frac{\sqrt{149}}{100}
+\\
+ 8 & \left[\frac{7}{10},\frac{4}{5}\right] & \frac{4}{5} & \sqrt{1+\left(\frac{4}{5}\right)^2}=\frac{\sqrt{41}}{5} & \frac{1}{10} & \frac{\sqrt{41}}{50}
+\\
+ 9 & \left[\frac{4}{5},\frac{9}{10}\right] & \frac{9}{10} & \sqrt{1+\left(\frac{9}{10}\right)^2}=\frac{\sqrt{181}}{10} & \frac{1}{10} & \frac{\sqrt{181}}{100}
+\\
+ 10 & \left[\frac{9}{10},1\right] & 1 & \sqrt{1+(1)^2}=\sqrt{2} & \frac{1}{10} & \frac{1}{5 \sqrt{2}} \\[4pt] \hline
+   &   &   &   & \text{Total}\approx  & 1.16909
+\end{array}
+\]
+So the approximate the area under the graph of $f(x)=\sqrt{1+x^2}$ on $[0,1]$ using 10 subintervals is 1.16909 as shown in Figure 
+\ref{fig:graph33}.
+::: 
+
+\begin{figure}[h]
+\begin{center}
+{\includegraphics[width= 200pt]{_includes/p35.pdf}}
+\caption{The approximate the area under the graph of $f(x)=\sqrt{1+x^2} $ on $[0,1]$ with 10 subintervals.}
+\label{fig:graph35}
+\end{center}
+\end{figure}
+
+
+
+## Area using Limits of Riemann Sums
+It is important to be able to evaluate limits of sums so here are a couple of examples. 
+
+
+::: {#thm- }  
+Suppose $f$ is continuous and $f(x)\geq 0$ throughout the interval $[a,b].$ Then the area of the region under the curve 
+$y=f(x)$ over this interval is 
+\[
+A=\lim _{\Delta  x\to 0}\sum _{k=1}^n f(a+k \Delta  x)\Delta  x
+\] 
+where $\Delta  x=(b-a)/n.$
+::: 
+
+
+
+::: {#exm- }  
+Evaluate the limit
+$\ds \lim _{n\to +\infty }\sum _{k=1}^n \frac{k}{n^2}. $
+::: 
+
+::: {.solution } 
+The value of the limit is
+\begin{align*}
+\lim _{n\to +\infty }\sum _{k=1}^n \frac{k}{n^2}
+& =\lim _{n\to +\infty }\frac{1}{n^2} \left(\sum _{k=1}^n k\right) 
+\\ & 
+=\lim _{n\to +\infty }\frac{1}{n^2} \left(\frac{1}{2} n (n+1)\right)
+=\lim _{n\to +\infty }\frac{n+1}{2 n} 
+=\frac{1}{2}. 
+\square
+\end{align*}
+::: 
+
+
+::: {#exm- }  
+Evaluate the limit 
+$\ds \lim _{n\to +\infty }\sum _{k=1}^n \left(1+\frac{2k}{n}\right)^2\left(\frac{2}{n}\right).$
+::: 
+
+::: {.solution } 
+The value of the limit is
+\begin{align*}
+& \lim _{n\to +\infty }\sum _{k=1}^n \left(1+\frac{2k}{n}\right)^2\left(\frac{2}{n}\right) 
+=\lim _{n\to +\infty }\left(\frac{2}{n}\right)\sum _{k=1}^n \left(1+\frac{2k}{n}\right)^2 \\
+& \qquad =\lim _{n\to +\infty }\left(\frac{2}{n}\right)\sum _{k=1}^n \left(\frac{4 k^2}{n^2}+\frac{4 k}{n}+1\right) 
+=\lim _{n\to +\infty }\left(\frac{2}{n}\right)\left(\frac{13 n^2+12 n+2}{3 n}\right) 
+\\
+& \qquad =\lim _{n\to +\infty }\frac{2 \left(13 n^2+12 n+2\right)}{3 n^2}  =\frac{26}{3}.
+\square
+\end{align*}
+::: 
+
+
+::: {#exm- }  
+Find the exact area under the curve $y=x^2+4$ on $[2,10].$
+::: 
+
+::: {.solution } 
+We will use the formula
+\[
+A=\lim _{\Delta  x\to 0}\sum _{k=1}^n f(a+k \Delta  x)\Delta  x
+\]
+with $b=10$ and $a=2.$ 
+We see $\Delta  x=\frac{10-2}{n}=\frac{8}{ n};$ and we notice that $n\to +\infty $ as $\Delta  x\to 0$ and so the
+area $A$ is given by
+\begin{align*}
+A&=\lim _{\Delta  x\to 0}\sum _{k=1}^n f(a+k \Delta  x)\Delta  x \\
+& =\lim _{n\to \infty }\sum _{k=1}^n f\left(2+k \frac{8}{ n}\right)\frac{8}{ n} \\
+& =\lim _{n\to \infty }\frac{8}{ n}\sum _{k=1}^n \left[\left(2+\frac{8 k}{ n}\right)^2+4\right] \\
+& =\lim _{n\to \infty }\frac{8}{ n}\sum _{k=1}^n \left(8+4\left(\frac{8 k}{n}\right)+\frac{64 k^2}{n^2}\right) \\
+& =\lim _{n\to \infty }\frac{8}{ n}\sum _{k=1}^n \left(8+4\left(\frac{8 k}{n}\right)+\frac{64 k^2}{n^2}\right) \\
+& =\lim _{n\to \infty }\frac{8}{ n}\left[\sum _{k=1}^n 8+\frac{32}{n}\sum _{k=1}^n  k+\frac{64 }{n^2}\sum _{k=1}^n k^2\right] \\
+& =\lim _{n\to \infty }\frac{8}{ n}\left[8n+\frac{32}{n}\left(\frac{1}{2} n (n+1)\right)+\frac{64 }{n^2}\left(\frac{1}{6} n (n+1) (2
+n+1)\right)\right] \\
+& =\lim _{n\to \infty }\frac{64 \left(4+18 n+17 n^2\right)}{3 n^2} \qquad \text{(after algebraic simplification)} \\
+& =\frac{64(17)}{3} \\
+& =\frac{1088}{3}.
+\end{align*}
+Therefore, the exact area under the curve $y=x^2+4$ bounded by the lines $y=0,$ $x=2,$ and $x=10$ is $\frac{1088}{3}.$
+::: 
+
+
+::: {#exm- }  
+Find the exact area under the curve $y=4x^3+3x^2$ on $[0,1].$ 
+::: 
+
+::: {.solution } 
+We will use the formula 
+\[
+A=\lim _{\Delta  x\to 0}\sum _{k=1}^n f(a+k \Delta  x)\Delta  x
+\]
+with $b=1$ and $a=0.$ 
+We see $\Delta  x=\frac{1}{n};$ and we notice that $n\to +\infty $ as $\Delta  x\to 0$ and so the area $A$ is given
+by 
+\begin{align*}
+A&=\lim _{\Delta  x\to 0}\sum _{k=1}^n f(a+k \Delta  x)\Delta  x \\
+& =\lim _{n\to \infty }\sum _{k=1}^n f\left(\frac{k}{n}\right)\frac{1}{n} \\
+& =\lim _{n\to \infty }\frac{1}{ n}\sum _{k=1}^n \left[4\left(\frac{k}{n}\right)^3+3\left(\frac{k}{n}\right)^2\right] \\
+& =\lim _{n\to \infty }\frac{1}{ n}\left[\frac{4}{n^3}\sum _{k=1}^n k^3+\frac{3}{n^2}\sum _{k=1}^n  k^2\right] \\
+& =\lim _{n\to \infty }\frac{1}{ n}\left[\frac{4}{n^3}\left(\frac{1}{4} n^2 (n+1)^2\right)+\frac{3}{n^2}\left(\frac{1}{6} n (n+1) (2
+n+1)\right)\right] \\
+& =\lim _{n\to \infty }\frac{3+7 n+4 n^2}{2 n^2} \qquad \text{(after algebraic simplification)} \\
+& =2.
+\end{align*}
+Therefore, the exact area under the curve $y=4x^3+3x^2$ bounded by the lines $y=0,$ $x=0,$ and $x=1$ is $2.$ 
+::: 
+
+
+## Exercises
+
+::: {#exr- } 
+Use finite approximations to estimate the area under the graph of $f(x)=x^3$ between $x=0$ and $x=1.$ 
+::: 
+
+::: {#exr- } 
+Use finite approximations to estimate the area under the graph of $f(x)=4-x^2$ between $x=-2$ and $x=2.$ 
+::: 
+
+::: {#exr- } 
+Using rectangles whose height is given by the value of the function at the midpoint of the rectangle's base (the midpoint rule) estimate the area under the graph of the function $f(x)=x^2$ between $x=0$ and $x=1,$ using first two and then four rectangles. 
+::: 
+
+::: {#exr- } 
+Using rectangles whose height is given by the value of the function at the midpoint of the rectangle's base (the midpoint rule) estimate the area under the graph of the function $f(x)=4-x^2$ between $x=-2$ and $x=2,$ using first two and then four rectangles. 
+::: 
+
+::: {#exr- } 
+An object is shot straight upward from sea level with an initial velocity of $400 \text{ft}/\sec .$ (a) Assuming that gravity is the only force
+acting on the object, give an upper estimate for its velocity after 5 sec have elapsed. Use $g=-32 \text{ft}\left/\sec ^2\right.$ for the gravitational acceleration. (b) Find a lower estimate for the height attained after 5 sec. ::: 
+
+::: {#exr- } 
+Use a finite sum to estimate the average of $f(x)=\left(\frac{1}{2}\right)+\sin ^2\pi  t$ on the closed bounded interval $[0,2]$ by partitioning the interval into four subintervals of equal length and evaluating $f$ at the subinterval midpoints. 
+::: 
+
+::: {#exr- } 
+Write the sum $\sum _{k=1}^2 \frac{6k}{k+1}$ without sigma notation and then evaluate the sum. 
+::: 
+
+::: {#exr- } 
+Write the sum $\sum _{k=1}^4 (-1)^k\cos  k \pi $ without sigma notation and then evaluate the sum. 
+::: 
+
+::: {#exr- } 
+Rewrite the expression $1-2+4-8+16-32$ in sigma notation.
+::: 
+
+::: {#exr- } 
+Which formula is not equivalent to the other two? 
+ 
+\item $\sum _{k=2}^4 \frac{(-1)^{k-1}}{k-1}$
+\item $\sum _{k=0}^2 \frac{(-1)^k}{k+1}$
+\item $\sum _{k=-1}^1 \frac{(-1)^k}{k+2}$
+ 
+::: 
+
+::: {#exr- } 
+Rewrite the sum using sigma notation $1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\frac{1}{5}.$
+::: 
+
+::: {#exr- } 
+Rewrite the sum using sigma notation $\frac{-1}{5}+\frac{2}{5}-\frac{3}{5}+\frac{4}{5}-\frac{5}{5}.$
+::: 
+
+::: {#exr- } 
+Suppose that $\sum _{k=1}^n a_k=0$ and $\sum _{k=1}^n b_k=1.$
+Find the values of
+ 
+\item $\sum _{k=1}^n 8 a_k$
+\item $\sum _{k=1}^n 250 b_k$
+\item $\sum _{k=1}^n \left( a_k+1\right)$ 
+\item $\sum _{k=1}^n \left(b_k-1\right)$.
+ 
+::: 
+
+::: {#exr- } 
+Evaluate the following sums. 
+ 
+- $\sum _{k=1}^7 (-2k)$
+- $\sum _{k=1}^6 \left(k^2-5\right)$
+- $\sum _{k=1}^5 \frac{k^3}{225}+\left( \sum _{k=1}^5 k \right)^3$
+ 
+::: 
+
+::: {#exr- } 
+Graph the function $f(x)=-x^2$ over the interval $[0,2].$ Partition the interval into four subintervals of equal length. Then add to your
+sketch the rectangles associated with the Riemann sum $\sum _{k=1}^n f\left(c_k\right)\Delta  x_k ,$ given that $c_k$ is the (a) left-hand endpoint,
+(b) right-hand endpoint, (c) the midpoint of the $k$-th subinterval . Make a separate sketch for each set of rectangles.
+::: 
+
+::: {#exr- } 
+Graph the function $f(x)=\sin  x\text{  }+1$ over the interval $[-\pi ,\pi ].$ Partition the interval into four subintervals of equal length.
+Then add to your sketch the rectangles associated with the Riemann sum $\sum _{k=1}^n f\left(c_k\right)\Delta  x_k ,$ given that $c_k$ is the (a) left-hand endpoint, (b) right-hand endpoint, (c) the midpoint of the $k$-th subinterval . Make a separate sketch for each set of rectangles.
+::: 
+
+
+
+

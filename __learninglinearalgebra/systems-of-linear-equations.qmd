@@ -1,0 +1,1119 @@
+---
+pagetitle: "Systems of Linear Equations - Learning Linear Algebra"
+---
+# Systems of Linear Equations
+
+
+Systems of Linear Equations (A Student's Guide) is a comprehensive guide written for students. This book provides in-depth explanations of how to solve systems of linear equations using various methods, including graphing, substitution, and elimination. It also includes examples and practice problems to help you master systems for linear equations.
+
+##  Introducing Systems of Linear Equations
+
+A system of linear equations is a set of two or more linear equations that share the same set of unknowns. In other words, a system of linear equations is a collection of linear equations that you must solve together. There are three main types of systems of linear equations:
+
+1. Consistent and independent: A consistent and independent system of linear equations has a unique solution. This means that there is only one way to solve the system, and the solution will not change if different values are used for the unknowns.
+
+2. Consistent and dependent: A consistent and dependent system of linear equations has infinitely many solutions. This means that there is more than one way to solve the system, and the solution will change if different values are used for the unknowns.
+
+3. Inconsistent: An inconsistent system of linear equations has no solution. This means that there is no way to solve the system.
+
+##  The Graphical Method
+
+The graphing method is a visual way to find the solution to a system of linear equations. To use the graphing method, graph both equations on the same coordinate plane. The point of intersection is the solution to the system.
+
+To graph a linear equation, start by plotting the y-intercept. This is the point where the line crosses the y-axis. To find the y-intercept, set x=0 and solve for y. Then, use the slope to find additional points on the line. The slope is the ratio of the change in y to the change in x. To find the slope, pick two points on the line and calculate the rise (the change in y) divided by the run (the change in x).
+
+Once you have the y-intercept and the slope, you can plot additional points on the line and connect them with a straight line.
+
+##  The Substitution Method
+
+The substitution method is an algebraic way to find the solution to a system of linear equations. To use the substitution method, solve one of the equations for one of the unknowns. Then, substitute this value into the other equation. This will give you a new equation with one unknown. Solve this equation for the unknown. Now, substitute the value of the unknown back into one of the original equations. This will give you the solution to the system.
+
+The substitution method is usually easiest when one of the equations is already solved for one of the unknowns. However, it is sometimes necessary to solve one of the equations for an unknown before you can substitute.
+
+##  The Elimination Method
+
+The elimination method is an algebraic way to find the solution to a system of linear equations. To use the elimination method, add or subtract the equations so that one of the unknowns cancels out. This will give you a new equation with one fewer unknown. Repeat this process until you are left with an equation that has only one unknown. Solve this equation for the unknown. Now, substitute the value of the unknown back into one of the original equations. This will give you the solution to the system.
+
+The elimination method is usually easiest when the coefficients (the numbers in front of the unknowns) are already opposites. However, it is sometimes necessary to multiply one or both equations by a constant before you can eliminate an unknown.
+
+There are many ways to solve a system of linear equations. The best way to choose a method is to look at the equations and decide which one will be the easiest to work with. In general, the substitution method is best when one equation is already solved for one unknown. The elimination method is best when the coefficients of one unknown are opposites. The graphing method is a good way to check your work, but it can be difficult to find the intersection of two lines.
+
+##  Row Operations and Similar Matrices
+
+In solving systems of linear equations, we will often need to use row operations. Row operations are mathematical operations that can be performed on the rows of a matrix. There are three types of row operations:
+
+ 
+- Interchange two rows
+- Multiply a row by a nonzero constant
+- Add a multiple of one row to another row
+ 
+
+Row operations do not change the solution set of a system of linear equations. This means that if we perform row operations on a matrix, the new matrix will have the same solution set as the original matrix. We can use row operations to transform a matrix into an equivalent matrix. Two matrices are equivalent if they have the same solution set.
+
+We can use row operations to solve systems of linear equations. In general, we will use row operations to transform the coefficient matrix into an upper triangular matrix. An upper triangular matrix is a matrix where all the elements below the main diagonal are zero. Once we have transformed the coefficient matrix into an upper triangular matrix, we can use back substitution to solve the system.
+
+We can use row operations to transform a matrix into any equivalent matrix. However, some matrices are more difficult to work with than others. In general, it is easier to work with matrices that are in reduced row echelon form. A matrix is in reduced row echelon form if it is upper triangular and if the leading entry in each nonzero row is a 1. The leading entry in a row is the first nonzero entry in the row.
+
+We can use row operations to transform any matrix into an equivalent matrix that is in reduced row echelon form. Once we have transformed the matrix into reduced row echelon form, we can use back substitution to solve the system of linear equations.
+
+##  Gaussian Elimination Method
+
+The Gaussian elimination method is another way to solve a system of linear equations. To use the Gaussian elimination method, you must first arrange the equations into row form. This will make it easier to see how to eliminate an unknown. Next, multiply each equation by a constant so that one of the unknowns cancels out. Then, add or subtract these equations so that another unknown cancels out. Finally, solve the equation resulting from this process for the last unknown. Now, substitute this value back into one of the original equations and you have the solution to the system!
+
+The Gaussian Elimination Method is a procedure used to solve systems of linear equations. The method is named after German mathematician Carl Friedrich Gauss and Irish mathematician William Rowan Hamilton, who developed it independently in the early 19th century.
+
+##  Gauss-Jordan Elimination Method
+
+The Gauss-Jordan Elimination Method is similar to the traditional Gaussian Elimination Method, but it is more efficient and easier to use. The method works by first transforming the system of equations into an equivalent system with a triangular form. Then, the solution is obtained by a backward substitution.
+
+This method is called Gauss-Jordan Elimination because it was developed by two mathematicians, Carl Friedrich Gauss and Wilhelm Jordan. Although it is not the quickest or most intuitive method, it is a robust way to solve linear equations. When done correctly, it will always give you the correct answer.
+
+##  Conclusion
+
+There are many ways to solve a system of linear equations. The best way to choose a method is to look at the equations and decide which one will be the easiest to work with. In general, the substitution method is best when one equation is already solved for one unknown. The elimination method is best when the coefficients of one unknown are opposites. The Gaussian elimination method is best when there are a lot of equations and unknowns. Lastly, the Gauss-Jordan elimination method is the most robust way to solve linear equations. It is not always the quickest or easiest method, but it will always give you the correct answer.
+
+No matter which method you choose, make sure you understand the steps involved and why they work. This will help you not only solve the equations correctly but also to understand what is happening behind the scenes. With a little practice, you will be solving systems of linear equations like a pro!
+
+
+
+
+A linear system of equations in two variables $x$ and $y$ has the form
+$$
+\begin{cases}
+a x + b y =c\\
+d x+ e y =f 
+\end{cases}
+$$
+where $a, b, c, d, e, f$ are given numbers such as real numbers or complex numbers. 
+Sometimes a linear system is also written using indices 
+
+\begin{equation}
+\label{2by2sys}
+\begin{cases}
+a_{11} x+a_{12} y=b_1\\
+a_{21}x+ a_{22} y =b_2
+\end{cases}
+\end{equation}
+
+to help reduce on the number of letters used. 
+For simplicity let's temporally assume that the coefficients are nonzero real numbers and ask the question: 
+how many solutions can there be to a $2\times 2$ system? 
+The key idea is to realize that each linear equation in \ref{2by2sys} represents a line in the Cartesian plane. 
+If we consider the possible ways lines can intersect in the plane we come to the conclusion that there must either 
+be no solutions, one unique solution, or infinitely many points $(x,y)$ that solves the system in \ref{2by2sys}.
+
+::: {#exm- } 
+\label{example:2by2system}
+Determine whether the linear system 
+$$
+\begin{cases}
+2x+3y =0 \\
+4x+5y=0.
+\end{cases}
+$$
+has no solutions, exactly one solution, or infinitely many solutions.
+If we multiple the first equation, namely $2x+3y=0$ by 2 and subtract from the second equation, $4x+5y=0$, we obtain $y=0$. Therefore the solution is unique and is $(x,y)=(0,0)$. 
+::: 
+
+A $3\times 3$ linear system has the form 
+\begin{equation}
+\label{3by3sys}
+\begin{cases}
+a_{11} x+a_{12} y+a_{13}z =b_1\\
+a_{21} x+a_{22} y+a_{23}z =b_2\\
+a_{31} x+a_{32} y+a_{33}z =b_3\\
+\end{cases}
+\end{equation}
+where $a_{ij}$ and $b_1, b_2, b_3$ are numbers and $x, y, z$ are  variables. 
+Geometrically, linear equations in three variables are just planes in three dimensions. So what are the different types of solution sets for the system in \ref{3by3sys}? By considering the possible ways three planes might intersect in three dimensions we come to the conclusion that there must either be no solutions, one unique solution, or infinitely many points $(x,y,z)$ that solves the system in \ref{3by3sys}.
+
+::: {#exm- } 
+\label{example:3by3system}
+Determine whether the linear system 
+\begin{equation}
+\label{linesysex1}
+\begin{cases}
+x+2y+3z=0 \\
+4x+5y+6z=3 \\
+7x+8y+9z =0
+\end{cases}
+\end{equation}
+has no solutions, exactly one solution, or infinitely many solutions.
+Multiply the first equation by $-2$ and add to the second equation obtaining the equation $2x+y=3$. Eliminating $z$ from the first and third equations we obtain $4x+2y=0$ by multiplying the first equation by $-3$ and adding to the third equation. The $x$ and $y$ that satisfies \ref{linesysex1} must also satisfy the system 
+\begin{equation}
+\label{linesysex1b}
+\begin{cases}
+2x+y=3 \\
+4x+2y=0.
+\end{cases}
+\end{equation}
+Multiply the first equation of \ref{linesysex1b} by $2$ yields $4x+2y=6$. Notice there are no $x$ and $y$ that satisfies both $4x+2y=6$ and $4x+2y=0$. Thus the system in \ref{linesysex1b} has no solutions; therefore the system in \ref{linesysex1} also has no solutions. 
+::: 
+
+
+
+::: {#exm- } 
+Given numbers $a, b$, and $c$, show that the linear system 
+$$
+\begin{cases}
+x+2y +3z = a\\
+x+3y +8z = b\\
+x+2y +2z = c
+\end{cases}
+$$
+either has no solutions, exactly one solution, or infinitely many solutions.
+We choose to eliminate $x$ first and we obtain the system 
+$$
+\begin{cases}
+-y-5z  =a-b\\
+z  =a-c.
+\end{cases}
+$$
+Next we eliminate $z$ obtaining $y=-6a+b+5c$. Therefore the unique solution is $(x,y,z)=(10a-2b-7c,-6a+b+5c,a-c)$.
+::: 
+
+Let's consider a set of linear equations that involves $n$ unknown quantities represented by 
+$\vlist{x}{n}$. 
+Let $a_{ij}$ represent the number that is the coefficient of $x_j$ in the $i$th equation. 
+Let $\vlist{b}{m}$ be given numbers. 
+The linear system of equations 
+\begin{equation}
+\label{syseq}
+\begin{cases}
+a_{11} x_1+a_{12} x_2+\cdots +a_{1n} x_n =  b_1 \\
+a_{21} x_1+a_{22} x_2+\cdots +a_{2n} x_n =  b_2 \\
+\hfill \vdots \hfill \\
+a_{m1} x_1+a_{m2} x_2+\cdots +a_{mn} x_n =  b_m \\
+\end{cases}
+\end{equation}
+is called a \index{system of simultaneous linear algebraic equations} **system of simultaneous linear algebraic equations**. 
+A \index{solution} **solution** of this system is an ordered set of $n$ numbers that satisfies each of the $m$ statements in the system. 
+A linear system of equations with no solution is called \index{inconsistent} and a system with at least one solution is called \index{consistent} **inconsistent** . 
+The array  
+$$
+\left[
+\begin{array}{l|l}
+\begin{matrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+ & & \vdots \\
+a_{m1} & a_{m2} & \cdots  & a_{mn}\\
+\end{matrix}
+& 
+\begin{matrix}
+b_1 \\ b_2 \\ \vdots \\ b_m
+\end{matrix}
+\end{array}
+\right]
+$$
+is called the \index{augmented matrix} corresponding to the linear system in \ref{syseq} **augmented matrix**.
+
+For example, the linear system in \ref{example:2by2system} was shown to be consistent and the linear system in \ref{example:3by3system} was shown to be inconsistent. The augmented matrices for these systems are as follows.
+$$
+\left[
+\begin{array}{l|l}
+\begin{matrix}
+2 & 3 \\
+4 & 5
+\end{matrix}
+&
+\begin{matrix}
+0 \\ 0
+\end{matrix}
+\end{array}
+\right]
+\qquad 
+%\text{and} 
+\qquad
+\left[
+\begin{array}{l|l}
+\begin{matrix}
+1& 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{matrix}
+&
+\begin{matrix}
+0 \\ 3 \\0 
+\end{matrix}
+\end{array}
+\right]
+$$
+
+::: {#exm- } 
+\label{example:2by3system}
+Find all solutions to the following linear system.
+$$
+\begin{cases}
+-150 x+500y=z \\
+50x+100y+z =200
+\end{cases}
+$$
+The given system is equivalent to 
+$$
+\begin{cases}
+-150 x+500y-z=0 \\
+50x+100y+z =200.
+\end{cases}
+$$
+Adding these equations yields $-100x+600y=200$. Since we have one equation with two variables, one of the variables is free. 
+We choose to let $y$ be free. 
+Let $y=t$ for an arbitrary number $t$. 
+Then solving for $x$ we obtain $-100x=200y-600y$, or equivalently $x=-2+6t$. 
+By substituting into the original system, we find $z=-150(-2+6t)+500t=300-400t.$ 
+Therefore, there are an infinitely many solutions, which can be represented by the set 
+$$
+\{(x,y,z) \mid x=-2+6t, y=t, z=300-400t \text{ where $t\in \mathbb{R} $} \}.
+$$
+::: 
+
+The augmented matrix for the system in \ref{example:2by3system} is
+$$
+\left[
+\begin{array}{l|l}
+\begin{matrix}
+-150 & 500 & -1 \\
+50 & 100 & 1
+\end{matrix}
+&
+\begin{matrix}
+0 \\ 200
+\end{matrix}
+\end{array}
+\right]
+$$
+Do you think it is possible to decide, by inspection of an augmented matrix, whether or not the corresponding linear system will be consistent or inconsistent? 
+
+In our examples so far we have seen linear systems having no solutions, a unique solution, or perhaps an infinite number of solutions. 
+These examples suggest the following definition. 
+
+::: {#def- } 
+Two linear systems are called \index{equivalent} **equivalent**  if they have the same solution set. 
+::: 
+
+::: {#exm- } 
+Find a system of linear equations with three unknowns $x,y,z$ whose solutions are 
+$x=6+5t$, $y=4+3t$, $z=2+t$
+where $t$ is arbitrary.
+We want to eliminate $t$. Solving for $t$ yields $t=z-2$. By substitution, $x=6+5(z-2)$ and $y=4+3(z-2)$. Thus we have a linear system 
+$$
+\begin{cases}
+x-5z=-4\\
+y-3z =-2
+\end{cases}
+$$
+which has an infinitely many solutions.
+::: 
+
+::: {#thm- } 
+\label{proprowoperations}
+Linear systems of equations are equivalent if each can be obtained from the other by one or more of the following operations.
+ 
+- Interchange the order of the equations.
+- Multiply (or divide) one equation by a nonzero scalar.
+- Add one multiple of one equation to another.
+:::
+
+
+::: {.proof }
+If we consider the solution set as a geometric object, it should be very easy to understand that they way in which we write the equations that represents the object does not change the object. Thus it should be obvious that interchanging the order of the equations will not change the solutions to a linear system. Neither will multiplying (or dividing) both sides of an equation by a nonzero constant. 
+
+Let system $A$ be an $m\times n$ system represented by 
+\begin{equation}
+\label{syseqA}
+\begin{cases}
+a_{11} x_1+a_{12} x_2+\cdots +a_{1n} x_n =  b_1 \\
+\hfill \vdots \hfill \\
+a_{i1} x_1+a_{i2} x_2+\cdots +a_{in} x_n =  b_i  \\
+\hfill \vdots \hfill \\
+a_{m1} x_1+a_{m2} x_2+\cdots +a_{mn} x_n =  b_m & \\
+\end{cases}
+\end{equation}
+Consider system $B$ obtained from system $A$ by adding $k$ times equation $i$ to equation 
+$j$ as follows:
+\begin{equation}
+\label{syseqB}
+\begin{cases}
+a_{11} x_1+a_{12} x_2+\cdots +a_{1n} x_n =  b_1  \\
+ \qquad \qquad \vdots \qquad \qquad \qquad  \vdots \\
+(a_{j1}+k a_{i1}) x_1+(a_{j2}+k a_{i2}) x_2+\cdots +(a_{jn}+k a_{in}) x_n =  b_j +k b_i\\ \qquad \qquad  \vdots \qquad \qquad \qquad  \vdots \\
+a_{m1} x_1+a_{m2} x_2+\cdots +a_{mn} x_n =  b_m \\
+\end{cases}
+\end{equation}
+Let $S_A$ and $S_B$ be the solutions sets of systems $A$ and $B$, respectively. 
+We will show $S_A=S_B$.
+Let $x_0=(\vlist{x}{n})$ be a solution of system $A$. 
+Thus $x_0$ satisfies every linear equation in \ref{syseqA}. 
+So $x_0$ satisfies every equation in system B except possibly the $j$th equation. 
+Working with the $j$th equation in system $B$ we find 
+\begin{align*}
+& (a_{j1}+k a_{i1}) x_1+(a_{j2}+k a_{i2}) x_2+\cdots +(a_{jn}+k a_{in}) x_n \\
+& \qquad = a_{j1}x_1+\cdots +a_{jn} x_n+k (a_{i1}x_1+\cdots a_{jn}x_n)\\
+& \qquad =  b_j +k b_i.\end{align*}
+This shows $x_0$ also satisfies the $j$th equation of system $B$. Since $x_0$ satisfies every equation in \ref{syseqB}, $x_0$ is also a member of $S_B$. So far we have shown $S_A\subseteq S_B$. 
+Conversely, assume $x_0$ is a solutions to every equation in \ref{syseqB}.
+Working with the $j$th equation of system $A$ we find,
+\begin{align}
+& a_{j1} x_1+a_{j2} x_2+\cdots +a_{jn}x_n=b_j \notag \\
+\Longleftrightarrow \quad & a_{j1} x_1+ (k a_{i1}-ka_{i1})x_1 
+%+ a_{j2} x_2+ (k a_{21}-ka_{21})x_2
++\cdots +a_{jn} + (k a_{i1}-ka_{i1})x_n=b_j \label{eqsys}\notag \\
+\Longleftrightarrow \quad & (a_{j1}+k a_{i1}) x_1+(a_{j2}+k a_{i2}) x_2+\cdots +(a_{jn}+k a_{in}) x_n = b_j+k b_i. 
+\end{align}
+Notice \ref{eqsys} holds since $x_0$ satisfies system $B$; and thus $x_0$ satisfies the $j$th equation of system $A$. Therefore $S_A=S_B$ as desired.  
+::: 
+
+
+
+While working through the details of the following two examples, notice how the operations in \ref{proprowoperations} are being used. 
+
+::: {#exm- } 
+Let $a, b$, and $c$ be constants. Solve the linear system
+$$
+\begin{cases}
+y+z  =a \\
+x+z =b \\
+x+y = c.
+\end{cases}
+$$
+Eliminating $z$ from the first and second equations we obtain the system
+$$
+\begin{cases}
+x-y = b-a \\
+x+y=c
+\end{cases}
+$$
+Solving for $x$ yields $x=(c+b-a)/2$. Using the original system we find $y$ and $z$ to be
+$$
+y= c-x=c-(c+b-a)/2=(c-b+a)/2
+$$
+$$
+z=a-y=a-(c-b+a)/2=(a+b-c)/2
+$$
+Therefore, the solution to the system is 
+$$
+(x,y,z)=\left(\frac{c+b-a}{2},\frac{a+c-b}{2},\frac{a+b-c}{2}\right).
+$$
+::: 
+
+::: {#exm- } 
+Find the smallest positive integer $C$ such that $x, y, z$ are integers and satisfies the linear system of equations
+$$
+\begin{cases}
+2x+y =C \\
+3y+z =C \\
+x+4z = C.
+\end{cases}
+$$
+Multiply the third equation by $-2$ and add to the first equation, obtaining $y-8z=-C$. 
+Multiplying the second equation by 8 and adding to $y-8z=-C$, yields $25y=7C$. 
+Solving for $y$ we obtain $y=(7/25)C$. 
+By substitution, $x=(9/25)C$ and $z=(4/25)C$. Therefore, 25 is the smallest integer $C$ such that $x,y,z$ are integers and solves the system.
+::: 
+
+We will solve a linear system of equations using elementary row operations on matrices using a procedure known as \index{Gaussian elimination} **Gaussian elimination** . The solution set will be a collection of vectors. Here is the overall strategy to solving linear systems using matrices. 
+$$
+\small
+\begin{tabular}{c}
+$\left\{\parbox[c]{1.75cm}{\begin{center}linear system of equations\end{center}}\right\}$  $\rightarrow$  
+$\left\{\parbox[c]{1.75cm}{\begin{center}matrix representation of system\end{center}}\right\}$ 
+$\rightarrow$ 
+$\left\{\parbox[c]{1.75cm}{\begin{center}row echelon form of system\end{center}}\right\}$
+$\rightarrow$  
+$\left\{\parbox[c]{1.75cm}{\begin{center}solutions of system as a set of vectors\end{center}}\right\}$
+\end{tabular}$$
+
+::: {#def- } 
+The following operations are collectively known as \index{elementary row operations} **elementary row operations** .
+ 
+- Interchange two rows.
+- Multiply a row by a nonzero scalar.
+- Add a multiple of a row from another row.
+::: 
+
+From \ref{proprowoperations} it is obvious that applying elementary row-operations to a linear system of equations leads to an equivalent system. Reducing a linear system of equations, while preserving the solutions set, is an extremely useful idea that we will develop extensively.  
+
+For example, in \ref{gjeunique} (see below) we find that the linear systems 
+\begin{equation}
+\label{refex}
+\begin{cases}
+x+2y+z =3 \\
+2x+5y-z =-4 \\
+3x-2y-z =5
+\end{cases}
+\qquad 
+\qquad 
+\begin{cases}
+x=2 \\
+y=-1 \\
+z=3
+\end{cases}
+\end{equation}
+are equivalent. 
+In \ref{gjeunique} we will show how to apply elementary row-operations to obtain the system on the right. 
+While the system on the left might be a given linear system of equations, the system on the right is solved. 
+
+::: {#def- } 
+A matrix is said to be in \index{row echelon form} **row echelon form** if it satisfies all the following conditions.
+ 
+- All rows with at least one nonzero coefficient are above any rows of all zeroes. 
+- The first nonzero number from the left, (called the \index{leading coefficient} **leading coefficient** ) of a nonzero row is always strictly to the right of the leading coefficient of the row above it.
+- All entries in a column below a leading coefficient are zeroes.
+ 
+Further, a matrix is said to be in 
+\index{reduced row echelon form} **reduced row echelon form** if it is in row echelon form and the additional condition holds.
+ 
+\setcounter{enumi}{3} 
+- Every leading coefficient is 1 and is the only nonzero entry in its column.
+::: 
+
+For example, the augmented matrices for the linear systems in \ref{refex} are
+$$
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 & 2 & 1 & 3 \\
+2 & 5 & -1 & -4 \\
+3 & -2 & -1 & 5
+\end{array}
+\end{bmatrix}\qquad
+\qquad
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 & 0 & 0 & 2 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1& 3
+\end{array}
+\end{bmatrix}.
+$$
+By checking conditions (i)-(iv) we can see that the matrix on the right is in reduced row echelon form. 
+For more examples, consider the following matrices.
+$$
+A = \begin{bmatrix} 0 & 5 \\ 2 & 3 \end{bmatrix}
+\qquad
+B = \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix}
+\qquad
+C = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}
+$$
+$$
+D = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}
+\qquad 
+E = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+\qquad
+F = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}
+$$
+Notice that matrices $D$ and $E$ are in reduced row echelon form and the others are not. 
+
+::: {#exm- } 
+\label{gjeunique}
+Use Gauss-Jordan elimination to solve the system.
+$$
+\begin{cases}
+x+2y+z =3 \\
+2x+5y-z =-4 \\
+3x-2y-z =5
+\end{cases}
+$$
+Using row operations on the augmented matrix we obtain the reduced row echelon form.
+\begin{align*}
+& \begin{bmatrix}
+\begin{array}{ccc|c}
+1 & 2 & 1 & 3 \\
+2 & 5 & -1 & -4 \\
+3 & -2 & -1 & 5
+\end{array}
+\end{bmatrix}\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_1+R_2}
+\\
+\stackrel{\longrightarrow}{\scriptstyle -3R_1+R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 & 2 & 1 & 3 \\
+0 & 1 & -3 & -10 \\
+0 & -8 & -4 & -4
+\end{array}
+\end{bmatrix}
+\\ & \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle 8 R_2+R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 & 2 & 1 & 3 \\
+0 & 1 & -3 & -10 \\
+0 & 0 & -28 & -84
+\end{array}
+\end{bmatrix}
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -\frac{1}{28}R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 & 2 & 1 & 3 \\
+0 & 1 & -3 & -10\\
+0 & 0 & 1 & 3
+\end{array}
+\end{bmatrix}
+\\ &  \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle 3R_3+R_2}
+\\
+\stackrel{\longrightarrow}{\scriptstyle -R_3+R_1}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 & 2 & 0 & 0 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1 & 3
+\end{array}
+\end{bmatrix}\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_2+R_1}
+\end{array}
+\begin{bmatrix}
+\begin{array}{ccc|c}
+1 & 0 & 0 & 2 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1& 3
+\end{array}
+\end{bmatrix}.
+\end{align*}
+Therefore the unique solution is  $x=2$, $y=-1$, and $z=3$.
+::: 
+
+::: {#exm- } 
+Use the Gauss-Jordan elimination method to solve the following linear system.
+\begin{equation}
+\label{gjee1}
+\begin{cases}
+x+y -2z+4t =5 \\
+2x+2y-3z+t =3 \\
+3x+3y-4z-2t  = 1
+\end{cases}
+\end{equation}
+Using row operations on the augmented matrix we obtain the reduced row echelon form.
+\begin{align*}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 & 1 & -2 & 4 & 5 \\
+2 & 2 & -3 & 1 & 3 \\
+3 & 3 & -4 & -2 & 1
+\end{array}
+\end{bmatrix} 
+& \begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_1+R_2}
+\\
+\stackrel{\longrightarrow}{\scriptstyle -3R_1+R_3}
+\end{array} 
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 & 1 & -2 & 4 & 5 \\
+0 & 0 & 1 & -7  & -7 \\
+0 & 0 & 2 & -14 & -14
+\end{array}
+\end{bmatrix} 
+\\ & 
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_2+R_3}
+\\
+\stackrel{\longrightarrow}{\scriptstyle 2R_2+R_1}
+\end{array}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 & 1 & 0 & -10 & -9 \\
+0 & 0 & 1 & -7 & -7 \\
+0 & 0 & 0 & 0 & 0 
+\end{array}
+\end{bmatrix}
+\end{align*}
+The system in \ref{gjee1} is equivalent to 
+$$
+\begin{cases}
+x+y-10t =-9 \\
+z-7t  = -7
+\end{cases}
+\quad \text{ or more simply } \quad 
+\begin{cases}
+x =-9-y+10t \\
+z =-7+7t.
+\end{cases}
+$$
+Therefore
+$$
+\{(x,y,z,w)\in \mathbb{R}^4 \mid x=-9-y+10t, y=s, z=-7+7t, w=t, 
+\text{ for } s,t\in \mathbb{R}\}.
+$$
+is the solution set.
+::: 
+
+::: {#exm- } 
+Use the Gauss-Jordan elimination method to solve the following linear system.
+$$
+\begin{cases}
+x_1+x_2-2x_3+3x_4 =4 \\
+2x_1+3x_2+3x_3-x_4=3 \\
+5 x_1+7 x_2+4 x_3+x_4 = 5
+\end{cases}
+$$
+Using row operations on the augmented matrix we obtain the reduced row echelon form.
+\begin{align*}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 & 1 & -2 & 3 & 4 \\
+2 & 3 & 3 & -1 & 3 \\
+5 & 7 & 4 & 1 & 5 
+\end{array}
+\end{bmatrix} 
+& \begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_1+R_2}
+\\
+\stackrel{\longrightarrow}{\scriptstyle -5R_1+R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 & 1 & -2 & 3 & 4 \\
+0 & 1 & 7 & -7 & -5 \\
+0 & 2 & 14 & -14 & 15
+\end{array}
+\end{bmatrix}
+\\ & \begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_2+R_3}
+\end{array}
+\begin{bmatrix}
+\begin{array}{cccc|c}
+1 & 1 & -2 & 3 & 4\\
+0 & 1 & 7 & -7 & -5 \\
+0 & 0 & 0 & 0 & 25
+\end{array}
+\end{bmatrix}
+\end{align*}
+Notice the last row corresponds to the equation $0x_1+0x_2+0x_3+0x_4=25$. Therefore there are no solutions to this system.
+Actually using Gauss-Jordan elimination means reaching reduced 
+row echelon form; however, once we encounter the row 
+$[0 \, \, \,  0  \, \, \,  0  \, \, \,  0  \, \, \,  25 ]$ 
+we immediately stop and reach the correct conclusion: no solutions to the system. 
+::: 
+
+::: {#exm- } 
+Find the polynomial of degree 2 whose graph goes through the points $(1,-1)$, $(2,3)$, and $(3,13)$.
+Let $f(t)=a+b t+ c t^2$ be such a polynomial. Using the given points we setup a system and solve.
+\begin{align*}
+& 
+\left[ \begin{array}{c|c} 
+\begin{matrix}
+a & b & c\\
+a & 2b & 4c \\
+a & 3b & 9c
+\end{matrix} &  
+\begin{matrix}
+-1 \\ 3 \\ 13
+\end{matrix} 
+\end{array} \right]
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -R_1+R_2} \\
+\stackrel{\longrightarrow}{\scriptstyle -R_1+R_3}
+\end{array}
+\left[ \begin{array}{c|c} 
+\begin{matrix}
+a & b & c\\
+0 & b & 3c \\
+0 & 2b & 8c
+\end{matrix} &  
+\begin{matrix}
+1 \\ 4 \\ 14
+\end{matrix} 
+\end{array} \right]
+\\ & \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -2R_2+R_3} 
+\end{array}
+\left[ \begin{array}{c|c} 
+\begin{matrix}
+a & b & c\\
+0 & b & 3c \\
+0 & 0 & 2c
+\end{matrix} &  
+\begin{matrix}
+-1 \\ 4 \\ 6
+\end{matrix} \end{array} \right]
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle \frac{1}{2}R_3} 
+\end{array}
+\left[ \begin{array}{c|c} 
+\begin{matrix}
+a & b & c\\
+0 & b & 3c \\
+0 & 0 & c
+\end{matrix} &  
+\begin{matrix}
+-1 \\ 4 \\ 3
+\end{matrix} 
+\end{array} \right]
+\\ & \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -3R_3+R_2} 
+\end{array}
+\left[ \begin{array}{c|c} 
+\begin{matrix}
+a & b & c\\
+0 & b & 0 \\
+0 & 0 & c
+\end{matrix} &  
+\begin{matrix}
+-1 \\ -5 \\ 3
+\end{matrix} 
+\end{array} \right]
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -R_2+R_1} 
+\end{array}
+\left[ \begin{array}{c|c}
+\begin{matrix}
+a& 0 & c\\
+0 & b & 0 \\
+0 & 0 & c
+\end{matrix} &  
+\begin{matrix}
+4 \\ -5 \\ 3
+\end{matrix} 
+\end{array} \right]
+\\ & \qquad \qquad
+\begin{array}{c}
+\stackrel{\longrightarrow}{\scriptstyle -R_3+R_1} 
+\end{array}
+\left[ \begin{array}{c|c} 
+\begin{matrix}
+a & 0 & 0 \\
+0 & b & 0 \\
+0 & 0 & c
+\end{matrix} &  
+\begin{matrix}
+1 \\ -5 \\ 3
+\end{matrix} 
+\end{array} \right].
+\end{align*}
+Therefore the required polynomial is $f(t)=3t^2-5t+1$.
+::: 
+
+##  Exercises
+
+::: {#exr- } 
+Verify that $(2,3,-1)$ is a solution of the linear system.
+ 
+- $\begin{cases}x+2y+z=7 \\ x-y=-1 \\ 4x+y+z=10 \end{cases}$
+- $\begin{cases} x+y=5 \\ x-z=3 \\ y+z=2 \end{cases}$
+::: 
+
+
+::: {#exr- } 
+Verify that every triple of the form $(7-2k,8+6k,k)$ is a solution of the linear system of equations 
+ 
+- $\begin{cases} x_1+2x_3=7 \\ x_2-6x_3=8 \end{cases}$
+- $\begin{cases} 2x_1+4x_3=14 \\ x_1+3x_2-16x_3=31 \end{cases}$
+::: 
+
+::: {#exr- } 
+Do the following systems have no solutions, exactly one solution, or infinitely many solutions? Justify your answer. 
+ 
+- $\begin{cases}x+y=1\\ x+2y=1 \end{cases}$
+- $\begin{cases} 3x+y=1\\ y=-2 \end{cases}$
+- $\begin{cases}x+y=1\\ 2x+2y=2 \end{cases}$
+- $\begin{cases}3x+y=2 \\ 6x+2y=4 \end{cases}$
+::: 
+
+::: {#exr- } 
+Sketch the graph of each equation of the linear system and decide whether it has no solutions, exactly one solution, or infinitely many solutions.
+ 
+- $\begin{cases} x+y=2\\ 2x+3y=0 \end{cases}$
+- $\begin{cases} -x+3y=2\\ 2x-6y=-4 \end{cases}$
+::: 
+
+::: {#exr- } 
+Find the solutions, if any, of the following linear systems of equations without using matrices. If an equation has more than one solution, write the general solution. 
+ 
+- $\begin{cases} 3x-2y= 7 \\ 2x+y=15 \end{cases}$
+- $\begin{cases} x+y=7\\ 3x+4y=12  \end{cases}$
+- $\begin{cases} 2x_1-3x_2=1\\ 4x_1-6x_2=-2\\ x_1+x_2=1 \end{cases}$
+- $\begin{cases} 2x_1-5x_2=12 \end{cases}$
+- $\begin{cases} i x_1-3ix_2= 1\\ (2+i)x_1-x_2=-1 \end{cases}$
+- $\begin{cases} (1+i)x_1-2ix_2=2\\ 2x_1-3i x_2=4-3i \end{cases}$
+::: 
+
+::: {#exr- } 
+If possible, find the point(s) of intersection.
+
+- $x-4y=11$ and $7x-2y=9$
+- $x-4y+3z=11$, $7x-2y-z=-1$, $7x-2y+z=-2$
+::: 
+
+::: {#exr- } 
+Let $u=(1,1,2,-1)$ and $v=(1,1,1,0)$. For which scalars $a$ and $b$ is it true that $a u+b v$ is a solution to the following system?
+ 
+- $\begin{cases} 4x-2y-z-w=1 \\ x+3y-2z-2w=2 \end{cases}$
+- $\begin{cases}x-4y-z-2w=4 \\ 7x+y-5z-2w=12 \end{cases}$
+::: 
+
+
+
+::: {#exr- } 
+Find all solutions, if any exist, for the following linear systems of equations.
+ 
+- $\begin{cases} x-y=1\\ 2x=4 \end{cases}$
+- $\begin{cases} 2x+3y-z=19\\ 3x-2y+3z=7\end{cases}$
+- $\begin{cases}x-3y=2 \\-2x+6y=-4\end{cases}$
+- $\begin{cases}x-y+2z-2w=1\\2x+y+3w=4 \\2x+y+3w=6\end{cases}$
+::: 
+
+
+::: {#exr- } 
+Find all solutions, if any exist, for the following linear systems of equations.
+ 
+- $\begin{cases}2x-z=-1\\x+y-z=0\\2x-y+2z=3\end{cases}$
+- $\begin{cases}2x-3y+2z=1\\x-6y+z=2\\-x-3y-z=1\end{cases}$
+::: 
+
+
+
+::: {#exr- } 
+Find all solutions, if any exist, for the following linear systems of equations.
+ 
+- $\begin{cases} x_1+2x_2-x_3=0\\ 2x_1+5x_2+5x_3=0\\ x_1+4x_2+7x_3=0\\ x_1+3x_2+3x_3=0 \end{cases}$
+- $\begin{cases} x+y+z+w=1\\ 2x-2y+z+2w=3\\ 2x+6y+3z+2w=1\\ 5x-3y+3z+5w=8 \end{cases}$
+::: 
+
+
+
+::: {#exr- } 
+For what values of the constant $k$ do the systems have no solution, exactly one solution, or infinity many solutions. 
+ 
+- $\begin{cases} x+y=1\\ 3x+3y=k \end{cases}$
+- $\begin{cases} x+ky=1\\ 2x-y=k \end{cases}$
+::: 
+
+
+::: {#exr- } 
+Find $a, b, c$ such that 
+$$
+\frac{x^2-x+3}{(x^2+2)(2x-1)}=\frac{a x+b}{x^2+2}+\frac{c}{2x-1}.
+$$
+::: 
+
+::: {#exr- } 
+Let $a$ and $b$ be arbitrary constants. Find all solutions to the linear system. 
+
+- $\begin{cases} x+2y=a\\ 3x+5y=b \end{cases}$
+- $\begin{cases} a x+2y=1\\ 3x+by=4 \end{cases}$
+::: 
+
+::: {#exr- } 
+Let $a$ and $b$ be arbitrary constants. Find all solutions to the linear system. 
+ 
+- $\begin{cases}x+2y+3z=a\\ x+3y+8z=b\\ x+2y+2z=c \end{cases}$
+- $\begin{cases} x-2y+4z=a\\ x-3y+5z=b\\ x-2y+6z=c \end{cases}$
+::: 
+
+::: {#exr- } 
+A system of linear equations all of whose constant terms are zero is called a 
+\index{homogenous system} **homogenous system**. 
+
+- Show that a homogenous system always has at least one solution.
+- Give examples to show that a homogenous system may have more than one solution or exactly one solution. 
+::: 
+
+::: {#exr- } 
+Write the system corresponding to each augmented matrix.
+ 
+- $\left[\begin{array}{ccc|c}
+1 & 2 & 1 & 1 \\
+0 & 4 & 0 & 1 \\
+0 & 0 & 3 & 3
+\end{array}\right]$
+- $\left[\begin{array}{cccc|c}
+1 & 0 & 0 & 0 & 0
+\end{array}\right]$
+- $\left[\begin{array}{ccc|c}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0
+\end{array}\right]$
+- $\left[\begin{array}{c|c}
+2 & 1 \\
+0 & 1 \\
+1 & 2
+\end{array}\right]$
+- $\left[\begin{array}{c|c}
+1 & 1 \\
+1 & 0
+\end{array}\right]$
+- $\left[\begin{array}{cccc|c}
+1 & 1 & 1 & 1 & 0
+\end{array}\right]$
+::: 
+
+
+::: {#exr- } 
+Which of the following matrices are in reduced row echelon form?
+ 
+- $\begin{bmatrix}
+0 & 1 & 2 & 0 & 3 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0
+\end{bmatrix}$
+- $\begin{bmatrix}
+1 & 0 & 0 & 2 & 1 \\
+0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0
+\end{bmatrix}$
+- $\begin{bmatrix}
+1 & 1 & 1 \\
+0 & 0 & 1\\
+0 & 0 & 0 \\
+0 & 0 & 0 
+\end{bmatrix}$
+- $\begin{bmatrix}
+0 & 0 & 1\\
+0 & 0 & 1\\
+0 & 0 & 1\\
+\end{bmatrix}$
+::: 
+
+
+::: {#exr- } 
+Which of the following matrices are in reduced row echelon form?
+ 
+- $\begin{bmatrix}
+0 & 0 & 0 & 1  \\
+0 & 0 & 0 & 0\\
+\end{bmatrix}$
+- $\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+\end{bmatrix}$
+- $\begin{bmatrix}
+1 & 0 & 0 & 3 & 1 \\
+0 & 0 & 0 & 1 & 1 \\
+0 &0 & 0 & 0 & 1
+\end{bmatrix}$
+- $\begin{bmatrix}
+1 & 0 & 2 & 1 \\
+0 & 1 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}$
+::: 
+
+::: {#exr- } 
+Find all solutions of the linear system using the Gauss-Jordan elimination method.
+ 
+- $\begin{cases} x_2+2x_4+3x_5=0\\ 4x_4+8x_5=0 \end{cases}$
+- $\begin{cases} 3x+4y =0\\ -2x+7y=0 \end{cases}$
+::: 
+
+
+
+::: {#exr- } 
+Find all solutions of the linear system using the Gauss-Jordan elimination method.
+ 
+- $\begin{cases} x_4+2x_5-x_6=2 \\ x_1+2x_2+x_5-x_6=0\\ x_1+2x_2+2x_3-x_5+x_6=2 \end{cases}$
+- $\begin{cases} 3x_1+3x_2-4x_3+x_4=2 \\ x_1+x_2-x_3-x_4=5 \end{cases}$
+- $\begin{cases} 2 x_1+3x_2+4x_3=6-x_4 \\ 3x_1-2x_2-x_4=1+4x_3 \\ 3x_1+3x_3+x_4=4-x_2 \\ x_2+x_3-4x_4=-3-4x_1\end{cases}$
+- $\begin{cases} 4x_1+3x_2+2x_3-x_4=4 \\ 5x_1+4x_2+3x_3-x_4=4\\ -2x_1-2x_2-x_3+2x_4=-3\\ 11x_1+6x_2+4x_3+x_4=11 \end{cases}$
+- $\begin{cases} 2x_1-3x_2+x_3=5 \\ x_1+x_2-x_3=3\\ 4x_1-x_2-x_3=1 \end{cases}$
+- $\begin{cases} x_1-x_2=4\\ 2x_1+x_2=7\\ 5x_1-2x_2=19 \end{cases}$
+::: 
+
+::: {#exr- } 
+Find all $4\times 1$ matrices in reduced row echelon form. 
+::: 
+
+
+::: {#exr- } 
+How many types of $3\times 2$ matrices in reduced row echelon form are there?
+- How many types of $2\times 3$ matrices in reduced row echelon form are there?
+::: 
+
+::: {#exr- } 
+
+- Describe the possible reduced row echelon forms for a matrix with two rows and two columns. 
+- Describe the possible reduced row echelon forms for a matrix with three rows and three columns. 
+
+::: 
+
+::: {#exr- } 
+Find the polynomial of degree 3 whose graph passes through the points 
+$(0,1)$, $(1,0)$, $(-1,0)$, and $(2,-15)$. Sketch the graph of this cubic. 
+::: 
+
+::: {#exr- } 
+Find the polynomial of degree 4 whose graph passes through the points $(1,1)$, $(2,-1)$, $(3,-59)$, and $(-2, -29)$. Sketch the graph of this quartic.
+::: 
+
+::: {#exr- } 
+Find the values of $k$, if any, for which the system has
+
+- only one solution, 
+- no solutions, 
+- an infinite number of solutions
+ 
+- $\begin{cases} x_1-x_2=3 \\ 3x_1+kx_2=6 \end{cases}$
+- $\begin{cases}x_1+2k x_2 =7\\ x_1+(k^2+1)x_2=3 \end{cases}$
+- $\begin{cases}k x_1-x_2=1 \\ x_1+k x_2=i\end{cases}$
+- $\begin{cases} k x+|k| y=1 \\ |k|x-ky=-1 \end{cases}$
+::: 
+
+::: {#exr- } 
+Find values for $a$ such that the system of linear equations
+$$\begin{cases} x_1-3x_2+x_3=1 \\ 2x_1+x_2-x_3=-1 \\ 5x_1-8x_2+(a^2-2)x_3=a  \end{cases}$$
+will have 
+
+- infinitely many solutions, 
+- no solutions
+- exactly one solution.
+::: 
+
+
+::: {#exr- } 
+Use Gauss-Jordan elimination to solve the linear system
+$$
+\left\{ \begin{array}{lll}
+a x_1+ b x_2 & & =r \quad (a\neq 0) \\ 
+c x_1+ d x_2 & & =s \quad (e\neq 0)\\ 
+& e x_3+f x_4 & =t \\
+& g x_3+h x_4 & =u \\
+\end{array}\right.$$
+State conditions on $a, b, c, d, e, f, g$ and $h$ which guarantee a unique solution.
+::: 
+
+::: {#exr- } 
+Show that the system
+$$\begin{cases}a_1 x+ b_1 y+c_1 z=0 \\ a_2 x+b_2 y +c_2 z=0 \end{cases}$$
+always has a solution other than $x=0$ and $y=0$.
+::: 
+
+
+::: {#exr- } 
+What can you say about the last row of the reduced row echelon form of the following matrix?
+$$
+\begin{bmatrix}
+1 & 2 & 3 & \cdots & n\\
+n+1 & n+2 & n+3 & \cdots & 2n \\
+\vdots & \vdots & \vdots & \vdots &  \vdots \\
+n^2-n+1 & n^2-n+2 & n^2-n+3 & \cdots & n^2
+\end{bmatrix}
+$$
+::: 
+
+
+::: {#exr- } 
+Show that the linear system of equations
+$$\begin{cases} 3x_1+2x_2-4x_3=a \\ -4x_1+x_2-x_3 =b \\ 7x_1+12x_2-22x_3 =c \end{cases}$$
+will have infinitely many solutions if $c=5a+2b$.
+::: 
+
+
+::: {#exr- } 
+Find an equation of the form $x^2+y^2+a x+by+c=0$  of the circle passing through the following points. 
+ 
+- $(-2,1)$, $(5,0)$, and $(4,1)$
+- $(1,1)$, $(5,-3)$, and $(-3,-3)$
+::: 
+
+

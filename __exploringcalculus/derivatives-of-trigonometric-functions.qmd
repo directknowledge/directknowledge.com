@@ -1,0 +1,285 @@
+---
+pagetitle: "Derivatives of Trigonometric Functions - Exploring Calculus"
+---
+# "Derivatives of Trigonometric Functions"
+
+
+## Derivatives of the Basic Trigonometric Functions
+
+
+::: {#thm- } 
+The trigonometric functions sine, cosine, tangent, cotangent, cosecant, and secant are all differentiable functions on their domain and their derivative functions are:
+\[
+\begin{array}{lllll}
+\ds \frac{d}{dx}\sin  x =\cos  x 
+& \quad & \ds \frac{d}{dx}\cos  x =-\sin  x  
+& \quad & \ds \frac{d}{dx}\tan  x =\sec ^2x \\[10pt]
+\ds \frac{d}{dx}\cot  x =-\csc ^2x 
+& & \ds \frac{d}{dx}\sec  x =\sec  x \tan  x
+& & \ds \frac{d}{dx}\csc  x =-\csc  x \cot  x 
+\end{array}
+\] 
+::: 
+
+::: {.proof }
+
+For the derivative of the \index{cosine function} **cosine function** , we use the formula
+\[
+\cos (A+B)=\cos  A \cos  B-\sin  A \sin  B
+\]
+along with the definition of the derivative:
+\begin{align*}
+\frac{d}{dx}\cos  x & =\lim _{h\to 0}\frac{\cos  (x+h)-\cos  x}{h} \\[10pt]
+& =\lim _{h\to 0}\frac{\cos  x \cos  h-\sin  x \sin  h-\cos  x}{h} \\[10pt]
+& =\lim _{h\to 0}\frac{\cos  x(\cos  h-1) -\sin  x \sin  h}{h} \\[10pt]
+& =\lim _{h\to 0}\frac{\cos  x(\cos  h-1)}{h}+\lim _{h\to 0}\frac{ -\sin  x \sin  h}{h} \\[10pt]
+& =(\cos  x)\lim _{h\to 0}\frac{(\cos  h-1)}{h}-\sin  (x)\lim _{h\to 0}\frac{ \sin  h}{h} \\[10pt]
+& =(\cos x)(0)-(\sin x)(1) \\[10pt]
+& =-\sin x.
+\end{align*}
+
+For the derivative of the \index{sine function} **sine function** , we use the formula
+\[
+\sin (A+B)=\sin  A \cos  B+\cos  A \sin  B
+\]
+along with the definition of the derivative:
+\begin{align*}
+\frac{d}{dx}\sin  x & =\lim _{h\to 0}\frac{\sin  (x+h)-\sin  x}{h} \\[10pt]
+& =\lim _{h\to 0}\frac{\sin  x \cos  h+\cos  x \sin  h-\sin  x}{h} \\[10pt]
+&=\lim _{h\to 0}\frac{\sin  x(\cos  h-1) +\cos  x \sin  h}{h} \\[10pt]
+& =\lim _{h\to 0}\frac{\sin  x(\cos  h-1)}{h}+\lim _{h\to 0}\frac{ \cos  x \sin  h}{h} \\[10pt]
+&=(\sin  x)\lim _{h\to 0}\frac{(\cos  h-1)}{h}+\cos  (x)\lim _{h\to 0}\frac{ \sin  h}{h} \\[10pt]
+&=(\sin x)(0)+\cos (x)(1)\\[10pt]
+&=\cos x.
+\end{align*}
+
+For the derivative of the \index{tangent function} **tangent function** , we use the formula 
+\[
+\ds \tan  x=\frac{\sin  x}{\cos  x}
+\] 
+along with the quotient rule:
+\begin{align*}
+\frac{d}{dx}\tan  x =\frac{(\cos  x)(\cos  x)-\sin  x(-\sin  x)}{\cos  ^2x}  =\frac{\cos ^2 x+\sin ^2x}{\cos  ^2x}
+=\sec ^2x.
+\end{align*}
+
+For the derivative of the \index{cotangent function} **cotangent function** , we use the formula 
+\[
+\ds \cot  x=\frac{\cos x}{\sin x}
+\] 
+along with the quotient rule:
+\[
+\frac{d}{dx}\cot  x =\frac{\sin  x(-\sin  x)-(\cos  x)(\cos  x)}{\sin ^2 x} =-\csc ^2x.
+\]
+
+For the derivative of the \index{secant function} **secant function** , we use the formula 
+\[
+\ds \sec  x=\frac{1}{\cos  x}
+\] 
+along with the quotient rule:
+\[
+\frac{d}{dx}\sec  x=\frac{(\cos  x)(0)-1(-\sin  x)}{\cos ^2x}=\frac{\sin  x}{\cos ^2x}=\sec  x \tan  x.
+\]
+
+For the derivative of the \index{cosecant function} **cosecant function** , we use the formula 
+\[
+\ds \csc  x=\frac{1}{\sin  x}
+\] 
+along with the quotient rule:
+\[
+\frac{d}{dx}\csc  x=\frac{(\sin  x)(0)-1(\cos  x)}{\sin ^2x}=-\csc  x \cot  x.
+\square
+\]
+::: 
+
+
+\begin{figure}[htbp]
+\begin{center}
+{\includegraphics[width=170pt]{_includes/p1.pdf}} 
+\caption{The graphs of $y=\sin x$ and $y=\cos x$.}
+\label{fig:}
+\end{center}
+\end{figure}
+
+## Derivatives of Trigonometric Functions and Simplification
+
+Since the trigonometric functions are differentiable functions on their domains they are also continuous functions on their domain.
+
+
+::: {#exm- } 
+Find the derivative of the function 
+\[
+\ds g(x)=\frac{x^2+\tan  x}{3x+2 \tan  x}.
+\]
+::: 
+
+::: {.solution }
+For the function $g$ we use the quotient rule and the derivative rules for sine and cosine, we determine,
+\[
+g'(x)=\frac{(3x+2 \tan  x)\left(2x+\sec ^2x\right)-\left(x^2+\tan  x\right)\left(3+2\sec ^2x\right)}{3x+2 \tan  x}.
+\square
+\]
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+\[
+\ds f(x)=\frac{\sin  x+\cos  x}{\sin  x-\cos x}.
+\]
+::: 
+
+::: {.solution }
+For the function $f$ we use the quotient rule, derivative rules for sine and cosine, and a few trigonometric identities, we determine,
+\[
+f'(x)=\frac{(\sin  x-\cos  x)(\cos  x-\sin  x)-(\sin  x+\cos  x)(\cos  x+\sin  x)}{(\sin  x-\cos  x)^2}.
+\]
+After expanding and simplifying, 
+$\ds
+f'(x)=\frac{-2}{1-\sin  2x}.
+$
+::: 
+
+
+\begin{figure}[ht]
+\centering
+\subfigure[$y=\tan x$ and $y=\sec^2 x$.]{
+\includegraphics[width=160pt]{_includes/p2.pdf}
+\label{fig:p2}
+}
+\subfigure[$y=\cot x$ and $y=-\csc^2 x$.]{
+\includegraphics[width=160pt]{_includes/p3.pdf}
+\label{fig:p3}
+}
+\subfigure[$y=\sec x$ and $y=\sec x \tan x$.]{
+\includegraphics[width=160pt]{_includes/p4.pdf}
+\label{fig:p4}
+}
+\subfigure[$y=\csc x$ and $y=-\csc x \cot x$.]{
+\includegraphics[width=160pt]{_includes/p5.pdf}
+\label{fig:p5}
+}
+\caption{Graphs of derivatives of trigonometric functions.}
+\label{fig:}
+\end{figure}
+
+
+## Exercises
+
+::: {#exr- } 
+Find all points on the curve $y=\cot  x,$ $0<x<\pi ,$ where the tangent line is parallel to the line $y=-x.$ Sketch the curve and tangent(s) together, labeling each with its equation.
+::: 
+
+::: {#exr- } 
+Find an equation for the tangent to the curve $y=1+\sqrt{2}\csc  x+\cot  x$ at the point $\left(\frac{\pi }{4},4\right)$ and find an equation for the horizontal tangent line.
+::: 
+
+::: {#exr- } 
+Suppose the function given by $s=\sin  t+\cos  t$ represents the position of a body moving on a coordinate line ($s$ in meters, $t$
+in seconds). Find the body's velocity, speed, and acceleration at time $t=\pi /4 \sec .$
+::: 
+
+::: {#exr- } 
+Is there a value of $b$ that will make 
+$g(x)=\left\{
+\begin{array}{cc}
+ x+b & x<0 \\
+ \cos  x & x\geq 0
+\end{array}
+\right .$ continuous at $x=0?$ Differentiable at $x=0?$ Give reasons for your answer.
+::: 
+
+::: {#exr- } 
+Find an equation of the tangent line to $y = 3 \tan x - 2 \csc x$ at $x=\frac{\pi}{3}$.
+::: 
+
+::: {#exr- } 
+Show that the function
+$
+ f(x) =
+ \left\{
+ \begin{array}{lr}
+    x^3\sin{\frac{1}{x}}&\text{if } x\neq 0 \\
+    0 & \text{if } x=0
+ \end{array}
+ \right.
+$
+has a continuous first derivative.
+::: 
+
+::: {#exr- } 
+Find the derivative of each of the following.
+ 
+- $\ds y=-10x+3 \cos  x$
+- $\ds y=\csc  x-4\sqrt{x}+7$
+- $\ds y=(\sin  x+\cos  x)\sec  x$
+- $\ds y=\frac{4}{\cos  x}+\frac{1}{\tan  x}$
+- $\ds y=x^2 \cos  x-2 x \sin  x-2 \cos  x$
+- $\ds s=\frac{1+\csc  t}{1-\csc  t}$
+- $\ds r=\theta  \sin  \theta +\cos  \theta $
+- $\ds p=(1+\csc  q) \cos  q$
+ 
+::: 
+
+::: {#exr- } 
+(a) Sketch the graph of the curve $y=\sin  x$ on the interval $-\frac{3\pi }{2}\leq x\leq 2\pi $ and their tangents at the $x$ values of $x=-\pi,$ $x=0,$ and $x=3\pi /2.$
+(b) Sketch the graph of the curve $y=1+\cos  x$ on the interval $-\frac{3\pi }{2}\leq x\leq 2\pi $ and their tangents at the $x$ values of
+$x=-\pi /3$ and $x=3\pi /2.$
+::: 
+
+::: {#exr- } 
+Find all points on the curve $y=\cot  x,$ $0<x<\pi ,$ where the tangent line is parallel to the line $y=-x.$ Sketch the curve and tangent(s) together, labeling each with its equation.
+::: 
+
+::: {#exr- } 
+Find an equation for the tangent to the curve $y=1+\sqrt{2}\csc  x+\cot  x$ at the point $\left(\frac{\pi }{4},4\right)$ and find an equation for the horizontal tangent line.
+::: 
+
+::: {#exr- } 
+Suppose the function given by $s=\sin  t+\cos  t$ represents the position of a body moving on a coordinate line ($s$ in meters, $t$
+in seconds). Find the body's velocity, speed, and acceleration at time $t=\pi /4 \sec .$
+::: 
+
+::: {#exr- } 
+Is there a value of $b$ that will make 
+$g(x)=\left\{
+\begin{array}{cc}
+ x+b & x<0 \\
+ \cos  x & x\geq 0
+\end{array}
+\right .$ continuous at $x=0?$ Differentiable at $x=0?$ Give reasons for your answer.
+::: 
+
+::: {#exr- } 
+Find an equation of the tangent line to $y = 3 \tan x - 2 \csc x$ at $x=\frac{\pi}{3}$.
+::: 
+
+::: {#exr- } 
+Show that the function
+$
+ f(x) =
+\left\{
+ \begin{array}{lr}
+    x^3\sin{\frac{1}{x}}&\text{if } x\neq 0 \\
+    0 & \text{if } x=0
+ \end{array}
+ \right.
+$
+has a continuous first derivative.
+::: 
+
+::: {#exr- } 
+Find the derivative of each of the following.
+ 
+- $  y=-10x+3 \cos  x$
+- $  y=\csc  x-4\sqrt{x}+7$
+- $  y=(\sin  x+\cos  x)\sec  x$
+- $  y=\frac{4}{\cos  x}+\frac{1}{\tan  x}$
+- $  y=x^2 \cos  x-2 x \sin  x-2 \cos  x$
+- $  s=\frac{1+\csc  t}{1-\csc  t}$
+- $  r=\theta  \sin  \theta +\cos  \theta $
+- $  p=(1+\csc  q) \cos  q$
+ 
+::: 
+
+

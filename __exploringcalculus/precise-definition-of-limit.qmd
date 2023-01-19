@@ -1,0 +1,139 @@
+---
+pagetitle: "Precise Definition of Limit - Exploring Calculus"
+---
+# Precise Definition of Limit
+
+
+In summary, a three-pronged approach to solving limits is often: (i) numerical approach by constructing tables of values (ii) graphical approach by sketching a graph by hand or using technology (iii) analytic approach by using algebra or calculus.
+
+The precise definition of a limit is given and it is shown through examples why the definition is needed. You may have already seen examples of estimating limits numerically and graphically. Each of these approaches produces an estimate of the limit, but it is the formal definition of the limit that allows us to prove results so that more analytic techniques for evaluating limits can be accomplished.
+
+::: {#def- } 
+Suppose that the domain of f contains points x arbitrarily close to c but different from c. 
+Then $\lim _{x\to c}f(x)=L$ means, for all $\epsilon >0$ there exists $\delta >0$, such that  
+$$
+|x-c|<\delta \Rightarrow |f(x)-L|<\epsilon 
+$$ 
+for any $x\neq c$ in the domain of $f.$ Concisely, a limit is used to describe the behavior of a function near a point but not at the point. 
+The function need not even be defined at the point. 
+If it is defined there, the value of the function at the point does not affect the limit. 
+Intuitively, 
+$$
+\lim _{x\to  c}f(x)=L
+$$ 
+means we can make $f(x)$ as close to $L$ as we wish by taking any $x$ sufficiently close to, but different from $c.$
+::: 
+
+::: {#exm- } 
+We will use a guessing method to show why the formal definition of a limit is a necessity.  (a) Use a table to guess the values of 
+$$
+L=\lim _{x\to 0}\frac{2\sqrt{x+1}-x-2}{x^2}.
+$$
+::: 
+
+::: {.proof }[Solution]   
+From the table 
+$$
+\begin{array}{cccccccc} x & -0.5 & -0.1 & -0.01 & -0.001 & 0 & 0.001 & 0.005 \\ f(x) & -0.3431 & -0.2633 & -0.2513 & -0.2501 & \text{undefined} & -0.2499 & -0.2494\end{array}
+$$
+The number $L$ is suggested to be $-0.25.$ Interestingly, if you try $x=0.0000001$ just to make sure you have taken numbers close enough to 0, you may find that the calculator gives the value 0. 
+Does this mean that the limit is 0? 
+No, the calculator may give you a false answer because when $x$ is small enough (like $0.0000001$) then 
+$$
+2\sqrt{x+1}-x-2
+$$ 
+seems like 0. But in fact $f(0.0000001)$ is not equal to 0. 
+The point is, using technology to verify a computation can lead to misunderstanding; and in fact, a formal definition of a limit is needed. 
+Using the formal definition of a limit, we can prove what the value of the limit is without any doubt. 
+This type of proof is usually called an epsilon-delta proof since the formal definition is usually stated with the greek letters $\epsilon $ (epsilon) and $\delta $ (delta).  
+(b) Use tables of values to find the limit 
+$$
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right).
+$$
+::: 
+
+::: {.proof }[Solution]   
+As before, we construct a table of values. 
+$$
+\begin{array}{cccccc} x & 1 & 0.5 & 0.1 & 0.05 & 0.01 \\ f(x) & 1.000028 & 0.124920 & 0.001088 & 0.000222 & 0.000101\end{array}
+$$
+From the table it appears that 
+$$
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right)=0.
+$$ 
+However, if we persevere with smaller values of $x,$ the next table suggests 
+$$
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right).=0.0001000=\frac{1}{10,0000}
+$$
+$$
+\begin{array}{ccc} x & 0.005 & 0.001 \\ f(x) & 1.00010009 & 0.00010000\end{array}
+$$
+In fact, 
+$$
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right) =\frac{1}{10,0000}
+$$ 
+which is easily proven once the formal limit definition isused to prove some interesting limit rules and continuity is discussed. 
+The precise definition of a limit is given. 
+Epsilon-delta proofs are given which prove that the limit of a linear function is the value of the function at the point. 
+Similarly for a quadratic function. The quadratic function proof involves a subtlety which is an important part of the calculus.
+::: 
+
+::: {#exm- }  Use an epsilon-delta argument to show that 
+$$
+\lim_{x\rightarrow -2} (7x+12)=-2
+$$
+::: 
+
+::: {.solution } 
+Let $\epsilon $ be any real number greater than zero. 
+We need to find a $\delta >0$ so that, $$
+|x-(-2)|<\delta \Rightarrow |7x+12-(-2)|<\epsilon .
+$$
+To do so note that, $ |(7x+12)-(-2)| =7|x+2|.$ 
+We find that $\delta =\epsilon /7$ is acceptable because, if $|x-(-2)|<\delta $ then 
+$$
+|7x+12-(-2)| =7|x+2| <7\delta =7\left(\frac{\epsilon }{7}\right)=\epsilon .
+$$ 
+::: 
+
+::: {#exm- }  
+Use an epsilon-delta argument to show that 
+$$
+\lim_{x\rightarrow \frac{-1}{3}} \left(-\frac{2}{3}x^2-\frac{4}{5}x-\frac{2}{3}\right)=\frac{-64}{135}.
+$$
+::: 
+
+::: {.solution }   
+Let $\epsilon $ be any real number greater than zero. We need to find a $\delta >0$ such that, 
+$$
+\left|x+\frac{1}{3}\right|<\delta  \Rightarrow \left|\left(-\frac{2}{3}x^2-\frac{4}{5}x-\frac{2}{3}\right)-\left(\frac{-64}{135}\right)\right|<\epsilon .
+$$
+To do so note that, 
+\begin{align*} \left|\left(-\frac{2}{3}x^2-\frac{4}{5}x-\frac{2}{3}\right)-\left(\frac{-64}{135}\right)\right| 
+& = \left|-\frac{26}{135}-\frac{4 x}{5}-\frac{2 x^2}{3}\right| \\ 
+& = \frac{2}{3}\left|\frac{13}{45}+\frac{6 x}{5}+x^2\right| \\
+& = \frac{2}{3}\left| x+\frac{13}{15}\right| \ \left|x+\frac{1}{3}\right|
+\end{align*}
+which is useful because $\left|x+\frac{1}{3}\right|$ is small, say $\left|x+\frac{1}{3}\right|<1$ and thus, 
+\begin{align*}
+\left|x+\frac{1}{3}\right| & <1 \Longleftrightarrow   -1 < x+\frac{1}{3} < 1 \\ & 
+\Longleftrightarrow   \frac{-4}{3}< x<\frac{2}{3} \\ & 
+\Longleftrightarrow  \frac{-7}{15} < x+\frac{13}{15} < \frac{23}{15} \\ & 
+\Rightarrow \left|x+\frac{13}{15}\right|<\frac{23}{15}
+\end{align*}
+We find that 
+$$
+\delta =\min \left\{1,\frac{\epsilon }{\left(\frac{46}{45}\right)}\right\}
+$$ 
+is acceptable because, if $\left|x+\frac{1}{3}\right|<\delta$ then 
+\begin{align*}
+\left|\left(-\frac{2}{3}x^2-\frac{4}{5}x-\frac{2}{3}\right)-\left(\frac{-64}{135}\right)\right| \\ & 
+=\frac{2}{3}\left| x+\frac{13}{15}\right| |x+\frac{1}{3}| \\ & 
+< \left(\frac{2}{3}\right)\left(\frac{23}{15}\right)\delta \\ & 
+=\left(\frac{46}{15}\right)\frac{\epsilon }{\left(\frac{46}{15}\right)} \\ & 
+=\epsilon
+\end{align*}
+as required. 
+::: 
+
+

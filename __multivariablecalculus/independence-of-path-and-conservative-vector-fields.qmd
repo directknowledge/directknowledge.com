@@ -1,0 +1,468 @@
+---
+pagetitle: "Independence of Path and Conservative Vector Fields - Exploring Calculus"
+---
+# Independence of Path and Conservative Vector Fields
+
+
+## Independence of Path
+
+::: {#def- } 
+The line integral is called \index{independent of path} **independent of path**  if in a region $D$, if for any two points $P$ and $Q$ in $D$ then the line integral along every piecewise smooth curve in $D$ from $P$ to $Q$ has the same value. 
+::: 
+
+::: {#thm- } [Independence of Path] 
+If $\vec{V}$ is a continuous vector field on the open connected set $D,$ then the following three conditions are either all true or all false:
+ 
+- $\vec{V}$ is conservative on $D$
+- $\int _C \vec{V}\cdot d\vec{R}=0$ for every piecewise smooth closed curve $C$ in $D$.
+- $\int _C \vec{V}\cdot d\vec{R}$ is independent of path within $D$.
+ 
+::: 
+
+::: {#exm- } 
+Let $F=\langle y,-x\rangle$ and let $C_1$ and $C_2$ be the following two paths joining $(0,0)$ to $(1,1)$; $C_1$: $y=x$ for $0\leq x\leq 1$ and $C_2$: $y=x^2$ for $0\leq x\leq 1$. 
+Show that 
+$$
+\int _{C_1}\vec{F}\cdot d \vec{R}\neq \int _{C_2}\vec{F}\cdot d \vec{R}. 
+$$
+Explain what this means?
+On $C_1:$ $x=t,$ $y=t$ with $0\leq  t\leq  1,$ 
+$$
+\int_{C_1} y \, dx-x \, dy=\int_0^1 (t-t) \, dt=0.
+$$
+On $C_2:$ $x=t,$ $y=t^2,$ with $0\leq t\leq 1,$ 
+$$
+\int_{C_2}y \,dx-x\,dy=\int_0^1 \left(t^2-t(2t)\right) \, dt=-\frac{1}{3}.
+$$
+::: 
+
+::: {.solution }
+Since these two line integrals do not have the same value we see that not all line integrals are independent of path.  
+::: 
+
+
+## Fundamental Theorem of Line Integrals
+
+::: {#thm- } [Fundamental Theorem of Line Integrals] 
+Let $C$ be a piecewise smooth curve that is parametrized by the vector function $\vec{R}(t)$ for ${a\leq t\leq b}$ and let $\vec{V}$ be a vector field that is continuous on $C$. 
+If $f$ is a scalar function such that $\vec{V}=\nabla  f,$ then 
+$$
+\int _C \vec{V}\cdot d\vec{R}=f(Q)-f(P)$$
+where $Q=R(b)$ and $P=R(a)$ are the endpoints of $C$.
+::: 
+
+::: {.proof } 
+Suppose $\vec{R}(t)=x(t) \vec{i}+y(t) \vec{j}+z(t) \vec{k}$ and let $G$ be the composite function $G(t)=f(x(t),y(t),z(t))$. 
+We have
+\begin{align*}
+\int _C \vec{F}\cdot d\vec{R} 
+& =\int _C\nabla f\cdot d\vec{R} 
+=\int _C \left[\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy+\frac{\partial f}{\partial z}dz\right] 
+\\[5pt]
+& =\int_a^b \left[\frac{\partial f}{\partial x}\frac{dx}{dt}+\frac{\partial f}{\partial y}\frac{dy}{dt}+\frac{\partial f}{\partial z}\frac{dz}{dt}\right] 
+\, dt 
+\\[5pt]
+& =\int_a^b \frac{d G}{d t} \, dt 
+=G(b)-G(a)
+=f(Q)-f(P).
+\end{align*}
+::: 
+
+::: {#exm- } 
+Show that the vector field 
+$$
+\vec{F}(x,y,z)=\left( \frac{y}{1+x^2}+\tan ^{-1}z\right)\vec{i}+\left(\tan ^{-1}x\right) \vec{j}+\left(\frac{x}{1+z^2}\right)\vec{k} 
+$$  
+is conservative and find a scalar potential $f$ for $F$. 
+Then evaluate the line integral 
+$$
+\int _C \vec{F}\cdot d \vec{R}.
+$$
+where $C$ is any piecewise smooth path connecting $A(1,0,-1)$ to $B(0,-1,1)$.
+::: 
+
+::: {.solution }
+Since $\Curl  \vec{V}=\vec{0},$ $\vec{V}$ is conservative. 
+Now we set out to find $f$. 
+Since  
+$$
+\frac{\partial f}{\partial x}=\frac{y}{1+x^2}+\tan ^{-1}z
+$$ 
+we set 
+$$
+f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z+c(y,z).
+$$
+Since  
+$$
+\frac{\partial f}{\partial y}=\tan ^{-1}z=\frac{\partial }{\partial y}\left(y \tan ^{-1}x+x \tan ^{-1}z+c\right)=\tan ^{-1}x+\frac{\partial
+c}{\partial y},
+$$  
+so  $\frac{\partial c}{\partial y}=0$ and $c=c_1(z)$ and so we set   
+$f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z+c_1(z)$. 
+Since 
+$$
+\frac{\partial f}{\partial z}=\frac{x}{1+z^2}=\frac{\partial }{\partial z}\left[y \tan ^{-1}x+x \tan ^{-1}z+c_1(z)\right]=\frac{x}{1+z^2}+c'_1(z),$$
+so  $c_1'(z)=0,$ $ c_1=0$ and so we set  
+$ f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z$.  
+\begin{equation*}
+\int _C\vec{F}\cdot d \vec{R}=f(1,0,-1)-f(0,-1,1)
+ =\frac{3\pi }{4}+\frac{\pi }{4}
+=\pi .
+\end{equation*}
+::: 
+
+::: {#exm- } 
+Show that the vector field 
+$$
+\vec{V}(x,y,z)=\left(x y^2+y z\right)\vec{i}+\left(x^2y+x z+3y^2z\right)\vec{j}+\left(x y+y^3\right)\vec{k}
+$$
+is conservative and find a scalar potential $f$ for $\vec{V}$. 
+Then evaluate the line integral 
+$$
+\int _C \vec{F}\cdot d \vec{R}.
+$$ 
+where $C$ is any piecewise smooth path joining $A(8,6,1)$ to $B(1,3,5)$. 
+::: 
+
+::: {.solution }
+First we determine $\Curl  \vec{V}$. 
+We find
+\begin{align*}
+\Curl  \vec{V} & =\left|
+\begin{array}{cc}
+\begin{array}{c}
+ \vec{i} \\ 
+\begin{array}{c}
+\partial / \partial x \\
+ x y^2+y z
+\end{array}
+\end{array}
+ & 
+\begin{array}{cc}
+\vec{j} & \vec{k} \\ 
+\begin{array}{c}
+\partial / \partial y \\
+ x^2y+x z+3y^2z
+\end{array}
+ & 
+\begin{array}{c}
+\partial / \partial z \\
+ x y+y^3
+\end{array}
+\end{array}
+\end{array}
+\right|  \\
+& =\left(x+3y^2-x-3y^2\right)\vec{i}-(y-y)\vec{j}+(2x y+z-2x y-z)\vec{k}
+=\vec{0}\end{align*}
+and so the vector field is conservative and we can find the scalar potential function. 
+Now we set out to find $f$ with $\nabla f=\vec{V}$. 
+Since $f_x=x y^2+y z$ we know that  
+$$
+f(x,y,z)=\frac{x^2}{2}y^2+x y z+C_1(y,z).
+$$
+Then we find 
+$$
+f_y=x^2y+x z+\frac{ \partial  C_1}{\partial  y};
+$$ 
+and so comparing this with the given $x^2y+x z+3y^2z$ we determine that 
+$$
+\frac{ \partial  C_1}{\partial  y}=3y^2z.
+$$ 
+So $C_1=y^3z+C_2(z)$. 
+So far we have 
+$$
+f=\frac{x^2}{2}y^2+x y z+y^3z+C_2(z).
+$$ 
+Also since $f_z=x y+y^3+\frac{dC_2}{d z}$ and comparing this to the given $x y+y^3$ we determine $\frac{dC_2}{dz}=0$. 
+So $C_2$ is a constant with respect to $x,$ $y,$ and $z$. 
+Therefore a scalar potential function is 
+$$
+f(x,y,z)=\frac{x^2}{2}y^2+x y z+y^3z$$
+(taking the constant to be zero). 
+Finally
+\begin{equation}
+\int _C \vec{V}\cdot d\vec{R}=f(1,3,5)-f(8,6,1)
+%=\frac{2523}{2}.
+\end{equation}
+::: 
+
+::: {#exm- } 
+Show that the vector field is conservative and find a scalar potential $f$ for $F$. 
+Then evaluate the line integral 
+$$
+\int _C \vec{F}\cdot d \vec{R}
+= \vec{F}(x,y)=\frac{(y+1)\vec{i}-x \vec{j}}{(y+1)^2}
+$$  
+where $C$ is any smooth path connecting $A(0,0)$ to $B(1,1)$.
+::: 
+
+::: {.solution }
+Let $\vec{F}(x,y)=u(x,y)\vec{i}+v(x,y)\vec{j}$, then since 
+$$
+\frac{\partial u}{\partial y}=\frac{-1}{(y+1)^2}=\frac{\partial v}{\partial x},
+$$ 
+we know that $F$ is conservative. 
+By definition, we know 
+$$
+f_x(x,y)=\frac{1}{y+1} 
+\qquad \text{and}\qquad
+f_y(x,y)=\frac{-x}{(y+1)^2}.
+$$ 
+Integrating with respect to $x,$ $f(x,y)=\frac{x}{y+1}+c(y)$. 
+Since,   
+$$ 
+f_y(x,y)=-\frac{x}{(y+1)^2}+c'(y)=-\frac{x}{(y+1)^2},
+$$ 
+so $c'(y)=0$.  
+For $c(y)=0;$ and then $f(x,y)=\frac{x}{y+1}$ is a scalar potential function for $\vec{F}$. 
+By the fundamental theorem of line integrals, 
+\begin{equation*}
+\int_C \vec{F}\cdot d\vec{R}=f(1,1)-f(0,0)=\frac{1}{2}-0=\frac{1}{2}.
+\end{equation*}
+::: 
+
+## Work
+
+::: {#exm- } 
+Find the work done on an object moves in the force field 
+$$
+\vec{F}(x,y,z)=x  \vec{i}+y  \vec{j}+(x z-y)\vec{k}
+$$ 
+along the curve $C$ defined parametrically by 
+$\vec{R}(t)=t^2\vec{i}+2t \vec{j}+4t^3 \vec{k}$ for $0\leq t\leq 1$.
+::: 
+
+::: {.solution }
+We determine
+\begin{align*}
+& d\vec{R}=\left(2t \vec{i}+2\vec{j}+12t^2\vec{k}\right)dt, 
+\qquad \vec{F}(t)=t^2\vec{i}+2t\vec{j}+\left(4t^5-2t\right)\vec{k},
+\end{align*}
+(from $x(t)=t^2, y(t)=2t,$ and $z=4t^3$) and
+$$
+\vec{F}\cdot d\vec{R}=\left(2t^3+4t+48t^7-24t^3\right)dt.
+$$
+Thus, 
+\begin{equation*}
+W=\int _C \vec{F}\cdot d\vec{R}=\int_0^1 \left(2t^3+4t+48t^7-24t^3\right) \, dt=\frac{5}{2}.
+\end{equation*}
+::: 
+
+::: {#exm- } 
+Find the work done when an object moves along a closed path in a connected domain where the force field is conservative.
+::: 
+
+::: {.solution }
+In such a force field $\vec{F},$ where $f$ is a scalar potential of $\vec{F}$ and because the path of motion is closed, it begins and ends at the same point $P$. 
+Thus, the work is given by 
+$$
+W=\oint _C \vec{F}\cdot d\vec{R}=f(P)-f(P)=0.
+$$
+::: 
+ 
+::: {#exm- } 
+Let   
+$$
+\vec{F}(x,y)=\frac{-y  \vec{i}+x  \vec{j}}{x^2+y^2}.
+$$ 
+Evaluate the line integral 
+$$
+\int _{C_1}\vec{F}\cdot d \vec{R}
+$$ 
+where $C_1$ is the upper semicircle $y=\sqrt{1-x^2}$ transversed counterclockwise. 
+What is the value of 
+$$
+\int _{C_2}\vec{F}\cdot d \vec{R}
+$$
+if $C_2$ is the lower semicircle $y=-\sqrt{1-x^2}$ also transversed counterclockwise?  
+::: 
+
+::: {.solution }
+On the upper semi-circle $C_1$, we let $x=\cos (t)$ and $y=\sin (t)$ for $0\leq t\leq \pi ,$ and then  
+$$
+\int_{C_1} \frac{-y \, dx+x \, dy}{x^2+y^2}=\int_0^{\pi } \frac{-\sin (t)(-\sin (t))+\cos (t)(\cos (t))}{\sin ^2(t)+\cos ^2(t)} \, dt=\int _0^{\pi }dt=\pi .
+$$ 
+For $\pi \leq t\leq 2\pi ,$ we have the lower semi-circle $C_2$:  
+\begin{equation*}
+\int_{C_2}\frac{-y\, dx+x\, dy}{x^2+y^2}=\int _{\pi }^{2\pi }dt=\pi .
+\end{equation*}
+::: 
+  
+## Finding Area with Line Integral
+
+::: {#thm- } 
+If $R$ is a region bounded by a piecewise smooth simple closed curve $C$ oriented counterclockwise, then the area of $R$ is given by 
+$$
+A=\oint _C x dy=-\oint _C y dx=\frac{1}{2}\oint _C x dy-ydx.
+$$
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Evaluate the line integral 
+$$
+\int _C\frac{1}{3+y}\, dS
+$$ 
+where $C$ is the curve with parametric equations $x=2t^{3/2}$ and $y=3t$ with $0\leq t\leq
+1.$
+::: 
+
+::: {#exr- } 
+Evaluate the line integral 
+$$
+\int _C\left(x^2+y^2\right)\, dS
+$$ 
+where $C$ is the curve with parametric equations $x=e^{-t}\cos  t$ and $y=e^{-t}\sin t$ with $0\leq t\leq \frac{\pi }{2}.$ 
+::: 
+
+::: {#exr- } 
+Evaluate the line integral 
+$$
+\int _C xdy-ydx
+$$ 
+where $C$ is the curve defined by $2x-4y=1$ with $4\leq x\leq 8.$ 
+::: 
+
+::: {#exr- } 
+Evaluate the line integral 
+$$
+\int _C -xdy+\left(y^2-x^2\right)dx
+$$ 
+where $C$ is the quarter-circle $x^2+y^2=4$ from $(0,2)$
+to $(2,0).$
+::: 
+
+::: {#exr- } 
+Evaluate the line integral 
+$$
+\int _C (x+y)^2dx-(x-y)^2 dy
+$$ 
+where $C$ is the curve defined by $y=|2x|$ from $(-1,2)$ to $(1,2).$
+::: 
+
+::: {#exr- } 
+Evaluate the line integral 
+$$
+\oint \vec{F} \cdot d\vec{R}
+$$ 
+where $\vec{F}=y^2 \vec{i} +x^2 \vec{j}-(x+z)\vec{k} $ and $C$ is the boundary of the triangle with vertices $(0,0,0),$ $(1,0,0),$ and $(1,1,0)$, transversed once clockwise, as viewed from above.
+::: 
+
+::: {#exr- } 
+Let $\vec{F}=y \, \vec{i}-x \, \vec{j}$ and let $C_1$ and $C_2$ be the following two paths joining 
+$(0,0)$ to $(1,1).$
+$$
+C_1: y=x  \text{ for } 0\leq x\leq 1 
+\quad \text{and} \quad 
+C_2: y=x^2 \text{ for } 0\leq x\leq 1.
+$$ 
+Show that 
+$$
+\int _{C_1}\vec{F}\cdot d \vec{R}\neq \int _{C_2}F\cdot d \vec{R}. 
+$$
+Explain what this means? 
+::: 
+
+::: {#exr- } 
+Evaluate the closed line integral 
+$$
+\oint _C \vec{F}\cdot \, dS
+$$ 
+where $\vec{F}=-x \, \vec{i}+2\,\vec{j}$ and $C$ is the boundary of the trapezoid with vertices $(0,0),$
+$(1,0),$ $(2,1)$ and $(0,1)$ transversed once clockwise, as viewed from above. 
+::: 
+
+::: {#exr- } 
+Find the work done by the force field 
+$$
+\vec{F}(x,y,z)=\left(y^2-z^2\right) \vec{i}+2 y z \vec{j}-x^2 \vec{k}
+$$ 
+on any object moving along the curve 
+$C$ where $C$ is the path given by $x(t)=t,$ $y(t)=t^2,$ and $z(t)=t^3,$ for $0\leq t\leq 1.$ 
+::: 
+
+::: {#exr- } 
+Find the work done by the force field 
+$$
+\vec{F}(x,y,z)=2 x y \, \vec{i}+\left(x^2+2\right)\, \vec{j}+y \,\vec{k}
+$$ 
+on any object moving along the curve $C$ where $C$ is the line segment from $(1,0,2)$ to $(3,4,1).$ 
+::: 
+
+::: {#exr- } 
+Show that the vector field 
+$$
+\vec{F}(x,y)=(x+2y)\, \vec{i}+(2x+y)\, \vec{j}
+$$ 
+is conservative and find a scalar potential function $f$ for $F.$ 
+Then evaluate the line integral $\int _C \vec{F}\cdot d\vec{R}$ where $C$ is any smooth path connecting $A(0,0)$to $B(1,1).$
+::: 
+
+::: {#exr- } 
+Show that the vector field 
+$$
+\vec{F}(x,y)=\left(y-x^2\right) \, \vec{i}+\left(x+y^2\right) \, \vec{j}
+$$ 
+is conservative and find a scalar potential function $f$ for
+$\vec{F}.$ 
+Then evaluate the line integral 
+$$
+\int _C \vec{F}\cdot dR
+$$ 
+where $C$ is any smooth path connecting $A(0,0)$to $B(1,1).$
+::: 
+
+::: {#exr- } 
+Show that the vector field 
+$$
+\vec{F}(x,y)=e^{-y}\, \vec{i}-x e^{-y}\, \vec{j}
+$$ 
+is conservative and find a scalar potential function $f$ for $\vec{F}.$ 
+Then evaluate the line integral 
+$$
+\int _C\vec{F}\cdot d\vec{R}
+$$ 
+where $C$ is any smooth path connecting $A(0,0)$to $B(1,1).$
+::: 
+
+::: {#exr- } 
+Show that the vector field 
+$$
+\vec{F}(x,y,z)=e^{x y}y z \, \vec{i}+e^{x y}x z \, \vec{j}+e^{x y} \, \vec{k}
+$$ 
+is conservative and find a scalar potential function $f$ for $\vec{F}.$ 
+::: 
+
+::: {#exr- } 
+Show that the vector field  $\vec{F}$ with component functions
+$f(x,y,z)=\left(2 x z^3-e^{-x y}y \sin  z\right)$,
+$g(x,y,z)=-x e^{-x y}\sin  z$, and
+$h(x,y,z)=\left(3x^2z^2+e^{-x y}\cos  z\right)$ 
+is conservative and find a scalar potential function $f$ for $\vec{F}.$ 
+Then evaluate the line integral 
+$$
+\int _C\vec{F}\cdot d\vec{R}
+$$ 
+where $C$ is any smooth
+path connecting $A(1,0,-1)$to $B(0,-1,1).$
+::: 
+
+::: {#exr- } 
+Show that the vector field 
+$$
+\vec{F}(x,y)=\frac{(y+1)\vec{i}-x \vec{j}}{(y+1)^2}
+$$ 
+is conservative and find a scalar potential $f$ for $\vec{F}.$ 
+Then evaluate the line integral 
+$$
+\int _C\vec{F}\cdot d \vec{R}
+$$ 
+where $C$ is any smooth path connecting $A(0,0)$ to $B(1,1).$
+::: 
+
+
+  
+
+
+

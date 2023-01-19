@@ -1,0 +1,163 @@
+---
+pagetitle: "Linear Independence and Bases - Learning Linear Algebra"
+---
+# Linear Independence and Bases
+
+
+Let $V$ be a linear save over a field $\mathbb{F}$. A subset $S$ of $V$ is said to be \index{linearly dependent} **linearly dependent** if there exist distinct $\vlist{v}{n}$ in $S$ and scalars $\vlist{a}{n}$ in $\mathbb{F}$, not all zero, such that $\lincomb{a}{v}=0.$ 
+If a set $S$ cntains only finitely many $v_i$ we sometimes say that $\vlist{v}{n}$ are dependent. 
+
+::: {#def- } 
+A list  of vectors $(\vlist{v}{m})$ in $V$ is called \index{linearly independent} **linearly independent** if the only choice of $\vlist{a}{m}\in k$ is $a_1=\cdots=a_m=0$. 
+A list of vectors that are not linearly independent is called \index{linearly dependent} **linearly dependent**.
+::: 
+ 
+Notice from the definition we can conclude that any set which contains a linearly dependent set is linearly dependent. 
+Any subset of a linearly independent set is linearly independent. 
+Any set which contains the zero vector is linearly dependent. 
+A set $S$ of vectors is linearly independent if and only if each finite subset of $S$ is linearly independent. (Show!)
+
+::: {#lem- } [Linear Dependence] 
+\label{Linear Dependence Lemma}
+If $(\vlist{v}{m})$ is linearly dependent in $V$ and $v_1\neq 0$ then there exists $j\in {2,\ldots,m}$ such that the following hold: $v_j\in\text{span}(v_1,\ldots,v_{j-1})$ and if the $j^{th}$ term is removed from $(\vlist{v}{m})$, the span of the remaining list equals $\text{span}(\vlist{v}{m})$.
+:::  
+
+::: {.proof } 
+The proof is left for the reader as Exercise \ref{ex:Linear Dependence Lemma}.
+::: 
+
+::: {#exm- } 
+Show that the following subset of $M_{2\times 2}$ is a linear dependent set. 
+\begin{equation}
+\label{lindeexample}
+\left\{
+\begin{bmatrix}
+2 & 3 \\
+-1 & 4
+\end{bmatrix},
+\begin{bmatrix}
+-11 & 3 \\
+-2 & 2
+\end{bmatrix},
+\begin{bmatrix}
+6 & -1 \\
+3 & 4
+\end{bmatrix},
+\begin{bmatrix}
+-1 & 0\\2 & 2
+\end{bmatrix}
+\right\}
+\end{equation}
+
+::: 
+
+::: {#exm- }  
+Suppose that $S$ is the subset 
+$$
+S=\{2x^3-x+3, 3x^3+2x-2, x^3-4x+8, 4x^3+5x-7\}
+$$
+of $P_3$. 
+
+- Show that $S$ is linear dependent.
+- Show that every three element subset of $S$ is linear dependent.
+- Show that every two element subset of $S$ is linear independent.
+::: 
+
+::: {#exm- } 
+Show that no linear independent set can contain zero. 
+
+::: 
+
+::: {#lem- } [Linear Independence Lemma]
+\label{linear independence lemma}
+Let $S$ be a linearly independent subset of a vector space $V$. Suppose $v$ is a vector in $V$ which is not in the subspace spanned by $S$. Then the set obtained by adjoining $v$ to $S$ is linearly independent. 
+:::  
+
+::: {.proof } 
+Suppose $u_1,\ldots,u_n$ are distinct vectors in $S$ and that $a_1 u_1+\cdots + a_n u_n+a v =0.$ Then $a=0$; for otherwise, 
+$$
+v=\left (-\frac{a_1}{a}\right ) u_1+\cdots + \left (-\frac{a_n}{a} \right )u_n
+$$
+and $v$ is in the subspace spanned by $S$. Thus $a_1 u_1+\cdots + a_n u_n=0$, and since $S$ is a linearly independent set each $a_i=0$.
+::: 
+
+::: {#thm- } 
+If $S$ is a set of vectors in a vector space $V$ over a field $F$ then the following are equivalent.
+ 
+- $S$ is linearly independent and spans $V$
+- For every vector $v\in V$, there is a unique set of vectors $v_1,\ldots,v_n$ in $S$, along with a unique set of scalars in $\mathbb{F}$ for which $v=a_1 v_1+\cdots+a_n v_n$
+- $S$ is a minimal spanning set in the sense that $S$ spans $V$, and any proper subset of $S$ does not span $V$
+- $S$ is a maximal linearly independent set in the sense that $S$ is linearly independent, but any proper superset of $S$ is not linearly independent.
+ 
+:::  
+
+::: {.proof } 
+$(i) \Leftrightarrow (ii)$: Then $S$ is a spanning set. If some proper subset $S'$ of $S$ also spanned $V$, than any vector in $S-S;$ would be a linear combination of the vectors in $S'$. contradicting the fact that the vectors in $S$ are linearly independent. Conversely, if $S$ is a minimal spanning set, then it must be linearly independent. For if not, some vector $s\in S$ would be a linear of the other vectors in $S$, and so $S-S'$ would be a proper spanning subset of $S$, which is not possible. 
+
+$(i) \Leftrightarrow (iv)$: Then $S$ is linearly independent. If $S$ were not maximal, there would be a vector $v\in V-S$ for which the set $S\cup \{v\}$ is linear independent. But then $V$ is not in the span of $S$, contradicting the fact that $S$ is a spanning set. Hence, $S$ is a maximal linearly independent set, and so (i) implies (iv).  Conversely, if $S$ is a maximal independent set,. then it must span $V$, for if not, we could find a vector $v\in S-S'$ that is not a linear combination of the vectors in $S$. Hence, $S\cup \{v\}$ would be a contradiction.
+::: 
+
+::: {#def- } 
+A \index{basis} **basis** of $V$ is a list of vectors in $V$ that is linearly independent and spans $V$.
+::: 
+
+::: {#exm- } 
+Find a basis for the space of all $2\times 2$ matrices $S$ such that 
+$$
+\begin{bmatrix} 1 & 1 \\ 1 & 1\end{bmatrix}S=S.
+$$
+Let $S=\begin{bmatrix} a & b \\ c & d \end{bmatrix}$. Then 
+$$
+\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} a & b \\ c & d \end{bmatrix} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+$$ 
+meaning 
+$$
+\begin{bmatrix} a+c & b+d \\ a+c & b+d \end{bmatrix}=\begin{bmatrix} a & b \\ c & d \end{bmatrix}.
+$$
+So $a+c=a, b+d=b, a+c=c,$ and $b+d=d$. These imply, respectively that $a=b=c=d=0$. 
+
+::: 
+
+::: {#cor- } 
+A list $(v_1,\ldots,v_m)$ of vectors in $V$ is a basis of $V$ if and only if every $v\in V$ can be written uniquely in the form $v=a_1 v_1+\ldots+a_m v_m$ where  $\vlist{a}{m}\in k$.
+:::  
+
+::: {.proof } 
+::: 
+
+::: {#cor- } 
+Any $n$ linearly independent vectors in a linear space $V$ of dimension $n$ constitute a basis for 
+$V$.
+::: 
+
+::: {.proof } 
+::: 
+
+::: {#exm- } 
+Show that the space of all $m\times n$ matrices over a field $\mathbb{F}$ has dimension $mn$. 
+
+::: 
+
+::: {#cor- } 
+Any finitely generated linear space, generated by a asset of nonzero vectors, has a basis. 
+::: 
+
+::: {.proof } 
+::: 
+
+The zero linear space has no basis, because any subset contains the zero vector and must be linearly dependent. 
+
+::: {#exm- } 
+Show that 
+$$
+B=\{[2,3,0,-1],[-1,1,1,-1],[3,2,-1,0],[2,3,0,-1]\}
+$$
+is a maximal linearly independent subset of 
+$$
+S=\{[1,4,1,-2],[-1,1,1,-1],[3,2,-1,0],[2,3,0,-1]\}.
+$$
+Determine $\dim\text{span}(S)$ and determine whether or not $\text{span}(S)=P_3$.
+::: 
+
+
+

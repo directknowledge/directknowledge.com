@@ -1,0 +1,358 @@
+---
+pagetitle: "Improper Integrals - Exploring Calculus"
+---
+# Improper Integrals
+
+We integrate continuous functions over unbounded intervals. We also integrate functions which are continuous except for a possibly infinite discontinuity in its domain which have unbounded range.
+
+## Infinite Limits of integration
+
+Until now, our regions of integration have been bounded regions. 
+By this we mean that when evaluating 
+$$
+\int_a^b f(x)\, dx
+$$
+we are integrating $f$ over a bounded interval $[a,b]$ and the range of $f$ is also a bounded region. 
+We will now discuss more general regions of integration such as $(a,+\infty)$, $(-\infty, b)$, and $(-\infty, +\infty)$. 
+Consider for example the following diagram. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=150pt]{_includes/improper-integrals-1.pdf}
+\end{figure}
+We will use this to define $\int_a^{+\infty} f(x) \, dx$ as a limit. 
+Similarly we wil define $\int_{-\infty}^{b} f(x) \, dx$ as a limit by considering the diagram. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=150pt]{_includes/improper-integrals-2.pdf}
+\end{figure}
+In either case these integrals are said to be \emph{improper}. 
+There are other cases to consider, but in all cases, we will define an \emph{improper integral} using a limit of an already known integral. 
+
+::: {#def- } 
+Suppose that $f$ is a continuous function.
+ - The \index{improper integral of $f$ over the interval $[a,+\infty)$} **improper integral of $f$ over the interval $[a,+\infty)$**  is defined to be
+\begin{equation}
+\int_a^{+\infty} f(x) \, dx 
+= \lim_{b\to +\infty} \int_a^b f(x)\, dx.
+\end{equation}
+- The \index{improper integral of $f$ over the interval $[-\infty,b)$} **improper integral of $f$ over the interval $[-\infty,b)$**  is defined to be
+\begin{equation}
+\int_{-\infty}^b f(x) \, dx 
+= \lim_{a\to -\infty} \int_a^b f(x)\, dx.
+\end{equation}
+- The \index{improper integral of $f$ over the interval $(-\infty,+\infty)$} **improper integral of $f$ over the interval $(-\infty,+\infty)$**  is defined to be
+\begin{equation}
+\int_{-\infty}^{+\infty} f(x) \, dx 
+=\int_{-\infty}^c f(x)\, dx + \int^{+\infty}_c f(x)\, dx.
+\end{equation}
+ 
+Whenever the limit exists the integral is said to \index{converge}, and otherwise \index{diverge} **converge}, and otherwise \index{diverge** . 
+::: 
+
+
+::: {#exm- } 
+Determine whether the improper integral $\int_e^{\infty} \frac{1}{x\ln^2 x}\, dx$ converges or diverges. 
+::: 
+
+::: {.solution }
+We find that the integral converges to 1 since 
+\begin{align*}
+\int_e^{\infty} \frac{1}{x\ln^2 x}\, dx
+& = \lim_{b\to \infty} \int_e^b \frac{(\ln x)^{-2}}{x}\, dx\\
+& = \lim_{b\to \infty} \left[-\frac{1}{\ln x}\right]_e^b
+= \lim_{b\to \infty} \left( -\frac{1}{\ln b}+1 \right) 
+=1
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Determine whether the improper integral $\int_0^{\infty} \sin x\, dx$ converges or diverges. 
+::: 
+
+::: {.solution }
+We find the integral diverges because
+\begin{equation}
+\int_0^{\infty} \sin x\, dx 
+= \lim_{b \to \infty} \int_0^b \sin \, dx
+= \lim_{b \to \infty} [-\cos x]_0^b 
+= \lim_{b \to \infty} (-\cos b +1)
+\end{equation}
+which is a limit that does not exist. 
+::: 
+
+::: {#exm- } 
+Determine whether the improper integral $\int_{-\infty}^0 \frac{1}{x^2+2x+5}\, dx$ converges or diverges. 
+::: 
+
+::: {.solution }
+We find the integral converges since
+\begin{align*}
+\int_{-\infty}^0 \frac{1}{x^2+2x+5}\, dx 
+& = \lim_{a\to -\infty} \int_{a}^0 \frac{1}{x^2+2x+5}\, dx \\
+& = \lim_{a\to -\infty} \left[\frac{1}{2}\tan^{-1}\left(\frac{1}{2}(x+1)\right)\right]_a^0 \\
+& = \lim_{a\to -\infty} \left[\frac{1}{2}\tan^{-1}\frac{1}{2}-\frac{1}{2}\tan^{-1}\left(\frac{1}{2}(a+1)\right)\right] 
+= \frac{\pi}{4}
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Determine whether the improper integral $\int_{-\infty}^{+\infty} \frac{e^x}{1+e^{2x}}\, dx$ converges or diverges. 
+::: 
+
+::: {.solution }
+We consider the following two limits 
+\begin{align*}
+\int_{-\infty}^{+\infty} \frac{e^x}{1+e^{2x}}\, dx
+& = \lim_{a\to-\infty } \int_{a}^{0} \frac{e^x}{1+e^{2x}}\, dx + \lim_{b\to+\infty } \int_{0}^{b} \frac{e^x}{1+e^{2x}}\, dx.
+\end{align*}
+To do so we integrate $I = \int \frac{e^x}{1+e^{2x}}\, dx.$
+Let $u=e^x$, so that $du = e^x dx$. 
+Then we find
+\begin{equation}
+I = \int \frac{1}{1+u^2}\, du = \tan^{-1}u +C.
+\end{equation}
+Using this result we have 
+\begin{align*}
+\int_{-\infty}^{+\infty} \frac{e^x}{1+e^{2x}}\, dx 
+& = \lim_{a\to-\infty } \left[\tan^{-1} e^x\right]_a^0 + \lim_{b\to+\infty } \left[\tan^{-1} e^x\right]_0^b \\
+& = \lim_{a\to-\infty } \left(\frac{\pi}{4} -\tan^{-1}e^a \right) + \lim_{b\to+\infty } \left[\tan^{-1} e^b -\frac{\pi}{4} \right] 
+= \frac{\pi}{2}
+\end{align*}
+as desired. 
+::: 
+
+::: {#exm- } 
+Find the area of the region bounded by the graph of 
+$$
+y= \frac{2}{x^2-2x+2}
+$$
+and the $x$-axis. 
+::: 
+
+::: {.solution }
+If the area exists, it is found by evaluating an improper integral. 
+We find
+\begin{align*}
+A & = \int_{-\infty}^{+\infty} y \, dx 
+= \int_{-\infty}^{0} y \, dx + \int_{0}^{+\infty} y \, dx \\
+& = \lim_{a\to-\infty} \int_a^0 \frac{2}{x^2-2x+2}\, dx  +  \lim_{b\to+\infty} \int_0^b \frac{2}{x^2-2x+2} \, dx \\
+& = 2 \lim_{a\to-\infty} \int_a^0 \frac{1}{(x-1)^2+1}\, dx  +  2 \lim_{b\to+\infty} \int_0^b\frac{1}{(x-1)^2+1}\, dx \\
+& = 2 \lim_{a\to-\infty} \left[\tan^{-1}(x-1)\right]_a^0  +  \lim_{b\to+\infty} \left[\tan^{-1}(x-1)\right]_0^b 
+= 2\pi 
+\end{align*}
+as desired.
+::: 
+
+
+
+
+
+
+
+## Infinite Discontinuities
+
+
+::: {#def- } 
+Let $f$ be a function. 
+ - If $f$ is a continuous on the interval $[a,b]$, except for an infinite discontinuity at $b$, then the \index{improper integral of $f$ over the interval $[a,b]$} **improper integral of $f$ over the interval $[a,b]$**  is defined as 
+\begin{equation}
+\int_a^b f(x) \, dx 
+= \lim_{k\to b^{-}} \int_a^k f(x) \, dx
+\end{equation}
+- If $f$ is a continuous on the interval $[a,b]$, except for an infinite discontinuity at $a$, then the \index{improper integral of $f$ over the interval $[a,b]$} **improper integral of $f$ over the interval $[a,b]$**  is defined as 
+\begin{equation}
+\int_a^b f(x) \, dx 
+= \lim_{k\to a^{+}} \int_k^a f(x) \, dx
+\end{equation}
+- If $f$ is a continuous on the interval $(a,b)$, except for some $c$ in $(a,b)$ at which $f$ has an infinite discontinuity, then the \index{improper integral of $f$ over the interval $[a,b]$} **improper integral of $f$ over the interval $[a,b]$**  is defined as 
+\begin{equation}
+\int_a^b f(x) \, dx 
+= \int_a^c f(x) \, dx + \int_c^b f(x) \, dx.
+\end{equation}
+ 
+Whenever the limit exists the integral is said to \index{converge}, and otherwise \index{diverge} **converge}, and otherwise \index{diverge** . 
+::: 
+
+::: {#exm- } 
+Evaluate $\int_0^1 \frac{x^3}{x^4-1}\, dx$ or state that it diverges. 
+::: 
+
+::: {.solution }
+We find
+\begin{align*}
+\int_0^1 \frac{x^3}{x^4-1}\, dx 
+& = \lim_{c\to 1^-}\int_0^c \frac{x^3}{x^4-1}\, dx 
+ = \lim_{c\to 1^-} \left[\frac{1}{4}\ln | x^4 -1 |\right]_0^c \\
+& = \frac{1}{4}\lim_{c\to 1^-} \ln | c^4 -1 | = -\infty
+\end{align*}
+and so the integral diverges.
+::: 
+
+::: {#exm- } 
+Evaluate $\int_1^{11} \frac{1}{(x-3)^{2/3}}\, dx$ or state that it diverges. 
+::: 
+
+::: {.solution }
+This integral is improper at $x=3$ and so 
+\begin{equation}
+\int_1^{11} \frac{1}{(x-3)^{2/3}}\, dx 
+= \int_1^{3} \frac{1}{(x-3)^{2/3}}\, dx + \int_3^{11} \frac{1}{(x-3)^{2/3}}\, dx 
+\end{equation}
+and we evaluate each one separately. 
+We find
+\begin{align*}
+\int_1^{3} \frac{1}{(x-3)^{2/3}}\, dx
+& = \lim_{c\to 3^-} \int_1^c (x-3)^{-2/3} \, dx 
+ = \lim_{c\to 3^-} \left[3(x-3)^{1/3}\right]_1^c \\
+& = 3 \lim_{c\to 3^-} \left(2^{1/3}-(3-c)^{1/3}\right)
+= (3) 2^{1/3}
+\end{align*}
+and 
+\begin{align*}
+\int_3^{11} \frac{1}{(x-3)^{2/3}}\, dx 
+& =  \lim_{c\to 3^+} \int_c^{11} \frac{1}{(x-3)^{2/3}}\, dx 
+= \lim_{c\to 3^+} \left[3(x-3)^{1/3}\right]_c^{11} \\
+& = 3 \lim_{c\to 3^+} \left(8^{1/3}-(c-3)^{1/3}\right) 
+= 6
+\end{align*}
+Therefore we have $\int_1^{11} \frac{1}{(x-3)^{2/3}}\, dx = 6+(3)2^{1/3}$. 
+::: 
+
+::: {#exm- } 
+The region bounded by the graph of $f(x)=-\ln x$ and the $x$-axis on the interval $(0,1]$ is revolved about the $x$-axis. 
+Find the volume of the solid of revolution or state that it does not exist. 
+::: 
+
+::: {.solution }
+The volume is 
+$$
+V=\pi \int_0^1 (-\ln x)^2\, dx = \lim_{a\to 0^+} \pi \int_a^1 \ln^2 x\, dx.
+$$
+We use integration by parts with $u =\ln x$ and $dv=\ln x \, dx$.
+Then $du =(1/x) \, dx$ and $v=x\ln x -x$ and so 
+\begin{align*}
+\int \ln^2 x\, dx 
+& = x\ln^2 x-x\ln x -\int(ln x -1)\, dx  \\
+& = x\ln^2 x-x\ln x-(x\ln x-x-x) + C\\
+& = x\ln^2 x-2x\ln x-2x\ln x+2x+C
+\end{align*}
+where $C$ is an arbitrary constant. 
+We now continuing finding the volume
+\begin{align*}
+V & = \lim_{a\to 0^+}\pi \left[x\ln^2 x-2x\ln x+2x\right]_a^1 \\
+& = \lim_{a\to 0^+}\pi (2-(a\ln^2 a-2a\ln a+2a)) 
+= 2\pi
+\end{align*}
+where the last equality uses l'Hopital's rule. 
+::: 
+
+
+
+
+## Exercises
+
+
+::: {#exr- } 
+Decide if the integral converges or not. Explain your reasoning. 
+\begin{multicols}{3}
+ - $\int_{1}^{2} \frac{1}{x^3} \, dx$
+- $\int_{0}^{\pi/4} \csc x \, dx$
+- $\int_{-\infty}^{+\infty} \frac{\sin x}{4+x^2}\, dx$
+ 
+\end{multicols}
+::: 
+
+
+::: {#exr- } 
+Evaluate the following integrals that converge. 
+\begin{multicols}{2}
+ - $\int_{-1}^{+\infty} \frac{x}{1+x^2} \, dx$
+- $\int_{1}^{+\infty} \frac{6}{x^4} \, dx$
+- $\int_{1}^{+\infty}  2^{-x} \, dx$
+- $\int_{1}^{+\infty} \frac{4}{\sqrt[4]{x}}\, dx$
+- $\int_{0}^{+\infty} x e^{-x^2} \, dx$
+- $\int_{0}^{+\infty} x e^{-x/3}\, dx$
+- $\int_{0}^{+\infty}  \frac{x}{\sqrt[5]{x^2+1}} \, dx$
+- $\int_{0}^{+\infty} e^{-x} \cos x\, dx$
+- $\int_{2}^{+\infty} \frac{1}{x\sqrt{\ln x}}\, dx$
+- $\int_{1}^{+\infty} \frac{\ln x}{x} \, dx$
+- $\int_{-\infty}^{0}  \frac{1}{\sqrt[3]{2-x}} \, dx$
+- $\int_{0}^{+\infty} \frac{x^3}{(x^2+1)^2} \, dx$
+- $\int_{-\infty}^{3} \frac{1}{x^2+9} \, dx$
+- $\int_{0}^{+\infty} \frac{e^x}{1+e^x} \, dx$
+- $\int_{-\infty}^{a}  \sqrt{e^x} \, dx$
+- $\int_{0}^{\infty} \sin\frac{x}{2}\, dx$
+- $\int_{-\infty}^{+\infty} \frac{x}{\sqrt{x^2+2}}\, dx$
+- $\int_{0}^{+\infty} \frac{1}{e^x +e^{-x}} \, dx$
+- $\int_{1}^{+\infty}  \frac{1}{x(x+1)} \, dx$
+- $\int_{0}^{+\infty} \cos \pi x \, dx$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Evaluate the following integrals that converge. 
+\begin{multicols}{2}
+ - $\int_{0}^{\pi/4} \frac{\sec^2 x}{1-\tan x} \, dx$
+- $\int_{0}^{5} \frac{10}{x}\, dx$
+- $\int_{0}^{\pi/2}  \sec x\tan x \, dx$
+- $\int_{0}^{8} \frac{3}{\sqrt{8-x}}\, dx$
+- $\int_{-2}^{2} \frac{1}{x^2} \, dx$
+- $\int_{0}^{e} \ln x^2 \, dx$
+- $\int_{0}^{\pi/2}  \tan x \, dx$
+- $\int_{0}^{\pi/2} \sec x \, dx$
+- $\int_{0}^{1} \frac{1}{(x-1)^{2/3}} \, dx$
+- $\int_{3}^{6} \frac{1}{\sqrt{36-x^2}}\, dx$
+- $\int_{3}^{4}  \frac{1}{(x-3)^{3/2}} \, dx$
+- $\int_{0}^{5}  \frac{1}{25-x^2} \, dx$
+- $\int_{0}^{1} \frac{1}{\sqrt{x}(x+1)} \, dx$
+- $\int_{4}^{+\infty} \frac{\sqrt{x^2}-16}{x^2}\, dx$
+- $\int_{0}^{\ln 3} \frac{e^x}{(e^x -1)^{2/3}} \, dx$
+- $\int_{0}^{8} \frac{1}{\sqrt[3]{x}}\, dx$
+- $\int_{0}^{9} \frac{1}{(x-1)^{1/3}} \, dx$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Find the area of the region between the $x$-axis and the curve $y=e^{-3x}$ for $x\geq 0$.
+::: 
+
+
+::: {#exr- } 
+Let $R$ be the region bounded by the graphs of $y=e^{-ax}$ and $y=e^{-bx}$, for $x\geq 0$, where $a > b > 0$.
+Find the area of $R$. 
+::: 
+
+
+::: {#exr- } 
+Suppose that the region between the $x$-axis and the curve $y=e^{-x}$ for $x\geq 0$ is revolved about he $x$-axis. 
+Find the volume and surface area for the solid generated. 
+::: 
+
+::: {#exr- } 
+Use integration by parts to evaluate the integral.
+ \begin{multicols}{3}
+ - $\int_0^{+\infty} x e^-2x\, dx$
+- $\int_0^1 2x\ln x\, dx$
+- $\int_1^\infty \frac{\ln x}{2x^2} \, dx$
+ 
+\end{multicols}
+::: 
+
+::: {#exr- } 
+Let $R$ be the region bounded by the graph of $f(x)= 1/x^p$, where $p$ is a real number.
+For what values of $p$ does the integral $\int_0^1 f(x) \, dx$ exist? When the integral exists what is its value? 
+::: 
+
+::: {#exr- } 
+Find the arc length of the graph of $y=\sqrt{16-x^2}$ over the interval $[0,4]$.
+::: 
+
+::: {#exr- } 
+Find the surface area of the surface formed by revolving the graph of $y=2e^{-x}$ on the interval $[0,+\infty)$ about the $x$-axis. 
+::: 
+
+

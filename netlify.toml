@@ -30,3 +30,18 @@
   to = "https://directknowledge.com/learning-number-theory/"
   status = 301
 
+[[redirects]]
+  from = "https://directknowledge.com/learninglinearalgebra"
+  to = "https://directknowledge.com/learning-linear-algebra/"
+  status = 301
+
+[[redirects]]
+  from = "https://directknowledge.com/exploringcalculus"
+  to = "https://directknowledge.com/exploring-calculus/"
+  status = 301
+
+[[redirects]]
+  from = "https://directknowledge.com/multivariablecalculcus"
+  to = "https://directknowledge.com/multivariable-calculcus/"
+  status = 301
+

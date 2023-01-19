@@ -1,0 +1,44 @@
+---
+pagetitle: "Learning Linear Algebra - From Python to Proofs"
+---
+# Preface {.unnumbered}
+
+
+::: {.content-visible when-format="pdf"}
+\pagenumbering{roman}
+\pagestyle{preface} 
+:::
+
+
+
+::: {.content-visible when-format="html"}
+
+## About this book 
+
+## Other resources 
+
+## Update history
+
+1. First draft published on 1/18/2023. 
+
+:::
+
+
+
+## Acknowledgements {.unlisted }
+
+
+
+
+
+::: {.content-visible when-format="pdf"}
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{1}
+\clearpage
+\pagestyle{toc} 
+\tableofcontents
+\mainmatter 
+\pagenumbering{arabic}
+\pagestyle{fancy} 
+:::
+

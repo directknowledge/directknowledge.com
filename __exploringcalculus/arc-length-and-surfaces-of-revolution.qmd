@@ -1,0 +1,277 @@
+---
+pagetitle: "Arc Length and Surfaces of Revolution - Exploring Calculus"
+---
+# "Arc Length and Surfaces of Revolution"
+
+We motivate an integration formula for finding the arc length of a smooth curve in a plane. Similarly, we use a formula for finding the surface area of the solid obtained by revolving a curve about an axis. These formulas are demonstrated with several examples and exercises are provided at the end to develop integration skills.
+
+## Arc Length
+
+To find a nice usable formula for finding the \emph{arc length of a curve} we will work with \emph{smooth curves}. 
+
+::: {#def- } 
+Let $y=f(x)$ be a plane curve over an interval $[a,b]$.
+We say that $f$ is \index{smooth} **smooth**  whenever $f'$ is continuous on $[a,b]$. 
+::: 
+
+To  find the arc length of a smooth curve we begin by dividing the curve into small segments, or \index{subcurves} **subcurves** .  
+Then we approximate the curve segments by line segments and sum the lengths of the line segments to form a Riemann sum. 
+We then let the number of segments increase, the corresponding Riemann sums approach a definite integral (under our assumption of smooth curve) whose value we will take to be the \index{arc length} **arc length**  $L$ of the curve.
+Let's see this in more detail. 
+
+Consider the $k$-th subinterval $[x_{k-1}, x_k]$ and the line segment between the points
+\begin{equation}
+(x_{k-1}, f(x_{k-1}))
+\qquad \text{and} \qquad 
+(x_k, f(x_k)).
+\end{equation}
+The change in the $y$-coordinate is denoted by 
+$$
+\Delta y_k = f(x_k)-f(x_{k-1}).
+$$
+Using the Pythagorean theorem, the length of each line segment is then 
+\begin{equation}
+\label{pthm}
+\sqrt{(\Delta x)^2+(\Delta y_k)^2} 
+\qquad \text{ for $k=1,2, \ldots ,n$.}
+\end{equation}
+Summing these lengths we obtain an approximation for the arc length $L$ as 
+\begin{equation}
+\label{approx}
+L\approx \sum_{k=1}^n \sqrt{(\Delta x)^2+(\Delta y_k)^2}. 
+\end{equation}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=250pt]{_includes/arc-length-and-surfaces-of-revolution-1.pdf}
+\end{figure}
+
+Manipulating the inside expression we obtain
+\begin{equation}
+L \approx \sum_{k=1}^n \sqrt{(\Delta x)^2\left(1+\left(\frac{\Delta y_k}{\Delta x}\right)^2\right)} 
+= \sum_{k=1}^n \sqrt{1+\left(\frac{\Delta y_k}{\Delta x}\right)^2} \Delta x.
+\end{equation}
+Using the Mean Value Theorem we obtain
+\begin{equation}
+L \approx \sum_{k=1}^n \sqrt{1+ [f'(x_k^*)]^2} \Delta x
+\end{equation}
+where $x_k^*$ is in the $k$-th subinterval $[x_{k-1}, x_k]$.
+
+::: {#thm- } \label{Arc Length}
+If $y=f(x)$ is a smooth curve on the interval $[a,b]$, then the arc length $L$ of this curve over $[a,b]$ is given as 
+\begin{equation}
+\label{arclength}
+L=\int_a^b \sqrt{1+[f'(x)]^2}\, dx.
+\end{equation}
+::: 
+
+::: {#exm- } 
+Find the exact arc length of the curve $y=\frac{x^6+8}{16x^2}$ over the interval $x=2$ to $x=3$.
+::: 
+
+::: {.solution }
+Notice that $f'(x)= \frac{1}{4} x^3-x^{-3}$ and so 
+\begin{align*}
+L & = \int_2^3 \sqrt{1+ \left(\frac{1}{16} x^6-\frac{1}{2}+x^{-6}\right)} \, dx \\
+& = \int_2^3 \sqrt{\left(\frac{1}{4}x^3+x^{-3}\right)^2} \, dx 
+ = \int_2^3 \left(\frac{1}{4}x^3 + x^{-3}\right) \, dx = \frac{595}{144}.
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Find the arc length of the graph of $y=\ln \cos x$ on $[0,\frac{\pi}{4}]$.
+::: 
+
+::: {.solution }
+First we find that $y'=-\tan x$. 
+Now we apply the Arc Length Formula to find
+\begin{align*}
+L & = \int_0^{\pi/4} \sqrt{1+(-\tan x)^2}\, dx
+ = \int_0^{\pi/4} \sec x \, dx \\
+& = \int_0^{\pi/4} \sec x \left(\frac{\sec x+\tan x}{\sec x+\tan x} \right) \, dx.
+\end{align*}
+Now to continue we let $u =\sec x+\tan x$. 
+Then we find $du = (\sec x \tan x+\sec^2 x)\, dx$ and so we find the arc length as
+\begin{align*}
+L & = \int_1^{1+\sqrt{2}} \left(\frac{1}{u}\right) \, du = \ln (1+\sqrt{2})
+\end{align*}
+as desired.
+::: 
+
+Switching the roles of $x$ and $y$, we obtain the arc length for a smooth curve having the form $x=g(y)$. 
+
+::: {#thm- } \label{Arc Length II}
+If $x=f(y)$ is a smooth curve on the interval $[c,d]$, then the arc length $L$ of this curve over $[c,d]$ is given as 
+\begin{equation}
+L=\int_c^d \sqrt{1+[g'(y)]^2}\, dy.
+\label{arclengtheq}
+\end{equation}
+::: 
+
+
+::: {#exm- } 
+Find the exact arc length of the curve $x=\frac{1}{8}y^4+\frac{1}{4}y^{-2}$ over the interval $y=1$ to $y=4$.
+::: 
+
+::: {.solution }
+Let $x=g(y)=\frac{1}{8}y^4+\frac{1}{4}y^{-2}$ and notice that $g'(y)= \frac{1}{8} y^2-2y^{-2}$ and so 
+\begin{align*}
+L & = \int_1^4 \sqrt{1+\left(\frac{1}{4}y^6 -\frac{1}{2}+\frac{1}{4}y^{-6}\right)}\, dy \\
+& = \int_1^4 \left(\frac{1}{2}y^3+\frac{1}{2} y^{-3}\right) \, dy
+= \frac{2055}{64}
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Find the arc length of the curve given by $y=\ln(x-\sqrt{x^2-1})$, for $1\leq x \leq \sqrt{2}$ by integrating wth respect to $y$. ::: 
+
+::: {.solution }
+Notice that $e^y=x-\sqrt{x^2-1}$. 
+Also notice that 
+\begin{equation}
+e^{-y} = \frac{1}{x-\sqrt{x^2-1}} = \frac{1}{x-\sqrt{x^2-1}} \left(\frac{x+\sqrt{x^2-1}}{x+\sqrt{x^2-1}}\right)
+\end{equation}
+We obtain $e^{-y} = x+\sqrt{x^2-1}$.
+Now by adding $e^y$ and $e^{-y}$, we obtain $x=\frac{1}{2}(e^y +e^{-y})$. 
+Therefore, $\frac{dx}{dy} = \frac{e^y-e^{-y}}{2}$ and so the arc length is
+\begin{align*}
+L & = \int_{\ln(\sqrt{2}-1)}^0 \sqrt{1+\left(\frac{e^y-e^{-y}}{2}\right)^2}\, dy 
+= \left.\left(\frac{e^y-e^{-y}}{2}\right)\right|^0_{\ln (\sqrt{2}-1)} = 1
+\end{align*}
+as desired. 
+::: 
+
+
+## Surfaces of Revolution
+
+::: {#thm- } \label{Surface Area}
+Let $f$ be a nonnegative smooth function on $[a,b]$. 
+The \index{surface area} **surface area**  of the surface obtained by revolving the graph of $f$ about the $x$-axis is
+\begin{equation}
+S=2\pi \int_a^b f(x) \sqrt{1+[f'(x)]^2} \, dx.
+\end{equation}
+::: 
+
+::: {#exm- } 
+Find the surface area generated by revolving the curve $y= \sqrt{2x-x^2}$ on $0.5\leq x \leq 1.5$. 
+::: 
+
+::: {.solution }
+We have $\frac{dy}{dx}=\frac{1-x}{\sqrt{2x-x^2}}$ and so using the Surface Area Theorem we have 
+\begin{align*}
+S & = \int_{0.5}^{1.5} 2\pi \sqrt{2x-x^2} \sqrt{1+\frac{(1-x)^2}{2x-x^2}}\, dx \\
+& = 2\pi \int_{0.5}^{1.5}  \sqrt{2x-x^2} \left(\frac{\sqrt{2x-x^2+1-2x+x^2}}{\sqrt{2x-x^2}}\right) \, dx \\
+& = 2\pi \int_{0.5}^{1.5} \, dx = 2\pi
+\end{align*}
+as desired. 
+::: 
+
+::: {#exm- } 
+Verify that the surface area of a spher of radius $r$ is $S=4\pi r^2$ by evaluating a definite integral. 
+::: 
+
+::: {.solution }
+Let $y=\sqrt{r^2-x^2}$. 
+Then $y'=-\frac{x}{\sqrt{r^2-x^2}}$ and so 
+\begin{equation}
+1+(y')^2 = \frac{r}{r^2-x^2}. 
+\end{equation}
+Therefore we find that 
+\begin{equation}
+S = 2\pi \int_{-r}^r y \left(\frac{r}{\sqrt{r^2-x^2}}\right)\, dx = 2\pi r \int_{-r}^r \, dx = 4\pi r^2
+\end{equation}
+as desired. 
+::: 
+
+
+::: {#thm- } \label{Surface Area II}
+Let $g$ be a nonnegative smooth function on $[c,d]$. 
+The \index{surface area} **surface area**  of the surface obtained by revolving the graph of $g$ about the $y$-axis is
+\begin{equation}
+S=2\pi \int_c^d f(y) \sqrt{1+[g'(y)]^2} \, dy.
+\end{equation}
+::: 
+
+::: {#exm- } 
+Find the area of the surface obtained by revolving the curve 
+\begin{equation}
+x=\frac{1}{6} y^3+\frac{1}{2y}
+\end{equation}
+for $1\leq y \leq 2$ about the $y$-axis. 
+::: 
+
+::: {.solution }
+Notice that $x'=\frac{y^4-1}{2y^2}$ and so 
+\begin{equation}
+1 +  (x')^2 = 1+\frac{(y^4-1)^2}{4y^4} = \frac{(y^4+1)^2}{4y^4}
+\end{equation}
+Using the Surface Area Theorem we find the surface area to be
+\begin{align*}
+S & = \pi \int_1^2 \left(\frac{y^3}{6}+\frac{1}{2y}\right)\left(y^2+\frac{1}{y^2}\right) \, dy \\
+& = \pi \int_1^2 \left(\frac{y^5}{6}+\frac{2y}{3}+\frac{1}{2y^3}\right) \, dy = \frac{47\pi}{16}
+\end{align*}
+as desired.
+::: 
+
+
+
+
+## Exercises
+
+::: {#exr- } 
+Find the length of the curves. 
+ - $y=(1/3)(x^2+2)^{3/2}$ from $x=0$ to $x=3$
+- $y=(x^3/3)+x^2+x+1/(4x+4)$ from $x=0$ to $x=2$
+- $y=(2/3) (x^2+1)^{3/2}$, from $x=1$ to $x=4$
+- $y=x^2\cos x$ from $x=0$ to $x=\pi$
+- $y=x^3-x^2$ from $x=-1$ to $x=1$
+- $y=(1/2)(e^x + e^{-x})$ from $x=0$ to $x=\ln 2$
+- $x=\sqrt{36-y^2}$, $0\leq y \leq 3$
+- $x=(1/3)\sqrt{y}(y-3)$, $1\leq y \leq 4$
+- $x=2e^{\sqrt{2}y} +(1/16) e^{-\sqrt{2}y}$, $0\leq y \leq (\ln 2)/\sqrt{2}$
+- $x=y^4/4+1/(8y^2)$, $1\leq y \leq 2$
+ 
+::: 
+
+
+::: {#exr- } 
+Use integration to find the lateral surface area of the cone generated by revolving the line segment $y=x/2$, $0\leq x \leq 4$ about the $y$-axis. 
+::: 
+
+::: {#exr- } 
+Find the areas of the surfaces generate by revolving the curves about the indicated axis. 
+ - $y=x^3/9$, $0\leq x \leq 2$, $x$-axis
+- $y=\sqrt{x}$ on $[4,9]$, $x$-axis
+- $x=y^3/3$, $0\leq y \leq 1$, $y$-axis
+- $y=\sqrt{4x+6}$, $0\leq x \leq 5$, $x$-axis
+- $y=(1/3)\sqrt{y(3-y)^2}$ on $0\leq y \leq 3$, $y$-axis
+- $x=2\sqrt{4-y}$, $0\leq y \leq 15/4$, $y$-axis
+- $y=x^2/4$, $2\leq x \leq 4$, $y$-axis
+ 
+::: 
+
+::: {#exr- } 
+Find the area of the surface generated by revolving about the $x$-axis the portion of the astroid $x^{2/3}+y^{2/3}=1$, $0\leq x \leq 1$. 
+::: 
+
+::: {#exr- } 
+Find the area of the surface obtained by revolving the graph of $y=\sqrt{4-x^2}$ on $[0,1]$ about the $x$-axis 
+::: 
+
+::: {#exr- } 
+Which curve has greater length on the interval $[-1,1]$, $y=1-x^2$ or $y=\cos(\pi x/2)$? 
+::: 
+
+::: {#exr- } 
+Find the surface area of an ellipsoid. 
+Use the equation 
+$$
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+$$ 
+to represent the curve that is rotated about an axis to generate the solid, under a suitable restriction.  
+::: 
+
+
+

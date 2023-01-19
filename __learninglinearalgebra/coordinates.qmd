@@ -1,0 +1,289 @@
+---
+pagetitle: "Coordinates - Learning Linear Algebra"
+---
+# Coordinates
+
+::: {#def- } 
+Let $\mathcal{B}=(v_1,...,v_n)$ be a basis of a subspace $V$ of $\mathbb{R}^n$. 
+For any $\vec x \in V$ we can write $\vec v= c_1 \vec v_1 + \cdots +c_m \vec v_m$. 
+The scalars $c_1,...,c_m$ are called the 
+\index{$\mathcal{B}$-coordinates} **$\mathcal{B}$-coordinates**  of $\vec x$ and the vector 
+$$
+\left [ \vec x \right ]_{\mathcal{B}}:= \vectorthree{c_1}{\hdots}{c_m}
+$$ 
+is called the \index{$\mathcal{B}$-coordinate vector} **$\mathcal{B}$-coordinate vector**  of $\vec x$
+::: 
+
+For example the coordinates of $\vectortwo{-2}{4}$ with respect the  standard basis $\mathcal{B}=(\vec{e}_1,\vec{e}_2)$ is 
+$\vectortwo{-2}{4}$ since 
+$\vectortwo{-2}{4}=-2\vec{e}_1+4\vec{e}_2$ which written as 
+$\vectortwo{-2}{4}_{\mathcal{B}}=\vectortwo{-2}{4}.$
+Notice the coordinates of $\vectortwo{-2}{4}$ with respect the basis $\mathcal{B}'=\left(\vectortwo{2}{0},\vectortwo{0}{2}\right)$ is 
+$\vectortwo{-1}{2}$ since 
+$\vectortwo{-2}{4}=(-1)\vectortwo{2}{0}+2\vectortwo{0}{2}$
+which written as 
+$\vectortwo{-2}{4}_{\mathcal{B}'}=\vectortwo{-1}{2}.$
+
+::: {#exm- } 
+Consider the plane $2x_1-3x_2+4x_3=0$ with basis 
+$$
+\mathcal{B}=\left(\vectorthree{8}{4}{-1}, \vectorthree{5}{2}{-1}\right).
+$$ 
+Let $[\vec x]_{\mathcal{B}} = \vectortwo{2}{-1}$. Find $\vec x$.
+By definition of coordinates 
+$$
+\vec x= 2\vectorthree{8}{4}{-1} +(-1)\vectorthree{5}{2}{-1}=\vectorthree{11}{6}{-1}.
+$$
+
+::: 
+
+::: {#lem- } 
+\label{lincoord}
+If $\mathcal{B}=(\vec{v}_1,...,\vec{v}_n)$ is a basis of a subspace $V$ of $\mathbb{R}^n$, then 
+ 
+- $[\vec x]_{\mathcal{B}}+[\vec y]_{\mathcal{B}}=[\vec x+\vec y]_{\mathcal{B}}$, for all vectors $\vec x, \vec y$
+- $[k\vec x]_{\mathcal{B}}=k[\vec x]_{\mathcal{B}}$, for all vectors $\vec x$, and all scalars $k$.
+ 
+::: 
+
+::: {.proof }
+Let 
+$[\vec x]_{\mathcal{B}}=c_1 \vec{v}_1+\cdots + c_n \vec{v}_n$  
+and 
+$[\vec y]_{\mathcal{B}}=d_1 \vec{v}_1+\cdots + d_n \vec{v}_n$ 
+be the representation of $\vec{x}$ and $\vec{y}$ with respect to $\mathcal{B}$. Then 
+$$
+[\vec x]_{\mathcal{B}}+[\vec y]_{\mathcal{B}}
+=\vectorthree{c_1}{\vdots}{c_3}+\vectorthree{d_1}{\vdots}{d_3}
+=\vectorthree{c_1+d_1}{\vdots}{c_n+d_n}
+=[\vec x+y]_{\mathcal{B}}
+$$
+where the last equality holds since 
+$$
+\vec{x}+\vec{y}=(c_1+d_1)\vec{v}_1+\cdots (c_n+d_n)\vec{v}_n.$$
+We leave the proof of the second part for the reader. 
+::: 
+
+::: {#exm- } 
+Determine whether the vector $\vec x = \vectorthree{1}{-2}{-2}$ is in $\text{span} V$ of the vectors $\vec{v}_1=\vectorthree{8}{4}{-1}$ and $\vec{v}_2=\vectorthree{5}{2}{-1}$ and if so write the coordinates of $\vec x$ with respect to this basis of $V$.
+We need to find scalars $c_1$ and $c_2$ such that $\vec x=c_1 \vec v_1+c_2 \vec v_2$. Solving this system we find $c_1=-3$ and $c_2=5$. Therefore we find, $[\vec x]_{\mathcal{B}}=\vectortwo{-3}{5}$ where $\mathcal{B}=(\vec v_1, \vec v_2)$.
+
+::: 
+
+::: {#exm- } 
+Consider the plane $x+2y+z=0$. Find a basis of this plane. Find another basis $\mathcal{B}$ of this plane such that 
+$[\vec x]_{\mathcal{B}}=\vectortwo{2}{-1}$ for 
+$\vec x = \vectorthree{1}{-1}{1}$.
+We find a basis by letting $z=t$ and $y=s$ be free variables. Then 
+$x=-t-2s$. All solutions to the equation $x+2y+z=0$ are 
+$$
+\vectorthree{x}{y}{z}
+=\vectorthree{-t-2s}{s}{t}
+=t\vectorthree{-1}{0}{1}+s\vectorthree{-2}{1}{0}.
+$$
+So a basis for the plane is 
+$\mathcal{B}=\left(\vectorthree{-1}{0}{1},\vectorthree{-2}{1}{0}\right).$
+Notice $\vectorthree{1}{-1}{1}=(1)\vectorthree{-1}{0}{1}+(-1)\vectorthree{-2}{1}{0}$ and thus 
+$\vectorthree{1}{-1}{1}_{\mathcal{B}}=\vectortwo{1}{-1}$. 
+Thus this is not the basis we seek. 
+However, notice 
+$$
+\vectorthree{1}{-1}{1}
+=2\vectorthree{x_1}{0}{-x_1}+(-1)\vectorthree{-2y_2}{y_2}{0}
+$$ 
+holds when $y_2=1$ and $x_1=-1/2$. 
+Also notice the vectors $\vectorthree{-1/2}{0}{1/2}$ and 
+$\vectorthree{-2}{1}{0}$ span the plane and are linearly independent. Therefore we have the basis we seek, namely
+$$
+\mathcal{B}
+=\left(\vectorthree{-1/2}{0}{1/2},\vectorthree{-2}{1}{0}\right).
+$$
+ 
+::: 
+
+::: {#lem- } 
+\label{lem:bmatrix}
+Let $T$ be a linear transformation from $\mathbb{R}^n$ to $\mathbb{R}^n$ and $\mathcal{B}=(\vec{v}_1,...,\vec{v}_n)$ a basis of $\mathbb{R}^n$. The $n\times n$ matrix $B$ that transforms 
+$[ \vec{x}]_{\mathcal{B}}$ into $[T(\vec x)]_{\mathcal{B}}$ is called the \index{$\mathcal{B}$-matrix} **$\mathcal{B}$-matrix**  of $T$, written as 
+$[T(\vec x)]_{\mathcal{B}}=B [ \vec x ]_{\mathcal{B}}$ for all $\vec x$ in $\mathbb{R}^n$ and 
+$$
+B=
+\begin{bmatrix} 
+[T(\vec v_1)]_{\mathcal{B}} &  \cdots & [T(\vec v_n)]_{\mathcal{B}}
+\end{bmatrix}.
+$$
+::: 
+
+::: {.proof }
+Since $\mathcal{B}$ is a basis of $\mathbb{R}^n$, there exists scalars $c_1, ..., c_n$ such that 
+$\vec{x}=c_1 \vec{v}_1+c_2\vec{v}_2+\cdots + c_n \vec{v}_n$. Using the linearity of $T$ we find
+$$
+T(\vec{x})=c_1 T(\vec{v}_1)+c_2 T(\vec{v}_2)+\cdots +c_n T(\vec{v}_n).
+$$
+By \ref{lincoord} we find
+\begin{align*}
+[T(\vec{x})]_{\mathcal{B}}
+& = c_1 [T(\vec{v}_1)]_{\mathcal{B}} + c_2 [T(\vec{v}_2)]_{\mathcal{B}} + \cdots +c_n [T(\vec{v}_n)]_{\mathcal{B}} \\
+& =
+\begin{bmatrix} 
+[T(\vec v_1)]_{\mathcal{B}} &  \cdots & [T(\vec v_n)]_{\mathcal{B}}
+\end{bmatrix}
+[\vec{x}]_{\mathcal{B}}
+\end{align*}
+as desired. 
+::: 
+
+::: {#exm- } 
+Find the matrix $\mathcal{B}$ of the linear transformation 
+$T(\vec x)=A \vec x$ where
+$$
+A=\begin{bmatrix} 
+5 & -4 & -2 \\
+-4 & 5 & -2 \\
+-2 & -2 & 8
+\end{bmatrix}
+$$ 
+with respect to the basis 
+$\mathcal{B}=\left ( \vectorthree{2}{2}{1}, \vectorthree{1}{-1}{0}, \vectorthree{0}{1}{-2} \right )$.
+By \ref{lem:bmatrix}, $T$ with respect to $\mathcal{B}$ has the following matrix $B$.
+$$
+\begin{bmatrix}
+\left[T\vectorthree{2}{2}{1}\right]_{\mathcal{B}} &
+\left[T\vectorthree{1}{-1}{0}\right]_{\mathcal{B}} &
+\left[T\vectorthree{0}{1}{-2}\right]_{\mathcal{B}} 
+\end{bmatrix}
+=
+\begin{bmatrix}
+\vectorthree{0}{0}{0}_{\mathcal{B}} &
+\vectorthree{9}{-9}{0}_{\mathcal{B}} &
+\vectorthree{0}{9}{-18}_{\mathcal{B}}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 9 & 0 \\
+0 & 0 & 9 
+\end{bmatrix}.
+$$
+
+::: 
+
+::: {#thm- } 
+Let $T$ be a linear transformation from $\mathbb{R}^n$ to $\mathbb{R}^n$ with standard matrix $A$ and let $B$ be the $\mathcal{B}$-matrix of $T$ where $\mathcal{B}= (\vec{v}_1,...,\vec{v}_n)$ then $A S= S B$ where 
+$$
+S= \begin{bmatrix} 
+\vec{v}_1 & \cdots &  \vec{v}_n 
+\end{bmatrix}
+.$$
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#def- } 
+Two $n\times n$ matrices $A$ and $B$ are called \index{similar} **similar**  if there exists an invertible matrix $S$ such that $A S= S B$.
+::: 
+
+::: {#exm- } 
+Determine whether the following two matrices are similar.
+$$
+A=\begin{bmatrix} 1 & 2 \\ 4 &3 \end{bmatrix} 
+\qquad \text{and} \qquad
+B=\begin{bmatrix} 5 & 0 \\ 0 & -1 \end{bmatrix}$$
+We are looking for a  matrix 
+$$
+S=
+\begin{bmatrix} x & y \\ z & t\end{bmatrix}
+$$ 
+such that $AS=SB$. Writing out we find
+$$
+\begin{bmatrix} 1 & 2 \\ 4 &3 \end{bmatrix} 
+\begin{bmatrix} x & y \\ z & t\end{bmatrix}
+=
+\begin{bmatrix} x & y \\ z & t\end{bmatrix}
+\begin{bmatrix} 5 & 0 \\ 0 & -1 \end{bmatrix} 
+\quad \implies \quad 
+\begin{bmatrix} x+2z & y+2t \\ 4x+3z & 4y+3t \end{bmatrix} 
+=
+\begin{bmatrix} 5x & -y  \\ 5z & -t \end{bmatrix}. 
+$$ 
+This leads to $z=2x$ and $t=-y$ so that $S$ is any invertible matrix of the form 
+\begin{equation}
+\label{simform}
+\begin{bmatrix}x & y \\ 2x & -y\end{bmatrix}.
+\end{equation} 
+Since $S= \begin{bmatrix}1 & 1 \\ 2 & -1 \end{bmatrix}$ is invertible and of the form in \eqref{simform}, we can say, yes $A$ is similar to $B$. 
+
+::: 
+
+::: {#thm- } 
+If $A$ is similar to $B$ then $A^k$ is similar to $B^k$ for any positive integer $k$. 
+::: 
+
+::: {.proof }
+If $A$ is similar to $B$ then there exists an invertible matrix $S$ such that $B=S^{-1}A S$. Then
+$$
+B^k=(S^{-1}AS)(S^{-1}AS)\cdots (S^{-1}AS)=S^{-1}A^k S
+$$
+which shows that $B^k$ is similar to $A^k$. 
+::: 
+
+::: {#thm- } 
+\label{simsamelin}
+Two $n\times n$ matrices $A$, $A'$ are similar if and only if they are matrices of the same linear transformation $T$ from 
+$\mathbf{R}^n$ to $\mathbf{R}^n$ with respect to two bases for 
+$\mathbf{R}^n$
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#thm- } 
+Similar matrices have the same rank. 
+::: 
+
+::: {.proof }
+Let $A$ and $B$ be similar matrices. By \ref{simsamelin} $A$ and $B$ represent the same linear transformation. Thus they must have the same rank. 
+::: 
+
+::: {#exm- } 
+Are the following similiar matrices?
+$$
+A=
+\begin{bmatrix}
+-1 & 2 & 1 \\
+2 & 0 & 1 \\
+2 & 2 & 2
+\end{bmatrix}
+\qquad \text{and}\qquad 
+B=
+\begin{bmatrix}
+-1 & 2 & 1 \\
+2 & 0 & 1 \\
+1 & 2 & 2 
+\end{bmatrix}
+$$
+Since $\text{rank}(A)=3$ and $\text{rank}(B)=2$, these are not similar matrices.  
+
+::: 
+
+::: {#thm- } 
+\label{simequiv}
+Similarity of matrices is an equivalence relation. 
+::: 
+
+::: {.proof }
+To show transitivity, assume $A$ is similar to $B$ and $B$ is similar to $C$, then there exists invertible matrices $E$ and $F$ such that $AE=EB$ and $BF=FC$. Then 
+$$
+A=EBE^{-1}=E(FCF^{-1})E^{-1}=(EF)C(F^{-1}E^{-1})=(EF)C(EF)^{-1}
+$$
+which shows that $A$ is similar to $C$. 
+The proof of the reflexive property and the symmetric property are left for the reader. 
+::: 
+
+By \ref{simequiv}, a linear transformation represents a whole class of (similar) matrices. That is the collection of $n\times n$ matrices is partitioned into non overlapping sets of matrices, with all matrices in any such set being similar and representing the same linear transformation from $\mathbf{R}^n$ to $\mathbf{R}^n$.
+
+
+

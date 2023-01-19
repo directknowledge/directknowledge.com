@@ -1,0 +1,65 @@
+# Multivariable Calculus
+
+project:
+  type: book
+  resources: 
+    - assets
+    - images
+  post-render: 
+    - ../_webtools/html_revise_mc.py
+
+book:
+  title: "Multivariable Calculus"
+  chapters:
+    - index.qmd
+    #- vector-valued-functions.qmd
+    #- derivatives-and-integrals-of-vector-functions.qmd
+    #- arc-length-and-curvature.qmd
+    #- multivariable-functions.qmd
+    #- multivariable-limits-and-continuity.qmd
+    #- partial-derivatives.qmd
+    #- differentials-and-differentiability.qmd
+    #- multivariable-chain-rules.qmd
+    #- directional-derivatives-and-gradient-vectors.qmd
+    #- tangent-planes-and-normal-lines.qmd
+    #- extreme-values-of-two-variable-functions.qmd
+    #- lagrange-multipliers.qmd
+    #- double-integrals.qmd
+    #- iterated-integrals.qmd
+    #- double-integrals-in-polar-coordinates.qmd
+    #- applications-of-double-integrals.qmd
+    #- surface-area.qmd
+    #- triple-integrals.qmd
+    #- triple-integrals-in-cylindrical-and-spherical-coordinates.qmd
+    #- change-of-variables-in-multiple-integrals.qmd
+    #- vector-fields.qmd
+    #- divergence-and-curl.qmd
+    #- line-integrals.qmd
+    #- independence-of-path-and-conservative-vector-fields.qmd
+    #- greens-theorem.qmd
+    - references.qmd
+  sidebar:
+    title: "Multivariable Calculus"
+  site-url: https://directknowledge.com/multivariable-calculus/
+  description: "multivariable-calculus"  
+
+format:
+  html:
+    include-in-header: 
+      - ../_html/head-mc.html
+pdf:
+    keep-tex: true
+    toc: false
+    documentclass: book
+    classoption: [10pt,reqno,twopage,openany]
+    include-in-header: 
+      - ../_control/packages-mc.tex
+      - ../_control/commands.tex
+    include-before-body:
+      - ../_control/topmatter.tex
+    include-after-body: 
+      - ../_control/makeindex.tex
+
+metadata-files:
+  - ../_meta/book.yml
+  - ../_meta/format.yml
