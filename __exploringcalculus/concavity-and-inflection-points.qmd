@@ -44,13 +44,6 @@ Suppose a function $f$ is twice differentiable on an interval $I.$
 Determine where the curve $y=x^4-4x^3$ is concave upward, where it is concave downward, and where the points of inflection are. 
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 170pt]{_includes/concavity-and-curve-sketching-1.pdf}}
-\caption{$y=x^4-4x^3$}
-\label{fig:graph12}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The first and second derivatives of the function $f$ are
@@ -74,14 +67,6 @@ Therefore, $f$ is concave up on $(-\infty ,0)\cup (2,+\infty )$ and concave down
 ::: {#exm- }  
 Determine where the curve $y=x^3-3x+1$ is concave upward and where it is concave downward. Find all inflection points, local extrema, and sketch the curve. 
 ::: 
-
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 120pt,height= 120pt]{_includes/concavity-and-curve-sketching-2.pdf}}
-\caption{ $y=x^3-3x+1$}
-\label{fig:graph13}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The first and second derivatives of the function $f$ are
@@ -124,14 +109,6 @@ Use the Second Derivative Test to determine whether each first-order critical nu
 $f(x)=3x^5-5x^3+2$ corresponds to a relative maximum, a relative minimum, or neither. 
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 170pt]{_includes/concavity-and-curve-sketching-3.pdf}}
-\caption{$f(x)=3x^5-5x^3+2$}
-\label{fig:graph14}
-\end{center}
-\end{figure}
-
 ::: {.solution } 
 Since $f'(x)=15 x^4-15 x^2=15 (x-1) x^2 (x+1)$ is defined for all real numbers and $f'(x)=0$ when $x=0$ and $x=\pm 1$ the first-order critical numbers are $x=0$ and $x=\pm 1$ . Since \[f''(x)=60 x^3-30 x=30 x \left(2 x^2-1\right)\] is continuous for all real numbers we can apply the Second Derivative Test. Since $f''(-1)<0$ the point $(-1,4)$ is a local maximum and since $f''(1)>0$ the point $(1,0)$ is a local minimum. Since $f''(0)=0$ the Second Derivative Test is inconclusive at $x=0$.  (see Figure ~\ref{fig:graph14}). 
 ::: 
@@ -140,14 +117,6 @@ Since $f'(x)=15 x^4-15 x^2=15 (x-1) x^2 (x+1)$ is defined for all real numbers a
 ::: {#exm- }  
 Use the Second Derivative Test to determine whether each critical number of the function $f(x)= x+4/x$ corresponds to a relative maximum, a relative minimum, or neither. 
 ::: 
-
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 170pt]{_includes/concavity-and-curve-sketching-4.pdf}}
-\caption{$\ds f(x)= x+\frac{4}{x}$}
-\label{fig:graph15}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The first derivative of the function $f$ is 
@@ -160,13 +129,6 @@ $f''(x)=\frac{4}{x^3}$  and since $f''$ is continuous for all real numbers excep
 For the function $f(x)=x^2e^{-3x}$ find all first-order and second-order critical numbers. Apply the First Derivative Test, Concavity Test, and the Second Derivative Test. Sketch the graph of the function.
 ::: 
  
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 170pt]{_includes/concavity-and-curve-sketching-5.pdf}}
-\caption{$f(x)=x^2e^{-3x}$}
-\label{fig:graph16}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The first and second derivatives of the function $f$ are
@@ -202,23 +164,15 @@ Since $f''$ is continuous we can apply the Second Derivative Test as follows: si
 For each of the following functions identify the inflection points and local maxima and local minima. Identify the intervals on which the function is concave up and concave down. Sketch the graph showing these specific features. 
  
 - $f(x)=\frac{x^4}{4}-2x^2+4$ 
-\item 
-$f(x)=\frac{9}{14}x^{1/3}\left(x^2-7\right)$ 
-\item 
-$f(x)=\tan  x-4x$ on $-\frac{\pi }{2}<x<\frac{\pi }{2}$ 
-\item 
-$f(x)=2 \cos  x-\sqrt{2}x$ on  $-\pi <x<\frac{3\pi }{2}$ 
+- $f(x)=\frac{9}{14}x^{1/3}\left(x^2-7\right)$ 
+- $f(x)=\tan  x-4x$ on $-\frac{\pi }{2}<x<\frac{\pi }{2}$ 
+- $f(x)=2 \cos  x-\sqrt{2}x$ on  $-\pi <x<\frac{3\pi }{2}$ 
 - $f(x)=x^2-4x+3$ 
-\item 
-$f(x)=x^4-2x^2$
-\item 
-$f(x)=x-\sin  x$ on $0\leq  x\leq  2\pi $ 
-\item 
-$f(x)=\sqrt{|x|}$ 
-\item 
-$f(x)=e^x-2e^{-x}-3x$ 
-\item 
-$f(x)=\frac{\ln  x}{\sqrt{x}}$ 
+- $f(x)=x^4-2x^2$
+- $f(x)=x-\sin  x$ on $0\leq  x\leq  2\pi $ 
+- $f(x)=\sqrt{|x|}$ 
+- $f(x)=e^x-2e^{-x}-3x$ 
+- $f(x)=\frac{\ln  x}{\sqrt{x}}$ 
  
 ::: 
 

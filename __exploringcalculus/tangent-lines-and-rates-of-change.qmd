@@ -79,14 +79,14 @@ and is also known as the \index{derivative} **derivative**  of $f$  at $x.$
 
 
 ::: {#exm- } 
-Let $\ds f(x)=\frac{x^2-x+5}{3-x}.$  
+Let $ \displaystyle f(x)=\frac{x^2-x+5}{3-x}.$  
 Find the instantaneous rate of change at $x=2.$ 
 ::: 
 
 ::: {.solution }
 Since 
 $$
-\ds f'(x)=\frac{-x^2+6 x+2}{(x-3)^2},
+ \displaystyle f'(x)=\frac{-x^2+6 x+2}{(x-3)^2},
 $$ 
 the instantaneous rate for change of $f$ at $x=2$ is given by, 
 \[
@@ -104,12 +104,6 @@ Picking up on these ideas were \index{Isaac Newton} and \index{Gottfried Liebniz
 For a general curve it is not easy to define what is meant by a tangent line; for example a tangent line might mean a line touches  the curve only once, but this does not work in all cases. 
 Figure \ref{fig:tangentlines} shows examples of tangent lines.
 
-\begin{figure}[h]
-\centering\includegraphics[width=350pt]{_includes/image1.png} 
-\caption{Tangent Lines}
-\label{fig:tangentlines}
-\end{figure}
-
 
 The important idea to remember is that a tangent line is a local concept, we say the \index{tangent line} **tangent line**  at a point.
 
@@ -119,15 +113,6 @@ In our first example we will calculate a series of functions whose graphs are \i
 Let $f(x)=2x^3-2x+2$.
 Find an equation of the line that passes through the points $(1/2,5/4)$ and $(1,2)$  and sketch the graph of both $f$ and the secant line. 
 The equation of the secant line is $y= \frac{3}{2} x+\frac{1}{2}$.
-
-\begin{figure}[ht] 
-\centering
-\includegraphics[width=170pt]{_includes/image3.pdf} 
-\quad
-\includegraphics[width=170pt]{_includes/image4.pdf} 
-\caption{The secant lines $y=3/2 x+(1/2)$ and $y=3/8 x+(17/16)$, respectively.}
-\label{fig:secantline1}
-\end{figure}
 
 Do the same for the points $(1/2,5/4)$  and $(3/4,43/32)$. 
 We find an equation of the secant line is $y=\frac{3}{8}x+\frac{17}{16}$.
@@ -167,12 +152,6 @@ and is also known as the \index{derivative} **derivative**  of $f$  at $x.$
 
 ## Equation of Tangent Line
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=220pt]{_includes/image2.pdf} 
-\caption{Slope of the Tangent Line}
-\label{fig:slopeofthetangentline}
-\end{figure}
 
 
 ::: {#thm- } 
@@ -200,12 +179,6 @@ Therefore, the points of tangency are at $(1,0)$  and $(-3,2)$.
 The tangent lines are found by using $y=1/2 x+b$  where $b=y-1/2 x$  with $(1,0)$  and $(-3,2)$. 
 We find $b=-1/2$  and $b=7/2$ respectively. 
 Therefore, equations of the tangent lines are  $y=\frac{1}{2}x-\frac{1}{2}$  and $y=\frac{1}{2} x+\frac{7}{2}$.
-\begin{figure}[!ht] 
-\centering
-\includegraphics[width=200pt]{_includes/image6.png} 
-\caption{Tangent lines for $y=(x-1)/(x+1)$.}
-\label{fig:tan1}
-\end{figure}
 ::: 
 
 
@@ -226,12 +199,6 @@ $$
 \left(-2\pm \sqrt{3},\frac{-2\pm \sqrt{3}}{-2\pm \sqrt{3}+1}\right).
 $$ 
 
-\begin{figure}[!ht] 
-\centering
-\includegraphics[width=200pt]{_includes/image7.pdf} 
-\caption{Tangent lines to $y=x/(x+1)$.}
-\label{fig:tan2}
-\end{figure}
 ::: 
 
 ::: {#exm- } 
@@ -247,12 +214,6 @@ $$
 Solving for $x$ we obtain, $x=-1$  and $x=5.$  
 Thus there are two tangent lines and they are tangent at the points $(-1,0)$  and $(5,30).$  
 The tangent lines are $y=-x-1$  and $y=11 x-25.$  
-\begin{figure}[ht] 
-\centering
-\includegraphics[width=250pt]{_includes/image8.png} 
-\caption{Tangent lines to $y=x^2+x.$}
-\label{fig:tan3}
-\end{figure}
 ::: 
 
 ## Horizontal Tangent Lines

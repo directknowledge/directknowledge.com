@@ -14,21 +14,15 @@ We call this plane the \index{tangent plane} **tangent plane**  to $S$ at $P$.
 
 ::: {#thm- } [Equation of Tangent Plane]
 If $z=f(x,y)$ is differentiable at $(a,b)$ then an equation of the tangent plane to the graph of $f$ at $(a,b)$ is 
-\[
+$$
 z-f(a,b)=f_x(a,b)(x-a)+f_y(a,b)(y-b).
-\]
+$$
 ::: 
 
 ::: {.proof }
 The proof is left for the reader.
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/tpex5.pdf}
-\caption{The surface $z=2x^2+y^2$ and its tangent plane at $(1,1,3)$.}
-\label{fig:tanplane-1}
-\end{figure} 
 
 
 ::: {#exm- } 
@@ -56,13 +50,6 @@ z=4x+2y-3.
 \end{equation}
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/tpex6.pdf}
-\caption{The surface $z=$$
-z=4-x^2-y^2$ and its tangent plane at $(1,1,2)$.}
-\label{fig:tanplane-2}
-\end{figure} 
 
 ::: {#exm- } 
 Find an equation of the tangent plane to the surface 
@@ -89,13 +76,6 @@ z=-2x-2y+6
 \end{equation}
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/tpex7.pdf}
-\caption{The surface $z=$$
-z=\sin x+\sin y$ and its tangent plane at $\left(\frac{\pi}{2},\frac{\pi}{3},1+\frac{\sqrt{3}}{2}\right)$.}
-\label{fig:tanplane-3}
-\end{figure} 
 
 ::: {#exm- } 
 Find an equation of the tangent plane to the surface 
@@ -129,14 +109,14 @@ z=\frac{1}{2}y-\frac{\pi}{6}+1+\frac{\sqrt{3}}{2}
 
 ::: {#thm- } [Tangent Plane To A Surface]
 Suppose $S$ is a surface with the equation $F(x,y,z)=C$ and let $P(a,b,c)$ be a point on $S$ where $F$ is differentiable with $\nabla F_P\neq 0.$ Then an equation of the tangent plane to $S$ at $P$ is
-\[
+$$
 F_x(a,b,c)(x-a)+F_y(a,b,c)(y-b)+F_z(a,b,c)(z-c)=0
-\]  
+$$  
 and the normal line to $S$ at $P$ has parametric equations 
-\[
+$$
 x=a+F_x(a,b,c) t, \qquad 
 y=b+F_y(a,b,c) t, \qquad 
-z=c+F_z(a,b,c) t.\]
+z=c+F_z(a,b,c) t.$$
 ::: 
  
 ::: {.proof }
@@ -161,9 +141,9 @@ the tangent plane is $z-c=f_x(a,b)(x-a)+f_y(a,b)(y-b).$
 
 ::: {#exm- } 
 Find an equation of the tangent plane to the surface 
-\[
+$$
 \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1
-\]
+$$
 at the point $(x_0,y_0,z_0)$.
 ::: 
 
@@ -173,20 +153,20 @@ $F_x=2x/a^2,$
 $F_y=2y/b^2,$ and 
 $F_z=2z/c^2,$ 
 the tangent plane at $P_0\left(x_0,y_0,z_0\right)$ has equation  
-\[
-\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)+\frac{2z_0}{c^2}\left(z-z_0\right)=0\]
-\[
-\frac{x_0 x}{a^2}-\frac{x_0{}^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0^2}{b^2}+\frac{z_0z}{c^2}-\frac{z_0{}^2}{c^2}=0\]
-\[
+$$
+\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)+\frac{2z_0}{c^2}\left(z-z_0\right)=0$$
+$$
+\frac{x_0 x}{a^2}-\frac{x_0{}^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0^2}{b^2}+\frac{z_0z}{c^2}-\frac{z_0{}^2}{c^2}=0$$
+$$
 \frac{x_0 x}{a^2}+\frac{y_0y}{b^2}+\frac{z_0z}{c^2}=1.
-\]
+$$
 ::: 
 
 ::: {#exm- } 
 Find an equation of the tangent plane to the surface 
- \[
+ $$
 \frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1
-\] 
+$$ 
 at the point $(x_0,y_0,z_0)$.
 ::: 
 
@@ -196,20 +176,20 @@ $F_x=2x/a^2,$
 $F_y=2y/b^2,$ and 
 $F_z=-2z/c^2,$ 
 the tangent plane at $P_0\left(x_0,y_0,z_0\right)$ has equation  
-\[
-\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)-\frac{2z_0}{c^2}\left(z-z_0\right)=0\]
-\[
-\frac{x_0 x}{a^2}-\frac{x_0^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0^2}{b^2}+\frac{z_0z}{c^2}+\frac{z_0^2}{c^2}=0\]
-\[
+$$
+\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)-\frac{2z_0}{c^2}\left(z-z_0\right)=0$$
+$$
+\frac{x_0 x}{a^2}-\frac{x_0^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0^2}{b^2}+\frac{z_0z}{c^2}+\frac{z_0^2}{c^2}=0$$
+$$
 \frac{x_0 x}{a^2}+\frac{y_0y}{b^2}-\frac{z_0z}{c^2}=1.
-\]
+$$
 ::: 
 
 ::: {#exm- } 
 Find an equation of the tangent plane to the surface 
-\[
+$$
 \frac{z}{c}=\frac{x^2}{a^2}+\frac{y^2}{b^2}
-\]
+$$
 at the point $(x_0,y_0,z_0)$.
 ::: 
 
@@ -219,14 +199,14 @@ $F_x=2x/a^2,$
 $F_y=2y/b^2,$ and 
 $F_z=-1/c,$ 
 the tangent plane at $P_0\left(x_0,y_0,z_0\right)$ has equation
-\[
-\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)-\frac{1}{c}\left(z-z_0\right)=0\]
-\[
+$$
+\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)-\frac{1}{c}\left(z-z_0\right)=0$$
+$$
 \frac{x_0 x}{a^2}-\frac{x_0^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0{}^2}{b^2}+\frac{z}{c}+\frac{z_0}{c}=0
-\] 
-\[
+$$ 
+$$
 \frac{x_0 x}{a^2}+\frac{y_0y}{b^2}-\frac{z}{c}=\frac{z_0}{c}.
-\]
+$$
 ::: 
 
 ## Normal Lines
@@ -244,9 +224,9 @@ at the point where $x=3, y=4,$ and $z>0.$
 If $P(a,b,c)$ is the point of tangency and $a=3, y=4,$ and $c>0,$ then $c=\sqrt{a^2+b^2}=5.$ 
 If we consider $F(x,y,z)=x^2+y^2-z^2,$
 then the cone can be regarded as the level surface $F(x,y,z)=0.$ 
-The partial derivatives of $F$ are $F_x=2x$, $F_y=2y $, and $F_z=-2z$
+The partial derivatives of $F$ are $F_x=2x$, $F_y=2y$, and $F_z=-2z$
 so at $P(3,4,5)$ we find $F_x(3,4,5)=6$, $F_y(3,4,5)=8,$ and $F_z(3,4,5)=-10.$ Thus the tangent plane has an equation 
-\[6(x-3)+8(y-4)-10(z-5)=0\]
+$$6(x-3)+8(y-4)-10(z-5)=0$$
 or $3x+4y-5z=0$ and the normal line is given parametrically by the equations $x=3+6t ,$ $y=4+8t,$ and $z=5-10t.$ 
 ::: 
 
@@ -264,11 +244,11 @@ $$
 F(x,y,z)=\frac{x^2}{4}+y^2+\frac{z^2}{9}.
 $$ 
 Therefore we have  
-\[
+$$
 F_x(x,y,z)=\frac{x}{2}, \quad 
 F_y(x,y,z)=2y, \quad 
 F_z(x,y,z)=\frac{2z}{9}
-\]
+$$
 Thus, 
 $$
 F_x(-2,1,3)=-1, \quad 
@@ -301,7 +281,7 @@ Find the gradient of the function $f(x,y)=y \tan  x+\sin xy$.
 ::: 
 
 ::: {#exr- } 
-Find the directional directive of $ f(x,y)=\frac{e^{-x}}y$ at $P(0,-1)$ in the direction of $\mathbf{v}=-\mathbf{i}+\mathbf{j}$.
+Find the directional directive of $f(x,y)=\frac{e^{-x}}y$ at $P(0,-1)$ in the direction of $\mathbf{v}=-\mathbf{i}+\mathbf{j}$.
 ::: 
 
 ::: {#exr- } 

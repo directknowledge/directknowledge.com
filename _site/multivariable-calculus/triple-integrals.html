@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Multivariable Calculus">
+<title>Triple Integrals - Exploring Calculus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./triple-integrals-in-cylindrical-and-spherical-coordinates.html" rel="next">
+<link href="./surface-area.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+.book-title, #quarto-search svg {
+    color: #008000!important;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
+    font-weight: 500!important;
+    color:#008000;
+ }
+ #quarto-sidebar .text-start {
+    font-variant: small-caps;
+    font-size: 120%;
+ }
+ #quarto-sidebar .active, .active .chapter-number {
+    color:#000000!important;
+    font-weight: 700!important;
+ }
+</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+</style>
+  
+<meta property="og:title" content="Triple Integrals - Exploring Calculus">
+<meta property="og:description" content="Multivariable Calculus">
+<meta property="og:site-name" content="Multivariable Calculus">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Multivariable Calculus" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
+</i> 
+ <span class="dropdown-text">Exploring Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Triple Integrals</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/multivariable-calculus/">Multivariable Calculus</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-valued-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vector-valued Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivatives-and-integrals-of-vector-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Derivatives and Integrals of Vector Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./arc-length-and-curvature.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Arc Length and Curvature</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multivariable-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multivariable Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multivariable-limits-and-continuity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Multivariable Limits and Continuity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./partial-derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Partial Derivatives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./differentials-and-differentiability.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Differentials and Differentiability</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multivariable-chain-rules.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multivariable Chain Rules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./directional-derivatives-and-gradient-vectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Directional Derivatives and Gradient Vectors</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tangent-planes-and-normal-lines.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tangent Planes and Normal Lines</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extreme-values-of-two-variable-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Extreme Values of Two Variable Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lagrange-multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lagrange Multipliers</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./double-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Double Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./iterated-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Iterated Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./double-integrals-in-polar-coordinates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Double Integrals In Polar Coordinates</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-double-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Applications of Double Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./surface-area.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Surface Area</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./triple-integrals.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Triple Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./triple-integrals-in-cylindrical-and-spherical-coordinates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Triple Integrals in Cylindrical and Spherical Coordinates</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./change-of-variables-in-multiple-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Change of Variables In Multiple Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-fields.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Vector Fields</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./divergence-and-curl.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Divergence and Curl</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./line-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Line Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./independence-of-path-and-conservative-vector-fields.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Independence of Path and Conservative Vector Fields</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./greens-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Green’s Theorem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/multivariable-calculus/"><picture><source type="image/webp" srcset="../../assets/multivariable-calculus-cover.webp"><source type="image/webp" srcset="../../assets/multivariable-calculus-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/multivariable-calculus-cover.png" alt="Multivariable Calculus Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#the-definition-of-a-triple-integral" id="toc-the-definition-of-a-triple-integral" class="nav-link active" data-scroll-target="#the-definition-of-a-triple-integral"><span class="toc-section-number">18.1</span>  The Definition of a Triple Integral</a></li>
+  <li><a href="#basic-properties-of-triple-integrals" id="toc-basic-properties-of-triple-integrals" class="nav-link" data-scroll-target="#basic-properties-of-triple-integrals"><span class="toc-section-number">18.2</span>  Basic Properties of Triple Integrals</a></li>
+  <li><a href="#fubinis-theorem-for-triple-integrals" id="toc-fubinis-theorem-for-triple-integrals" class="nav-link" data-scroll-target="#fubinis-theorem-for-triple-integrals"><span class="toc-section-number">18.3</span>  Fubini’s Theorem for Triple Integrals</a></li>
+  <li><a href="#volume-as-a-triple-integral" id="toc-volume-as-a-triple-integral" class="nav-link" data-scroll-target="#volume-as-a-triple-integral"><span class="toc-section-number">18.4</span>  Volume as a Triple Integral</a></li>
+  <li><a href="#applications-of-triple-integrals" id="toc-applications-of-triple-integrals" class="nav-link" data-scroll-target="#applications-of-triple-integrals"><span class="toc-section-number">18.5</span>  Applications of Triple Integrals</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">18.6</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<div style="display:none;">
+\(
+\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}
+\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}
+\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
+\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}
+\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}
+\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}
+\newcommand{\norm}[1]{\left|\left |#1\right|\right |}
+\newcommand{\ip}[1]{\left \langle #1\right \rangle}
+\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}
+\)
+</div>
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Triple Integrals</span></h1>
+</header>
+<section id="the-definition-of-a-triple-integral" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="the-definition-of-a-triple-integral"><span class="header-section-number">18.1</span> The Definition of a Triple Integral</h2>
+<p>Suppose <span class="math inline">\(f(x,y,z)\)</span> is defined on a closed bounded solid region <span class="math inline">\(R,\)</span> which in turn is contained in a box <span class="math inline">\(B\)</span> in space. We partition <span class="math inline">\(B\)</span> into a finite number of smaller boxes, call this partition <span class="math inline">\(P,\)</span> we choose a representative point <span class="math inline">\(\left(x_k^*,y_k^*,z_k^*\right)\)</span> from each subdivision in the partition and we form the sum, <span class="math display">\[
+\sum _{k=1}^N f\left(x_k^*,y_k^*,z_k^*\right)\triangle  V_k
+\]</span> where <span class="math inline">\(\triangle V_k\)</span> is the volume of the <span class="math inline">\(k\)</span>-th representative subdivision. This sum is called the <strong>Riemann sum</strong> of <span class="math inline">\(f(x,y,z)\)</span> with respect to the partition <span class="math inline">\(P\)</span> and the cell representation <span class="math inline">\(\left(x_k^*,y_k^*,z_k^*\right).\)</span> To measure the size of the rectangles in the partition <span class="math inline">\(P,\)</span> we define the norm <span class="math inline">\(\|P\|\)</span> of the partition to be the length of the longest diagonal of any of the subdivisions in the partition. We refine the partition by subdividing the subdivisions in such a way that the norm decreases. When this process is applied to the Riemann sum and the norm decreases to zero, we write</p>
+<p><span class="math display">\[
+\iiint_R f(x,y,z) \, d V = \lim _{\|P\|\to 0}\sum _{k=1}^N f\left(x_k^*,y_k^*,z_k^*\right)\triangle  V_k.
+\]</span> If this limit exists, its value is called the <strong>triple integral</strong> of <span class="math inline">\(f\)</span> over the closed bounded region <span class="math inline">\(R.\)</span></p>
+</section>
+<section id="basic-properties-of-triple-integrals" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="basic-properties-of-triple-integrals"><span class="header-section-number">18.2</span> Basic Properties of Triple Integrals</h2>
+<p>::: {#thm- } [Properties of Triple Integrals] Assume that all the given integrals exist on a rectangular region <span class="math inline">\(R\)</span> for given functions <span class="math inline">\(f(x,y,z)\)</span> and <span class="math inline">\(g(x,y,z).\)</span></p>
+<ul>
+<li>For constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b,\)</span> <span class="math display">\[
+\iiint_R (a f+b g)(x,y,z) \, dV
+=a \iiint_R f(x,y,z) \, dV + b \iiint_R g(x,y,z) \, dV.\]</span></li>
+<li>If <span class="math inline">\(f(x,y,z)\geq g(x,y,z)\)</span> throughout a closed bounded region <span class="math inline">\(R,\)</span> then <span class="math display">\[
+\iiint_R f(x,y,z) \, dV\geq \iiint_R g(x,y,z) \, dV.\]</span></li>
+<li>If the closed bounded region of integration <span class="math inline">\(R\)</span> is subdivided into two disjoint subdivisions <span class="math inline">\(R_1\)</span> and <span class="math inline">\(R_2\)</span> whose union is <span class="math inline">\(R\)</span>, then <span class="math display">\[
+\iiint_R f(x,y,z) \, dV= \iiint_{R_1} f(x,y,z) \, dV+\iiint_{R_2} f(x,y,z) \, dV.\]</span></li>
+</ul>
+<p>:::</p>
+</section>
+<section id="fubinis-theorem-for-triple-integrals" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="fubinis-theorem-for-triple-integrals"><span class="header-section-number">18.3</span> Fubini’s Theorem for Triple Integrals</h2>
+<p>::: {#thm- } <a href="#fubinis-theorem-for-triple-integrals">Fubini’s Theorem for Triple Integrals</a> If <span class="math inline">\(f(x,y,z)\)</span> is continuous over a rectangular box <span class="math inline">\(B =\{(x,y,z) \mid a\leq x\leq b, c\leq y\leq d, r\leq z\leq s \},\)</span> then the triple integral may be evaluated by the iterated integral <span class="math display">\[
+\iiint_R f(x,y) \, d V=\int _r^s\int _c^d\int _a^bf(x,y,z) \, dx dy dz\]</span> The iterated integral can be performed in any order, with appropriate adjustments to the limits of integration. :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18.1 </strong></span>Evaluate the triple integral over <span class="math inline">\(B\)</span> given <span class="math display">\[
+\iiint_B x y z^2 \, d V
+\quad \text{and} \quad
+B=\{(x,y,z)\mid  0\leq x\leq 1,-1\leq y\leq 2,0\leq z\leq 3\}.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(f(x,y)=x y z^2\)</span> is continuous on <span class="math inline">\(B\)</span>, we can use Fubini’s theorem for triple integrals <span class="math display">\[
+\int _0^3\int _{-1}^2\int _0^1x y z^2 \, dx dy dz =\int _0^3\int _{-1}^2\frac{y z^2}{2} \, dy dz =\int_0^3 \frac{3 z^2}{4} \, dz =\frac{27}{4}.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18.2 </strong></span>Evaluate the triple integral over <span class="math inline">\(B\)</span> given <span class="math display">\[
+\iiint_B z^2 y e^x \, d V
+\quad \text{and} \quad
+B=\{(x,y,z) \mid  0\leq x\leq 1,1\leq y\leq 2,-1\leq z\leq 1\}.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(f(x,y)=z^2 y e^x\)</span> is continuous on <span class="math inline">\(B\)</span>, we can use Fubini’s theorem for triple integrals <span class="math display">\[\begin{align*}
+\int _{-1}^1\int _1^2\int _0^1z^2 y e^x \, dx dy dz
+&amp; =\int _{-1}^1\int _1^2(-1+e) y z^2 \, dy dz
+\\
+&amp; =\int_{-1}^1 \frac{3}{2} (-1+e) z^2 \, dz
+=-1+e
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18.3 </strong></span>Evaluate the iterated integral <span class="math inline">\(\int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \,d\theta\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We find<br>
+<span class="math display">\[
+\int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \, d\theta
+=\int _0^{2\pi }\int _0^4\frac{r}{2} \, dr \, d\theta
+=\int_0^{2\pi } 4 \, d\theta
+=8 \pi.
+\]</span></p>
+</div>
+<p>In many examples a sketch of the region of integration in the plane, can explain how to visualize the solid region of integration, and how to setup the limits of integration. Recall from studying double integrals, that a vertically simple region <span class="math inline">\(D_1\)</span> is a region of the plane that can be described by the inequalities <span class="math display">\[D_1=\left\{(x,y) \mid a\leq x\leq b, g_1(x)\leq y\leq  g_2(x)\right\}\]</span> where <span class="math inline">\(g_1(x)\)</span> and <span class="math inline">\(g_2(x)\)</span> are continuous functions of <span class="math inline">\(x\)</span> on <span class="math inline">\([a,b].\)</span> Similarly, a horizontally simple region <span class="math inline">\(D_2\)</span>, in the plane is a region that can be described by the inequalities <span class="math display">\[D_2=\left\{(x,y) \mid c\leq y\leq d, h_1(y)\leq x\leq  h_2(y)\right\}\]</span> where <span class="math inline">\(h_1(x)\)</span> and <span class="math inline">\(h_2(x)\)</span> are continuous functions of <span class="math inline">\(y\)</span> on <span class="math inline">\([c,d].\)</span> In some cases it is possible to evaluate a triple integral by evaluating a triple iterated integral over a solid region that when projected onto the <span class="math inline">\(x y\)</span>-plane can be described as a vertically simple or a horizontally simple region.</p>
+<p>::: {#thm- } [Fubini’s Theorem for <span class="math inline">\(z\)</span>-Simple Regions]</p>
+<p>Suppose <span class="math inline">\(R\)</span> is a solid region bounded below by the surface <span class="math inline">\(z=u(x,y)\)</span> and above by the surface <span class="math inline">\(z=v(x,y)\)</span> that projects onto the region <span class="math inline">\(D\)</span> in the <span class="math inline">\(x y\)</span>-plane. If <span class="math inline">\(D\)</span> is either a vertically simple or a horizontally simple region, then the triple integral of the continuous function <span class="math inline">\(f(x,y,z)\)</span> over <span class="math inline">\(R\)</span> is <span class="math display">\[
+\iiint_R f(x,y) \, d V=\iint_D \left(\int_{u(x,y)}^{v(x,y)} f(x,y,z) \, dz\right)dA.
+\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18.4 </strong></span>Evaluate <span class="math display">\[
+\iiint_D\frac{z}{\sqrt{x^2+y^2}} \, dx \, dy \, dz
+\]</span> and <span class="math inline">\(D\)</span> is the solid bounded above by the plane <span class="math inline">\(z=2\)</span> and below by the surface <span class="math inline">\(x^2+y^2-2z=0.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We consider the region of integration as being <span class="math inline">\(z\)</span>-simple by projecting onto the <span class="math inline">\(x y\)</span>-plane; and in the <span class="math inline">\(x y\)</span>-plane the region is bounded by <span class="math inline">\(x^2+y^2=4\)</span>. Using polar coordinates the triple integral is evaluated as <span class="math display">\[\begin{align*}
+\iiint_D \frac{z}{\sqrt{x^2+y^2}}\, dx \, dy \, dz
+&amp; =4\int _0^{\pi /2}\int _0^2\int _{\left.r^2\right/2}^2\frac{z}{\sqrt{r^2}} r \, dz \, dr \, d\theta
+\\
+&amp; =4\int _0^{\pi /2}\int _0^2\frac{r \left(2-\frac{r^4}{8}\right)}{\sqrt{r^2}} \, dr \, d\theta
+\\
+&amp; =4\int_0^{\pi /2} \frac{16}{5} \, d\theta
+=\frac{32 \pi }{5}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18.5 </strong></span>Change the order of integration to show that<br>
+<span class="math display">\[
+\int _0^x\int _0^vf(u) \, du \, dv=\int _0^x(x-u)f(u) \, du
+\]</span> Also, show that <span class="math display">\[
+\int _0^x\int _0^v\int _0^uf(w) \, dw \, du \, dv=\frac{1}{2}\int _0^x(x-w)2f(w)dw.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(u\)</span> be the horizontal axis, <span class="math inline">\(v\)</span> be the vertical axis, and consider the triangular region <span class="math inline">\(T\)</span> determined by <span class="math inline">\(u=0,\)</span> <span class="math inline">\(v=x,\)</span> and <span class="math inline">\(v=u.\)</span> Switching the order of integration, we obtain: <span class="math display">\[\begin{align*}
+\int _0^x\int _0^vf(u) \, du \, dv
+=\int _0^x\int _u^xf(u) \, dv \, du
+=\int _0^x(x-u)f(u) \, du\end{align*}\]</span> as desired.</p>
+</div>
+</section>
+<section id="volume-as-a-triple-integral" class="level2" data-number="18.4">
+<h2 data-number="18.4" class="anchored" data-anchor-id="volume-as-a-triple-integral"><span class="header-section-number">18.4</span> Volume as a Triple Integral</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18.6 </strong></span>Find the volume of the bounded solid bounded by the sphere <span class="math inline">\(x^2+y^2+z^2=2\)</span> and the paraboloid <span class="math inline">\(x^2+y^2=z\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By solving for the intersection, <span class="math inline">\(x^2+y^2+z^2=2\)</span> with <span class="math inline">\(z=x^2+y^2\)</span> and so <span class="math inline">\(z^2+z-2=0\)</span> leads to <span class="math inline">\(z=1.\)</span> Therefore region of integration is <span class="math inline">\(x^2+y^2=1\)</span> and so we have a <span class="math inline">\(z\)</span>-simple region with<br>
+<span class="math display">\[\begin{align*}
+V&amp; =4\int _0^1\int _0^{\sqrt{1-x^2}}\int _{x^2+y^2}^{\sqrt{2-x^2-y^2}} \, dz\, dy \, dx  
+\\
+&amp; =4\int _0^1\int _0^{\sqrt{1-x^2}}\left(-x^2-y^2+\sqrt{-x^2-y^2+2}\right) \, dy \, dx
+\\
+&amp; =4\int _0^{\pi /2}\int _0^1\left(\sqrt{2-r^2}-r^2\right)r \, dr \, d\theta
+\\
+&amp;=4\int _0^{\pi /2}\left(-\frac{7}{12}+\frac{2 \sqrt{2}}{3}\right) \, d\theta
+=\left(\frac{8 \sqrt{2} -7}{6}\right)\pi
+\approx 2.25865 .
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18.7 </strong></span>Find the volume of the bounded solid bounded by the cylinders <span class="math inline">\(y=z^2\)</span> and <span class="math inline">\(y=2-z^2\)</span> and the planes <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=-2.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We represent this solid as a <span class="math inline">\(x\)</span>-simple region. The curves intersect where <span class="math inline">\(y=z^2\)</span> and <span class="math inline">\(y=2-z^2\)</span> and so <span class="math inline">\(z=\pm 1.\)</span> Therefore the volume is given by,<br>
+<span class="math display">\[\begin{align*}
+V&amp; =2\int _0^1\int _{z^2}^{2-z^2}\int _{-2}^1 \, dx \, dy \, dz
+=2\int _0^1\int _{z^2}^{2-z^2}3 \, dy \, dz
+\\
+&amp; =2\int _0^1\left(6-6 z^2\right) \, dz
+=8
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18.8 </strong></span>Find the volume of the bounded solid the tetrahedron <span class="math inline">\(T\)</span> bounded by the planes <span class="math inline">\(x+2y+z=2,\)</span> <span class="math inline">\(x=2y,\)</span> <span class="math inline">\(x=0,\)</span> and <span class="math inline">\(z=0.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The vertices of the tetrahedron are <span class="math inline">\((0,0,2),\)</span> <span class="math inline">\(\left(1,\frac{1}{2},0\right),\)</span> and <span class="math inline">\((0,1,0).\)</span> So the region of integration in the <span class="math inline">\(x y\)</span>-plane is bounded by the lines <span class="math inline">\(x=0,\)</span> <span class="math inline">\(y=\frac{1}{2}x,\)</span> and <span class="math inline">\(y=1-\frac{1}{2}x\)</span> and is described by the set <span class="math display">\[
+R=\{(x,y) \mid  0\leq x \leq 1, x/2 \leq y \leq 1-x/2\}
+\]</span><br>
+This is determined by the vertices of the tetrahedron in the <span class="math inline">\(x y\)</span>-plane and by determining the equations of the lines through these vertices. So the upper boundary is the plane <span class="math inline">\(x+2y+z=2;\)</span> that is <span class="math inline">\(z=2-x-2y.\)</span> Therefore, the volume of the tetrahedron <span class="math inline">\(T\)</span> bounded by the planes <span class="math inline">\(x+2y+z=2,\)</span> <span class="math inline">\(x=2y,\)</span> <span class="math inline">\(x=0,\)</span> and <span class="math inline">\(z=0\)</span> is <span class="math display">\[\begin{align*}
+V&amp; =\iiint_R \, d V
+=\int _0^1\int _{x/2}^{1-x/2}\int _0^{2-x-2y} \, dz \, dy \, dx \\
+&amp; =\int _0^1\int _{x/2}^{1-x/2}(-x-2 y+2) \, dy \, dx
+=\int_0^1 \left(x^2-2 x+1\right) \, dx
+=\frac{1}{3}.
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="applications-of-triple-integrals" class="level2" data-number="18.5">
+<h2 data-number="18.5" class="anchored" data-anchor-id="applications-of-triple-integrals"><span class="header-section-number">18.5</span> Applications of Triple Integrals</h2>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18.1 </strong></span>The <strong>average value</strong> of a function <span class="math inline">\(f\)</span> of three variables over a solid region <span class="math inline">\(R\)</span> is defined to be <span class="math display">\[f_{\text{av}}=\frac{1}{V(R)}\underset{R}{\int \int \int} f(x,y,z)\, dV\]</span> where <span class="math inline">\(V(R)\)</span> is the volume of the solid <span class="math inline">\(R\)</span>.</p>
+</div>
+<p>If a body in space occupies a region <span class="math inline">\(R\)</span> then the mass of the body is the triple integral of the mass density. The first moment of the body about a plane is the triple integral of the product of the signed distance to the plane and the mass density function where the distance is from the differential element of volume <span class="math inline">\(dx\, dydz.\)</span> The second moment (called <strong>moment of inertia</strong> ) of a body about an axis is the triple integral of the product square of the distance from the axis and the mass density function where the distance is from the differential element of volume <span class="math inline">\(dx\, dydz.\)</span> For example, a moment of inertia is used in computing kinetic energy of rotation <span class="math inline">\((1/2)I \omega ^2\)</span> where <span class="math inline">\(\omega\)</span> is the angular speed of rotation.</p>
+<p>Suppose <span class="math inline">\(R\)</span> is a region in space and that <span class="math inline">\(\delta\)</span> is a continuous density function of <span class="math inline">\(R\)</span>. Then for a body occupying a region <span class="math inline">\(R\)</span> in space the center of mass is located at the point <span class="math inline">\((\overline{x},\overline{y}, \overline{z})\)</span> where <span class="math display">\[
+\overline{x}=\frac{M_{yz}}{m}, \qquad
+\overline{y}=\frac{M_{xz}}{m}, \qquad
+\overline{z}=\frac{M_{xy}}{m}
+\]</span> and the <strong>first moments</strong> <span class="math inline">\(M_{x y}\)</span>, <span class="math inline">\(M_{y x},\)</span> and <span class="math inline">\(M_{x z}\)</span> about the <span class="math inline">\(x y\)</span>-plane, <span class="math inline">\(y z\)</span>-plane, and the <span class="math inline">\(x z\)</span>-plane, respectively are<br>
+<span class="math display">\[\begin{align*}
+&amp; M_{x y}=\underset{R}{\int \int \int }z \delta (x,y,z)dx\, dydz, \\
+&amp; M_{y z}=\underset{R}{\int \int \int }x \delta (x,y,z)dx\, dydz, \text{ and } \\
+&amp; M_{x z}=\underset{R}{\int \int \int }y \delta (x,y,z)dx\, dydz,.
+\end{align*}\]</span> where <span class="math display">\[
+m=\underset{R}{\int \int \int} \delta(x,y,z) dV
+\]</span> is the mass of the body. Further, <span class="math inline">\(I_x ,\)</span> <span class="math inline">\(I_y ,\)</span> and <span class="math inline">\(I_z ,\)</span> the <strong>second moments</strong> (or <strong>moments of inertia</strong>) about the coordinate axes are<br>
+<span class="math display">\[\begin{align*}
+&amp; I_x=\underset{R}{\int \int \int }\left(y^2+z^2\right) \delta (x,y,z)dx\, dydz, \\
+&amp; I_y=\underset{R}{\int \int \int }\left(x^2+z^2\right) \delta (x,y,z)dx\, dydz, \text{ and } \\
+&amp; I_z=\underset{R}{\int \int \int }\left(x^2+y^2\right) \delta (x,y,z)dx\, dydz.
+\end{align*}\]</span> More generally the <strong>moments of inertia</strong> about a line <span class="math inline">\(L\)</span> is<br>
+<span class="math display">\[ I_L=\underset{R}{\int \int \int } r^2 \delta (x,y,z)dV\]</span> where <span class="math inline">\(r(x,y,z)\)</span> is the distance from the point <span class="math inline">\((x,y,z)\)</span> to the line <span class="math inline">\(L.\)</span> Intuitively speaking, the moment of inertia <span class="math inline">\(I\)</span> is a measure of the resistance of a body to rotational motion.</p>
+<p>% Moreover, the <strong>radius of gyration</strong> about a line <span class="math inline">\(L\)</span> is given as <span class="math inline">\(R_L=\sqrt{\left.I_L\right/M}\)</span> where <span class="math inline">\(M\)</span> is the total mass of the object.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18.9 </strong></span>Find the moment of inertia about the <span class="math inline">\(z\)</span>-axis of the solid tetrahedron <span class="math inline">\(S\)</span> with vertices <span class="math inline">\((0,0,0)\)</span>, <span class="math inline">\((0,1,0)\)</span>, <span class="math inline">\((1,0,0)\)</span>, <span class="math inline">\((0,0,1)\)</span>, and density <span class="math inline">\(\delta(x,y,z)=x\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The solid <span class="math inline">\(S\)</span> can be described as the set of all <span class="math inline">\((x,y,z)\)</span> such that <span class="math inline">\(0\leq x\leq 1\)</span>, <span class="math inline">\(0\leq y \leq 1-x\)</span>, and <span class="math inline">\(0\leq z\leq 1-x-y\)</span>. Thus, <span class="math display">\[\begin{align*}
+I_z&amp;=\underset{S}{\int \int \int}(x^2+y^2)\delta(x,y,z) \, dV
+\\
+&amp; =\int_0^1\int_0^{1-x}\int_0^{1-x-y} x(x^2+y^2) \, dz \, dy \, dx
+\\
+&amp; =\int_0^1 \int_0^{1-x}x(x^2+y^2)(1-x-y) dy \, dx
+\\
+&amp; = \int_0^1 \left(\frac{x^3(1-x^2)}{2}-\frac{x(1-x^4)}{12}\right) \,dx
+=\frac{1}{90}.
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="exercises" class="level2" data-number="18.6">
+<h2 data-number="18.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">18.6</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.1 </strong></span>Find the following iterated integrals.</p>
+<ul>
+<li><span class="math inline">\(\int _1^4\int _{-2}^3\int _2^5 \, dx \, dy \, dz.\)</span></li>
+<li><span class="math inline">\(\int _{-1}^3\int _0^2\int _{-2}^2 \, dy \, dz \, dx.\)</span></li>
+<li><span class="math inline">\(\int _1^2\int _0^1\int _{-1}^28x^2y z^3 \, dx \, dy \, dz.\)</span></li>
+<li><span class="math inline">\(\int _4^7\int _{-1}^2\int _0^3x^2y^2z^2 \, dx \, dy \, dz.\)</span></li>
+<li><span class="math inline">\(\int _0^2\int _0^x\int _0^{x+y}x y z \, dz \, dy \, dx.\)</span></li>
+<li><span class="math inline">\(\int _0^1\int _{\sqrt{x}}^{\sqrt{1+x}}\int_0^{x y}y^{-1} z \, dz \, dy \, dx.\)</span></li>
+<li><span class="math inline">\(\int _{-1}^2\int _0^{\pi }\int _1^4y z \cos x y \, dz \, dx \, dy.\)</span></li>
+<li><span class="math inline">\(\int _0^{\pi }\int _0^1\int _0^1x^2y \cos x y z \, dz \, dy \, dx.\)</span></li>
+<li><span class="math inline">\(\int _0^1\int _0^y\int _0^{\ln (y)}e^{z+2x} \, dz \, dx \, dy.\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.2 </strong></span>Evaluate the triple integral over the given region</p>
+<ul>
+<li><span class="math inline">\(\underset{D}{\int \int \int }\left(x^2y+y^2z\right)\,dV\)</span> where <span class="math inline">\(D\)</span> is the boxed region defined by <span class="math inline">\(1\leq x\leq 3\)</span>, <span class="math inline">\(-1\leq y\leq 1\)</span>, and <span class="math inline">\(2\leq z\leq 4.\)</span></li>
+<li><span class="math inline">\(\underset{D}{\int \int \int }(x y+2 y z)\, dV\)</span> where <span class="math inline">\(D\)</span> is the boxed region defined by <span class="math inline">\(2\leq x\leq 4\)</span>, <span class="math inline">\(1\leq y\leq 3\)</span>, and <span class="math inline">\(-2\leq z\leq 4.\)</span></li>
+<li><span class="math inline">\(\underset{D}{\int \int \int }x y z \, dV\)</span> where <span class="math inline">\(D\)</span> is the region bounded by the paraboloid<span class="math inline">\(z=x^2+y^2\)</span> and the plane <span class="math inline">\(z=1.\)</span></li>
+<li><span class="math inline">\(\underset{D}{\int \int \int }y z \, dV\)</span> where <span class="math inline">\(D\)</span> is the solid in the first octant bounded by the hemisphere <span class="math inline">\(x=\sqrt{9-y^2-z^2}\)</span> and the coordinate planes.</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.3 </strong></span>Find the volume of the region between the two elliptic paraboloids <span class="math inline">\(z=\left.x^2\right/(9+y^2-4)\)</span> and <span class="math inline">\(z=\left.-x^2\right/(9-y^2+4).\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.4 </strong></span>Change the order of integration to show that <span class="math display">\[
+\int _0^x\int _0^vf(u) \, du \, dv=\int _0^x(x-u)f(u) \, du.
+\]</span> Also, show that <span class="math display">\[
+\int _0^x\int _0^v\int _0^uf(w) dw du dv =\frac{1}{2}\int _0^x(x-w)2f(w) \, dw.
+\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.5 </strong></span>Higher-dimensional multiple integrals can be defined and evaluated in essentially the same way as double integrals and triple integrals. Evaluate the multiple integrals <span class="math display">\[
+\underset{H}{\int \int \int \int }x y w^2 \, dx \, dy \, dz \, dw
+\]</span> where <span class="math inline">\(H\)</span> is the four-dimensional (hyperbox) defined by <span class="math inline">\(0\leq x\leq 1,\)</span> <span class="math inline">\(0\leq y\leq 2,\)</span> <span class="math inline">\(-1\leq z\leq 1,\)</span> and <span class="math inline">\(1\leq w\leq 2.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.6 </strong></span>Find the volume <span class="math inline">\(V\)</span> of the solids bounded by the graphs of the equations by using triple integration. The solid bounded by the sphere <span class="math inline">\(x^2+y^2+z^2=2\)</span> and the paraboloid <span class="math inline">\(x^2+y^2=z.\)</span> The solid of the region bounded by the cylinders <span class="math inline">\(y=z^2\)</span> and <span class="math inline">\(y=2-z^2\)</span> and the planes <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=-2.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.7 </strong></span>Evaluate the multiple integral <span class="math display">\[
+\underset{H}{\int \int \int \int }e^{x-2y+z+w} \, dw \, dz \, dy \, dx
+\]</span> where <span class="math inline">\(H\)</span> is the four-dimensional region bounded by the hyperplane <span class="math inline">\(x+y+z+w=4\)</span> and the coordinate spaces <span class="math inline">\(x=0,\)</span> <span class="math inline">\(y=0,\)</span> <span class="math inline">\(z=0,\)</span> and <span class="math inline">\(w=0\)</span> in the first hyperoctant (where <span class="math inline">\(x\geq 0,\)</span> <span class="math inline">\(y\geq 0,\)</span> <span class="math inline">\(z\geq 0,\)</span> <span class="math inline">\(w\geq 0\)</span>).</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.8 </strong></span>A solid of constant density is bounded below by the plane <span class="math inline">\(z=0,\)</span> on the sides by the elliptical cylinder <span class="math inline">\(x^2+4y^2=4,\)</span> and above by the plane <span class="math inline">\(z=2-x.\)</span> Find <span class="math inline">\(\bar{x} ,\)</span> <span class="math inline">\(\bar{y} ,\)</span> and then evaluate the integral <span class="math display">\[
+M_{x y}=\int _{-2}^2\int _{-(1/2)\sqrt{4-x^2}}^{1/2\sqrt{4-x^2}}\int_0^{2-x}z \, dz \, dy \, dx
+\]</span> to determine <span class="math inline">\(\bar{z}.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.9 </strong></span>Find the centroid and the moments of inertia <span class="math inline">\(I_x ,\)</span> <span class="math inline">\(I_y ,\)</span> and <span class="math inline">\(I_z\)</span> of the tetrahedron whose vertices are <span class="math inline">\((0,0,0),\)</span> <span class="math inline">\((1,0,0),\)</span> and <span class="math inline">\((0,0,1).\)</span> Find the radius of gyration of the tetrahedron about the <span class="math inline">\(x\)</span>-axis. Compare it with the distance from the centroid to the <span class="math inline">\(x\)</span>-axis.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.10 </strong></span>A solid cube, 2 units on a side, is bounded by the planes <span class="math inline">\(x=\pm 1,\)</span> <span class="math inline">\(z=\pm 1,\)</span> <span class="math inline">\(y=3\)</span> and <span class="math inline">\(y=5.\)</span> Find the center of mass, moments of inertia, and radii of gyration about the coordinate axes.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.11 </strong></span>A solid in the first octant is bounded by the coordinate lanes and the plane <span class="math inline">\(x+y+z=2.\)</span> The density of the solid is <span class="math inline">\(\delta (x,y,z)=2x.\)</span> Find the mass and the center of mass.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.12 </strong></span>Find the mass of the solid region bounded by the parabolic surface <span class="math inline">\(z=16-2x^2-2y^2\)</span> and <span class="math inline">\(z=2x^2+2y^2\)</span> if the density of the solid is <span class="math inline">\(\delta (x,y)=\sqrt{x^2+y^2}.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.13 </strong></span>The container is in the shape of the region bounded by <span class="math inline">\(y=0,\)</span> <span class="math inline">\(z=0,\)</span> <span class="math inline">\(z=4-x^2,\)</span> and <span class="math inline">\(x=y^2.\)</span> The density of the liquid filling the region is <span class="math inline">\(\delta (x,y)=k x y\)</span> where <span class="math inline">\(k\)</span> is a constant.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.14 </strong></span>Find the centroid for the part of the spherical solid with density <span class="math inline">\(\delta =2\)</span> described by <span class="math inline">\(x^2+y^2+z^2\leq 9,\)</span> <span class="math inline">\(x\geq 0,\)</span> <span class="math inline">\(y\geq 0,\)</span> and <span class="math inline">\(z\geq 0.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18.15 </strong></span>Find the centroid for the solid bounded by the surface <span class="math inline">\(z=\sin x,\)</span> <span class="math inline">\(x=0,\)</span> <span class="math inline">\(x=\pi ,\)</span> <span class="math inline">\(y=0,\)</span> <span class="math inline">\(z=0,\)</span> and <span class="math inline">\(y+z=1,\)</span> where the density is <span class="math inline">\(\delta =1.\)</span></p>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/multivariable-calculus\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./surface-area.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Surface Area</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./triple-integrals-in-cylindrical-and-spherical-coordinates.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Triple Integrals in Cylindrical and Spherical Coordinates</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

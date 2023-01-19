@@ -12,20 +12,15 @@ The next theorem states the common procedural rules for taking derivatives. For 
 ::: {#thm- } [Differentiation Rules]
 Let $f$ and $g$ be functions. 
  
-\item 
-(Constant Rule) 
+- (Constant Rule) 
 If $f$ is a constant function, $f(x)=c$ for some real number $c,$ then $f'(x)=0.$
-\item 
-(Power Rule) 
+- (Power Rule) 
 If $f$ is a power function, $f(x)=x^n$ for some real number $n$, then $f(x)=n x^{n-1}.$
-\item 
-(Sum Rule) 
+- (Sum Rule) 
 If $f=g+h$ for any differentiable functions $g$ and $h,$ then $f'=g'+h'.$
-\item 
-(Difference Rule) 
+- (Difference Rule) 
 If $f=g-h$ for any differentiable functions $g$ and $h,$ then $f'=g'-h'.$
-\item 
-(Linearity Rule) 
+- (Linearity Rule) 
 If $f=a g+b h$ for any differentiable functions $g$ and $h$, and any two constants $a$ and $b$, then $f'=a g'+b h'.$
  
 ::: 

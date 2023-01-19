@@ -74,9 +74,6 @@ So if you're ready to learn about vector-valued functions, then let's get starte
 Before we prove any theorems and develop any definitions let's see how natural it is to use vector functions to model the world around us. 
 
 In the professor's classroom, there is little to no air movement so we  assume the only force acting on the arrow is gravity. 
-\begin{center}
-\includegraphics[width=.75in]{_includes/flaming-arrow-pics.pdf}
-\end{center}
 
 ::: {#exm- } 
 To start a calculus semester a professor wants to light a torch with a flaming arrow that sits on top of a podium on the other side of a large classroom. 
@@ -95,9 +92,9 @@ Using the definition of sine and cosine the initial velocity is found to be
 \end{align*}
 where $\theta$ is the angle that $\vec{v}_0$ makes with the horizontal. 
 Recall Newton's second law of motion which says the the force acting on the projectile is equal to the projectile's mass $m$ times its acceleration, or 
-\[
+$$
 \vec{F}=m \frac{d^2 \, \vec{r}}{d t^2}
-\] 
+$$ 
 when $\vec{r}$ is the projectile's position vector and $t$ is time. In the   
 We assume the only force acting on the flaming arrow is the gravitational force $-m g \, \vec{j}$, then 
 \begin{equation}
@@ -125,13 +122,13 @@ $$
 6+\frac{ (\norm{\vec{v}_0} \sin \theta)^2 }{2g}.
 $$
 Using $y_{\text{max}}=34$ and $g=32$, we see that 
-\[34=6+\frac{ (\norm{\vec{v}_0} \sin \theta)^2 }{2(32)}\] or $\norm{\vec{v}_0} \sin \theta =\sqrt{(28)(64)}$. 
+$$34=6+\frac{ (\norm{\vec{v}_0} \sin \theta)^2 }{2(32)}$$ or $\norm{\vec{v}_0} \sin \theta =\sqrt{(28)(64)}$. 
 
 In order to find $\theta$ we wish to find a similar expression for $\norm{\vec{v}_0} \cos \theta$. When the arrow reaches $y_{\text{max}}=34$, the horizontal distance is $x=90$ ft and by substitution into equation \eqref{fa3} we obtain 
-\[90=(\norm{\vec{v}_0} \cos \theta) \left(\frac{\norm{\vec{v}_0} \sin \theta}{g}\right).\] Therefore we find 
-\[
+$$90=(\norm{\vec{v}_0} \cos \theta) \left(\frac{\norm{\vec{v}_0} \sin \theta}{g}\right).$$ Therefore we find 
+$$
 \tan \theta =\frac{\norm{\vec{v}_0} \sin \theta}{\norm{\vec{v}_0} \cos \theta} = \frac{\left(\sqrt{(28)(64)}\right)^2}{(90)(32)}=\frac{28}{45}.
-\]
+$$
 So the approximate firing angle will be 
 \begin{equation}
 \theta = \tan^{-1}(28/45) \approx 31.8908^\circ.
@@ -148,35 +145,20 @@ A vector-valued function can be defined with more than one variable and with mor
 
 
 ::: {#def- } 
-A \index{vector-valued function} $\vec{F}$ of a real variable $t$ with \index{domain} $D$ assigns to each number $t$ in the set $D$ a unique vector $\vec{F} **vector-valued function} $\vec{F}$ of a real variable $t$ with \index{domain} $D$ assigns to each number $t$ in the set $D$ a unique vector $\vec{F** (t)$. The set of all vectors $\vec v$ of the form 
+A \index{vector-valued function} **vector-valued function** $\vec{F}$ of a real variable $t$ with \index{domain} $D$ assigns to each number $t$ in the set $D$ a unique vector $\vec{F}(t)$. The set of all vectors $\vec v$ of the form 
 $\vec v=\vec{F}(t)$ for $t$ in $D$ is the \index{range} **range**  of $\vec F$. 
 ::: 
 
-\begin{figure} 
-\centering
-\includegraphics[width=2in]{_includes/three-dimensions-pics.pdf}
-\caption{We will often sketch the graph of a vector function in three dimensions.}
-\label{fig:vfthree}
-\end{figure} 
-
 In three dimensions vector functions can be expressed in the form  
-\[
+$$
 \vec{F}(t)=f_1(t)\vec{i}+f_2(t)\vec{j}+f_3(t)\vec{k}
-\]
+$$
 where $f_1,f_2,$ and $f_3$ are real-valued functions of the real variable $t$ defined on the domain set $D$. 
 A vector function may also be denoted by 
-\[\vec{F}(t)= \langle f_1(t),f_2(t),f_3(t)\rangle .\] 
-Unless stated otherwise, the \index{domain} of a vector function $\vec{F} **domain} of a vector function $\vec{F** $ is the intersection of the domains of the scalar component functions $f_1, f_2,$ and $f_3.$
-
-
-\begin{figure}[htb]
-\centering
-\subfigure[in the plane]{\includegraphics{_includes/vector-functions-p7.pdf}}
-\qquad \qquad
-\subfigure[in three-dimensional space]{\includegraphics{_includes/vector-functions-p8.pdf}}
-\caption{Vector functions can be used in $1, 2, 3$ or $n$-dimensions.}
-\label{fig:vf3}
-\end{figure}  
+$$
+\vec{F}(t)= \langle f_1(t),f_2(t),f_3(t)\rangle .
+$$ 
+Unless stated otherwise, the \index{domain} **domain** of a vector function $\vec{F}$ is the intersection of the domains of the scalar component functions $f_1, f_2,$ and $f_3.$
 
 Next we take a given vector-valued function and explicitly say what the scalar component functions are and ascertain the domain.
 
@@ -193,9 +175,9 @@ find the component functions and the domain of $\vec{F}$, and then evaluate $\ve
 The component functions are $f(t)=t^3,$ $g(t)=\ln (3-t),$  and  $h(t)=\sqrt{t}$  
 where $\vec{F}(t)=f(t)\, \vec{i}+g(t)\, \vec{j}+h(t)\, \vec{k}.$ The domain of $\vec{F}(t)$ is the interval $[0,3)$ since $\sqrt{t}$ requires $t\geq 0$ and $\ln (3-t)$ requires
 $t<3.$ We can evaluate the vector function $\vec{F}$ at $t=1$ as follows
-$
+$$
 \vec{F}(1)=f(1)\, \vec{i}+g(1)\, \vec{j}+h(1)\, \vec{k} =\vec{i}+\ln  2\, \vec{j}+\vec{k}.
-$ 
+$$ 
 ::: 
 
 
@@ -204,42 +186,21 @@ $
 
 Vector functions are useful for tracing out graphs of curves and for describing motion along a path. Often the variable $t$ represents time and since each $\vec{F}(t)$ represents a vector, we have a position $(x,y,z)$ at time $t.$ That is to say, given a time value of 
 $t$ we have a vector 
-$
+$$
 \vec{F}(t)= \langle f_1(t),f_2(t),f_3(t)\rangle
-$ 
+$$ 
 which represents a point $(x,y,z)$ where $x=f_1(t),$ 
 $y=f_2(t)$, and $z=f_3(t)$. In this manner, we use arrowheads on the curve to indicate the curve's orientation by pointing in the direction of increasing values of $t.$ 
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=350pt]{_includes/svvf.pdf}
-\caption{Sketches of vector-valued functions.}
-\label{fig-vvf}
-\end{figure}
-
 Sketching the graph a given vector function can be time-consuming, especially if we are given an unfamiliar function.  In the next example we notice that each scalar component function is linear and so claim that the vector function is linear in three dimensions. Thus graphing this vector function is easy; just pick any two points in the domain you wish, plot them and then draw a straight line.
 
-\begin{figure}[htb]
-\centering
-\subfigure[on the surface of a sphere]{\includegraphics{_includes/vector-functions-p9.pdf}}
-\subfigure[on the surface of a cone]{\includegraphics{_includes/vector-functions-p10.pdf}}
-\caption{Vectors functions can lie on surfaces.}
-\label{fig:vf3}
-\end{figure}  
-
-\begin{figure}
-\centering
-\includegraphics[width=120pt]{_includes/circular-helix-pics.pdf}
-\caption{A sketch of the graph of the function $\vec{F}(t)=(-3 \sin  t)\vec{i}+(3\cos  t)\vec{j}+(-.1t )\vec{k}$.}
-\label{fig:vf2}
-\end{figure} 
 
 
 ::: {#exm- } 
 Sketch the graph of the vector-valued function defined by 
-\[
+$$
 \vec{F}(t)=-3 \sin  t \vec{i}+3\cos  t\vec{j}+0.1t \vec{k}.
-\]  
+$$  
 ::: 
 
 ::: {.solution }
@@ -254,19 +215,12 @@ $$
 The cylinder is centered at (0,0) in the $x y$-plane as shown in \ref{fig:vf2}.
 ::: 
 
-\begin{figure}
-\centering
-\includegraphics[width=2in]{_includes/linear-vector-function-pics.pdf}
-\caption{Graph of the function $\vec{F}(t)=(5-2t)\vec{i}+(3+2t)\vec{j}+(2t)\vec{k}$.}
-\label{fig:vf1}
-\end{figure} 
-
 
 ::: {#exm- } 
 Sketch the graph of the vector-valued function 
-\[
+$$
 \vec{F}(t)=(5-2t)\vec{i}+(3+2t)\vec{j}+ 2t \vec{k}.
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -306,21 +260,10 @@ $$
 z=\sqrt{1-x^2-y^2}=\sqrt{1-t^2-t^4}. 
 $$
 Therefore 
-\[
+$$
 \vec{F}(t)=t \vec{i}+t^2\vec{j}+\sqrt{1-t^2-t^4}\vec{k}.
-\] 
+$$ 
 is a value-valued function for this intersection.
-See \ref{fig:int1}, for a sketch of the intersecting hemisphere and cylinder. 
-\begin{figure}[htb]
-\centering
-\subfigure[The intersection of the hemisphere \mbox{$z=\sqrt{1-x^2-y^2}$} and the parabolic cylinder $y=x^2$.]
-{\includegraphics[width=120pt]{_includes/vector-functions-p3.pdf}}
-\qquad \qquad
-\subfigure[A sketch of the graph of the vector function $\vec{F}(t)=t \vec{i}+t^2\vec{j}+\sqrt{1-t^2-t^4}\vec{k}$.]
-{\includegraphics{_includes/vector-functions-p4.pdf}}
-\caption{A vector function for the intersection of a hemisphere and a cylinder.}
-\label{fig:int1}
-\end{figure}  
 ::: 
 
 Try reworking this example with $x=2t$. and graph the resulting vector function. 
@@ -332,32 +275,22 @@ Find a vector-valued function $\vec{F}$ whose graph is the curve of intersection
 
 ::: {.solution }
 One way to accomplish the task is by letting $x=t.$ Then to find relations for $y$ and $z$ we will solve the system  
-\[  
+$$  
 \begin{cases}
 t-y-z=1  \\
 2t+y+3z=6. 
 \end{cases}
-\]   
+$$   
 Eliminating $y$ we have, $3t+2z=7$ and so $z=(7-3t)/2$. Solving the first for $y$ we find  
-\[
+$$
 y=t-1-z=t-1-\left(\frac{7-3t}{2}\right)=\frac{2t-2-7+3t}{2}=\frac{5t-9}{2}
-\]
+$$
 Therefore 
 \begin{equation}
 \label{vfplanes}
 \vec{F}(t)=t \, \vec{i}+\frac{5t-9}{2}\vec{j}+\frac{7-3t}{2}\vec{k}.
 \end{equation}
 is a vector-valued function for this intersection.
-\begin{figure}[htb]
-\centering
-\subfigure[The curve of intersection of the planes $2 x+y+3z=6$ and $x-y-z=1$.]
-{\includegraphics{_includes/vector-functions-p5.pdf}}
-\qquad \qquad
-\subfigure[A sketch of the graph of the vector function in \ref{vfplanes}.]
-{\includegraphics{_includes/vector-functions-p6.pdf}}
-\caption{A vector function for intersecting planes.}
-\label{fig:int1}
-\end{figure}  
 ::: 
 
 
@@ -367,16 +300,13 @@ Next we show how to perform basic operations like addition, subtraction, dot pro
 
 ::: {#def- } 
 \label{limdf}
-Let $\vec{F}$ and $\vec{G}$ be vector-valued functions of the real variable $t$, and let $f(t)$ be a real-valued function. Then $\vec{F}+\vec{G},$ $\vec{F}-\vec{G},$ $f\vec{F},$ $\vec{F}\times \vec{G},$ and $\vec{F}\cdot \vec{G} $ are vector functions defined as follows  
-\begin{multicols}{2}
+Let $\vec{F}$ and $\vec{G}$ be vector-valued functions of the real variable $t$, and let $f(t)$ be a real-valued function. Then $\vec{F}+\vec{G},$ $\vec{F}-\vec{G},$ $f\vec{F},$ $\vec{F}\times \vec{G},$ and $\vec{F}\cdot \vec{G}$ are vector functions defined as follows  
  
 - $(\vec{F}+\vec{G})(t)=\vec{F}(t)+\vec{G}(t)$
 - $(f\vec{F})(t)=f(t)\vec{F}(t)$ 
 - $(\vec{F}-\vec{G})(t)=\vec{F}(t)-\vec{G}(t)$
 - $(\vec{F}\cdot \vec{G})(t)=\vec{F}(t)\cdot \vec{G}(t)$ 
 - $(\vec{F}\times \vec{G})(t)=\vec{F}(t)\times \vec{G}(t)$ 
-  
-\end{multicols}
 These operations are defined on the intersection of the domain of the vector-valued and real-valued functions that occur in the definitions, respectively.
 ::: 
 
@@ -446,9 +376,9 @@ Suppose the components function $f_1$, $f_2$, and $f_3$ of the vector-valued fun
 \vec{F}(t)=f_1(t)\vec{i}+f_2(t)\vec{j}+f_3(t)\vec{k}
 \end{equation}
 all have finite limits as $t\rightarrow t_0$, where $t_0$ is any real number or $\pm \infty $. Then the limit of $\vec{F}(t)$ as $t\rightarrow t_0$ is defined as the vector 
-\[
+$$
 \lim _{t\to  t_0}\vec{F}(t)=\left( \lim  _{t\to  t_0}f_1(t)\right)\vec{i}+\left(\lim  _{t\to  t_0}f_2(t)\right)\vec{j}+\left(\lim  _{t\to  t_0}f_3(t)\right)\vec{k}.
-\]  
+$$  
 ::: 
 
 ::: {#lem- } [Limits of Vector-Functions]
@@ -460,13 +390,13 @@ If the vector-valued functions $\vec{F}$ and $\vec{G}$ are functions of a real v
 - $\lim _{t\to  t_0}[\vec{F}(t)-\vec{G}(t)]
 =\lim _{t\to  t_0}\vec{F}(t)-\lim _{t\to  t_0}\vec{G}(t)$ 
 - $\lim _{t\to  t_0}[h(t) \vec{F}(t)]
-=\left[\lim _{t\to  t_0}h(t)\right] \left[\lim _{t\to  t_0}\vec{F}(t)\right] $ 
+=\left[\lim _{t\to  t_0}h(t)\right] \left[\lim _{t\to  t_0}\vec{F}(t)\right]$ 
 - $\lim _{t\to  t_0}[\vec{F}(t)\cdot \vec{G}(t)]
 =\left[\lim _{t\to  t_0}\vec{F}(t)\right]\cdot \left[\lim _{t\to  t_0}\vec{G}(t)\right]$ 
 - $\lim _{t\to  t_0}[\vec{F}(t)\times \vec{G}(t)]
 =\left[\lim _{t\to  t_0}\vec{F}(t)\right]\times \left[\lim _{t\to  t_0}\vec{G}(t)\right]$ 
   
-These limit formulas are also valid when $t\to  \pm \infty $ provided all limits are finite.
+These limit formulas are also valid when $t\to  \pm \infty$ provided all limits are finite.
 ::: 
 
 ::: {.proof }
@@ -499,9 +429,10 @@ The remainder of the proof is left as Exercise \ref{ex:vecfunclimthm}.
 
 ::: {#exm- } 
 Find $\lim _{t\to  0}h(t) \vec{F}(t)$ given 
-$
-\vec{F}(t)=(\sin  t)\vec{i}-t \vec{k}$ and $h(t)=1/(t^2+t-1).
-$
+$$
+\vec{F}(t)=(\sin  t)\vec{i}-t \vec{k}
+$$ 
+and $h(t)=1/(t^2+t-1).$
 ::: 
 
 ::: {.solution }
@@ -526,7 +457,7 @@ By \ref{vecfunclimthm}, we find
 \begin{align*}
 \lim _{t\to 2}\vec{F}\times \vec{G}
 & =\left(2\vec{i}-2\vec{j}+e^2\vec{k}\right)\times (4\vec{i}+4 \sin  2 \vec{j})  
-\\[5pt] 
+\\
 & = \left|
 \begin{array}{ccc}
  \vec{i} & \vec{j} & \vec{k}  \\
@@ -534,7 +465,7 @@ By \ref{vecfunclimthm}, we find
  4 & 4\sin  2 & 0
 \end{array}
 \right| 
-\\[5pt] 
+\\
 & 
  =\left(-4e^2 \sin  2\right)\vec{i} -\left(-4e^2\right)\vec{j}+(8 \sin  2+8)\vec{k}.
 \tag*{}
@@ -546,11 +477,11 @@ By \ref{vecfunclimthm}, we find
 
 ## Continuous Vector Functions
 
-One of the reasons why vector-valued functions are so favorable is that it is easy to extend known results from functions of one-variable and results in two-dimensional space to results concerning vector functions of one-variable, or \index{space curves} **space curves** , that have graphs in 3 (or more) dimensions. Continuity of vector functions is one such example.
+One of the reasons why vector-valued functions are so favorable is that it is easy to extend known results from functions of one-variable and results in two-dimensional space to results concerning vector functions of one-variable, or \index{space curves} **space curves**, that have graphs in 3 (or more) dimensions. Continuity of vector functions is one such example.
 
 ::: {#def- } 
 \label{cont}
-A vector-valued function $\vec F$ is \index{continuous} at $t_0$ means $t_0$ is in the domain of $\vec{F}$ and $\lim _{t\to  t_0}\vec{F}(t)=\vec{F}\left(t_0\right)$. Further, a vector function is \index{continuous on an interval} **continuous} at $t_0$ means $t_0$ is in the domain of $\vec{F}$ and $\lim _{t\to  t_0}\vec{F}(t)=\vec{F}\left(t_0\right)$. Further, a vector function is \index{continuous on an interval**  $I$ if it is continuous at every point in the interval. 
+A vector-valued function $\vec F$ is \index{continuous} **continuous** at $t_0$ means $t_0$ is in the domain of $\vec{F}$ and $\lim _{t\to  t_0}\vec{F}(t)=\vec{F}\left(t_0\right)$. Further, a vector function is \index{continuous on an interval} **continuous on an interval** $I$ if it is continuous at every point in the interval. 
 ::: 
 
 ::: {#thm- } [Continuous Vector Functions] 
@@ -568,7 +499,7 @@ Then we have
 \begin{align*}
 \vec{F}(a)=\lim_{t\to a} \vec{F}(t)
 & =\lim_{t\to a} \left[ f_1(t)\vec{i}+f_1(2)\vec{j}+f_3(t)\vec{k} \right] 
-\\[5pt] 
+\\
 & = \left(\lim_{t\to a} f_1(t)\right)\vec{i}+\left(\lim_{t\to a} f_2(t)\right)\vec{j}+\left(\lim_{t\to a} f_3(t)\right)\vec{k} 
 %\\ & =f_1(a)\vec{i}+f_2(a)\vec{j}+f_3(a)\vec{k}
 \end{align*}
@@ -584,10 +515,10 @@ The reminder of the proof is Exercise \ref{ex:vecfunccontthm}.
 
 
 ::: {#exm- } 
-Determine where the vector-valued function \
-\[
+Determine where the vector-valued function 
+$$
 \vec{F}(t)=t e^t \vec{i}+\frac{e^t}{t}\vec{j}+3e^t\vec{k}
-\] 
+$$ 
 is continuous. 
 ::: 
 
@@ -598,7 +529,7 @@ The component functions $t e^t$ and $3e^t$ are continuous for all real numbers. 
 ::: {#exm- } 
 Determine where the vector-valued function $\vec F$ defined by    
 $$
-\vec{F}(t)=\ds\frac{\vec{u}}{\|\vec{u}\|},   
+\vec{F}(t)=\displaystyle \frac{\vec{u}}{\|\vec{u}\|},   
 \qquad 
 \text{ }
 \vec{u}=t\vec{i}+\frac{1}{\sqrt{t}}\vec{j}+e^t\vec{k}
@@ -608,15 +539,15 @@ is continuous.
 
 ::: {.solution }
 By \ref{vecfunccontthm}, the function $\vec{F}$ is continuous for all real numbers in its domain which is $\{t\in \mathbb{R} \, : \, t>0\}$ because   
-\[
+$$
 \|\vec{u}\|= \sqrt{t^2+\left(\frac{1}{\sqrt{t}}\right)^2+e^{2t}}
-\] 
+$$ 
 and therefore
 \begin{align*}
 \lim  _{t\to  t_0}\vec{F}(t) 
 & =\lim  _{t\to  t_0}\left(\frac{t\vec{i}+\frac{1}{\sqrt{t}}\vec{j}+e^t\vec{k}}{\sqrt{t^2+\left(\frac{1}{\sqrt{t}}\right)^2+e^{2t}}}\right)  
 =\frac{t_0\vec{i}+\frac{1}{\sqrt{t_0}}\vec{j}+e^{t_0}\vec{k}}{\sqrt{\left(t_0\right)^2+\left(\frac{1}{\sqrt{t_0}}\right)^2+e^{2t_0}}}  
-\\[5pt] 
+\\
 &
 =\left(\frac{t_0}{\sqrt{t_0^2+\frac{1}{t_0}+e^{2t_0}}}\right)\vec{i}+\left(\frac{\frac{1}{\sqrt{t_0}}}{\sqrt{t_0^2+\frac{1}{t_0}+e^{2t_0}}}\right)\vec{j}+\left(\frac{e^{t_0}}{\sqrt{t_0^2+\frac{1}{t_0}+e^{2t_0}}}\right)\vec{k}
 \end{align*}
@@ -627,14 +558,16 @@ for all real numbers such that $t_0>0.$
 
 ::: {#exr- } 
 Find the domain of the vector function 
-\[
+$$
 \vec{F}(t)=(1-t)\vec{i}+\left(\sqrt{t}\right)\vec{j}-\frac{1}{t-2}\vec{k}.
-\]
+$$
 ::: 
 
 ::: {#exr- } 
 Find the domain of the vector function 
-\[\vec{F}(t)=(\cos  t)\vec{i}-(\cot  t)\vec{j}+(\csc  t)\vec{k}.\]
+$$
+\vec{F}(t)=(\cos  t)\vec{i}-(\cot  t)\vec{j}+(\csc  t)\vec{k}.
+$$
 ::: 
 
 ::: {#exr- } 
@@ -646,35 +579,32 @@ Find the domain of the vector function $\vec{F}(t)\times \vec{G}(t)$ where $\vec
 ::: 
 
 ::: {#exr- } 
-Describe the graph in words and sketch a graph by hand for the vector function $\vec F$ defined by \[\vec{F}(t)=(a \cos  t)\vec{i}+(a \sin  t)\vec{j}+t \vec{k}.\] 
+Describe the graph in words and sketch a graph by hand for the vector function $\vec F$ defined by $$\vec{F}(t)=(a \cos  t)\vec{i}+(a \sin  t)\vec{j}+t \vec{k}.$$ 
 ::: 
 
 ::: {#exr- } 
 Show that the vector function $\vec F$ defined by  
-\[\vec{F}(t)=t \vec{i}+2t \cos  t \vec{j}+2t \sin  t \vec{k}\] 
+$$
+\vec{F}(t)=t \vec{i}+2t \cos  t \vec{j}+2t \sin  t \vec{k}
+$$ 
 lies on the cone $4x^2=y^2+z^2.$ Sketch the curve. 
 ::: 
 
 ::: {#exr- } 
-Describe the graph in words and sketch a graph by hand for the vector function $\vec F$ defined by \[\vec{F}(t)=\left(e^{a t}\right)\vec{i}+\left(e^{a t}\right)\vec{j}+\left(e^{-t}\right) \vec{k}.\]
+Describe the graph in words and sketch a graph by hand for the vector function $\vec F$ defined by $$\vec{F}(t)=\left(e^{a t}\right)\vec{i}+\left(e^{a t}\right)\vec{j}+\left(e^{-t}\right) \vec{k}.$$
 ::: 
 
 ::: {#exr- } 
-How many revolutions are made by the circular helix \[\vec{F}(t)=(4 \sin  t)\vec{i}+(4 \cos  t) \vec{j}+\frac{7}{12}t \, \vec{k}\] in a vertical distance of $12$ units?
+How many revolutions are made by the circular helix $$\vec{F}(t)=(4 \sin  t)\vec{i}+(4 \cos  t) \vec{j}+\frac{7}{12}t \, \vec{k}$$ in a vertical distance of $12$ units?
 ::: 
 
 ::: {#exr- } 
 Find the domain of the vector function $\vec F$ defined by 
 $(\vec{F}\times \vec{G})\times \vec{H}$ where   
  
-\item[]
-$\vec{F}(t)=t^2\vec{i}-t \vec{j}+2t \vec{k},$
-\item[]  
-$\vec{G}(t)=\frac{1}{t+2}\vec{i}+(t+4)\vec{j}-\sqrt{-t}\vec{k},$  
-and 
-\item[]
-$\vec{H}(t)=\frac{1}{t+3}\vec{i}+t^2\vec{j}-\sqrt{t}\vec{k}.$ 
- 
+- $\vec{F}(t)=t^2\vec{i}-t \vec{j}+2t \vec{k},$
+- $\vec{G}(t)=\frac{1}{t+2}\vec{i}+(t+4)\vec{j}-\sqrt{-t}\vec{k},$  and 
+- $\vec{H}(t)=\frac{1}{t+3}\vec{i}+t^2\vec{j}-\sqrt{t}\vec{k}.$ 
 ::: 
 
 ::: {#exr- } 
@@ -708,19 +638,21 @@ where $\vec{F}(t)=2 t \vec{i}-5 \vec{j}+t^2\vec{k},$ $\vec{G}(t)=(1-t)\vec{i}+\f
 ::: {#exr- } 
 Find the limit of each of the following vector-valued function.   
  
-- $ \lim _{t\to 1}\left[\frac{t^3-1}{t-1}\vec{i}+\frac{t^2-3t+2}{t^2+t-2}\vec{j}+\left(t^2+1\right)e^{t-1}\vec{k}\right]$ 
-- $ \lim _{t\to \infty }\left[\left(e^{-t}\right) \vec{i}+\left(\frac{t-1}{t+1}\right)\vec{j}+\left(\tan  ^{-1}t \right)\vec{k}\right]$ 
-- $ \lim _{t\to 0^+}\left[\frac{\sin  3t}{\sin  2t} \vec{i}+\frac{\ln (\sin  t)}{\ln (\tan  t)}\vec{j}+(t \ln  t)\vec{k}\right]$ 
+- $\lim _{t\to 1}\left[\frac{t^3-1}{t-1}\vec{i}+\frac{t^2-3t+2}{t^2+t-2}\vec{j}+\left(t^2+1\right)e^{t-1}\vec{k}\right]$ 
+- $\lim _{t\to \infty }\left[\left(e^{-t}\right) \vec{i}+\left(\frac{t-1}{t+1}\right)\vec{j}+\left(\tan  ^{-1}t \right)\vec{k}\right]$ 
+- $\lim _{t\to 0^+}\left[\frac{\sin  3t}{\sin  2t} \vec{i}+\frac{\ln (\sin  t)}{\ln (\tan  t)}\vec{j}+(t \ln  t)\vec{k}\right]$ 
  
 ::: 
 
 ::: {#exr- } 
 Determine all real numbers $a$ that satisfies   
-\[\lim _{t\to 0}\left[\frac{ t}{\sin  a t} \vec{i}+\frac{a}{a-\cos  t}\vec{j}+\left(e^{a-t}\right)\vec{k}\right]=\frac{3}{2}\vec{i}-2\vec{j}+e^{2/3}\vec{k}.\] 
+$$
+\lim _{t\to 0}\left[\frac{ t}{\sin  a t} \vec{i}+\frac{a}{a-\cos  t}\vec{j}+\left(e^{a-t}\right)\vec{k}\right]=\frac{3}{2}\vec{i}-2\vec{j}+e^{2/3}\vec{k}.
+$$ 
 ::: 
 
 ::: {#exr- } 
-Find a vector function $\vec{F}(t)= \langle f_1(t),f_2(t),f_3(t)\rangle $ such that $\|\vec{F}(t)\|$ is continuous at $t=0$ but $\vec{F}(t)$ is not continuous at $t=0.$
+Find a vector function $\vec{F}(t)= \langle f_1(t),f_2(t),f_3(t)\rangle$ such that $\|\vec{F}(t)\|$ is continuous at $t=0$ but $\vec{F}(t)$ is not continuous at $t=0.$
 ::: 
 
 ::: {#exr- } 
@@ -732,7 +664,7 @@ Show that if $\vec{F}$ is a vector function that is continuous at $c,$ then $\|\
 ::: 
 
 ::: {#exr- } 
-Find the interval(s) on which the vector function $ \vec{r}(t)=e^{-2t}\vec{i}+\cos\sqrt{9-t} \, \vec{j}+\frac{1}{t^2-1}\vec{k}$ is continuous.
+Find the interval(s) on which the vector function $\vec{r}(t)=e^{-2t}\vec{i}+\cos\sqrt{9-t} \, \vec{j}+\frac{1}{t^2-1}\vec{k}$ is continuous.
 ::: 
 
 

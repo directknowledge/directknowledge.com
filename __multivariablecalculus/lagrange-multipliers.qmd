@@ -18,7 +18,7 @@ Thus, Lagrange's Theorem gives necessary conditions for the existence of a Lagra
 \label{lagthm}
 
 Assume that $f$ and $g$ have continuous first partial derivatives and that $f$ has an extremum at $P_0\left(x_0,y_0\right)$
-on the smooth constraint curve $g(x,y)=c.$ If $\nabla g\left(x_0,y_0\right)\neq \vec{0},$ there is a number $\lambda $ such that 
+on the smooth constraint curve $g(x,y)=c.$ If $\nabla g\left(x_0,y_0\right)\neq \vec{0},$ there is a number $\lambda$ such that 
 \begin{equation}
 \label{lagmult}
 \nabla f\left(x_0,y_0\right)=\lambda \nabla g\left(x_0,y_0\right).
@@ -49,12 +49,6 @@ But $\nabla g\left(x\left(t_0\right),y\left(t_0\right)\right)$ is also normal to
 Thus, there is a scalar $\lambda$ such that \ref{lagmult} holds.
 ::: 
 
-\begin{figure}
-\centering
-\includegraphics{_includes/lagmult-2-pics.pdf}
-\caption{Extreme values of the function $f(x,y)=x^2+y$ constrained to the unit circle.}
-\label{lagmult-2}
-\end{figure} 
 
 ::: {#exm- } 
 Find the extreme values of the function $f(x,y)=x^2+y$ constrained to the circle $x^2+y^2=1.$
@@ -62,18 +56,18 @@ Find the extreme values of the function $f(x,y)=x^2+y$ constrained to the circle
 
 ::: {.solution }
 Using \ref{lagthm}, we solve the equations $\nabla f=\lambda \nabla g,$ $g(x,y)=1,$ which can be written as $f_x=\lambda g_x,$ $f_y=\lambda g_y$, and $g(x,y)=1$ or written as 
-\[
+$$
  2x=2x \lambda, \qquad 1=2y \lambda, \qquad \text{and}  \qquad x^2+y^2=1.
- \]
+ $$
 From the first equation we have $x=0$ or $\lambda =1.$ If $x=0,$ then by the third equation $y=\pm 1.$ If $\lambda =1,$ then $y=1/2$
 and we obtain $x=\left.\pm \sqrt{3}\right/2.$ Therefore, $f$ has possible extreme values at the points 
-\[
+$$
 (0,1),  \qquad (0,-1), \qquad \left(\left.\sqrt{3}\right/2,1/2\right),  \qquad
 \text{and} \qquad \left(\left.-\sqrt{3}\right/2,1/2\right).
-\] 
+$$ 
 Evaluating $f$ at these four points, we find that 
-\[
-f(0,1)=1, \qquad f(0,-1)=-1, \qquad \text{and} \qquad f\left(\left.\pm \sqrt{3}\right/2,1/2\right)=5/4.\]
+$$
+f(0,1)=1, \qquad f(0,-1)=-1, \qquad \text{and} \qquad f\left(\left.\pm \sqrt{3}\right/2,1/2\right)=5/4.$$
 Therefore the maximum value of $f$ constrained to the circle $x^2+y^2=1$ is $5/4$ and the minimum value is $-1.$ 
 ::: 
 
@@ -88,10 +82,10 @@ Then to find the extreme value, proceed as follows:
  
 - Simultaneously solve the following three equations for $x,y$ and 
 $\lambda$: 
-\[
+$$
 f_x(x,y)=\lambda g_x(x,y), \quad f_y(x,y)=\lambda g_y(x,y),
 \quad  \text{and} \quad g(x,y)=c
-\]
+$$
 - Evaluate $f$ at all points found in step (i). 
 The extremum we seek must be among these values. 
  
@@ -99,19 +93,13 @@ The extremum we seek must be among these values.
 
 %\begin{comment}
 We use the method of Lagrange multipliers to find the required constrained extrema. 
-Suppose $E$ is an extreme value of $f$ subject to the constraint $g(x,y)=c.$ Then the Lagrange multiplier $\lambda $ is the rate of change of $E$ with respect to $c$; that is $\lambda =d E/d c.$ Note that at the extreme value $(x,y)$ we have $f_x=\lambda g_x$, $f_y=\lambda g_y$,  and $g(x,y)=c.$  The coordinates of the optimal ordered pair $(x,y)$ depend on $c$ (because different constraint levels will generally lead to different optimal combinations of $x$ and $y$). Thus, $E=E(x,y)$ where $x$ and $y$ are functions of $c.$ By the chain rule for partial derivatives:   
-\[
+Suppose $E$ is an extreme value of $f$ subject to the constraint $g(x,y)=c.$ Then the Lagrange multiplier $\lambda$ is the rate of change of $E$ with respect to $c$; that is $\lambda =d E/d c.$ Note that at the extreme value $(x,y)$ we have $f_x=\lambda g_x$, $f_y=\lambda g_y$,  and $g(x,y)=c.$  The coordinates of the optimal ordered pair $(x,y)$ depend on $c$ (because different constraint levels will generally lead to different optimal combinations of $x$ and $y$). Thus, $E=E(x,y)$ where $x$ and $y$ are functions of $c.$ By the chain rule for partial derivatives:   
+$$
 \frac{d E}{d c}=f_x\frac{d x}{d c}+f_y\frac{d y}{d c}=\text{$\lambda $g}_x\frac{d x}{d c}+\text{$\lambda $g}_y\frac{d y}{d c}=\lambda
 \left(\frac{d g}{d c}\right)=\lambda
-\] 
+$$ 
 %\end{comment}
 
-\begin{figure}
-\centering
-\includegraphics{_includes/lagmult-3-pics.pdf}
-\caption{Extreme values of the function $f(x,y)=x y$ subject to $2x+2y=5.$}
-\label{lagmult-2}
-\end{figure} 
 
 ::: {#exm- } 
 Maximize $f(x,y)=x y$ subject to $2x+2y=5.$
@@ -119,20 +107,20 @@ Maximize $f(x,y)=x y$ subject to $2x+2y=5.$
 
 ::: {.solution }
 Let $g(x,y)=2x+2y,$ then we have 
-\[
+$$
 f_x=y, 
 \qquad f_y=x, 
 \qquad g_x=2,
 \qquad \text{and} 
 \qquad g_y=2.
-\] 
+$$ 
 We need to solve the system 
-\[
+$$
 y=2\lambda, 
 \qquad x=2\lambda, 
 \qquad \text{and} 
 \qquad 2x+2y=5.
-\] 
+$$ 
 We find $x=y=\frac{5}{4}.$ 
 Therefore, $f\left(\frac{5}{4},\frac{5}{4}\right)=\frac{25}{16}$ is the constrained maximum. 
 ::: 
@@ -143,7 +131,7 @@ Minimize $f(x,y,z)=x^2+y^2+z^2$ subject to $x-2y+3z=4.$
 
 ::: {.solution }
  Let $g(x,y,z)=x-2y+3z,$ then we have 
-\[
+$$
 f_x=2x, 
 \quad f_y=2y, 
 \quad f_z=2z, 
@@ -151,28 +139,22 @@ f_x=2x,
 \quad g_y=-2,
 \quad  \text{and} 
 \quad g_z=3.
-\] 
+$$ 
 We need to solve the system 
-\[
+$$
 2x=\lambda,
 \qquad 2y=-2\lambda,
 \qquad 2z=3\lambda,
 \qquad \text{and} 
 \qquad x-2y+3z=4.
-\] 
+$$ 
 We find that $\lambda =\frac{4}{7}$ and then $x=\frac{2}{7},$ $y=-\frac{4}{7},$ and $z=\frac{6}{7}.$ Therefore, 
-\[
+$$
 f\left(\frac{2}{7}, -\frac{4}{7},\frac{6}{7}\right)=\frac{8}{7}
-\] 
+$$ 
 is the constrained minimum.
 ::: 
 
-\begin{figure}
-\centering
-\includegraphics{_includes/lagmult-1-pics.pdf}
-\caption{Rectangular box enclosing maximum volume constructed from 96 $\text{ft}^2$ of material.}
-\label{lagmult-1}
-\end{figure} 
 
 ::: {#exm- } 
 A rectangular box with no top is to be constructed from 96 $\text{ft}^2$ of material. 
@@ -182,37 +164,31 @@ enclose maximum volume?
  
 ::: {.solution }
  Let $x,y,$ and $z$ be the length, width, and height of the rectangular box, respectively. We want to maximize the volume: 
-\[
+$$
 V=x y z \qquad \text{subject to} \qquad  S(x,y,z)=x y+2 x z+2 y z=96
-\] 
+$$ 
 which is obtained from the surface area of the rectangular box (with no lid). We have 
-\[
+$$
 V_x=y z, 
 \quad V_y=x z, 
 \quad V_z=x y, 
 \quad S_x=y+2 z, 
 \quad S_y=x+2 z, 
 \quad S_z=2x+2y.
-\]
+$$
 Solve the system 
-\[
+$$
 y z=\lambda (y+2 z), 
 \quad x z=\lambda (x+2 z), 
 \quad x y=\lambda (2x+2 y), 
 \quad x y+2 x z+2 y z=96.
-\] 
+$$ 
 We obtain $x=y=2 z,$ and then find $x=y=4\sqrt{2},$ $z=2\sqrt{2}.$ Therefore the maximum volume is 
-\[
+$$
 V\left(4\sqrt{2},4\sqrt{2},2\sqrt{2}\right)=64\sqrt{2} \text{ft}^3.
-\] 
+$$ 
 ::: 
 
-\begin{figure}
-\centering
-\includegraphics{_includes/lagmult-4-pics.pdf}
-\caption{A cylindrical can is to hold $4\pi  \text{in}.^3$ of orange juice.}
-\label{lagmult-4}
-\end{figure} 
 
 ::: {#exm- } 
 
@@ -223,24 +199,24 @@ twice the cost per square inch of constructing the cardboard side. What are the 
 
 ::: {.solution }
  Let $x$ and $y$ be the radius and height of the cylinder, respectively. We want to minimize the cost 
-\[
+$$
 f(x,y)=2\left(2\pi  x^2\right)+2\pi  x y 
 \quad \text{subject to the constraint} \quad g(x,y)=\pi  x^2 y=4\pi. 
-\] 
+$$ 
 We have 
-\[
+$$
 f_x=8\pi  x+2\pi  y, 
 \qquad f_y=2\pi  x,
 \qquad g_x=2\pi  x y,
 \qquad \text{and} 
 \qquad g_y=\pi  x^2.
-\] 
+$$ 
 Solving the system 
-\[
+$$
 8\pi  x+2\pi  y=2\lambda  \pi  x y, 
 \qquad 2\pi  x=\lambda  \pi  x^2, 
 \qquad \pi  x^2 y=4\pi.
-\]  
+$$  
 we obtain $y=4x,$ and then find the radius $x=1$ in. and the height $y=4$ in.  
 ::: 
 
@@ -248,12 +224,12 @@ we obtain $y=4x,$ and then find the radius $x=1$ in. and the height $y=4$ in.
 ## Optimizing a Function Subject to Two Constraints
 
 The method of Lagrange multipliers can also be applied in situations with more than one constraint equation. Suppose we wish to locate an extremum of a function defined by $f(x,y,z)$ subject to constraints $g(x,y,z)=c_1$ and $h(x,y,z)=c_2,$ where $g$ and $h$ are also differentiable and $\nabla g$ and $\nabla h$ are not parallel. By generalizing Lagrange's theorem, it can be shown that if 
-$\left(x_0,y_0,z_0\right)$ is the desired extremum, then there are numbers $\lambda $ and $\mu $ such that 
+$\left(x_0,y_0,z_0\right)$ is the desired extremum, then there are numbers $\lambda$ and $\mu$ such that 
 $g\left(x_0,y_0,z_0\right)=c_1, h\left(x_0,y_0,z_0\right)=c_2,$ 
 and
-\[
+$$
 \nabla f\left(x_0,y_0,z_0\right)=\lambda \nabla g\left(x_0,y_0,z_0\right)+\mu \nabla h\left(x_0,y_0,z_0\right).
-\]
+$$
 As in the case of one constraint, we proceed by first solving this system of equations simultaneously to find 
 $\lambda , \mu , x_0, y_0, \text{and} z_0$ 
 and then evaluating $f(x,y,z)$ at each solution and comparing to find the assumed extremum. 
@@ -270,24 +246,24 @@ on the curve of intersection of the plane $x-y+z=1$ and the cylinder $x^2+y^2=1.
 We maximize the function$f(x,y,z)=x+2y+3z$ 
 subject to the constraints $g(x,y,z)=x-y+z=1$ and $h(x,y,z)=x^2+y^2=1.$ 
 The Lagrange condition is $\nabla f=\lambda \nabla g+\mu \nabla h,$ so we solve the equations 
-\[
+$$
 1=\lambda +2x \mu,
 \quad 2=-\lambda +2, 
 \quad  y \mu   3=\lambda, 
 \quad  x-y+z=1,  
 \quad \text{and} 
-\quad  x^2+y^2=1.\]
+\quad  x^2+y^2=1.$$
 Putting $\lambda =3,$ we get $2x \mu =-2,$ so $x=-1/\mu .$ Similarly, we have $y=5/(2\mu ).$ Substitution yields 
-\[\frac{1}{\mu ^2}+\frac{25}{4\mu^2}=1\]
+$$\frac{1}{\mu ^2}+\frac{25}{4\mu^2}=1$$
 and so $u^2=\frac{29}{4}.$ Then
-\[
+$$
 \mu =\left.\pm \sqrt{29}\right/2, 
 \qquad  x=\mp 2\left/\sqrt{29}\right., 
 \qquad \text{and} 
-\qquad y=\pm 5\left/\sqrt{29}\right.\]
+\qquad y=\pm 5\left/\sqrt{29}\right.$$
 and so we have $z=1-x+y$ $=1\pm 7\left/\sqrt{29}.\right.$ The corresponding values of $f$ are 
-\[
-\mp \frac{2}{\sqrt{29}}+2\left(\pm \frac{5}{\sqrt{29}}\right)+3\left(1\pm \frac{7}{\sqrt{29}}\right)=3\pm \sqrt{29}.\]
+$$
+\mp \frac{2}{\sqrt{29}}+2\left(\pm \frac{5}{\sqrt{29}}\right)+3\left(1\pm \frac{7}{\sqrt{29}}\right)=3\pm \sqrt{29}.$$
 Therefore the maximum of $f$ on the given curve is $3+\sqrt{29}.$ 
 ::: 
 
@@ -298,7 +274,7 @@ Find the maximum of $f(x,y,z)=x y z$ subject to $x^2+y^2=3$ and $y=2 z.$
 ::: {.solution }
 We need to solve the system $\nabla f=\lambda \nabla g+\mu \nabla h$ where $g(x,y,z)=x^2+y^2$ and $h(x,y,z)=y-2z.$ Therefore 
 we need to solve the system 
-\[
+$$
 \begin{array}{lll}
 \left\{ \begin{array}{l}
 f_x-\lambda g_x-\mu  h_x=0  \\
@@ -317,16 +293,16 @@ y-2z=0 \\
 x^2+y^2-3=0.
 \end{array}
 \right.
-\end{array}\]
-The solutions are $\left(0,0,\pm\sqrt{3}\right) $, and 
-\[
+\end{array}$$
+The solutions are $\left(0,0,\pm\sqrt{3}\right)$, and 
+$$
 \left(1,\sqrt{2},\frac{\sqrt{2}}{2}\right), \quad 
 \left(1,-\sqrt{2},-\frac{\sqrt{2}}{2}\right),  \quad
 \left(-1,\sqrt{2},\frac{\sqrt{2}}{2}\right), \quad
 \left(-1,-\sqrt{2},-\frac{\sqrt{2}}{2}\right).
-\]
+$$
 The maximum is 
-$ f\left(1,\sqrt{2},\frac{\sqrt{2}}{2}\right)=f\left(1,-\sqrt{2},-\frac{\sqrt{2}}{2}\right)=1.$
+$f\left(1,\sqrt{2},\frac{\sqrt{2}}{2}\right)=f\left(1,-\sqrt{2},-\frac{\sqrt{2}}{2}\right)=1.$
 ::: 
 
 ::: {#exm- } 
@@ -340,25 +316,25 @@ subject to $x+y=4$ and $y+z=6.$
 ::: {.solution }
 We want to minimize $x^2+y^2+z^2$ subject to the side conditions 
 $x+y-4=0$ and $y+z-6=0.$  We form
-\[
-L(x,y,z,\lambda ,\mu )=x^2+y^2+z^2-\lambda (x+y-4)-\mu (y+z-6).\]
-The conditions are $\frac{\partial L}{\partial x}=2x-\lambda =0 $ and
-\[
+$$
+L(x,y,z,\lambda ,\mu )=x^2+y^2+z^2-\lambda (x+y-4)-\mu (y+z-6).$$
+The conditions are $\frac{\partial L}{\partial x}=2x-\lambda =0$ and
+$$
 \begin{array}{lll}
 \frac{\partial L}{\partial y}=2y-\lambda -\mu =0 
-& \qquad \qquad & \frac{\partial L}{\partial z}=2z-\mu =0 \\[12pt]
+& \qquad \qquad & \frac{\partial L}{\partial z}=2z-\mu =0 \\
 \frac{\partial L}{\partial \lambda }=x+y-4=0 
 & & \frac{\partial L}{\partial \mu }= y+z-6=0. 
 \end{array}
-\]
+$$
 The first and third conditions give $\lambda =2x$  and $\mu =2z,$ so the second condition becomes $2y-2x-2z=0.$ We then have 
-\[
+$$
 \left\{\begin{array}{l}
 x+ y+z =  0  \\
 x+ y  =  4  \\
 y+z  =  6
 \end{array} \right.
-\]
+$$
 The solution to this system is $P=(2/3,10/3,8/3).$ Therefore the minimum is  $f(P)=56/3.$
 ::: 
 
@@ -369,18 +345,18 @@ Use Lagrange multipliers to find the point on the line of intersection of the pl
 
 ::: {.solution }
 We want to minimize $x^2+y^2+z^2$ subject to the side conditions $x-y-2=0$ and $x-2z-4=0.$  We form 
-\[
+$$
 L(x,y,z,\lambda ,\mu )=x^2+y^2+z^2-\lambda (x-y-2)-\mu (x-2z-4).
-\] 
+$$ 
 The conditions are $\frac{\partial L}{\partial x}=2x-\lambda -\mu =0$ and
-\[
+$$
 \begin{array}{lll} 
 \frac{\partial L}{\partial y}=2y+\lambda =0 & \qquad \qquad & 
-\frac{\partial L}{\partial z}=2z+2\mu =0 \\[12pt]
+\frac{\partial L}{\partial z}=2z+2\mu =0 \\
 \frac{\partial L}{\partial \lambda }=-x+y+2=0 & &
 \frac{\partial L}{\partial \mu }=-x+2z+4=0.
 \end{array}
-\]
+$$
 The second and third conditions give $\lambda =-2y$ and $\mu =-z,$ so the first condition becomes $2x+2y+z=0.$ We then have $2x+2y+z =0$, $-x+y=-2$, $-x+2z=-4.$  The last two equations may be written as $y=x-2$ and $z=(x-4)/2.$ Substitution of these values into the first equation gives $x=4/3.$ Consequently, $y=-2/3$ and $z=-4/3.$ 
 The desired point is therefore, $(4/3,-2/3,-4/3).$
 ::: 
@@ -394,7 +370,7 @@ on the surface $2x^2+4y^2+6z^2=200.$
 ::: 
 
 ::: {.solution }
-We set $g(x,y,z)=2x^2+4y^2+6z^2$ and we use the Lagrange multiplier $\lambda $ and solve the system   
+We set $g(x,y,z)=2x^2+4y^2+6z^2$ and we use the Lagrange multiplier $\lambda$ and solve the system   
 $$
 \begin{array}{ccc} 
 \left\{
@@ -438,27 +414,27 @@ subject to the constraint $2x^2+3y^2=8$ for $x>0.$
 ::: {.solution }
 Let $g(x,y)=2x^2+3y^2$ and we will use a Lagrange multiplier, say 
 $\lambda$. We setup the system of equations  
-\[
+$$
 \begin{array}{ccc}
 \left\{
 \begin{array}{l}
 \frac{ \partial f}{\partial x} = \lambda \frac{\partial g}{\partial x}  
-\\[10pt]
+\\
 \frac{ \partial f}{\partial y} = \lambda \frac{\partial g}{\partial y}  
-\\[10pt] g(x) = 8
+\\ g(x) = 8
 \end{array}
 \right.
 & \text{which is written as } & 
 \left\{
 \begin{array}{l}
-\frac{y^2}{x y^2} = 4\lambda  x  \\[10pt]
-\frac{2x y}{x y^2} = 6\lambda  y  \\[10pt]
+\frac{y^2}{x y^2} = 4\lambda  x  \\
+\frac{2x y}{x y^2} = 6\lambda  y  \\
 2x^2+3y^2 = 8
 \end{array}
 \right.
 \end{array}
-\]
-Now to solve this we will try to eliminate $\lambda $ from the first two equations. So we solve both of them for $\lambda $ we have,  
+$$
+Now to solve this we will try to eliminate $\lambda$ from the first two equations. So we solve both of them for $\lambda$ we have,  
 $$
 \lambda =\frac{1}{4 x^2}
 \qquad \text{and} \qquad
@@ -469,12 +445,12 @@ $$
 \frac{1}{4 x^2}=\frac{1}{3 x^2 y}
 $$ 
 we have $4x^2=3x^2y$ which we write as $x^2(4-3y)=0$ and so $y=4/3.$ So that 
-\[
-x^2=\frac{8-3(4/3)^2}{2}=\frac{4}{3}.\]
+$$
+x^2=\frac{8-3(4/3)^2}{2}=\frac{4}{3}.$$
 However, since $x>0$ we only use $x=\frac{2}{\sqrt{3}}$ with $y=4/3;$ and therefore the maximum value of $f(x,y)=\ln \left(x y^2\right)$ subject to the constraint $g(x,y)=8$ is 
-\[
+$$
 f\left(\frac{2}{\sqrt{3}},\pm \frac{4}{3}\right)=\ln \left(\frac{2}{\sqrt{3}}\left(\frac{4}{3}\right)^2\right)=\frac{5}{2}\ln \left(\frac{4}{3}\right).
-\]
+$$
 ::: 
 
 ## Exercises
@@ -488,14 +464,14 @@ Use the method of Lagrange multipliers to maximize or minimize each of the funct
  
 - maximize $f(x,y)=x y$ subject to $2x+2y=5$
 - minimize $f(x,y)=x y z$ subject to $3x+2y+z=6$
-- maximize $f(x,y)=e^{x y}$ subject to $x^2+y^2=3 $
-- maximize $f(x,y)=\cos  x+\cos  y$ subject to $y=x+\frac{\pi }{4} $
-- minimize $f(x,y)=x^2-x y+2y^2$ subject to $2x+y=22 $
-- minimize $f(x,y)=x^2-y^2$ subject to $x^2+y^2=4 $
-- minimize $f(x,y,z)=2x^2+3y^2+4z^2$ subject to $x+y+z=4$ and $x-2y+5z=3 $
-- minimize $f(x,y,z)=x^2+y^2+z^2$ subject to $x+y=4$ and $y+z=6 $ 
-- minimize $f(x,y,z)=x y z$ subject to $x^2+y^2=3$ and $y=2z $ 
-- maximize $f(x,y,z)=x y+x z$ subject to $2x+3z=5$ and $x y=4 $
+- maximize $f(x,y)=e^{x y}$ subject to $x^2+y^2=3$
+- maximize $f(x,y)=\cos  x+\cos  y$ subject to $y=x+\frac{\pi }{4}$
+- minimize $f(x,y)=x^2-x y+2y^2$ subject to $2x+y=22$
+- minimize $f(x,y)=x^2-y^2$ subject to $x^2+y^2=4$
+- minimize $f(x,y,z)=2x^2+3y^2+4z^2$ subject to $x+y+z=4$ and $x-2y+5z=3$
+- minimize $f(x,y,z)=x^2+y^2+z^2$ subject to $x+y=4$ and $y+z=6$ 
+- minimize $f(x,y,z)=x y z$ subject to $x^2+y^2=3$ and $y=2z$ 
+- maximize $f(x,y,z)=x y+x z$ subject to $2x+3z=5$ and $x y=4$
     
 ::: 
 

@@ -13,22 +13,14 @@ The final step should always be to check the solution to see that it makes sense
 An optimization procedure is a step-by-step procedure to solve an application problem using calculus; and in particular, using derivatives. 
 Here is a typical optimization procedure: 
  
-\item 
-Sketch a graph or draw a diagram.
-\item 
-Introduce mathematical notation.
-\item 
-Express information as expressions, equations and functions.
-\item 
-Formulate the problem mathematically by stating the knowns and unknowns.
-\item 
-State the knowns and unknowns.
-\item 
-Identify needed theorems and validate their hypotheses. Apply the theorem. 
-\item 
-Solve the mathematical problem.
-\item 
-Answer the original problem in terms of the given language.
+- Sketch a graph or draw a diagram.
+- Introduce mathematical notation.
+- Express information as expressions, equations and functions.
+- Formulate the problem mathematically by stating the knowns and unknowns.
+- State the knowns and unknowns.
+- Identify needed theorems and validate their hypotheses. Apply the theorem. 
+- Solve the mathematical problem.
+- Answer the original problem in terms of the given language.
  
 
 We will illustrate this optimization procedure in the following examples. 
@@ -82,13 +74,6 @@ Thus the values are $x=6$ and $y=\frac{-6}{5}.$
 Find the dimensions of the right circular cylinder of largest volume that can be inscribed in a sphere of radius $R.$ 
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width=150pt]{_includes/p31.pdf}}
-\caption{cylinder inscribed in sphere}
-\label{fig:graph31}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 Let $R$ be the radius of the sphere and $r$ the radius of the cylinder with height $2h$ so that $0\leq h\leq R.$ 
@@ -187,14 +172,6 @@ How far from the wall should the camera be placed to photograph the mural with t
 ::: 
 
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=220pt]{_includes/app1.pdf}
-\caption{Photographing a mural.}
-\label{fig:app}
-\end{figure} 
-
-
 ::: {.solution } 
 Let the horizontal distance from the camera to the wall be $x.$ 
 Let $\alpha $ be the angle of elevation from the camera lens to the top of the mural and let $\beta $ the angle of elevation from the camera to the bottom of the mural. 
@@ -288,24 +265,18 @@ At this level of production, the average cost is modeled by
 A(x)=5+\frac{x}{30}.
 \] 
 \ 
-\item 
-Find the total revenue and total cost functions, and express the profit as a function of $x.$ 
-\item 
-What price should the manufacturer charge to maximize profit? 
-\item 
-What is the maximum profit? 
+- Find the total revenue and total cost functions, and express the profit as a function of $x.$ 
+- What price should the manufacturer charge to maximize profit? 
+- What is the maximum profit? 
  
 ::: 
 
 ::: {#exm- } [Optimizing Costs] 
 Suppose the total cost (in dollars) of manufacturing $x$ units of a certain commodity is $C(x)=3x^2+5x+75$. 
 \ 
-\item 
-At what level of production is the average cost per unit the smallest? 
-\item 
-At what level of production is the average cost per unit equal to the marginal cost? 
-\item 
-Graph the average cost and the marginal cost on the same set of axes, for $x>0.$
+- At what level of production is the average cost per unit the smallest? 
+- At what level of production is the average cost per unit equal to the marginal cost? 
+- Graph the average cost and the marginal cost on the same set of axes, for $x>0.$
  
 ::: 
 

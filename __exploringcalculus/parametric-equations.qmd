@@ -42,10 +42,7 @@ Show the orientation of the curve.
 ::: {.solution }
 (a) The graph starts at the point $(0,1)$ and follows the line ${y=1-x}$ until it reaches the other endpoint at $(1,0).$ 
 (b) The graph starts at the point $(1,0)$ and follows the line $x=1-y$ until it reaches the other endpoint at $(0,1).$ 
-\begin{figure}[H]
-\centering
-\includegraphics[width=150pt]{_includes/p11-pec.pdf}
-\end{figure}
+
 Comparing (a) and (b) we see that the graph of a curve may have more than one parametrization. 
 Can you think of another set of parametric equations that gives
 the same graph?   
@@ -62,10 +59,6 @@ Show the orientation of the curve.
 
 ::: {.solution }
 The curve starts at $(1,0)$ and follows the upper part of the unit circle until it reaches the other endpoint of $(-1,0).$ 
-\begin{figure}[H]
-\centering
-\includegraphics[width=150pt]{_includes/p12-pec.pdf}
-\end{figure}
 Can you think of another set of parametric equations that give the same graph? 
 ::: 
 
@@ -87,10 +80,6 @@ x^2+y^2
 =\frac{1+2t^2+t^4}{(1+t^2)^2}=1
 \end{equation}
 and also $x(0)=0$, $y(0)=0$ and $x(1/2)=4/5$, $y(1/2)=3/5$ we see the graph of the given parametric equations represents the unit circle with orientation counterclockwise. 
-\begin{figure}[H]
-\centering
-\includegraphics[width= 150pt]{_includes/p13-pec.pdf}
-\end{figure}
 ::: 
  
 ::: {#exm- } 
@@ -100,10 +89,7 @@ Describe the motion of the particle as $t$ varies over the time interval $[a,b].
 
 ::: {.solution } 
 We can eliminate $t$ to see that the motion of the object takes place on the parabola, $y=x^2.$ 
-\begin{figure}[H]
-\centering
-\includegraphics[width= 150pt]{_includes/p14-pec.pdf}
-\end{figure}
+
 The orientation of the curve is from $(\sin a, \sin^2 a)$ to $(\sin b, \sin^2 b).$ 
 ::: 
  
@@ -146,10 +132,7 @@ Since $\frac{dx}{dt}=e^t$ and  $\frac{dy}{dt}=-e^{-t}$,
 \begin{equation}
 \frac{dy}{dx}=\frac{dy/dt}{dx/dt}=\frac{-e^{-t}}{e^t}=-\frac{1}{e^{2t}}.
 \end{equation}
-\begin{figure}[H]
-\centering
-\includegraphics[width=150pt]{_includes/p15-pec.pdf}
-\end{figure}
+
 The point $(1,1)$ corresponds to $t=0.$ 
 The slope of the tangent line is 
 $$
@@ -164,10 +147,6 @@ Find the points on the curve defined by parametric equations $x=t^3-3t$ and $y=t
 
 ::: {.solution } 
 First we find the derivatives of $x$ and $y$ with respect to $t$: $\frac{dx}{dt}=3t^2-3$ and $\frac{dy}{dt}=2t.$ 
-\begin{figure}[H]
-\centering
-\includegraphics[width=150pt]{_includes/p16-pec.pdf}
-\end{figure}
 To find the point(s) where the tangent line is horizontal, set $\frac{dy}{dt}=0$ obtaining $t=0.$ Since $\frac{dx}{dt} \neq 0$ 
 at this $t$ value, the required point is $(0,0).$ 
 To find the point(s) where the tangent line is vertical, set $\frac{dx}{dt}=0$ obtaining $t=\pm 1.$ 
@@ -204,10 +183,7 @@ Show that the curve defined by parametric equations $x=t^2$ and $y=t^3-3t$ cross
 
 ::: {.solution } 
 Observe that the curve is at the point $(3,0)$ when $t_1=-\sqrt{3}$ and $t_2=\sqrt{3}$, so the curve crosses itself at the point $(3,0).$ 
-\begin{figure}[H]
-\centering
-\includegraphics[width=150pt]{_includes/p17-pec.pdf}
-\end{figure}
+
 Since $\frac{dx}{dt}=3t^2-3$ and 
 $$
 \frac{dy}{dt}=\frac{3(t^2-1)}{2t},
@@ -251,10 +227,7 @@ $$
 \frac{dy}{dx}=-\frac{x \left(-2+x^2+y^2\right)}{y \left(2+x^2+y^2\right)}\
 $$
 we need to find all $(x,y)$ where $dy/dx=0.$ 
-\begin{figure}[H]
-\centering
-\includegraphics[width=170pt]{_includes/img-p10-pec.pdf} 
-\end{figure}
+
 Clearly, the point $(0,0)$ is ruled out and so $-2+x^2+y^2=0$; that is $x^2+y^2=2.$ Using $x^2+y^2=2$ with the original we see $x^2-y^2=1$ also. 
 Therefore, $2x^2=3$ and so $x=\pm \sqrt{3/2}$ and $y=\pm \sqrt{1/2}.$
 ::: 

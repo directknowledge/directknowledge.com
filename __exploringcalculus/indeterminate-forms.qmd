@@ -52,7 +52,7 @@ To illustrate l'H\^opital's Rule we will evaluate several limits.
 
 ::: {#exm- }  
 
-Evaluate $\ds \lim _{x\to \infty }\frac{\ln  x}{x}$ using l'H\^opital's rule. 
+Evaluate $ \displaystyle \lim _{x\to \infty }\frac{\ln  x}{x}$ using l'H\^opital's rule. 
 ::: 
 
 ::: {.solution } 

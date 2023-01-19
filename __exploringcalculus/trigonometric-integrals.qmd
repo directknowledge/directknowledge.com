@@ -249,7 +249,7 @@ where $C$ is an arbitrary constant.
 
 ::: {#exr- } 
 Evaluate the integrals.
-\begin{multicols}{2}
+ 
  
 - $\ds\int_0^\pi \sin^5 \left(\frac{x}{2}\right) \, dx$
 - $\ds\int \sin^6 x \cos^3 x \, dx$
@@ -265,15 +265,14 @@ Evaluate the integrals.
 - $\ds\int_0^\pi \sin^2 t \cos^4 t \, dt$
 - $\ds\int x \cos^2 x\, dx$
 - $\ds\int e^x \sec^3 e^x \, dx$
-\item 
-$\ds\int_{\pi/4}^{\pi/2} \cot^3 x \, dx$
+- $\ds\int_{\pi/4}^{\pi/2} \cot^3 x \, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
 Evaluate the integrals.
-\begin{multicols}{2}
+ 
  
 - $\ds\int_0^{\pi/2} \sin x \cos x\, dx$
 - $\ds\int \sin 3 \theta \sin 4\theta\, d\theta$
@@ -288,7 +287,7 @@ Evaluate the integrals.
 - $\ds\int \frac{1-tan^x}{\sec^2 x}\, dx$
 - $\ds\int \sin 3x \sin 6x \, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 

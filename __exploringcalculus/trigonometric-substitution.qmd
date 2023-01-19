@@ -37,7 +37,7 @@ Therefore we require
 \end{equation}
 
 ::: {#exm- } 
-Find $\ds \int \frac{1}{\sqrt{4+x^2}}\, dx$. 
+Find $ \displaystyle \int \frac{1}{\sqrt{4+x^2}}\, dx$. 
 ::: 
 
 ::: {.solution }
@@ -66,10 +66,6 @@ Let $x= \tan \theta$ so that $dx = \sec^2 \theta\, d\theta$ and
 \end{align*}
 where $C$ is an arbitrary constant.
 Using the reference triangle
-\begin{figure}[H]
-\centering
-\includegraphics[width=130pt]{_includes/trigonometric-substitution-1.pdf}
-\end{figure}
 The integration can be completed:
 \begin{align*}
 \int \frac{1}{(1+x^2)^2}\, dx 
@@ -119,10 +115,7 @@ This yields
 = \frac{1}{4} \int \csc^2 \theta \, d\theta = -\frac{1}{4}\cot \theta +C
 \end{align*}
 Using the reference triangle
-\begin{figure}[H]
-\centering
-\includegraphics[width=130pt]{_includes/trigonometric-substitution-2.pdf}
-\end{figure}
+
 we find that $\cot \theta = \frac{\sqrt{4-x^2}}{x}$.
 The integration can be completed:
 \begin{align*}
@@ -134,7 +127,7 @@ where $C$ is an arbitrary constant.
 
 
 ::: {#exm- } 
-Find $\ds \int \frac{\sqrt{9-x^2}}{x^2} \, dx$.
+Find $ \displaystyle \int \frac{\sqrt{9-x^2}}{x^2} \, dx$.
 ::: 
 
 ::: {.solution }
@@ -148,10 +141,7 @@ This yields
 = -\cot \theta -\theta +C
 \end{align*}
 Using the reference triangle
-\begin{figure}[H]
-\centering
-\includegraphics[width=130pt]{_includes/trigonometric-substitution-3.pdf}
-\end{figure}
+
 we find that $\cot \theta = \frac{\sqrt{9-x^2}}{x}$.
 The integration can be completed:
 \begin{align*}
@@ -214,7 +204,7 @@ as desired.
 ::: 
 
 ::: {#exm- } 
-Find $\ds \int_1^4\frac{\sqrt{x^2+4x-5}}{x+2}\, dx$.
+Find $ \displaystyle \int_1^4\frac{\sqrt{x^2+4x-5}}{x+2}\, dx$.
 ::: 
 
 ::: {.solution }
@@ -241,7 +231,7 @@ as desired.
 
 ::: {#exr- } 
 Evaluate the following integrals.
-\begin{multicols}{2}
+ 
  - $\ds\int \sqrt{1-9t^2 }\, dt$
 - $\ds\int \frac{1}{x^3 \sqrt{x^2-4}}\, dx$
 - $\ds\int \frac{5}{\sqrt{25x^2-9}}\, dx$, $x> 3/5$
@@ -253,12 +243,12 @@ Evaluate the following integrals.
 - $\ds\int \frac{1}{(1+x^2)^{3/2}}\, dx$
 - $\ds\int \frac{1}{\sqrt{16+4x^2}}\, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
 Evaluate the following integrals.
-\begin{multicols}{2}
+ 
  - $\ds\int_1^2 \frac{\sqrt{x^2-1}}{x}\, dx$
 - $\ds\int_4^6 \frac{x^2}{\sqrt{x^2-9}}\, dx$
 - $\ds\int_0^1 x \sqrt{x^2+4}\, dx$
@@ -268,7 +258,7 @@ Evaluate the following integrals.
 - $\ds\int_{\sqrt{2}/3}^{2/3} \frac{1}{x^5 \sqrt{9x^2-1}}\, dx$
 - $\ds\int_4^8 \frac{\sqrt{x^2-16}}{x^2}\, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
@@ -281,7 +271,7 @@ Find the arc length of the curve over $y=\frac{1}{2} x^2$ on the interval $[0,4]
 
 ::: {#exr- } 
 Evaluate the following integrals.
-\begin{multicols}{2}
+ 
  - $\ds\int \frac{1}{2u^2-12u+36}\, dx$
 - $\ds\int \frac{1}{\sqrt{3+2x-x^2}}\, dx$
 - $\ds\int \frac{x^2-2x+1}{\sqrt{x^2-2x+10}}\, dx$
@@ -289,7 +279,7 @@ Evaluate the following integrals.
 - $\ds\int_1^2 \frac{1}{\sqrt{4x-x^2}}\, dx$
 - $\ds\int_0^4 \sqrt{x(4-x)}\, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 

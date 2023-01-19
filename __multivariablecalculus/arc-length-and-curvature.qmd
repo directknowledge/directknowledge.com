@@ -12,16 +12,8 @@ In three dimensions we have the concept of a vector function representing a smoo
 With an extra degree of freedom we require the derivative to not only exist but also to be continuous and nonzero. 
 
 ::: {#def- } 
-The graph of the vector function defined by $\vec{F}(t)$ is \index{smooth} on any interval of $t$ where $\vec{F}\,'$ is continuous and $\vec{F}'(t)\neq \vec{0} **smooth} on any interval of $t$ where $\vec{F}\,'$ is continuous and $\vec{F}'(t)\neq \vec{0** $.
+The graph of the vector function defined by $\vec{F}(t)$ is \index{smooth} **smooth** on any interval of $t$ where $\vec{F}\,'$ is continuous and $\vec{F}'(t)\neq \vec{0}$.
 ::: 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=150pt]{_includes/vector-functions-p103.pdf}
-\caption{The epicycloid is not smooth on $[0,2\pi)$.}
-\label{fig:epismooth}
-\end{figure} 
-
 
 ::: {#exm- } 
 Find the intervals on which the epicycloid $C$ given by 
@@ -72,18 +64,8 @@ $$
 as shown in \ref{fig:epismooth}
 ::: 
 
-The graph of a vector function $\vec{F}$ is \index{piecewise smooth} on any interval that can be subdivided into a finite number of subintervals on which $\vec{F} **piecewise smooth} on any interval that can be subdivided into a finite number of subintervals on which $\vec{F** $ is smooth.
+The graph of a vector function $\vec{F}$ is \index{piecewise smooth} **piecewise smooth** on any interval that can be subdivided into a finite number of subintervals on which $\vec{F}$ is smooth.
 For instances, the graph in \ref{fig:epismooth} is piecewise smooth on $[0,2\pi)$ since the interval $[0,2\pi)$ can be subdivided into a finite number of subintervals on which $\vec{F}$ is smooth. 
-
-\begin{figure}[htb]
-\centering
-\subfigure[The absolute value function $y=|x|$ is not smooth on $(-\infty,+\infty)$, but is piecewise smooth on any interval.]
-{\includegraphics{_includes/vector-functions-p101.pdf}}
-\qquad \qquad
-\subfigure[A piecewise smooth curve made up a smooth curves end to end in a continuous fashion.]{\includegraphics{_includes/vector-functions-p100.pdf}}
-\caption{Graphs of piecewise smooth curves.}
-\label{fig:abs1}
-\end{figure} 
 
 ::: {#exm- } 
 Determine where the graph of the vector function 
@@ -95,27 +77,27 @@ is piecewise smooth.
 
 ::: {.solution }
 The graph of the vector function $\vec{F}$ is smooth over any interval not containing $t=\pi/2$ because   
-\[
+$$
 \vec{F}'(t)=\left(6t^2+(8-3\pi )t-4\pi \right)\vec{i}+(\sin  2t)\vec{j}+(\cos  t)\vec{k},
-\]
+$$
 $\vec{F}'(t)\neq \vec{0}$ for any $t$ except $t=\frac{\pi }{2}$, and $\vec{F}'$ is continuous everywhere.  
 ::: 
 
 
 ::: {#exm- } 
 Determine where the graph of the vector function
-\[
+$$
 \vec{F}(t)
 =\left(2t^2-\pi  t+2\pi \right)\vec{i}+\left(\frac{1}{2}\sin  2t\right)\vec{j}+\left(\frac{-1}{4}\cos  4t\right)\vec{k}.
-\]
+$$
 is piecewise smooth.
 ::: 
 
 ::: {.solution }
 The graph of the vector function $\vec{F}$ is piecewise smooth everywhere because 
-\[
+$$
 \vec{F}'(t)=(4t-\pi )\vec{i}+(\cos  2t)\vec{j}+(\sin  4t)\vec{k}, 
-\]  
+$$  
 $\vec{F}'(t)\neq \vec{0}$ except for $t=\frac{\pi }{4}$, and $\vec{F}'$ is continuous everywhere.   
 ::: 
 
@@ -129,24 +111,18 @@ $$
 s=\int _a^b\sqrt{1+\left(\frac{d y}{d x}\right)^2}dx.
 $$
 Now if the graph is parametrized by equations $x=x(t)$ and $y=y(t)$ then by the chain rule 
-\[
+$$
 \frac{d y}{d x}
 =\frac{d y}{d t} \frac{d t}{d x}
-\]
+$$
 whenever $d x/d t \neq 0$. 
 After algebraic manipulation we find that
-\[
+$$
 s=\int _{t_1}^{t_2}\sqrt{\frac{ \left( \frac{d x}{d t} \right)^2
 +\left(\frac{d y}{d t}\right)^2}{\left(\frac{d x}{d t}\right)^2}}\left(\frac{dx}{dt}\right)dt
 =\int_{t_1}^{t_2}\sqrt{\left(\frac{d x}{d t}\right)^2+\left(\frac{d y}{d t}\right)^2}\, dt
-\]
+$$
 represents the arc length of the curve $y=f(x)$ from the points corresponding to $x=a$ to $x=b$.
-
-\begin{figure}[htb]
-\includegraphics[width=\textwidth]{_includes/arc-length-demo-pics.pdf}
-\caption{From a line, to a curve, to a vector function.}
-\label{fig:lcch}
-\end{figure} 
 
 Suppose that $C$ is a plane curve described by the vector function 
 $$
@@ -170,9 +146,10 @@ s=\int _{t_1}^{t_2}\sqrt{\displaystyle \left(\frac{d x}{d t}\right)^2
 +\left(\frac{d y}{d t}\right)^2+\left(\frac{d z}{d t}\right)^2}\, dt.
 $$
 But in fact the arc length of a graph is independent of its parametrization and thus,  
-\[
+$$
 s(t)=\int_{t_0}^{ t} \sqrt{\left(\frac{d x}{d u}\right)^2
-+\left(\frac{d y}{d u}\right)^2+\left(\frac{d z}{d u}\right)^2} \, du\]
++\left(\frac{d y}{d u}\right)^2+\left(\frac{d z}{d u}\right)^2} \, du
+$$
 where $P_0$ is the base point corresponding to $t_0.$  
 This discussion motivates the following theorem. 
 
@@ -191,14 +168,6 @@ s(t)=\int _{a}^t\sqrt{\left(\frac{d x}{d u}\right)^2+\left(\frac{d y}{d u}\right
 \end{equation*}
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=200pt]{_includes/arc-length-curve-pics.pdf}
-\caption{Arc length of the curve $\vec{R}(t)=(1-2\cos t)\vec{i}+2\sin t \vec{j}+ 0.3t \vec{k}$ on $-5\leq t \leq 5$.}
-\label{fig:arclen}
-\end{figure} 
-
-
 ::: {#exm- } 
 Find the arc length of the curve 
 $$
@@ -215,10 +184,10 @@ $$
 \frac{d z}{d t}=0.3
 $$
 and so the arc length is 
-\[
+$$
 \int_{-5}^{5} \sqrt{4\sin ^2t+4\cos ^2t+(0.3)^2} \, dt=\int_{-5}^5 \frac{\sqrt{409}}{10} \, dt
 =\sqrt{409}.
-\]
+$$
 as claimed.
 ::: 
 
@@ -229,51 +198,54 @@ $$
 \vec{R}(t)=x(t)\vec{i}+y(t)\vec{j}+z(t) \vec{k},
 $$
 where $\vec{R}'(t)$ is continuous on the interval $\left[t_1,t_2\right].$ Then the object has speed $d s/d t$ for $t_1\leq t\leq  t_2$ where 
-\[
+$$
 s(t)=\int _{t_1}^t\sqrt{\left(\frac{d x}{d u}\right)^2+\left(\frac{d y}{d u}\right)^2+\left(\frac{d z}{d u}\right)^2}\, du.
-\]
+$$
 ::: 
    
 ::: {.proof }
 Given that $\vec{R}(t)=x(t)\vec{i}+y(t)\vec{j}+z(t)\vec{k}$ is the position vector function for an object which moves along the graph of $\vec{R}$ and given that $\vec{R}'(t)$ is continuous on $\left[t_1,t_2\right]$ we can apply the Fundamental Theorem of Calculus to   
-\[
-s(t)=\int _{t_1}^t\sqrt{\left(\frac{d x}{d u}\right)^2+\left(\frac{d y}{d u}\right)^2+\left(\frac{d z}{d u}\right)^2}\, du\]
+$$
+s(t)=\int _{t_1}^t\sqrt{\left(\frac{d x}{d u}\right)^2+\left(\frac{d y}{d u}\right)^2+\left(\frac{d z}{d u}\right)^2}\, du
+$$
 and obtain  
-\[
+$$
 \frac{d s}{d t}=\sqrt{\left(\frac{d x}{d t}\right)^2+\left(\frac{d y}{d t}\right)^2+\left(\frac{d z}{d t}\right)^2}=\norm{\vec{R}'(t)}=\norm{\vec{V}(t)}.\,
-\]
+$$
 ::: 
  
 ::: {#exm- } 
 If a moving object has a position vector function of   
-\[
+$$
 \vec{R}(t)=\langle e^{3t},\sqrt{18}t-5,-e^{-3t}\rangle
-\] 
+$$ 
 then find the speed of the object at time $t$ and the distance traveled by the object between times $t=0$ and $t=1.$ 
 ::: 
 
 ::: {.solution }
 The speed of the object at time $t$ is $3e^{3t}+3e^{-3t}$ because  
-\[
+$$
 \vec{V}(t)=\langle 3e^{3t},\sqrt{18},3e^{-3t}\rangle,
-\]
-\[
+$$
+$$
 \|\vec{V}(t)\|=\sqrt{9e^{6t}+18+9e^{-6t}}=3\sqrt{\left(e^{3t}+e^{-3t}\right)^2}=3\left(e^{3t}+e^{-3t}\right)
-\]
-and the distance traveled by the object between times $t=0$ and $t=1$ is \[ 
+$$
+and the distance traveled by the object between times $t=0$ and $t=1$ is 
+$$ 
 s=\int _0^1\left(3e^{3t}+3e^{-3t}\right)\, dt=e^3-\frac{1}{e^3}.
-\]
+$$
 ::: 
 
 
 ::: {#exm- } 
-Express the vector function $\vec{R}(t)=\langle e^{-t},1-e^{-t}\rangle $ in terms of arc length measured from the point corresponding to $t=0$, in the direction of increasing $t$.
+Express the vector function $\vec{R}(t)=\langle e^{-t},1-e^{-t}\rangle$ in terms of arc length measured from the point corresponding to $t=0$, in the direction of increasing $t$.
 ::: 
 
 ::: {.solution }
 We have 
-\[
-s=s(t)=\int _0^t\sqrt{e^{-2u}+e^{-2u}}\, du=\sqrt{2}\int _0^te^{-u}\, du=\sqrt{2}-\sqrt{2}e^{-t}.\]
+$$
+s=s(t)=\int _0^t\sqrt{e^{-2u}+e^{-2u}}\, du=\sqrt{2}\int _0^te^{-u}\, du=\sqrt{2}-\sqrt{2}e^{-t}.
+$$
 Solving for $e^{-t}$ we have $e^{-t}=\frac{\sqrt{2}-s}{\sqrt{2}}.$ Thus 
 $$
 \vec{R}(s)=\left\langle\frac{\sqrt{2}-s}{\sqrt{2}},\frac{s}{\sqrt{2}}\right\rangle.
@@ -283,9 +255,10 @@ which is expressed in terms of arc length $s$.
 
 ::: {#thm- } [Normal Vectors]
 
-If $\vec{R}(t)$ has a piecewise smooth graph and is represented as $\vec{R}(s)$ in terms of the arc length parameter $s$, then the unit tangent vector $\vec{T}$ and the principal unit \index{normal vector} $\vec{N} **normal vector} $\vec{N** $ satisfies   
-\[
-\vec{T}=\frac{d \vec{R}}{d s} \qquad \text{and} \qquad \vec{N}=\frac{1}{\kappa } \frac{d  \vec{T}}{d s}\]
+If $\vec{R}(t)$ has a piecewise smooth graph and is represented as $\vec{R}(s)$ in terms of the arc length parameter $s$, then the unit tangent vector $\vec{T}$ and the principal unit \index{normal vector} **normal vector** satisfies   
+$$
+\vec{T}=\frac{d \vec{R}}{d s} \qquad \text{and} \qquad \vec{N}=\frac{1}{\kappa } \frac{d  \vec{T}}{d s}
+$$
 where $\kappa =\norm{d  \vec{T} / d s}$ is a scalar function of $s.$ 
 ::: 
  
@@ -294,34 +267,28 @@ where $\kappa =\norm{d  \vec{T} / d s}$ is a scalar function of $s.$
  
 ::: {.proof }
 Given a piecewise smooth graph represented by $\vec{R}(t)$ and in terms of arc length by $\vec{R}(s)$, then by the chain rule,   
-\[
-\frac{d\vec{R}}{d s}=\frac{\frac{d \vec{R}}{d t}}{\frac{d s}{d t}}=\frac{\vec{R}'(t)}{\norm{\vec{R}'(t)}}=\vec{T}.\]
+$$
+\frac{d\vec{R}}{d s}=\frac{\frac{d \vec{R}}{d t}}{\frac{d s}{d t}}=\frac{\vec{R}'(t)}{\norm{\vec{R}'(t)}}=\vec{T}.
+$$
 Also  
-\[
-\vec{N}=\frac{\vec{T}'(t)}{\norm{\vec{T}'(t)}}=\frac{d \vec{T}/d t}{\norm{\vec{T}'(t)}}=\frac{d \vec{T}}{d s}\cdot \frac{d s/d t}{\norm{\vec{T}'(t)}}\]
+$$
+\vec{N}=\frac{\vec{T}'(t)}{\norm{\vec{T}'(t)}}=\frac{d \vec{T}/d t}{\norm{\vec{T}'(t)}}=\frac{d \vec{T}}{d s}\cdot \frac{d s/d t}{\norm{\vec{T}'(t)}}
+$$
 and since $d s/ d t >0$ and $\norm{\vec{T}'(t)}>0$, $\vec{N}$ points in the same direction as $d \vec{T}/d s$ and since $\vec{N}$ is a unit vector 
-\[
-\vec{N}=\frac{\frac{d \vec{T}}{d s}}{\norm{d s/d t}}=\frac{1}{\kappa }\frac{d \vec{T}}{d s}\]
+$$
+\vec{N}=\frac{\frac{d \vec{T}}{d s}}{\norm{d s/d t}}=\frac{1}{\kappa }\frac{d \vec{T}}{d s}
+$$
 where $\kappa =\norm{d s/ d t}.$  
 ::: 
 
 
 ## Curvature
 
-\begin{figure}
-\centering
-\includegraphics[width=2in]{_includes/curvature-pics.pdf}
-\caption{The tangent vector turns faster along the stretch of the path where the turn is sharper.
-}
-\label{fig:curve1}
-\end{figure} 
-
-
 Suppose the smooth curve $C$ is the graph of the vector function 
 $\vec{R}(s)$, parametrized in terms of the arc length $s$.  Then the \index{curvature} **curvature**  of $C$ is the function 
-\[
+$$
 \kappa (s)=\norm{\frac{d \vec{T}}{d s}}
-\]
+$$
 where $\vec{T}(s)$ is the unit tangent vector.
 
 
@@ -331,28 +298,29 @@ Find the curvature of a circle.
   
 ::: {.solution }
 A circle can be parametrized by $\vec{R}(t)=\langle r \cos  t,r \sin  t\rangle$ where $r$ is the radius. We determine the arc length function as   
-\[
+$$
 s=\int _0^t\sqrt{r^2\cos ^2u+r^2\sin ^2u}\, du=r t.
-\] 
+$$ 
 Solving for $t$ we find the component functions to be 
-\[
+$$
 x(s)=r \cos  \left(\frac{s}{r}\right)
 \qquad \text{and} \qquad 
 y(s)=r \sin  \left(\frac{s}{r}\right).
-\]
+$$
 Thus the unit tangent and unit normal vectors are
-\[
+$$
 \vec{T}(s)
-=\left\langle -\sin  \left(\frac{s}{r}\right),\cos  \left(\frac{s}{r}\right)\right\rangle\]
+=\left\langle -\sin  \left(\frac{s}{r}\right),\cos  \left(\frac{s}{r}\right)\right\rangle
+$$
 and  
-\[
+$$
 \vec{N}(s)
 =\left\langle-\frac{1}{r}\cos \left(\frac{s}{r}\right),-\frac{1}{r}\sin \left(\frac{s}{r}\right)\right\rangle\left(\frac{1}{\kappa }\right)
-\]
+$$
 where  
-\[
+$$
 \kappa =\sqrt{\frac{1}{r^2}\cos ^2\left(\frac{s}{r}\right)+\frac{1}{r^2}\sin ^2\left(\frac{s}{r}\right)}=\frac{1}{r}.
-\]  
+$$  
 Therefore the curvature of a circle is $\frac{1}{r}.$   
 ::: 
 
@@ -366,9 +334,9 @@ Find the unit tangent vector $\vec{T}(t)$ to $C,$ $\frac{d \vec{T}}{d s},$ and t
   
 ::: {.solution }
 The derivative is    
-\[
+$$
 \vec{R}'(t)=(1-\cos  t)\vec{i}+(\sin  t) \vec{j}+\left(2 \cos  \frac{t}{2}\right)\vec{k}
-\] 
+$$ 
 and the magnitude of the derivative is
 \begin{align*}
  \norm{\vec{R}'(t)} & =\sqrt{(1-\cos  t)^2+\sin ^2t+4 \cos ^2 \frac{t}{2}} \\
@@ -377,19 +345,20 @@ and the magnitude of the derivative is
 =2
 \end{align*} 
 thus the unit tangent vector is
-\[
-\vec{T}(t)=\frac{\vec{R}'(t)}{\norm{\vec{R}'(t)}}=\frac{1}{2}\left[(1-\cos  t)\vec{i}+(\sin  t)\vec{j}+\left(2 \cos  \frac{t}{2}\right)\vec{k}\right].\]
+$$
+\vec{T}(t)=\frac{\vec{R}'(t)}{\norm{\vec{R}'(t)}}=\frac{1}{2}\left[(1-\cos  t)\vec{i}+(\sin  t)\vec{j}+\left(2 \cos  \frac{t}{2}\right)\vec{k}\right].$$
 Then,  
-\[
+$$
 \vec{T}'(t)=\frac{1}{2}\left[(\sin  t)\vec{i}+(\cos  t)\vec{j}-\left(\sin  \frac{t}{2}\right)\vec{k}\right]
-\] 
+$$ 
 because $\frac{d   \vec{T}}{d s}=\frac{\vec{T}(t)}{d s / d t}$ we have 
-\[
-\frac{d   \vec{T}}{d s}=\frac{1}{4}\left[(\sin  t)\vec{i}+(\cos  t)\vec{j}-\left(\sin ^2\frac{t}{2}\right)\vec{k}\right]\]
+$$
+\frac{d   \vec{T}}{d s}=\frac{1}{4}\left[(\sin  t)\vec{i}+(\cos  t)\vec{j}-\left(\sin ^2\frac{t}{2}\right)\vec{k}\right]
+$$
 Therefore the curvature is
-\[
+$$
 \kappa (t)=\norm{\frac{d  \vec{T}}{d s}}=\frac{1}{4}\sqrt{\sin ^2t+\cos ^2t+\sin ^2\frac{t}{2}}=\frac{1}{4}\sqrt{1+\sin ^2\frac{t}{2}}.
-\]
+$$
 as a function of $t$. 
 ::: 
 
@@ -404,43 +373,48 @@ Suppose the smooth curve $C$ is the graph of the vector function $\vec{R}(t).$ T
  
 ::: {.proof }
 Given two vector functions $\vec{R}(t)$ and $\vec{R}(s)$ with the same smooth graph $C$ and where $\vec{R}(s)$ is a parametrization vector function in terms of the arc length of $C$, then according to the rule  
-\[
-\frac{d   \vec{T}}{d t}=\frac{d  \vec{T}}{d s}\frac{d s}{d t}\]
+$$
+\frac{d   \vec{T}}{d t}=\frac{d  \vec{T}}{d s}\frac{d s}{d t}
+$$
 we have  
-\[
-\kappa(t) =\norm{\frac{d \vec{T}}{d s}}=\frac{\norm{\frac{d \vec{T}}{d t}}}{\norm{\vec{R}'(t)}}.\]
+$$
+\kappa(t) =\norm{\frac{d \vec{T}}{d s}}=\frac{\norm{\frac{d \vec{T}}{d t}}}{\norm{\vec{R}'(t)}}.
+$$
 Therefore,  
 \begin{align*}
 \kappa (t)
 &=\frac{\norm{\vec{T}'(t)}}{\norm{\vec{R}'(t)}} 
 =\frac{\norm{\vec{T}'(t)}\norm{\vec{R}'(t)}^2}{\norm{\vec{R}'(t)}^3} 
-=\frac{\norm{\vec{T}'(t)} \left(\frac{d s}{d t}\right)^2}{\norm{\vec{R}'(t)}^3} \\[5pt]
+=\frac{\norm{\vec{T}'(t)} \left(\frac{d s}{d t}\right)^2}{\norm{\vec{R}'(t)}^3} \\ 
 & =\frac{\norm{\vec{T}'(t)}\norm{\vec{T} (t)}\left(\frac{d s}{d t}\right)^2}{\norm{\vec{R}'(t)}^3} 
 =\frac{\norm{\vec{T}'(t)}\norm{\vec{T} (t)} \sin \left(\frac{\pi }{2}\right) \left(\frac{d s}{d t}\right)^2}{\norm{\vec{R}'(t)}^3} 
-\\[5pt]
+\\ 
 & =\frac{\norm{\vec{T} (t)\times \vec{T}' (t)}\ \left(\frac{d s}{d t}\right)^2}{\norm{\vec{R}'(t)}^3}.\end{align*}
 Since  
-\[
-\vec{R}' (t)=\norm{\vec{R}' (t)}\vec{T} (t)=\left(\frac{d s}{d t}\right)\vec{T} (t)\]
+$$
+\vec{R}' (t)=\norm{\vec{R}' (t)}\vec{T} (t)=\left(\frac{d s}{d t}\right)\vec{T} (t)
+$$
 and  
-\[
-\vec{R}'' (t)=\frac{d}{d t}\left(\frac{d s}{d t}\right)\vec{T} (t)+\frac{d s}{d t}\vec{T}' (t)=\frac{d^2s}{d t^2}\vec{T} (t)+\frac{d s}{d t}\vec{T}' (t)\]
+$$
+\vec{R}'' (t)=\frac{d}{d t}\left(\frac{d s}{d t}\right)\vec{T} (t)+\frac{d s}{d t}\vec{T}' (t)=\frac{d^2s}{d t^2}\vec{T} (t)+\frac{d s}{d t}\vec{T}' (t)
+$$
 we have,  
 \begin{align*}
 \vec{R}'(t)\times \vec{R}''(t)&=\left(\frac{d s}{d t}\right)\vec{T}(t)\times \left(\frac{d^2s}{d t^2}\vec{T}(t)+\frac{d s}{d t}\vec{T}'(t)\right) 
-\\[5pt]
+\\ 
 & =\left(\frac{d s}{d t}\right)\left(\frac{d^2 s}{d t^2}\right)(\vec{T}(t)\times \vec{T}(t))+\left(\frac{d s}{d t}\right)^2(\vec{T}(t)\times \vec{T}'(t)) 
-\\[5pt]
+\\ 
 & =\left(\frac{d s}{d t}\right)^2(\vec{T}(t)\times \vec{T}'(t)).
 \end{align*}
 Therefore,  
-\[
-\norm{\vec{R}'(t)\times \vec{R}''(t)}=\left(\frac{d s}{d t}\right)^2\norm{\vec{T}(t)\times \vec{T}'(t)}.\]
+$$
+\norm{\vec{R}'(t)\times \vec{R}''(t)}=\left(\frac{d s}{d t}\right)^2\norm{\vec{T}(t)\times \vec{T}'(t)}.
+$$
 Finally
-$
+$$
 \kappa (t)=\frac{\norm{\vec{R}' (t) \times \vec{R}'' (t)}}{\norm{\vec{R}'(t)}^3}
- $
- as desired.
+$$
+as desired.
 ::: 
  
 
@@ -449,12 +423,12 @@ Given the curve defined by
 $$
 \vec{R}(t)=\sin t  \vec{i}+\cos t \vec{j}+t  \vec{k}
 $$
-find a unit tangent vector $\vec{T}$ at the point on the curve where $t=\pi $, the curvature at $t=\pi $, and find the length of the curve from $t=0$ to $t=\pi $.  
+find a unit tangent vector $\vec{T}$ at the point on the curve where $t=\pi$, the curvature at $t=\pi$, and find the length of the curve from $t=0$ to $t=\pi$.  
 ::: 
 
 ::: {.solution }
 We have
-$ \vec{R}'(t)=\cos t  \vec{i}-\sin  t \vec{j}+\vec{k},$
+$\vec{R}'(t)=\cos t  \vec{i}-\sin  t \vec{j}+\vec{k},$
 $\vec{R}''(t)=-\sin t  \vec{i} -\cos t  \vec{j},$
 and  
 \begin{align*}
@@ -469,23 +443,16 @@ and
 \\ & =\sqrt{2}.
 \end{align*}
 Therefore the curvature is $\kappa =\frac{\sqrt{2}}{\left(\sqrt{2}\right)^3}=\frac{1}{2},$ and also  
-\[
+$$
 \vec{T}=\left(\frac{1}{\sqrt{2}}\cos  t\right) \vec{i}+\left(-\frac{1}{\sqrt{2}}\sin  t\right)\vec{j}+\left(\frac{1}{\sqrt{2}}\right)\vec{k}
-\]
+$$
 and  
-$
+$$
 \int _0^{\pi }\norm{\vec{R}'}\, dt=\int _0^{\pi }\sqrt{2}\, dt=\sqrt{2}\pi .
- $
+$$
 ::: 
 
 ## Maximum Curvature
-
-\begin{figure} 
-\centering
-\includegraphics[width=2in]{_includes/cardioid-pics.pdf}
-\caption{A few tangent vectors for the cardioid $r=2(1+\cos \theta)$.}
-\label{cargraph}
-\end{figure} 
 
 Now that we know that the curvature formula in  \eqref{curform} is a one variable function we can apply one variable calculus to find maximum curvature. 
 We will derive two more curvature formulas, one for planar functional form \ref{pfc} and another for parametric form \ref{pafc}.   
@@ -506,10 +473,11 @@ where $f(x),$ $f'(x),$ and $f''(x)$ all exist.
  
 ::: {.proof }
 Given the vector function $x(t)=t$ and $y(t)=f(t)$ defined by $y=f(x)$ we have $\vec{R}(t)=t  \vec{i}+f(t)  \vec{j}.$ Using the formula 
-\[
-\kappa (t) =\frac{\norm{\vec{R}'(t) \times \vec{R}''(t) }}{\norm{\vec{R}'(t) }^3},\]
+$$
+\kappa (t) =\frac{\norm{\vec{R}'(t) \times \vec{R}''(t) }}{\norm{\vec{R}'(t) }^3},
+$$
 we have   
-\[
+$$
 \kappa (t) =\frac{\norm{\ 
 \left|\begin{array}{ccc}
  \vec{i} & \vec{j} & \vec{k}  \\
@@ -517,15 +485,8 @@ we have
  0 & f''(t) & 0
 \end{array}\right|\ 
 }}{\norm{\vec{R}'(t) }^3}=\frac{|f''(t)|}{\left(\sqrt{1+[f''(t)]^2}\right)^3}.
-\]  
+$$  
 ::: 
-
-\begin{figure} 
-\centering
-\includegraphics[width=1.75in]{_includes/ln-max-curv-pics.pdf}
-\caption{The curvature of $y=\ln x$.}
-\label{lngraph}
-\end{figure} 
 
 ::: {#exm- } 
 Find the maximum curvature for the graph of  
@@ -534,24 +495,17 @@ $y=\ln  x$.
 
 ::: {.solution }
 We have $y'=\frac{1}{x},$ $y''=\frac{-1}{x^2},$ and   
-\[
-\kappa (x) =\frac{\frac{1}{x^2}}{\left(1+\frac{1}{x^2}\right)^{3/2}}=\frac{1}{\left(1+\frac{1}{x^2}\right)^{3/2} x^2}\]
+$$
+\kappa (x) =\frac{\frac{1}{x^2}}{\left(1+\frac{1}{x^2}\right)^{3/2}}=\frac{1}{\left(1+\frac{1}{x^2}\right)^{3/2} x^2}
+$$
 To maximize the curvature we find the first derivative
-\[
+$$
 \frac{d \kappa }{d x}=\frac{3}{\left(1+\frac{1}{x^2}\right)^{5/2} x^5}-\frac{2}{\left(1+\frac{1}{x^2}\right)^{3/2} x^3}=\frac{1-2 x^2}{\sqrt{1+\frac{1}{x^2}}
 x \left(x^2+1\right)^2}
-\]
+$$
 Applying the first derivative test we have the maximum curvature at 
 $x=\frac{1}{\sqrt{2}}$ with curvature of $\kappa \left(\frac{1}{\sqrt{2}}\right)=\frac{2}{3 \sqrt{3}}.$  
 ::: 
-
-\begin{figure} 
-\centering
-\includegraphics[width=1.75in]{_includes/exp-max-curv-pics.pdf}
-\caption{The curvature of $y=e^{2x}$.}
-\label{lngraph}
-\end{figure} 
-
 
 ::: {#exm- } 
 Find the maximum curvature for the graph of  
@@ -560,24 +514,18 @@ $y=e^{2 x}$.
 
 ::: {.solution }
 We have $y'=2e^{2x},$ $y\text{''}=4e^{2x},$ and   
-\[
-\kappa =\frac{|y''|}{\left[1+(y')^2\right]^{3/2}}=\frac{4e^{2x}}{\left(1+4e^{4x}\right)^{3/2}}\]
+$$
+\kappa =\frac{|y''|}{\left[1+(y')^2\right]^{3/2}}=\frac{4e^{2x}}{\left(1+4e^{4x}\right)^{3/2}}
+$$
 To maximize the curvature we find the first derivative
-\[
+$$
 \frac{d \kappa }{d x}=-\frac{96 e^{6 x}}{\left(1+4 e^{4 x}\right)^{5/2}}+\frac{8 e^{2 x}}{\left(1+4 e^{4 x}\right)^{3/2}}=-\frac{8 e^{2 x} \left(-1+8 e^{4 x}\right)}{\left(1+4 e^{4 x}\right)^{5/2}}
-\] 
+$$ 
 Applying the first derivative test we have the maximum curvature at $x=\frac{-3}{4}\ln2$ with curvature of  
 \begin{equation}
 \kappa \left(\frac{-3}{4}\ln2\right)=\frac{4\sqrt{3}}{9}.
 \end{equation}
 ::: 
-
-\begin{figure} 
-\centering
-\includegraphics[width=2in]{_includes/lissa-pics.pdf}
-\caption{Curvature in parametric form.}
-\label{fig:lissa}
-\end{figure} 
 
 ::: {#cor- } [Curvature in Parametric Form]
 \label{thm:Curvature in Parametric Form}
@@ -588,13 +536,6 @@ If $C$ is a smooth curve in $\mathbb{R}^2$ described by the parametric equations
 \end{equation}
 :::     
 
-\begin{figure}[h] 
-\begin{center}
-\includegraphics[width=1.25in]{_includes/ellipse-pics.pdf}
-\end{center}
-\caption{Tangent lines to the graph of $9x^2+4y^2=36$}
-\label{fig:ellipse}
-\end{figure} 
 
 ::: {#exm- } 
 Find the point(s) where the ellipse $9x^2+4y^2=36$ has maximum curvature. 
@@ -613,21 +554,15 @@ y'(t)=3 \cos  t, \quad
 x''(t)=-2 \cos  t , \quad y''(t)=-3 \sin  t.   
 $$
 Now using \ref{thm:Curvature in Parametric Form}, we find  
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=2.1in]{_includes/ellipse-max-curv-pics.pdf}
-\end{center}
-\caption{Curvature function plot for $9x^2+4y^2=36$.}
-\label{fig:ellipseplot}
-\end{figure} 
+
 \begin{align*}
 \kappa 
 & =\frac{|x'y''-y'x''|}{\left[(x')^2+(y')^2\right]^{3/2}} 
-\\[5pt]
+\\ 
 & =\frac{|(-2 \sin  t )(-3 \sin  t)-(3 \cos  t)(-2 \cos t)|}{\left[(-2 \sin  t)^2+(3 \cos  t)^2\right]^{3/2}}
-\\[5pt]
+\\ 
 & =\frac{6}{\left(4 \sin  ^2t+9\cos ^2t\right)^{3/2}}
-\\[5pt]
+\\ 
 & = 6\left(4+5\cos ^2t\right)^{-3/2}
 \end{align*}
 See \ref{fig:ellipse} for a sketch of the curvature function. 
@@ -669,7 +604,7 @@ Find the length of the given curve described by the vector function $\vec{R}(t)=
 
 ::: {#exr- } 
 Determine $a$ so that the length of the given curve described by the vector function $\vec{R}(t)=a \cos  t \vec{i}+(a \sin  t)\vec{j} +(5 t)\vec{k}$ 
-has length $\sqrt{41}\pi $ over the interval $[0,\pi ].$
+has length $\sqrt{41}\pi$ over the interval $[0,\pi ].$
 ::: 
 
 ::: {#exr- } 
@@ -679,9 +614,9 @@ Express the vector function $\vec{R}(t)=\langle 2+3t,1-t,-4t-9\rangle$ in terms 
 ::: {#exr- } 
 Determine $a$ so that the vector function $\vec{R}(t)=\langle 2-3t,1+t,-4t\rangle$ written in terms of the arc length parameter $s$ measured from the point
 where $t=0$ in the direction of increasing $t$ is 
-\[
+$$
 \vec{R}(s)=\left\langle 2-\frac{3s}{a},1+\frac{s}{a},\frac{-4s}{a}\right\rangle.
-\] 
+$$ 
 ::: 
 
 ::: {#exr- } 
@@ -722,16 +657,16 @@ Find the curvature of the plane curve at the given location.
 - $y=\ln (\cos x)$, $-\pi/2 < x <\pi /2$
 - $x=t-1, y=\sqrt{t}$, $(x,y)=(3,2)$
 - $x=t-t^2, y=1-t^3$, $(x,y)=(0,1)$
-- $x=1-\sin t, y=2+\cos  t $, $(x,y)=(1,3)$
+- $x=1-\sin t, y=2+\cos  t$, $(x,y)=(1,3)$
 - $x=\cos^3 t, y=\sin^3 t$, $(x,y)=(\sqrt{2}/4,\sqrt{2}/4)$
  
 ::: 
 
 ::: {#exr- } 
 Given the vector function 
-\[
+$$
 \vec{R}(t)=\sin  t \vec{i}+ \cos t \vec{j}+t \vec{k}
-\]
+$$
 and $t_0=\pi ,$ find the unit tangent vector and the curvature at $t_0.$ 
 ::: 
 
@@ -757,7 +692,7 @@ Find the points on the curve in the $xy$-plane described by $y=3x-x^3$ at which 
 
 ::: {#exr- } 
 Show that the curvature of the parabola $y=x^2+3$ approaches 0 as 
-$x\to \infty $.
+$x\to \infty$.
 ::: 
 
 ::: {#exr- } 
@@ -776,9 +711,9 @@ Show that for an ellipse, the maximum and minim curvature occurs at ends of the 
 
 ::: {#exr- } 
 Show that the curvature of the helix 
-\[
+$$
 \vec{R}(t)= a\cos t \vec{i}+a \sin t \vec{j}+b t 
-\]
+$$
 is $\kappa=a/(a^2+b^2)$. 
 What is the largest value that $\kappa$ can have for a given value of $b$?
 ::: 

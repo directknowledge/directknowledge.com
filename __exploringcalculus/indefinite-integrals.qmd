@@ -84,13 +84,10 @@ where $C$ is an arbitrary constant and $n\geq 0.$
 Suppose $f$ and $g$ are integrable functions and $a$, $b$, and $c$ are constants. 
 Then 
  
-\item 
-$\ds \int c f(u)du=c\int f(u) \, du$
-\item 
-$\ds \int [f(u)+g(u)] \, du=\int f(u) \, du+\int g(u) \, du$
-\item 
-$\ds \int [f(u)-g(u)] \, du=\int f(u) \, du-\int g(u) \, du $
-- $\ds \int [a f(u)du+b g(u)] \, du=a\int  f(u)du+b \int g(u) \, du$
+- $ \displaystyle \int c f(u)du=c\int f(u) \, du$
+- $ \displaystyle \int [f(u)+g(u)] \, du=\int f(u) \, du+\int g(u) \, du$
+- $ \displaystyle \int [f(u)-g(u)] \, du=\int f(u) \, du-\int g(u) \, du $
+- $ \displaystyle \int [a f(u)du+b g(u)] \, du=a\int  f(u)du+b \int g(u) \, du$
  
 ::: 
 
@@ -101,7 +98,7 @@ Then
 \[
 \int x^n \, dx=
 \begin{cases}
-\ds \frac{x^{n+1}}{n+1}+C & n\neq -1 \\[10pt]
+ \displaystyle \frac{x^{n+1}}{n+1}+C & n\neq -1 \\[10pt]
  \ln |x|+C & n=-1.
 \end{cases}
 \]
@@ -110,10 +107,10 @@ Then
 
 ::: {#thm- } 
 Suppose $u$ is a differentiable function of $x$ and $C$ is an arbitrary constant. 
-\begin{multicols}{2}
  
-- $\ds \int 0 \, du=0+C $
-- $\ds \int e^u \, du=e^u+C $
+ 
+- $ \displaystyle \int 0 \, du=0+C $
+- $ \displaystyle \int e^u \, du=e^u+C $
 - $\ds\int  \sin  u \, du=-\cos  u+C $
 - $\ds\int  \cos  u \, du=\sin  u+C $
 - $\ds\int  \sec ^2 u \, du=\tan  u+C $
@@ -124,7 +121,7 @@ Suppose $u$ is a differentiable function of $x$ and $C$ is an arbitrary constant
 - $\ds\int \frac{1}{1+u^2} \, du=\tan ^{-1}u+C $
 - $\ds\int \frac{1}{|u|\sqrt{u^2-1}} \, du=\sec ^{-1}u+C $
  
-\end{multicols}
+ 
 ::: 
 
 
@@ -474,16 +471,13 @@ No it does not, rather it shows that the assumptions of the zero-derivative theo
 ::: {#exr- } 
 Find an antiderivative for the following sets of functions $f(x)$, $g(x)$, and $h(x)$. Write out an equation using an indefinite integral and each of these functions.
 \ 
-\item 
-$f(x)=2x,$ $g(x)=x^2,$ and $h(x)=x^2-2x+1$
-\item 
-$f(x)=-3x^{-4},$ $g(x)=x^{-4},$ and $h(x)=x^{-4}+2x+3$ 
+- $f(x)=2x,$ $g(x)=x^2,$ and $h(x)=x^2-2x+1$
+- $f(x)=-3x^{-4},$ $g(x)=x^{-4},$ and $h(x)=x^{-4}+2x+3$ 
 - $f(x)=\frac{-2}{x^3},$ $g(x)=\frac{1}{2 x^3}$ and $h(x)=x^3-\frac{1}{x^3}$ 
 - $f(x)=\frac{2}{3}x^{-1/3},$ $g(x)=\frac{1}{3}x^{-2/3}$ and $h(x)=\frac{-1}{3}x^{-4/3}$ 
 \item  
 $f(x)=\frac{1}{3x},$ $g(x)=\frac{2}{5x},$ and $h(x)=1+\frac{4}{3x}-\frac{1}{x^2}$ 
-\item 
-$f(x)=\sec ^2x,$ $g(x)=\frac{2}{3}\sec ^2\frac{x}{3}$ and $h(x)=-\sec ^2\frac{3x}{2}$ 
+- $f(x)=\sec ^2x,$ $g(x)=\frac{2}{3}\sec ^2\frac{x}{3}$ and $h(x)=-\sec ^2\frac{3x}{2}$ 
 - $f(x)=e^{-2x}$ $g(x)=e^{4x/3},$ and $h(x)=e^{-x/5}.$ 
 - $f(x)=3^x,$ $g(x)=2^{-x},$ and $h(x)=\left(\frac{5}{3}\right)^x.$ 
 - $f(x)=x-\left(\frac{1}{2}\right)^x$ $g(x)=x^2+2^x,$ and $h(x)=\pi ^x-x^{-1}.$ 

@@ -239,7 +239,7 @@ Without a finite number to assign the limit, we sometimes say that the limit doe
 
 ::: {#exm- }  
 
-Determine $\ds \lim _{x\to 0}\frac{1}{x}.$
+Determine $ \displaystyle \lim _{x\to 0}\frac{1}{x}.$
 ::: 
 
 ::: {.solution }   

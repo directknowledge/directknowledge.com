@@ -186,51 +186,51 @@ Find the Taylor polynomial $p_n(x)$ and the Taylor remainder $R_n(x)$ for the fu
 
 ::: {#exr- } 
 Use the definition of Taylor series to find the Taylor series, centered at $c$, for the function.
-\begin{multicols}{2}
  
-- $f\ds (x)=\frac{1}{x}$, $c=1$
-- $\ds f(x)=x e^x$, $c=1$
+ 
+- $f \displaystyle (x)=\frac{1}{x}$, $c=1$
+- $ \displaystyle f(x)=x e^x$, $c=1$
 - $f(x)=\sin 3x$, $c=0$
 - $f(x)=e^x$, $c=1$
 - $f(x) = \tan x$, $c=\pi/4$
 - $\tan 2x$, $c=0$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
 Prove that the Maclaurin series for the function converges to the function for all x.
-\begin{multicols}{2}
+ 
  - $f(x)=\sin x$
 - $f(x)=e^{-x}$
 - $f(x)=e^{-2x}$
 - $f(x)=\sin + \cos x$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
 Use the binomial series to find the Maclaurin series for the function.
-\begin{multicols}{2}
- - $\ds f(x)\frac{1}{\sqrt{1-x}}$
-- $\ds f(x)=\frac{1}{4+x^2}$
-- $\ds f(x)=\frac{1}{(1+x)^4}$
-- $\ds f(x)= \sqrt[4]{1+x}$
  
-\end{multicols}
+ - $ \displaystyle f(x)\frac{1}{\sqrt{1-x}}$
+- $ \displaystyle f(x)=\frac{1}{4+x^2}$
+- $ \displaystyle f(x)=\frac{1}{(1+x)^4}$
+- $ \displaystyle f(x)= \sqrt[4]{1+x}$
+ 
+ 
 ::: 
 
 ::: {#exr- } 
 Find the Maclaurin series for the function.
-\begin{multicols}{2}
- - $\ds f(x)=e^{x^2/3}$
-- $\ds f(x)=x^2 \sin x$
-- $\ds g(x)=e^{-4x}$
-- $\ds h(x)=\cos x^{3/2}$
-- $\ds f(x)=\cos^2 x$
-- $\ds h(x)=x^2 \cos x^2$
  
-\end{multicols}
+ - $ \displaystyle f(x)=e^{x^2/3}$
+- $ \displaystyle f(x)=x^2 \sin x$
+- $ \displaystyle g(x)=e^{-4x}$
+- $ \displaystyle h(x)=\cos x^{3/2}$
+- $ \displaystyle f(x)=\cos^2 x$
+- $ \displaystyle h(x)=x^2 \cos x^2$
+ 
+ 
 ::: 
 
 

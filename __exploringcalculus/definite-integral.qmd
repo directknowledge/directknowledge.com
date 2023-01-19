@@ -57,17 +57,6 @@ $
 where $P$ is a partition of $[0,1]$, as a definite integral and find its value using geometry. 
 ::: 
 
-\begin{figure}[htp]
-\begin{center}
-\subfigure[The graph of $f(x)=\sqrt{4-x^2}$.]{\label{fig:graph41}
-\includegraphics[width= 150pt]{_includes/p41.pdf}}
-\subfigure[The graph of $f(x)=\tan x$.]{\label{fig:graph42}
-\includegraphics[width= 150pt]{_includes/p42.pdf}}
-\end{center}
-\caption{Using geometry to evaluate a definite integral.}
-\label{fig:edge}
-\end{figure}
-
 ::: {.solution }
 See Figure \ref{fig:graph41}. 
 Recall the area of a circle with radius 2 is $4\pi$. 
@@ -105,12 +94,11 @@ Being familiar with the basic properties of finite sums and limits many of the p
 Suppose $f$ and $g$ are integrable functions on $[a,b]$. 
 Then 
  
-\item 
-$\ds \int_a^b f(x) \, dx =-\int_b^a f(x) \, dx$, 
-- $\ds \int_a^a f(x) \, dx =0$, 
-- $\ds \int_a^b k f(x) \, dx = k \int_a^b f(x) \, dx$, 
-- $\ds \int_a^b ( f(x) \pm g(x) ) \, dx = \int_a^b f(x) \, dx \pm \int_a^b g(x) \, dx$, and
-- $\ds \int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx$.
+- $ \displaystyle \int_a^b f(x) \, dx =-\int_b^a f(x) \, dx$, 
+- $ \displaystyle \int_a^a f(x) \, dx =0$, 
+- $ \displaystyle \int_a^b k f(x) \, dx = k \int_a^b f(x) \, dx$, 
+- $ \displaystyle \int_a^b ( f(x) \pm g(x) ) \, dx = \int_a^b f(x) \, dx \pm \int_a^b g(x) \, dx$, and
+- $ \displaystyle \int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx$.
 - If $f$ has a maximum value $M$ and a minimum value $m$, then 
 \[
 m(b-a)\leq \int_a^b f(x) \, dx \leq M(b-a).
@@ -162,14 +150,6 @@ f(x)=
 \]
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 200pt]{_includes/p37.pdf}}
-\caption{Evaluating an integral of a piecewise function.}
-\label{fig:graph37}
-\end{center}
-\end{figure}
-
 ::: {.solution }
 Figure \ref{fig:graph37} is a sketch of the graph of $f$. 
 Using the basic properties of the definite integral
@@ -212,14 +192,6 @@ Using the basic properties of the definite integral
 What values of $a$ and $b$ minimize the value of $\int_a^b(x^4-2x^2)\, dx$?
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 200pt]{_includes/p38.pdf}}
-\caption{The graph of the function $f(x)=x^4-2x^2.$}
-\label{fig:graph38}
-\end{center}
-\end{figure}
-
 ::: {.solution }
 By solving $x^4-2x^2=0$ we determine that $x^4-2x^2\leq 0$ on $[-\sqrt{2},\sqrt{2}]$. Thus we find that $a=-\sqrt{2}$ and $b=\sqrt{2}$ will minimize the value of $\int_a^b(x^4-2x^2)\, dx$. See Figure \ref{fig:graph38}.
 ::: 
@@ -229,14 +201,6 @@ By solving $x^4-2x^2=0$ we determine that $x^4-2x^2\leq 0$ on $[-\sqrt{2},\sqrt{
 (b) Find upper and lower bounds for $\int_0^{1/2} \frac{1}{1+x^2} \, dx$ and  $\int_{1/2}^1 \frac{1}{1+x^2} \, dx$. 
 Use (b) to find another estimate of the integral in (a). 
 ::: 
-
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 200pt]{_includes/p39.pdf}}
-\caption{The graph of the function $f(x)=\frac{1}{1+x^2}.$}
-\label{fig:graph39}
-\end{center}
-\end{figure}
 
 ::: {.solution }
 For (a) Since $f(x)=\frac{1}{1+x^2}$ is decreasing on $[0,1]$, it follows the maximum of $f$, $M$ occurs at 0 with $M=1$ and the minimum value of $f$, $m$ occurs at 1 with $m=1/2$. Therefore, 
@@ -269,13 +233,6 @@ namely,
 Show that the value of $\int_0^1 \sqrt{x+8} \, dx$ lies between $2\sqrt{2}\approx 2.8$ and 3.
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 200pt]{_includes/p40.pdf}}
-\caption{The graph of $f(x)=\sqrt{x+8}$.}
-\label{fig:graph40}
-\end{center}
-\end{figure}
 
 ::: {.solution }
 See Figure \ref{fig:graph40}. 
@@ -420,96 +377,69 @@ and so yes the number $\text{av}(f)$ has the same integral over $[a,b]$ that $f$
 ::: {#exr- } 
 For each of the following you are given a function $f$ defined on an interval $[a,b]$, then number $n$ of subintervals of equal length $\Delta x=(b-a)/n$, and the evaluation points $c_k$ in $[x_{k-1}, x_k]$. For each of the following, (a) sketch the graph of $f$ and the rectangles associated with the Riemann sum for $f$ on $[a,b]$, and (b) find the Riemann sum. 
 \ 
-\item 
-$f(x)=2x-3, [0,2], n=4, c_k \text{ is the midpoint}$
-\item 
-$f(x)=-2x+1, [-1,2], n=6, c_k \text{ is the left endpoint}$
-\item 
-$f(x)=\sqrt{x}-1, [0,3], n=6, c_k \text{ is the right endpoint}$
-\item 
-$f(x)=2\sin x, [0,5\pi/4], n=5, c_k \text{ is the right endpoint}$
+- $f(x)=2x-3, [0,2], n=4, c_k \text{ is the midpoint}$
+- $f(x)=-2x+1, [-1,2], n=6, c_k \text{ is the left endpoint}$
+- $f(x)=\sqrt{x}-1, [0,3], n=6, c_k \text{ is the right endpoint}$
+- $f(x)=2\sin x, [0,5\pi/4], n=5, c_k \text{ is the right endpoint}$
  
 ::: 
 
 ::: {#exr- } 
 Use the definition of the definite integral to evaluate the following integrals.
  
-\item 
-$ \int_{-1}^2 x^2 \, dx$
-\item 
-$ \int_{-1}^3 (x-2) \, dx$
-\item 
-$ \int_{-1}^1 (2x+1) \, dx$
-\item 
-$ \int_{-2}^1 (x^3+2x) \, dx$
+- $ \int_{-1}^2 x^2 \, dx$
+- $ \int_{-1}^3 (x-2) \, dx$
+- $ \int_{-1}^1 (2x+1) \, dx$
+- $ \int_{-2}^1 (x^3+2x) \, dx$
  
 ::: 
 
 ::: {#exr- } 
 Each of the following is given as the limit of a Riemann sum of a function $f$ on $[a,b]$. Write this expression as a definite integral on $[a,b]$.
  
-\item 
-$\lim_{n\to \infty} \sum_{k=1}^n (4 c_k-3)\Delta x, [-3,-1]$
-\item 
-$\lim_{n\to \infty} \sum_{k=1}^n 2c_k(1-c_k)^2\Delta x, [0,3]$
-\item 
-$\lim_{n\to \infty} \sum_{k=1}^n \frac{2c_k}{c_k^2+1} \Delta x, [1,2]$
-\item 
-$\lim_{n\to \infty} \sum_{k=1}^n c_k(\cos c_k)\Delta x, [0,\frac{\pi}{2}]$
+- $\lim_{n\to \infty} \sum_{k=1}^n (4 c_k-3)\Delta x, [-3,-1]$
+- $\lim_{n\to \infty} \sum_{k=1}^n 2c_k(1-c_k)^2\Delta x, [0,3]$
+- $\lim_{n\to \infty} \sum_{k=1}^n \frac{2c_k}{c_k^2+1} \Delta x, [1,2]$
+- $\lim_{n\to \infty} \sum_{k=1}^n c_k(\cos c_k)\Delta x, [0,\frac{\pi}{2}]$
  
 ::: 
 
 ::: {#exr- } 
 For each of the following make a sketch of $f$ on $[a,b]$ and then use the geometric interpretation of the integral to evaluate it. 
  
-\item 
-$\int_{-2}^3 (2x+1) \, dx$
-\item 
-$\int_{-1}^2 |x| \, dx$
-\item 
-$\int_{-2}^2 \sqrt{4-x^2}  \, dx$
-\item 
-$\int_{0}^2 \sqrt{-x^2+2x} \, dx$
+- $\int_{-2}^3 (2x+1) \, dx$
+- $\int_{-1}^2 |x| \, dx$
+- $\int_{-2}^2 \sqrt{4-x^2}  \, dx$
+- $\int_{0}^2 \sqrt{-x^2+2x} \, dx$
  
 ::: 
 
 ::: {#exr- } 
 Given that $\int_{-1}^3 f(x) \, dx =4$ and $\int_3^6 f(x) \, dx=2$, evaluate the following integrals. 
  
-\item 
-$\int_{-1}^3 [f(x)+g(x)] \, dx$
-\item 
-$\int_{-1}^3 [g(x)-f(x)] \, dx$
-\item 
-$\int_{-1}^3 [3f(x)-2g(x)] \, dx$
-\item 
-$\int_{3}^{-1} [f(x)+5g(x)] \, dx$
+- $\int_{-1}^3 [f(x)+g(x)] \, dx$
+- $\int_{-1}^3 [g(x)-f(x)] \, dx$
+- $\int_{-1}^3 [3f(x)-2g(x)] \, dx$
+- $\int_{3}^{-1} [f(x)+5g(x)] \, dx$
  
 ::: 
 
 ::: {#exr- } 
 Given that $\int_{-2}^2 f(x) \, dx =3$ and $\int_0^2 f(x) \, dx=2$, evaluate the following integrals. 
  
-\item 
-$\int_{2}^0 f(x) \, dx$
-\item 
-$\int_{-2}^0 [f(x)+3] \, dx$
-\item 
-$\int_{2}^0 3f(x)\, dx-\int_0^{-2} 2f(x) \, dx$
+- $\int_{2}^0 f(x) \, dx$
+- $\int_{-2}^0 [f(x)+3] \, dx$
+- $\int_{2}^0 3f(x)\, dx-\int_0^{-2} 2f(x) \, dx$
  
 ::: 
 
 ::: {#exr- } 
 For each of the following use the properties of the integral to prove that the inequality without evaluating the integral. 
 \ 
-\item 
-$\int_0^1 \frac{\sqrt{x^3+x}}{x^2+1}\, dx \geq 0$
-\item 
-$\int_0^1 x^2\, dx \leq \int_0^1 \sqrt{x} \, dx$
-\item 
-$\int_0^{\pi/4} \sin^2 x \cos x \, dx \leq \int_0^{\pi/4} \sin^2 x \, dx$
-\item 
-$\int_0^{\pi/2} \cos x \, dx \leq \int_0^{\pi/2} (x^2+1) \, dx $
+- $\int_0^1 \frac{\sqrt{x^3+x}}{x^2+1}\, dx \geq 0$
+- $\int_0^1 x^2\, dx \leq \int_0^1 \sqrt{x} \, dx$
+- $\int_0^{\pi/4} \sin^2 x \cos x \, dx \leq \int_0^{\pi/4} \sin^2 x \, dx$
+- $\int_0^{\pi/2} \cos x \, dx \leq \int_0^{\pi/2} (x^2+1) \, dx $
  
 ::: 
 

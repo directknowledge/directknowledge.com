@@ -233,7 +233,7 @@ Evaluate the following integrals.
 - $\int x\sin x\cos x\, dx$
 - $\int x^2 e^{4x}\, dx$
  
-\end{multicols}
+ 
 ::: 
 
 
@@ -247,7 +247,7 @@ Evaluate the following definite integrals.
 - $\int_0^{\pi/8} x \sec^2 2x \, dx$
 - $\int_0^1 x \arcsin^2 \, dx$
  
-\end{multicols}
+ 
 ::: 
 
 
@@ -258,7 +258,7 @@ Evaluate the integral by making a $u$-substitution and then integration by parts
 - $\int x^5 e^{x^2}\, dx$
 - $\int \cos \sqrt{x} \, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
@@ -269,7 +269,7 @@ Use the reduction formulas to evaluate the integral.
 - $\int^{\pi/2}_0 \sin^5 x \, dx$
 - $\int \cos^5 x \, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 

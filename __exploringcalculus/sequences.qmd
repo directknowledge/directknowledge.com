@@ -12,16 +12,16 @@ Basically, a \emph{sequence} is a function whose domain is a set of integers.
 
 ::: {#def- } 
 A \index{sequence} $\{a_n\} **sequence} $\{a_n\** $ is a function whose domain is the set of positive integers. 
-The functional values $a_1$, $a_2$, ...., $a_n$ are the \index{terms} **terms**  of the sequence, and the term $a_n$ is called the $n$th term of the sequence. 
+The functional values $a_1$, $a_2$, \ldots, $a_n$ are the \index{terms} **terms**  of the sequence, and the term $a_n$ is called the $n$th term of the sequence. 
 ::: 
 
 ::: {#exm- } 
 List the terms of the sequence.
-\begin{multicols}{2}
+ 
  - $a_n=1/n$
 - $a_n = n/(1+n)$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {.solution }
@@ -35,11 +35,11 @@ where the index in both examples is $n$ and $n=1, 2, 3, \ldots.$
 
 ::: {#exm- } 
 Find an expression for the $n$th term of the sequence. 
-\begin{multicols}{2}
+ 
  - $\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \ldots$
 - $\frac{1}{2}, -\frac{2}{3}, \frac{3}{4}, -\frac{4}{5}, \ldots$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {.solution }
@@ -379,7 +379,7 @@ Therefore, the sequence converges to 0.
 
 ::: {#exr- } 
 Write the first five terms of the sequence.
-\begin{multicols}{2}
+ 
  - $a_n = \frac{ (-1)^{n+1} 2^n}{n+1}$
 - $a_n =\frac{n+1}{3n-1}$
 - $a_n = \sin \frac{n\pi}{2}$
@@ -389,26 +389,26 @@ Write the first five terms of the sequence.
 - $a_1 =3$, $a_{n+1}= 2a_n -1$
 - $a_1=2, a_{n+1}=3a_n +1$
  
-\end{multicols}
+ 
 ::: 
 
 
 ::: {#exr- } 
 Find an expression for the $n$th term of the sequence. 
-\begin{multicols}{2}
+ 
  - $\left\{\frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \ldots \right\}$
 - $\left\{\frac{1}{1\cdot 2}, \frac{2}{2\cdot 3}, \frac{3}{3\cdot 4}, \frac{4}{4\cdot 5}, \ldots \right\}$
 - $\left\{-\frac{1}{4}, \frac{2}{9}, -\frac{3}{16}, \frac{4}{25}, \ldots\right\}$
 - $\left\{1, -\frac{2}{3}, \frac{4}{9}, -\frac{8}{27}, \ldots\right\}$
  
-\end{multicols}
+ 
 ::: 
 
 
 ::: {#exr- } 
 Which of the sequences converge and which diverge? 
 Find the limit of each convergent sequence. 
-\begin{multicols}{2}
+ 
  - $a_n = \frac{n+(-1)^n}{n}$
 - $a_n =\sqrt{n+1}$
 - $a_n = \frac{2n+1}{1-2\sqrt{n}}$
@@ -426,7 +426,7 @@ Find the limit of each convergent sequence.
 - $a_n = \frac{1}{n}\int_1^n \frac{1}{x}\, dx$
 - $a_n = \frac{1+2+3+\cdots + n}{n+2}-\frac{n}{2}$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
@@ -479,7 +479,7 @@ Find the limit of the following sequences or state that they diverge.
 - $a_n = \frac{2\tan^{-1}n}{n^3+4}$
 - $a_n =\frac{n \sin^3(n\pi/2)}{n+1}$
  
-\end{multicols}
+ 
 ::: 
 
 
@@ -493,7 +493,7 @@ Determine whether the sequence is increasing, decreasing, or not monotonic. Is t
 - $\sin \frac{n\pi}{6}$
 - $a_n = \frac{\ln(1/n)}{n}$
  
-\end{multicols}
+ 
 ::: 
 
 
@@ -507,7 +507,7 @@ Show that $lim_{n\to \infty} a_n = f'(0)$.
 - $a_n =  n\left(e^{1/n}-1\right)$
 - $a_n = n \ln \left(1+\frac{2}{n}\right)$
  
-\end{multicols}
+ 
 ::: 
 
 

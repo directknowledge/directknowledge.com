@@ -71,7 +71,7 @@ The idea behind the substitution rule is to choose $u=g(x)$. Then find $du=g'(x)
 
 
 ::: {#exm- } 
-Evaluate $\ds \int \frac{\cos \sqrt{\theta} }{\sqrt{\theta} \sin^2\sqrt{\theta}}\, d\theta$.
+Evaluate $ \displaystyle \int \frac{\cos \sqrt{\theta} }{\sqrt{\theta} \sin^2\sqrt{\theta}}\, d\theta$.
 ::: 
 
 ::: {.solution }
@@ -90,7 +90,7 @@ where $C$ is a constant.
 
 
 ::: {#exm- } 
-Evaluate $\ds \int r^4 \left(7-\frac{r^5}{10}\right)^3\, dr$.
+Evaluate $ \displaystyle \int r^4 \left(7-\frac{r^5}{10}\right)^3\, dr$.
 ::: 
 
 ::: {.solution }
@@ -107,7 +107,7 @@ where $C$ is a constant.
 
 
 ::: {#exm- } 
-Evaluate $\ds \int \sqrt{\frac{x-1}{x^5}}\, dx$.
+Evaluate $ \displaystyle \int \sqrt{\frac{x-1}{x^5}}\, dx$.
 ::: 
 ::: {.solution }
 Let $u=1-\frac{1}{x}$. Then 
@@ -125,7 +125,7 @@ where $C$ is a constant.
 
 
 ::: {#exm- } 
-Evaluate $\ds \int e^{\sin^2 \theta} \sin 2\theta\, dx$.
+Evaluate $ \displaystyle \int e^{\sin^2 \theta} \sin 2\theta\, dx$.
 ::: 
 
 ::: {.solution }
@@ -143,7 +143,7 @@ where $C$ is a constant.
 
 
 ::: {#exm- } 
-Evaluate $\ds \int \frac{1}{x\sqrt{x^4-1}}\, dx$.
+Evaluate $ \displaystyle \int \frac{1}{x\sqrt{x^4-1}}\, dx$.
 ::: 
 
 ::: {.solution }
@@ -163,7 +163,7 @@ where $C$ is a constant.
 
 
 ::: {#exm- } 
-Evaluate $\ds \int \frac{\ds e^{\cos^{-1}x}}{\sqrt{1-x^2}} \, dx$.
+Evaluate $ \displaystyle \int \frac{ \displaystyle e^{\cos^{-1}x}}{\sqrt{1-x^2}} \, dx$.
 ::: 
 
 ::: {.solution }
@@ -180,7 +180,7 @@ where $C$ is a constant.
 
 
 ::: {#exm- } 
-Evaluate $\ds \int \frac{1}{\sin^{-1}y \sqrt{1-y^2}}\, dy$.
+Evaluate $ \displaystyle \int \frac{1}{\sin^{-1}y \sqrt{1-y^2}}\, dy$.
 ::: 
 
 ::: {.solution }
@@ -198,7 +198,7 @@ where $C$ is a constant.
 
 
 ::: {#exm- } 
-Evaluate $\ds \int \frac{\sin \sqrt{\theta}}{\sqrt{\theta \cos^3 \sqrt{\theta}}} \, d\theta$.
+Evaluate $ \displaystyle \int \frac{\sin \sqrt{\theta}}{\sqrt{\theta \cos^3 \sqrt{\theta}}} \, d\theta$.
 ::: 
 
 ::: {.solution }
@@ -393,31 +393,21 @@ Evaluate the following integrals.
 ::: {#exr- } 
 Find the indefinite integral for the following then check you answer by differentiation.
  
-\item 
-$\int \left(3t^2+\frac{t}{2}\right) \, dt$ 
-\item 
-$ \int \left(1-x^2-3x^5\right)dx  $
-\item 
-$\int \left(x^{-1/3}\right) \, dx$
+- $\int \left(3t^2+\frac{t}{2}\right) \, dt$ 
+- $ \int \left(1-x^2-3x^5\right)dx  $
+- $\int \left(x^{-1/3}\right) \, dx$
 \item  
 $\int \left(\frac{\sqrt{x}}{2}+\frac{2}{\sqrt{x}}\right) \, dx$ 
 \item  
 $\int 2x\left(1-x^{-3}\right)dx$
 - $\int \left(\frac{4+\sqrt{t}}{t^3}\right) \, dt$ 
-\item 
-$\int \left(7 \sin  \frac{\theta }{3}\right) \, d\theta $ 
-\item 
-$\int \left(-\frac{\sec  ^2x}{3}\right) \, dx$ 
-\item 
-$\int \left(e^{3x}+5e^{-x}\right) \, dx$
-\item 
-$\int (1.3)^x \, dx$
-\item 
-$\int \left(\frac{1+\cos  4t}{2}\right) \, dt$ 
-\item 
-$\int \left(\frac{2}{\sqrt{1-y^2}}-\frac{1}{y^{1/4}}\right) \, dy$ 
-\item 
-$\int \left(1+\tan ^2\theta \right) \, d\theta $ 
+- $\int \left(7 \sin  \frac{\theta }{3}\right) \, d\theta $ 
+- $\int \left(-\frac{\sec  ^2x}{3}\right) \, dx$ 
+- $\int \left(e^{3x}+5e^{-x}\right) \, dx$
+- $\int (1.3)^x \, dx$
+- $\int \left(\frac{1+\cos  4t}{2}\right) \, dt$ 
+- $\int \left(\frac{2}{\sqrt{1-y^2}}-\frac{1}{y^{1/4}}\right) \, dy$ 
+- $\int \left(1+\tan ^2\theta \right) \, d\theta $ 
  
 ::: 
 
@@ -426,8 +416,7 @@ Verify the following formulas by differentiation where $C$ is an arbitrary const
 \ 
 - $\int (7x-2)^3 \, dx=\frac{(7x-2)^4}{28}+C$ 
 - $\int \csc ^2\left(\frac{x-1}{3}\right) \, dx=-3 \cot \left(\frac{x-1}{3}\right)+C$ 
-\item 
-$\int x e^xdx=x e^x-e^x+C$ 
+- $\int x e^xdx=x e^x-e^x+C$ 
  
 ::: 
 

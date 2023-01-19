@@ -164,7 +164,7 @@ Determine whether the series converges or diverges.
 - $\sum_{n=1}^\infty \frac{2+\sin n}{3^n}$
 - $\sum_{n=1}^\infty e^{-n^2}$
  
-\end{multicols}
+ 
 ::: 
 
 
@@ -184,7 +184,7 @@ Determine whether the series converges or diverges.
 - $\sum_{n=1}^\infty \frac{\sqrt[n]{n}}{n^2}$
 - $\sum_{n=1}^\infty \frac{1}{n\sqrt[n]{n}}$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 

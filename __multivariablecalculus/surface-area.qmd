@@ -12,26 +12,26 @@ We apply double integrals to the problem of computing the surface area over a re
 ::: {#thm- } [Surface Area]
 Assume that the function $f(x,y)$ has continuous partial derivatives 
 $f_x$ and $f_y$ in a region $R$ of the $x y$-plane. Then the portion of the surface $z=f(x,y)$ that lies over $R$ has surface area 
-\[
+$$
 S=\iint _R
 \sqrt{ \left[ f_x(x,y)\right]^2 + \left[ f_y(x,y) \right]^2 +1 }\, dA.
-\]
+$$
 ::: 
 
 ::: {.proof }
-Consider a surface defined by $z=f(x,y)$ over a region $R$ of the $x y-\text{plane}.$ Enclose the region $R$ in a rectangle partitioned by a grid with lines parallel to the coordinate axes. This creates a number of cells, and we let $R_1,$ $R_2,$ ...., $R_n$ denote those that lie entirely within $R.$ For $m=1,2,3,... ,n,$ let 
+Consider a surface defined by $z=f(x,y)$ over a region $R$ of the $x y-\text{plane}.$ Enclose the region $R$ in a rectangle partitioned by a grid with lines parallel to the coordinate axes. This creates a number of cells, and we let $R_1,$ $R_2,$ \ldots., $R_n$ denote those that lie entirely within $R.$ For $m=1,2,3,\ldots ,n,$ let 
 $P_m\left(x_m^*,y_m^*\right)$ be any corner of the rectangle $R_m,$ and let $T_m$ be the tangent plane above $P_m$ on the surface of $z=f(x,y).$ Let $\text{$\triangle $S}_m$ denote the area of the patch of the surface that lies directly above $R_m.$ The rectangle $R_m$ projects onto a parallelogram $A B D C$ in the tangent plane $T_m,$ and if $R_m$ is small we would expect the area of this parallelogram to approximate closely the element of the area $\text{$\triangle $S}_m.$ If $\triangle  x_m$ and $\triangle  y_m$ are the lengths of the sides of the rectangle $R_m,$ the approximating parallelogram will have sides determined by the vectors 
-\[
+$$
 \vec{A B}=\triangle  x_m \vec{i}+\left[f_x\left(x_m^*,y_m^*\right)\triangle  x_m\right]\vec{k} 
-\] 
+$$ 
 and 
-\[
+$$
 \vec{A C}=\triangle  y_m \vec{j}+\left[f_y\left(x_m^*,y_m^*\right)\triangle  y_m\right] \vec{k}.
-\]
+$$
 If $K_m$ is the area of the approximating parallelogram, we have 
-\[
+$$
 K_m=\|\vec{A B}\times \vec{A C}\|.
-\]
+$$
 To determine $K_m,$ we first find the cross product: 
 \begin{align*}
 \vec{A B} \times \vec{A C} & =\left|
@@ -44,14 +44,14 @@ To determine $K_m,$ we first find the cross product:
 & =\triangle  x_m\triangle  y_m\left(-f_x\left(x_m^*,y_m^*\right)\, \vec{i}-f_y\left(x_m^*,y_m^*\right)\, \vec{j}+\vec{k}\right).
 \end{align*}
 Then we calculate the norm, 
-\[
+$$
 K_m=\|\vec{A B} \times \vec{A C}\|
 =\triangle  x_m\triangle  y_m \sqrt{ \left[f_x\left(x_m^*,y_m^*\right)\right]{}^2+\left[f_y\left(x_m^*,y_m^*\right)\right]{}^2+1}.
-\]
+$$
 Finally, summing over the entire partition, we see that the surface area over $R$ may be approximated by the sum
-\[
+$$
 \triangle S_n=\sum _{m=1}^n \sqrt{\left[f_x\left(x_m^*,y_m^*\right)\right]{}^2+\left[f_y\left(x_m^*,y_m^*\right)\right]{}^2+1}\left(\triangle A_m\right)
-\] 
+$$ 
 where $\triangle A_m=\triangle  x_m\triangle  y_m.$ This is a Riemann sum, and by taking an appropriate limit (as the partition becomes
 more refined), we find that the surface area $S,$ satisfies
 \begin{align*}
@@ -87,17 +87,17 @@ Find the surface area of a sphere of radius $a$.
 Let 
 $z=f(x,y)=\sqrt{a^2-x^2-y^2}.$
 Then
-\[
+$$
 f_x=\frac{-x}{\sqrt{a^2-x^2-y^2}}, \qquad 
-f_y=\frac{-y}{\sqrt{a^2-x^2-y^2}},\]
+f_y=\frac{-y}{\sqrt{a^2-x^2-y^2}},$$
 and 
-\[
+$$
 \sqrt{f_x^2+f_y^2+1}=\sqrt{\frac{x^2+y^2+\left(a^2-x^2-y^2\right)}{a^2-x^2-y^2}}=\frac{a}{\sqrt{a^2-x^2-y^2}}.
-\] 
+$$ 
 In polar form we have 
 \begin{align*}
 & 8\int _0^{\pi /2}\int _0^a\frac{a}{\sqrt{a^2-r^2}}r \, drd\theta 
-\\[5pt]
+\\
 & =-4a\int _0^{\pi /2}\int _0^a\frac{(-2r)}{\sqrt{a^2-r^2}} \, drd\theta =-8a\int_0^{\pi /2} (-a) \, d\theta
 =4\pi  a^2.
 \end{align*}
@@ -111,18 +111,18 @@ Find the surface area of a cylinder of radius $a$ and height $h$.
 Let
 $z=f(x,y)=\sqrt{a^2-x^2}.$
 Then
-$
+$$
 f_x=\frac{-x}{\sqrt{a^2-x^2}},
 f_y=0,
-$
+$$
 and 
-\[
-\sqrt{f_x^2+f_y^2+1}=\sqrt{\frac{x^2+a^2-x^2}{a^2-x^2}}=\frac{a}{\sqrt{a^2-x^2}}.\]
+$$
+\sqrt{f_x^2+f_y^2+1}=\sqrt{\frac{x^2+a^2-x^2}{a^2-x^2}}=\frac{a}{\sqrt{a^2-x^2}}.$$
 We find the surface area as
 \begin{align*}
 4\int _0^a\int _0^h\frac{a}{\sqrt{a^2-x^2}} \, dy\, dx
 & =4a\int _0^a\frac{h a}{\sqrt{a^2-x^2}} dx 
-\\[5pt]
+\\
 & =\left. 4 a h \sin ^{-1}\left(\frac{x}{a}\right) \right|_0^a
 =2\pi  a h.
 \end{align*}
@@ -150,13 +150,13 @@ Find the surface area the portion of the sphere $x^2+y^2+z^2=4$ that lies inside
 
 ::: {.solution }
 Let $z=f(x,y)=\sqrt{4-x^2-y^2}.$ Then 
-\[f_x=\frac{-x}{\sqrt{4-x^2-y^2}}, \qquad 
+$$f_x=\frac{-x}{\sqrt{4-x^2-y^2}}, \qquad 
 f_y=\frac{-y}{\sqrt{4-x^2-y^2}},
-\] 
+$$ 
 and 
-\[
+$$
 \sqrt{f_x^2+f_y^2+1}=\sqrt{\frac{x^2+y^2+\left(4-x^2-y^2\right)}{4-x^2-y^2}}=\frac{2}{\sqrt{4-x^2-y^2}}.
-\]
+$$
 The projected region in polar form is $r=2 \sin  \theta .$ Since half the surface is above the $x y-\text{plane}$ and half the surface is below 
 we have 
 \begin{align*}
@@ -174,47 +174,47 @@ We show a way to find the surface area of the graph of a surface given a paramet
 
 ::: {#thm- } [Surface Area (Parametrically)]
 Let $S$ be a surface defined parametrically by
-\[
+$$
 \vec{R}(u,v)=x(u,v)\vec{i}+y(u,v)\vec{j}+z(u,v)\vec{k}
-\]
+$$
 on the region $D$ in the $u v$-plane, and assume that $S$ is smooth in the sense that $\vec{R}_u$ and $\vec{R}_v$ are continuous with $\vec{R}_u\times \vec{R}_v\neq \vec{0}$ on $D.$ Then the surface area $S$ is given by 
-\[
+$$
 S=\underset{D}{\iint }\left\|\vec{R}_u\times \vec{R}_v\right\| d u d v.
-\]
+$$
 The quantity $\left\|\vec{R}_u\times \vec{R}_v\right\|$ is called the \index{fundamental cross product} **fundamental cross product** .
 ::: 
 
 ::: {.proof }
 Suppose a surface $S$ is defined parametrically by the vector function 
-\[
+$$
 \vec{R}(u,v)=x(u,v)\vec{i}+y(u,v)\vec{j}+z(u,v)\vec{k}
-\] 
+$$ 
 for parameters $u$ and $v.$ Let $D$ be a region in the $x y$-plane on which $x,$ $y,$ and $z,$ as well as their partial derivatives with respect to $u$ and $v$ are continuous. The partial derivatives of $R(u,v)$ are given by 
-\[
+$$
 \vec{R}_u=\frac{\partial x}{\partial u}\vec{i}+\frac{\partial y}{\partial u}\vec{j}+\frac{\partial z}{\partial u}\vec{k} 
 \qquad \text{ and } \qquad
 \vec{R}_v=\frac{\partial x}{\partial v}\vec{i}+\frac{\partial y}{\partial v}\vec{j}+\frac{\partial z}{\partial v}\vec{k}. 
-\] 
+$$ 
 Suppose the region $D$ is subdivided into cells. Consider a typical rectangle in this partition, dimension $\triangle  x$ and $\triangle  y$,
 where $\triangle  x$ and $\triangle  y$ are small. If we project this rectangle onto the surface $\vec{R}(u,v),$ we obtain a curvilinear parallelogram
 with adjacent sides $\vec{R}_u(u,v)\triangle  u$ and $\vec{R}_v(u,v)\triangle  v.$ The area of this rectangle is approximated by 
-\[
+$$
 \triangle S=\left\|\vec{R}_u(u,v)\triangle  u\times \vec{R}_v(u,v)\triangle  v\right\| =\left\|\vec{R}_u(u,v)\times \vec{R}_v(u,v)\right\|\triangle  u \triangle  v.
-\]
+$$
 By taking an appropriate limit, we find the surface area to be a double integral.  
 ::: 
 
 ::: {#exm- } 
 Find the area of the surface given parametrically by the equation
-\[
+$$
 \vec{R}(u,v)= u v  \vec{i}+(u-v) \vec{j}+(u+v) \vec{k}
-\]
+$$
 for $u^2+v^2\leq 1$.
 ::: 
 
 ::: {.solution }
 We find
-\[
+$$
 \vec{R}_u\times \vec{R}_v=\left|
 \begin{array}{ccc}
  \vec{i} & \vec{j} & \vec{k} \\
@@ -222,11 +222,11 @@ We find
  u & -1 & 1
 \end{array}
 \right|=2\vec{i}+(u-v)\vec{j}-(u+v)\vec{k}.
-\] 
+$$ 
 Therefore the fundamental cross product is
-\[
+$$
 \left\|\vec{R}_u\times \vec{R}_v\right\|=\sqrt{4+(u-v)^2+(-u-v)^2}=\sqrt{4+2u^2+2v^2}.
-\] 
+$$ 
 Using polar coordinates the surface area is
 \begin{align*}
 S& =\int _0^{2\pi }\int _0^1\sqrt{4+2r^2}rdrd\theta
@@ -238,25 +238,25 @@ S& =\int _0^{2\pi }\int _0^1\sqrt{4+2r^2}rdrd\theta
 
 ::: {#exm- } 
 Find the area of the surface given parametrically by the equation
-\[
+$$
 \vec{R}(u,v)=(u \sin  v)\vec{i}+(u \cos  v)\vec{j}+ v \vec{k}
-\]
+$$
 for $0\leq u\leq a$ and $0\leq v\leq b$.
 ::: 
 
 ::: {.solution }
 We find
-\[ 
-\vec{R}_u=(\sin  v)\vec{i}+(\cos  v)\vec{j}, \quad \vec{R}_v=(u \cos  v)\vec{i}+(-u \sin  v)\vec{j}+\vec{k},\]
+$$ 
+\vec{R}_u=(\sin  v)\vec{i}+(\cos  v)\vec{j}, \quad \vec{R}_v=(u \cos  v)\vec{i}+(-u \sin  v)\vec{j}+\vec{k},$$
 and 
-\[
+$$
 \vec{R}_u\times \vec{R}_v=\left|
 \begin{array}{ccc}
  \vec{i} & \vec{j} & \vec{k} \\
  \sin  v & \cos  v & 0 \\
  u \cos  v & -u \sin  v & 1
 \end{array}
-\right|=(\cos  v)\vec{i}-(\sin  v)\vec{j}-u \vec{k}.\]
+\right|=(\cos  v)\vec{i}-(\sin  v)\vec{j}-u \vec{k}.$$
 Therefore the fundamental cross product is 
 $\left\|\vec{R}_u\times \vec{R}_v\right\|=\sqrt{1+u^2}.$
 So the surface area is
@@ -269,9 +269,9 @@ S& =\int _0^b\int _0^a\sqrt{1+u^2} \, du dv
 
 ::: {#exm- } 
 Find the area of the torus which is given parametrically by 
-\[
+$$
 \vec{R}(u,v)=(a+b \cos  v)\cos  u  \vec{i}+(a+b \cos  v)\sin  u  \vec{j}+ (b \sin  v)  \vec{k}
-\]
+$$
 for $0<b<a,$ $0\leq u\leq 2\pi ,$ and $0\leq v\leq 2\pi.$
 ::: 
 
@@ -292,7 +292,7 @@ We find
 +\left(b^2\cos ^2v+a b \cos  v\right)(\sin  u)\vec{j} \\
 & \qquad  \qquad  \qquad \qquad +\left(b^2\sin  v \cos  v+a b \sin  v\right)\vec{k}.\end{align*}
 Therefore 
-$ \left\|\vec{R}_u\times \vec{R}_v\right\|=\left|a b+b^2\cos  v\right|.$ 
+$\left\|\vec{R}_u\times \vec{R}_v\right\|=\left|a b+b^2\cos  v\right|.$ 
 So the surface area is 
 \begin{align*}
 S& =\int _0^{2\pi }\int _0^{2\pi }\left|a b+b^2\cos  v\right| du dv

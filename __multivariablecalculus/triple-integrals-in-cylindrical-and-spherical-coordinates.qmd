@@ -23,12 +23,14 @@ over a region $R$ can sometimes be evaluated by transforming to cylindrical coor
 
 ::: {#thm- } [Triple Integrals in Cylindrical Coordinates]
 Assume $R$ is a solid region with continuous upper surface $z=v(r,\theta )$ and continuous lower surface $z=u(r,\theta )$ and assume is $D$ be the projection of the solid onto the $x y$-plane expressed in polar coordinates:
-\[
-D=\{(r,\theta):\alpha \leq r \leq \beta, r_1(\theta) \leq r(\theta) \leq r_2(\theta) \}\]
+$$
+D=\{(r,\theta):\alpha \leq r \leq \beta, r_1(\theta) \leq r(\theta) \leq r_2(\theta) \}
+$$
 where $r_1$ and $r_2$ are continuous functions of $\theta$.
 If $f(x,y,z)$ is continuous on $R,$ then the triple integral of $f$ over $R$ can be evaluated as follows 
-\[\iiint_Rf(x,y,z)dV=\int _{\alpha }^{\beta }\int _{r_1(\theta )}^{r_2(\theta )}\int _{u(r,\theta )}^{v(r,\theta )}f(r \cos  \theta ,r \sin  \theta ,z) r dz dr \, d\theta .
-\]
+$$
+\iiint_Rf(x,y,z)dV=\int _{\alpha }^{\beta }\int _{r_1(\theta )}^{r_2(\theta )}\int _{u(r,\theta )}^{v(r,\theta )}f(r \cos  \theta ,r \sin  \theta ,z) r dz dr \, d\theta .
+$$
 ::: 
 
 ::: {#exm- } 
@@ -42,7 +44,7 @@ The projection of the solid region onto the $x y$-plane is the region enclosed b
 \begin{align*}
 4\int _0^{\pi /2}\int _0^{1/2}\int _0^{1-4r^2}rdzdrd\theta 
 & =4\int _0^{\pi /2}\int _0^{1/2}\left(r-4 r^3\right)drd\theta 
-\\[5pt]
+\\
 & =4\int_0^{\pi /2} \frac{1}{16} \, d\theta
  =\frac{\pi }{8}.
 \end{align*}
@@ -57,14 +59,14 @@ $$
 
 ::: {.solution }
 In Cartesian coordinates the region of integration $D$ is given as
-\[
+$$
 \left\{(x,y,z) \mid x^2+y^2\leq z\leq  \sqrt{2-x^2-y^2},  -\sqrt{1-x^2}\leq y\leq  \sqrt{1-x^2}, -1\leq  x\leq 1\right\}
-\]
+$$
 We use cylindrical coordinates to evaluate the triple iterated integral 
 $I$ as follows
 \begin{align*}
 I& =\int _0^{2\pi }\int _0^1\int _{r^2}^{\sqrt{2-r^2}}z r dzdrd\theta 
-\\[5pt]
+\\
 & =\int _0^{2\pi }\int _0^1r \left(-\frac{r^4}{2}-\frac{r^2}{2}+1\right)drd\theta 
 =\int_0^{2\pi } \frac{7}{24} \, d\theta 
 =\frac{7 \pi }{12}.
@@ -74,9 +76,9 @@ I& =\int _0^{2\pi }\int _0^1\int _{r^2}^{\sqrt{2-r^2}}z r dzdrd\theta
 ::: {#exm- } 
 
 Evaluate the triple integral over the given region
-\[
+$$
 I=\iiint_R\left(x^4+2x^2y^2+y^4\right) \, dx \, dy \, dz
-\]
+$$
 where $R$ is the cylindrical solid $x^2+y^2\leq a^2$ with $0\leq z\leq \frac{1}{\pi }$
 ::: 
 
@@ -91,7 +93,7 @@ In cylindrical coordinates the triple integral is evaluated as,
 \begin{align*}
 I
 & =4\int _0^{\pi /2}\int _0^a\int _0^{1/\pi }r^4r dzdrd\theta 
-\\[5pt]
+\\
 & =4\int _0^{\pi /2}\int _0^a\frac{r^5}{\pi }drd\theta 
 =4\int_0^{\pi /2} \frac{a^6}{6 \pi } \, d\theta 
 =\frac{a^6}{3}.
@@ -110,7 +112,7 @@ We find
 \begin{align*}
 \int _0^{\pi }\int _0^2\int _0^{\sqrt{4-r^2}}r \sin \theta  \, dz \, dr \, d\theta 
 & =\int _0^{\pi }\int _0^2r \sqrt{4-r^2} \sin \theta \, dr \, d\theta 
-\\[5pt]
+\\
 & =\int_0^{\pi } \frac{8 \sin \theta }{3} \, d\theta 
 =\frac{16}{3}
 \end{align*}
@@ -128,7 +130,7 @@ We find
 \begin{align*}
 \int _0^{\pi /4}\int _0^1\int _0^{\sqrt{r}}r^2 \sin \theta  \, dz \, dr \, d\theta
 & =\int _0^{\pi /4}\int _0^1r^{5/2} \sin \theta \, dr \, d\theta 
-\\[5pt]
+\\
 & =\int_0^{\pi /4} \frac{2 \sin \theta }{7} \, d\theta 
 =\frac{2}{7} \left(1-\frac{1}{\sqrt{2}}\right)
 =\frac{2-\sqrt{2}}{7}
@@ -142,14 +144,14 @@ We find
 Each point in three dimensions is uniquely represented in spherical coordinates by $(\rho ,\theta ,\phi )$ using $0\leq \rho <\infty ,$
 $0\leq \theta < 2\pi ,$ and $0\leq  \phi \leq \pi .$ The conversion formulas from rectangular coordinates $(x,y,z)$ to spherical coordinates
 $(\rho ,\theta ,\phi )$ are 
-\[\begin{array}{lllll}
+$$\begin{array}{lllll}
  \rho =\sqrt{x^2+y^2+z^2} & \qquad &  \theta = \tan^{-1} \left( \frac{y}{x}\right) & \qquad &\phi =\cos ^{-1}\left(\frac{z}{\sqrt{x^2+y^2+z^2}}\right) \\
 x=\rho  \sin \phi  \cos \theta  & & y =\rho  \sin \phi \sin \theta  & & z=\rho  \cos \phi
-\end{array}\]
+\end{array}$$
 Using Jacobians, we can show that the element of volume in spherical coordinates is 
-\[
+$$
 dV=\rho ^2 \sin \phi \,d\rho \, d\theta \, d\phi.
-\]
+$$
 
 
 ::: {#thm- } [Triple Integrals in Spherical Coordinates]
@@ -157,7 +159,7 @@ If $f(x,y,z)$ is continuous on the closed bounded region $R$, then the triple in
 of $f$ over $R$ is given by 
 \begin{align*}
 & \iiint_Rf(x,y,z)dV 
-\\[5pt]
+\\
 & = \iiint_S f(\rho  \sin \phi \cos  \theta ,\rho  \sin \phi \sin \theta ,\rho  \cos \phi ) \, \rho ^2 \sin \phi \, d\rho \, d\phi \, d\theta
 \end{align*}
 where $S$ is the region $R$ expressed in spherical coordinates.
@@ -169,11 +171,11 @@ Find the volume of the bounded solid $S$ inside the sphere of radius $a$.
 ::: 
 
 ::: {.solution }
-Since an equation of the sphere is $\rho =a$ for $0\leq \theta <2\pi $ and $0\leq \phi \leq \pi ,$ the volume is determined by evaluating a triple iterated integral in spherical coordinates
+Since an equation of the sphere is $\rho =a$ for $0\leq \theta <2\pi$ and $0\leq \phi \leq \pi ,$ the volume is determined by evaluating a triple iterated integral in spherical coordinates
 \begin{align*}
 \iiint_S  \, dV 
 & =\int _0^{2\pi }\int _0^{\pi }\int _0^a\rho ^2 \sin \phi \, d\rho \, d\phi \, d\theta 
-\\[5pt]
+\\
 & = \int _0^{2\pi }\int _0^{\pi }\frac{1}{3} a^3 \sin \phi \, d\phi \, d\theta
 %=\int_0^{2\pi } \frac{2 a^3}{3} \, d\theta 
 =\frac{4 a^3 \pi }{3}.
@@ -192,11 +194,11 @@ where $D$ is the solid hemisphere $x^2+y^2+z^2\leq 1$ and $z\geq 0$
 Using spherical coordinates to evaluate the triple integral
 \begin{align*}
 I=&4\int _0^{\pi /2}\int _0^{\pi /2}\int _0^1 \rho ^4 \cos ^2 \phi  \sin \phi  \ d\rho \, d\theta \, d\phi 
-\\[5pt]
+\\
 & =4\int _0^{\pi /2}\int _0^{\pi /2}\frac{1}{5} \cos ^2 \phi \sin \phi  \ d\theta \, d\phi 
-\\[5pt]
+\\
 &=4\int_0^{\pi /2} \frac{1}{10} \pi  \cos ^2 \phi  \sin \phi  \, \ d\phi
-\\[5pt]
+\\
 & =\frac{4\pi }{10}\left(-\frac{\cos \phi }{4}-\frac{1}{12} \cos (3 \phi )\right)
 =\frac{2 \pi }{15}.
 \end{align*}
@@ -215,9 +217,9 @@ Since the integrand is symmetric about the origin we can use symmetry. In spheri
 \begin{align*}
 I
 & =8\int _0^{\pi /2}\int _0^{\pi /2}\int _0^{\sqrt{3}} \rho  \sin \phi  \, d\rho \, d\theta \, d\phi 
-\\[5pt]
+\\
 & =8\int _0^{\pi /2}\int _0^{\pi /2}\frac{3 \sin \phi }{2} \, d\theta \, d\phi
-\\[5pt]
+\\
 & =8\int_0^{\pi /2} \frac{3}{4} \pi  \sin (\phi ) \, d\phi 
 =6 \pi.
 \end{align*}
@@ -234,7 +236,7 @@ $$
 We find  
 \begin{align*}
 I & =\int _0^{\pi /2}\int _0^{2\pi }2 \cos \phi  \sin \phi \, d\theta \, d\phi 
-\\[5pt]
+\\
 & = \int_0^{\pi /2} 4 \pi  \cos \phi  \sin \phi  \, d\phi 
 =2 \pi.
 \end{align*}
@@ -251,7 +253,7 @@ $$
 We find  
 \begin{align*}
 I& =\int _0^{\pi /2}\int _0^{\pi /4}\frac{1}{3} \cos ^3 \phi  \sin \phi \, d\theta \, d\phi  
-\\[5pt]
+\\
 & =\int_0^{\pi /2} \frac{1}{12} \pi  \cos ^3(\phi ) \sin \phi  \, d\phi 
 =\frac{\pi }{48}.
 \end{align*}
@@ -267,7 +269,7 @@ We will use spherical coordinates and evaluate a triple iterated integral to fin
 \begin{align*}
 V& =\int _0^{2\pi }\int _{\pi /6}^{\pi }\int _0^4\rho ^2 \sin \phi  \, d\rho \, d\phi \, d\theta 
  =\int _0^{2\pi }\int _{\pi /6}^{\pi }\frac{64 \sin \phi }{3} \, d\phi \, d\theta 
-\\[5pt]
+\\
 & =\int_0^{2\pi } \frac{64}{3} \left(1+\frac{\sqrt{3}}{2}\right) \, d\theta
 =\frac{64\pi }{3} \left(2+\sqrt{3}\right).
 \end{align*}
@@ -275,18 +277,18 @@ V& =\int _0^{2\pi }\int _{\pi /6}^{\pi }\int _0^4\rho ^2 \sin \phi  \, d\rho \, 
 
 ::: {#exm- } 
 Evaluate the triple iterated integral
-\[
+$$
 I=\int _0^3\int _0^{\sqrt{9-y^2}}\int _{\sqrt{x^2+y^2}}^{\sqrt{18-x^2-y^2}}\left(x^2+y^2+z^2\right) \, dz \, dx \,dy.
-\]
+$$
 ::: 
 
 ::: {.solution }
 Converting to spherical coordinates we evaluate $I$ as follows,
 \begin{align*}
 I&=\int _0^{\pi /4}\int _0^{\pi /2}\int _0^{3\sqrt{2}}\rho ^4 \sin \phi  \, d\rho \, d\theta \, d\phi 
-\\[5pt]
+\\
 & =\int _0^{\pi /4}\int _0^{\pi /2}\frac{972}{5} \sqrt{2} \sin \phi  \, d\theta \, d\phi 
-\\[5pt]
+\\
 &=\int_0^{\pi /4} \frac{486}{5} \sqrt{2} \pi  \sin \phi  \, d\phi
 =\frac{486\pi }{5} \left(\sqrt{2} -1\right).
 \end{align*}
@@ -297,18 +299,12 @@ I&=\int _0^{\pi /4}\int _0^{\pi /2}\int _0^{3\sqrt{2}}\rho ^4 \sin \phi  \, d\rh
 ::: {#exr- } 
 Evaluate the following iterated integrals. 
  
-- $\int _0^{\pi }\int _0^2\int _0^{\sqrt{4-r^2}}r \sin  \theta \, dz \, dr \, d\theta $
-\item 
-$\int _0^{\pi /4}\int _0^1\int _0^{\sqrt{r}}r^2 \sin  \theta \, dz \, dr \, d\theta$
-\item 
-$\int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \, d\theta $
-\item 
-$\int _{-\pi /4}^{\pi /3}\int _0^{\sin  \theta }\int _0^{4 \cos  \theta } r \, dz \, dr \, d\theta $
-\item 
-$\int _0^{\pi /2}\int _0^{\pi /4}\int _0^{\cos  \phi }\rho ^2 \sin  \phi \, d\rho \, d\theta \, d\phi $
-\item 
-$\int _0^{\pi /2}\int _0^{2\pi }\int _0^2 \cos  \phi  \sin  \phi \, d \rho \, d\theta \, d\phi $
-   
+- $\int _0^{\pi }\int _0^2\int _0^{\sqrt{4-r^2}}r \sin  \theta \, dz \, dr \, d\theta$
+- $\int _0^{\pi /4}\int _0^1\int _0^{\sqrt{r}}r^2 \sin  \theta \, dz \, dr \, d\theta$
+- $\int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \, d\theta$
+- $\int _{-\pi /4}^{\pi /3}\int _0^{\sin  \theta }\int _0^{4 \cos  \theta } r \, dz \, dr \, d\theta$
+- $\int _0^{\pi /2}\int _0^{\pi /4}\int _0^{\cos  \phi }\rho ^2 \sin  \phi \, d\rho \, d\theta \, d\phi$
+- $\int _0^{\pi /2}\int _0^{2\pi }\int _0^2 \cos  \phi  \sin  \phi \, d \rho \, d\theta \, d\phi$ 
 ::: 
 
 

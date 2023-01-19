@@ -37,10 +37,6 @@ Thus we find that
 = 1.
 \end{align*}
 Consider the following figure.
-\begin{figure}[h]
-\centering
-\includegraphics[width=230pt]{_includes/the-integral-test-and-p-series-1.pdf}
-\end{figure}
 Notice that the sum of the areas of the rectangles under the graph of $f(x)=1/x^2$ is less than the area under the graph.
 Therefore, we have
 \begin{align*}
@@ -185,7 +181,7 @@ Use the Integral Test to determine whether the series diverges or converges.
 - $\ds\sum_{n=1}^\infty \frac{\ln n}{n}$
 - $\ds\sum_{n=1}^\infty \frac{n+2}{n+1}$
  
-\end{multicols}
+ 
 ::: 
 
 
@@ -205,7 +201,7 @@ Determine whether the series diverges or converges.
 - $\ds\sum_{n=1}^\infty \frac{n}{n^4+1}$
 - $\ds\sum_{n=1}^\infty\frac{1}{n^3 +n}$
  
-\end{multicols}
+ 
 ::: 
 
 
@@ -227,18 +223,18 @@ Find the values of $p$ for which the series is convergent.
 - $\ds\sum_{n=1}^\infty \frac{\ln n}{n^p}$
 - $\ds\sum_{n=1}^\infty n (1+n^2)^p$
  
-\end{multicols}
+ 
 ::: 
 
 
 ::: {#exr- } 
 Find the value(s) of $a$ for which the series converges. 
 Justify your answer. 
-\begin{multicols}{2}
+ 
  - $\ds\sum_{n=1}^\infty \left(\frac{a}{n} -\frac{1}{n+1}\right)$
 - $\ds\sum_{n=1}^\infty \left(\frac{a}{n+1} - \frac{1}{n+2}\right)$
  
-\end{multicols}
+ 
 ::: 
 
 
@@ -252,7 +248,7 @@ Use the Integral Test to determine the convergence or divergence of the $p$-seri
 - $\ds\sum_{n=1}^\infty \frac{3}{n^{5/3}}$
 - $\ds\sum_{n=1}^\infty \frac{1}{\sqrt[3]{27k^2}}$
  
-\end{multicols}
+ 
 ::: 
 
 

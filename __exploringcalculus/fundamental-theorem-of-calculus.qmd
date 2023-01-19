@@ -23,12 +23,6 @@ f_{\text{av}}=\frac{1}{b-a} \int_a^b f(x) \, dx.
 If we assume that $f$ is nonnegative, then we have the following geometric interpretation for the average value of a function over $[a,b]$. 
 We see that $f_{\text{av}}$ is the height of the rectangle with base lying on the interval $[a,b]$ and having the same area as the area of the region under the graph of $f$ on $[a,b]$. 
 
-\begin{figure}[hbt]
-\centering
-\includegraphics[width=230pt]{_includes/aveval.png}
-\caption{The area of the rectangle is $(b-a) f_{\text{av}}=\int_a^b f(x)\, dx=$ area of the region under the graph of $f$.}
-\label{fig:}
-\end{figure} 
 
 ::: {#exm- } 
 Find the average value of $f(x)=\frac{x}{\sqrt{x^2+1}}$ over the interval $[0,3]$.
@@ -132,8 +126,7 @@ as needed.
 ::: {#exm- } 
 Find the derivative of the following functions. 
  
-\item 
-$G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt $
+- $G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt $
 - $G(x)=\int_{0}^{x^2} t \sin t \, dt $
 - $G(x)=\int_{2}^{\sqrt{x}} \frac{\sin t}{t} \, dt $
 - $G(x)=\int_{x^2}^{x^3} \ln t\, dt $, $x>0$
@@ -230,8 +223,7 @@ as needed.
 ::: {#exm- } 
 Evaluate the following integrals.
  
-\item 
-$\int_{-2}^0 (2x-3)\, dx$
+- $\int_{-2}^0 (2x-3)\, dx$
 - $\int_{0}^2 (2-4u+u^2)\, du$
 - $ \int_1^2 \frac{3x^4-2x^2+1}{2x^2} \, dx$
 - $ \int_2^0 \sqrt{x}(x+1)(x-2) \, dx$
@@ -249,8 +241,7 @@ $\int_{-2}^0 (2x-3)\, dx$
 ::: {#exr- } 
 Find the derivative of the following functions. 
  
-\item 
-$G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt $
+- $G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt $
 - $G(x)=\int_{0}^{x^2} t \sin t \, dt $
 - $G(x)=\int_{2}^{\sqrt{x}} \frac{\sin t}{t} \, dt $
 - $G(x)=\int_{x^2}^{x^3} \ln t\, dt $
@@ -260,8 +251,7 @@ $G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt $
 ::: {#exr- } 
 Evaluate the following integrals.
  
-\item 
-$\int_{-2}^0 (2x-3)\, dx$
+- $\int_{-2}^0 (2x-3)\, dx$
 - $\int_{0}^2 (2-4u+u^2)\, du$
 - $ \int_1^2 \frac{3x^4-2x^2+1}{2x^2} \, dx$
 - $ \int_2^0 \sqrt{x}(x+1)(x-2) \, dx$
@@ -283,8 +273,7 @@ Show that each of the following inequalities hold.
 ::: {#exr- } 
 For each of the following, find the area of the region under the graph of $f$ on $[a,b]$.
  
-\item 
-$f(x)=x^2-2x+2; [-1,2]$
+- $f(x)=x^2-2x+2; [-1,2]$
 - $f(x)=\frac{1}{x^2}; [1,2]$
 - $f(x)=2+\sqrt{x+1}; [0,3]$
 - $f(x)=\frac{1}{4+x^2}; [0,1]$

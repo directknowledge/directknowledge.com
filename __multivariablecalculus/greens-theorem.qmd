@@ -8,7 +8,7 @@ pagetitle: "Green's Theorem - Exploring Calculus"
 ## Simple Connected Regions
 
 Suppose $C$ is a piecewise smooth closed curve oriented counterclockwise in the Cartesian plane whose bounded region $R$ is \index{simply connected} **simply connected** . 
-Suppose further that we have a \index{continuously differentiable} vector field of the form $\vec{F}=M(x,y)\vec{i} **continuously differentiable} vector field of the form $\vec{F}=M(x,y)\vec{i** $.  
+Suppose further that we have a \index{continuously differentiable} **continuously differentiable** vector field of the form $\vec{F}=M(x,y)\vec{i}$.  
 Let $[a,b]$ be the projection of $R$ onto the $x$-axis, let $y_1(x)$ represent the lower part of the curve $C$,  and let $y_2(x)$ represent the upper part of $C$. 
 We can write 
 \begin{align}
@@ -46,7 +46,9 @@ Using \ref{gr1} and \ref{gr2} we find
 \end{align*}
 as needed to prove the following theorem. 
 
-::: {#thm- } [\index{Green's Theorem} **Green's Theorem** ]
+::: {#thm- } 
+
+## Green's Theorem
 Let $R$ be a simply connected region with a piecewise smooth boundary curve $C$ oriented counterclockwise and let 
 $$
 \vec{F}= M \vec{i}+ N \vec{j}+0 \vec{k}
@@ -166,9 +168,9 @@ W& =\oint _C \vec{F}\cdot d\vec{R}
 
 ::: {#exm- } 
 Evaluate the closed line integral 
-\[
+$$
 \oint _C \frac{-y dx+(x-1)dy}{(x-1)^2+y^2}
-\] 
+$$ 
 where $C$ is any Jordan curve whose interior does not contain the point $(1,0)$ transversed counterclockwise.
 ::: 
 
@@ -188,11 +190,11 @@ $$
 Let $R$ be the region bounded by the given curve $C.$ 
 Then $\vec{F}$ and $R$ satisfy the hypothesis of Green's theorem and
 \begin{align*}
-& \oint _C \frac{-y dx+(x-1)dy}{(x-1)^2+y^2} \\[5pt]
+& \oint _C \frac{-y dx+(x-1)dy}{(x-1)^2+y^2} \\
 & \qquad =\oint _C \frac{-y }{(x-1)^2+y^2}dx+\frac{x-1}{(x-1)^2+y^2}dy 
-\\[5pt]
+\\
 & \qquad = \iint_R \left(\partial _x \left(\frac{x-1 }{(x-1)^2+y^2}\right)-\partial _y \left(\frac{-y }{(x-1)^2+y^2}\right)\right)dA 
-\\[5pt]
+\\
 & \qquad = \iint_R  0 \, dA
 =0.
 \end{align*}
@@ -207,15 +209,15 @@ and the interior of every Jordan curve $C$ in $R$ also lies in $R.$
 
 ::: {#thm- } [Green's Theorem for Doubly-Connected Regions]
 Let $R$ be a doubly-connected region with a piecewise smooth outer boundary curve $C_1$ oriented counterclockwise and a piecewise smooth inner boundary curve $C_2$ oriented clockwise and let $\vec{F}= M \vec{i}+ N \vec{j}+0 \vec{k}$ be a continuously differentiable vector field on $R,$ then
-\[
-\oint _{C_1} M \, dx+N \, dy+\oint _{C_2} M \, dx+N \, dy= \iint_R \left( \frac{\partial N}{\partial  x}-\frac{\partial M}{\partial  y} \right) \, d A.\]
+$$
+\oint _{C_1} M \, dx+N \, dy+\oint _{C_2} M \, dx+N \, dy= \iint_R \left( \frac{\partial N}{\partial  x}-\frac{\partial M}{\partial  y} \right) \, d A.$$
 ::: 
 
 ::: {#exm- } 
 Evaluate the closed line integral 
-\[
+$$
 \oint _C \frac{x dx+ydy}{x^2+y^2}
-\] 
+$$ 
 where $C$ is any Jordan curve whose interior contains the point $(0,0)$ transversed counterclockwise
 ::: 
 
@@ -224,17 +226,17 @@ Let $C_1$ be a circle centered at $(0,0)$ with radius $r$ so small that all of $
 be oriented clockwise and let $R$ be the region between $C_1$ and $C.$ Then by Green's theorem for doubly-connected regions, 
 \begin{align*}
 & \oint _C \frac{x}{x^2+y^2}dx+\frac{y}{x^2+y^2}dy+\oint _{C_1} \frac{x}{x^2+y^2}dx+\frac{y}{x^2+y^2}dy 
-\\[5pt]
+\\
 & \qquad = \iint_R \left(\frac{\partial }{\partial  x}\left(\frac{y}{x^2+y^2}\right)-\frac{\partial }{\partial  y}\left(\frac{x}{x^2+y^2}\right)\right)d
 A
-\\[5pt]
+\\
 & \qquad = \iint_R \left(\frac{-2 x y}{x^2+y^2}-\frac{-2 x y}{x^2+y^2}\right)d A =0.\end{align*}
 Thus,
-\[
+$$
 \oint _C \frac{x dx+ydy}{x^2+y^2}=-\oint _{C_1} \frac{x dx+ydy}{x^2+y^2}
-\]
+$$
 which is something that can be easily evaluated, using say, the parametrization 
-$ C_1: x=r \sin  \theta , y=r \cos  \theta; 0\leq \theta \leq 2\pi $. 
+$C_1: x=r \sin  \theta , y=r \cos  \theta; 0\leq \theta \leq 2\pi$. 
 Therefore 
 \begin{align*}
 \oint _C \frac{x dx+ydy}{x^2+y^2} & 
@@ -247,9 +249,9 @@ Therefore
 
 ::: {#exm- } 
 Evaluate the closed line integral 
-\[
+$$
 \oint _C\left(x^2y dx-y^2xdy\right)
-\] 
+$$ 
 where $C$ is the boundary of the region between the $x$-axis and the semicircle $y=\sqrt{a^2-x^2},$ traversed counterclockwise (including the $x$-axis). 
 ::: 
 
@@ -267,8 +269,8 @@ Using Green's Theorem, we find
 
 ::: {#exm- } 
 Evaluate the closed line integral 
-\[
-\oint _C\frac{-(y+2)dx+(x-1)dy}{(x-1)^2+(y+2)^2}\]
+$$
+\oint _C\frac{-(y+2)dx+(x-1)dy}{(x-1)^2+(y+2)^2}$$
 where $C$ is any Jordan curve whose interior does not contain the point $(1,-2)$.
 ::: 
 
@@ -276,20 +278,20 @@ where $C$ is any Jordan curve whose interior does not contain the point $(1,-2)$
 Green's theorem applies because we are using any Jordan curve which does not contain the point $(1,-2).$ 
 \begin{align*}
 & \oint _C\frac{-(y+2)dx+(x-1)dy}{(x-1)^2+(y+2)^2} 
-\\[5pt]
+\\
 & \quad =\oint _C-\frac{(y+2)}{(x-1)^2+(y+2)^2}dx+\frac{(x-1)}{(x-1)^2+(y+2)^2}dy 
-\\[5pt]
+\\
 & \quad =\iint_D \left(\partial _x \left(\frac{(x-1)}{(x-1)^2+(y+2)^2}\right)\right)-\left(\partial _y \left(-\frac{(y+2)}{(x-1)^2+(y+2)^2}\right)\right)dA 
-\\[5pt]
+\\
 & \quad =\iint_D\left(\frac{-x^2+2 x+y^2+4 y+3}{\left(x^2-2 x+y^2+4 y+5\right)^2}\right)-\left(\frac{-x^2+2 x+y^2+4 y+3}{\left(x^2-2 x+y^2+4 y+5\right)^2}\right) \, dA =0
 \end{align*}
 ::: 
 
 ::: {#exm- } 
 Evaluate the closed line integral 
-\[
+$$
 \oint _C\left[(x-3y)dx+\left(2x-y^2\right)dy\right]
-\]
+$$
 where $A$ is the region $D$ enclosed by a Jordan curve $C$.
 ::: 
 
@@ -311,10 +313,10 @@ defined by the circle $x^2+y^2=4$
 
 ::: {.solution }
 We can parametrize the circle by $x=2 \cos  t$ and $y=2 \sin  t$ for $0\leq t\leq  2\pi .$ Then the area is 
-\[
+$$
 \frac{1}{2}\oint _C x dy-ydx=
 \frac{1}{2}\int _0^{2\pi } [4\cos (t)\cos (t)+4 \sin (t)\sin (t)] \, dt=4\pi. 
-\]
+$$
 - We can parametrize the line segments by 
 \begin{align*}
 & C_1:  x=t, y=t; 0\leq t\leq 1 \\
@@ -324,7 +326,7 @@ We can parametrize the circle by $x=2 \cos  t$ and $y=2 \sin  t$ for $0\leq t\le
 Then the area is
 \begin{align*}
 \oint _C x dy 
-& =\int _{C_1} x dy+\int _{C_2} x dy+\int _{C_3} x dy \\[5pt]
+& =\int _{C_1} x dy+\int _{C_2} x dy+\int _{C_3} x dy \\
 & =\int_0^1 t \, dt+\int_0^1 (1-t) \, dt+\int _0^10(-2)dt 
 =\frac{1}{2}+\frac{1}{2}+0 
 =1.
@@ -332,8 +334,7 @@ Then the area is
 ::: 
 
 ::: {#exm- } 
-Use a line integral to find the area enclosed by the region $R$
-defined by the curve $C: x=\cos  ^3t,$ $y=\sin^3 t$ for $0\leq t\leq 2\pi $
+Use a line integral to find the area enclosed by the region $R$ defined by the curve $C: x=\cos  ^3t,$ $y=\sin^3 t$ for $0\leq t\leq 2\pi$
 ::: 
 
 ::: {.solution }
@@ -351,33 +352,33 @@ A& =\oint _C x dy
 %=\frac{3 \pi }{8}.\end{align*}
 \end{align*}
 by using the reduction formula,
-\[
+$$
 \int \cos ^nx \, dx=\frac{\cos ^{n-1}x \sin  x}{n}+\frac{n-1}{n}\int \cos ^{n-2}xdx.
-\]
+$$
 ::: 
 
 ## Exercises
 
 ::: {#exr- } 
 Use Green's theorem to evaluate the closed line integral 
-\[ \oint _C y^2 dx+x^2 dy\] where $C$ is the boundary of the square with vertices $(0,0),$ $(1,0),$ $(1,1),$ and $(0,1)$ traversed counterclockwise.
+$$ \oint _C y^2 dx+x^2 dy$$ where $C$ is the boundary of the square with vertices $(0,0),$ $(1,0),$ $(1,1),$ and $(0,1)$ traversed counterclockwise.
 ::: 
 
 ::: {#exr- } 
 Use Green's theorem to evaluate the closed line integral 
-\[\oint _C4x y dx \] where $C$ is the boundary of the circle $x^2+y^2=1$ traversed
+$$\oint _C4x y dx $$ where $C$ is the boundary of the circle $x^2+y^2=1$ traversed
 clockwise.
 ::: 
 
 ::: {#exr- } 
 Use Green's theorem to evaluate the closed line integral 
-\[\oint _C x \sin  x dx-e^{y^2} dy\] where $C$ is the boundary of the triangle
+$$\oint _C x \sin  x dx-e^{y^2} dy$$ where $C$ is the boundary of the triangle
 with vertices $(-1,-1),$ $(1,-1),$ and $(2,5)$ traversed counterclockwise.
 ::: 
 
 ::: {#exr- } 
 Use Green's theorem to evaluate the closed line integral 
-\[\oint _C \sin  x \cos  y \, dx+\cos  x \sin  y \, dy \] 
+$$\oint _C \sin  x \cos  y \, dx+\cos  x \sin  y \, dy $$ 
 where $C$ is the boundary of the square with vertices $(0,0),$ $(2,0),$ $(2,2),$ and $(0,2)$ traversed clockwise.
 ::: 
 
@@ -392,26 +393,26 @@ $(0,0),$ $(4,0),$ $(1,3),$ and $(0,3).$
 
 ::: {#exr- } 
 Evaluate the closed line integral 
-\[ \oint _C\frac{x dx+ydy}{x^2+y^2}\] where $C$ is any piecewise smooth Jordan curve enclosing the origin,
+$$ \oint _C\frac{x dx+ydy}{x^2+y^2}$$ where $C$ is any piecewise smooth Jordan curve enclosing the origin,
 traversed counterclockwise.
 ::: 
 
 ::: {#exr- } 
 Evaluate the closed line integral 
-\[
+$$
 \oint _C x^2y \, dx-y^2x \, dy,
-\] where $C$ is the boundary of the region between the $x$-axis and
+$$ where $C$ is the boundary of the region between the $x$-axis and
 the semicircle $y=\sqrt{a^2-x^2},$ traversed counterclockwise (including the $x$-axis). 
 ::: 
 
 ::: {#exr- } 
 Evaluate 
-\[\oint _C\frac{-(y+2)dx+(x-1)dy}{(x-1)^2+(y+2)^2}\] where $C$ is any Jordan curve whose interior does not contain the point $(1,-2).$
+$$\oint _C\frac{-(y+2)dx+(x-1)dy}{(x-1)^2+(y+2)^2}$$ where $C$ is any Jordan curve whose interior does not contain the point $(1,-2).$
 ::: 
 
 ::: {#exr- } 
 If $C$ is a Jordan curve, show that 
-\[ \oint _C (x-3y)dx+\left(2x-y^2\right)dy =5A\]
+$$ \oint _C (x-3y)dx+\left(2x-y^2\right)dy =5A$$
 where $A$ is the region $D$ enclosed by $C.$
 ::: 
 
@@ -421,17 +422,17 @@ $$
 \frac{\partial N}{\partial x}=\frac{\partial M}{\partial y}
 $$ 
 throughout $R.$ How many distinct values of $I$ are there for the integral
-\[ 
+$$ 
 I=\oint _C M(x,y)\, dx+N(x,y)\, dy
-\]
+$$
 where $C$ is a piecewise smooth Jordan curve in $R?$
 ::: 
 
 ::: {#exr- } 
 Evaluate the line integral 
-\[
+$$
 \oint _C x^2y \, dx-y^2x \, dy,
-\]
+$$
 where $C$ is the boundary of the region between the $x$-axis and the semicircle $y=\sqrt{a^2-x^2},$ transversed counterclockwise (including
 the $x$-axis). 
 ::: 

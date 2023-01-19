@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Multivariable Calculus">
+<title>Tangent Planes and Normal Lines - Exploring Calculus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./extreme-values-of-two-variable-functions.html" rel="next">
+<link href="./directional-derivatives-and-gradient-vectors.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+.book-title, #quarto-search svg {
+    color: #008000!important;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
+    font-weight: 500!important;
+    color:#008000;
+ }
+ #quarto-sidebar .text-start {
+    font-variant: small-caps;
+    font-size: 120%;
+ }
+ #quarto-sidebar .active, .active .chapter-number {
+    color:#000000!important;
+    font-weight: 700!important;
+ }
+</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+</style>
+  
+<meta property="og:title" content="Tangent Planes and Normal Lines - Exploring Calculus">
+<meta property="og:description" content="Multivariable Calculus">
+<meta property="og:site-name" content="Multivariable Calculus">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Multivariable Calculus" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
+</i> 
+ <span class="dropdown-text">Exploring Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tangent Planes and Normal Lines</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/multivariable-calculus/">Multivariable Calculus</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-valued-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vector-valued Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivatives-and-integrals-of-vector-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Derivatives and Integrals of Vector Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./arc-length-and-curvature.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Arc Length and Curvature</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multivariable-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multivariable Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multivariable-limits-and-continuity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Multivariable Limits and Continuity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./partial-derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Partial Derivatives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./differentials-and-differentiability.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Differentials and Differentiability</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multivariable-chain-rules.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multivariable Chain Rules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./directional-derivatives-and-gradient-vectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Directional Derivatives and Gradient Vectors</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tangent-planes-and-normal-lines.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tangent Planes and Normal Lines</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extreme-values-of-two-variable-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Extreme Values of Two Variable Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lagrange-multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lagrange Multipliers</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./double-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Double Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./iterated-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Iterated Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./double-integrals-in-polar-coordinates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Double Integrals In Polar Coordinates</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-double-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Applications of Double Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./surface-area.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Surface Area</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./triple-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Triple Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./triple-integrals-in-cylindrical-and-spherical-coordinates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Triple Integrals in Cylindrical and Spherical Coordinates</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./change-of-variables-in-multiple-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Change of Variables In Multiple Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-fields.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Vector Fields</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./divergence-and-curl.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Divergence and Curl</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./line-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Line Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./independence-of-path-and-conservative-vector-fields.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Independence of Path and Conservative Vector Fields</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./greens-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Green’s Theorem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/multivariable-calculus/"><picture><source type="image/webp" srcset="../../assets/multivariable-calculus-cover.webp"><source type="image/webp" srcset="../../assets/multivariable-calculus-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/multivariable-calculus-cover.png" alt="Multivariable Calculus Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#tangent-planes" id="toc-tangent-planes" class="nav-link active" data-scroll-target="#tangent-planes"><span class="toc-section-number">10.1</span>  Tangent Planes</a></li>
+  <li><a href="#normal-lines" id="toc-normal-lines" class="nav-link" data-scroll-target="#normal-lines"><span class="toc-section-number">10.2</span>  Normal Lines</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">10.3</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<div style="display:none;">
+\(
+\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}
+\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}
+\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
+\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}
+\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}
+\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}
+\newcommand{\norm}[1]{\left|\left |#1\right|\right |}
+\newcommand{\ip}[1]{\left \langle #1\right \rangle}
+\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}
+\)
+</div>
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tangent Planes and Normal Lines</span></h1>
+</header>
+<section id="tangent-planes" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="tangent-planes"><span class="header-section-number">10.1</span> Tangent Planes</h2>
+<p>Suppose <span class="math inline">\(S\)</span> is a surface with the equation <span class="math inline">\(z=f(x,y)\)</span> where <span class="math inline">\(f\)</span> has continuous first partial derivatives <span class="math inline">\(f_x\)</span> and <span class="math inline">\(f_y\)</span>. Let <span class="math inline">\(P(a,b,c)\)</span> be a point on <span class="math inline">\(S\)</span> and let <span class="math inline">\(C_1\)</span>be the curve of intersection of <span class="math inline">\(S\)</span> with the plane <span class="math inline">\(x=a\)</span> and <span class="math inline">\(C_2\)</span> the intersection of <span class="math inline">\(S\)</span> with the plane <span class="math inline">\(y=b\)</span>. The tangent lines <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span> to <span class="math inline">\(C_1\)</span> and <span class="math inline">\(C_2\)</span>, respectively determine a unique plane and this plane actually contains the tangent to every smooth curve <span class="math inline">\(C\)</span> that passes through <span class="math inline">\(P.\)</span> We call this plane the <strong>tangent plane</strong> to <span class="math inline">\(S\)</span> at <span class="math inline">\(P\)</span>.</p>
+<p>::: {#thm- } [Equation of Tangent Plane] If <span class="math inline">\(z=f(x,y)\)</span> is differentiable at <span class="math inline">\((a,b)\)</span> then an equation of the tangent plane to the graph of <span class="math inline">\(f\)</span> at <span class="math inline">\((a,b)\)</span> is <span class="math display">\[
+z-f(a,b)=f_x(a,b)(x-a)+f_y(a,b)(y-b).
+\]</span> :::</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof is left for the reader.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.1 </strong></span>Find an equation of the tangent plane to the surface <span class="math display">\[
+z=2x^2+y^2
+\]</span> at the point <span class="math inline">\((1,1,3)\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(f(x,y)=2x^2+y^2.\)</span> Then <span class="math display">\[
+f_x(x,y)=4x, \quad
+f_x(1,1)=4, \quad
+f_y(x,y)=2y, \quad
+f_y(1,1)=2.
+\]</span> Then an equation of the tangent plane is <span class="math inline">\(z-3=4(x-1)+2(y-1)\)</span> or <span class="math display">\[\begin{equation}
+z=4x+2y-3.
+\tag*{}
+\end{equation}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.2 </strong></span>Find an equation of the tangent plane to the surface <span class="math display">\[
+z=4-x^2-y^2
+\]</span> at the point <span class="math inline">\((1,1,2)\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(f(x,y)=4-x^2-y^2.\)</span> Then <span class="math display">\[
+f_x(x,y)=-2x, \quad
+f_x(1,1)=-2, \quad
+f_y(x,y)=-2y, \quad
+f_y(1,1)=-2.
+\]</span> Then an equation of the tangent plane is <span class="math inline">\(z-2=-2(x-1)-2(y-1)\)</span> or <span class="math display">\[\begin{equation}
+z=-2x-2y+6
+\tag*{}
+\end{equation}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.3 </strong></span>Find an equation of the tangent plane to the surface <span class="math display">\[
+z=\sin x+\sin y
+\]</span> at the point <span class="math inline">\(\left(\frac{\pi}{2},\frac{\pi}{3},1+\frac{\sqrt{3}}{2}\right)\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(f(x,y)=\sin x+\sin y\)</span>. Then <span class="math display">\[
+f_x(x,y)=\cos x, \quad
+f_x\left(\frac{\pi}{2},\frac{\pi}{3}\right)=0, \quad
+f_y(x,y)=\cos y, \quad
+f_y\left(\frac{\pi}{2},\frac{\pi}{3}\right)=\frac{1}{2}.
+\]</span> Then an equation of the tangent plane is <span class="math display">\[
+z-\left(1+\frac{\sqrt{3}}{2}\right)=0\left(x-\frac{\pi}{2}\right)+\frac{1}{2}\left(y-\frac{\pi}{3}\right)
+\]</span> or <span class="math display">\[\begin{equation}
+z=\frac{1}{2}y-\frac{\pi}{6}+1+\frac{\sqrt{3}}{2}
+\tag*{}
+\end{equation}\]</span></p>
+</div>
+<p>::: {#thm- } [Tangent Plane To A Surface] Suppose <span class="math inline">\(S\)</span> is a surface with the equation <span class="math inline">\(F(x,y,z)=C\)</span> and let <span class="math inline">\(P(a,b,c)\)</span> be a point on <span class="math inline">\(S\)</span> where <span class="math inline">\(F\)</span> is differentiable with <span class="math inline">\(\nabla F_P\neq 0.\)</span> Then an equation of the tangent plane to <span class="math inline">\(S\)</span> at <span class="math inline">\(P\)</span> is <span class="math display">\[
+F_x(a,b,c)(x-a)+F_y(a,b,c)(y-b)+F_z(a,b,c)(z-c)=0
+\]</span><br>
+and the normal line to <span class="math inline">\(S\)</span> at <span class="math inline">\(P\)</span> has parametric equations <span class="math display">\[
+x=a+F_x(a,b,c) t, \qquad
+y=b+F_y(a,b,c) t, \qquad
+z=c+F_z(a,b,c) t.\]</span> :::</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Any plane that passes through <span class="math inline">\(P(a,b,c)\)</span> has an equation of the form <span class="math display">\[
+A(x-a)+B(y-b)+C(z-c)=0.
+\]</span> By dividing this equation by <span class="math inline">\(C\)</span> and letting <span class="math inline">\(a_1=-A/C\)</span> and <span class="math inline">\(b_1=-B/C\)</span>, we can write it in the form <span class="math display">\[
+z-c=a_1(x-a)+b_1(y-b).
+\]</span> If this equation represents the tangent plane at <span class="math inline">\(P\)</span>, then its intersection with the plane <span class="math inline">\(y=b\)</span> must be the tangent line with slope <span class="math inline">\(f_x(a,b)\)</span>. Therefore, <span class="math inline">\(a_1=f_x(a,b).\)</span> Similarly, putting <span class="math inline">\(x=a\)</span>, we get <span class="math inline">\(z-c=b_2(y-b),\)</span> which must represent the tangent line with slope <span class="math inline">\(f_y(a,b)\)</span> and so <span class="math inline">\(b_2=f_y(a,b).\)</span> Thus, the equation of the tangent plane is <span class="math inline">\(z-c=f_x(a,b)(x-a)+f_y(a,b)(y-b).\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.4 </strong></span>Find an equation of the tangent plane to the surface <span class="math display">\[
+\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1
+\]</span> at the point <span class="math inline">\((x_0,y_0,z_0)\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(F_x=2x/a^2,\)</span> <span class="math inline">\(F_y=2y/b^2,\)</span> and <span class="math inline">\(F_z=2z/c^2,\)</span> the tangent plane at <span class="math inline">\(P_0\left(x_0,y_0,z_0\right)\)</span> has equation<br>
+<span class="math display">\[
+\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)+\frac{2z_0}{c^2}\left(z-z_0\right)=0\]</span> <span class="math display">\[
+\frac{x_0 x}{a^2}-\frac{x_0{}^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0^2}{b^2}+\frac{z_0z}{c^2}-\frac{z_0{}^2}{c^2}=0\]</span> <span class="math display">\[
+\frac{x_0 x}{a^2}+\frac{y_0y}{b^2}+\frac{z_0z}{c^2}=1.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.5 </strong></span>Find an equation of the tangent plane to the surface <span class="math display">\[
+\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1
+\]</span> at the point <span class="math inline">\((x_0,y_0,z_0)\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(F_x=2x/a^2,\)</span> <span class="math inline">\(F_y=2y/b^2,\)</span> and <span class="math inline">\(F_z=-2z/c^2,\)</span> the tangent plane at <span class="math inline">\(P_0\left(x_0,y_0,z_0\right)\)</span> has equation<br>
+<span class="math display">\[
+\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)-\frac{2z_0}{c^2}\left(z-z_0\right)=0\]</span> <span class="math display">\[
+\frac{x_0 x}{a^2}-\frac{x_0^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0^2}{b^2}+\frac{z_0z}{c^2}+\frac{z_0^2}{c^2}=0\]</span> <span class="math display">\[
+\frac{x_0 x}{a^2}+\frac{y_0y}{b^2}-\frac{z_0z}{c^2}=1.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.6 </strong></span>Find an equation of the tangent plane to the surface <span class="math display">\[
+\frac{z}{c}=\frac{x^2}{a^2}+\frac{y^2}{b^2}
+\]</span> at the point <span class="math inline">\((x_0,y_0,z_0)\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(F_x=2x/a^2,\)</span> <span class="math inline">\(F_y=2y/b^2,\)</span> and <span class="math inline">\(F_z=-1/c,\)</span> the tangent plane at <span class="math inline">\(P_0\left(x_0,y_0,z_0\right)\)</span> has equation <span class="math display">\[
+\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)-\frac{1}{c}\left(z-z_0\right)=0\]</span> <span class="math display">\[
+\frac{x_0 x}{a^2}-\frac{x_0^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0{}^2}{b^2}+\frac{z}{c}+\frac{z_0}{c}=0
+\]</span> <span class="math display">\[
+\frac{x_0 x}{a^2}+\frac{y_0y}{b^2}-\frac{z}{c}=\frac{z_0}{c}.
+\]</span></p>
+</div>
+</section>
+<section id="normal-lines" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="normal-lines"><span class="header-section-number">10.2</span> Normal Lines</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.7 </strong></span>Find the equations for the tangent plane and the normal line to the cone <span class="math display">\[
+z^2=x^2+y^2
+\]</span> at the point where <span class="math inline">\(x=3, y=4,\)</span> and <span class="math inline">\(z&gt;0.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>If <span class="math inline">\(P(a,b,c)\)</span> is the point of tangency and <span class="math inline">\(a=3, y=4,\)</span> and <span class="math inline">\(c&gt;0,\)</span> then <span class="math inline">\(c=\sqrt{a^2+b^2}=5.\)</span> If we consider <span class="math inline">\(F(x,y,z)=x^2+y^2-z^2,\)</span> then the cone can be regarded as the level surface <span class="math inline">\(F(x,y,z)=0.\)</span> The partial derivatives of <span class="math inline">\(F\)</span> are <span class="math inline">\(F_x=2x\)</span>, <span class="math inline">\(F_y=2y\)</span>, and <span class="math inline">\(F_z=-2z\)</span> so at <span class="math inline">\(P(3,4,5)\)</span> we find <span class="math inline">\(F_x(3,4,5)=6\)</span>, <span class="math inline">\(F_y(3,4,5)=8,\)</span> and <span class="math inline">\(F_z(3,4,5)=-10.\)</span> Thus the tangent plane has an equation <span class="math display">\[6(x-3)+8(y-4)-10(z-5)=0\]</span> or <span class="math inline">\(3x+4y-5z=0\)</span> and the normal line is given parametrically by the equations <span class="math inline">\(x=3+6t ,\)</span> <span class="math inline">\(y=4+8t,\)</span> and <span class="math inline">\(z=5-10t.\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.8 </strong></span>Find the equations of the tangent plane and the normal line at the point <span class="math inline">\((-2,1,-3)\)</span> to the ellipsoid <span class="math display">\[
+\frac{x^2}{4}+y^2+\frac{z^2}{9}=3.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The ellipsoid is a level surface of the function <span class="math display">\[
+F(x,y,z)=\frac{x^2}{4}+y^2+\frac{z^2}{9}.
+\]</span> Therefore we have<br>
+<span class="math display">\[
+F_x(x,y,z)=\frac{x}{2}, \quad
+F_y(x,y,z)=2y, \quad
+F_z(x,y,z)=\frac{2z}{9}
+\]</span> Thus, <span class="math display">\[
+F_x(-2,1,3)=-1, \quad
+F_y(-2,1,3)=2, \quad F_z(-2,1,3)=-2/3.
+\]</span><br>
+Then the tangent plane at <span class="math inline">\((-2,1,-3)\)</span> is <span class="math display">\[
+-1(x+2)+2(y-1)-(2/3)(z+3)=0
+\]</span> which simplifies to <span class="math display">\[
+3x-6y+2z+18=0
+\]</span> and parametric equations for the normal line are <span class="math display">\[
+x=-2- t, \quad
+y=1+2t, \quad
+z=-3-(2/3)t.
+\]</span></p>
+</div>
+</section>
+<section id="exercises" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="exercises"><span class="header-section-number">10.3</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.1 </strong></span>Find the directional derivative of <span class="math inline">\(f(x,y)=x^2y^2-x^2+2y\)</span> at the point <span class="math inline">\((2,2)\)</span> in the direction of the unit vector <span class="math inline">\(\vec{u}=\frac{1}{2}\vec{i}-\frac{\sqrt{3}}{2}\vec{j}\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.2 </strong></span>Find the gradient of the function <span class="math inline">\(f(x,y)=y \tan x+\sin xy\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.3 </strong></span>Find the directional directive of <span class="math inline">\(f(x,y)=\frac{e^{-x}}y\)</span> at <span class="math inline">\(P(0,-1)\)</span> in the direction of <span class="math inline">\(\mathbf{v}=-\mathbf{i}+\mathbf{j}\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.4 </strong></span>Find the gradient of the function.</p>
+<ul>
+<li><span class="math inline">\(f(x,y)=x^2-2 x y\)</span></li>
+<li><span class="math inline">\(f(x,y)=\ln \left(x^2+y^2\right)\)</span></li>
+<li><span class="math inline">\(f(x,y)=\sin (x+2y)\)</span></li>
+<li><span class="math inline">\(f(x,y,z)=\frac{x y-1}{z+x}\)</span></li>
+<li><span class="math inline">\(f(x,y,z)= x y z^2\)</span></li>
+<li><span class="math inline">\(g(x,y,z)=x e^{y+3z}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.5 </strong></span>Compute the directional derivative of the function <span class="math inline">\(f(x,y)=\ln \left(x^2+3y\right)\)</span> at the point <span class="math inline">\((1,1)\)</span> in the direction of the vector <span class="math inline">\(v=\vec{i}+\vec{j}.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.6 </strong></span>Compute the directional derivative of the function <span class="math inline">\(f(x,y)=\sin x y\)</span> at the point <span class="math inline">\(\left(\sqrt{\pi },\sqrt{\pi }\right)\)</span> in the direction of the vector <span class="math inline">\(v=3\pi \vec{i}-\pi \vec{j} .\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.7 </strong></span>Find the directional derivative of the given function at the given point in the direction of the given vector.</p>
+<ul>
+<li><span class="math inline">\(f(x,y)=x^2+x y\)</span>, <span class="math inline">\((1,-2),\)</span> and <span class="math inline">\(\vec{i}+\vec{j}\)</span></li>
+<li><span class="math inline">\(f(x,y)=\frac{e^{-x}}{y},\)</span> <span class="math inline">\((2,-1),\)</span> and <span class="math inline">\(-\vec{i}+\vec{j}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.8 </strong></span>Find the directional derivative of the given function at the given point in the direction of the given vector.</p>
+<ul>
+<li><span class="math inline">\(f(x,y)=\ln \left(3x+y^2\right)\)</span>, <span class="math inline">\((0,1),\)</span> and <span class="math inline">\(\vec{i}-\vec{j}\)</span><br>
+</li>
+<li><span class="math inline">\(f(x,y)=\sec \left(x y-y^3\right),\)</span> <span class="math inline">\((2,0),\)</span> and <span class="math inline">\(-\vec{i}-3\vec{j}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10.9 </strong></span>Find the direction from <span class="math inline">\(P_0\)</span> in which the given function <span class="math inline">\(f\)</span> increases most rapidly and compute the magnitude of the greatest rate of increase.</p>
+<ul>
+<li><span class="math inline">\(f(x,y,z)=(x+y)^2+(y+z)^2+(x+z)^2\)</span> at <span class="math inline">\(P_0(2,-1,2)\)</span><br>
+</li>
+<li><span class="math inline">\(f(x,y,z)=z \ln \left(\frac{y}{z}\right)\)</span> at <span class="math inline">\(P_0(1,e,-1)\)</span></li>
+</ul>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/multivariable-calculus\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./directional-derivatives-and-gradient-vectors.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Directional Derivatives and Gradient Vectors</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./extreme-values-of-two-variable-functions.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Extreme Values of Two Variable Functions</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

@@ -181,8 +181,8 @@ In the following examples we continue to illustrate the chain rule.
 
 
 ::: {#exm- }  
-Let $f$ be a function for which $\ds f'(x)=\frac{1}{x^2+1}.$ If $g(x)=f(3x-1),$ what is $g'(x)?$ 
-Also, if $\ds h(x)=f\left(\frac{1}{x}\right),$ what is $h'(x)?$
+Let $f$ be a function for which $ \displaystyle f'(x)=\frac{1}{x^2+1}.$ If $g(x)=f(3x-1),$ what is $g'(x)?$ 
+Also, if $ \displaystyle h(x)=f\left(\frac{1}{x}\right),$ what is $h'(x)?$
 ::: 
 
 ::: {.solution }
@@ -198,8 +198,8 @@ h'(x)=f'\left(\frac{1}{x}\right)\frac{d}{dx}\left(\frac{1}{x}\right)=-f'\left(\f
 
 
 ::: {#exm- }  
-Let $f$ be a function for which $f(2)=-3$ and $\ds f'(x)=\sqrt{x^2+5}.$ 
-If $\ds g(x)=x^2f\left(\frac{x}{x-1}\right),$ what is $g'(2)?$
+Let $f$ be a function for which $f(2)=-3$ and $ \displaystyle f'(x)=\sqrt{x^2+5}.$ 
+If $ \displaystyle g(x)=x^2f\left(\frac{x}{x-1}\right),$ what is $g'(2)?$
 ::: 
 
 ::: {.solution }
@@ -266,12 +266,6 @@ By using the chain rule we determine,
 f'(x)=\frac{2}{3}\left(9-x^2\right)^{-1/3}(-2x)=\frac{-4x}{3\sqrt[3]{9-x^2}}
 \] 
 and so $f'(1)=\frac{-4}{3\sqrt[3]{9-1^2}}=\frac{-2}{3}.$ Therefore, an equation of the tangent line is $y-4=\left(\frac{-2}{3}\right)(x-1)$ which simplifies to $y=\frac{-2}{3}x+\frac{14}{3}.$ See Figure \ref{fig:p6}.
-\begin{figure}[!h]
-\centering
-\includegraphics[width=160pt]{_includes/p6.pdf} 
-\caption{Tangent line to $f(x)=\left(9-x^2\right)^{2/3}$ at the point $(1,4).$}
-\label{fig:p6}
-\end{figure}
 ::: 
 
 
@@ -288,14 +282,8 @@ By using the chain rule we determine,
 \[
 f'(x)=\frac{\sqrt{2x-1}(1)-x\frac{d}{dx}\left(\sqrt{2x-1}\right)}{\left(\sqrt{2x-1}\right)^2}=\frac{\sqrt{2x-1}(1)-x \left(\frac{1}{\sqrt{-1+2 x}}\right)}{\left(\sqrt{2x-1}\right)^2}
 \]
-which simplifies to $\ds f'(x)=\frac{-1+x}{(-1+2 x)^{3/2}}.$ 
+which simplifies to $ \displaystyle f'(x)=\frac{-1+x}{(-1+2 x)^{3/2}}.$ 
 Thus the only point where $f$ has a horizontal tangent line is $(1,1)$. See Figure \ref{fig:p7}.
-\begin{figure}[!h]
-\centering
-\includegraphics[width=220pt]{_includes/p7.pdf} 
-\caption{The graph of $\ds f(x)=\frac{x}{\sqrt{2x-1}}$ has a horizontal tangent.}
-\label{fig:p7}
-\end{figure}
 ::: 
 
 

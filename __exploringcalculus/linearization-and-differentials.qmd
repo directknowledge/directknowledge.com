@@ -130,11 +130,11 @@ Next we find the linearization for a given function at a given value.
 
 
 ::: {#exm- } 
-Find the linearization of $\ds f(x)=\frac{1}{\sqrt{2+x}}$ at $x_1=0.$
+Find the linearization of $ \displaystyle f(x)=\frac{1}{\sqrt{2+x}}$ at $x_1=0.$
 ::: 
 
 ::: {.solution }
-The linearization of the function $\ds f(x)=\frac{1}{\sqrt{2+x}}$at $x_1=0$ is  
+The linearization of the function $ \displaystyle f(x)=\frac{1}{\sqrt{2+x}}$at $x_1=0$ is  
 \begin{align*}
 L(x) & =f\left(x_1\right)+f'\left(x_1\right)\left(x-x_1\right) \\
 L(x) & =f(0)+\left[-\frac{1}{2 (2+0)^{3/2}}\right](x-0) \\
@@ -149,11 +149,11 @@ for when $x$ is near 0.
 
 
 ::: {#exm- } 
-Find the linearization of $\ds f(x)=\frac{1}{(1+2x)^4}$ at $x_1=0.$
+Find the linearization of $ \displaystyle f(x)=\frac{1}{(1+2x)^4}$ at $x_1=0.$
 ::: 
 
 ::: {.solution }
-The linearization of the function $\ds f(x)=\frac{1}{(1+2x)^4}$at $x_1=0$ is  
+The linearization of the function $ \displaystyle f(x)=\frac{1}{(1+2x)^4}$at $x_1=0$ is  
 \begin{align*}
 L(x) & =f\left(x_1\right)+f'\left(x_1\right)\left(x-x_1\right)
 =f(0)+\left[-\frac{8}{(1+2 (0))^5}\right](x-0) =1-8x. 

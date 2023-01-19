@@ -21,7 +21,7 @@ Vector calculus is also used to calculate the electric and magnetic fields of ob
 
 Vector fields are a type of mathematical object that can be used to model various physical phenomena. In vector calculus, a vector field is simply a function that assigns a vector to every point in space. The vector at each point represents the direction and magnitude of the force at that point.
 
-In vector calculus, vector fields are used to represent the flow of fluids, the movement of electrically charged particles, and even the direction of gravitational forces. Vector fields can be used to model everything from electric and magnetic fields to the flow of fluids. They're also pretty handy for navigation; if you know the vector field of a current, you can use it to figure out where you'll end up if you start floating downstream. So vector fields are pretty useful things to know about... even if they can be a bit confusing at first. But don't worry, with a little practice, you'll be calculating vector fields like a pro in no time!
+In vector calculus, vector fields are used to represent the flow of fluids, the movement of electrically charged particles, and even the direction of gravitational forces. Vector fields can be used to model everything from electric and magnetic fields to the flow of fluids. They're also pretty handy for navigation; if you know the vector field of a current, you can use it to figure out where you'll end up if you start floating downstream. 
 
 In addition, vector fields can be used to create models of complex systems, such as weather patterns or the motion of planets in space. Ultimately, vector fields are a crucial tool for studying the world around us. By understanding vector fields, we can gain a deeper insight into the behavior of these physical phenomena.
 
@@ -101,23 +101,23 @@ I believe that the best way to learn anything is by doing it yourself. So in eac
 ## Introduction to Vector Fields
 
 ::: {#def- } 
-A \index{vector field} in $\mathbb{R}^n$ is a function $\mathbf{V} **vector field} in $\mathbb{R}^n$ is a function $\mathbf{V** $ that assigns a vector from each point in its domain.
+A \index{vector field} **vector field** in $\mathbb{R}^n$ is a function $\mathbf{V}$ that assigns a vector from each point in its domain.
 A vector field  with domain $D$ in 
 $\mathbb{R}^n$ has the form  
-\[
-\vec{V}(x_1,...,x_n)=\langle u_1(x_1,...,x_n),...,u_n(x_1,...,x_n) \rangle
-\] 
-where the scalar functions $u_1,$,...,$u_n$ are called the components of $\mathbf{V}.$ 
+$$
+\vec{V}(x_1,\ldots,x_n)=\langle u_1(x_1,\ldots,x_n),\ldots,u_n(x_1,\ldots,x_n) \rangle
+$$ 
+where the scalar functions $u_1,$,\ldots,$u_n$ are called the components of $\mathbf{V}.$ 
 ::: 
 
 For example a vector field in $\mathbb{R}^2$ has the form  
-\[
+$$
 \vec{V}(x,y)=u(x,y)  \vec{i}+v(x,y)  \vec{j}=\langle u,v \rangle
-\] 
+$$ 
 and in $\mathbb{R}^3$ has the form  
-\[
+$$
 \vec{V}(x,y,z)=u(x,y,z)  \vec{i}+v(x,y,z)  \vec{j}+w(x,y,z)  \vec{k}=\langle u,v,w\rangle.
-\] 
+$$ 
 
 Common examples of vector fields include force fields, velocity fields, gravitational fields, magnetic fields, and electric fields. Vector fields can be used to quantify the amount of work done by a variable force acting on a moving body. Measuring the amount of force (fluid flow, electric charge, etc.) can sometimes be achieved by computing an integral of a vector field with respect to an orientable curve or surface.
 
@@ -151,15 +151,15 @@ the gradient field of $f$ is
 
 ::: {#def- } 
 
-A vector field $\vec{V}$ is said to be \index{conservative} in a region $D$ if $\vec{V}=\nabla f$ for some scalar function $f$ in $D.$ The function $f$ is called a \index{scalar potential} of $\vec{V} **conservative} in a region $D$ if $\vec{V}=\nabla f$ for some scalar function $f$ in $D.$ The function $f$ is called a \index{scalar potential} of $\vec{V** $ in $D$.
+A vector field $\vec{V}$ is said to be \index{conservative} **conservative** in a region $D$ if $\vec{V}=\nabla f$ for some scalar function $f$ in $D.$ The function $f$ is called a \index{scalar potential} **scalar potential** of $\vec{V}$ in $D$.
 ::: 
 
 ::: {#exm- } 
 
 Determine whether the vector field is conservative and if so, find a scalar potential function
-\[
+$$
 \vec{V}(x,y,z)=y^2\vec{i}+\left(2x y+e^{3z}\right)\vec{j}+\left(3y e^{3z}\right)\vec{k}
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -191,7 +191,7 @@ and a \index{simply connected region} **simply connected region**  (no holes) is
 ::: 
 
 ::: {#thm- } [Conservative in Space] 
-Suppose that the vector field $\vec{V}$ and $\Curl  \vec{V}$ are both continuous in the simply connected region $D$ of $\mathbb{R}^3.$ Then $\vec{V}$ is conservative in $D$ if and only if $\Curl  \vec{V}=\vec{0}.$
+Suppose that the vector field $\vec{V}$ and $\text{curl} \vec{V}$ are both continuous in the simply connected region $D$ of $\mathbb{R}^3.$ Then $\vec{V}$ is conservative in $D$ if and only if $\text{curl}  \vec{V}=\vec{0}.$
 ::: 
 
 ::: {#thm- } [Conservative in the Plane] 
@@ -202,9 +202,9 @@ $$
 $$
 where $u$ and $v$ have continuous first partials in the open simply connected region $D$ in the plane. Then $\vec{V}(x,y)$ is conservative in
 $D$ if and only if 
-\[
+$$
 \frac{\partial u}{\partial y}=\frac{\partial v}{\partial x}
-\] 
+$$ 
 on $D.$
 ::: 
 
@@ -215,7 +215,7 @@ in $\mathbb{R}^2$ can be regarded as the vector field
 $\vec{U}=u(x,y,0)\vec{i}+v(x,y,0)\vec{j}+0\vec{k}$
 in $\mathbb{R}^3.$ 
 Since 
-\[
+$$
 \text{curl} \, \vec{U}=
 \left|
 \begin{array}{ccc}
@@ -226,7 +226,7 @@ u(x,y,0) & v(x,y,0) & 0
 \end{array}
 \right|
 =0\, \vec{i}+0\, \vec{j}+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\vec{k}
-\]
+$$
 we have $\text{curl} \, \vec{U}=0$ if and only if $\frac{\partial v}{\partial x}=\frac{\partial u}{\partial y}.$
 ::: 
 
@@ -245,28 +245,28 @@ we see that $\vec{V}$ is not a conservative vector field.
 ::: {#exm- }  
 
 Show that the vector field
-\[
+$$
 \vec{V}(x,y,z)=
 \left(\frac{y}{1+x^2}+\tan ^{-1}z\right) \vec{i}
 +\left(\tan ^{-1}x\right) \vec{j}+\left(\frac{x}{1+z^2}\right) \vec{k}
-\]
+$$
 is conservative and find a scalar potential function.
 ::: 
 
 ::: {.solution }
 Since $\text{curl} \, \vec{V}=0,$ it follows $\vec{V}$ is conservative. Now we set out to find the scalar potential function $f.$
-Since \[\frac{\partial f}{\partial x}=\frac{y}{1+x^2}+\tan ^{-1}z\] we set
-\[f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z+c(y,z).\]
+Since $$\frac{\partial f}{\partial x}=\frac{y}{1+x^2}+\tan ^{-1}z$$ we set
+$$f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z+c(y,z).$$
 Since 
-\[\frac{\partial f}{\partial y}=\tan ^{-1}z=\frac{\partial }{\partial y}\left(y \tan ^{-1}x+x \tan ^{-1}z+c\right)=\tan ^{-1}x+\frac{\partial c}{\partial y},\]
+$$\frac{\partial f}{\partial y}=\tan ^{-1}z=\frac{\partial }{\partial y}\left(y \tan ^{-1}x+x \tan ^{-1}z+c\right)=\tan ^{-1}x+\frac{\partial c}{\partial y},$$
 we find $\frac{\partial c}{\partial y}=0$ and $c=c_1(z)$ and so we set 
-\[f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z+c_1(z).\]
+$$f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z+c_1(z).$$
 Since 
-\[\frac{\partial f}{\partial z}=\frac{x}{1+z^2}=\frac{\partial }{\partial z}\left[y \tan ^{-1}x+x \tan ^{-1}z+c_1(z)\right]=\frac{x}{1+z^2}+c'_1(z),\]
-we then find $c_1 '(z)=0,$ $ c_1=0$ and so we obtain 
-\[
+$$\frac{\partial f}{\partial z}=\frac{x}{1+z^2}=\frac{\partial }{\partial z}\left[y \tan ^{-1}x+x \tan ^{-1}z+c_1(z)\right]=\frac{x}{1+z^2}+c'_1(z),$$
+we then find $c_1 '(z)=0,$ $c_1=0$ and so we obtain 
+$$
 f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z
-\]
+$$
 as desired.
 ::: 
 

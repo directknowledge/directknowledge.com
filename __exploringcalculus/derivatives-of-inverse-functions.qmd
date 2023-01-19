@@ -20,22 +20,15 @@ The value of $\left(f^{-1}\right)'$ at a point $b$ in the domain of $f^{-1}$ is 
 
 
 ::: {#exm- } 
-Let $\ds f(x)=\frac{2x-3}{7-5x}.$ 
+Let $ \displaystyle f(x)=\frac{2x-3}{7-5x}.$ 
 Sketch the graph of $f$ and state whether or not the graph of $f$ passes the horizontal line test. 
 If so, find a rule for $f^{-1}$ and then use it to find $\left(f^{-1}\right) '(0)$. 
 Verify the formula
 \[
-\ds \left(f^{-1}\right)'(0)=\frac{1}{f'\left(f^{-1}(0)\right)}.
+ \displaystyle \left(f^{-1}\right)'(0)=\frac{1}{f'\left(f^{-1}(0)\right)}.
 \]
 ::: 
 
-\begin{figure}[htbp]
-\begin{center}
-{\includegraphics[width=250pt]{_includes/p20.pdf}} 
-\caption{The graph of $\ds f(x)=\frac{2x-3}{7-5x}.$.}
-\label{fig:}
-\end{center}
-\end{figure}
 
 ::: {.solution }
 Notice that the graph of $f$ passes the horizontal line test, which implies that $f$ is a one-to-one function and thus must have an inverse function. 
@@ -58,12 +51,12 @@ Also notice that
 
 
 ::: {#exm- } 
-Let $\ds f(x)=\frac{5 x}{1-2x}.$ 
+Let $ \displaystyle f(x)=\frac{5 x}{1-2x}.$ 
 Without finding a rule for $f^{-1}(x)$ determine $\left(f^{-1}\right) '(1).$
 ::: 
 
 ::: {.solution }
-Since $\ds f'(x)=\frac{5}{(1-2 x)^2}$ and $\ds 1=\frac{5 x}{1-2x}$ when $x=\frac{1}{7}$
+Since $ \displaystyle f'(x)=\frac{5}{(1-2 x)^2}$ and $ \displaystyle 1=\frac{5 x}{1-2x}$ when $x=\frac{1}{7}$
 \[
 \left(f^{-1}\right)'(1)=\frac{1}{f '\left(f^{-1}(1)\right)}=\frac{1}{f '(1/7)}=\frac{1}{\frac{49}{5}}=\frac{5}{49}.
 \square
@@ -104,7 +97,7 @@ Using the chain rule the derivative is,
 ::: 
 
 ::: {#exm- } 
-What is the slope of the tangent line to $\ds y=\frac{e^{-x}}{1+e^{-x}}$ at $x=0?$
+What is the slope of the tangent line to $ \displaystyle y=\frac{e^{-x}}{1+e^{-x}}$ at $x=0?$
 ::: 
 
 ::: {.solution }
@@ -292,7 +285,7 @@ Recall, the \index{cofunction theorem} from trigonometry: if $\alpha =\cos  ^{-1
 
 
 ::: {#exm- } 
-Find the derivative of the function $\ds y=\frac{\sin ^{-1}x}{\cos ^{-1}x}$.
+Find the derivative of the function $ \displaystyle y=\frac{\sin ^{-1}x}{\cos ^{-1}x}$.
 ::: 
 
 ::: {.solution } 

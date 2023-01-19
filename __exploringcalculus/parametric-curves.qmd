@@ -18,14 +18,6 @@ Let $C$ be a curve defined by $P(t)=(f(t),g(t))$ where $f$ and $g$ are defined o
 the same graph?   
 ::: 
  
-\begin{figure}[htbp]
-\begin{center}
-{\includegraphics[width=150pt]{_includes/p11.pdf}} 
-\caption{The graph of $C_1$ and $C_2$ on $[0,1]$.}
-\label{fig:p11}
-\end{center}
-\end{figure}
-
 ::: {#exm- } 
 Sketch the graph of the curve $C_3: x=\cos  2t, y=\sin  2t$ on $\left[0,\frac{\pi }{2}\right]$ by plotting values for $t;$ and then check your graph by finding an equation in $x$ and $y$ only and then graphing. Show the orientation of the curve. 
 ::: 
@@ -34,14 +26,6 @@ Sketch the graph of the curve $C_3: x=\cos  2t, y=\sin  2t$ on $\left[0,\frac{\p
 The curve starts at $(1,0)$ and follows the upper part of the unit circle until it reaches the other endpoint of $(-1,0).$ $ $Can
 you think of another set of parametric equations that give the same graph? See Figure \ref{fig:p12}.
 ::: 
-
-\begin{figure}[htbp]
-\begin{center}
-{\includegraphics[width=150pt]{_includes/p12.pdf}} 
-\caption{The graph of $C_3: x=\cos  2t, y=\sin  2t$ on $\left[0,\frac{\pi }{4}\right]$}
-\label{fig:p12}
-\end{center}
-\end{figure}
 
 ::: {#exm- } 
 (a) Find a rectangular equation whose graph contains the curve $C$ with the parametric equations $x=\frac{2t}{1+t^2}$ and $y=\frac{1-t^2}{1+t^2}$ and (b) Sketch the curve $C$ and indicate its orientation.
@@ -55,14 +39,6 @@ x^2+y^2=\frac{4t^2+(1-2t^2+t^4)}{(1+t^2)^2}=\frac{1+2t^2+t^4}{(1+t^2)^2}=1
 and also $x(0)=0$, $y(0)=0$ and $x(1/2)=4/5$, $y(1/2)=3/5$  we see the graph of the given parametric equations represents the unit circle with orientation counterclockwise.  See Figure \ref{fig:p13}.
 ::: 
  
-\begin{figure}[htbp]
-\begin{center}
-{\includegraphics[width= 150pt]{_includes/p13.pdf}} 
-\caption{The equations $x=\frac{2t}{1+t^2}$ and $y=\frac{1-t^2}{1+t^2}$ are parametric equations for the unit circle.}
-\label{fig:p13}
-\end{center}
-\end{figure}
-
 ::: {#exm- } 
 The position of a particle at time $t$ is $(x,y)$ where $x=\sin t$ and $y=\sin^2 t$. Describe the motion of the particle as $t$ varies over the time interval $[a,b]$.
 ::: 
@@ -71,13 +47,6 @@ The position of a particle at time $t$ is $(x,y)$ where $x=\sin t$ and $y=\sin^2
 We can eliminate $t$ to see that the motion of the object takes place on the parabola, $y=x^2$. The orientation of the curve is from $(\sin a, \sin^2 a)$ to $(\sin b, \sin^2 b)$. See Figure \ref{fig:p14}.
 ::: 
  
-\begin{figure}[htbp]
-\begin{center}
-{\includegraphics[width= 150pt]{_includes/p14.pdf}} 
-\caption{The graph of the parametric equations $x=\sin t$ and $y=\sin^2 t$.}
-\label{fig:p14}
-\end{center}
-\end{figure}
 
 ::: {#thm- } 
 If $f'(t)$ is continuous and $f'(t)\neq 0$ for $a\leq t \leq b$, then the parametric curve defined by $x=f(t)$ and $y=g(t)$ for $a\leq t \leq b$, can be put into the form $y=F(x)$. Moreover, 
@@ -114,13 +83,6 @@ Since $\frac{dx}{dt}=e^t$ and  $\frac{dy}{dt}=-e^{-t}$,
 The point $(1,1)$ corresponds to $t=0$. The slope of the tangent line is $\left.\frac{dy}{dx}\right|_{t=0}=-1$, so an equation is $y-1=-1(x-1)$ or just $-x+2$. See Figure \ref{fig:p15}.
 ::: 
 
-\begin{figure}[htbp]
-\begin{center}
-{\includegraphics[width=150pt]{_includes/p15.pdf}} 
-\caption{The graph of the parametric equations  $x=e^t$ and $y=e^{-t}$. }
-\label{fig:p15}
-\end{center}
-\end{figure}
 
 ::: {#exm- } 
 Find the points on the curve defined by parametric equations $x=t^3-3t$ and $y=t^2$  at which the tangent line is either horizontal or vertical. Then sketch the curve. 
@@ -131,13 +93,6 @@ First we find the derivatives of $x$ and $y$ with respect to $t$: $\frac{dx}{dt}
 at this $t$ value, the required point is $(0,0)$. To find the point(s) where the tangent line is vertical, set $\frac{dx}{dt}=0$ obtaining $t=\pm 1$. Since $\frac{dy}{dt}\neq 0$ at either of these $t$-values, the required points are $(2,1)$ and $(-2,1)$.
 ::: 
  
-\begin{figure}[!h]
-\begin{center}
-{\includegraphics[width=150pt]{_includes/p16.pdf}} 
-\caption{The graph of the parametric equations $x=t^3-3t$ and $y=t^2$. }
-\label{fig:p16}
-\end{center}
-\end{figure}
 
 ::: {#exm- } 
 Find $\frac{dy}{dx}$ and $\frac{d^2y}{dx^2}$ given the parametric equations $x=\sqrt{t^2+1}$ and $y=t \ln t$. 
@@ -166,14 +121,6 @@ and so
 ::: {#exm- } 
 Show that the curve defined by parametric equations $x=t^2$ and $y=t^3-3t$ crosses itself. Find equations of the tangent lines to the curve at that point.  
 ::: 
-
-\begin{figure}[!h]
-\begin{center}
-{\includegraphics[width=150pt]{_includes/p17.pdf}} 
-\caption{}
-\label{fig:p17}
-\end{center}
-\end{figure}
 
 ::: {.proof }[Solution] 
 Observe that the curve is at the point $(3,0)$ when $t_1=-\sqrt{3}$ and $t_2=\sqrt{3}$, so the curve crosses itself at the point $(3,0)$. Since $\frac{dx}{dt}=3t^2-3$ and $\frac{dy}{dt}=\frac{3(t^2-1)}{2t}$, at the first point of intersection, $m_1=\left.\frac{dy}{dx}\right|_{t=-\sqrt{3}}=\frac{3(3-1)}{2(-\sqrt{3})}=-\sqrt{3}$ and an equation of the tangent line is $y-0=-\sqrt{3}(x-3)$ or $y=-\sqrt{3}(x-3)$. At the second point, $m_2=\left.\frac{dy}{dx}\right|_{t=\sqrt{3}}=\frac{3(3-1)}{2(\sqrt{3})}=\sqrt{3}$ and an equation of the tangent line is $y-0=\sqrt{3}(x-3)$ or $y=\sqrt{3}(x-3)$. 

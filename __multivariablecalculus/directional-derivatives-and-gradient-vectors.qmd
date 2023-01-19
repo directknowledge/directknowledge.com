@@ -10,10 +10,10 @@ Partial derivatives find the rate of change of $z=f(x,y)$ in the directions of t
 
 ::: {#def- } 
 
-Let $f$ be a function of two variables, and let $\vec{u}=u_1\vec{i}+u_2\vec{j}$ be a unit vector. The \index{directional derivative} of $f$ at $P(a,b)$ in the direction of  $\vec{u} **directional derivative} of $f$ at $P(a,b)$ in the direction of  $\vec{u** $ is defined by
-\[
+Let $f$ be a function of two variables, and let $\vec{u}=u_1\vec{i}+u_2\vec{j}$ be a unit vector. The \index{directional derivative} **directional derivative** of $f$ at $P(a,b)$ in the direction of  $\vec{u}$ is defined by
+$$
 D_{\vec{u}} f(a,b)=\lim _{h\to  0}\frac{f\left(a+h u_1, b+h u_2\right)-f(a,b)}{h}
-\]
+$$
 provided the limit exists.
 ::: 
 
@@ -30,32 +30,26 @@ D_{\vec{u}}f(a,b)=f_x(a,b)u_1+f_y(a,b)u_2.
 
  ::: {.proof }
 We define a function $F$ of a single variable $h$ by $F(h)=f\left(a+h u_1,b+h u_2\right)$ so that
-\[
+$$
 D_{\vec{u}}f(a,b)=\lim _{h\to 0}\frac{f\left(a+h u_1,b+h u_2\right)-f(a,b)}{h}
 =\lim _{h\to 0}\frac{F(h)-F(0)}{h}
 =F'(0).
-\]  
+$$  
 Applying the chain rule with $x=a+h u_1$ and $y=b+h u_2$
-\[
+$$
 F'(h)
 =\frac{d F}{d h}
 =\frac{\partial f}{\partial  x}\frac{d x}{d h}
 +\frac{\partial f}{\partial  y}\frac{d y}{d h}
-=f_x(x,y) u_1+f_y(x,y)u_2.\]
+=f_x(x,y) u_1+f_y(x,y)u_2.$$
 When $h=0,$ we have $x=a$ and $y=b$ so that
-\[
+$$
 D_{\vec{u}} f(a,b)=F'(0)=\frac{\partial f}{\partial  x}u_1
 +\frac{\partial f}{\partial  y}u_2
 =f_x(a,b) u_1+f_y(a,b)u_2.
-\]
+$$
 ::: 
   
-\begin{figure}[H]
-\centering
-\includegraphics{_includes/dir-der-1-pics.pdf}
-\caption{The directional derivative of $f(x,y)=x^3-3x y+4y^2$ at $(1,2)$.}
-\label{fig:dir-pd-1}
-\end{figure} 
 
 ::: {#exm- } 
 
@@ -75,11 +69,11 @@ D_{\vec{u}}f(x,y)
 & = \left(3x^2-3y\right)\frac{\sqrt{3}}{2}+(-3x+8y)\frac{1}{2} 
 =\frac{1}{2}\left[3\sqrt{3}x^2-3x+\left(8-3\sqrt{3}\right)y\right].\end{align*}
 Therefore, by \ref{dirderivative}, the directional derivative is 
-\[
+$$
 D_{\vec{u}}f(1,2)
 =\frac{1}{2}\left[3\sqrt{3}(1)^2-3(1)+8-3\sqrt{3}\right](2)
 =\frac{13-3\sqrt{3}}{2}.
-\]
+$$
 ::: 
 
 ::: {#exm- } 
@@ -92,27 +86,20 @@ at $P=(-1,-2)$ in the direction towards the origin.
 
 ::: {.solution }
 A vector in the direction from $(-1,-2)$ to $(0,0)$ is $\vec{i}+2\vec{j},$ so a unit vector in this direction is therefore 
-\[
+$$
 \vec{u}=\frac{1}{\sqrt{5}}\vec{i}+\frac{2}{\sqrt{5}}\vec{j}.
-\]
+$$
 We find that 
-\[
+$$
 f_y(-1,-2)=\left.\left(2y+3x^2\right)\right|_{(-1,-2)}=-1
 \qquad  \text{and} \qquad
 f_x(-1,-2)=\left.6x y\right|_{(-1,-2)}=12.
-\]
+$$
 Therefore, by \ref{dirderivative}, the directional derivative is 
-\[
+$$
 D_{\vec{u}}f(-1,-2)=\frac{1}{\sqrt{5}}(12)+\frac{2}{\sqrt{5}}(-1)=2 \sqrt{5}.
-\]
+$$
 ::: 
-
-\begin{figure}[H]
-\centering
-\includegraphics{_includes/dir-der-2-pics.pdf}
-\caption{The directional derivative of $f(x,y)=x^2+3x y^2$ at $(1,2)$.}
-\label{fig:dir-pd-1}
-\end{figure} 
 
 ::: {#exm- } 
 Find the directional derivative of the function $f$ defined by  
@@ -124,19 +111,19 @@ at $P=(1,2)$ in the direction towards the origin.
 
 ::: {.solution }
 A vector in the direction from $(1,2)$ to $(0,0)$ is $-\vec{i}-2\vec{j},$ so a unit vector in this direction is therefore 
-\[
+$$
 \vec{u}=\frac{-1}{\sqrt{5}}\vec{i}-\frac{2}{\sqrt{5}}\vec{j}.
-\]
+$$
 We find that 
-\[
+$$
 f_x(1,2)=\left.\left(2x+3y^2\right)\right|_{(1,2)}=14
 \qquad  \text{and} \qquad
 f_y(1,2)=\left.6x y\right|_{(1,2)}=12.
-\]
+$$
 Therefore, the directional derivative is given by 
-\[
+$$
 D_{\vec{u}}f(1,2)=\frac{-1}{\sqrt{5}}(14)-\frac{2}{\sqrt{5}}(12)=\frac{-38}{\sqrt{5}}.
-\]
+$$
 ::: 
 
 
@@ -146,11 +133,11 @@ D_{\vec{u}}f(1,2)=\frac{-1}{\sqrt{5}}(14)-\frac{2}{\sqrt{5}}(12)=\frac{-38}{\sqr
 ::: {#def- } 
 
 Let $f$ be a differentiable function at $(a,b)$. 
-Then the \index{gradient} of $f$ is denoted by $\nabla f(x,y)=f_x(x,y)\vec{i}+f_y(x,y)\vec{j} **gradient} of $f$ is denoted by $\nabla f(x,y)=f_x(x,y)\vec{i}+f_y(x,y)\vec{j** .$  
+Then the \index{gradient} **gradient** of $f$ is denoted by $\nabla f(x,y)=f_x(x,y)\vec{i}+f_y(x,y)\vec{j}.$  
 The value of the gradient at the point $P(a,b)$ is denoted by 
-\[
+$$
 \nabla f_P=f_x(a,b)\vec{i}+f_y(a,b)\vec{j}.
-\]
+$$
 ::: 
 
 ::: {#exm- } 
@@ -181,9 +168,9 @@ $$
 ::: {.proof }
 Since 
 $\nabla f_P=f_x(a,b)\vec{i}+f_y(a,b)\vec{j}$ and $\vec{u}=u_1\vec{i}+u_2\vec{j},$ we have
-\[
+$$
 \nabla f_P\cdot \vec{u}=f_x(a,b)u_1+f_y(a,b)u_2=D_{\vec{u}}f(a,b).
-\]
+$$
 ::: 
 
 ::: {#exm- } 
@@ -198,16 +185,16 @@ at $P(1,-1)$ in the direction towards the origin.
 
 ::: {.solution }
 We use the unit vector  
-\[
-\vec{u}=\left(-\frac{1}{\sqrt{2}}\right)\vec{i}+\left(\frac{1}{\sqrt{2}}\right)\vec{j}\]
+$$
+\vec{u}=\left(-\frac{1}{\sqrt{2}}\right)\vec{i}+\left(\frac{1}{\sqrt{2}}\right)\vec{j}$$
 and find  
 $\nabla  f=(2x+y)\vec{i}+(2y+x)\vec{j}$  
 to determine 
-\[
+$$
 D_{\vec{u}}f(1,-1)=\nabla f(1,-1)\cdot \vec{u}
 =(\vec{i}-\vec{j})\cdot \left(-\frac{1}{\sqrt{2}}\right)
 \vec{i}+\left(\frac{1}{\sqrt{2}}\right)\vec{j}=-\sqrt{2}.
-\]
+$$
 ::: 
 
 
@@ -221,24 +208,24 @@ at the point $(6,-1)$ in the direction of the vector $\vec{v}=2\vec{i}+5\vec{j}.
 
 ::: {.solution }
 We first compute the gradient vector at $(6,-1)$
-\[
+$$
 \nabla f(x,y)=3x^2y^4\vec{i}+4x^3y^3\vec{j} 
 \qquad \text{and} \qquad 
 \nabla f(6,-1)=108\vec{i}-864\vec{j}.
-\]
+$$
 Note that $\vec{v}$ is not a unit vector, but since 
 $|\vec{v}|=\sqrt{29}$, the unit vector in the direction of 
 $\vec{v}$ is 
-\[
+$$
 \vec{u}=\frac{\vec{v}}{|\vec{v}|}=\frac{2}{\sqrt{29}}\vec{i}+\frac{5}{\sqrt{29}}\vec{j}.
-\]
+$$
 Therefore, by \ref{grader}, we have 
-\[
+$$
 D_{\vec{u}}f(6,-1)
 =\nabla f(6,-1)\cdot \vec{u}
 =(108\vec{i}-864\vec{j})\cdot \left( \frac{2}{\sqrt{29}}\vec{i}+\frac{5}{\sqrt{29}}\vec{j}\right)
 =\frac{-4104}{\sqrt{29}}.
-\]
+$$
 ::: 
 
 
@@ -258,9 +245,9 @@ $\vec{w}=2 \vec{i}+\vec{j}-\vec{k}$
 we find,  $\vec{v} \times \vec{w}=-\vec{i}+7\vec{j}+5\vec{k}$ and so 
 $\vec{u}=\frac{1}{\sqrt{75}}(-\vec{i}+7\vec{j}+5\vec{k}).$ 
 Therefore, by \ref{grader}, we have 
-\[
+$$
 D_{\vec{u}}f =(-2\vec{i}+2\vec{j}-\vec{k})\cdot \left(\frac{-1}{\sqrt{75}}\vec{i}+\frac{7}{\sqrt{75}}\vec{j}+\frac{5}{\sqrt{75}}\vec{k}\right)=\frac{11\sqrt{3}}{15}.
-\]
+$$
 ::: 
 
 ::: {#thm- } [Properties of the Gradient]
@@ -268,12 +255,9 @@ Let $f$ and $g$ be differentiable functions. Then
  
 - $\nabla c=0$ for any constant $c$ 
 - $\nabla (a f+b g)=a\nabla (f)+b\nabla (g)$ for any constants $a$ and $b$ 
-\item 
-$\nabla (f g)=f\cdot \nabla (g)+g\cdot \nabla (f)$ 
-\item 
-$\nabla \left(\frac{f}{g}\right)=\frac{g\cdot \nabla (f)-f\cdot \nabla (g)}{g^2}$ provided $g^2\neq 0$ 
-\item 
-$\nabla \left(f^n\right)=n f^{n-1}\cdot \nabla (f)$ 
+- $\nabla (f g)=f\cdot \nabla (g)+g\cdot \nabla (f)$ 
+- $\nabla \left(\frac{f}{g}\right)=\frac{g\cdot \nabla (f)-f\cdot \nabla (g)}{g^2}$ provided $g^2\neq 0$ 
+- $\nabla \left(f^n\right)=n f^{n-1}\cdot \nabla (f)$ 
  
 ::: 
 
@@ -282,11 +266,11 @@ An outline of how each part can be proven in listed below.
  
 - The (constant rule) is proved as follows by $\nabla c=(c)_x\vec{i}+(c)_y\vec{j}=0.$ 
 - The (linearity rule) is proved as follows
-\[
+$$
 \nabla (a f +b g)
 =\left(a f_x+ b g_x\right)\vec{i}+\left(a f_x+ b g_y\right)\vec{j} 
 =a\nabla (f)+b\nabla (g).
-\]
+$$
 - The (product rule) is proved as follows
 \begin{align*}
 \nabla (f g) & 
@@ -301,17 +285,17 @@ An outline of how each part can be proven in listed below.
 \nabla \left(\frac{f}{g}\right) &
 =\left(\frac{f}{g}\right)_x\vec{i}+\left(\frac{f}{g}\right)_y\vec{j} 
 =\left(\frac{f_xg-g_xf }{g^2}\right)\vec{i}+\left(\frac{f_yg-g_yf }{g^2}\right) \vec{j} 
-\\[5pt] 
+\\
 & =\frac{\left[g\left(f_x\vec{i}+f_y\vec{j}\right)\right]-\left[f\left(g_x\vec{i}+g_y\vec{j}\right)\right]}{g^2}
 =\frac{g\cdot \nabla (f)-f\cdot \nabla (g)}{g^2}.
 \end{align*}
 - The (power rule) is proved as follows
-\[
+$$
 \nabla f^n 
 =\left(f^n\right)_x\vec{i}+\left(f^n\right)_y\vec{j} 
 =\left(n f^{n-1}\right)f_xb \vec{i}+\left(n f^{n-1}\right)f_yb \vec{j}
 =n f^{n-1}\cdot \nabla (f).
-\]
+$$
  
 ::: 
 
@@ -321,10 +305,10 @@ Suppose the function $f$ is differentiable at the point $P$ and that the gradien
  
 ::: {.proof }
 Let $C$ be any smooth curve on the level surface $f(x,y,z)=K$ that passes through $P(a,b,c),$ and describe the curve $C$ by the vector function $\vec{R}(t)=x(t)\vec{i}+y(t)\vec{j}+z(t)\vec{k}$ for all $t$ in some interval $I$. We will show that the gradient $\nabla f_P$ is orthogonal to the tangent vector $d R/d t$ at $P.$ Because $C$ lies on the level surface, any point $P(x(t),y(t),z(t))$ on $C$ must satisfy $f[x(t),y(t),z(t)]=K,$ and by applying the chain rule, we obtain
-\[\frac{d}{d t}[f(x(t),y(t),z(t))]
+$$\frac{d}{d t}[f(x(t),y(t),z(t))]
 =f_x(x,y,z)\frac{d x}{d t}
 +f_y(x,y,z)\frac{d y}{d t}+f_z(x,y,z)\frac{d z}{d t}.
-\] 
+$$ 
 Suppose $t=t_0$ at $P.$ Then
 \begin{align*}
 & \left. \frac{d}{d t}\{ f[x(t),y(t),z(t)] \}\right|_{t=t_0}  \\
@@ -332,9 +316,9 @@ Suppose $t=t_0$ at $P.$ Then
 & \qquad = \nabla f_P\frac{d \vec{R}}{d t}
 \end{align*} 
 since 
-\[\frac{d \vec{R}}{d t}=\frac{d x}{d t}\vec{i}+\frac{d y}{d t}\vec{j}+\frac{d z}{d t}\vec{k}.\] 
+$$\frac{d \vec{R}}{d t}=\frac{d x}{d t}\vec{i}+\frac{d y}{d t}\vec{j}+\frac{d z}{d t}\vec{k}.$$ 
 We also know that $f(x(t),y(t),z(t))=K$ for all $t$ in $I.$ Thus, we have 
-\[\frac{d}{d t}\{f[x(t),y(t),z(t)] \}=\frac{d}{d t}(K)=0\] 
+$$\frac{d}{d t}\{f[x(t),y(t),z(t)] \}=\frac{d}{d t}(K)=0$$ 
 and it follows that $\nabla f_P\cdot \frac{d \vec{R}}{d t}=0.$ We are given that 
 $\nabla f_P\neq 0$ and $d \vec{R}/d t\neq 0$ because the curve $C$
 is smooth. Therefore, $\nabla f_P$ is orthogonal to $d \vec{R}/d t,$ as required.
@@ -343,7 +327,7 @@ is smooth. Therefore, $\nabla f_P$ is orthogonal to $d \vec{R}/d t,$ as required
 
 ## Steepest Ascent and Steepest Descent
 
-The direction of the greatest rate of increase (or decrease) of a given function at a specified point is called the direction of \index{steepest ascent} (or \index{steepest descent} **steepest ascent} (or \index{steepest descent** ). 
+The direction of the greatest rate of increase (or decrease) of a given function at a specified point is called the direction of \index{steepest ascent} **steepest ascent** (or \index{steepest descent} **steepest descent**). 
 
 
 ::: {#thm- } [Steepest Ascent/Descent]
@@ -355,16 +339,15 @@ $\vec{u}$ points in the direction of $\nabla f_P.$
 - The smallest value of the directional derivative $D_{\vec{u}}f$ at $P$ is 
 $-\left\|\nabla f_P\right\|$ and occurs when the unit vector
 $\vec{u}$ points in the direction of $-\nabla f_P.$ 
- 
 ::: 
 
 ::: {.proof }
-If $\vec{u}$ is any unit vector, then$D_{\vec{u}}f=\nabla f_P\cdot \vec{u}=\left\|\nabla f_P\right\|\|\vec{u}\| \cos  \theta =\left\|\nabla f_P\right\| \cos  \theta $  where $\theta $ is the angle between $\nabla f_P$ and $\vec{u}.$ But $\cos  \theta $ assumes its largest value of 1 at $\theta =0;$ that is,
+If $\vec{u}$ is any unit vector, then$D_{\vec{u}}f=\nabla f_P\cdot \vec{u}=\left\|\nabla f_P\right\|\|\vec{u}\| \cos  \theta =\left\|\nabla f_P\right\| \cos  \theta$  where $\theta$ is the angle between $\nabla f_P$ and $\vec{u}.$ But $\cos  \theta$ assumes its largest value of 1 at $\theta =0;$ that is,
 when $\vec{u}$ points in the direction $\nabla f_P.$ Thus, the largest possible value of $D_{\vec{u}}f$ is 
-\[D_{\vec{u}}f =\left\|\nabla f_P\right\|(1)=\left\|\nabla f_P\right\|.\] 
-Also $\cos  \theta $ assumes its smallest value $-1$ when $\theta =\pi .$ This value occurs when $\vec{u}$ points toward $-\nabla f_P,$ and in this direction 
-\[D_{\vec{u}}f =\left\|\left|\left.\nabla f_P\right\|(-1)\right.\right. =\left\|\left|\left.\nabla f_P\right\|(-1)\right.\right. =-\left\|\nabla f_P\right\|. 
-\]
+$$D_{\vec{u}}f =\left\|\nabla f_P\right\|(1)=\left\|\nabla f_P\right\|.$$ 
+Also $\cos  \theta$ assumes its smallest value $-1$ when $\theta =\pi .$ This value occurs when $\vec{u}$ points toward $-\nabla f_P,$ and in this direction 
+$$D_{\vec{u}}f =\left\|\left|\left.\nabla f_P\right\|(-1)\right.\right. =\left\|\left|\left.\nabla f_P\right\|(-1)\right.\right. =-\left\|\nabla f_P\right\|. 
+$$
 ::: 
  
 
@@ -402,7 +385,7 @@ We begin by finding the gradient of $f,$
 & =\left[e^{2y-x}+x e^{2y-x}(-1)\right]\vec{i}+\left[x e^{2y-x}(2)\right]\vec{j} \\
 & =e^{2y-x}(1-x)\vec{i}+2 x\vec{j}\end{align*}
 At $P(2,1)$, 
-\[\nabla f_P=e^{2(1)-2}[(1-2)\vec{i}+2(2)\vec{j}]=-\vec{i}+4\vec{j}.\]  
+$$\nabla f_P=e^{2(1)-2}[(1-2)\vec{i}+2(2)\vec{j}]=-\vec{i}+4\vec{j}.$$  
 The most rapid rate of increase is $\left\|\nabla f_P\right\|=\sqrt{(-1)^2+4^2}=\sqrt{17}$ and occurs in the direction of $-\vec{i}+4\vec{j}.$ The most rapid rate of decrease occurs in the direction of $-\nabla f_P=\vec{i}-4\vec{j}$ and is $-\sqrt{17}.$ 
 ::: 
 
@@ -412,9 +395,9 @@ Let $f(x,y,z)=y e^{x+z}+z e^{y-x}.$ At the point $P(2,2,-2),$ find the unit vect
 
 ::: {.solution }
 The gradient is 
-\[
+$$
 \nabla f=\left(y e^{x+z}-z e^{y-x}\right)\vec{i}+\left(e^{x+z}+x e^{y-x}\right)\vec{j}+\left(y e^{x+z}+e^{y-z}\right)\vec{k}.
-\] 
+$$ 
 Thus, $\nabla f(2,2,-2)=4\vec{i}-\vec{j}+3\vec{k}$ and so $\vec{u}=\frac{1}{\sqrt{26}}(4\vec{i}-\vec{j}+3\vec{k}).$ 
 ::: 
 
@@ -425,9 +408,9 @@ $f(x,y)=\sqrt{x^2+2y}$, $(4,10)$
 
 ::: {.solution }
 We find
-\[
+$$
 \nabla f(4,10)=\left.\frac{x}{\sqrt{x^2+2 y}}\right|_{(4,10)}\vec{i}+\left.\frac{1}{\sqrt{x^2+2 y}}\right|_{(4,10)}\vec{j} =\frac{2}{3}\vec{i}+\frac{1}{6}\vec{j}.
-\]  
+$$  
 Thus the maximum rate of change is 
 $\sqrt{(2/3)^2+(1/6)^2}=\frac{\sqrt{17}}{6}$ and occurs in the direction of 
 $\frac{2}{3}\vec{i}+\frac{1}{6}\vec{j}.$ 
@@ -441,14 +424,14 @@ $f(x,y)=\sqrt{y^2+2x}$, $(-4,-10)$
 
 ::: {.solution }
 We find
-\[
+$$
 \nabla f(-4,-10)=\left.\frac{1}{\sqrt{2 x+y^2}}\right|_{(-4,-10)}\vec{i}+\left.\frac{y}{\sqrt{2 x+y^2}}\right|_{(-4,-10)}\vec{j}
 =\frac{1}{2 \sqrt{23}}\vec{i}-\frac{5}{\sqrt{23}}\vec{j}.
-\]  
+$$  
 Thus the maximum rate of change is
-\[
+$$
 \sqrt{\left(\frac{1}{2 \sqrt{23}}\right)^2+\left(-\frac{5}{\sqrt{23}}\right)^2}=\frac{1}{2}\sqrt{\frac{101}{23}}
-\]  
+$$  
 and occurs in the direction of $\frac{1}{2 \sqrt{23}}\vec{i}-\frac{5}{\sqrt{23}}j\vec{.}$
 ::: 
 

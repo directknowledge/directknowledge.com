@@ -9,18 +9,12 @@ pagetitle: "Iterated Integrals - Exploring Calculus"
 
 ::: {#thm- } [Fubini's Theorem for Rectangular Regions]
 \label{fubrect}
-If $f$ is a continuous function of $x$ and $y$ over the rectangle $R:$ $ a\leq x\leq b,$ $c\leq y\leq d,$ then the double integral of $f$ over $R$ may be evaluated by either iterated integral: 
-\[
-\iint_R f(x,y)d A=\int _a^b \left[\int_c^d f(x,y) \, dy\right]dx=\int _c^d \left[\int_a^b f(x,y) \, dx\right]dy.\]
+If $f$ is a continuous function of $x$ and $y$ over the rectangle $R:$ $a\leq x\leq b,$ $c\leq y\leq d,$ then the double integral of $f$ over $R$ may be evaluated by either iterated integral: 
+$$
+\iint_R f(x,y)d A=\int _a^b \left[\int_c^d f(x,y) \, dy\right]dx=\int _c^d \left[\int_a^b f(x,y) \, dx\right]dy.
+$$
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/Fub-rect-1-pics.pdf}
-\caption{The integral of $f(x,y)=x \sin xy$ over the region $R=[0,\pi]\times [0,1]$.}
-\label{figfub:surboundvolone}
-\end{figure} 
- 
 
 ::: {#exm- } 
 Evaluate the double integral 
@@ -41,13 +35,6 @@ Since the integrand is continuous over $R$ we use \ref{fubrect} to find
 See \ref{figfub:surboundvolone} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/Fub-rect-2-pics.pdf}
-\caption{The integral of $f(x,y)=(4+x^2)/(1+y^2)$ over the region $R=[0,1]\times [0,1]$.}
-\label{figfub:surboundvoltwo}
-\end{figure} 
- 
 
 ::: {#exm- } 
 
@@ -70,13 +57,6 @@ Since the integrand is continuous over $R$ we use \ref{fubrect} to find
 See \ref{figfub:surboundvoltwo} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=2in]{_includes/Fub-rect-3-pics.pdf}
-\caption{The integral of $(2 x y)/(x^2+1)$ over the region $R=[0,1]\times [1,3]$.}
-\label{figfub:surboundvolthree}
-\end{figure} 
- 
 
 ::: {#exm- } 
 
@@ -98,13 +78,6 @@ Since the integrand is continuous over $R$ we use \ref{fubrect} to find
 See \ref{figfub:surboundvolthree} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/Fub-rect-4-pics.pdf}
-\caption{The integral of $f(x,y)=x^2e^{x y}$ over the region $R=[0,1]\times [0,1]$.}
-\label{figfub:surboundvol}
-\end{figure} 
- 
 
 ::: {#exm- } 
 
@@ -126,12 +99,6 @@ $$
 See \ref{figfub:surboundvol} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=2in]{_includes/Fub-rect-5-pics.pdf}
-\caption{The integral of $f(x,y)=x/(x-y)$ over the region $R=[3,4]\times [1,2]$.}
-\label{figfub:surboundvolfive}
-\end{figure} 
  
 
 ::: {#exm- } 
@@ -151,14 +118,6 @@ $$
 See \ref{figfub:surboundvolfive} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\text{} 
-\includegraphics[width=2in]{_includes/Fub-rect-6-pics.pdf}
-\caption{The integral of $f(x,y)=x \sin xy$ over the region $R=[0,\pi]\times [0,1]$.}
-\label{figfub:surboundvolsix}
-\end{figure} 
- 
 
 ::: {#exm- } 
 Evaluate the double integral 
@@ -223,35 +182,19 @@ D_2: \quad c\leq y\leq d, \quad h_1(y)\leq x\leq  h_2(y)
 where $h_1(x)$ and $h_2(x)$ are continuous functions of $y$ on $[c,d].$
  
 
-\begin{figure}[htb]
-%\hspace{-1in}
-\centering
-\subfigure[$D_1:  \, a\leq x\leq b, \, g_1(x)\leq y\leq  g_2(x)$]{\includegraphics{_includes/vertically-simple-region-pics.pdf}}
-\quad 
-\subfigure[$D_2: \, c\leq y\leq d, \, h_1(y)\leq x\leq  h_2(y)$]{\includegraphics{_includes/horizontally-simple-region-pics.pdf}}
-\caption{Vertically simple and horizontally simple regions.}
-\label{fig:3d-verthorz}
-\end{figure}  
-
 
 ::: {#thm- } [Fubini's Theorem for Non-Rectangular Regions]
 \label{fubthmrect}
 If $D_1$ is a vertically simple region, then 
-\[
+$$
 \iint_{D_1}  f(x,y) \, d A=\int _a^b \int _{g_1(x)}^{g_2(x)}f(x,y) \, dy \, dx
-\] 
+$$ 
 whenever both integrals exist. Similarly, for a horizontally region $D_2,$ 
-\[
-\iint_{D_2}  f(x,y) \, d A=\int _c^d \int _{h_1(y)}^{h_2(y)}f(x,y)\, dx \, dy\]
+$$
+\iint_{D_2}  f(x,y) \, d A=\int _c^d \int _{h_1(y)}^{h_2(y)}f(x,y)\, dx \, dy$$
 whenever both integrals exist.
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/fillBetweenCurves0-pics.pdf}
-\caption{Region of integration: $-2\leq y\leq 4$, $y^2/2-3\leq x\leq y+1$.}
-\label{figreg:surboundvol}
-\end{figure} 
  
 ::: {#exm- } 
 
@@ -265,31 +208,25 @@ where $D$ is the region bounded by the line $y=x-1$ and the parabola $y^2=2x+6$.
 ::: {.solution }
 The region $D$ is both a vertically simple and a horizontally simple region, but the description of $D$ as a vertically simple region is more complicated because the lower boundary consists of two parts. Therefore we express 
 $D$ as a horizontally simple region: 
-\[
+$$
 D=\left\{(x,y)\mid-2\leq y\leq 4,\frac{y^2}{2}-3\leq x\leq y+1\right\}.
-\]
+$$
 as shown below. 
 Then the double integral becomes  
 $$
 \iint_D x y \, d A
 =\int _{-2}^4\int _{(1/2)y^2-3}^{y+1}x y \, dx \,dy
-%\\[5pt] & 
 =\frac{1}{2}\int_{-2}^4 \left(-\frac{y^5}{4}+4 y^3+2 y^2-8y\right) \, dy
 =36.
 $$
 If we had expressed $D$ as a vertically simple region, then we would have obtained  
-\[
+$$
 \iint_D x y \, d A=\int _{-3}^{-1}\int _{-\sqrt{2x+6}}^{\sqrt{2x+6}}x y \, dy \, dx+\int _{-1}^5\int _{x-1}^{\sqrt{2x+6}}x y \, dy \, dx=36.
-\] 
+$$ 
 See \ref{figreg:surboundvol} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/fillBetweenCurves1-pics.pdf}
-\caption{Region of integration: $0\leq x\leq 1$, $x^2 \leq y \leq \sqrt{x}$.}
-\label{figreg:surboundvoltwo}
-\end{figure} 
+
  
 
 ::: {#exm- } 
@@ -302,9 +239,9 @@ $$
 
 ::: {.solution }
 We express the region of integration $D$ as a vertically simple region: 
-\[
+$$
 D=\left\{(x,y)\mid 0\leq x\leq 1, x^2 \leq y \leq \sqrt{x} \right\}.
-\]
+$$
 We use \ref{fubthmrect} to obtain
 $$
 \int _0^1\int _{x^2}^{\sqrt{x}}x y^2 \, dy \, dx
@@ -314,12 +251,7 @@ $$
 See \ref{figreg:surboundvoltwo} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/fillBetweenCurves2-pics.pdf}
-\caption{Region of integration: $0\leq y\leq 2\sqrt{3}$, $\frac{y^2}{6} \leq x \leq \sqrt{16-y^2}$.}
-\label{figreg:surboundvolthree}
-\end{figure} 
+
  
 
 ::: {#exm- } 
@@ -332,9 +264,9 @@ $$
 
 ::: {.solution }
 We express the region of integration $D$ as a horizontally simple region: 
-\[
+$$
 D=\left\{(x,y)\mid 0\leq y\leq 2\sqrt{3}, \frac{y^2}{6} \leq x \leq \sqrt{16-y^2} \right\}.
-\]
+$$
 We use \ref{fubthmrect} to obtain
 $$
 \int _0^{2\sqrt{3}}\int _{\left.y^2\right/6}^{\sqrt{16-y^2}} \, dx \, dy
@@ -344,12 +276,7 @@ $$
 See \ref{figreg:surboundvolthree} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/fillBetweenCurves3-pics.pdf}
-\caption{Region of integration: $0\leq x\leq 1$, $-x^2 \leq y \leq x^2$.}
-\label{fig:surboundvolfour}
-\end{figure} 
+
  
 ::: {#exm- } 
 
@@ -361,9 +288,9 @@ $$
 
 ::: {.solution }
 We express the region of integration $D$ as a vertically simple region: 
-\[
+$$
 D=\left\{(x,y)\mid 0\leq x\leq 1, -x^2 \leq y \leq x^2 \right\}.
-\]
+$$
 The region of integration is sketched in \ref{fig:surboundvolfour}.
 We find
 \begin{align*}
@@ -374,12 +301,7 @@ We find
 \end{align*}
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/fillBetweenCurves4-pics.pdf}
-\caption{Region of integration: $-2\leq y\leq 1$ and $y^2+4y\leq x\leq 3y+2$.}
-\label{figreg:surboundvolfive}
-\end{figure} 
+
  
 
 ::: {#exm- } 
@@ -392,25 +314,19 @@ Sketch the region of integration and evaluate
 ::: {.solution }
 The region is horizontally simple region as $-2\leq y\leq 1$ and $y^2+4y\leq x\leq 3y+2.$ 
 We find 
-\[
+$$
 \int _{-2}^1\int_{y^2+4y}^{3y+2} dx \, dy=\int_{-2}^1 \left(-y^2-y+2\right) \, dy=\frac{9}{2}.
-\]
+$$
 This region could also be considered as a vertically simple region as $-4\leq x\leq 5$ and $\frac{x-2}{3}\leq y\leq -2+\sqrt{x+4}.$ 
 We find
-\[
+$$
 \int _{-4}^5\int_{(x-2)/3}^{-2+\sqrt{x+4}} dy \, dx=\int_{-4}^5 \left(\left(-2+\sqrt{x+4}\right)-\left(\frac{x-2}{3}\right)\right)
 \, dx =\frac{9}{2}.
-\]
+$$
 See \ref{figreg:surboundvolfive} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/fillBetweenCurves5-pics.pdf}
-\caption{Region of integration: $0\leq x\leq \frac{\pi }{2}$ and $0\leq y\leq \sin  x$.}
-\label{figreg:surboundvolsix}
-\end{figure} 
- 
+
 
 ::: {#exm- } 
 Sketch the region of integration and evaluate
@@ -421,23 +337,18 @@ Sketch the region of integration and evaluate
 
 ::: {.solution }
 The region is vertically simple region as $0\leq x\leq \frac{\pi }{2}$ and $0\leq y\leq \sin  x.$ We find  
-\[
-\int _0^{\pi /2}\int _0^{\sin  x}e^y \cos  x \, dy \, dx=\int_0^{\pi /2} \left(e^{\sin  x}\cos  x-\cos  x\right) \, dx=e-2.\]
+$$
+\int _0^{\pi /2}\int _0^{\sin  x}e^y \cos  x \, dy \, dx=\int_0^{\pi /2} \left(e^{\sin  x}\cos  x-\cos  x\right) \, dx=e-2.$$
 The region is also horizontally simple region as $0\leq y\leq 1$ and 
 $\text{Arcsin}(y)\leq x\leq \frac{\pi }{2}.$ 
 We find 
-\[
+$$
 \int _0^1\int _{\arcsin y }^{\pi /2}e^y \cos  x \, dx \, dy=e-2.
-\]
+$$
 See \ref{figreg:surboundvolsix} for a visualization. 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/fillBetweenCurves6-pics.pdf}
-\caption{Region of integration is: $0\leq x\leq 1$, $x\leq y\leq 1$ but also as $0\leq y\leq 1$, $0\leq x\leq y$.}
-\label{fig:surboundvolseven}
-\end{figure} 
+
 
 ::: {#exm- } 
 
@@ -453,23 +364,23 @@ If we try to evaluate the integral as it stands, we are faced with the task of f
 \int \sin y^2 \,dy.
 \end{equation}
 We elect to change the order of integration. This is accomplished by first expressing the given iterated integral as a double integral. We have  
-\[
+$$
 \int _0^1\int _x^1\sin y^2 \, dy \, dx=\iint_D \sin y^2 \, d A
-\]
+$$
 where $D=\{(x,y) \mid 0\leq x\leq 1,x\leq y\leq 1\}.$ 
 This region has an alternate description: 
-\[
+$$
 D=\{(x,y) \mid 0\leq y\leq 1,0\leq x\leq y\}.
-\]
+$$
 Thus we can express the double integral as an iterated integral in the reverse order: 
-\[
+$$
 %\int _0^1\int _x^1\sin y^2 \, dy \, dx
 %=
 \iint_D \sin y^2 \, d A
 =\int _0^1\int _0^y\sin y^2 \, dx \, dy
 =\int _0^1\left.\left[x \sin y^2\right]\right|_{0}^{y}dy
 =\frac{1}{2}(1-\cos  1).
-\]
+$$
 ::: 
 
 
@@ -497,19 +408,19 @@ Find the volume of the bounded solid that lies inside both the cylinder $x^2+y^2
 
 ::: {.solution }
 The volume is given by  
-\[
-V=4\int _0^{\sqrt{3}}\int _0^{\sqrt{3-y^2}}\sqrt{7-x^2-y^2} \, dx \, dy\]
+$$
+V=4\int _0^{\sqrt{3}}\int _0^{\sqrt{3-y^2}}\sqrt{7-x^2-y^2} \, dx \, dy$$
 or also 
-\[
+$$
 V=4\int _0^{\sqrt{3}}\int _0^{\sqrt{3-x^2}}\sqrt{7-x^2-y^2} \, dy \, dx\approx  22.0336.
-\] 
+$$ 
 ::: 
   
 ::: {#exm- } 
 Find the volume of the solid region bounded below by the given rectangle in the $x y$-plane and above by the graph of the given surface 
-\[
+$$
 f(x,y)=\frac{x y}{\sqrt{x^2+y^2+1}}
-\]
+$$
 on $0\leq  x\leq 1, 0\leq y\leq 1$ 
 ::: 
 
@@ -556,9 +467,9 @@ $$
 Using symmetry, the volume is given by  
 \begin{align*} 
 V& =8\int _0^6\int _0^{\sqrt{4-\left.x^2\right/9}}\int _0^{4-\left.x^2\right/9-y^2} \, dz \, dy \, dx
-\\[5pt]
+\\
 & =8\int _0^6\int _0^{\sqrt{4-\left.x^2\right/9}}\left(-\frac{x^2}{9}-y^2+4\right) \, dy \, dx 
-\\[5pt]
+\\
 & =8\int _0^6\left(\frac{8}{3} \sqrt{4-\frac{x^2}{9}}-\frac{2}{27} x^2 \sqrt{4-\frac{x^2}{9}}\right) \, dx
 = 48 
 \approx 150.796.
@@ -567,7 +478,7 @@ V& =8\int _0^6\int _0^{\sqrt{4-\left.x^2\right/9}}\int _0^{4-\left.x^2\right/9-y
   
 ::: {#exm- } 
 Find the volume of the bounded solid bounded below by the rectangle 
-$ R: 1\leq x\leq 2, 1\leq y\leq 2$  
+$R: 1\leq x\leq 2, 1\leq y\leq 2$  
 in the $x y$-plane and above by the graph of 
 \begin{equation}
 z=f(x,y)=\frac{x}{y}+\frac{y}{x}.
@@ -579,9 +490,9 @@ The volume is given by the following double integral and can be compute using Fu
 \begin{align*}
 \iint_R \left(\frac{x}{y}+\frac{y}{x}\right) \, dA
 & =\int _0^2\int _1^2\left(\frac{x}{y}+\frac{y}{x}\right) \, dy \, dx 
-\\[5pt]
+\\
 & =\int _0^2 \left.\left[x \ln |y|+\frac{y^2}{2x}\right]\, \right|^2_1 dx
-\\[5pt]
+\\
 & =\left.\left[\frac{3}{2}\ln |x|\frac{+1}{2}(\ln  2)x^2\right]\, \right|^2_1
 = \text{3 ln 2}.
 \end{align*}
@@ -727,7 +638,7 @@ $x-2y+2=0,$ $x+3y-3=0,$ and $y=0.$
 ::: 
 
 ::: {#exr- } 
-(a) Write the iterated integral $ I=\int_0^1 \int_y^1 \sin ( x^2 ) \, dx \, dy$ as a double integral over a domain $R$. 
+(a) Write the iterated integral $I=\int_0^1 \int_y^1 \sin ( x^2 ) \, dx \, dy$ as a double integral over a domain $R$. 
 (b) Sketch the domain $R$. 
 (c) Evaluate the double integral by reversing the order of integration. 
 ::: 

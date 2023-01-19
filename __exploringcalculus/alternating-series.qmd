@@ -46,10 +46,7 @@ Then to find $s_3$ we add $a_3$, so $s_3$ is to the right of $s_2$.
 Since $a_3 < a_2$, $s_3$ is to the left of $s_1$. 
 Continuing in this pattern, we see that the partial sums oscillate back and forth. 
 However, by the assumption $\lim_{n\to +\infty} a_n = 0$, the successive steps are becoming smaller and smaller. 
-\begin{figure}[h]
-\centering
-\includegraphics[width=250pt]{_includes/alternating-series-1.pdf}
-\end{figure}
+
 Notice that the odd partial sums $s_1, s_3, s_5, \ldots$ are decreasing and that the even partial sums $s_2, s_4, s_6, \ldots$ are increasing. 
 We now consider the two cases.
 \par
@@ -284,7 +281,7 @@ Otherwise the series in \eqref{exeight} is divergent, and in this case, when $0 
 ::: {#exr- } 
 Which of the alternating series converge, and which diverge? 
 Give reasons for your answers.
-\begin{multicols}{2}
+ 
  - $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^{3/2}}$
 - $\sum_{n=1}^\infty (-1)^{n} \frac{\sqrt{n}}{n+5}$
 - $\sum_{n=1}^\infty (-1)^{n} \frac{n}{3n-1}$
@@ -300,13 +297,13 @@ Give reasons for your answers.
 - $\sum_{n=1}^\infty (-1)^{n+1} \frac{3\sqrt{n+1}}{\sqrt{n}+1}$
 - $\sum_{n=1}^\infty (-1)^{n} \frac{\ln(n+1)}{n+2}$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
 Which of the series converge absolutely, which converge, and which diverge? 
 Give reasons for your answers.
-\begin{multicols}{2}
+ 
  - $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^2}$
 - $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n+2}$
 - $\sum_{n=1}^\infty (-1)^{n} \frac{1}{n \ln n}$
@@ -314,13 +311,13 @@ Give reasons for your answers.
 - $\sum_{n=0}^\infty \frac{\cos n\pi}{n+1} $
 - $\sum_{n=1}^\infty (-1)^{n+1} \arctan n$
  
-\end{multicols}
+ 
 ::: 
 
 
 ::: {#exr- } 
 Estimate the magnitude of the error involved in using the sum of the first four terms to approximate the sum of the entire series. 
-\begin{multicols}{2}
+ 
  - $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{10^n}$
 - $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^6}$
 - $\sum_{n=1}^\infty (-1)^{n-1} \frac{1}{\sqrt{n}}$
@@ -331,7 +328,7 @@ Estimate the magnitude of the error involved in using the sum of the first four 
 - $\sum_{n=1}^\infty (-1)^{n} \frac{1}{n!}$
 - $\sum_{n=1}^\infty (-1)^{n} \frac{3^n}{n!}$
  
-\end{multicols}
+ 
 ::: 
 
 

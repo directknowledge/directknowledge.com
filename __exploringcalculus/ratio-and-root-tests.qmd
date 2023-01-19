@@ -202,7 +202,7 @@ Use the Ratio Test to determine the convergence or divergence of the series.
 - $\ds\sum_{n=1}^\infty \frac{n^6}{n!}$
 - $\ds\sum_{n=1}^\infty n \left(\frac{1}{2}\right)^n$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
@@ -219,14 +219,14 @@ Use the Root Test to determine the convergence or divergence of the series.
 - $\ds\sum_{n=1}^\infty \frac{2^n n!}{n^n}$
 - $\ds\sum_{n=1}^\infty \left(\frac{n!}{n^3}\right)$
  
-\end{multicols}
+ 
 ::: 
 
 
 ::: {#exr- } 
 Which of the series converge, and which diverge? 
 Give reasons for your answers.
-\begin{multicols}{2}
+ 
  - $\ds\sum_{n=1}^\infty n^2 e^{-n}$
 - $\ds\sum_{n=1}^\infty (1-e^{-n})^n$
 - $\ds\sum_{n=1}^\infty \frac{100}{n}$
@@ -240,12 +240,12 @@ Give reasons for your answers.
 - $\ds\sum_{n=1}^\infty \frac{n \ln n}{2^n}$
 - $\ds\sum_{n=1}^\infty \frac{(-3)^n}{3\cdot 5 \cdot 7 \cdots (2n+1)}$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
 Determine whether the series is convergent, absolutely convergent, conditionally convergent, or divergent.
-\begin{multicols}{2}
+ 
  - $\ds\sum_{n=3}^\infty \frac{(-1)^n}{n\sqrt{\ln n}}$
 - $\ds\sum_{n=1}^\infty \frac{10^n}{(n+1)4^{2n+1}}$
 - $\ds\sum_{n=1}^\infty \frac{\cos(n+1)}{n \sqrt{n}}$
@@ -259,7 +259,7 @@ Determine whether the series is convergent, absolutely convergent, conditionally
 - $\ds\sum_{n=1}^\infty \frac{(-n)^n}{[(n+1)\tan^{-1} n]^n}$
 - $\ds\sum_{n=1}^\infty (-1)^{n+1}\frac{n^22^n}{n!}$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 

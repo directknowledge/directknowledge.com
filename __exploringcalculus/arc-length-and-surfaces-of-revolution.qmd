@@ -41,10 +41,6 @@ Summing these lengths we obtain an approximation for the arc length $L$ as
 L\approx \sum_{k=1}^n \sqrt{(\Delta x)^2+(\Delta y_k)^2}. 
 \end{equation}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=250pt]{_includes/arc-length-and-surfaces-of-revolution-1.pdf}
-\end{figure}
 
 Manipulating the inside expression we obtain
 \begin{equation}

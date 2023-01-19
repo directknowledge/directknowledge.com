@@ -72,19 +72,15 @@ where $g$  is the acceleration due to gravity (on earth $g\approx -32 \text{ft}\
 ::: {#exm- } 
 A ball is thrown vertically upward from the ground with an initial velocity of $160 \text{ ft/s}$. 
 \ 
-\item 
-When will it hit the ground?
-\item 
-With what velocity will the ball hit the ground?
-\item 
-When will the ball reach its maximum height and what is the maximum height?
+- When will it hit the ground?
+- With what velocity will the ball hit the ground?
+- When will the ball reach its maximum height and what is the maximum height?
  
 ::: 
 
 ::: {.solution }
 \ 
-\item 
-We can determine when the ball will hit the ground by solving 
+- We can determine when the ball will hit the ground by solving 
 $$
 s(t)=\frac{1}{2}g t^2+v_0t+s_0=0
 $$ 
@@ -96,14 +92,12 @@ s(t)=-16t^2+160 t=16t (-t+10)=0
 $$ 
 when $t=0$  and $t=10$. 
 Thus the ball will hit the ground 10 seconds after it is thrown upwards.
-\item 
-The velocity of the ball at time $t$  is given by the first derivative of $s$, namely 
+- The velocity of the ball at time $t$  is given by the first derivative of $s$, namely 
 $$
 v(t)=s'(t)=g t+v_0.
 $$ 
 When $t=10$ we find, $v(10)=-32 (10)+160=-160$ and so the velocity of the ball is $-160 \text{ ft}/s$ when it hits the ground.
-\item 
-The ball reaches it's maximum height when the velocity is zero, thus we solve 
+- The ball reaches it's maximum height when the velocity is zero, thus we solve 
 $$
 v(t)= g t+v_0=-32 t+160=0
 $$ 

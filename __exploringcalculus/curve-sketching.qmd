@@ -11,35 +11,21 @@ The following steps can be used to graph many commonly used functions.
 
     
 \setlength\itemsep{2.1ex} 
-\item 
-If given a function, determine the domain and range.
-\item 
-If possible algebraically simplify the function.
+- If given a function, determine the domain and range.
+- If possible algebraically simplify the function.
 \item Test for symmetry with respect to the $x$-axis, $y$-axis, and the origin.
-\item 
-Determine any $x$-intercepts and $y$-intercepts.
-\item 
-Determine any vertical asymptotes.
-\item 
-Determine any horizontal asymptotes.
-\item 
-Determine the first order critical numbers.
-\item 
-Apply the First Derivative Test. 
-\item 
-Apply the Second Derivative Test. 
-\item 
-Determine the second order critical numbers.
-\item 
-Apply the Concavity Test. 
-\item 
-Determine any vertical tangents.
-\item 
-Determine any cusps.
-\item 
-Plot Points.
-\item 
-Sketch the curve.
+- Determine any $x$-intercepts and $y$-intercepts.
+- Determine any vertical asymptotes.
+- Determine any horizontal asymptotes.
+- Determine the first order critical numbers.
+- Apply the First Derivative Test. 
+- Apply the Second Derivative Test. 
+- Determine the second order critical numbers.
+- Apply the Concavity Test. 
+- Determine any vertical tangents.
+- Determine any cusps.
+- Plot Points.
+- Sketch the curve.
  
 
 ## Vertical Tangents and Cusps
@@ -50,21 +36,16 @@ There are four possibilities for unbounded behavior of a derivative $f'(x)$ arou
 
 Suppose the function $f$ is continuous at the point $P(c,f(c)).$ 
    
-\item 
-The graph of $f$ has a \index{vertical tangent} **vertical tangent**  at $P$ if one of the following holds.  
+- The graph of $f$ has a \index{vertical tangent} **vertical tangent**  at $P$ if one of the following holds.  
     
-\item 
-$\lim _{x\to c^+}f'(x)=\lim _{x\to c^-}f'(x)=+\infty $ 
+- $\lim _{x\to c^+}f'(x)=\lim _{x\to c^-}f'(x)=+\infty $ 
 \item $ \lim _{x\to c^+}f'(x)=\lim _{x\to c^-}f'(x)=-\infty $
  
-\item 
-The graph of $f$ has a \index{cusp} **cusp**  at $P$ if one of the following holds.  
+- The graph of $f$ has a \index{cusp} **cusp**  at $P$ if one of the following holds.  
 \vspace{.3cm}
     
-\item 
-$\lim _{x\to c^+}f'(x)=+\infty$ and $\lim _{x\to c^-}f'(x)=-\infty $
-\item 
-$\lim _{x\to c^+}f'(x)=-\infty $ and $\lim _{x\to c^-}f'(x)=+\infty $
+- $\lim _{x\to c^+}f'(x)=+\infty$ and $\lim _{x\to c^-}f'(x)=-\infty $
+- $\lim _{x\to c^+}f'(x)=-\infty $ and $\lim _{x\to c^-}f'(x)=+\infty $
  
  
 ::: 
@@ -78,13 +59,6 @@ f(x)=3x^{3/5}\left(5-x-4x^2\right)
 and explain why there is a vertical tangent at $x=0$.
 :::  
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 170pt]{_includes/concavity-and-curve-sketching-7.pdf}}
-\caption{$f(x)=3x^{3/5}\left(5-x-4x^2\right)$}
-\label{fig:graph17}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 Using the product rule the derivative of the function $f$ is
@@ -125,13 +99,6 @@ Therefore the function $f$ has a cusp at $(0,0)$ which can be seen from the sket
 (see Figure ~\ref{fig:graph18}). 
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 170pt]{_includes/concavity-and-curve-sketching-8.pdf}}
-\caption{$f(x)=x^{2/3}\left(x^2+5x-20\right)$}
-\label{fig:graph18}
-\end{center}
-\end{figure}
 
 
 ::: {#exm- }  
@@ -141,13 +108,6 @@ f(x)=x^{2/3} (x - 1)^{1/3}.
 \]
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 170pt]{_includes/concavity-and-curve-sketching-30.pdf}}
-\caption{$f(x)=x^{2/3} (x - 1)^{1/3}$}
-\label{fig:graph19}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 To find the vertical tangents and cusps we check where the first derivative is undefined. The derivative of $f$ is 
@@ -172,13 +132,6 @@ f(x)=\frac{2x^2}{x^2-1}
 showing all special features.
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 170pt]{_includes/concavity-and-curve-sketching-9.pdf}}
-\caption{$\ds f(x)=\frac{2x^2}{x^2-1}$}
-\label{fig:graph20}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The domain of $f$ is 
@@ -195,13 +148,13 @@ The $x$ and $y$ intercepts are both $0.$ Since $f(-x)=f(x)$ the function is even
 the line $y=2$ is a horizontal asymptote. Since the denominator is 0 when $x\pm 1,$ we compute the following limits: 
 \[
 \begin{array}{cc}
-\ds 
+ \displaystyle 
 \lim _{x\to 1^+}\frac{2x^2}{x^2-1}
-=+\infty  & \ds \lim _{x\to 1^-}\frac{2x^2}{x^2-1}
+=+\infty  &  \displaystyle \lim _{x\to 1^-}\frac{2x^2}{x^2-1}
 =-\infty  \\[10pt]
-\ds 
+ \displaystyle 
 \lim _{x\to -1^+}\frac{2x^2}{x^2-1}
-=-\infty  & \ds \lim _{x\to -1^-}\frac{2x^2}{x^2-1}
+=-\infty  &  \displaystyle \lim _{x\to -1^-}\frac{2x^2}{x^2-1}
 =+\infty 
 \end{array}
 \]
@@ -227,14 +180,6 @@ f(x)=2 \cos  x+\sin  2 x
 \]
 showing all special features.
 ::: 
-
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 170pt]{_includes/concavity-and-curve-sketching-10.pdf}}
-\caption{$f(x)=2 \cos  x+\sin  2 x$}
-\label{fig:graph21}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The domain of the function $f$ is $\mathbb{R}.$ The $y$-intercept is $(0,2)$ since $f(0)=2.$ The $x$-intercepts occur when $2 \cos  x+\sin  2x=2 \cos  x+2 \sin  x \cos  x=2 \cos  x(1+\sin  x)=0$ which is precisely when $x=\pi /2$ and $x=3\pi /2$, because we need only consider $[0,2\pi ]$ since function is periodic via, 

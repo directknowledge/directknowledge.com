@@ -58,10 +58,10 @@ We have
 \int _C \vec{F}\cdot d\vec{R} 
 & =\int _C\nabla f\cdot d\vec{R} 
 =\int _C \left[\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy+\frac{\partial f}{\partial z}dz\right] 
-\\[5pt]
+\\
 & =\int_a^b \left[\frac{\partial f}{\partial x}\frac{dx}{dt}+\frac{\partial f}{\partial y}\frac{dy}{dt}+\frac{\partial f}{\partial z}\frac{dz}{dt}\right] 
 \, dt 
-\\[5pt]
+\\
 & =\int_a^b \frac{d G}{d t} \, dt 
 =G(b)-G(a)
 =f(Q)-f(P).
@@ -82,7 +82,7 @@ where $C$ is any piecewise smooth path connecting $A(1,0,-1)$ to $B(0,-1,1)$.
 ::: 
 
 ::: {.solution }
-Since $\Curl  \vec{V}=\vec{0},$ $\vec{V}$ is conservative. 
+Since $\text{curl}  \vec{V}=\vec{0},$ $\vec{V}$ is conservative. 
 Now we set out to find $f$. 
 Since  
 $$
@@ -102,8 +102,8 @@ $f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z+c_1(z)$.
 Since 
 $$
 \frac{\partial f}{\partial z}=\frac{x}{1+z^2}=\frac{\partial }{\partial z}\left[y \tan ^{-1}x+x \tan ^{-1}z+c_1(z)\right]=\frac{x}{1+z^2}+c'_1(z),$$
-so  $c_1'(z)=0,$ $ c_1=0$ and so we set  
-$ f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z$.  
+so  $c_1'(z)=0,$ $c_1=0$ and so we set  
+$f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z$.  
 \begin{equation*}
 \int _C\vec{F}\cdot d \vec{R}=f(1,0,-1)-f(0,-1,1)
  =\frac{3\pi }{4}+\frac{\pi }{4}
@@ -125,10 +125,10 @@ where $C$ is any piecewise smooth path joining $A(8,6,1)$ to $B(1,3,5)$.
 ::: 
 
 ::: {.solution }
-First we determine $\Curl  \vec{V}$. 
+First we determine $\text{curl}  \vec{V}$. 
 We find
 \begin{align*}
-\Curl  \vec{V} & =\left|
+\text{curl}  \vec{V} & =\left|
 \begin{array}{cc}
 \begin{array}{c}
  \vec{i} \\ 
@@ -346,7 +346,7 @@ Evaluate the line integral
 $$
 \oint \vec{F} \cdot d\vec{R}
 $$ 
-where $\vec{F}=y^2 \vec{i} +x^2 \vec{j}-(x+z)\vec{k} $ and $C$ is the boundary of the triangle with vertices $(0,0,0),$ $(1,0,0),$ and $(1,1,0)$, transversed once clockwise, as viewed from above.
+where $\vec{F}=y^2 \vec{i} +x^2 \vec{j}-(x+z)\vec{k}$ and $C$ is the boundary of the triangle with vertices $(0,0,0),$ $(1,0,0),$ and $(1,1,0)$, transversed once clockwise, as viewed from above.
 ::: 
 
 ::: {#exr- } 

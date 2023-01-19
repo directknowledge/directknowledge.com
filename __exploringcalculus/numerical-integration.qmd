@@ -55,18 +55,6 @@ Note that a somewhat accurate estimation is $0.882081.$
 However, because a fairly large number of rectangles are needed for a good approximation there are other common techniques which do not use rectangles.
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-\subfigure[Using left endpoints.]{
-\includegraphics[width= 150pt]{_includes/1.pdf}
-\label{fig:subfig1}
-}
-\subfigure[Using right endpoints.]{
-\includegraphics[width= 150pt]{_includes/2.pdf}
-\label{fig:subfig2}
-}
-\end{center}
-\end{figure}
 
 
 ## Midpoint Rule
@@ -105,20 +93,6 @@ Consider that as $n$ increases then so does the estimation of the area.
 Note that a somewhat accurate estimation is $0.882081.$ 
 However, because a fairly large number of rectangles are needed for a good approximation there are other common techniques which do not use rectangles. 
 ::: 
-
-
-\begin{figure}[h]
-\begin{center}
-\subfigure[Using midpoints.]{
-\includegraphics[width= 150pt]{_includes/3.pdf}
-\label{fig:subfig3}
-}
-\subfigure[Using trapezoids.]{
-\includegraphics[width= 150pt]{_includes/4.pdf}
-\label{fig:subfig4}
-}
-\end{center}
-\end{figure}
 
 
 
@@ -174,13 +148,6 @@ by the trapezoidal rule satisfies:
 where $M$ is the maximum value of $|f\text{''}(x)|$ on $[a,b].$
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 200pt]{_includes/5.pdf}}
-\caption{Using trapezoids.}
-\label{fig:graph5}
-\end{center}
-\end{figure}
 
 
 ## Simpson's Rule
@@ -200,18 +167,6 @@ It can be shown that the area of the region under the parabolic curve $y=f(x)$ o
 where $\Delta  x=\frac{b-a}{n}.$ 
 Thus, to estimate $\int_a^b f(x) \, dx$ we can add up the strips as follows.
 
-\begin{figure}[h]
-\begin{center}
-\subfigure[Using trapezoids.]{
-\includegraphics[width= 150pt]{_includes/6.pdf}
-\label{fig:subfig6}
-}
-\subfigure[Using parabolic arcs.]{
-\includegraphics[width= 150pt]{_includes/7.pdf}
-\label{fig:subfig7}
-}
-\end{center}
-\end{figure}
 
 
 ::: {#thm- } [Simpson's Rule]
@@ -232,14 +187,6 @@ of the interval $[0,2]$ (so $\Delta  x=\frac{1}{2}$).
 \]
 which is a much better estimation than using rectangles with the same partition.
 ::: 
-
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 200pt]{_includes/8.pdf}}
-\caption{Using Simpson Rule.}
-\label{fig:graph8}
-\end{center}
-\end{figure}
 
 
 ::: {#thm- } [Error in the Simpson Rule] 
@@ -280,17 +227,6 @@ We plot the fourth derivative obtaining: and so there is a maximum at $x=0.$
 We obtain $f^{(4)}(0)=12 =M.$ 
 Therefore, the error is less than $\frac{32}{1804^4}(12)=0.00833333.$
 ::: 
-
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 200pt]{_includes/9.pdf}}
-\caption{Determining the error with Simpson Rule.}
-\label{fig:graph9}
-\end{center}
-\end{figure}
-
-
-
 
 
 

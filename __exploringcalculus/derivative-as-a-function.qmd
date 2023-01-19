@@ -83,7 +83,7 @@ By definition, the \index{slope of the tangent line} **slope of the tangent line
 ::: 
 
 ::: {#exm- } 
-Differentiate the function $\ds f(x)=x+\frac{9}{x}$ and find the slope of the tangent line at the point where $x=-3.$
+Differentiate the function $ \displaystyle f(x)=x+\frac{9}{x}$ and find the slope of the tangent line at the point where $x=-3.$
 ::: 
 
 ::: {.proof }[Solution]
@@ -206,7 +206,7 @@ Compute the difference quotient for the function defined by
 \[
 f(x)=\left\{
 \begin{array}{cc}
-\ds \frac{\sin  x}{x} & \text{ if } x\neq 0 \\[10pt]
+ \displaystyle \frac{\sin  x}{x} & \text{ if } x\neq 0 \\[10pt]
  1 & \text{ if } x=0
 \end{array}
 \right .
@@ -365,7 +365,7 @@ Using the definition find the derivative for each of the following functions.
 ::: {#exr- } 
 Using the alternative definition for the derivative of a function: 
 \[
-\ds f'(x)=\lim _{z\to x}\frac{f(z)-f(x)}{z-x}
+ \displaystyle f'(x)=\lim _{z\to x}\frac{f(z)-f(x)}{z-x}
 \]
 find the derivative of each of the following functions. 
  

@@ -7,14 +7,14 @@ pagetitle: "Triple Integrals - Exploring Calculus"
 ## The Definition of a Triple Integral
 
 Suppose $f(x,y,z)$ is defined on a closed bounded solid region $R,$ which in turn is contained in a box $B$ in space. We partition $B$ into a finite number of smaller boxes, call this partition $P,$ we choose a representative point $\left(x_k^*,y_k^*,z_k^*\right)$ from each subdivision in the partition and we form the sum, 
-\[
+$$
 \sum _{k=1}^N f\left(x_k^*,y_k^*,z_k^*\right)\triangle  V_k
-\] 
+$$ 
 where $\triangle  V_k$ is the volume of the $k$-th representative subdivision. This sum is called the \index{Riemann sum} **Riemann sum**  of $f(x,y,z)$ with respect to the partition $P$ and the cell representation $\left(x_k^*,y_k^*,z_k^*\right).$ To measure the size of the rectangles in the partition $P,$ we define the norm $\|P\|$ of the partition to be the length of the longest diagonal of any of the subdivisions in the partition. We refine the partition by subdividing the subdivisions in such a way that the norm decreases. When this process is applied to the Riemann sum and the norm decreases to zero, we write 
 
-\[
+$$
 \iiint_R f(x,y,z) \, d V = \lim _{\|P\|\to 0}\sum _{k=1}^N f\left(x_k^*,y_k^*,z_k^*\right)\triangle  V_k.
-\] 
+$$ 
 If this limit exists, its value is called the \index{triple integral} **triple integral**  of $f$ over the closed bounded region $R.$ 
 
 
@@ -25,15 +25,15 @@ If this limit exists, its value is called the \index{triple integral} **triple i
 Assume that all the given integrals exist on a rectangular region $R$ for given functions $f(x,y,z)$ and $g(x,y,z).$  
  
 - For constants $a$ and $b,$ 
-\[
+$$
 \iiint_R (a f+b g)(x,y,z) \, dV
-=a \iiint_R f(x,y,z) \, dV + b \iiint_R g(x,y,z) \, dV.\]
+=a \iiint_R f(x,y,z) \, dV + b \iiint_R g(x,y,z) \, dV.$$
 - If $f(x,y,z)\geq g(x,y,z)$ throughout a closed bounded region $R,$ then 
-\[
-\iiint_R f(x,y,z) \, dV\geq \iiint_R g(x,y,z) \, dV.\]
+$$
+\iiint_R f(x,y,z) \, dV\geq \iiint_R g(x,y,z) \, dV.$$
 - If the closed bounded region of integration $R$ is subdivided into two disjoint subdivisions $R_1$ and $R_2$ whose union is $R$, then 
-\[
-\iiint_R f(x,y,z) \, dV= \iiint_{R_1} f(x,y,z) \, dV+\iiint_{R_2} f(x,y,z) \, dV.\]
+$$
+\iiint_R f(x,y,z) \, dV= \iiint_{R_1} f(x,y,z) \, dV+\iiint_{R_2} f(x,y,z) \, dV.$$
  
 ::: 
 
@@ -46,35 +46,35 @@ Assume that all the given integrals exist on a rectangular region $R$ for given 
 If $f(x,y,z)$ is continuous over a rectangular box 
 $B =\{(x,y,z) \mid  a\leq x\leq b, c\leq y\leq d, r\leq z\leq s \},$
 then the triple integral may be evaluated by the iterated integral 
-\[
-\iiint_R f(x,y) \, d V=\int _r^s\int _c^d\int _a^bf(x,y,z) \, dx dy dz\]
+$$
+\iiint_R f(x,y) \, d V=\int _r^s\int _c^d\int _a^bf(x,y,z) \, dx dy dz$$
 The iterated integral can be performed in any order, with appropriate adjustments to the limits of integration. 
 ::: 
 
 
 ::: {#exm- } 
 Evaluate the triple integral over $B$ given 
-\[
+$$
 \iiint_B x y z^2 \, d V
 \quad \text{and} \quad 
 B=\{(x,y,z)\mid  0\leq x\leq 1,-1\leq y\leq 2,0\leq z\leq 3\}.
-\]
+$$
 ::: 
 
 ::: {.solution }
-Since $f(x,y)=x y z^2 $ is continuous on $B$, we can use Fubini's theorem for triple integrals
-\[
+Since $f(x,y)=x y z^2$ is continuous on $B$, we can use Fubini's theorem for triple integrals
+$$
 \int _0^3\int _{-1}^2\int _0^1x y z^2 \, dx dy dz =\int _0^3\int _{-1}^2\frac{y z^2}{2} \, dy dz =\int_0^3 \frac{3 z^2}{4} \, dz =\frac{27}{4}.
-\]
+$$
 ::: 
 
 ::: {#exm- } 
 Evaluate the triple integral over $B$ given 
-\[
+$$
 \iiint_B z^2 y e^x \, d V
 \quad \text{and} \quad 
 B=\{(x,y,z) \mid  0\leq x\leq 1,1\leq y\leq 2,-1\leq z\leq 1\}.
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -82,7 +82,7 @@ Since $f(x,y)=z^2 y e^x$ is continuous on $B$, we can use Fubini's theorem for t
 \begin{align*}
 \int _{-1}^1\int _1^2\int _0^1z^2 y e^x \, dx dy dz 
 & =\int _{-1}^1\int _1^2(-1+e) y z^2 \, dy dz
-\\[5pt]
+\\
 & =\int_{-1}^1 \frac{3}{2} (-1+e) z^2 \, dz 
 =-1+e
 \end{align*}
@@ -90,42 +90,42 @@ Since $f(x,y)=z^2 y e^x$ is continuous on $B$, we can use Fubini's theorem for t
 
 ::: {#exm- } 
 Evaluate the iterated integral
-$\int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \,d\theta $
+$\int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \,d\theta$
 ::: 
 
 ::: {.solution }
 We find  
-\[
+$$
 \int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \, d\theta 
 =\int _0^{2\pi }\int _0^4\frac{r}{2} \, dr \, d\theta
 =\int_0^{2\pi } 4 \, d\theta
 =8 \pi.
-\]
+$$
 ::: 
 
 In many examples a sketch of the region of integration in the plane, can explain how to visualize the solid region of integration, and how to setup the limits of integration. 
 Recall from studying double integrals, that a vertically simple region $D_1$ is a region of the plane that can be described by the inequalities 
-\[D_1=\left\{(x,y) \mid a\leq x\leq b, g_1(x)\leq y\leq  g_2(x)\right\}\]
+$$D_1=\left\{(x,y) \mid a\leq x\leq b, g_1(x)\leq y\leq  g_2(x)\right\}$$
 where $g_1(x)$ and $g_2(x)$ are continuous functions of $x$ on $[a,b].$ 
 Similarly, a horizontally simple region $D_2$, in the plane is a region that can be described by the inequalities 
-\[D_2=\left\{(x,y) \mid c\leq y\leq d, h_1(y)\leq x\leq  h_2(y)\right\}\] 
+$$D_2=\left\{(x,y) \mid c\leq y\leq d, h_1(y)\leq x\leq  h_2(y)\right\}$$ 
 where $h_1(x)$ and $h_2(x)$ are continuous functions of $y$ on $[c,d].$
 In some cases it is possible to evaluate a triple integral by evaluating a triple iterated integral over a solid region that when projected onto the $x y$-plane can be described as a vertically simple or a horizontally simple region.  
 
 ::: {#thm- } [Fubini's Theorem for $z$-Simple Regions]
 
 Suppose $R$ is a solid region bounded below by the surface $z=u(x,y)$ and above by the surface $z=v(x,y)$ that projects onto the region $D$ in the $x y$-plane. If $D$ is either a vertically simple or a horizontally simple region, then the triple integral of the continuous function $f(x,y,z)$ over $R$ is 
-\[
+$$
 \iiint_R f(x,y) \, d V=\iint_D \left(\int_{u(x,y)}^{v(x,y)} f(x,y,z) \, dz\right)dA.
-\]
+$$
 ::: 
 
 ::: {#exm- } 
 
 Evaluate 
-\[
+$$
 \iiint_D\frac{z}{\sqrt{x^2+y^2}} \, dx \, dy \, dz
-\]
+$$
 and $D$ is the solid bounded above by the plane $z=2$ and below by the surface $x^2+y^2-2z=0.$
 ::: 
 
@@ -134,9 +134,9 @@ We consider the region of integration as being $z$-simple by projecting onto the
 \begin{align*}
 \iiint_D \frac{z}{\sqrt{x^2+y^2}}\, dx \, dy \, dz 
 & =4\int _0^{\pi /2}\int _0^2\int _{\left.r^2\right/2}^2\frac{z}{\sqrt{r^2}} r \, dz \, dr \, d\theta 
-\\[5pt]
+\\
 & =4\int _0^{\pi /2}\int _0^2\frac{r \left(2-\frac{r^4}{8}\right)}{\sqrt{r^2}} \, dr \, d\theta 
-\\[5pt]
+\\
 & =4\int_0^{\pi /2} \frac{16}{5} \, d\theta 
 =\frac{32 \pi }{5}.
 \end{align*}
@@ -144,13 +144,13 @@ We consider the region of integration as being $z$-simple by projecting onto the
 
 ::: {#exm- } 
 Change the order of integration to show that  
-\[
+$$
 \int _0^x\int _0^vf(u) \, du \, dv=\int _0^x(x-u)f(u) \, du
-\]
+$$
 Also, show that 
-\[
+$$
 \int _0^x\int _0^v\int _0^uf(w) \, dw \, du \, dv=\frac{1}{2}\int _0^x(x-w)2f(w)dw.
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -177,11 +177,11 @@ bounded by the sphere $x^2+y^2+z^2=2$ and the paraboloid $x^2+y^2=z$.
 By solving for the intersection, $x^2+y^2+z^2=2$ with $z=x^2+y^2$ and so $z^2+z-2=0$ leads to $z=1.$ Therefore region of integration is $x^2+y^2=1$ and so we have a $z$-simple region with  
 \begin{align*} 
 V& =4\int _0^1\int _0^{\sqrt{1-x^2}}\int _{x^2+y^2}^{\sqrt{2-x^2-y^2}} \, dz\, dy \, dx  
-\\[5pt]
+\\
 & =4\int _0^1\int _0^{\sqrt{1-x^2}}\left(-x^2-y^2+\sqrt{-x^2-y^2+2}\right) \, dy \, dx
-\\[5pt]
+\\
 & =4\int _0^{\pi /2}\int _0^1\left(\sqrt{2-r^2}-r^2\right)r \, dr \, d\theta 
-\\[5pt]
+\\
 &=4\int _0^{\pi /2}\left(-\frac{7}{12}+\frac{2 \sqrt{2}}{3}\right) \, d\theta 
 =\left(\frac{8 \sqrt{2} -7}{6}\right)\pi 
 \approx 2.25865 .
@@ -199,7 +199,7 @@ The curves intersect where $y=z^2$ and $y=2-z^2$ and so $z=\pm 1.$ Therefore the
 \begin{align*}
 V& =2\int _0^1\int _{z^2}^{2-z^2}\int _{-2}^1 \, dx \, dy \, dz
 =2\int _0^1\int _{z^2}^{2-z^2}3 \, dy \, dz
-\\[5pt]
+\\
 & =2\int _0^1\left(6-6 z^2\right) \, dz
 =8
 \end{align*}
@@ -213,9 +213,9 @@ the tetrahedron $T$ bounded by the planes $x+2y+z=2,$ $x=2y,$ $x=0,$ and $z=0.$
 
 ::: {.solution }
 The vertices of the tetrahedron are $(0,0,2),$ $\left(1,\frac{1}{2},0\right),$ and $(0,1,0).$ So the region of integration in the $x y$-plane is bounded by the lines $x=0,$ $y=\frac{1}{2}x,$ and $y=1-\frac{1}{2}x$ and is described by the set 
-\[
+$$
 R=\{(x,y) \mid  0\leq x \leq 1, x/2 \leq y \leq 1-x/2\}
-\]  
+$$  
 This is determined by the vertices of the tetrahedron in the $x y$-plane and by determining the equations of the lines through these vertices. So the upper boundary is the plane $x+2y+z=2;$ that is $z=2-x-2y.$ Therefore, the volume of the tetrahedron $T$ bounded by the planes $x+2y+z=2,$ $x=2y,$ $x=0,$ and $z=0$ is
 \begin{align*}
 V& =\iiint_R \, d V 
@@ -233,19 +233,19 @@ V& =\iiint_R \, d V
 
 ::: {#def- } 
 The \index{average value} **average value**  of a function $f$ of three variables over a solid region $R$ is defined to be 
-\[f_{\text{av}}=\frac{1}{V(R)}\underset{R}{\int \int \int} f(x,y,z)\, dV\]
+$$f_{\text{av}}=\frac{1}{V(R)}\underset{R}{\int \int \int} f(x,y,z)\, dV$$
 where $V(R)$ is the volume of the solid $R$. 
 ::: 
 
-If a body in space occupies a region $R$ then the mass of the body is the triple integral of the mass density. The first moment of the body about a plane is the triple integral of the product of the signed distance to the plane and the mass density function where the distance is from the differential element of volume $dx\, dydz.$ The second moment (called \index{moment of inertia} **moment of inertia** ) of a body about an axis is the triple integral of the product square of the distance from the axis and the mass density function where the distance is from the differential element of volume $dx\, dydz.$ For example, a moment of inertia is used in computing kinetic energy of rotation $(1/2)I \omega ^2$ where $\omega $ is the angular speed of rotation. 
+If a body in space occupies a region $R$ then the mass of the body is the triple integral of the mass density. The first moment of the body about a plane is the triple integral of the product of the signed distance to the plane and the mass density function where the distance is from the differential element of volume $dx\, dydz.$ The second moment (called \index{moment of inertia} **moment of inertia** ) of a body about an axis is the triple integral of the product square of the distance from the axis and the mass density function where the distance is from the differential element of volume $dx\, dydz.$ For example, a moment of inertia is used in computing kinetic energy of rotation $(1/2)I \omega ^2$ where $\omega$ is the angular speed of rotation. 
 
 Suppose $R$ is a region in space and that $\delta$ is a continuous density function of $R$. Then for a body occupying a region $R$ in space the center of mass is located at the point $(\overline{x},\overline{y}, \overline{z})$ where 
-\[
+$$
 \overline{x}=\frac{M_{yz}}{m}, \qquad
 \overline{y}=\frac{M_{xz}}{m}, \qquad
 \overline{z}=\frac{M_{xy}}{m}
-\]
-and the \index{first moments} $M_{x y}$, $M_{y x},$ and $M_{x z} **first moments} $M_{x y}$, $M_{y x},$ and $M_{x z** $ about the $x y$-plane, $y z$-plane,
+$$
+and the \index{first moments} **first moments** $M_{x y}$, $M_{y x},$ and $M_{x z}$ about the $x y$-plane, $y z$-plane,
 and the $x z$-plane, respectively are  
 \begin{align*}
 & M_{x y}=\underset{R}{\int \int \int }z \delta (x,y,z)dx\, dydz, \\
@@ -253,21 +253,21 @@ and the $x z$-plane, respectively are
 & M_{x z}=\underset{R}{\int \int \int }y \delta (x,y,z)dx\, dydz,.
 \end{align*}
 where
-\[
+$$
 m=\underset{R}{\int \int \int} \delta(x,y,z) dV
-\]
-is the mass of the body. Further, $I_x ,$ $I_y ,$ and $I_z ,$ the \index{second moments} (or \index{moments of inertia} **second moments} (or \index{moments of inertia** ) about the coordinate axes are  
+$$
+is the mass of the body. Further, $I_x ,$ $I_y ,$ and $I_z ,$ the \index{second moments} **second moments** (or \index{moments of inertia} **moments of inertia**) about the coordinate axes are  
 \begin{align*}
 & I_x=\underset{R}{\int \int \int }\left(y^2+z^2\right) \delta (x,y,z)dx\, dydz, \\
 & I_y=\underset{R}{\int \int \int }\left(x^2+z^2\right) \delta (x,y,z)dx\, dydz, \text{ and } \\
 & I_z=\underset{R}{\int \int \int }\left(x^2+y^2\right) \delta (x,y,z)dx\, dydz.
 \end{align*}
 More generally the \index{moments of inertia} **moments of inertia**  about a line $L$ is  
-\[ I_L=\underset{R}{\int \int \int } r^2 \delta (x,y,z)dV\]
+$$ I_L=\underset{R}{\int \int \int } r^2 \delta (x,y,z)dV$$
 where $r(x,y,z)$ is the distance from the point $(x,y,z)$ to the line $L.$ 
 Intuitively speaking, the moment of inertia $I$ is a measure of the resistance of a body to rotational motion. 
 
-% Moreover, the \index{radius of gyration} about a line $L$ is given as $R_L=\sqrt{\left.I_L\right/M} **radius of gyration} about a line $L$ is given as $R_L=\sqrt{\left.I_L\right/M** $ where $M$ is the total mass of the object.
+% Moreover, the \index{radius of gyration} **radius of gyration** about a line $L$ is given as $R_L=\sqrt{\left.I_L\right/M}$ where $M$ is the total mass of the object.
 
 ::: {#exm- } 
 Find the moment of inertia about the $z$-axis of the solid tetrahedron $S$ with vertices $(0,0,0)$, $(0,1,0)$, $(1,0,0)$, $(0,0,1)$, and density $\delta(x,y,z)=x$.
@@ -277,11 +277,11 @@ Find the moment of inertia about the $z$-axis of the solid tetrahedron $S$ with 
 The solid $S$ can be described as the set of all $(x,y,z)$ such that $0\leq x\leq 1$, $0\leq y \leq 1-x$, and $0\leq z\leq 1-x-y$. Thus, 
 \begin{align*}
 I_z&=\underset{S}{\int \int \int}(x^2+y^2)\delta(x,y,z) \, dV 
-\\[5pt]
+\\
 & =\int_0^1\int_0^{1-x}\int_0^{1-x-y} x(x^2+y^2) \, dz \, dy \, dx 
-\\[5pt]
+\\
 & =\int_0^1 \int_0^{1-x}x(x^2+y^2)(1-x-y) dy \, dx 
-\\[5pt]
+\\
 & = \int_0^1 \left(\frac{x^3(1-x^2)}{2}-\frac{x(1-x^4)}{12}\right) \,dx
 =\frac{1}{90}.
 \end{align*}
@@ -294,36 +294,23 @@ I_z&=\underset{S}{\int \int \int}(x^2+y^2)\delta(x,y,z) \, dV
 Find the following iterated integrals. 
  
 - $\int _1^4\int _{-2}^3\int _2^5 \, dx \, dy \, dz.$ 
-\item 
-$\int _{-1}^3\int _0^2\int _{-2}^2 \, dy \, dz \, dx.$
-\item 
-$\int _1^2\int _0^1\int _{-1}^28x^2y z^3 \, dx \, dy \, dz.$ 
-\item 
-$\int _4^7\int _{-1}^2\int _0^3x^2y^2z^2 \, dx \, dy \, dz.$
-\item 
-$\int _0^2\int _0^x\int _0^{x+y}x y z \, dz \, dy \, dx.$ 
-\item 
-$\int _0^1\int _{\sqrt{x}}^{\sqrt{1+x}}\int_0^{x y}y^{-1} z \, dz \, dy \, dx.$ 
-\item 
-$\int _{-1}^2\int _0^{\pi }\int _1^4y z \cos  x y \, dz \, dx \, dy.$ 
-\item 
-$\int _0^{\pi }\int _0^1\int _0^1x^2y \cos  x y z \, dz \, dy \, dx.$ 
-\item 
-$\int _0^1\int _0^y\int _0^{\ln (y)}e^{z+2x} \, dz \, dx \, dy.$
-  
+- $\int _{-1}^3\int _0^2\int _{-2}^2 \, dy \, dz \, dx.$
+- $\int _1^2\int _0^1\int _{-1}^28x^2y z^3 \, dx \, dy \, dz.$ 
+- $\int _4^7\int _{-1}^2\int _0^3x^2y^2z^2 \, dx \, dy \, dz.$
+- $\int _0^2\int _0^x\int _0^{x+y}x y z \, dz \, dy \, dx.$ 
+- $\int _0^1\int _{\sqrt{x}}^{\sqrt{1+x}}\int_0^{x y}y^{-1} z \, dz \, dy \, dx.$ 
+- $\int _{-1}^2\int _0^{\pi }\int _1^4y z \cos  x y \, dz \, dx \, dy.$ 
+- $\int _0^{\pi }\int _0^1\int _0^1x^2y \cos  x y z \, dz \, dy \, dx.$ 
+- $\int _0^1\int _0^y\int _0^{\ln (y)}e^{z+2x} \, dz \, dx \, dy.$
 ::: 
 
 ::: {#exr- } 
 Evaluate the triple integral over the given region
-\ 
+
 - $\underset{D}{\int \int \int }\left(x^2y+y^2z\right)\,dV$ where $D$ is the boxed region defined by $1\leq x\leq 3$, $-1\leq y\leq 1$, and $2\leq z\leq 4.$
-\item 
-$\underset{D}{\int \int \int }(x y+2 y z)\, dV$ where $D$ is the boxed region defined by $2\leq x\leq 4$, $1\leq y\leq 3$, and $-2\leq z\leq 4.$
-\item 
-$\underset{D}{\int \int \int }x y z \, dV$ where $D$ is the region bounded by the paraboloid$z=x^2+y^2$ and the plane $z=1.$ 
-\item 
-$\underset{D}{\int \int \int }y z \, dV$ where $D$ is the solid in the first octant bounded by the hemisphere $x=\sqrt{9-y^2-z^2}$ and the coordinate planes. 
-  
+- $\underset{D}{\int \int \int }(x y+2 y z)\, dV$ where $D$ is the boxed region defined by $2\leq x\leq 4$, $1\leq y\leq 3$, and $-2\leq z\leq 4.$
+- $\underset{D}{\int \int \int }x y z \, dV$ where $D$ is the region bounded by the paraboloid$z=x^2+y^2$ and the plane $z=1.$ 
+- $\underset{D}{\int \int \int }y z \, dV$ where $D$ is the solid in the first octant bounded by the hemisphere $x=\sqrt{9-y^2-z^2}$ and the coordinate planes. 
 ::: 
 
 ::: {#exr- } 
@@ -332,20 +319,20 @@ Find the volume of the region between the two elliptic paraboloids $z=\left.x^2\
 
 ::: {#exr- } 
 Change the order of integration to show that 
-\[
+$$
 \int _0^x\int _0^vf(u) \, du \, dv=\int _0^x(x-u)f(u) \, du.
-\] 
+$$ 
 Also, show that
-\[
+$$
 \int _0^x\int _0^v\int _0^uf(w) dw du dv =\frac{1}{2}\int _0^x(x-w)2f(w) \, dw.
-\]
+$$
 ::: 
 
 ::: {#exr- } 
 Higher-dimensional multiple integrals can be defined and evaluated in essentially the same way as double integrals and triple integrals. Evaluate the multiple integrals 
-\[
+$$
 \underset{H}{\int \int \int \int }x y w^2 \, dx \, dy \, dz \, dw
-\] where $H$ is the four-dimensional (hyperbox) defined by $0\leq  x\leq  1,$ $0\leq y\leq 2,$ $-1\leq z\leq 1,$ and $1\leq
+$$ where $H$ is the four-dimensional (hyperbox) defined by $0\leq  x\leq  1,$ $0\leq y\leq 2,$ $-1\leq z\leq 1,$ and $1\leq
 w\leq 2.$ 
 ::: 
 
@@ -355,16 +342,16 @@ Find the volume $V$ of the solids bounded by the graphs of the equations by usin
 
 ::: {#exr- } 
 Evaluate the multiple integral 
-\[
+$$
 \underset{H}{\int \int \int \int }e^{x-2y+z+w} \, dw \, dz \, dy \, dx
-\] where $H$ is the four-dimensional region bounded by the hyperplane $x+y+z+w=4$ and the coordinate spaces $x=0,$ $y=0,$ $z=0,$ and $w=0$ in the first hyperoctant (where $x\geq 0,$ $y\geq 0,$ $z\geq 0,$ $w\geq 0$). 
+$$ where $H$ is the four-dimensional region bounded by the hyperplane $x+y+z+w=4$ and the coordinate spaces $x=0,$ $y=0,$ $z=0,$ and $w=0$ in the first hyperoctant (where $x\geq 0,$ $y\geq 0,$ $z\geq 0,$ $w\geq 0$). 
 ::: 
 
 ::: {#exr- } 
 A solid of constant density is bounded below by the plane $z=0,$ on the sides by the elliptical cylinder $x^2+4y^2=4,$ and above by the plane $z=2-x.$ Find $\bar{x} ,$ $\bar{y} ,$ and then evaluate the integral 
-\[
+$$
 M_{x y}=\int _{-2}^2\int _{-(1/2)\sqrt{4-x^2}}^{1/2\sqrt{4-x^2}}\int_0^{2-x}z \, dz \, dy \, dx
-\] to determine $\bar{z}.$ 
+$$ to determine $\bar{z}.$ 
 ::: 
 
 ::: {#exr- } 

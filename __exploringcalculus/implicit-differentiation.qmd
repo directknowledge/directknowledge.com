@@ -57,13 +57,7 @@ Using implicit differentiation we have,
 \[
  \frac{dy}{dx}=\frac{6y-3x^2}{3y^2-6x}=\frac{x^2-2 y}{2 x-y^2}
 \] 
-So an equation of the tangent line at $(3,3)$ is $\ds y-3=\left.\frac{dy}{dx}\right|_{(3,3)}(x-3)$ which simplifies to $y=-x+6.$ 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=170pt]{_includes/p8.pdf} 
-\caption{Folium of Descartes $x^3+y^3=6x y$.}
-\label{fig:id1}
-\end{figure}
+So an equation of the tangent line at $(3,3)$ is $ \displaystyle y-3=\left.\frac{dy}{dx}\right|_{(3,3)}(x-3)$ which simplifies to $y=-x+6.$ 
 ::: 
 
 
@@ -84,12 +78,6 @@ and so
 \frac{dy}{dx}=\frac{25 x-4 x \left(x^2+y^2\right)}{25 y+4 y \left(x^2+y^2\right)}
 \] 
 So an equation of the tangent line at $(3,1)$ is  $y-1=\frac{dy}{dx}|_{(3,1)}(x-3)$ which simplifies to $y=\frac{-9}{13}x+\frac{40}{13}.$ 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=170pt]{_includes/p9.pdf} 
-\caption{Lemniscate of Bernoulli: $2\left(x^2+y^2\right)^2=25\left(x^2-y^2\right)$.}
-\label{fig:id2}
-\end{figure}
 ::: 
 
 
@@ -107,13 +95,6 @@ and so
 \]
 we need to find all $(x,y)$ where $\frac{dy}{dx}=0.$ Clearly, the point $(0,0)$ is ruled out and so $-2+x^2+y^2=0$; that is $x^2+y^2=2.$ Using $x^2+y^2=2$ with the original we see $x^2-y^2=1$ also. Therefore, $2x^2=3$ and so $x=\pm \sqrt{\frac{3}{2}}$ and $y=\pm \sqrt{\frac{1}{2}}.$
 ::: 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=170pt]{_includes/p10.pdf} 
-\caption{Lemniscate of Bernoulli: $\left(x^2+y^2\right)^2=4\left(x^2-y^2\right)$.
-}
-\label{fig:id3}
-\end{figure}
 
 
 ::: {#exm- } 
@@ -128,13 +109,6 @@ Using implicit differentiation we determine,
 and so,  $\frac{dy}{dx}=\frac{3y-2x}{4y-3x}$. Since we want vertical tangent lines we need $4y-3x=0;$ that is, $y=\frac{3}{4}x$ and with the original equation this means;  $x^2-3x \left(\frac{3}{4}x\right)+2\left(\frac{3}{4}x\right)^2=-2$ which is solved as $x=\pm 4.$ So the points where the tangent line is vertical are $(-4,-3)$ and $(4,3).$
 ::: 
 
-\begin{figure}[htbp]
-\begin{center}
-{\includegraphics[width=170pt]{_includes/p18.pdf}} 
-\caption{The graph of the curve $x^2-3xy+2y^2=-2$.}.
-\label{fig:p18}
-\end{center}
-\end{figure}
 
 ## Logarithmic Differentiation
 

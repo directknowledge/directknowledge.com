@@ -45,31 +45,25 @@ one of the following is true:
  
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/ext-func-1-pics.pdf}
-\caption{The graph of $f(x,y)=x^2+y^2-2x-6y+14$ shows that $f$ has an absolute minimum value of 4 at $(1,3)$.}
-\label{fig:ext-func-1}
-\end{figure} 
 
 ::: {#exm- } 
 Find the critical points for the function 
-\[
+$$
 f(x,y)=x^2+y^2-2x-6y+14.
-\]
+$$
 ::: 
 
 ::: {.solution }
 The first partial derivatives of $f$ are
-\[
+$$
 f_x(x,y)=2x-2 \qquad 
 \text{and} \qquad 
 f_y(x,y)=2y-6.
-\] 
+$$ 
 These partial derivatives are equal to 0 when $x=1$ and $y=3$ so the only critical point is $(1,3).$ By completing the square we find that 
-\[
+$$
 f(x,y)=4+(x-1)^2+(y-3)^2.
-\]  
+$$  
 Since $(x-1)^2\geq  0$ and $(y-3)^2\geq  0,$ we have $f(x,y)\geq 4$ for all values of $x$ and $y.$ Therefore, $f(1,3)=4$ is a local minimum, and in fact it is the absolute minimum of $f.$ This can be confirmed geometrically from the graph of $f$, which is the elliptic paraboloid with vertex $(1,3,4)$ as shown in \ref{fig:ext-func-1}.
 ::: 
 
@@ -77,12 +71,6 @@ Since $(x-1)^2\geq  0$ and $(y-3)^2\geq  0,$ we have $f(x,y)\geq 4$ for all valu
 A critical point $P_0\left(x_0,y_0\right)$ is called a \index{saddle point} **saddle point**  of $f$ if every open disk centered at $P_0$ contains points in the domain of $f$ that satisfy $f(x,y)>f\left(x_0,y_0\right)$ as well as points in the domain of $f$ that satisfy $f(x,y)<f\left(x_0,y_0\right).$
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/extfunc2.pdf}
-\caption{The graph of $f(x,y)=y^2-x^2$ has a saddle point at $(0,0)$.}
-\label{fig:ext-func-2}
-\end{figure} 
 
 ::: {#exm- } 
 Find the extreme values of 
@@ -115,44 +103,38 @@ If $D:=(f_{x x}f_{y y}-\left(f_{x y}\right)^2)\left(x_0,y_0\right)>0$, then
 If $D\left(x_0,y_0\right)<0$, then a saddle point occurs at $P_0$.
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/extfunc3.pdf}
-\caption{The graph of $f(x,y)=x^4+y^4-4x y+1$ has relative minimum at $(-1,-1)$ and $(1,1)$.}
-\label{fig:ext-func-2}
-\end{figure} 
 
 ::: {#exm- } 
 Find the relative extrema of the function  
-\[
+$$
 f(x,y)=x^4+y^4-4x y+1.
-\]
+$$
 ::: 
 
 ::: {.solution }
 We first locate the critical points 
-\[
+$$
 f_x=4x^3-4y \qquad \text{and} \qquad f_y=4y^3-4x.
-\]  
+$$  
 Setting these partial derivatives to 0, we obtain the equations$x^3-y=0$ and $y^3-x=0.$  
 To solve these equations we substitute $y=x^3$ from the first equation into the second one. 
 This gives 
-\[
+$$
 0
 =x^9-x
 =x\left(x^8-1\right) 
 =x\left(x^4-1\right)\left(x^4+1\right) 
 =x(x-1)(x+1)\left(x^2+1\right)\left(x^4+1\right)
-\]
+$$
 So there are three real roots: $x=0,1 ,-1.$ 
 The three critical points are $(0,0), (1,1),$ and $(-1,-1).$ 
 Next we calculate the second partial derivatives and $D(x,y)$: 
-\[
+$$
 f_{x x}=12x^2, \qquad f_{x y}=-4, \qquad f_{y y}=12y^2.
-\] 
+$$ 
 Thus, 
-\[D(x,y)=f_{x x}f_{y y}-\left(f_{x y}\right)^2=144x^2y^2-16.
-\] 
+$$D(x,y)=f_{x x}f_{y y}-\left(f_{x y}\right)^2=144x^2y^2-16.
+$$ 
 Since $D(0,0)=-16<0,$ it follows that the origin is a saddle point; that is, $f$ has no local extremum at $(0,0).$ 
 Since $D(1,1)=128>0$ and $f_{x x}(1,1)=12>0,$ we see that $f(1,1)=-1$ is a local minimum. 
 Similarly, we have $D(-1,-1)=128>0$ and $f_{x x}(-1,1-1)=12>0,$ so $f(-1,-1)=-1$ is also a local minimum.  
@@ -184,13 +166,6 @@ set $S$ where it is continuous.
 The proof is left for the reader.
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/extfunc5.pdf}
-\caption{The shortest distance from the point $(1,0,-2)$ to the plane $x+2y+z=4$ is $5\sqrt{6}/6$. 
-The viewpoint shown is ViewPoint $\rightarrow$ \{3.19, -0.73,-0.83\} with ViewVertical $\rightarrow$ \{0, 0, -1\}.}
-\label{ext-func-5}
-\end{figure} 
 
 ::: {#exm- } 
 Find the \index{shortest distance} **shortest distance**  from the point $(1,0,-2)$ to the plane 
@@ -201,28 +176,22 @@ $$
 
 ::: {.solution }
 The distance from any point $(x,y,z)$ to the point $(1,0,-2)$ is 
-\[d=\sqrt{(x-1)^2+y^2+(z+2)^2}\] 
+$$d=\sqrt{(x-1)^2+y^2+(z+2)^2}$$ 
 but if $(x,y,z)$ lies on the plane, then $z=4-x-2y$ and so we have 
-\[d=\sqrt{(x-1)^2+y^2+(6-x-2y)^2}.\]
+$$d=\sqrt{(x-1)^2+y^2+(6-x-2y)^2}.$$
 We can minimize $d$ by minimizing the simpler expression 
-\[d^2=f(x,y)=(x-1)^2+y^2+(6-x-2y)^2.\]  
+$$d^2=f(x,y)=(x-1)^2+y^2+(6-x-2y)^2.$$  
 By solving the equations 
-\[f_x=2(x-1)^2-2(6-x-2y)=4x+4y-14=0\]  
-\[f_y=2y-4(6-x-2y)=4x+10y-24=0\] 
+$$f_x=2(x-1)^2-2(6-x-2y)=4x+4y-14=0$$  
+$$f_y=2y-4(6-x-2y)=4x+10y-24=0$$ 
 we find that the only critical point is $(11/3,5/3).$ Since $f_{x x}=4,$ $f_{x y}=4,$ and $f_{y y}=10,$ we have 
-\[D(x,y)=f_{x x}f_{y y}-\left(f_{x y}\right){}^2=24>0\] 
+$$D(x,y)=f_{x x}f_{y y}-\left(f_{x y}\right){}^2=24>0$$ 
 and $f_{x x}>0$ so $f$ has a local minimum at $(11/6,5/3).$ Intuitively, we can see that this local minimum is actually
 an absolute minimum because there must be a point on the given plane that is closest to $(1,0,-2).$ If $x=11/6$ and $y=5/3,$ then 
-\[d=\sqrt{\left(\frac{5}{6}\right)^2+\left(\frac{5}{3}\right)^2+\left(\frac{5}{6}\right)^2}=\frac{5\sqrt{6}}{6}.\] 
+$$d=\sqrt{\left(\frac{5}{6}\right)^2+\left(\frac{5}{3}\right)^2+\left(\frac{5}{6}\right)^2}=\frac{5\sqrt{6}}{6}.$$ 
 which is the shortest distance.
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/ext-func-2-pics.pdf}
-\caption{Finding absolute extrema of $f(x,y)=x^2-2x y+2y$ on $D=\{(x,y) \mid 0\leq x\leq 3,0\leq y\leq 2\}$.}
-\label{ext-func-2}
-\end{figure} 
 
 ::: {#exm- } 
 Find the absolute extrema of the function over the bounded region 
@@ -238,7 +207,7 @@ $$
 ::: {.solution }
 Since $f$ is a polynomial it is continuous on the closed bounded rectangle $D,$ therefore $f$ has both absolute maximum
 and minimum values. We first find the critical points by solving the system 
-\[f_x=2x-2y=0 \qquad \text{and} \qquad f_y=-2x+2=0\] 
+$$f_x=2x-2y=0 \qquad \text{and} \qquad f_y=-2x+2=0$$ 
 The only critical point is $(1,1),$ and the value of $f$ there is $f(1,1)=1.$ We look at the values of $f$ on the boundary of $D$, which consists of four line segments $L_1, L_2, L_3$, and $L_4$ as follows.
 \par
 On $L_1$ we have $y=0$ and $f(x,0)=x^2$ for $0\leq x\leq 3.$ This is an increasing function of $x,$ so its minimum value is $f(0,0)=0$ and its maximum value is $f(3,0)=9.$ 
@@ -253,12 +222,6 @@ Thus on the boundary, the minimum value of $f$ is 0 and the maximum is 9.
 We compare these values with the value $f(1,1)=1$ at the critical point and conclude that the absolute maximum value of $f$ on $D$ is $f(3,0)=9$ and the absolute minimum value is $f(0,0)=f(2,2)=0.$ 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/ext-func-6-pics.pdf}
-\caption{Rectangular box enclosing maximum volume constructed from 12 $\text{m}^2$ of material.}
-\label{ext-func-6}
-\end{figure} 
 
 ::: {#exm- } 
 A rectangular box without a lid is to be made from 12 $m^2$ of cardboard. 
@@ -269,36 +232,30 @@ Find the maximum volume of such a box.
 Let the length, width, and height of the box (in meters) be $x,$ $y,$ and $z.$ 
 Then the volume of the box is $V=x y z.$ We can express $V$ as a function of just two variables by using the fact that the surface area of the sides and the bottom of the box is $2x z+2 y z+x y=12.$ 
 Solving these equation for $z,$ we get 
-\[
+$$
 z=\frac{12-x y}{2(x+y)},
-\] 
+$$ 
 so the expression for volume $V$ becomes 
-\[
+$$
 V=\frac{12 x y-x^2y^2}{2(x+y)}.
-\] 
+$$ 
 We compute the partial derivatives
-\[
+$$
 V_x=\frac{y^2\left(12-2 x y-x^2\right)}{2(x+y)}
 \qquad \text{and}\qquad 
 V_y=\frac{x^2\left(12-2 x y -y^2\right)}{2(x+y)^2}.
-\]
+$$
 If $V$ is a maximum, then $V_x=V_y=0,$ but $x=0$ or $y=0$ gives $V=0,$ so we must solve the equations
-\[
+$$
 12-2x y-x^2=0\qquad \text{and} \qquad 
 12-2 x y-y^2=0.
-\] 
+$$ 
 These imply that $x^2=y^2$ and so $x=y$. (Note that $x$ and $y$ must both be positive in this example.) 
 If we put $x=y$ in either equation we get $12-3x^2=0,$ which gives $x=2,$ $y=2,$ and $z=1.$ 
 From the physical nature of this example there must be an absolute maximum volume that has to occur at a critical point of $V,$ so it must be when $x=2,$ $y=2,$ and $z=1.$ 
 Then $V=2\cdot 2\cdot 1=4,$ so the maximum volume of the box is $4m^3.$
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/ext-func-3-pics.pdf}
-\caption{Finding absolute extrema of $f(x,y)=x^2+3y^2-4x+2y-3$ on $D=\{(x,y) \mid 0\leq x\leq 3,-3\leq y\leq 0\}$.}
-\label{ext-func-3}
-\end{figure} 
 
 ::: {#exm- } 
 Find the absolute extrema of the function 
@@ -338,12 +295,6 @@ Finally, we have $f(2,-1/3)=-22/3$ (the minimum), $f(3,-1/3)=-19/3,$ $f(2,-3)=14
 $f(0,-1/3)=-10/3,$ $f(2,0)=-7,$ $f(0,0)=-3,$ $f(3,0)=-6,$ $f(3,-3)=15,$ and $f(0,-3)=18$ (the maximum). 
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics{_includes/ext-func-4-pics.pdf}
-\caption{Finding absolute extrema of $f(x,y)=\sin  x+\cos  2y$ on $R=[0,\pi ]\times [0,\pi ]$.}
-\label{ext-func-4}
-\end{figure} 
 
 ::: {#exm- } 
 Find the hottest and coldest points on the metal plate 
@@ -370,7 +321,7 @@ $$
 f(0,y)=f(\pi ,y) =\cos 2y
 \quad \text{ for } 0\leq y\leq  \pi
 $$
-which achieves its maximum at $0$ and $\pi $ and its minimum at $\pi /2.$ 
+which achieves its maximum at $0$ and $\pi$ and its minimum at $\pi /2.$ 
 We see that the hottest points are $(\pi /2,0)$ and $(\pi /2,\pi )$ and the coldest points are $(0,\pi /2)$ and $(\pi ,\pi /2).$
 ::: 
   

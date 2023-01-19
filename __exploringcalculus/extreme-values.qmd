@@ -14,8 +14,7 @@ Now we define relative extrema and state the relative extrema theorem.
 ::: {#def- } 
 Let $f$ be a function defined on an open interval $I$ with $c\in I$. 
  
-\item 
-If $f(c)\geq f(x)$ for all $x$ in $I,$ then $f(c)$ is called a \index{relative maximum} **relative maximum**  of $f$ on $I.$ 
+- If $f(c)\geq f(x)$ for all $x$ in $I,$ then $f(c)$ is called a \index{relative maximum} **relative maximum**  of $f$ on $I.$ 
 - If $f(c)\leq  f(x)$ for all $x$ in $I,$ then $f(c)$ is called a \index{relative minimum} **relative minimum**  of $f$ on $I.$ 
 - If $c\in I$ and $f(c)$ is either a relative maximum or a relative minimum then $f(c)$ is a relative extrema, and we say that $f(c)$ is a \index{relative extreme value} **relative extreme value**  of $f$. 
  
@@ -85,10 +84,8 @@ This is the crucial idea behind using the derivative to analyze graphs of functi
 ::: {#def- } 
 A real number $c$ is called a \index{critical number} **critical number**  of the function $f$ provided:
  
-\item 
-$c$ is in the domain of $f$ and $f'(c)=0$ or
-\item 
-$c$ is in the domain of $f$ and $c$ is not in the domain of $f'$.
+- $c$ is in the domain of $f$ and $f'(c)=0$ or
+- $c$ is in the domain of $f$ and $c$ is not in the domain of $f'$.
  
 ::: 
 
@@ -184,7 +181,7 @@ So there are three critical numbers of $f$ namely, $x=0$ and $x=\pm 3.$
 ::: {#exm- }  
 Find the critical numbers, if there are any, for the function 
 \[
-\ds f(x)=\frac{x^2}{x^2-3}.
+ \displaystyle f(x)=\frac{x^2}{x^2-3}.
 \]
 ::: 
 
@@ -196,7 +193,7 @@ So there are three critical numbers of $f$ namely $x=0$ and $x=\pm \sqrt{3}.$
 ::: {#exm- }  
 Find the critical numbers, if there are any, for the function 
 \[
-\ds f(x)=\ln  \sqrt{x-2}.
+ \displaystyle f(x)=\ln  \sqrt{x-2}.
 \]
 ::: 
 
@@ -306,13 +303,6 @@ The largest value is the absolute maximum and the smallest value is the absolute
 Find the absolute extrema of $f(x)=x^4-4x^2+2$ on the interval $[-3,2]$.
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 120pt,height= 120pt]{_includes/extreme-values-of-functions-1.pdf}} 
-\caption{$f(x)=x^4-4x^2+2$ on the interval $[-3,2]$}
-\label{fig:graph1}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The function $f$ has derivative, $f'(x)=4 x^3-8 x$. 
@@ -336,13 +326,6 @@ The following table determines the absolute extrema  of the function $f$.
 Find the absolute extrema of $f(x)=x^{4/5}$ on the interval $[-32,1]$.
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 120pt,height= 120pt]{_includes/extreme-values-of-functions-2.pdf}} 
-\caption{$f(x)=x^{4/5}$ on the interval $[-32,1]$}
-\label{fig:graph2}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The function $f$ has derivative, $f'(x)=4/(5 x^{1/5})$. 
@@ -361,16 +344,9 @@ The following table determines the absolute extrema  of the function $f$.
 
 
 ::: {#exm- }  
-Find the absolute extrema of $\ds f(x)=\frac{x}{x+1}$ on the interval $[1,2]$.
+Find the absolute extrema of $ \displaystyle f(x)=\frac{x}{x+1}$ on the interval $[1,2]$.
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 120pt,height= 120pt]{_includes/extreme-values-of-functions-3.pdf}} 
-\caption{$f(x)=\frac{x}{x+1}$ on the interval $[1,2]$}
-\label{fig:graph3}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The function $f$ has derivative, $f'(x)=\frac{1}{(1+x)^2}$ and so there are no critical numbers because $x=-1$ is not in our domain of $[1,2]$ (see Figure ~\ref{fig:graph3}) and $f'$ is defined for all $x$ in $[1,2]$. 
@@ -389,13 +365,6 @@ The following table determines the absolute extrema  of the function $f$.
 Find the absolute extrema of $f(x)=\sin  x + \cos  x$ on the interval $[0,\pi/3]$.
 ::: 
 
-\begin{figure}[h]
-\begin{center}
-{\includegraphics[width= 120pt,height= 120pt]{_includes/extreme-values-of-functions-4.pdf}} 
-\caption{$f(x)=\sin  x + \cos  x$ on the interval $[0,\pi/3]$}
-\label{fig:graph4}
-\end{center}
-\end{figure}
 
 ::: {.solution } 
 The function $f$ has derivative, $f'(x)=\cos  x-\sin  x$ and so to find our critical number we need to solve $\sin  x=\cos  x$ or $\tan  x=1$ which is of course $x=\frac{\pi }{4}+\pi  k$ where $k$ is any integer. However, for our given domain of $[0,\pi /3]$ the only critical number is $\pi /4$ (see Figure ~\ref{fig:graph4}). 
@@ -456,14 +425,10 @@ Find the absolute maximum and minimum values of the function $f(x)=3 x^{2/3}$ on
 ::: {#exr- } 
 Find the absolute maximum and absolute minimum values of the given function on the given interval. 
  
-\item 
-$h(x)=\frac{x}{x+1}\text{ on }[1,2]$ 
-\item 
-$i(x)=\cos ^{-1}x \tan ^{-1}x\text{ on }[0,1]$ 
-\item 
-$j(x)=e^{-x}(\cos  x+\sin  x)\text{ on }[0,4\pi ]$ 
-\item 
-$k(x)=\sqrt[3]{x}\sqrt[3]{(x-3)^2}\text{ on }[-1,4]$ 
+- $h(x)=\frac{x}{x+1}\text{ on }[1,2]$ 
+- $i(x)=\cos ^{-1}x \tan ^{-1}x\text{ on }[0,1]$ 
+- $j(x)=e^{-x}(\cos  x+\sin  x)\text{ on }[0,4\pi ]$ 
+- $k(x)=\sqrt[3]{x}\sqrt[3]{(x-3)^2}\text{ on }[-1,4]$ 
  
 ::: 
 

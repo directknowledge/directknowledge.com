@@ -35,10 +35,7 @@ Find the area of the region enclosed by the parabola $y=2-x^2$ and the line $y=-
 ::: {.solution }
 First we find the intersection points $(-1,1)$ and $(2,-2).$ 
 Then we see that we have $f(x)=2-x^2 \geq g(x)=-x$ for all $x\in [-1,2]$ as required. 
-\begin{figure}[H]
-\centering
-\includegraphics[width=200pt]{_includes/area-between-curves-9.pdf}
-\end{figure}
+
 Therefore the area between the curves is 
 \begin{align*}
 \int_a^b [f(x)-g(x)] \, dx
@@ -58,10 +55,7 @@ Find the area of the region in the first quadrant that is bounded above by $y=\s
 ::: {.solution }
 First we find the intersection point $(4,2).$ 
 From a sketch of the graphs we see that we should consider the bounded region as two separate regions. 
-\begin{figure}[H]
-\centering
-\includegraphics[width=200pt]{_includes/area-between-curves-10.pdf}
-\end{figure}
+
 We have $f(x)=\sqrt{x}\geq g(x)=0$ for all $x$ in $[0,2]$ and in the other region we have $f(x)=\sqrt{x}\geq g(x)=x-2$ for all $x$ in $[2,4].$ 
 The total area is
 \begin{align*}
@@ -85,10 +79,7 @@ $$
 {f(x)=2x^2\geq g(x)=x^4-2x^2}
 $$ 
 for all $x$ in $[0,2].$
-\begin{figure}[H]
-\centering
-\includegraphics[width=200pt]{_includes/area-between-curves-11.pdf}
-\end{figure}
+
 The total area is
 \begin{align*}
 & 2 \int_{0}^2 [2x^2-(x^4-2x^2)]\, dx 
@@ -107,10 +98,7 @@ Find the area of the shaded region between the curves ${y=2x^3-x^2-5x}$ and $y=-
 ::: {.solution }
 First we find the intersection points $(-2,-10),$ $(0,0),$ and $(2,2).$
 From a sketch of the graphs wee see that we should break the bounded region into two regions. 
-\begin{figure}[H]
-\centering
-\includegraphics[width=200pt]{_includes/area-between-curves-12.pdf}
-\end{figure}
+
 Notice that for all $x$ in $[-2,0]$ we have 
 $$
 f(x)= 2x^3-x^2-5x\geq g(x) = -x^2+3x
@@ -155,10 +143,7 @@ $$
 f(y)=y+2\geq g(y)=y^2
 $$ 
 for all $y$ in $[0,2]$ as is seen in the sketch of the region. 
-\begin{figure}[H]
-\centering
-\includegraphics[width=200pt]{_includes/area-between-curves-13.pdf}
-\end{figure}
+
 The total area is
 \begin{align*}
 & \int_0^2 [y+2-y^2] \, dy 

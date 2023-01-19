@@ -73,11 +73,14 @@ book:
   site-url: https://directknowledge.com/exploring-calculus/
   description: "exploring-calculus"  
 
+
 format:
   html:
     include-in-header: 
       - ../_html/head-ec.html
-pdf:
+    include-before-body: 
+      - ../_html/latex-macros.html
+  pdf:
     keep-tex: true
     toc: false
     documentclass: book
@@ -89,7 +92,8 @@ pdf:
       - ../_control/topmatter.tex
     include-after-body: 
       - ../_control/makeindex.tex
-  
+
 metadata-files:
   - ../_meta/book.yml
   - ../_meta/format.yml
+

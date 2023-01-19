@@ -8,15 +8,15 @@ pagetitle: "Change of Variables In Multiple Integrals - Exploring Calculus"
 
 
 If $x=x(u,v)$ and $y=y(u,v)$ then the \index{Jacobian} **Jacobian**  of $x$ and $y$ with respect to $u$ and $v$ is 
-\[
+$$
 \frac{\partial (x,y)}{\partial (u,v)}
 =J(u,v)=\left|
 \begin{array}{cc}
- \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\[10pt]
+ \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
  \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
 \end{array}
 \right|=\frac{\partial x}{\partial u}\frac{\partial y}{\partial v}-\frac{\partial y}{\partial u}\frac{\partial x}{\partial v}.
-\]
+$$
 
 ::: {#exm- } 
 
@@ -24,11 +24,11 @@ Determine the Jacobian for the transformation from the rectangular plane to the 
 ::: 
 
 ::: {.solution }
- The conversion formulas are $x=r \cos  \theta $ and $y=r \sin  \theta .$ So the Jacobian is
-\[
+ The conversion formulas are $x=r \cos  \theta$ and $y=r \sin  \theta .$ So the Jacobian is
+$$
 J(r,\theta )=\left|
 \begin{array}{cc}
- \frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta }  \\[10pt]
+ \frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta }  \\
  \frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta }
 \end{array}
 \right|=\left|
@@ -38,24 +38,25 @@ J(r,\theta )=\left|
 \end{array}
 \right|
 =r \cos ^2 \theta -\left(-r \sin ^2 \theta \right)=r.
-\]
+$$
 ::: 
 
 More generally for
-\[
-x_1=x_1\left(u_1,\text{...},u_n\right), \quad 
-x_2=x_2\left(u_1,...,u_n\right), \quad ... \quad 
-x_n=x_n\left(u_1,\text{...},u_n\right)\]
-the \index{Jacobian} of $x_1,..., x_n$ with respect to $u_1,\text{...} **Jacobian} of $x_1,..., x_n$ with respect to $u_1,\text{...** ,u_n$ is 
-\[
-J\left(u_1,\text{...},u_n\right)=\left|
+$$
+x_1=x_1\left(u_1,\text{\ldots},u_n\right), \quad 
+x_2=x_2\left(u_1,\ldots,u_n\right), \quad \ldots \quad 
+x_n=x_n\left(u_1,\text{\ldots},u_n\right)
+$$
+the \index{Jacobian} **Jacobian** of $x_1,\ldots, x_n$ with respect to $u_1,\ldots,u_n$ is 
+$$
+J\left(u_1,\text{\ldots},u_n\right)=\left|
 \begin{array}{ccc}
- \frac{\partial x_1}{\partial u_1} & \text{...} & \frac{\partial x_1}{\partial u_n} \\
- \text{...} & \text{...} & \text{...} \\
- \frac{\partial x_n}{\partial u_1} & \text{...} & \frac{\partial x_n}{\partial u_n}
+ \frac{\partial x_1}{\partial u_1} & \text{\ldots} & \frac{\partial x_1}{\partial u_n} \\
+ \text{\ldots} & \text{\ldots} & \text{\ldots} \\
+ \frac{\partial x_n}{\partial u_1} & \text{\ldots} & \frac{\partial x_n}{\partial u_n}
 \end{array}
 \right|.
-\]
+$$
 
 ::: {#exm- } 
 
@@ -69,8 +70,8 @@ from rectangular coordinates to cylindrical coordinates
 J(r,\theta ,z)
 =\left|
 \begin{array}{ccc}
- \frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta } & \frac{\partial x}{\partial z}  \\[10pt]
- \frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta } & \frac{\partial y}{\partial z}  \\[10pt]
+ \frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta } & \frac{\partial x}{\partial z}  \\
+ \frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta } & \frac{\partial y}{\partial z}  \\
  \frac{\partial z}{\partial r} & \frac{\partial z}{\partial \theta } & \frac{\partial z}{\partial z}
 \end{array}
 \right| 
@@ -81,7 +82,7 @@ J(r,\theta ,z)
  0 & 0 & 1
 \end{array}
 \right| 
-\\[5pt]
+\\
 & =r \cos ^2 \theta -\left(-r \sin ^2 \theta \right)=r.
 \end{align*}
 ::: 
@@ -93,14 +94,14 @@ from rectangular coordinates to spherical coordinates.
 ::: 
 
 ::: {.solution }
- The conversion formulas are $x=\rho  \sin  \phi  \cos  \theta ,$ $y=\rho  \sin  \phi  \sin  \theta $ and $z=\rho  \cos  \phi
+ The conversion formulas are $x=\rho  \sin  \phi  \cos  \theta ,$ $y=\rho  \sin  \phi  \sin  \theta$ and $z=\rho  \cos  \phi
 .$ 
 So the Jacobian $J(\rho ,\theta ,\phi )$ is
 \begin{align*}
 \left|
 \begin{array}{ccc}
- \frac{\partial x}{\partial \rho } & \frac{\partial x}{\partial \theta } & \frac{\partial x}{\partial \phi } \\[9pt]
- \frac{\partial y}{\partial \rho } & \frac{\partial y}{\partial \theta } & \frac{\partial y}{\partial \phi } \\[9pt]
+ \frac{\partial x}{\partial \rho } & \frac{\partial x}{\partial \theta } & \frac{\partial x}{\partial \phi } \\
+ \frac{\partial y}{\partial \rho } & \frac{\partial y}{\partial \theta } & \frac{\partial y}{\partial \phi } \\
  \frac{\partial z}{\partial \rho } & \frac{\partial z}{\partial \theta } & \frac{\partial z}{\partial \phi }
 \end{array}
 \right| 
@@ -111,7 +112,7 @@ So the Jacobian $J(\rho ,\theta ,\phi )$ is
  \cos  \phi  & 0 & -\rho  \sin  \phi 
 \end{array}
 \right|
-\\[5pt]
+\\
 & =-\rho ^2 \sin  \phi .
 \end{align*}
 ::: 
@@ -140,18 +141,18 @@ J(x,y) & = \left|
  -\frac{2 x y}{\left(x^2+y^2\right)^2} & \frac{x^2-y^2}{\left(x^2+y^2\right)^2}
 \end{array}
 \right| 
-\\[5pt]
+\\
 & =\frac{y^2-x^2}{\left(x^2+y^2\right)^2}\frac{x^2-y^2}{\left(x^2+y^2\right)^2}-\frac{2 x y}{\left(x^2+y^2\right)^2}\frac{2 x y}{\left(x^2+y^2\right)^2}
 =-\frac{1}{\left(x^2+y^2\right)^2}.
 \end{align*}
 Since  
-\[
+$$
 u^2+v^2=\left(\frac{x}{x^2+y^2}\right)^2+\left(\frac{y}{x^2+y^2}\right)^2=\frac{1}{x^2+y^2}
-\] 
+$$ 
 we find
-\[
+$$
 J(u,v)=\frac{1}{J(x,y)}=\frac{-1}{\left(u^2+v^2\right)^2}.
-\]
+$$
 ::: 
 
 ## Change of Variable in a Double Integral
@@ -160,9 +161,9 @@ J(u,v)=\frac{1}{J(x,y)}=\frac{-1}{\left(u^2+v^2\right)^2}.
 
 Let $z=f(x,y)$ be a continuous function on a region $R$ in the $x y$-plane, and let $T$ be a one-to-one transformation that maps the region $D$ in the 
 $u v$-plane onto $R$ under the change of variables $x=x(u,v)$ and $y=y(u,v),$ where $x$ and $y$ are continuously differentiable functions on $R.$ If $J(u,v)\neq 0,$ then  
-\[
+$$
 \iint_R f(x,y)dx\, dy=\iint_D f(x(u,v),y(u,v))| J(u,v)| du dv.
-\]
+$$
 ::: 
 
 ::: {.proof }
@@ -171,14 +172,14 @@ $(u_0,v_0)$, $(u_0+\Delta u,v_0)$, $(u_0,v_0+\Delta v)$, and $(u_0+\Delta u,v_0+
 $(u_0,v_0+\Delta v)$.
 
 Define the vector function $\vec{r}$ by 
-\[
+$$
 \vec{r}(u,v)=x(u,v)\vec{i}+y(u,v)\vec{j}
-\] and also 
-\[
+$$ and also 
+$$
 \vec{a}=\vec{r}(u_0+\Delta u,v_0)-\vec{r}(u_0,v_0)
 \quad \text{and} \quad 
 \vec{b}=\vec{r}(u_0,v_0+\Delta v)-\vec{r}(u_0,v_0).
-\]
+$$
 Notice that $T(D)=R$ is a region in the $xy$-plane whose area can be approximated by $|\vec{a}\times \vec{b}|$ because we are assuming $\Delta u$ and  $\Delta v$ are small increments in $u$ and $v$ and $T$ is a continuous one-to-one onto transformation. Let $\Delta A$ denote the area of $R$, it follows
 \begin{align*}
 \Delta A \approx |\vec{a}\times \vec{b}| & =
@@ -188,18 +189,19 @@ Notice that $T(D)=R$ is a region in the $xy$-plane whose area can be approximate
 & \approx \left| \vec{r}_u \Delta u \times \vec{r}_v \Delta v \right|
 = \left| \vec{r}_u \times \vec{r}_v \right| \Delta u \Delta v \end{align*}
 If we consider the factor  $\left| \vec{r}_u \times \vec{r}_v \right|$ in terms of the functions which define the transformation $T$ we are lead to 
-\[
+$$
 \vec{r}_u \times \vec{r}_v 
 =\left| \begin{array}{ccc} \vec{i} & \vec{j} & \vec{k} \\ x_u & y_u & 0 \\ x_v & y_v & 0 \end{array} \right| 
-=0\vec{i}-0\vec{j}+(x_u y_v-x_v y_u) \vec{k}\]
+=0\vec{i}-0\vec{j}+(x_u y_v-x_v y_u) \vec{k}
+$$
 which implies 
-\[
+$$
 |\vec{r}_u \times \vec{r}_v | 
 =x_u y_v-x_v y_u
 =\left| \begin{array}{cc} x_u & y_u \\ x_v & y_v \end{array} \right|
 =\left| \begin{array}{cc} x_u & x_v \\ y_u & y_v \end{array} \right|
 =\left| \frac{\partial (x,y)}{\partial (u,v)} \right|.
-\]
+$$
 ::: 
 
 ::: {#exm- } 
@@ -213,29 +215,32 @@ where $R$ is the trapezoidal region with vertices $(1,0),$ $(2,0),$ $(0,-2),$ an
 
 ::: {.solution }
  Since it is not easy to integrate $f(x,y)=e^{(x+y)/(x-y)},$ we make a change of variables suggested by the form of $f$ namely: $u=x+y$ and $v=x-y.$ Solving for $x$ and $y$
-\[x=\frac{1}{2}(u+v)\qquad \text{and} \qquad y=\frac{1}{2}(u-v)
-\]  
+$$
+x=\frac{1}{2}(u+v)\qquad \text{and} \qquad y=\frac{1}{2}(u-v)
+$$  
 to find the Jacobian is
-\[
+$$
 J(u,v)=\left|\! 
 \begin{array}{cc}
-1/2 & 1/2 \\[9pt]
+1/2 & 1/2 \\
 1/2 & -1/2
 \end{array}
-\! \right|=-\frac{1}{2}.\]
+\! \right|=-\frac{1}{2}.
+$$
 To find the region $D$ in the $u v$-plane corresponding to $R$ we note that the sides of $R$ lie on the lines $y=0,$ $x-y=2,$ $x=0,$
-$x-y=1$ and using the rules for the transformation, $x=(u+v)/2 $ and $y=(u-v)/2$ the images of the lines in the $u v$-plane are
+$x-y=1$ and using the rules for the transformation, $x=(u+v)/2$ and $y=(u-v)/2$ the images of the lines in the $u v$-plane are
 $u=v, v=2, u=-v ,$  and $v=1.$ 
 Thus the region $D$ is the trapezoidal region with vertices $(1,1),$ $(2,2),$ $(-2,2)$ and $(-1,1);$ that is
-\[D=\{(u,v)|1\leq v\leq 2, -v\leq u\leq v\}.
-\]
+$$
+D=\{(u,v)|1\leq v\leq 2, -v\leq u\leq v\}.
+$$
 Therefore we can evaluate the integral as follows
 \begin{align*}
 \iint_R e^{(x+y)/(x-y)} \, dA 
 & =\iint_D  e^{u/v} \left(\frac{1}{2}\right) \, dA 
-\\[5pt]
+\\
 &=\int _1^2\int _{-v}^ve^{u/v}\left(\frac{1}{2}\right) \, du \, dv 
-\\[5pt]
+\\
 & =\frac{1}{2}\int _1^2\left(e-e^{-1}\right)v dv 
 =\frac{3}{4}\left(e-e^{-1}\right).
 \end{align*}
@@ -257,10 +262,11 @@ where $R$ is the region bounded by the lines $x-2y=0,$ $x-2y=-4,$ $x+y=4,$ and $
 $$
 J(u,v)=\left|\! 
 \begin{array}{cc}
- \frac{2}{3} & \frac{1}{3} \\[10pt]
+ \frac{2}{3} & \frac{1}{3} \\
  \frac{1}{3} & \frac{-1}{3}
 \end{array}
-\! \right|=\left(\frac{2}{3}\right)\left(\frac{-1}{3}\right)-\left(\frac{1}{3}\right)\left(\frac{1}{3}\right)=-\frac{1}{3}.$$
+\! \right|=\left(\frac{2}{3}\right)\left(\frac{-1}{3}\right)-\left(\frac{1}{3}\right)\left(\frac{1}{3}\right)=-\frac{1}{3}.
+$$
 The bounds under the transformation determined by the following equations
 \begin{align*}
 & x+y =1 \Longrightarrow u=1 &  x+y =4 \Longrightarrow u=4 \\
@@ -269,11 +275,11 @@ We consider the region $D$ in the $u v$-plane as vertically simple. Then it  fol
 \begin{align*}
 \iint_R 3 x y \, dA 
 & =\iint_D 3 \frac{1}{3}(2u+v) \frac{1}{3}(u-v)\, |J(u,v)| \, dv \, du 
-\\[5pt]
+\\
 & =\int _1^4\int _{-4}^0\frac{1}{3}\left(2u^2-u v-v^2\right)\left|-\frac{1}{3}\right| \, dv \, du 
-\\[5pt]
+\\
 & =\int _1^4\int _{-4}^0\frac{1}{9}\left(2u^2-u v-v^2\right) dv du 
-\\[5pt]
+\\
 & =\int_1^4 \frac{1}{9} \left(8 u^2+8 u-\frac{64}{3}\right) \, du  
 =\frac{164}{9}.
 \end{align*}
@@ -292,13 +298,14 @@ where $R$ is the region bounded by the square with vertices $(0,1),$ $(1,2),$ $(
 for $x$ and $y$ produces 
 $x=\frac{1}{2}(u+v)$ and $y=\frac{1}{2}(u-v).$ 
 The Jacobian of $u$ and $v$ is
-\[
+$$
 J(u,v)=\left|\! 
 \begin{array}{cc}
-1/2 & 1/2 \\[10pt]
+1/2 & 1/2 \\
 1/2 & -1/2
 \end{array}
-\! \right|=\left(\frac{1}{2}\right)\left(\frac{-1}{2}\right)-\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)=-\frac{1}{2}.\]
+\! \right|=\left(\frac{1}{2}\right)\left(\frac{-1}{2}\right)-\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)=-\frac{1}{2}.
+$$
 The bounds under the transformation determined by the following equations
 \begin{align*}
 &  x+y=1  \Longrightarrow  u=1 &  x+y=3  \Longrightarrow  u=3 \\
@@ -308,9 +315,9 @@ Let's consider the region $D$ in the $u v$-plane as horizontally simple. It foll
 \begin{align*}
 \iint_R (x+y)^2\sin ^2(x-y) \, dA 
 & =\iint_D u^2 \sin ^2v |J(u,v)| \, du \, dv 
-\\[5pt]
+\\
 &=\frac{1}{2}\int _{-1}^1\int _1^3u^2 \sin ^2(v) \, du \, dv 
-\\[5pt]
+\\
 & =\frac{1}{2}\int_{-1}^1 \frac{26 \sin ^2(v)}{3} \, dv 
 =\frac{13}{6} (2-\sin 2).
 \end{align*}
@@ -318,22 +325,22 @@ Let's consider the region $D$ in the $u v$-plane as horizontally simple. It foll
 
 ::: {#exm- } 
 Use a change of variables to evaluate the integral 
-\[
+$$
 \iint_R y^3(2x-y)\cos (2x-y) \, dy \, dx.
-\]
+$$
 where $R$ is the region bounded by the parallelogram with vertices $(0,0),$ $(2,0),$ $(3,2),$ and $(1,2).$
 ::: 
 
 ::: {.solution }
  The boundary lines of the parallelogram are $y=0,$ $y=2,$ $y=2x,$ and $y=2x-4.$ Let $u=2x-y$ and $v=y$ with boundary lines $u=0,$ $u=4,$ $v=0,$ and $v=2.$ Solving for $x$ and $y$ produces $x=\frac{1}{2}(u+v)$ and $y=v.$  Since the Jacobian is
-\[
+$$
 J(u,v)=\left|
 \begin{array}{cc}
 1/2 & 1/2 \\
  0 & 1
 \end{array}
 \right|=\frac{1}{2},
-\]
+$$
 we evaluate the integral as follows
 \begin{align*}
 &\iint_D y^3(2x-y)\cos (2x-y) \, dy \, dx
@@ -345,39 +352,45 @@ we evaluate the integral as follows
 
 ::: {#exm- } 
 Use a change of variables to evaluate the integral 
-\[
+$$
 \iint_R \left(x^4-y^4\right)e^{x y} \, dA
-\]
+$$
 where $R$ is the region bounded by the hyperbolas $x y=1,$ $x y=2,$ $x^2-y^2=1,$ and $x^2-y^2=4.$
 ::: 
 
 ::: {.solution }
  Let $u=x y$ and $v=x^2-y^2.$ Then
-\[
+$$
 \frac{\partial (u,v)}{\partial (x,y)}=\left|
 \begin{array}{cc}
  y & x \\
  2x & -2y
 \end{array}
-\right|=-2y^2-2x^2=-2(x^2+y^2).\]
+\right|=-2y^2-2x^2=-2(x^2+y^2).
+$$
 Notice 
 % $v^2=\left(x^2-y^2\right)^2=x^4-2x^2y^2+y^4$ we have
-\[
+$$
 \left(x^2+y^2\right)^2
 =x^4-2x^2y^2+y^4+4x^2y^2
-=v^2+4u^2.\]
+=v^2+4u^2.
+$$
 Thus
 $x^2+y^2=\sqrt{v^2+4u^2}$
 and so
 $J(u,v)=\frac{-1}{2\sqrt{v^2+4u^2}}.$
-We will make use of  $$\frac{\partial  (u,v)}{\partial (x,y)}\frac{\partial  (x,y)}{\partial (u,v)}=1$$ because it is easier not to solve for $x$ and $y$ in terms of $u$ and $v.$ 
+We will make use of  
+$$
+\frac{\partial  (u,v)}{\partial (x,y)}\frac{\partial  (x,y)}{\partial (u,v)}=1
+$$ 
+because it is easier not to solve for $x$ and $y$ in terms of $u$ and $v.$ 
 So we evaluate the integral as follows
 \begin{align*}
 \iint_R\left(x^4-y^4\right)e^{x y} \, dA 
 & =\int _1^4\int _1^2e^uv\sqrt{v^2+4u^2}\left|\frac{-1}{2\sqrt{v^2+4u^2}} \right|dudv 
-\\[5pt]
+\\
 & =\frac{1}{2}\int _1^4\int _1^2v e^u \, du \, dv
-\\[5pt]
+\\
 & =\frac{1}{2}\int_1^4 \left(-e+e^2\right) v \, dv 
 =\frac{15}{4}e(e-1).
 \end{align*}
@@ -394,19 +407,20 @@ where $R$ is the triangular region bounded by the vertices $(1,0),$ $(4,-3),$ $(
 ::: {.solution }
  Let $u=x-y$ and $v=x+y$ so that $x=\frac{1}{2}(u+v)$ and $y=\frac{-1}{2}u+\frac{1}{2}.$ 
  Then the Jacobian is 
-\[
+$$
 J(u,v)=\left|
 \begin{array}{cc}
-1/2 & 1/2 \\[10pt]
+1/2 & 1/2 \\
 -1/2 & 1/2
 \end{array}
-\right|=\frac{1}{2}.\]
+\right|=\frac{1}{2}.
+$$
 The given the region $R$ is bounded by the lines $x-3y=1,$ $x+y=1,$ and $x=4$ which transform into $2u-v=1,$ $v=1,$ and $u+v=8.$ Therefore we evaluate the integral as follows,
 \begin{align*}
 I& =\frac{1}{2}\int _1^5\int _{(v+1)/2}^{8-v}\ln \left(\frac{u}{v}\right)du dv 
-\\[5pt]
+\\
 &=\frac{1}{4}\int_1^5 \left[-(v+1)\ln \left(\frac{v+1}{2v}\right)+2(8-v)\ln \left(\frac{8-v}{v}\right)+3(v-5)\right] \, dv 
-\\[5pt]
+\\
 &=\frac{1}{4}\left(49\ln  7-\frac{75}{2}\ln  5-27\ln  3+6\right). 
 \end{align*}
 ::: 
@@ -421,25 +435,25 @@ where $D$ is the region bounded by the quarter ellipse $\frac{x^2}{a^2}+\frac{y^
 
 ::: {.solution }
  Let's try the change of variables 
-$ x=a r \cos  \theta $ and $y=b r \sin  \theta $ 
-with $0\leq  r<\infty $ and $0\leq  \theta <2\pi ;$ to see if we can simply the region of integration and the integrand. Notice 
-\[
+$x=a r \cos  \theta$ and $y=b r \sin  \theta$ 
+with $0\leq  r<\infty$ and $0\leq  \theta <2\pi ;$ to see if we can simply the region of integration and the integrand. Notice 
+$$
 -\frac{x^2}{a^2}-\frac{y^2}{b^2}=-\left[\frac{x^2}{a^2}+\frac{y^2}{b^2}\right]=-\left[\frac{(a r \cos  \theta )^2}{a^2}+\frac{(b r \sin 
 \theta )^2}{b^2}\right]=-r^2
-\] 
+$$ 
 using $\sin ^2\theta +\cos ^2\theta =1.$ Further the region of becomes $r^2=1$ or $r=1$ which is the circle of radius 1. We wish to use  
-\[
+$$
 \iint_D f(x,y)dx\, dy=\iint_R f(x(u,v),y(u,v)) |J(u,v)| \, du \, dv
-\] 
+$$ 
 so we compute the Jacobian, 
-\[
+$$
 J(r,\theta )=\left|
 \begin{array}{cc}
  a \cos  \theta  & -a \text{rsin} \theta \\
  b \sin  \theta  & b r \cos  \theta 
 \end{array}
 \right|=a b r \cos  \theta +a b r \sin ^2\theta =a b r.
-\] 
+$$ 
 Now then we have, 
 \begin{align*}
 I& =\int _0^{\pi /2}\int _0^1e^{-r^2}|a b r| \, dr \, d\theta
@@ -459,12 +473,12 @@ where $D$ be the region in the $x y$-plane that is bounded by the coordinate axe
 
 ::: {.solution }
  The region is transformed into $0\leq v\leq 1$ and $-v\leq u\leq v$ and so 
-\[
+$$
 \iint_R \left(\frac{x-y}{x+y}\right)^4 \, dy \, dx
 =\int _0^1\int _{-v}^v\frac{u^4}{v^4}\left(\frac{1}{2}\right) \, du \, dv
 =\int_0^1 \frac{v}{5} \, dv
 =\frac{1}{10}.
-\]
+$$
 ::: 
   
 ::: {#exm- } 
@@ -478,7 +492,7 @@ $$
 $$ 
  Let $u=\frac{x}{a}$ and $v=\frac{y}{b},$ then the ellipse in the $x y$-plane corresponds to the unit circle $u^2+v^2=1$ in the $u v$-plane. Since $x=a u$ and $y=b v,$ the Jacobian is 
 %$\left| \begin{array}{cc} a & 0 \\ 0 & b \end{array}\right|=$
-$a b $ and so the area of an ellipse is given by 
+$a b$ and so the area of an ellipse is given by 
 \begin{align*}
 A&=4\int _0^a\int_0^{b \sqrt{1-x^2/a^2}} dy \, dx 
 =4\int _0^1\int _0^{ \sqrt{1-u^2}}a b dv du 
@@ -489,12 +503,12 @@ since $\pi$ is the area of the unit circle.
 ::: 
 
 ::: {#exm- } 
-A rotation of the $x y$-plane through the fixed angle $\theta $ is given by  
-\[
-x=u \cos  \theta -v \sin  \theta 
+A rotation of the $x y$-plane through the fixed angle $\theta$ is given by  
+$$
+x=u \cos\theta -v \sin  \theta 
 \qquad \text{and} \qquad 
 y=u \sin  \theta +v \cos  \theta 
-\]
+$$
 Compute the Jacobian $\frac{\partial (x,y)}{\partial (u,v)}.$ Let $E$ denote the region bounded by the ellipse $x^2+x y+y^2=3.$ Use a rotation of $\pi /4$ to obtain an integral that is equivalent to  
 $$
 \iint_E y \, dy \, dx.
@@ -504,10 +518,11 @@ Evaluate the transformed integral.
 
 ::: {.solution }
 We find $J(u,v)=1$ and so $dx\, dy=du\, dv.$ A rotation of $\frac{\pi }{4}$ eliminates the $u v$-term so we use the transformation  
-\[
+$$
 x=\frac{\sqrt{2}}{2}(u-v)
 \qquad \text{and}\qquad 
-y=\frac{\sqrt{2}}{2}(u+v)\]
+y=\frac{\sqrt{2}}{2}(u+v)
+$$
 Then $x^2+x y+y^2$ becomes $\left(\frac{u}{\sqrt{2}}\right)^2+\left(\frac{v}{\sqrt{6}}\right)^2=1.$ Therefore,  
 \begin{align*}
 \iint_E y \, dy \, dx
@@ -527,7 +542,7 @@ Then $x^2+x y+y^2$ becomes $\left(\frac{u}{\sqrt{2}}\right)^2+\left(\frac{v}{\sq
 Let $f$ be a continuous function on a region $R$ in the $x y z$-space, and let $T$ be a one-to-one transformation that maps the region $D$ in the $u v w$-space onto $R$ under the change of variables $x=x(u,v,w),$ $y=y(u,v,w),$ and $z=z(u,v,w)$ where functions $x,$ $y,$ and $z$ are continuously differentiable functions on $D.$ If $J(u,v,w)\neq 0,$ then
 \begin{align*}
 & \iiint_Rf(x,y,z) \, dx \, dy \, dz 
-\\[5pt]
+\\
 & \qquad = \iiint_D f(x(u,v,w),y(u,v,w),z(u,v,w)) \left|J(u,v,w)\right| \, du \, dv \, dw.
 \end{align*}
 ::: 
@@ -545,11 +560,13 @@ $$
 $$
 Let $u=\frac{x}{a},$ $v=\frac{y}{b},$ and $w=\frac{z}{c}$ then the ellipsoid corresponds to the unit sphere $u^2+v^2+w^2=1.$ Since $x=a
 u,$ $y=b v,$ $z=c w,$ the Jacobian is $a b c$ 
-%$$J(u,v,w)=\left| \begin{array}{ccc}  a & 0 & 0 \\  0 & b & 0 \\  0 & 0 & c \end{array} \right|=a b c $$
+$$
+J(u,v,w)=\left| \begin{array}{ccc}  a & 0 & 0 \\  0 & b & 0 \\  0 & 0 & c \end{array} \right|=a b c 
+$$
 and so the volume of an ellipsoid is given by
 \begin{align*}
 V & = 8\int _0^a\int _0^{ \sqrt{1-x^2/a^2}}\int _0^{ \sqrt{1-x^2/a^2-y^2/b^2}} \, dz \, dy \, dx 
-\\[5pt]
+\\
 & =8\int _0^1\int _0^{ \sqrt{1-u^2}}\int _0^{ \sqrt{1-u^2-v^2}}a b c \, dw \, dv \, du 
 = \frac{4}{3}a b c \pi .
 \end{align*}
@@ -565,7 +582,7 @@ $x=u^2$ and $y=u+v$
 ::: 
 
 ::: {#exr- } 
-$x=u \cos  v$ and $y=u \sin  v$ 
+$x=u \cos v$ and $y=u \sin  v$ 
 ::: 
 
 ::: {#exr- } 
@@ -623,22 +640,20 @@ where $D$ is the region bounded by the parallelogram with vertices $(0,0),$ $(2,
 
 ::: {#exr- } 
 Under the change of variables $x=s^2-t^2,$ $y=2s t,$ the quarter circle region in the $s t$-plane given by $s^2+t^2\leq 1,$ $s\geq 0,$ $t\geq 0$ is mapped onto a certain region $D$ of the $x y$-plane. Evaluate 
-\[
+$$
 \iint_R\frac{1}{\sqrt{x^2+y^2}} \, dy \, dx.
-\]
+$$
 ::: 
 
 ::: {#exr- } 
-A rotation of the $x y$-plane through the fixed angle $\theta $ is given by 
-$
-x=u \cos  \theta -v \sin  \theta$ and $y=u \sin  \theta +v \cos  \theta. 
-$
+A rotation of the $x y$-plane through the fixed angle $\theta$ is given by 
+$x=u \cos \theta -v \sin  \theta$ and $y=u \sin  \theta +v \cos  \theta.$
 Determine the Jacobian 
 $J(u,v).$ 
 Let $E$ denote the region bounded by the ellipse $x^2+x  +y^2=3.$ Use a rotation of $\pi /4$ to obtain an integral that is equivalent to
-\[
+$$
 \iint_E y \, dy \, dx.
-\]
+$$
 Evaluate the transformed integral.
 ::: 
 

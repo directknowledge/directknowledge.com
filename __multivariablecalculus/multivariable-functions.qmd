@@ -99,15 +99,15 @@ $$
 is a polynomial function with terms $3x^3y^5$, $-3x^2 y^4$, $-xy$, and $7$.
 A \index{rational function} **rational function**  of two variables is a ratio of polynomial functions.
 For example the function
-\[
+$$
 f(x,y)=\frac{3x^3 y^5-3x^2 y^4-x y +7}{x^3-y^2}
-\]
+$$
 is a rational function with numerator $3x^3 y^5-3x^2 y^4-x y +7$ and denominator 
 $x^3-y^2$. 
 
 A function of three variables is a rule that assigns to each ordered pair $\left(x, y, z\right)$ in a set $D$ a unique number $f\left(x, y, z\right).$ 
-The set $D$ is called the \index{domain} **domain**  of the function and is a subset of $\R^3$. 
-The collection of corresponding values $f\left(x,y,z\right)$ constitutes the \index{range} **range**  which is a subset of $\R$.
+The set $D$ is called the \index{domain} **domain**  of the function and is a subset of $\mathbb{R}^3$. 
+The collection of corresponding values $f\left(x,y,z\right)$ constitutes the \index{range} **range**  which is a subset of $\mathbb{R}$.
 
 ::: {#exm- } 
 Let 
@@ -115,11 +115,11 @@ $$
 f(x,y,z)=x^2-2xy z+2 y z-x.
 $$ 
 Find the domain of $f$ and evaluate $f(1,2,3)$, $f(t,2t,3t)$, $f(x+y, x-y, 0)$, and 
-\[
+$$
 \frac{f(x+h,y,z)-f(x,y,z)}{h}, \quad 
 \frac{f(x,y+h,z)-f(x,y,z)}{h}, \quad 
 \frac{f(x,y,z+h)-f(x,y,z)}{h}.
-\] 
+$$ 
 where $h$ is an unknown quantity.
 ::: 
 
@@ -141,17 +141,17 @@ and
 & \frac{f(x,y,z+h)-f(x,y,z)}{h} =
 \frac{2 y z-2 x y z-2 y (h+z)+2 x y (h+z)}{h}
 \end{align}
-The domain of $f$ is \textbf{not} all real numbers, but rather $\R^3$.
+The domain of $f$ is \textbf{not} all real numbers, but rather $\mathbb{R}^3$.
 ::: 
 
 ::: {#def- } 
 
-A \index{function} **function**  of $n$ variables is a rule that assigns to each ordered pair $\left(x_1, x_2, ... , x_n\right)$
-in a set $D$ a unique number $f\left(x_1, x_2, ... , x_n\right).$ 
-The set $D$ is called the \index{domain} of the function and the set of corresponding values $f\left(x_1, x_2, ... , x_n\right)$ is called the \index{range} **domain} of the function and the set of corresponding values $f\left(x_1, x_2, ... , x_n\right)$ is called the \index{range** . 
+A \index{function} **function**  of $n$ variables is a rule that assigns to each ordered pair $\left(x_1, x_2, \ldots , x_n\right)$
+in a set $D$ a unique number $f\left(x_1, x_2, \ldots , x_n\right).$ 
+The set $D$ is called the \index{domain} **domain** of the function and the set of corresponding values $f\left(x_1, x_2, \ldots , x_n\right)$ is called the \index{range} **range**. 
 ::: 
 
-The \index{graph} of a function of several variables $f\left(x_1,\ldots,x_n\right)$ is the collection of all ordered $(n+1)$-tuples $\left(x_1,\ldots,x_n,x_{n+1}\right)$ such that $\left(x_1,\ldots,x_n\right)$ is in the domain of $f$ and $x_{n+1} **graph} of a function of several variables $f\left(x_1,\ldots,x_n\right)$ is the collection of all ordered $(n+1)$-tuples $\left(x_1,\ldots,x_n,x_{n+1}\right)$ such that $\left(x_1,\ldots,x_n\right)$ is in the domain of $f$ and $x_{n+1** =f\left(x_1,\ldots,x_n\right).$ 
+The \index{graph} **graph** of a function of several variables $f\left(x_1,\ldots,x_n\right)$ is the collection of all ordered $(n+1)$-tuples $\left(x_1,\ldots,x_n,x_{n+1}\right)$ such that $\left(x_1,\ldots,x_n\right)$ is in the domain of $f$ and $x_{n+1}=f\left(x_1,\ldots,x_n\right).$ 
 Sketching by hand the graph of a function with several variables can be challenging. Let's look at a few particular functions. 
 
 For example the function $f$ defined by 
@@ -159,13 +159,13 @@ For example the function $f$ defined by
 \label{polyfunc}
 f(x,y,z)=2x^3+4y^4+9z^6
 \end{equation} 
-is a three variable polynomial function with domain $\R^3$ and range $(-\infty, +\infty)$.  
+is a three variable polynomial function with domain $\mathbb{R}^3$ and range $(-\infty, +\infty)$.  
 As another example consider the function $g$ defined by 
 \begin{equation}
 \label{trigfunc}
 g(w,x,y,z)=z^2+\sin w x+\cos w y.
 \end{equation}
-The function $g$ is a four variable function with domain $\R^4$ and range $[-2,+\infty)$. 
+The function $g$ is a four variable function with domain $\mathbb{R}^4$ and range $[-2,+\infty)$. 
 Let $h$ be the function defined by 
 \begin{equation}
 \label{expfunc}
@@ -180,41 +180,34 @@ Let $f$ and $g$ be functions of the variables $x_1, x_2, \ldots,x_n$. Then defin
 - $(f+g)\left(x_1, x_2, \ldots, x_n\right):= f\left(x_1, x_2, \ldots, x_n\right)+g\left(x_1, x_2, \ldots, x_n\right)$ 
 - $(f-g)\left(x_1, x_2, \ldots, x_n\right):= f\left(x_1, x_2, \ldots, x_n\right)-g\left(x_1, x_2, \ldots, x_n\right)$ 
 - $(f g)\left(x_1, x_2, \ldots, x_n\right):= f\left(x_1, x_2, \ldots, x_n\right)g\left(x_1, x_2, \ldots, x_n\right)$ 
-- $ (f/g)\left(x_1, x_2, \ldots, x_n\right):=\dfrac{f\left(x_1, x_2, \ldots, x_n \right)}{g\left(x_1, x_2, \ldots, x_n\right)}$
+- $(f/g)\left(x_1, x_2, \ldots, x_n\right):=\dfrac{f\left(x_1, x_2, \ldots, x_n \right)}{g\left(x_1, x_2, \ldots, x_n\right)}$
 where $g\left(x_1, x_2, \ldots, x_n\right)\neq 0.$
  
 are also functions of the variables $x_1, x_2, \ldots, x_n$.
 ::: 
 
 For example, considering the functions $f$ and $h$ defined in \ref{polyfunc} and \ref{expfunc}, respectively. Is $f+h$ defined as a function? Yes, by \ref{ptwisedeffunc}  
-\[
+$$
 (f+h)(x,y,z)=
 2x^3+4y^4+9z^6+e^{xy}+z^4\sqrt[6]{x^2-4}
-\]
+$$
 and notice the domain of $f+h$ is all ordered triples $(x,y,z)$ with the requirement $x^2-4\geq 0$ and the range is $(-\infty,+\infty)$. 
 
 Is $g+h$ defined as a function? If we use the functional rule defining $h$, namely $e^{xy}+z^4\sqrt[6]{x^2-4}$ then the function defined by 
-\[
+$$
 h_1(w,x,y,z)=e^{xy}+z^4\sqrt[6]{x^2-4}
-\]
+$$
 (defined as a four variable function), then the function $(g+h_1)$ is defined as a function by 
-\[
+$$
 (g+h_1)(w,x,y,z)=z^2+\sin w x+\cos w y+ e^{xy}+z^4\sqrt[6]{x^2-4}.
-\]
+$$
 using \ref{ptwisedeffunc}. Notice the domain of $g+h_1$ is 
-$\R^4$ and the range is  $[-2,+\infty)$. 
+$\mathbb{R}^4$ and the range is  $[-2,+\infty)$. 
 
 
 ## Functions of Two Variables
 
-When working with functions $f$ of two variables $x$ and $y$, we write $z=f(x,y)$ where $x$ and $y$ are the \index{independent variables} and $z$ is the \index{dependent variable}. The \index{domain} **independent variables} and $z$ is the \index{dependent variable}. The \index{domain**  is defined to be the largest set of points for which the functional formula is defined and real-valued. 
-
-\begin{figure}[H]
-\centering
-\includegraphics{_includes/pmvfuncex1.pdf}
-\caption{Plot of the function $f(x,y)=1/\sqrt{x-y}$.}
-\label{fig:pmvfuncex1}
-\end{figure} 
+When working with functions $f$ of two variables $x$ and $y$, we write $z=f(x,y)$ where $x$ and $y$ are the \index{independent variables} **independent variables** and $z$ is the \index{dependent variable} **dependent variable**. The \index{domain} **domain** is defined to be the largest set of points for which the functional formula is defined and real-valued. 
 
 ::: {#exm- } 
 
@@ -227,22 +220,15 @@ $$
 ::: {.solution }
 The domain is 
 $$
-\{(x,y)\in \R^2 \mid y<x\}
+\{(x,y)\in \mathbb{R}^2 \mid y<x\}
 $$ 
 because of the square root in the denominator of $f$ and the range is 
 $$
-\{z \in \R \, \mid \, z>0\}.
+\{z \in \mathbb{R} \, \mid \, z>0\}.
 $$ 
 Notice the domain is a subset of 
-$\R^2$ and the range is a subset of $\R$. 
+$\mathbb{R}^2$ and the range is a subset of $\mathbb{R}$. 
 ::: 
-
-\begin{figure}[H]
-\centering
-\includegraphics{_includes/pmvfuncex2.pdf}
-\caption{Plot of the function $f(x,y)=\sqrt{\dfrac{x}{y}}$.}
-\label{fig:surboundvoltwo}
-\end{figure} 
 
 ::: {#exm- } 
 
@@ -255,17 +241,17 @@ $$
 ::: {.solution }
 The domain is 
 $$
-\{(x,y)\in \R^2\, \mid\, x y\geq 0 \text{ and } y\neq 0\}
+\{(x,y)\in \mathbb{R}^2\, \mid\, x y\geq 0 \text{ and } y\neq 0\}
 $$ 
 because of the square root and the range is 
 $$
-\{z \in  \R \, \mid \, z\geq 0\}.
+\{z \in  \mathbb{R} \, \mid \, z\geq 0\}.
 $$
 Notice the domain is a subset of 
-$\R^2$ and the range is a subset of $\R$. 
+$\mathbb{R}^2$ and the range is a subset of $\mathbb{R}$. 
 ::: 
 
-In three dimensions, the graph of $z=f(x,y)$ is a surface in $\R^3$ whose \index{projection} **projection**  onto the $x y$-plane is the domain $D$. 
+In three dimensions, the graph of $z=f(x,y)$ is a surface in $\mathbb{R}^3$ whose \index{projection} **projection**  onto the $x y$-plane is the domain $D$. 
 When the plane $z=C$ intersects the surface 
 $$
 z=f(x,y),
@@ -284,12 +270,6 @@ Because level curves are used to show the shape of a surface, they are sometimes
 The curves $f(x,y)=C$ in the $xy$-plane are called the \index{level curves} **level curves**  of the function $f$ of two variables $x$ and $y$, where $C$ is a constant in the range of $f$. 
 ::: 
 
-\begin{figure}[H]
-\centering
-\includegraphics{_includes/pmvfuncex3.pdf}
-\caption{Contour plot of $f(x,y)=2x-3y$.}
-\label{pmvfuncex3}
-\end{figure} 
 
 ::: {#exm- } 
 
@@ -302,19 +282,13 @@ with $C\geq 0$.
 
 ::: {.solution }
 Graphing the lines 
-\[
+$$
 y=\frac{2}{3}x-\frac{C}{3}
-\]
+$$
 we have the family of level curves corresponding to $C=1,\ldots,10.$ 
-The level curves show that the graph of the function $f$ is a plane in $\R^3$.
+The level curves show that the graph of the function $f$ is a plane in $\mathbb{R}^3$.
 ::: 
 
-\begin{figure}[H]
-\centering
-\includegraphics{_includes/pmvfuncex4.pdf}
-\caption{Contour plot of $f(x,y)=x^2+\frac{y^2}{4}$.}
-\label{pmvfuncex4}
-\end{figure} 
 
 ::: {#exm- } 
 
@@ -327,19 +301,13 @@ with $C\geq 0$.
 
 ::: {.solution }
 Graphing the ellipses 
-\[
+$$
 \frac{x^2}{1^2}+\frac{y^2}{2^2}=C
-\]
- in $\R^2,$ we have the family of level curves corresponding to $C=1,\ldots,10.$ 
-The level curves show that the graph of the function $f$ is a elliptic paraboloid in $\R^3$.
+$$
+ in $\mathbb{R}^2,$ we have the family of level curves corresponding to $C=1,\ldots,10.$ 
+The level curves show that the graph of the function $f$ is a elliptic paraboloid in $\mathbb{R}^3$.
 ::: 
 
-\begin{figure}[H]
-\centering
-\includegraphics{_includes/pmvfuncex5.pdf}
-\caption{Contour plot of $f(x,y)=\sqrt{\frac{y}{x-2}}$.}
-\label{pmvfuncex5}
-\end{figure} 
 
 ::: {#exm- } 
 Find the domain and range for the function 
@@ -351,9 +319,9 @@ and sketch some level curves for $f(x,y)=C$ with $C=0,1,2,3,4$.
 
 ::: {.solution }
 The domain of $f$ is 
-\[
-\left\{(x,y)\in \R^2 \mid \frac{y}{x-2}>0 \right\}.
-\]
+$$
+\left\{(x,y)\in \mathbb{R}^2 \mid \frac{y}{x-2}>0 \right\}.
+$$
 To sketch some level curves 
 $$
 \sqrt{\frac{y}{x-2}}=C
@@ -362,138 +330,68 @@ let's square both sides $\frac{y}{x-2}=C^2$ and so
 $$
 y=C^2(x-2).
 $$ 
-The range of $f$ is $\{z\in \R \mid z\geq 0\}$.
+The range of $f$ is $\{z\in \mathbb{R} \mid z\geq 0\}$.
 ::: 
 
-\def\xspace{\\[10pt]}
-\def\xinspace{\,\,}
-\def\xwidth{1in}
-\def\yspace{\qquad\qquad}
-\begin{figure}[H]
-\hspace{-.25in}
-\subfigure[$f(x,y)=\cos\left(\frac{x^2+2y^2}{4}\right)$]{
-\includegraphics[width=\xwidth]{_includes/pmvfunc1.pdf}\hspace{.25in}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc1ContourPlot.pdf}}
-\yspace
-\subfigure[$f(x,y)=x^3-x y^2$]{
-\includegraphics[width=\xwidth]{_includes/pmvfunc2.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc2ContourPlot.pdf}}
-\xspace
-%\hspace{-1in}
-\subfigure[$f(x,y)=\sin x +\sin y$]{\includegraphics[width=\xwidth]{_includes/pmvfunc3.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc3ContourPlot.pdf}}
-\yspace
-\subfigure[$f(x,y)=x^2+4y^2$]{
-\includegraphics[width=\xwidth]{_includes/pmvfunc4.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc4ContourPlot.pdf}}
-\xspace
-%\hspace{-1in}
-\subfigure[$f(x,y)=x^2y^2e^{-x^2-y^2}$]{
-\includegraphics[width=\xwidth]{_includes/pmvfunc5.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc5ContourPlot.pdf}}
-\yspace
-\subfigure[$f(x,y)=\frac{\cos(x^2+2y^2)}{1+x^2+2y^2}$]{
-\includegraphics[width=\xwidth]{_includes/pmvfunc6.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc6ContourPlot.pdf}}
-\xspace
-%\hspace{-1in}
-\subfigure[$f(x,y)=-4xye^{-2x^2-\frac{1}{5}y^2}$]{\includegraphics[width=\xwidth]{_includes/pmvfunc7.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc7ContourPlot.pdf}}
-\yspace
-\subfigure[$f(x,y)=y^4 - 8 y^2 + 4 x^2$]{\includegraphics[width=\xwidth]{_includes/pmvfunc8.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc8ContourPlot.pdf}}
-\caption{Computer generated graphs of functions and their contour plots.}
-\label{pmvfuncrow}
-\end{figure}  
-
-\begin{figure}[H]
-%\hspace{-1in}
-\subfigure[$f(x,y)=e^{-y}\cos x$]{\includegraphics[width=\xwidth]{_includes/pmvfunc9.pdf}\xinspace\includegraphics[width=\xwidth]{_includes/pmvfunc9ContourPlot.pdf}}
-\yspace
-\subfigure[$f(x,y)=\frac{xy}{x^2-y^2}$]{\includegraphics[width=\xwidth]{_includes/pmvfunc10.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc10ContourPlot.pdf}}
-\xspace
-%\hspace{-1in}
-\subfigure[$f(x,y)=\cos\sqrt{x^2+y^2}$]{\hspace{.3in}\includegraphics[width=1.4in]{_includes/pmvfunc11.pdf}\hspace{.3in}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc11ContourPlot.pdf}}
-\yspace
-\subfigure[$f(x,y)=\sin(x+y)$]{\includegraphics[width=\xwidth]{_includes/pmvfunc12.pdf}\xinspace\includegraphics[width=\xwidth]{_includes/pmvfunc12ContourPlot.pdf}}
-\xspace
-%\hspace{-1in}
-\subfigure[$f(x,y)=\ln(2x^2+y^2)$]{\includegraphics[width=\xwidth]{_includes/pmvfunc13.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc13ContourPlot.pdf}}
-\yspace
-\subfigure[$f(x,y)=\sin x \cos y$]{\includegraphics[width=\xwidth]{_includes/pmvfunc14.pdf}\xinspace\includegraphics[width=\xwidth]{_includes/pmvfunc14ContourPlot.pdf}}
-\xspace
-%\hspace{-1in}
-\subfigure[$f(x,y)=\sin\left(y-\frac{1}{2} x^2\right)$]{\includegraphics[width=1.75in]{_includes/pmvfunc15.pdf}\hspace{.25in}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc15ContourPlot.pdf}}
-\yspace
-\subfigure[$f(x,y)=\frac{1-x^2-y^2}{\sqrt{|1-x^2-y^2|}}$]{\includegraphics[width=\xwidth]{_includes/pmvfunc16.pdf}\xinspace
-\includegraphics[width=\xwidth]{_includes/pmvfunc16ContourPlot.pdf}}
-\caption{More computer generated graphs of functions and their contour plots.}
-\label{pmvfuncrow}
-\end{figure}  
 
 ## Exercises
 
 ::: {#exr- } 
 Let $f(x,y,z)=x^2y e^{2x}+(x+y-z)^2.$ Find each of the following.
  
-- $ f(0,0,0)$ 
-- $ f(1,-1,1)$ 
-- $ f(-1,1,-1)$ 
-- $ \frac{d}{dx}f(x,x,x),$ 
+- $f(0,0,0)$ 
+- $f(1,-1,1)$ 
+- $f(-1,1,-1)$ 
+- $\frac{d}{dx}f(x,x,x),$ 
 - $\frac{d}{dy}f(1,y,1)$
-- $ \frac{d}{dz}f\left(1,1,z^2\right)$
+- $\frac{d}{dz}f\left(1,1,z^2\right)$
  
 ::: 
 
 ::: {#exr- } 
 Find the domain and range for the multivariate function.
  
-- $ f(x,y)=\frac{1}{\sqrt{x-y}}$
-- $ f(x,y)=\sqrt{\frac{y}{x}}.$ 
-- $ f(u,v)=\sqrt{u \sin  v}.$
-- $ f(x,y)=e^{(x+1)/(y-2)}.$
-- $ f(x,y)=\frac{1}{\sqrt{9-x^2-y^2}}.$
+- $f(x,y)=\frac{1}{\sqrt{x-y}}$
+- $f(x,y)=\sqrt{\frac{y}{x}}.$ 
+- $f(u,v)=\sqrt{u \sin  v}.$
+- $f(x,y)=e^{(x+1)/(y-2)}.$
+- $f(x,y)=\frac{1}{\sqrt{9-x^2-y^2}}.$
  
 ::: 
 
 ::: {#exr- } 
 Sketch some level curves of the function.
  
-- $ f(x,y)=x^2-y^2=C$
-- $ f(x,y)=\frac{x}{y}=C$
-- $ f(x,y)=x^2-y=C$
-- $ f(x,y)=x^2+\frac{y^2}{4}=C$
-- $ f(x,y)=x^3-y=C$
-- $ f(x,y)=1/\sqrt{x^2-y^2}$
-- $ g(x,y)=\sqrt{x \sin  y}$
-- $ h(x,y)=\ln (y-x)$
+- $f(x,y)=x^2-y^2=C$
+- $f(x,y)=\frac{x}{y}=C$
+- $f(x,y)=x^2-y=C$
+- $f(x,y)=x^2+\frac{y^2}{4}=C$
+- $f(x,y)=x^3-y=C$
+- $f(x,y)=1/\sqrt{x^2-y^2}$
+- $g(x,y)=\sqrt{x \sin  y}$
+- $h(x,y)=\ln (y-x)$
  
 ::: 
 
 ::: {#exr- } 
 Describe the trace of the quadratic surface in each coordinate plane, then sketch the surface.
  
-- $ \frac{x^2}{4}+y^2+\frac{z^2}{9}=1$ 
-- $ \frac{x^2}{9}-y^2-z^2=1$
+- $\frac{x^2}{4}+y^2+\frac{z^2}{9}=1$ 
+- $\frac{x^2}{9}-y^2-z^2=1$
  
 ::: 
 
 ::: {#exr- } 
 Sketch the graph of the multivariate function. 
  
-- $ f(x,y)=x$
-- $ f(x,y)=x^3-1$ 
-- $ f(x,y)=x^2-y$ 
-- $ f(x,y)=x^2-y^2$ 
-- $ f(x,y)=\sqrt{x+y}$
-- $ f(x,y)=1/\sqrt{x^2-y^2}$
-- $ g(x,y)=\sqrt{x \sin  y}$
-- $ h(x,y)=\ln (y-x)$
- 
+- $f(x,y)=x$
+- $f(x,y)=x^3-1$ 
+- $f(x,y)=x^2-y$ 
+- $f(x,y)=x^2-y^2$ 
+- $f(x,y)=\sqrt{x+y}$
+- $f(x,y)=1/\sqrt{x^2-y^2}$
+- $g(x,y)=\sqrt{x \sin  y}$
+- $h(x,y)=\ln (y-x)$ 
 ::: 
 
 

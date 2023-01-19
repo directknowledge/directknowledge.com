@@ -96,27 +96,6 @@ be a partition of $[c,d]$ into subintervals each of width $\Delta y=(d-c)/m$.
 The vertical lines $x=x_i$ for $0\leq i \leq n$ and the horizontal lines $y=y_j$ for $0\leq j \leq m$ form subrectangles which partition $R$ as shown in \ref{2dpartition}. 
 Since each of the subrectangles have the same area, namely $\Delta A=\Delta x \, \Delta y$ we call this type of partition $\mathcal{P}$ a \index{regular partition} **regular partition**  of the rectangle $R$. 
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=2in]{_includes/R-sum-3-surface-pics.pdf}
-\caption{Approximating the volume between the surface $z=5 - (1/4)x^2 - (1/5)y^2$ and the $xy$-plane over the rectangular region $R=[0,2]\times [0,3]$.}
-\label{fig:surboundvolfunc}
-\end{figure} 
-
-\begin{figure}[htb]
-\centering
-\includegraphics[width=300pt]{_includes/partition-pics.pdf}
-\caption{A regular partition of $[a,b]\times[c,d]$ with subrectangles $R_{ij}$ with $1\leq i \leq n$, $1\leq j \leq m$.}
-\label{2dpartition}
-\end{figure}
-
-\begin{figure}[htb]
-\centering
-\includegraphics[width=2in]{_includes/partition-xy-pics.pdf}
-\caption{The regular partition of $[-1,2]\times[-2,2]$ with $n=6$ and $m=8$.}
-\label{fig:part1}
-\end{figure} 
-
 For example, let $R=[-1,2]\times[-2,2]$. 
 In \ref{fig:part1} we have sketched the graph of the regular partition of $R$ with $n=6$ subintervals of $[-1,2]$ and $m=8$ subintervals of $[-2,2]$. 
 For this partition we have $\Delta x=1/2$ and $\Delta y=1/2$, making the area for each subrectangle $\Delta A =1/4$.  
@@ -124,18 +103,9 @@ For this partition we have $\Delta x=1/2$ and $\Delta y=1/2$, making the area fo
 If we increase the number of subintervals of both $[a,b]$ and $[c,d]$, then the number of subrectangles of $R$ increases. 
 This process is illustrated in \ref{fig:part234}. 
 
-\begin{figure}[htb]
-\centering
-\hspace{-1in}
-\subfigure[$n=12$ and $m=16$]{\includegraphics[width=100pt]{_includes/partition-xy-2-pics.pdf}}
-\subfigure[$n=24$ and $m=32$]{\includegraphics[width=100pt]{_includes/partition-xy-3-pics.pdf}}
-\subfigure[$n=30$ and $m=40$]{\includegraphics[width=100pt]{_includes/partition-xy-4-pics.pdf}}
-\caption{Regular partitions of $R=[-1,2]\times[-2,2]$ are getting finer and finer.}
-\label{fig:part234}
-\end{figure}  
 
 Now we assume that we have a function $f$ of two variables whose domain contains a rectangle $R$ and that we have a regular partition $\mathcal{P}$ of $R$ as described above.
-From each subrectangle in $\mathcal{P}$ we choose a \index{representative point} $\left(x_{ij}^*,y_{ij} **representative point} $\left(x_{ij}^*,y_{ij** ^*\right)$ 
+From each subrectangle in $\mathcal{P}$ we choose a \index{representative point} **representative point** $\left(x_{ij}^*,y_{ij}^*\right)$ 
 and form the sum,  
 
 \begin{equation}
@@ -143,19 +113,10 @@ and form the sum,
 \sum _{i=1}^n \sum _{j=1}^m f\left(x_{ij}^*,y_{ij}^*\right)\Delta  A
 \end{equation}
 where $\Delta  A$ is the area of each subrectangle. 
-A summation of this form is called a \index{Riemann sum} of $f$ with respect to the partition $\mathcal{P}$ and the subrectangle representatives $(x_{ij}^*,y_{ij} **Riemann sum} of $f$ with respect to the partition $\mathcal{P}$ and the subrectangle representatives $(x_{ij}^*,y_{ij** ^*).$ 
+A summation of this form is called a \index{Riemann sum} **Riemann sum** of $f$ with respect to the partition $\mathcal{P}$ and the subrectangle representatives $(x_{ij}^*,y_{ij}^*).$ 
 Notice that a regular partition of $R$ is completely determined by $n$ and $m$.
 
 The next three examples are an illustration of how Riemann sums can be used to estimate the volume of the 3-dimensional solid region over the $xy$-plane bound below by $R$ and above by the surface $z=f(x,y)$ (see \ref{fig:surboundvolfunc}). 
-
-\begin{figure}[htb]
-\centering
-\includegraphics[width=100pt]{_includes/partition-xy-5-pics.pdf}
-\quad
-\includegraphics[width=110pt]{_includes/R-sum-1-pics.pdf}
-\caption{A regular partition of $R$ with $n=2, m=3$.}
-\label{figex:surboundvolone}
-\end{figure} 
 
 
 ::: {#exm- } 
@@ -208,14 +169,6 @@ f(0,0) + f(0,1)+ f(0,2)+f(1,0) + f(1,1) + f(1,2)
 \end{align*}
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=100pt]{_includes/partition-xy-6-pics.pdf}
-\quad
-\includegraphics[width=110pt]{_includes/R-sum-2-pics.pdf}
-\caption{A regular partition of $R$ with $n=4, m=6$.}
-\label{figex:surboundvoltwo}
-\end{figure} 
 
 ::: {#exm- } 
 Consider the surface and the rectangle 
@@ -283,15 +236,6 @@ f\left(0,0\right)
 \end{align*}
 ::: 
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=100pt]{_includes/partition-xy-7-pics.pdf}
-\quad
-\includegraphics[width=110pt]{_includes/R-sum-3-pics.pdf}
-\caption{A regular partition with $n=6, m=12$.}
-\label{figex:surboundvolthree}
-\end{figure} 
- 
 
 ::: {#exm- } 
 Consider the surface and the rectangle 
@@ -336,13 +280,6 @@ f\left(0,0\right) + \cdots +f\left(0,\frac{11}{4}\right)
 As depicted in \ref{figex:surboundvolthree}, the volume of the solid region that lies directly above $R$ and below the surface $z=f(x,y)$ is approximately $25.3097$.
 ::: 
 
-\begin{figure}[htb]
-\centering
-\subfigure[Riemann sum approximation for volume is $25.3097$]{\includegraphics{_includes/R-sum-3-axes-pics.pdf}}
-\subfigure[Exact value of volume is $24.4$]{\includegraphics{_includes/R-sum-4-pics.pdf}}
-\caption{The three-dimensional solid that lies directly above $R=[0,2]\times [0,3]$ and below the surface $z=5 - (1/4)x^2 - (1/5)y^2$.}
-\label{fig:3d-solidsur}
-\end{figure}  
 
 ::: {#def- } 
 Let $f$ be defined on the rectangle $R$ and suppose that $f(x,y)\geq 0$ on $R$.
@@ -358,8 +295,7 @@ if this limit exists.
 
 It can be proven that if $f$ is a continuous function on $R$, then the limit in \ref{defvolurie} always exists, no matter how the subrectangle representatives $(x_{ij}^*, y_{ij}^*)$ are chosen. 
 For example, if $a=x_0 < x_1 < x_2 < \cdots < x_{i-1} < x_i < \cdots < x_n=b$ is a regular partition of $[a,b]$ and $c=y_0 < y_1 < y_2 < \cdots < y_{j-1} < y_j < \cdots < y_m=d$ is a regular partition of $[c,d]$, then we can use midpoints, namely, from each subrectangle $[x_i,x_{i+1}]\times [y_j, y_{j+1}]$ we choose 
-\[
-\small
+$$
 (x_{ij}^*, y_{ij}^*)
 =
 \left( 
@@ -369,17 +305,10 @@ For example, if $a=x_0 < x_1 < x_2 < \cdots < x_{i-1} < x_i < \cdots < x_n=b$ is
 \frac{
 \overbrace{(c+\Delta y (j-1))}^{\text{lower endpoint}}+\overbrace{(c+(\Delta y) j)}^{\text{upper endpoint}}}{2}
 \right)
-\]
+$$
 as subrectangle representatives. 
 This is called the \index{midpoint rule} **midpoint rule** .
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=2in]{_includes/partition-xy-8-pics.pdf}
-\caption{Using midpoints as subrectangle representatives.}
-\label{fig:midsubrep}
-\end{figure} 
- 
 
 ::: {#exm- } 
 Consider the surface and the rectangle 
@@ -435,16 +364,6 @@ f\left(-\frac{7}{8},-\frac{23}{8}\right)
 \end{align*}
 ::: 
 
-\begin{figure}[htb]
-\centering
-%\hspace{-1in}
-\subfigure[Riemann sum approximation for volume is $82.7422$]{\includegraphics[width=150pt]{_includes/R-sum-5-surface-pics.pdf}}
-\qquad 
-\subfigure[Exact value of volume is $82.8\overline{3}$]{\includegraphics[width=150pt]{_includes/R-sum-5-solid-pics.pdf}}
-\caption{The three-dimensional solid that lies directly above $R=[-1,2]\times [-3,4]$ and below the surface $z=2+(1/2)x^2+(1/3)y^2 $.}
-\label{fig:3d-solidsurmid}
-\end{figure}  
-
 
 
 ## Definition of Double Integral
@@ -459,8 +378,9 @@ When this process is applied to the Riemann sum and the norm decreases to zero w
 
 If a function $f$ is defined on a closed, bounded
 rectangular region $R$ in the $x y$-plane, then the double integral of $f$ over $R$ is defined by
-\[
-\iint_R f(x,y)d A=\lim _{\|P\|\to  0}\sum _{k=1}^N f\left(x_k^*,y_k^*\right)\triangle  A_k\]
+$$
+\iint_R f(x,y)d A=\lim _{\|P\|\to  0}\sum _{k=1}^N f\left(x_k^*,y_k^*\right)\triangle  A_k
+$$
 provided this limit exists, in which case, $f$ is said to be \index{integrable} **integrable**  over $R.$
 ::: 
 
@@ -501,10 +421,10 @@ $$
 ## Exercises
 
 ::: {#exr- } 
-If $f$ is a constant function, say $f(x,y)=k$ and $R = [a,b] \times [c,d] $ show that 
-\[ 
+If $f$ is a constant function, say $f(x,y)=k$ and $R = [a,b] \times [c,d]$ show that 
+$$
 \iint_R k dA=k(b-a)(d-c).
-\]
+$$
 ::: 
 
 ::: {#exr- } 

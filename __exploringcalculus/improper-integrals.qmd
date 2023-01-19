@@ -15,16 +15,8 @@ $$
 we are integrating $f$ over a bounded interval $[a,b]$ and the range of $f$ is also a bounded region. 
 We will now discuss more general regions of integration such as $(a,+\infty)$, $(-\infty, b)$, and $(-\infty, +\infty)$. 
 Consider for example the following diagram. 
-\begin{figure}[H]
-\centering
-\includegraphics[width=150pt]{_includes/improper-integrals-1.pdf}
-\end{figure}
 We will use this to define $\int_a^{+\infty} f(x) \, dx$ as a limit. 
 Similarly we wil define $\int_{-\infty}^{b} f(x) \, dx$ as a limit by considering the diagram. 
-\begin{figure}[H]
-\centering
-\includegraphics[width=150pt]{_includes/improper-integrals-2.pdf}
-\end{figure}
 In either case these integrals are said to be \emph{improper}. 
 There are other cases to consider, but in all cases, we will define an \emph{improper integral} using a limit of an already known integral. 
 
@@ -261,13 +253,13 @@ Decide if the integral converges or not. Explain your reasoning.
 - $\int_{0}^{\pi/4} \csc x \, dx$
 - $\int_{-\infty}^{+\infty} \frac{\sin x}{4+x^2}\, dx$
  
-\end{multicols}
+ 
 ::: 
 
 
 ::: {#exr- } 
 Evaluate the following integrals that converge. 
-\begin{multicols}{2}
+ 
  - $\int_{-1}^{+\infty} \frac{x}{1+x^2} \, dx$
 - $\int_{1}^{+\infty} \frac{6}{x^4} \, dx$
 - $\int_{1}^{+\infty}  2^{-x} \, dx$
@@ -289,12 +281,12 @@ Evaluate the following integrals that converge.
 - $\int_{1}^{+\infty}  \frac{1}{x(x+1)} \, dx$
 - $\int_{0}^{+\infty} \cos \pi x \, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
 Evaluate the following integrals that converge. 
-\begin{multicols}{2}
+ 
  - $\int_{0}^{\pi/4} \frac{\sec^2 x}{1-\tan x} \, dx$
 - $\int_{0}^{5} \frac{10}{x}\, dx$
 - $\int_{0}^{\pi/2}  \sec x\tan x \, dx$
@@ -313,7 +305,7 @@ Evaluate the following integrals that converge.
 - $\int_{0}^{8} \frac{1}{\sqrt[3]{x}}\, dx$
 - $\int_{0}^{9} \frac{1}{(x-1)^{1/3}} \, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 
@@ -339,7 +331,7 @@ Use integration by parts to evaluate the integral.
 - $\int_0^1 2x\ln x\, dx$
 - $\int_1^\infty \frac{\ln x}{2x^2} \, dx$
  
-\end{multicols}
+ 
 ::: 
 
 ::: {#exr- } 

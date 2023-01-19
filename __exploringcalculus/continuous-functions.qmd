@@ -11,8 +11,7 @@ A function is \index{continuous} **continuous**  at a point $c$ means
  
 - $f(c)$ is defined,
 - $\lim _{x\to c}f(x)$ exists, and 
-\item 
-$\lim _{x\to c}f(x)=f(c).$
+- $\lim _{x\to c}f(x)=f(c).$
  
 ::: 
 
@@ -26,7 +25,7 @@ Find three examples of how a \index{discontinuity} **discontinuity**  might aris
 ::: {.solution }   
  First, the function 
  $$
- \ds f(x)=\frac{x^2-2x+1}{x-1}
+  \displaystyle f(x)=\frac{x^2-2x+1}{x-1}
  $$ 
  is discontinuous at $x=1$ because $f(1)$ is not defined. 
  So one type of discontinuity is a \index{hole} **hole**  in the function. 
@@ -63,7 +62,7 @@ Give some examples of continuous functions.
 For example, the functions $2x^2-2x+5,$ (polynomial), $\ds\frac{x-1}{x}$ (rational), $\csc  x$ (trigonometric), and $\sec ^{-1}x$ (inverse trigonometric) are continuous on their domains. 
 Also the functions 
 $$
-\ds 2x^2-2x+5+\frac{x-1}{x}(\csc  x),
+ \displaystyle 2x^2-2x+5+\frac{x-1}{x}(\csc  x),
 $$ 
 $\ds\sec ^{-1}\left(\frac{x-1}{x}\right),$ and $\ds\left(2x^2-2x+5\right)\left(\frac{x-1}{x}\right)$ are continuous functions on their domains. 
 ::: 
@@ -180,7 +179,7 @@ So $a+3=3$ and $a=0.$
 ::: {#exm- } 
 Determine the value for which $f(2)$ should be assigned, if any, to have 
 $$
-\ds f(x)=\sqrt{\frac{x^2-4}{x-2}}
+ \displaystyle f(x)=\sqrt{\frac{x^2-4}{x-2}}
 $$ 
 continuous at $x=2.$
 ::: 
@@ -267,8 +266,7 @@ For each of the following functions determine the largest set on which the funct
 ::: {#exr- } 
 For each of the following functions find constants $a$  and $b$  so that the function will be continuous for all $x$  in the domain.
  
-\item 
-$f(x)=
+- $f(x)=
 \begin{cases}
 \frac{\tan  a x}{\tan  b x} & x<0 \\ 4 & x=0 \\ a x+b & x>0
 \end{cases}
