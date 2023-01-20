@@ -18,17 +18,16 @@ The following process allows us to find derivatives of more general curves
 Suppose that $f(x,y)=0$ is a given equation involving both $x$ and $y$; and that $\frac{dy}{d x}$
 exists at $\left(x_0,y_0\right).$ Then $\frac{dy}{d x}|_{\left(x_0,y_0\right)}$ can be found using the following procedure:
  
-\item Using the chain rule where appropriate, differentiate both sides of the equation with respect to $x.$ 
-\item If possible, solve the differentiated equation algebraically for $\frac{dy}{dx}$ and evaluate at $\left(x_0,y_0\right).$
- 
+-   Using the chain rule where appropriate, differentiate both sides of the equation with respect to $x.$ 
+-   If possible, solve the differentiated equation algebraically for $\frac{dy}{dx}$ and evaluate at $\left(x_0,y_0\right).$
 ::: 
 
 
 ::: {#exm- } 
 Use implicit differentiation to find $\frac{dy}{d x}$ given 
-\[
+$$
 \sin (x+y)=y^2 \cos  x.
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -39,7 +38,6 @@ We will use implicit differentiation, and in doing so we use the chain rule on t
 \cos (x+y)+\frac{dy}{dx}\cos (x+y)-2 y \cos  x \frac{dy}{dx}& =-y^2\sin  x\\
 \frac{dy}{dx}(\cos (x+y)-2 y \cos  x)& =-y^2\sin  x-\cos (x+y)\\
 \frac{dy}{dx}& =-\frac{y^2\sin  x+\cos (x+y)}{\cos (x+y)-2 y \cos  x}
-\square
 \end{align*}
 ::: 
 
@@ -51,32 +49,32 @@ folium of  Descartes $x^3+y^3=6x y$ at $(3,3)$.
 
 ::: {.solution }
 Using implicit differentiation we have,  
-\[
+$$
 3x^2+3y^2\frac{dy}{dx}=6y+6x\frac{dy}{dx}
-\]
-\[
+$$
+$$
  \frac{dy}{dx}=\frac{6y-3x^2}{3y^2-6x}=\frac{x^2-2 y}{2 x-y^2}
-\] 
-So an equation of the tangent line at $(3,3)$ is $ \displaystyle y-3=\left.\frac{dy}{dx}\right|_{(3,3)}(x-3)$ which simplifies to $y=-x+6.$ 
+$$ 
+So an equation of the tangent line at $(3,3)$ is $\displaystyle y-3=\left.\frac{dy}{dx}\right|_{(3,3)}(x-3)$ which simplifies to $y=-x+6.$ 
 ::: 
 
 
 ::: {#exm- } 
 Use implicit differentiation to find the tangent to the 
 lemniscate of Bernoulli 
-\[
+$$
 2\left(x^2+y^2\right)^2=25\left(x^2-y^2\right).
-\]
+$$
 ::: 
 
 ::: {.solution }
 Using implicit differentiation we have,  
-\[
-4\left(x^2+y^2\right)\left(2x+2y\frac{dy}{dx}\right)=50x-50y\frac{dy}{dx}\]
+$$
+4\left(x^2+y^2\right)\left(2x+2y\frac{dy}{dx}\right)=50x-50y\frac{dy}{dx}$$
 and so 
-\[
+$$
 \frac{dy}{dx}=\frac{25 x-4 x \left(x^2+y^2\right)}{25 y+4 y \left(x^2+y^2\right)}
-\] 
+$$ 
 So an equation of the tangent line at $(3,1)$ is  $y-1=\frac{dy}{dx}|_{(3,1)}(x-3)$ which simplifies to $y=\frac{-9}{13}x+\frac{40}{13}.$ 
 ::: 
 
@@ -87,12 +85,12 @@ Use implicit differentiation to find all points on the lemniscate of Bernoulli $
 
 ::: {.solution }
 Using implicit differentiation we have,  
-\[
-2\left(x^2+y^2\right)\left(2x+2y\frac{dy}{dx}\right)=8x-8y\frac{dy}{dx}\]
+$$
+2\left(x^2+y^2\right)\left(2x+2y\frac{dy}{dx}\right)=8x-8y\frac{dy}{dx}$$
 and so
-\[
+$$
 \frac{dy}{dx}=-\frac{x \left(-2+x^2+y^2\right)}{y \left(2+x^2+y^2\right)}\
-\]
+$$
 we need to find all $(x,y)$ where $\frac{dy}{dx}=0.$ Clearly, the point $(0,0)$ is ruled out and so $-2+x^2+y^2=0$; that is $x^2+y^2=2.$ Using $x^2+y^2=2$ with the original we see $x^2-y^2=1$ also. Therefore, $2x^2=3$ and so $x=\pm \sqrt{\frac{3}{2}}$ and $y=\pm \sqrt{\frac{1}{2}}.$
 ::: 
 
@@ -103,9 +101,9 @@ Use implicit differentiation to find two points on the curve whose equation is $
 
 ::: {.solution }
 Using implicit differentiation we determine,  
-\[
+$$
 2x-3y-3x\frac{dy}{dx}+4y\frac{dy}{dx}=0
-\]
+$$
 and so,  $\frac{dy}{dx}=\frac{3y-2x}{4y-3x}$. Since we want vertical tangent lines we need $4y-3x=0;$ that is, $y=\frac{3}{4}x$ and with the original equation this means;  $x^2-3x \left(\frac{3}{4}x\right)+2\left(\frac{3}{4}x\right)^2=-2$ which is solved as $x=\pm 4.$ So the points where the tangent line is vertical are $(-4,-3)$ and $(4,3).$
 ::: 
 
@@ -118,11 +116,10 @@ Logarithmic differentiation is a procedure that uses the chain rule and implicit
 ::: {#thm- } [Logarithmic Differentiation]\index{logarithmic differentiation} **logarithmic differentiation** 
 Suppose that $f(x,y)=0$ is a given equation involving both $x$ and $y$; and that $\frac{dy}{d x}$ exists at $\left(x_0,y_0\right).$ Then $\frac{dy}{d x}|_{\left(x_0,y_0\right)}$ can be found using the following procedure:  
  
-\item Apply a logarithmic function with the appropriate base to both sides. 
-\item Use properties of logarithms to simplify.  
-\item Differentiate both sides of the equation with respect to $x.$ 
-\item If possible, solve the differentiated equation algebraically for $\frac{dy}{dx}.$
- 
+-   Apply a logarithmic function with the appropriate base to both sides. 
+-   Use properties of logarithms to simplify.  
+-   Differentiate both sides of the equation with respect to $x.$ 
+-   If possible, solve the differentiated equation algebraically for $\frac{dy}{dx}.$
 ::: 
 
 ::: {#exm- } 
@@ -133,9 +130,9 @@ Find the derivative of $y=\frac{1}{(x-1)^3-(x+1)^3}$ without using the quotient 
 ::: {#exm- } 
 Use logarithmic differentiation to find 
 $\frac{dy}{dx}$ given 
-\[
+$$
 y=\frac{e^{2x}}{\left(x^2-3\right)^2\ln \sqrt{x}}.
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -155,9 +152,9 @@ Use logarithmic differentiation to find $\frac{dy}{dx}$ given $y=x^{\sin  x}.$
 
 ::: {.solution }
 Using the natural logarithmic function, we have  $\ln  y=(\sin  x)( \ln  x )$ and applying implicit differentiation we have, 
-\[
+$$
 \frac{1}{y}\frac{dy}{dx}=(\cos  x)(\ln  x)+\frac{\sin  x}{x} \frac{dy}{dx}=x^{\sin  x}(\cos  x)(\ln  x)+\frac{\sin  x}{x}
-\]
+$$
 as desired.
 ::: 
 
@@ -168,53 +165,48 @@ as desired.
 ::: {#exr- } 
 Find the derivative $\frac{dy}{dx}$ given each of the following.
  
-\item $  y=x^{-3/5}$
-\item $  y=7\sqrt{x+6}$
-\item $  y=(1-6x)^{2/3}$
-\item $  y=\sqrt[3]{x^2}$
-\item $  y=\cos  (1-6x)^{2/3}$
-\item $  y=\sqrt[3]{1+\cos  (2x)}$
- 
+- $y=x^{-3/5}$
+- $y=7\sqrt{x+6}$
+- $y=(1-6x)^{2/3}$
+- $y=\sqrt[3]{x^2}$
+- $y=\cos  (1-6x)^{2/3}$
+- $y=\sqrt[3]{1+\cos  (2x)}$
 ::: 
 
 ::: {#exr- } 
 Use implicit differentiation to find $\frac{dy}{dx}$ given each of the following. 
  
-\item $  x^3+y^3=18x y$
-\item $  x^2(x-y)^2=x^2-y^2$
-\item $  x^2=\frac{x-y}{x+y}$
-\item $  e^{2x}=\sin (x+3y)$
-\item $  e^{x^2y}=2x+2y$
-\item $  \sin (x y)=\frac{1}{2}$
- 
+- $x^3+y^3=18x y$
+- $x^2(x-y)^2=x^2-y^2$
+- $x^2=\frac{x-y}{x+y}$
+- $e^{2x}=\sin (x+3y)$
+- $e^{x^2y}=2x+2y$
+- $\sin (x y)=\frac{1}{2}$
 ::: 
 
 ::: {#exr- } 
 Use implicit differentiation to find $\frac{dy}{dx}$ at $(1,1)$ for each of the following.
  
-\item $  (x+y)^3=x^3+y^3$
-\item $  y^2\left(x^2+y^2\right)=2x^2$
-\item $  x\sqrt{1+y}+y\sqrt{1+2x}=2x$
-\item $  x^2=\frac{y^2}{y^2-1}$
- 
+- $(x+y)^3=x^3+y^3$
+- $y^2\left(x^2+y^2\right)=2x^2$
+- $x\sqrt{1+y}+y\sqrt{1+2x}=2x$
+- $x^2=\frac{y^2}{y^2-1}$
 ::: 
 
 ::: {#exr- } 
 Use implicit differentiation to find $\frac{dy}{dx}$ and then find $\frac{ d^2y}{dx^2}$ given each of the following. 
  
-\item $  x^{2/3}+y^{2/3}=1$
-\item  $  2\sqrt{y}=x-y.$
- 
+- $x^{2/3}+y^{2/3}=1$
+- $2\sqrt{y}=x-y.$
 ::: 
 
 ::: {#exr- } 
 Verify that the given point is on the given curve and find equations for the lines that are tangent and normal to the curve at this point.
  
-\item $  x^2+x y-y^2=1$ at $(2,3)$
-\item  $  y^2-2x-4y-1=0$  at $(-2,1)$ 
-\item $  2x y+\pi  \sin  y=2\pi $ at  $(1,\pi /2)$ 
-\item  $  x^2\cos ^2y-\sin  y=0$  at  $(0,\pi )$
- 
+- $x^2+x y-y^2=1$ at $(2,3)$
+- $y^2-2x-4y-1=0$  at $(-2,1)$ 
+- $2x y+\pi  \sin  y=2\pi$ at  $(1,\pi /2)$ 
+- $x^2\cos ^2y-\sin  y=0$  at  $(0,\pi )$
 ::: 
 
 ::: {#exr- } 
@@ -228,13 +220,12 @@ Find two points on the curve whose equation is $x^2-3x y+2y^2=-2,$ where the tan
 ::: {#exr- } 
 Use logarithmic differentiation to find $\frac{dy}{dx}$ for each of the following. 
  
-\item $  y=x^{x^3-2x+7}$
-\item $  y=x^{\cos  x}$ 
-\item $  y=\frac{\sin x}{x^2-3x} e^{x^2}$
-\item $  y=(3x-1)^{3x-1}$ 
-\item $  y=\frac{e^{-3x}(x-2)}{\left(x^2+3\right)^2\sqrt{2x-1}}$
-\item $  y=x^{\tan  x}+x^{\cot  x}$ 
- 
+- $y=x^{x^3-2x+7}$
+- $y=x^{\cos  x}$ 
+- $y=\frac{\sin x}{x^2-3x} e^{x^2}$
+- $y=(3x-1)^{3x-1}$ 
+- $y=\frac{e^{-3x}(x-2)}{\left(x^2+3\right)^2\sqrt{2x-1}}$
+- $y=x^{\tan  x}+x^{\cot  x}$ 
 ::: 
 
 ::: {#exr- } 
@@ -250,11 +241,10 @@ find the slope of the curve $x=f(t),$ $y=g(t)$ at $t=\pi .$
 ::: {#exr- } 
 Which of the following could be true if $f''(x)=x^{-1/3}?$
  
-\item $   f(x)=\frac{3}{2}x^{2/3}-3 $
-\item $   f(x)=\frac{9}{10}x^{5/3}-7 $
-\item $   f'''(x)=\frac{-1}{3}x^{4/3} $
-\item $  f(x)=\frac{3}{2}x^{2/3}+6$
- 
+- $f(x)=\frac{3}{2}x^{2/3}-3$
+- $f(x)=\frac{9}{10}x^{5/3}-7$
+- $f'''(x)=\frac{-1}{3}x^{4/3}$
+- $f(x)=\frac{3}{2}x^{2/3}+6$
 ::: 
 
 ::: {#exr- } 
@@ -264,13 +254,12 @@ Use implicit differentiation to show that tangent line at $\left(x_0,y_0\right)$
 ::: {#exr- } 
 Find the derivative $\frac{dy}{dx}$ for each of the following.  
  
-- $  y=\cos ^{-1}\left(x^2\right).$
-- $  y=\sin ^{-1}(1-t).$
-- $  y=\csc ^{-1}\left(x^2+1\right),$ $x>0.$
-- $  y=\sin ^{-1}\left(\frac{3}{t^2}\right).$
-- $  y=\ln  \left(\tan ^{-1}x\right).$
-- $  y=\cos ^{-1}\left(e^{-t}\right).$
- 
+- $y=\cos ^{-1}\left(x^2\right).$
+- $y=\sin ^{-1}(1-t).$
+- $y=\csc ^{-1}\left(x^2+1\right),$ $x>0.$
+- $y=\sin ^{-1}\left(\frac{3}{t^2}\right).$
+- $y=\ln  \left(\tan ^{-1}x\right).$
+- $y=\cos ^{-1}\left(e^{-t}\right).$
 ::: 
 
 

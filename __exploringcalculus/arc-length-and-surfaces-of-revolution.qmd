@@ -1,7 +1,7 @@
 ---
 pagetitle: "Arc Length and Surfaces of Revolution - Exploring Calculus"
 ---
-# "Arc Length and Surfaces of Revolution"
+# Arc Length and Surfaces of Revolution
 
 We motivate an integration formula for finding the arc length of a smooth curve in a plane. Similarly, we use a formula for finding the surface area of the solid obtained by revolving a curve about an axis. These formulas are demonstrated with several examples and exercises are provided at the end to develop integration skills.
 
@@ -228,7 +228,6 @@ Find the length of the curves.
 - $x=(1/3)\sqrt{y}(y-3)$, $1\leq y \leq 4$
 - $x=2e^{\sqrt{2}y} +(1/16) e^{-\sqrt{2}y}$, $0\leq y \leq (\ln 2)/\sqrt{2}$
 - $x=y^4/4+1/(8y^2)$, $1\leq y \leq 2$
- 
 ::: 
 
 
@@ -245,7 +244,6 @@ Find the areas of the surfaces generate by revolving the curves about the indica
 - $y=(1/3)\sqrt{y(3-y)^2}$ on $0\leq y \leq 3$, $y$-axis
 - $x=2\sqrt{4-y}$, $0\leq y \leq 15/4$, $y$-axis
 - $y=x^2/4$, $2\leq x \leq 4$, $y$-axis
- 
 ::: 
 
 ::: {#exr- } 

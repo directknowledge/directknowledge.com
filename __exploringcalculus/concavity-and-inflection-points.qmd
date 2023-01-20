@@ -1,13 +1,13 @@
 ---
 pagetitle: "Concavity and Inflection Points - Exploring Calculus"
 ---
-# "Concavity and Inflection Points"
+# Concavity and Inflection Points
 
 ## First and Second Order Critical Points
 
 
 ::: {#def- } 
-Suppose $c$ is in the domain of a function $f$. We will call $c$ a \index{first-order critical number} of $f$ when $f'(c)=0$ or $f'(c)$ does not exist and a \index{second-order critical number} **first-order critical number} of $f$ when $f'(c)=0$ or $f'(c)$ does not exist and a \index{second-order critical number**  of $f$ when $f''(c)=0$ or $f''(c)$ does not exist.
+Suppose $c$ is in the domain of a function $f$. We will call $c$ a \index{first-order critical number} **first-order critical number** of $f$ when $f'(c)=0$ or $f'(c)$ does not exist and a \index{second-order critical number} **second-order critical number**  of $f$ when $f''(c)=0$ or $f''(c)$ does not exist.
 ::: 
 
 ## Concavity and Inflection Points
@@ -16,9 +16,8 @@ Suppose $c$ is in the domain of a function $f$. We will call $c$ a \index{first-
 ::: {#def- } 
 Suppose a function $f$ is differentiable on an open interval $I.$ 
  
-\item If $f'$ is increasing on $I,$ then the graph of $f$ is called \index{concave upward} **concave upward**  on $I.$
-\item If $f'$ is decreasing on $I,$ then the graph of $f$ is called \index{concave downward} **concave downward**  on $I.$
- 
+- If $f'$ is increasing on $I,$ then the graph of $f$ is called \index{concave upward} **concave upward**  on $I.$
+- If $f'$ is decreasing on $I,$ then the graph of $f$ is called \index{concave downward} **concave downward**  on $I.$
 ::: 
 
 If the graph of $f$ lies above all of its tangents on an interval $I,$ it is concave upward on $I.$ If the graph of $f$ lies below all of its tangents, it is concave downward on $I.$ 
@@ -34,9 +33,8 @@ A point $P(c,f(c))$ on a curve is called an \index{inflection point} **inflectio
 ::: {#thm- } [Concavity Test]
 Suppose a function $f$ is twice differentiable on an interval $I.$ 
  
-\item If $f''(x)>0$ for all $x$ in $I,$ then the graph of $f$ is concave upward on $I.$
-\item If $f''(x)<0$ for all $x$ in $I,$ then the graph of $f$ is concave downward on $I.$
- 
+-   If $f''(x)>0$ for all $x$ in $I,$ then the graph of $f$ is concave upward on $I.$
+-   If $f''(x)<0$ for all $x$ in $I,$ then the graph of $f$ is concave downward on $I.$
 ::: 
 
 ::: {#exm- }  
@@ -47,10 +45,10 @@ Determine where the curve $y=x^4-4x^3$ is concave upward, where it is concave do
 
 ::: {.solution } 
 The first and second derivatives of the function $f$ are
-\[f'(x)=4x^3-12x^2=4x^2(x-3)\] and
-\[f''(x)=12x^2-24x=12x(x-2).\]
+$$f'(x)=4x^3-12x^2=4x^2(x-3)$$ and
+$$f''(x)=12x^2-24x=12x(x-2).$$
 Since $f''$ is defined for all real numbers and $f''(x)=0$ only when $x=0$ and $x=2$ the second-order critical numbers of $f$ are $x=0$ and $x=2$. We summarize the Concavity Test in the following table: 
-\[
+$$
 \begin{array}{c|c|c|l}
  \text{Interval} & f & f'' & \text{Conclusion} \\ \hline
  x<0 &   & + & \text{concave up} \\
@@ -59,7 +57,7 @@ Since $f''$ is defined for all real numbers and $f''(x)=0$ only when $x=0$ and $
  x=2 & -16 & 0 & \text{inflection point} \\
  x>2 &   & + & \text{concave up}
 \end{array}
-\]
+$$
 Therefore, $f$ is concave up on $(-\infty ,0)\cup (2,+\infty )$ and concave down on $(0,2).$ The points $(0,0)$ and $(2,-16)$ are inflection points (see Figure ~\ref{fig:graph12}). 
 ::: 
 
@@ -70,10 +68,10 @@ Determine where the curve $y=x^3-3x+1$ is concave upward and where it is concave
 
 ::: {.solution } 
 The first and second derivatives of the function $f$ are
-\[f'(x)=3x^2-3=3(x-1)(x+1)\] and
+$$f'(x)=3x^2-3=3(x-1)(x+1)$$ and
 $f''(x)=6x.$ Since $f'$ and $f''$ are polynomials they are both defined for all real numbers and since $f'(x)=0$ and $f''(x)=0$ only when $x=\pm 1$ and $x=0$, respectively, the first-order critical numbers are $x=\pm 1$ and the second-order critical number is $x=0$.
 We summarize the First Derivative Test and the Concavity Test in the following table. 
-\[
+$$
 \begin{array}{c|c|c|c|l}
  \text{Interval} & f & f' & f'' & \text{Conclusion} \\ \hline
  x<-1 &   & + &   & \text{increasing} \\
@@ -85,7 +83,7 @@ We summarize the First Derivative Test and the Concavity Test in the following t
  x=0 & 1 &   & 0 & \text{inflection point} \\
  x>0 &   &   & + & \text{concave up}
 \end{array}
-\]
+$$
 Therefore, the function $f$ has a local maximum at $(3,0)$ and a local minimum at $(1,-1).$ The function $f$ is increasing on $(-\infty ,-1)\cup (1,+\infty )$ and decreasing on $(-1,1).$ The point $(0,1)$ is an inflection point because $f$ is concave up on the interval $(0,+\infty )$ and concave down on $(-\infty ,0).$  
 (see Figure ~\ref{fig:graph13}). 
 ::: 
@@ -96,9 +94,8 @@ Therefore, the function $f$ has a local maximum at $(3,0)$ and a local minimum a
 ::: {#thm- } [Second Derivative Test] 
 Suppose $f''$ in continuous on an open interval that contains $c$ with $f'(c)=0.$
  
-\item If $f''(c)>0,$ then $f$ has a relative (local) minimum at $c.$
-\item If $f''(c)<0,$ then $f$ has a relative (local) maximum at $c.$
- 
+-   If $f''(c)>0,$ then $f$ has a relative (local) minimum at $c.$
+-   If $f''(c)<0,$ then $f$ has a relative (local) maximum at $c.$
 ::: 
 
 The Second Derivative Test is inconclusive when both $f'(c)=0$ and $f''(c)=0.$ For example, if $f(x)=x^3$ and $g(x)=x^4,$ both  $f'(0)=g'(0)=0$ and $f''(0)=g''(0)=0.$  The point $x=0$ is a minimum for $g$ but is neither a maximum nor a minimum for $f.$ For some functions the Second Derivative Test might be a straightforward method for determining whether a point is a local extrema, however for some functions the First Derivative Test is a necessity.
@@ -110,7 +107,7 @@ $f(x)=3x^5-5x^3+2$ corresponds to a relative maximum, a relative minimum, or nei
 ::: 
 
 ::: {.solution } 
-Since $f'(x)=15 x^4-15 x^2=15 (x-1) x^2 (x+1)$ is defined for all real numbers and $f'(x)=0$ when $x=0$ and $x=\pm 1$ the first-order critical numbers are $x=0$ and $x=\pm 1$ . Since \[f''(x)=60 x^3-30 x=30 x \left(2 x^2-1\right)\] is continuous for all real numbers we can apply the Second Derivative Test. Since $f''(-1)<0$ the point $(-1,4)$ is a local maximum and since $f''(1)>0$ the point $(1,0)$ is a local minimum. Since $f''(0)=0$ the Second Derivative Test is inconclusive at $x=0$.  (see Figure ~\ref{fig:graph14}). 
+Since $f'(x)=15 x^4-15 x^2=15 (x-1) x^2 (x+1)$ is defined for all real numbers and $f'(x)=0$ when $x=0$ and $x=\pm 1$ the first-order critical numbers are $x=0$ and $x=\pm 1$ . Since $$f''(x)=60 x^3-30 x=30 x \left(2 x^2-1\right)$$ is continuous for all real numbers we can apply the Second Derivative Test. Since $f''(-1)<0$ the point $(-1,4)$ is a local maximum and since $f''(1)>0$ the point $(1,0)$ is a local minimum. Since $f''(0)=0$ the Second Derivative Test is inconclusive at $x=0$.  (see Figure ~\ref{fig:graph14}). 
 ::: 
 
 
@@ -120,7 +117,7 @@ Use the Second Derivative Test to determine whether each critical number of the 
 
 ::: {.solution } 
 The first derivative of the function $f$ is 
-\[f'(x)=1-\frac{4}{x^2}=\frac{x^2-4}{x^2}=\frac{(x-2)(x+2)}{x^2}.\]
+$$f'(x)=1-\frac{4}{x^2}=\frac{x^2-4}{x^2}=\frac{(x-2)(x+2)}{x^2}.$$
 The first derivative is defined for all real numbers except $x=0$ and $f'(x)=0$ only when $x=\pm 2$ the first-order critical numbers of $f $ are $x= \pm 2$. Note that, even though $f'(0)$ is undefined, so is $f(0)$ and so $0$ is not a critical number. The second derivative of the function $f$ is 
 $f''(x)=\frac{4}{x^3}$  and since $f''$ is continuous for all real numbers except $x=0$ we can apply the Second Derivative Test. Since $f''(2)>0$ the point $(2,4)$ is a local minimum and since $f''(-2)<0$ the point $(-2,-4)$ is a local maximum (see Figure ~\ref{fig:graph15}). 
 ::: 
@@ -132,28 +129,28 @@ For the function $f(x)=x^2e^{-3x}$ find all first-order and second-order critica
 
 ::: {.solution } 
 The first and second derivatives of the function $f$ are
-\[f'(x)=2x e^{-3x}-3x^2 e^{-3x}=e^{-3x}\left(2x-3x^2\right)=x(2-3x)e^{-3x}\] and \[f''(x)=e^{-3x}\left(9x^2-12x+2\right).\] Since both the first and second derivatives are continuous for all real numbers the first-order and second-order critical numbers will be found by solving $f'(x)=0$ and $f''(x)=0$, respectively.   Solving $f'(x)=0$ we find the first-order critical numbers to be $x=0$ and $x=\frac{2}{3}.$ Solving $f''(x)=0$ we find the second-order critical numbers to be $x=\frac{2}{3}\pm \frac{\sqrt{2}}{3}.$ Since $f$ is continuous we can apply the First Derivative Test as follows:
-\[ 
+$$f'(x)=2x e^{-3x}-3x^2 e^{-3x}=e^{-3x}\left(2x-3x^2\right)=x(2-3x)e^{-3x}$$ and $$f''(x)=e^{-3x}\left(9x^2-12x+2\right).$$ Since both the first and second derivatives are continuous for all real numbers the first-order and second-order critical numbers will be found by solving $f'(x)=0$ and $f''(x)=0$, respectively.   Solving $f'(x)=0$ we find the first-order critical numbers to be $x=0$ and $x=\frac{2}{3}.$ Solving $f''(x)=0$ we find the second-order critical numbers to be $x=\frac{2}{3}\pm \frac{\sqrt{2}}{3}.$ Since $f$ is continuous we can apply the First Derivative Test as follows:
+$$ 
 \begin{array}{c|c|c|l}
- \text{Interval} & f & f' & \text{Conclusion} \\[7pt] \hline
- x<0 &   & - & \text{decreasing} \\[7pt]
- x=0 & 0 & 0 & \text{relative minimum} \\[7pt]
- 0<x<\frac{2}{3} &   & + & \text{increasing} \\[7pt]
- x=\frac{2}{3} & \frac{4}{9 e^2} & 0 & \text{relative maximum} \\[7pt]
+ \text{Interval} & f & f' & \text{Conclusion} \\  \hline
+ x<0 &   & - & \text{decreasing} \\ 
+ x=0 & 0 & 0 & \text{relative minimum} \\ 
+ 0<x<\frac{2}{3} &   & + & \text{increasing} \\ 
+ x=\frac{2}{3} & \frac{4}{9 e^2} & 0 & \text{relative maximum} \\ 
  x>\frac{2}{3} &   & - & \text{decreasing}
 \end{array}
-\]
+$$
 Since $f''$ is continuous we can apply the Second Derivative Test as follows: since $f''(0)>0$ the point $(0,0)$ is a local minimum and since $f''\left(\frac{2}{3}\right)<0$ the point $\left(\frac{2}{3},f\left(\frac{2}{3}\right)\right)$ is a local maximum. Applying the Concavity Test: 
-\[
+$$
 \begin{array}{c|c|c|l}
- \text{Interval} & f & f'' & \text{Conclusion} \\[7pt] \hline
- x<\frac{2}{3}-\frac{\sqrt{2}}{3} &   & + & \text{concave up} \\[7pt]
- x=\frac{2}{3}-\frac{\sqrt{2}}{3} & \frac{1}{9} \left(6-4 \sqrt{2}\right) e^{-2+\sqrt{2}} & 0 & \text{inflection point} \\[7pt]
- \frac{2}{3}-\frac{\sqrt{2}}{3}<x<\frac{2}{3}+\frac{\sqrt{2}}{3} &   & - & \text{concave down} \\[7pt]
- x=\frac{2}{3}+\frac{\sqrt{2}}{3} & \frac{2}{9} \left(3+2 \sqrt{2}\right) e^{-2-\sqrt{2}} & 0 & \text{inflection point} \\[7pt]
+ \text{Interval} & f & f'' & \text{Conclusion} \\  \hline
+ x<\frac{2}{3}-\frac{\sqrt{2}}{3} &   & + & \text{concave up} \\ 
+ x=\frac{2}{3}-\frac{\sqrt{2}}{3} & \frac{1}{9} \left(6-4 \sqrt{2}\right) e^{-2+\sqrt{2}} & 0 & \text{inflection point} \\ 
+ \frac{2}{3}-\frac{\sqrt{2}}{3}<x<\frac{2}{3}+\frac{\sqrt{2}}{3} &   & - & \text{concave down} \\ 
+ x=\frac{2}{3}+\frac{\sqrt{2}}{3} & \frac{2}{9} \left(3+2 \sqrt{2}\right) e^{-2-\sqrt{2}} & 0 & \text{inflection point} \\ 
  x>\frac{2}{3}+\frac{\sqrt{2}}{3} &   & + & \text{concave up}
 \end{array}
-\]
+$$
 (see Figure ~\ref{fig:graph16}). 
 ::: 
 
@@ -173,7 +170,6 @@ For each of the following functions identify the inflection points and local max
 - $f(x)=\sqrt{|x|}$ 
 - $f(x)=e^x-2e^{-x}-3x$ 
 - $f(x)=\frac{\ln  x}{\sqrt{x}}$ 
- 
 ::: 
 
 ::: {#exr- } 
@@ -206,12 +202,12 @@ Find all vertical tangents and cusps for the function $f(x)=\sqrt{4-x^2}.$ Justi
 
 ::: {#exr- } 
 Find all vertical tangents and cusps for the function 
-\[f(x)=\left\{
+$$f(x)=\left\{
 \begin{array}{cc}
  x^{1/3}+3 & x\leq 0 \\
  3-x^{1/5} & x\geq 0
 \end{array}
-\right..\] 
+\right..$$ 
 Justify your work. Sketch the graph of the function. 
 ::: 
 
@@ -239,10 +235,9 @@ for [$0,2a$). Show all special features such as vertical asymptotes, horizontal 
 ::: {#exr- } 
 Sketch the graph of the following functions. Find all vertical and horizontal asymptotes of the graph of each function. Determine intervals of increasing and decreasing, determine concavity, and locate all critical points and points of inflection. Show all special features such as cusps or vertical tangents. 
     
-\item $f(x)=x^{2/3}(x-7)$ 
-\item $g(x)=\frac{72-54 x+x^2+2 x^3}{15-17 x+4 x^2}$
-\item $h(x)=\frac{3x-2}{\sqrt{2x^2+1}}$
- 
+-   $f(x)=x^{2/3}(x-7)$ 
+-   $g(x)=\frac{72-54 x+x^2+2 x^3}{15-17 x+4 x^2}$
+-   $h(x)=\frac{3x-2}{\sqrt{2x^2+1}}$
 ::: 
 
 

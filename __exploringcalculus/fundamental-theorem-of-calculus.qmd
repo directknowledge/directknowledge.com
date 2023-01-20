@@ -1,7 +1,7 @@
 ---
 pagetitle: "Fundamental Theorem of Calculus - Exploring Calculus"
 ---
-# "Fundamental Theorem of Calculus"
+# Fundamental Theorem of Calculus
 
 Before we begin, let's review the Intermediate Value Theorem and the Extreme Value Theorem. 
 
@@ -67,10 +67,10 @@ holds.
 Let $f(x)=\frac{x^5}{\sqrt[3]{1+x^4}}$.
 Since $f$ is continuous on $[0,1]$, we know that $f$ must attain a maximum $M$ and a minimum value $m$. 
 We find, 
-\[
+$$
 f'(x)=
 \frac{x^4(19 x^4+15)}{3(x^4+1)^{2/3}}
-\]
+$$
 Hence the only critical number is $0$.
 We test and find $m=f(0)=0$ and $M=f(1)=1/\sqrt[3]{2}\approx 0.79$.
 However, we can do better, by observing that $1+x^4\geq 1$ for $x$ in $[0,1]$.
@@ -82,10 +82,14 @@ $$
 as needed. 
 ::: 
 
+
+
 ## The First Fundamental Theorem of Calculus
 
-::: {#thm- } [First Fundamental Theorem of Calculus]
-\label{thm2}
+::: {#thm- } 
+
+## First Fundamental Theorem of Calculus
+
 If $f$ is continuous on $[a,b]$, then the function $F$ defined by 
 $$F(x)=\int_a^x f(t) \, dt, \quad 
 a\leq x \leq b
@@ -121,31 +125,23 @@ $$
 as needed.
 ::: 
 
-\noindent
-\begin{minipage}[c]{\textwidth}
+
 ::: {#exm- } 
 Find the derivative of the following functions. 
  
-- $G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt $
-- $G(x)=\int_{0}^{x^2} t \sin t \, dt $
-- $G(x)=\int_{2}^{\sqrt{x}} \frac{\sin t}{t} \, dt $
-- $G(x)=\int_{x^2}^{x^3} \ln t\, dt $, $x>0$
- 
+- $G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt$
+- $G(x)=\int_{0}^{x^2} t \sin t \, dt$
+- $G(x)=\int_{2}^{\sqrt{x}} \frac{\sin t}{t} \, dt$
+- $G(x)=\int_{x^2}^{x^3} \ln t\, dt$, $x>0$
 ::: 
-\end{minipage}
+
 
 ::: {.solution }
  
-\item[(a)]
-$G'(x)=x\sqrt{x^2+1}$
-\item[(b)]
-$G'(x)=(x\sin x) (2x)=2x^2\sin x$
-\item[(c)]
-$G'(x)
-=\frac{\sin x}{x} \frac{d}{dx}\left(\frac{1}{x}\right)
-=\frac{\sin x}{x} \left(\frac{-1}{x^2}\right)
-$
-\item[(d)]
+- $G'(x)=x\sqrt{x^2+1}$
+- $G'(x)=(x\sin x) (2x)=2x^2\sin x$
+- $G'(x)=\frac{\sin x}{x} \frac{d}{dx}\left(\frac{1}{x}\right)$
+- $G'(x)=\frac{\sin x}{x} \left(\frac{-1}{x^2}\right)$
 First we write,
 $$
 G(x)=\int_{x^2}^c \ln t\, dt +\int_c^{x^3} \ln t\, dt 
@@ -218,22 +214,19 @@ $$
 as needed. 
 ::: 
 
-\noindent
-\begin{minipage}[c]{\textwidth}
 ::: {#exm- } 
 Evaluate the following integrals.
  
 - $\int_{-2}^0 (2x-3)\, dx$
 - $\int_{0}^2 (2-4u+u^2)\, du$
-- $ \int_1^2 \frac{3x^4-2x^2+1}{2x^2} \, dx$
-- $ \int_2^0 \sqrt{x}(x+1)(x-2) \, dx$
-- $ \int_0^{\pi} \sin 2x \cos x \, dx$
-- $ \int_0^{\pi}  |\cos x| \, dx$
-- $ \int _0^{4\sqrt{3}} \frac{1}{x^2+16}\, dx$
-- $ \int _1^e \frac{\ln x}{x} e^{(\ln x)^2}\, dx$
- 
+- $\int_1^2 \frac{3x^4-2x^2+1}{2x^2} \, dx$
+- $\int_2^0 \sqrt{x}(x+1)(x-2) \, dx$
+- $\int_0^{\pi} \sin 2x \cos x \, dx$
+- $\int_0^{\pi}  |\cos x| \, dx$
+- $\int _0^{4\sqrt{3}} \frac{1}{x^2+16}\, dx$
+- $\int _1^e \frac{\ln x}{x} e^{(\ln x)^2}\, dx$
 ::: 
-\end{minipage}
+
 
 
 ## Exercises
@@ -241,11 +234,10 @@ Evaluate the following integrals.
 ::: {#exr- } 
 Find the derivative of the following functions. 
  
-- $G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt $
-- $G(x)=\int_{0}^{x^2} t \sin t \, dt $
-- $G(x)=\int_{2}^{\sqrt{x}} \frac{\sin t}{t} \, dt $
-- $G(x)=\int_{x^2}^{x^3} \ln t\, dt $
- 
+- $G(x)=\int_{-1}^x t \sqrt{t^2+1} \, dt$
+- $G(x)=\int_{0}^{x^2} t \sin t \, dt$
+- $G(x)=\int_{2}^{\sqrt{x}} \frac{\sin t}{t} \, dt$
+- $G(x)=\int_{x^2}^{x^3} \ln t\, dt$
 ::: 
 
 ::: {#exr- } 
@@ -253,21 +245,19 @@ Evaluate the following integrals.
  
 - $\int_{-2}^0 (2x-3)\, dx$
 - $\int_{0}^2 (2-4u+u^2)\, du$
-- $ \int_1^2 \frac{3x^4-2x^2+1}{2x^2} \, dx$
-- $ \int_2^0 \sqrt{x}(x+1)(x-2) \, dx$
-- $ \int_0^{\pi} \sin 2x \cos x \, dx$
-- $ \int0^{\pi}  |\cos x| \, dx$
-- $ \int _0^{4\sqrt{3}} \frac{1}{x^2+16}\, dx$
-- $ \int _1^e \frac{\ln x}{x} e^{(\ln x)^2}\, dx$
- 
+- $\int_1^2 \frac{3x^4-2x^2+1}{2x^2} \, dx$
+- $\int_2^0 \sqrt{x}(x+1)(x-2) \, dx$
+- $\int_0^{\pi} \sin 2x \cos x \, dx$
+- $\int0^{\pi}  |\cos x| \, dx$
+- $\int _0^{4\sqrt{3}} \frac{1}{x^2+16}\, dx$
+- $\int _1^e \frac{\ln x}{x} e^{(\ln x)^2}\, dx$
 ::: 
 
 ::: {#exr- } 
 Show that each of the following inequalities hold.
  
-- $0\leq \int_0^1 \frac{x^5}{\sqrt[3]{1+x^4}}\, dx \leq \frac{1}{6} $
-- $0\leq \int_0^1 \frac{1}{\sqrt{4-3x+x^2}}\, dx \leq \frac{2}{3} $
- 
+- $0\leq \int_0^1 \frac{x^5}{\sqrt[3]{1+x^4}}\, dx \leq \frac{1}{6}$
+- $0\leq \int_0^1 \frac{1}{\sqrt{4-3x+x^2}}\, dx \leq \frac{2}{3}$
 ::: 
 
 ::: {#exr- } 
@@ -277,14 +267,13 @@ For each of the following, find the area of the region under the graph of $f$ on
 - $f(x)=\frac{1}{x^2}; [1,2]$
 - $f(x)=2+\sqrt{x+1}; [0,3]$
 - $f(x)=\frac{1}{4+x^2}; [0,1]$
- 
 ::: 
 
 ::: {#exr- } 
 Find $\frac{dx}{dy}$ if 
-$
+$$
 \int_0^x \sqrt{3+2\cos t} \, dt+\int_0^y \sin t \, dt =0.
-$
+$$
 ::: 
 
 ::: {#exr- } 
@@ -302,14 +291,14 @@ Evaluate $\int_{-1}^1 \frac{2x^5+x^4-3x^3+2x^2+8x+1}{x^2+1} \, dx$.
 
 ::: {#exr- } 
 Use the identity 
-$
+$$
 \frac{x \sin\left(n+\frac{1}{2}\right)}{2\sin \frac{x}{2}} = 
 \frac{1}{2} +\cos x +\cos 2x +\cdots + \cos n x
-$
+$$
 to show that 
-$
+$$
 \int_0^\pi \frac{x \sin\left(n+\frac{1}{2}\right)}{2\sin \frac{x}{2}} \, dx =\pi. 
-$
+$$
 ::: 
 
 

@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="exploring-calculus">
+<title>Applied Optimization Problems - Exploring Calculus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./parametric-equations.html" rel="next">
+<link href="./curve-sketching.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+.book-title, #quarto-search svg {
+    color: #008000!important;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
+    font-weight: 500!important;
+    color:#008000;
+ }
+ #quarto-sidebar .text-start {
+    font-variant: small-caps;
+    font-size: 120%;
+ }
+ #quarto-sidebar .active, .active .chapter-number {
+    color:#000000!important;
+    font-weight: 700!important;
+ }
+</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+</style>
+  
+<meta property="og:title" content="Applied Optimization Problems - Exploring Calculus">
+<meta property="og:description" content="exploring-calculus">
+<meta property="og:site-name" content="Exploring Calculus">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Exploring Calculus" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
+</i> 
+ <span class="dropdown-text">Exploring Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Applied Optimization Problems</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/exploring-calculus/">Exploring Calculus</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limits-and-continuity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intuitive-introduction-to-limits.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An Intuitive Introduction to Limits</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./techniques-for-finding-limits.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Techniques for Finding Limits</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./continuous-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Continuous Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tangent-lines-and-rates-of-change.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tangent Lines and Rates of Change</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Differentiation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivative-as-a-function.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Derivative as a Function</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./basic-rules-of-differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Basic Rules of Differentiation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./product-and-quotient-rules.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Product and Quotient Rules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./role-of-the-derivative.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Role of the Derivative</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivatives-of-trigonometric-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Derivatives of Trigonometric Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chain-rule.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chain Rule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./implicit-differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Implicit Differentiation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivatives-of-inverse-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Derivatives of Inverse Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./related-rates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Related Rates</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linearization-and-differentials.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linearization and Differentials</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./parametric-curves.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Parametric Curves</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Applications Of Derivatives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extreme-values.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Extreme Values</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mean-value-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Mean Value Theorem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monotonic-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Monotonic Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concavity-and-inflection-points.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Concavity and Inflection Points</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limits-involving-infinity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Limits Involving Infinity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./curve-sketching.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Curve Sketching</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applied-optimization-problems.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Applied Optimization Problems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./parametric-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Parametric Equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indeterminate-forms.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Indeterminate Forms</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indefinite-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Indefinite Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration-by-substitution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Integration by Substitution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./area.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Area</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./definite-integral.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Definite Integral</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamental-theorem-of-calculus.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Fundamental Theorem of Calculus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./numerical-integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Numerical Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Applications of Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./area-between-curves.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Area Between Curves</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./volumes-of-solids-of-revolution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Volumes of Solids of Revolution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./arc-length-and-surfaces-of-revolution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Arc Length and Surfaces of Revolution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./techniques-of-integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Techniques of Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration-by-parts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Integration By Parts</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trigonometric-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Trigonometric Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trigonometric-substitution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Trigonometric Substitution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./partial-fractions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Partial Fractions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./improper-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Improper Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./infinite-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Infinite Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sequences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Sequences</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./infinite-series-and-convergence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Infinite Series and Convergence</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integral-test-and-p-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Integral Test and P-Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./comparisons-of-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Comparisons of Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./alternating-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Alternating Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ratio-and-root-tests.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Ratio and Root Tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./taylor-polynomials-and-approximations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Taylor Polynomials and Approximations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./power-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Power Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./taylor-and-maclaurin-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Taylor and Maclaurin Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/exploring-calculus/"><picture><source type="image/webp" srcset="../../assets/exploring-calculus-cover.webp"><source type="image/webp" srcset="../../assets/exploring-calculus-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/exploring-calculus-cover.png" alt="Exploring Calculus Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#optimization-procedures" id="toc-optimization-procedures" class="nav-link active" data-scroll-target="#optimization-procedures"><span class="toc-section-number">25.1</span>  Optimization Procedures</a></li>
+  <li><a href="#optimizing-with-numbers" id="toc-optimizing-with-numbers" class="nav-link" data-scroll-target="#optimizing-with-numbers"><span class="toc-section-number">25.2</span>  Optimizing with Numbers</a></li>
+  <li><a href="#optimizing-volume" id="toc-optimizing-volume" class="nav-link" data-scroll-target="#optimizing-volume"><span class="toc-section-number">25.3</span>  Optimizing Volume</a></li>
+  <li><a href="#optimizing-with-geometry" id="toc-optimizing-with-geometry" class="nav-link" data-scroll-target="#optimizing-with-geometry"><span class="toc-section-number">25.4</span>  Optimizing with Geometry</a></li>
+  <li><a href="#optimizing-area" id="toc-optimizing-area" class="nav-link" data-scroll-target="#optimizing-area"><span class="toc-section-number">25.5</span>  Optimizing Area</a></li>
+  <li><a href="#optimizing-angles" id="toc-optimizing-angles" class="nav-link" data-scroll-target="#optimizing-angles"><span class="toc-section-number">25.6</span>  Optimizing Angles</a></li>
+  <li><a href="#optimizing-distance" id="toc-optimizing-distance" class="nav-link" data-scroll-target="#optimizing-distance"><span class="toc-section-number">25.7</span>  Optimizing Distance</a></li>
+  <li><a href="#optimizing-time" id="toc-optimizing-time" class="nav-link" data-scroll-target="#optimizing-time"><span class="toc-section-number">25.8</span>  Optimizing Time</a></li>
+  <li><a href="#marginal-analysis" id="toc-marginal-analysis" class="nav-link" data-scroll-target="#marginal-analysis"><span class="toc-section-number">25.9</span>  Marginal Analysis</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">25.10</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<div style="display:none;">
+\(
+\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}
+\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}
+\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
+\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}
+\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}
+\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}
+\newcommand{\norm}[1]{\left|\left |#1\right|\right |}
+\newcommand{\ip}[1]{\left \langle #1\right \rangle}
+\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}
+\)
+</div>
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Applied Optimization Problems</span></h1>
+</header>
+<section id="optimization-procedures" class="level2" data-number="25.1">
+<h2 data-number="25.1" class="anchored" data-anchor-id="optimization-procedures"><span class="header-section-number">25.1</span> Optimization Procedures</h2>
+<p>In this section we give a few examples on how to set up a function to be optimized using its derivative. In general, the first step in solving an application problem is to understand the problem; maybe ask what are the unknowns? and what are the given quantities? Then the next best step is usually to draw a picture, labeling the unknowns and introducing notation. The final step should always be to check the solution to see that it makes sense for the given questions.</p>
+<p>An optimization procedure is a step-by-step procedure to solve an application problem using calculus; and in particular, using derivatives. Here is a typical optimization procedure:</p>
+<ul>
+<li>Sketch a graph or draw a diagram.</li>
+<li>Introduce mathematical notation.</li>
+<li>Express information as expressions, equations and functions.</li>
+<li>Formulate the problem mathematically by stating the knowns and unknowns.</li>
+<li>State the knowns and unknowns.</li>
+<li>Identify needed theorems and validate their hypotheses. Apply the theorem.</li>
+<li>Solve the mathematical problem.</li>
+<li>Answer the original problem in terms of the given language.</li>
+</ul>
+<p>We will illustrate this optimization procedure in the following examples.</p>
+</section>
+<section id="optimizing-with-numbers" class="level2" data-number="25.2">
+<h2 data-number="25.2" class="anchored" data-anchor-id="optimizing-with-numbers"><span class="header-section-number">25.2</span> Optimizing with Numbers</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25.1 </strong></span>Find two nonnegative numbers whose sum is <span class="math inline">\(8\)</span> and the product of whose squares is as large as possible.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We are looking for two nonnegative numbers, say <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> with <span class="math inline">\(x\geq 0,\)</span> <span class="math inline">\(y\geq 0,\)</span> and <span class="math inline">\(x+y=8.\)</span> We want to maximize the function <span class="math display">\[
+P(x)=x^2y^2=x^2(8-x)^2
+\]</span> with <span class="math inline">\(x\geq 0.\)</span> Since the derivative of <span class="math inline">\(P\)</span>, <span class="math display">\[
+P'(x)=128 x-48 x^2+4 x^3=4 (-8+x) (-4+x) x
+\]</span> is continuous, the only critical numbers are <span class="math inline">\(x=0, 4, 8.\)</span> We evaluate <span class="math inline">\(P\)</span> to find <span class="math inline">\(P(0)=0=P(8)\)</span> and so the largest possible value is <span class="math inline">\(P(4)=256\)</span> with <span class="math inline">\(x=y=4.\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25.2 </strong></span>Under the condition that <span class="math inline">\(2x-5y=18,\)</span> minimize <span class="math inline">\(x^2y\)</span> when <span class="math inline">\(x\geq 0\)</span> and <span class="math inline">\(y\geq 0.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We want to minimize <span class="math display">\[
+P(x)=x^2y=x^2\left(\frac{1}{5}\right) (-18+2 x).
+\]</span> Since the derivative of <span class="math inline">\(P\)</span>, <span class="math display">\[
+P'(x)=\frac{6}{5} \left(-6 x+x^2\right)=\frac{6}{5} (-6+x) x
+\]</span> is continuous, the only critical numbers are <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=6\)</span>. We evaluate to find <span class="math inline">\(P(0)=0\)</span> and the smallest possible value to be <span class="math inline">\(P(6)=-\frac{216}{5}.\)</span> Thus the values are <span class="math inline">\(x=6\)</span> and <span class="math inline">\(y=\frac{-6}{5}.\)</span></p>
+</div>
+</section>
+<section id="optimizing-volume" class="level2" data-number="25.3">
+<h2 data-number="25.3" class="anchored" data-anchor-id="optimizing-volume"><span class="header-section-number">25.3</span> Optimizing Volume</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25.3 </strong></span>Find the dimensions of the right circular cylinder of largest volume that can be inscribed in a sphere of radius <span class="math inline">\(R.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(R\)</span> be the radius of the sphere and <span class="math inline">\(r\)</span> the radius of the cylinder with height <span class="math inline">\(2h\)</span> so that <span class="math inline">\(0\leq h\leq R.\)</span> Since <span class="math inline">\(r^2+h^2=R^2,\)</span> the volume of the cylinder is given by<br>
+<span class="math display">\[
+V(h)=\pi  r^22h=2\pi  h\left(R^2-h^2\right)=2\pi \left(R^2h-h^3\right).
+\]</span> Using the Extreme Value Theorem, we wish to maximize the continuous function <span class="math inline">\(V(h)\)</span> on the closed interval <span class="math inline">\([0,R]\)</span>. The derivative of <span class="math inline">\(V\)</span> is <span class="math inline">\(V'(h)=2\pi \left(R^2-3h^2\right).\)</span> Since <span class="math inline">\(V'\)</span> is continuous the only critical numbers are found by solving <span class="math inline">\(V'(h)=0\)</span> for <span class="math inline">\(0\leq h\leq R\)</span>. Thus the only critical number is <span class="math inline">\(h=R\left/\sqrt{3}.\right.\)</span> Since <span class="math inline">\(V(0)=V(R)=0\)</span>, <span class="math inline">\(h=0\)</span> and <span class="math inline">\(h=R\)</span> give minima, it follows by the Extreme Value Theorem that <span class="math inline">\(h=R\left/\sqrt{3}\right.\)</span> must be a maximum. After solving for <span class="math inline">\(r\)</span> we find the dimensions of the cylinder are, height: <span class="math inline">\(2 R\frac{\sqrt{3}}{3}\)</span> and radius: <span class="math inline">\(\frac{R}{3}\sqrt{6}.\)</span></p>
+</div>
+</section>
+<section id="optimizing-with-geometry" class="level2" data-number="25.4">
+<h2 data-number="25.4" class="anchored" data-anchor-id="optimizing-with-geometry"><span class="header-section-number">25.4</span> Optimizing with Geometry</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25.4 </strong></span>Find all points on the circle <span class="math inline">\(x^2+y^2=a^2\)</span> such that the product of the <span class="math inline">\(x\)</span>-coordinate and the <span class="math inline">\(y\)</span>-coordinate is as large as possible.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>In the first quadrant we have <span class="math inline">\(y=\sqrt{a^2-x^2}\)</span> and so we want to maximize <span class="math inline">\(f(x)=x\sqrt{a^2-x^2}\)</span> subject to <span class="math inline">\(x&gt;0\)</span>. The derivative of <span class="math inline">\(f\)</span> is, <span class="math display">\[
+f'(x)=\frac{a^2-2 x^2}{\sqrt{a^2-x^2}}.
+\]</span> Thus the critical number is <span class="math inline">\(x=\frac{a}{\sqrt{2}}.\)</span> The maximum value of the function <span class="math inline">\(f\)</span> is<br>
+<span class="math display">\[
+f\left(\frac{a}{\sqrt{2}}\right)=\frac{a}{\sqrt{2}}\sqrt{a^2-\frac{a^2}{2}}=\frac{a^2}{2}.
+\]</span> Thus the points are <span class="math display">\[
+\left(\frac{a}{\sqrt{2}},\frac{a}{\sqrt{2}}\right) \text{   and   } \left(\frac{-a}{\sqrt{2}},\frac{-a}{\sqrt{2}}\right).
+\]</span></p>
+</div>
+</section>
+<section id="optimizing-area" class="level2" data-number="25.5">
+<h2 data-number="25.5" class="anchored" data-anchor-id="optimizing-area"><span class="header-section-number">25.5</span> Optimizing Area</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25.5 </strong></span>A woman plans to fence off a rectangular garden whose area is 64 <span class="math inline">\(\text{ft}^2.\)</span> What should be the dimensions of the garden if she wants to minimize the amount of fencing used?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> be the dimensions of the rectangular plot. The fencing (perimeter) is <span class="math inline">\(P=2x+2y\)</span> and the area is <span class="math inline">\(A=x y=64\)</span> with domain <span class="math inline">\(x&gt;0.\)</span> We want to minimize <span class="math inline">\(P\)</span> so we write <span class="math inline">\(P\)</span> as a function of one variable, say <span class="math display">\[
+P=2x+\frac{2(64)}{x}.
+\]</span> Since the derivative of <span class="math inline">\(P\)</span> is, <span class="math display">\[
+P'=2-\frac{128}{x^2}=\frac{2x^2-128}{x^2}
+\]</span> and is continuous the only critical number is when <span class="math inline">\(P'=0\)</span> with <span class="math inline">\(x&gt;0\)</span> which is when <span class="math inline">\(x=8\)</span>. In this example we apply the First Derivative Test to verify that the critical number <span class="math inline">\(x=8\)</span> is useful as follows <span class="math display">\[
+\begin{array}{c|c|c|l}
+\text{Interval} &amp; f &amp; f' &amp; \text{Conclusion} \\ \hline
+0&lt;x&lt;8 &amp; &amp; - &amp; \text{decreasing}\\
+x=8 &amp; 8 &amp; 0 &amp; \text{local minimum}\\
+x&gt;8 &amp; &amp; + &amp; \text{increasing}\\
+\end{array}
+\]</span> Since <span class="math inline">\(P\)</span> is decreasing on <span class="math inline">\((0,8)\)</span> and increasing on <span class="math inline">\((0,\infty)\)</span>, the function <span class="math inline">\(P\)</span> has an absolute minimum at <span class="math inline">\(x=8\)</span>; and the dimensions of the garden should be <span class="math inline">\(8\)</span> ft by <span class="math inline">\(8\)</span> ft.</p>
+</div>
+<p>::: {#exm- } [Optimizing with Area] Someone with 750 ft of fencing wants to enclose a rectangular area and then divide it into four pens with fencing parallel to one side of the rectangle. What is the largest possible total area of the four pens? :::</p>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(x\)</span> be the lengths of the 2 sides and let <span class="math inline">\(y\)</span> be the lengths of the other 5 sides. Since there are three divides making the four pens <span class="math inline">\(2x+2y+3y=750\)</span>. The area of the four pens is <span class="math inline">\(A=x y,\)</span> thus we can solve <span class="math inline">\(2x+2y+3y=750\)</span> for <span class="math inline">\(y\)</span> obtaining <span class="math inline">\(y=\frac{1}{5} (750-2 x).\)</span> So a function of the area is <span class="math display">\[
+A(x)=\frac{1}{5}x (750-2 x).
+\]</span> The derivative of <span class="math inline">\(A\)</span> is, <span class="math inline">\(A'(x)=\frac{1}{5} (750-4 x)\)</span> and so the critical number is <span class="math inline">\(x=750/4.\)</span> The largest possible area is <span class="math inline">\(A\left(\frac{750}{4}\right)=14062.5\)</span> square feet.</p>
+</div>
+</section>
+<section id="optimizing-angles" class="level2" data-number="25.6">
+<h2 data-number="25.6" class="anchored" data-anchor-id="optimizing-angles"><span class="header-section-number">25.6</span> Optimizing Angles</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25.6 </strong></span>The bottom of an 8-ft-high mural painted on a vertical wall is 13 ft above the ground. The lens of a camera fixed to a tripod is 4 ft above the ground. How far from the wall should the camera be placed to photograph the mural with the largest possible angle?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let the horizontal distance from the camera to the wall be <span class="math inline">\(x.\)</span> Let $$ be the angle of elevation from the camera lens to the top of the mural and let $$ the angle of elevation from the camera to the bottom of the mural. Also, let <span class="math inline">\(\theta =\alpha -\beta .\)</span> Then<br>
+<span class="math display">\[
+\theta (x)=\tan ^{-1}\frac{17}{x}-\tan ^{-1}\frac{9}{x}.
+\]</span> Since the first derivative of <span class="math inline">\(\theta\)</span> is, <span class="math display">\[\begin{align*}
+\frac{d\theta }{dx} &amp; = \frac{1}{1+\left(\frac{17}{x}\right)^2}\left(\frac{-17}{x^2}\right)-\frac{1}{1+\left(\frac{9}{x}\right)^2}\left(\frac{-9}{x^2}\right) \\
+&amp; =\frac{-17}{x^2+289}+\frac{9}{x^2+81} \\
+&amp; =-\frac{8 \left(x^2-153\right)}{\left(x^2+81\right) \left(x^2+289\right)}
+\end{align*}\]</span> we see that <span class="math inline">\(\frac{d\theta }{dx}=0\)</span> and <span class="math inline">\(x&gt;0\)</span> when <span class="math inline">\(x=\sqrt{153}.\)</span> Applying the First Derivative Test, the largest possible angle is when <span class="math inline">\(x=\sqrt{153}\)</span> <span class="math inline">\(=3\sqrt{17}\)</span> or approximately <span class="math inline">\(12.4\)</span> feet.</p>
+</div>
+</section>
+<section id="optimizing-distance" class="level2" data-number="25.7">
+<h2 data-number="25.7" class="anchored" data-anchor-id="optimizing-distance"><span class="header-section-number">25.7</span> Optimizing Distance</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25.7 </strong></span>A truck is 250 mi due east of a sports car and is traveling west at a constant speed of 60 mi/h. Meanwhile, the sports car is going north at 80 mi/h. When will the truck and the car be closest to each other? What is the minimum distance between them?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Draw a figure with the car at the origin of a Cartesian coordinate system and the truck at <span class="math inline">\((250,0).\)</span> At time <span class="math inline">\(t,\)</span> (in hours) the truck is at position <span class="math inline">\((250-x,0),\)</span> while the car is at <span class="math inline">\((0,y).\)</span> Let <span class="math inline">\(D\)</span> be the distance that separates them. Then <span class="math inline">\(\frac{dx}{dt}=60\)</span> and <span class="math inline">\(\frac{dy}{dt}=80\)</span> so that <span class="math inline">\(x=60 t\)</span> and <span class="math inline">\(y=80 t.\)</span> We will minimize the square of the distance, <span class="math inline">\(D^2=(250-x)^2+y^2\)</span>, <span class="math display">\[ D^2=(250-60 t)^2+(80t)^2=2500 \left(25-12 t+4 t^2\right)\]</span> Since <span class="math inline">\(\frac{dD^2}{dt}=10,000(2t-3)\)</span> the derivative of the distance squared is 0 when <span class="math inline">\(t=1.5 \text{hr}.\)</span> Substituting into the equation for <span class="math inline">\(D^2\)</span> produces the shortest distance: <span class="math inline">\(x=60(1.5)=90\)</span> and <span class="math inline">\(y=80(1.5)=120\)</span>.<br>
+Thus, <span class="math inline">\(D^2=(250-90)^2+120^2=1600(25)\)</span> and so <span class="math inline">\(D=40(5)=200\)</span> which is the minimum distance (because there is no maximum distance and the Extreme Value Theorem applies).</p>
+</div>
+</section>
+<section id="optimizing-time" class="level2" data-number="25.8">
+<h2 data-number="25.8" class="anchored" data-anchor-id="optimizing-time"><span class="header-section-number">25.8</span> Optimizing Time</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25.8 </strong></span>A jeep is on the desert at a point <span class="math inline">\(P\)</span> located 40 km from a point <span class="math inline">\(Q\)</span>, which lies on a long straight road. The driver can travel at 45 km/h on the desert and 75 km/h on the road. The driver will win a prize if he arrives at the finish line at point <span class="math inline">\(F\)</span>, 50 km from <span class="math inline">\(Q\)</span>, in 84 minutes or less. What route should he travel to minimize the time of travel? Does he win the prize?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Suppose that the driver heads for a point <span class="math inline">\(S\)</span> located <span class="math inline">\(x\)</span> km down the road from <span class="math inline">\(Q\)</span> towards his destination. We want to minimize the time. We will need to remember the formula <span class="math inline">\(d=r t,\)</span> or in terms of time <span class="math inline">\(t=d/r.\)</span> Since the distance between <span class="math inline">\(P\)</span> and <span class="math inline">\(S\)</span> is <span class="math inline">\(\sqrt{x^2+1600}\)</span> and the distance between <span class="math inline">\(S\)</span> and <span class="math inline">\(F\)</span> is <span class="math inline">\(50-x,\)</span> the total time is given by<br>
+<span class="math display">\[
+T(x)=\frac{\sqrt{x^2+1600}}{45}+\frac{50-x}{75} \text{where  } 0\leq x\leq 50.
+\]</span> Since <span class="math display">\[T'(x)=\frac{x}{45 \sqrt{x^2+1600}}-\frac{1}{75}=\frac{5 x-3 \sqrt{1600+x^2}}{225 \sqrt{1600+x^2}}\]</span> we find that <span class="math inline">\(x=30\)</span> is the only critical number of <span class="math inline">\(T.\)</span> To find the extreme values we evaluate <span class="math inline">\(T\)</span> at the endpoints, we find <span class="math display">\[
+T(30)=\frac{\sqrt{(30)^2+1600}}{45}+\frac{50-30}{75}=\frac{62}{45}=1.37778 \text{ hr}
+\]</span> <span class="math display">\[
+T(0)=\frac{\sqrt{(0)^2+1600}}{45}+\frac{50-0}{75}=\frac{14}{9}=1.55556 \text{ hr}
+\]</span> <span class="math display">\[
+T(50)=\frac{\sqrt{(50)^2+1600}}{45}+\frac{50-50}{75}=\frac{2 \sqrt{41}}{9}=1.42292 \text{ hr}
+\]</span> Therefore, the driver can minimize the total driving time by heading for a point that is <span class="math inline">\(30 \text{km}\)</span> from the point <span class="math inline">\(Q\)</span> and then traveling on the road to point <span class="math inline">\(D.\)</span> He wins the prize because the minimal route is only 83 minutes.</p>
+</div>
+</section>
+<section id="marginal-analysis" class="level2" data-number="25.9">
+<h2 data-number="25.9" class="anchored" data-anchor-id="marginal-analysis"><span class="header-section-number">25.9</span> Marginal Analysis</h2>
+<p>Marginal analysis is concerned with the way quantities such as price, cost, revenue, and profit vary with small changes in the level of production. The demand function <span class="math inline">\(p(x)\)</span> is defined to be the price that consumers will pay for each unit of the commodity when <span class="math inline">\(x\)</span> units are brought to market. Then <span class="math inline">\(R(x)=x p(x)\)</span> is the total revenue function derived from the sale of the <span class="math inline">\(x\)</span> units and <span class="math inline">\(P(x)=R(x)-C(x)\)</span> is the total profit function where <span class="math inline">\(C(x)\)</span> is the total cost function for producing <span class="math inline">\(x\)</span> units.</p>
+<p>::: {#exm- } [Optimizing Profits] A toy manufacturer produces an inexpensive doll (Dolly) and an expensive doll (Polly) in units of <span class="math inline">\(x\)</span> hundred and <span class="math inline">\(y\)</span> hundred, respectively. Suppose it is possible to produce the dolls in such a way that <span class="math inline">\(y=\frac{82-10x}{10-x}\)</span> with <span class="math inline">\(0\leq x\leq 8\)</span> and that the company receives twice as much for selling a Polly doll as for selling a Dolly doll. Find the level of production for both <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> for which total revenue derived from selling these dolls is maximized. What vital assumption must be made about sales in the model? :::</p>
+<p>::: {#exm- } [Optimizing Revenue] A business manager estimates that when <span class="math inline">\(p\)</span> dollars are charged for every unit of a product, the sales will be <span class="math inline">\(x=380-20p\)</span> units. At this level of production, the average cost is modeled by <span class="math display">\[
+A(x)=5+\frac{x}{30}.
+\]</span> &nbsp; - Find the total revenue and total cost functions, and express the profit as a function of <span class="math inline">\(x.\)</span> - What price should the manufacturer charge to maximize profit? - What is the maximum profit? :::</p>
+<p>::: {#exm- } [Optimizing Costs] Suppose the total cost (in dollars) of manufacturing <span class="math inline">\(x\)</span> units of a certain commodity is <span class="math inline">\(C(x)=3x^2+5x+75\)</span>. &nbsp; - At what level of production is the average cost per unit the smallest? - At what level of production is the average cost per unit equal to the marginal cost? - Graph the average cost and the marginal cost on the same set of axes, for <span class="math inline">\(x&gt;0.\)</span> :::</p>
+</section>
+<section id="exercises" class="level2" data-number="25.10">
+<h2 data-number="25.10" class="anchored" data-anchor-id="exercises"><span class="header-section-number">25.10</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.1 </strong></span>You are planning to close off a corner of the first quadrant with a line segment 20 units long running from <span class="math inline">\((a,0)\)</span> to <span class="math inline">\((0,b).\)</span> Show that the area of the triangle enclosed by the segment is largest when <span class="math inline">\(a=b.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.2 </strong></span>Your iron work has contracted to design and build a <span class="math inline">\(500 \text{ft}^3,\)</span> square-based, open-top, rectangular steel holding tank for a paper company. The tank is to be made by welding thin stainless steel plates together along their edges. As the production engineer, your job is to find dimensions for the base and height that will make the tank weigh as little as possible. (a) What dimensions do you tell the shop to use? (b) Briefly describe how you took weight into account.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.3 </strong></span>The bottom of an 8-ft-high mural painted on a vertical wall is 13 ft above the ground. The lens of a camera fixed to a tripod is 4 ft above the ground. How far from the wall should the camera be placed to photograph the mural with the largest possible angle?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.4 </strong></span>A 1125 <span class="math inline">\(\text{ft}^3\)</span> open-top rectangular tank with a square base <span class="math inline">\(x\)</span> ft on a side and <span class="math inline">\(y\)</span> ft deep is to be built with its top flush with the ground to catch runoff water. The costs associated with the tank involve not only the material from which the tank is made but also an excavation charge proportional to the product <span class="math inline">\(x y.\)</span> (a) If the total cost is <span class="math inline">\(c=5\left(x^2+ 4 x y\right)+10 x y\)</span> what values of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> will minimize it? (b) Give a possible scenario fro the cost function in part (a).</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.5 </strong></span>Two sides of a triangle have lengths <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, and the angle between then <span class="math inline">\(\theta .\)</span> What value of $$ will maximize the triangle’s area?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.6 </strong></span>The height of an object moving vertically is given by <span class="math inline">\(s=-16 t^2+96 t+112\)</span> with <span class="math inline">\(s\)</span> in feet and <span class="math inline">\(t\)</span> in seconds. Find the object’s velocity when <span class="math inline">\(t=0.\)</span> Find its maximum height and when it occurs. Also find its velocity when <span class="math inline">\(s=0.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.7 </strong></span>Find the dimensions of the right circular cylinder of largest volume that can be inscribed in a sphere of radius <span class="math inline">\(R.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.8 </strong></span>Jane is 2 mi offshore in a boat and wishes to reach a coastal village 6 mi down a straight shoreline from the point nearest the boat. She can now row 2 mph can walk 5 mph. Where should she land her boat to reach the village in the least amount of time?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.9 </strong></span>The positions of two particles on the <span class="math inline">\(s\)</span>-axis are <span class="math inline">\(s_1=\sin t\)</span> and <span class="math inline">\(s_2=\sin (t+\pi /3)\)</span> with <span class="math inline">\(s_1\)</span> and <span class="math inline">\(s_2\)</span> in meters and <span class="math inline">\(t\)</span> in seconds. (a) At what time(s) in the interval $0t$ do the particles meet? (b) What is the farthest apart that the particles ever get? (c) When in the interval $0t$ is the distance between the particles chaining the fastest?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.10 </strong></span>A truck is 250 mi due east of a sports car and is traveling west at a constant speed of 60 mi/h. Meanwhile, the sports car is going north at 80 mi/h. When will the truck and the car be closest to each other? What is the minimum distance between them?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25.11 </strong></span>A jeep is on the desert at a point <span class="math inline">\(P\)</span> located 40 km from a point <span class="math inline">\(Q\)</span>, which lies on a long straight road. The driver can travel at 45 km/h on the desert and 75 km//h on the road. The driver will win a prize if he arrives at the finish line at point <span class="math inline">\(F\)</span>, 50 km from <span class="math inline">\(Q\)</span>, in 84 minutes or less. What route should he travel to minimize the time of travel? Does he win the prize?</p>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/exploring-calculus\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./curve-sketching.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Curve Sketching</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./parametric-equations.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Parametric Equations</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

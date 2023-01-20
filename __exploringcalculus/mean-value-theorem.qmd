@@ -69,61 +69,60 @@ We also emphasize that the Mean Value Theorem tells us that between two fixed po
 ::: {#thm- } [Mean Value Theorem]
 Let $f$ be a function that is continuous on $[a,b]$ and differentiable on $(a,b).$ 
 Then there exists at least one number $c$ in $(a,b)$ such that 
-\[
+$$
 f'(c)=\frac{f(b)-f(a)}{b-a}.
-\]
+$$
 ::: 
 
 ::: {.proof } 
 The equation of the secant line through $(a,f(a))$ and $(b,f(b))$ is 
-\[
+$$
 y=\left[\frac{f(b)-f(a)}{b-a}\right](x-a)+f(a).
-\] 
+$$ 
 Let $g(x)$ be the difference between $f(x)$ and $y.$ 
 Then 
-\[
+$$
 g(x)=f(x)-\left[\frac{f(b)-f(a)}{b-a}\right](x-a)-f(a).
-\]
+$$
 We can see that $g(a)=g(b)=0.$ 
 Because $f$ is continuous on $[a,b]$ and differentiable on $(a,b),$ so is $g.$ 
 By Rolle's Theorem, there exists a number $c$ in $(a,b)$ such that $g'(c)=0,$ which means 
-\[
+$$
 g'(c)=f'(c)-\frac{f(b)-f(a)}{b-a}=0
-\] 
+$$ 
 and so $f'(c)=\frac{f(b)-f(a)}{b-a}$ as desired. 
 ::: 
 
 
 ::: {#exm- }  
 Find all numbers $c$ in the interval $[a,b]$ such that 
-\[
+$$
 f'(c)=\frac{f(b)-f(a)}{b-a}
-\] 
-for the function $ \displaystyle f(x)=1+\frac{1}{x}$ on $[1,4]$. 
+$$ 
+for the function $\displaystyle f(x)=1+\frac{1}{x}$ on $[1,4]$. 
 ::: 
 
 
 ::: {.solution }
 Since $f$ is continuous on $[0,1]$ and differentiable on $(0,1)$ we apply the Mean Value Theorem,
-\[
+$$
 f'(c)=-\frac{1}{c^2}=\frac{f(b)-f(a)}{b-a}=\frac{\left(1+\frac{1}{4}\right)-\left(1+\frac{1}{1}\right)}{4-1}=-0.25
-\] 
+$$ 
 Solving for $c$ we obtain, $c=2$ since $-2$ is not in $[1,4]$  (see Figure ~\ref{fig:graph7}).  
 ::: 
 
 
 ::: {#exm- }  
 Find all numbers $c$ in the interval $[a,b]$ such that 
-
-\[
+$$
 f'(c)=\frac{f(b)-f(a)}{b-a}
-\]
+$$
 for the function $f(x)=\tan ^{-1}x$ on $[0,1]$. 
 ::: 
 
 ::: {.solution }
 Since $f$ is continuous on $[0,1]$ and differentiable on $(0,1)$ we apply the Mean Value Theorem,
-\[f'(c)=\frac{1}{1+c^2}=\frac{f(b)-f(a)}{b-a}=\frac{\left(\tan^{-1}1\right)-\left(\tan ^{-1}0\right)}{1-0}=\frac{\pi }{4}\]
+$$f'(c)=\frac{1}{1+c^2}=\frac{f(b)-f(a)}{b-a}=\frac{\left(\tan^{-1}1\right)-\left(\tan ^{-1}0\right)}{1-0}=\frac{\pi }{4}$$
 Solving for $c$ we obtain, $c=\sqrt{\frac{4-\pi }{\pi }}$ since $-\sqrt{\frac{4-\pi }{\pi }}$ is not in $[0,1]$  (see Figure ~\ref{fig:graph8}). 
 ::: 
 
@@ -132,35 +131,35 @@ Solving for $c$ we obtain, $c=\sqrt{\frac{4-\pi }{\pi }}$ since $-\sqrt{\frac{4-
 
 ::: {#exm- }  
 Using the Mean Value Theorem evaluate, 
-\[
+$$
 \lim _{x\to 0}\frac{(1+x)^n-1}{x}
-\] 
+$$ 
 where $n$ is a natural number.
 ::: 
 
 ::: {.solution }
 We will use the Mean Value Theorem to find all numbers $c$ in the interval $[a,b]$ such that 
-\[
+$$
 f'(c)=\frac{f(b)-f(a)}{b-a}
-\] 
+$$ 
 for the function $f(x)=(1+x)^n$ on $[0,x]$. 
 Since $f$ is continuous and differentiable on $[0,x]$, we apply the Mean Value Theorem, 
-\[
+$$
 f'(c)=n(1+c)^{n-1}=\frac{f(b)-f(a)}{b-a}=\frac{(1+x)^n-(1+0)^n}{x-0}=\frac{(1+x)^n-1}{x}
-\] 
+$$ 
 Since $f$ is continuous on $[0,x]$ and differentiable on $(0,x)$ we know this $c$ must exist. 
 In fact since $0<c<x$, as $x\to 0$ we see that $c\to 0$ because the Mean Value Theorem says that $c$ is in the open interval $(0,x).$ 
 Thus we can evaluate the limit 
-\[
+$$
 \lim _{x\to 0}\frac{(1+x)^n-1}{x}=\lim _{c\to 0}n(1+c)^{n-1}=n
-\]
+$$
 as desired. 
 ::: 
 
 If an object moves in a straight line with position function $s=f(t),$ then the average velocity between $t=a$ and $t=b$ is 
-\[
+$$
 \frac{f(b)-f(a)}{b-a}
-\]
+$$
 and the velocity at $t=c$ is $f'(c).$ 
 Thus the Mean Value Theorem tells us that at some time $t=c$ between $a$ and $b$ the instantaneous velocity $f'(c)$ is equal to that average velocity. 
 
@@ -177,9 +176,9 @@ Let $t=0$ be the time when the truck passes the first patrol car.
 The time when it passes the second patrol car is $1.5/60$ hour. 
 By letting $s(t)$ represent the distance (in miles) travelled by the truck, we have $s(0)=0$ and $s(1.5/60)=1.2.$ 
 So the average velocity is
-\[
+$$
 \frac{s\left(\frac{1.5}{60}\right)-s(0)}{\frac{1.5}{60}-0}=\frac{1.2}{\frac{1.5}{60}}=48.0 \text{  mph} 
-\]
+$$
 Assuming that the position function is differentiable, we can apply the Mean Value Theorem to conclude that the truck must have been traveling at a rate of 48 miles per hour sometime during the one and half minutes. 
 ::: 
 
@@ -188,21 +187,21 @@ Assuming that the position function is differentiable, we can apply the Mean Val
 
 ::: {#exr- } 
 Determine the values of the constants $a,b,c,$ and $d$ such that the functions 
-\[f(x)=\left\{
+$$f(x)=\left\{
 \begin{array}{ll}
  1 & x=0 \\
  a x+b & 0<x\leq 1 \\
  x^2+4x+c & 1<x\leq 3
 \end{array}
-\right.\]
-\[g(x)=\left\{
+\right.$$
+$$g(x)=\left\{
 \begin{array}{ll}
  a & x=-1 \\
  2 & 0<x\leq 0 \\
  b x^2+c & 0<x\leq 1 \\
  d x+4 & 1<x\leq 2
 \end{array}
-\right.\]
+\right.$$
 satisfies the hypotheses of the Mean Value Theorem on the intervals  $[0,3]$  and $[-1,2]$  respectively. 
 ::: 
 
@@ -220,13 +219,14 @@ Does the function $f(x) =x^{2/3}$ satisfy the hypotheses of the Mean Value Theor
 
 ::: {#exr- } 
 Does the function
-$f(x) =\left\{
+$$
+f(x) =\left\{
 \begin{array}{cc}
  \frac{\sin  x}{x} & -\pi \leq x\leq 0 \\
  0 & x=1
 \end{array}
 \right.
-$ 
+$$ 
 satisfy the hypotheses of the Mean Value Theorem on the interval $[-1,8]?$ State why or why not. 
 ::: 
 
@@ -260,17 +260,19 @@ Show that the equations $x^5+10x+3=0$ and $x^7+5x^3+x-6=0$ each have exactly one
 
 ::: {#exr- } 
 Use the Mean Value Theorem to show the following
-\[\lim _{x\to \pi }\frac{\cos  x+1}{x-\pi }=0\] and \[\frac{1}{2x+1}>\frac{1}{5}+\frac{2}{25}(2-x)\] when $0<x<2.$ 
+$$\lim _{x\to \pi }\frac{\cos  x+1}{x-\pi }=0$$ and $$\frac{1}{2x+1}>\frac{1}{5}+\frac{2}{25}(2-x)$$ when $0<x<2.$ 
 ::: 
 
 ::: {#exr- } 
 Let $f(x)=\frac{1}{x}$ and 
-\[g(x)=\left\{
+$$
+g(x)=\left\{
 \begin{array}{cc}
  \frac{1}{x} & x>0 \\
  1+\frac{1}{x} & x<0
 \end{array}
-\right.\] 
+\right.
+$$ 
 Show that $f'(x)=g'(x)$ for all $x$ in their domains. Can we conclude that $f-g$ is constant? 
 ::: 
 

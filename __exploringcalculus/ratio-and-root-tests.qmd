@@ -26,7 +26,6 @@ $$
  - If $\rho<1$, the series converges. 
 - If $\rho >1$ or $\rho  =+\infty$, the series diverges. 
 - If $\rho=1$, the series may converge or diverge. 
- 
 ::: 
 
 ::: {#exm- } 
@@ -115,7 +114,6 @@ $$
  - If $\rho<1$, the series converges. 
 - If $\rho >1$ or $\rho  =+\infty$, the series diverges. 
 - If $\rho=1$, the series may converge or diverge. 
- 
 ::: 
 
 ::: {#exm- } 
@@ -190,35 +188,33 @@ Since $\rho <1$ the series is absolutely convergent by the Root Test.
 
 ::: {#exr- } 
 Use the Ratio Test to determine the convergence or divergence of the series.
-\begin{multicols}{3}
  
-- $\ds\sum_{n=0}^\infty \frac{n!}{3^n}$
-- $\ds\sum_{n=1}^\infty \frac{1}{n!}$
-- $\ds\sum_{n=1}^\infty \frac{5^n}{n^4}$
-- $\ds\sum_{n=1}^\infty \frac{n^2}{4^n}$
-- $\ds\sum_{n=1}^\infty \frac{n!}{n 3^n}$
-- $\ds\sum_{n=1}^\infty \frac{n^n}{2^n}$
-- $\ds\sum_{n=1}^\infty \frac{(n!)^2}{(3n)!}$
-- $\ds\sum_{n=1}^\infty \frac{n^6}{n!}$
-- $\ds\sum_{n=1}^\infty n \left(\frac{1}{2}\right)^n$
  
+- $\displaystyle\sum_{n=0}^\infty \frac{n!}{3^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{n!}$
+- $\displaystyle\sum_{n=1}^\infty \frac{5^n}{n^4}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n^2}{4^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n!}{n 3^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n^n}{2^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(n!)^2}{(3n)!}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n^6}{n!}$
+- $\displaystyle\sum_{n=1}^\infty n \left(\frac{1}{2}\right)^n$
  
 ::: 
 
 ::: {#exr- } 
 Use the Root Test to determine the convergence or divergence of the series.
-\begin{multicols}{3}
  
-- $\ds\sum_{n=1}^\infty \frac{1}{4^n}$
-- $\ds\sum_{n=1}^\infty \left(\frac{12n^3_n}{9n^2+n+1}\right)^n$
-- $\ds\sum_{n=1}^\infty \left(\frac{n-2}{5n+1}\right)^n$
-- $\ds\sum_{n=1}^\infty \left(\frac{n}{n+1}\right)^{2n^2}$
-- $\ds\sum_{n=1}^\infty \frac{n}{3^n}$
-- $\ds\sum_{n=1}^\infty \frac{n}{e^n}$
-- $\ds\sum_{n=1}^\infty \frac{(n!)^n}{(n^n)^2}$
-- $\ds\sum_{n=1}^\infty \frac{2^n n!}{n^n}$
-- $\ds\sum_{n=1}^\infty \left(\frac{n!}{n^3}\right)$
  
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{4^n}$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{12n^3_n}{9n^2+n+1}\right)^n$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{n-2}{5n+1}\right)^n$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{n}{n+1}\right)^{2n^2}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n}{3^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n}{e^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(n!)^n}{(n^n)^2}$
+- $\displaystyle\sum_{n=1}^\infty \frac{2^n n!}{n^n}$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{n!}{n^3}\right)$
  
 ::: 
 
@@ -227,38 +223,36 @@ Use the Root Test to determine the convergence or divergence of the series.
 Which of the series converge, and which diverge? 
 Give reasons for your answers.
  
- - $\ds\sum_{n=1}^\infty n^2 e^{-n}$
-- $\ds\sum_{n=1}^\infty (1-e^{-n})^n$
-- $\ds\sum_{n=1}^\infty \frac{100}{n}$
-- $\ds\sum_{n=1}^\infty \frac{n!}{10^n}$
-- $\ds\sum_{n=1}^\infty \frac{10}{2\sqrt{n^3}}$
-- $\ds\sum_{n=1}^\infty \frac{(-2)^n}{3^n}$
-- $\ds\sum_{n=1}^\infty \frac{1}{4+2^{-n}}$
-- $\ds\sum_{n=1}^\infty \frac{2^n}{4n^2-1}$
-- $\ds\sum_{n=1}^\infty \left(1- \frac{1}{3n}\right)^n$
-- $\ds\sum_{n=1}^\infty \frac{(-1)^n 3^n}{n 2^n}$
-- $\ds\sum_{n=1}^\infty \frac{n \ln n}{2^n}$
-- $\ds\sum_{n=1}^\infty \frac{(-3)^n}{3\cdot 5 \cdot 7 \cdots (2n+1)}$
- 
+ - $\displaystyle\sum_{n=1}^\infty n^2 e^{-n}$
+- $\displaystyle\sum_{n=1}^\infty (1-e^{-n})^n$
+- $\displaystyle\sum_{n=1}^\infty \frac{100}{n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n!}{10^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{10}{2\sqrt{n^3}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-2)^n}{3^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{4+2^{-n}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{2^n}{4n^2-1}$
+- $\displaystyle\sum_{n=1}^\infty \left(1- \frac{1}{3n}\right)^n$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^n 3^n}{n 2^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n \ln n}{2^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-3)^n}{3\cdot 5 \cdot 7 \cdots (2n+1)}$
  
 ::: 
 
 ::: {#exr- } 
 Determine whether the series is convergent, absolutely convergent, conditionally convergent, or divergent.
  
- - $\ds\sum_{n=3}^\infty \frac{(-1)^n}{n\sqrt{\ln n}}$
-- $\ds\sum_{n=1}^\infty \frac{10^n}{(n+1)4^{2n+1}}$
-- $\ds\sum_{n=1}^\infty \frac{\cos(n+1)}{n \sqrt{n}}$
-- $\ds\sum_{n=1}^\infty \frac{(-1)^n}{n^4}$
-- $\ds\sum_{n=1}^\infty \frac{(-1)^{n-1}\tan^{-1} n}{n^2}$
-- $\ds\sum_{n=1}^\infty \frac{n!}{100^n}$
-- $\ds\sum_{n=2}^\infty \frac{(-10^n}{(\ln n)^n}$
-- $\ds\sum_{n=1}^\infty (-1)^n \frac{n}{\sqrt{n^3+2}}$
-- $\ds\sum_{n=1}^\infty (-1)^n \tan\left(\frac{1}{n}\right)$
-- $\ds\sum_{n=1}^\infty \frac{\sin 4n}{4^n}$
-- $\ds\sum_{n=1}^\infty \frac{(-n)^n}{[(n+1)\tan^{-1} n]^n}$
-- $\ds\sum_{n=1}^\infty (-1)^{n+1}\frac{n^22^n}{n!}$
- 
+ - $\displaystyle\sum_{n=3}^\infty \frac{(-1)^n}{n\sqrt{\ln n}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{10^n}{(n+1)4^{2n+1}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{\cos(n+1)}{n \sqrt{n}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^n}{n^4}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^{n-1}\tan^{-1} n}{n^2}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n!}{100^n}$
+- $\displaystyle\sum_{n=2}^\infty \frac{(-10^n}{(\ln n)^n}$
+- $\displaystyle\sum_{n=1}^\infty (-1)^n \frac{n}{\sqrt{n^3+2}}$
+- $\displaystyle\sum_{n=1}^\infty (-1)^n \tan\left(\frac{1}{n}\right)$
+- $\displaystyle\sum_{n=1}^\infty \frac{\sin 4n}{4^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-n)^n}{[(n+1)\tan^{-1} n]^n}$
+- $\displaystyle\sum_{n=1}^\infty (-1)^{n+1}\frac{n^22^n}{n!}$
  
 ::: 
 
@@ -267,7 +261,7 @@ Show that the ratio and root tests fail on $p$-series.
 ::: 
 
 ::: {#exr- } 
-Show that the ratio and root tests fail on series $\ds\sum_{n=1}^\infty \frac{1}{(\ln n)^p}$.
+Show that the ratio and root tests fail on series $\displaystyle\sum_{n=1}^\infty \frac{1}{(\ln n)^p}$.
 ::: 
 
 

@@ -7,27 +7,27 @@ pagetitle: "Definite Integral - Exploring Calculus"
 
 Suppose a bounded function $f$ is given along with a closed interval $[a,b]$ on which $f$ is defined. 
 First we will partition the interval $[a,b]$ into $n$ subintervals by choosing points $\{x_0, x_1, \ldots, x_n\}$ arranged in such a way that 
-\[
+$$
 a=x_0 < x_1 < x_2 < \cdots <x_{n-1}< x_n =b. 
-\]
+$$
 Call this partition $P$. 
 Now for $i=1, 2, \ldots, n$ the $i^{\text{th}}$ subinterval width is $\Delta_i=x_i-x_{i-1}$. 
-The largest of these widths is called the \index{norm} of the partition $P$ and is denoted by $\norm{P}$; that is, $\norm{P}=\max_{i=1,2,\ldots,n} \{\Delta_i\} **norm} of the partition $P$ and is denoted by $\norm{P}$; that is, $\norm{P}=\max_{i=1,2,\ldots,n} \{\Delta_i\** $. 
+The largest of these widths is called the \index{norm} **norm** of the partition $P$ and is denoted by $\norm{P}$; that is, $\norm{P}=\max_{i=1,2,\ldots,n} \{\Delta_i\}$. 
 Choose a number (arbitrarily) from each subinterval, say $x_i^*$. 
 For $i=i,2,\ldots,n$ the number $x_i^*$ chosen from the $i^{\text{th}}$ is called the $i^{\text{th}}$ \index{subinterval representative} **subinterval representative**  of the partition $P$. 
 Then the sum 
-\[
+$$
 \sum_{i=1}^n f(x_i^*) \Delta x_i
-\]
+$$
 is called the \index{Riemann sum} **Riemann sum**  associated with $f$, the partition $P$, the chosen subinterval representatives. 
 
 
 ::: {#def- } 
 Let $f$ be a bounded function defined on an interval $[a,b]$. 
 Then the \index{definite integral} **definite integral**  of $f$ over $[a,b]$ is defined as 
-\[
+$$
 \int_a^b f(x)\, dx := \lim_{\norm{P} \to 0} \sum_{k=1}^n f(c_k) \Delta x.
-\]
+$$
 if the limit exists for all partitions $P$ of $[a,b]$ and all choices of $c_k$ in 
 $[x_{k-1},x_k]$.  
 When the above limit exists, we say the Riemann sums of $f$ on $[a,b]$ converge to the definite integral $I=\int_a^b f(x) \, dx$ and that $f$ is \index{integrable} **integrable**  over $[a,b]$.
@@ -35,14 +35,14 @@ When the above limit exists, we say the Riemann sums of $f$ on $[a,b]$ converge 
 
 For special cases we can define particular kinds of Riemann sums. 
 For example, if we choose equally spaced subintervals using $\Delta x_i= \Delta x =\frac{b-a}{n}$ and $x_i^*=a+k \Delta x$ for $i=1,2,\ldots,n$ then the Riemann sum formed is 
-\[
+$$
 \sum_{i=1}^n f(a+k \Delta x) \Delta x
-\]
+$$
 and the partition $P$ used to form this Riemann sum is called a \index{regular partition} **regular partition** . 
 For regular partitions, $\norm{P}\to 0$ if and only if $n\to \infty$ and so the definition of the definite integral sometimes is given as 
-\[
+$$
 \int_a^b f(x)\, dx := \lim_{n \to \infty } \sum_{k=1}^n f(c_k) \Delta x.
-\]
+$$
 
 ::: {#thm- } 
 
@@ -51,9 +51,9 @@ If a function $f$ is continuous on an interval $[a,b]$ then its definite integra
 
 ::: {#exm- }  
 Express
-$
+$$
 \lim_{\norm{P}\to 0 } \sum_{k=1}^n \sqrt{4-c_k^2} \Delta x_k
-$
+$$
 where $P$ is a partition of $[0,1]$, as a definite integral and find its value using geometry. 
 ::: 
 
@@ -62,26 +62,25 @@ See Figure \ref{fig:graph41}.
 Recall the area of a circle with radius 2 is $4\pi$. 
 Let $f(x)=\sqrt{4-x^2}$. 
 Since $f$ is continuous on $[0,1]$,  
-\[
+$$
 \pi =\int_0^1 \sqrt{4-x^2}\, dx = \lim_{\norm{P}\to 0 } \sum_{k=1}^n \sqrt{4-c_k^2} \Delta x_k.
-\square
-\]
+$$
 ::: 
 
 ::: {#exm- } 
 Express
-\[
+$$
 \lim_{\norm{P}\to 0 } \sum_{k=1}^n (\tan c_k) \Delta x_k
-\]
+$$
 where $P$ is a partition of $[0,\pi/4]$, as a definite integral and find its approximate value using geometry. 
 
 ::: 
 ::: {.solution }
 Let $f(x)=\tan x$. 
 Since $f$ is continuous on $[0,\pi/4]$,  
-\[
+$$
 \frac{\pi}{8}\approx \int_0^{\pi/4} \tan x\, dx = \lim_{\norm{P}\to 0 } \sum_{k=1}^n (\tan c_k) \Delta x_k
-\]
+$$
 since the area under the curve is approximately equal to the area under the triangle with vertices $(0,0)$, $(\pi/4,0)$, and  $(\pi/4,1)$.
 ::: 
 
@@ -94,33 +93,32 @@ Being familiar with the basic properties of finite sums and limits many of the p
 Suppose $f$ and $g$ are integrable functions on $[a,b]$. 
 Then 
  
-- $ \displaystyle \int_a^b f(x) \, dx =-\int_b^a f(x) \, dx$, 
-- $ \displaystyle \int_a^a f(x) \, dx =0$, 
-- $ \displaystyle \int_a^b k f(x) \, dx = k \int_a^b f(x) \, dx$, 
-- $ \displaystyle \int_a^b ( f(x) \pm g(x) ) \, dx = \int_a^b f(x) \, dx \pm \int_a^b g(x) \, dx$, and
-- $ \displaystyle \int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx$.
+- $\displaystyle \int_a^b f(x) \, dx =-\int_b^a f(x) \, dx$, 
+- $\displaystyle \int_a^a f(x) \, dx =0$, 
+- $\displaystyle \int_a^b k f(x) \, dx = k \int_a^b f(x) \, dx$, 
+- $\displaystyle \int_a^b ( f(x) \pm g(x) ) \, dx = \int_a^b f(x) \, dx \pm \int_a^b g(x) \, dx$, and
+- $\displaystyle \int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx$.
 - If $f$ has a maximum value $M$ and a minimum value $m$, then 
-\[
+$$
 m(b-a)\leq \int_a^b f(x) \, dx \leq M(b-a).
-\]
+$$
 - If $f(x)\leq g(x)$ on $[a,b]$, then 
-\[
+$$
 \int_a^b f(x)\, dx \leq \int_a^b g(x) \, dx.
-\]
- 
+$$
 ::: 
 
 ::: {#exm- }  
 
 Suppose $\int_0^2 f(x) \, dx=3$, $\int_0^2 g(x) \, dx=-1$, and $\int_0^2 h(x) \, dx=3$. 
 Evaluate 
-\[
+$$
 \int_0^2 [2f(x)+5g(x)-6h(x)] \, dx
-\] 
+$$ 
 and then find a constant $s$ such that 
-\[
+$$
 \int_0^2 [5 f(x)+s g(x)-7 h(x)] \, dx=0.
-\]
+$$
 ::: 
 ::: {.solution }
 Using the basic properties of the definite integral
@@ -140,14 +138,14 @@ which implies $s=-3$.
 
 ::: {#exm- }  
 Sketch the graph of $f$ and use it to evaluate $\int_{-1}^5 f(x) \, dx$ given
-\[
+$$
 f(x)=
 \begin{cases}
 2 & \text{for } -1\leq x \leq 1 \\
 3-x & \text{for } 1\leq x \leq 4 \\
 2x-9 & \text{for } 4\leq x \leq 5.
 \end{cases}
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -157,7 +155,6 @@ Using the basic properties of the definite integral
 \int_{-1}^5 f(x) \, dx & =\int_{-1}^1 f(x) \, dx +\int_{1}^4 f(x) \, dx+\int_{4}^5 f(x) \, dx \\
 & =\int_{-1}^1 2 \, dx +\int_{1}^4 (3-x) \, dx+\int_{4}^5 (2x-9) \, dx \\
 & = 2(2)+\frac{3}{2}-0=\frac{11}{2}.
-\square
 \end{align*}
 ::: 
 
@@ -172,7 +169,6 @@ Find
 - $\int_1^7  f(x) \, dx $
 - $\int_9^1 f(x) \, dx $
 - $\int_9^7  [h(x)-f(x)] \, dx $
- 
 ::: 
 
 ::: {.solution }
@@ -184,7 +180,6 @@ Using the basic properties of the definite integral
 - $\int_1^7  f(x) \, dx =\int_1^9  f(x) \, dx -\int_7^9 f(x) \, dx =-1-5=-6$
 - $\int_9^1 f(x) \, dx =-\int_1^9 f(x) \, dx =-(-1)=1$
 - $\int_9^7  [h(x)-f(x)] \, dx =\int_7^9  f(x)\, dx-\int_7^9 h(x)] \, dx =5-4=1$
- 
 ::: 
 
 
@@ -204,28 +199,27 @@ Use (b) to find another estimate of the integral in (a).
 
 ::: {.solution }
 For (a) Since $f(x)=\frac{1}{1+x^2}$ is decreasing on $[0,1]$, it follows the maximum of $f$, $M$ occurs at 0 with $M=1$ and the minimum value of $f$, $m$ occurs at 1 with $m=1/2$. Therefore, 
-\[
+$$
 \frac{1}{2}(1-0) =\frac{1}{2} \leq \int_0^1 \frac{1}{1+x^2} \, dx \leq 1 (1-0) =1.
-\]
+$$
 For (b) with $[0,1/2]$ we find, $M=1$ and $m=4/5$ and so 
-\[
+$$
 \frac{4}{5} \left(\frac{1}{2}-0\right) =\frac{2}{5} \leq \int_0^{1/2} \frac{1}{1+x^2} \, dx \leq 1 (\frac{1}{2}-0) =\frac{1}{2}.
-\]
+$$
 For (b) with $[0,1/2]$ we find, $M=4/5$ and $m=1/2$ and so 
-\[
+$$
 \frac{1}{2} \left(1-\frac{1}{2}\right) =\frac{1}{4} \leq \int_{1/2}^1 \frac{1}{1+x^2} \, dx \leq \frac{4}{5} (1-\frac{1}{2}) =\frac{2}{5}
-\]
+$$
 Then for part (c), we have a better estimate on the bounds of the original  integral
-\[
+$$
 \frac{13}{20}=\frac{1}{4}+\frac{2}{5}\leq 
 \int_0^{1/2} \frac{1}{1+x^2} \, dx + \int_{1/2}^1 \frac{1}{1+x^2} \, dx \leq
 \frac{1}{2}+\frac{2}{5}=\frac{9}{10}.
-\]
+$$
 namely,
-\[
+$$
 \frac{13}{20}\leq  \int_0^1 \frac{1}{1+x^2} \, dx \leq \frac{9}{10}.
-\square
-\]
+$$
 ::: 
 
 
@@ -238,10 +232,9 @@ Show that the value of $\int_0^1 \sqrt{x+8} \, dx$ lies between $2\sqrt{2}\appro
 See Figure \ref{fig:graph40}. 
 Since $f(x)=\sqrt{x+8}$ is increasing on $[0,1]$ it follows the maximum of $f$ is $f(1)=\sqrt{1+8}=3$ and the minimum of $f$ is $f(0)=\sqrt{0+8}=2\sqrt{2}$.
 Therefore, 
-\[
+$$
 2\sqrt{2} =2\sqrt{2} (1-0)\leq \int_0^1 \sqrt{x+8} \, dx\leq 3 (1-0)=3.
-\square
-\]
+$$
 ::: 
 
 
@@ -265,14 +258,13 @@ Use the formula $S_n=\sum_{k=1}^n | v(a+k \Delta t) | \Delta t$ where $\Delta t 
 ::: {.solution }
 Let $a=0$ with $\Delta t=\frac{1}{4}$. 
 Then 
-\[
+$$
 v(a+k \Delta t)=v \left(\frac{k}{4}\right) = \frac{1}{1+\frac{k}{4}} =\frac{4}{k+4}
-\]
+$$
 Thus the total distance travelled by the object during the time interval $[0,1]$ is 
-\[
+$$
 S_4=\sum_{k=1}^4 \frac{4}{k+4}\left(\frac{1}{4}\right)\approx 0.635.
-\square
-\]
+$$
 ::: 
 
 
@@ -290,7 +282,7 @@ Use the definition of the definite integral to find the area of the region betwe
 ::: 
 
 ::: {.solution }
-Let $\Delta x=\frac{b-0}{n}=\frac{b}{a}$ and let $x_0=0$, $x_1=\Delta x$, $ x_2=2 \Delta x$, \ldots, $x_{n-1}=\Delta x$, $ x_n=n \Delta x=b$. 
+Let $\Delta x=\frac{b-0}{n}=\frac{b}{a}$ and let $x_0=0$, $x_1=\Delta x$, $x_2=2 \Delta x$, \ldots, $x_{n-1}=\Delta x$, $x_n=n \Delta x=b$. 
 Let the subinterval representatives, the $c_k's$ be the right endpoints of the subintervals, so $c_1=x_1$, $c_2=x_2$, and so on. 
 The rectangles defined have areas:
 \begin{align*}
@@ -310,10 +302,9 @@ S_n
 =\frac{b^3}{2}\left(2+\frac{3}{n}+\frac{1}{n^2}\right).
 \end{align*}
 Therefore, applying the definition of the definite integral
-\[
+$$
 \int_0^b 3x^2 \, dx =\lim_{n\to \infty } \frac{b^3}{2}\left(2+\frac{3}{n}+\frac{1}{n^2}\right) =b^3.
-\square
-\]
+$$
 ::: 
 
 
@@ -332,10 +323,10 @@ For example, say we sample $n$ values of $f$ by dividing $[a,b]$ into $n$ subint
 If we pass the limit, if possible, as $n\to \infty$ we arrive at the following definition.
 
 ::: {#def- } 
-If $f$ is integrable on $[a,b]$ then its \index{average value} on $[a,b]$, denoted by the function $\text{av}(f)$, sometimes called its \index{mean value} **average value} on $[a,b]$, denoted by the function $\text{av}(f)$, sometimes called its \index{mean value** , is 
-\[
+If $f$ is integrable on $[a,b]$ then its \index{average value} $average value$ on $[a,b]$, denoted by the function $\text{av}(f)$, sometimes called its \index{mean value} **mean value** , is 
+$$
 \text{av}(f) = \frac{1}{b-a}\int_a^b f(x) \, dx.
-\]
+$$
 ::: 
 
 ::: {#exm- }  
@@ -348,7 +339,6 @@ The average value of the function $f(x)=3x^2-3$ over the interval $[0,1]$ is
 & =3 \int_0^1 x^2 \, dx - \int_0^1 3 \, dx  \\
 & =3\left(\frac{1}{3}\right)-3(1-0)
 =-2.
-\square
 \end{align*}
 ::: 
 
@@ -359,14 +349,14 @@ Show that $\int_a^b \text{av}(f)\, dx= \int_a^b f(x) \, dx$.
 
 ::: {.solution }
 Notice that 
-\[
+$$
 \text{av}(f)=\frac{1}{b-a}\int_a^b f(x)\, dx:=K
-\]
+$$
 is a constant, say $K$. 
 Then 
-\[
+$$
 \int_a^b K \, dx= K \int_a^b \, dx=K (b-a) = (b-a) \frac{1}{b-a}\int_a^b f(x)\, dx=\int_a^b f(x) \, dx
-\]
+$$
 and so yes the number $\text{av}(f)$ has the same integral over $[a,b]$ that $f$ does. 
 ::: 
 
@@ -381,17 +371,15 @@ For each of the following you are given a function $f$ defined on an interval $[
 - $f(x)=-2x+1, [-1,2], n=6, c_k \text{ is the left endpoint}$
 - $f(x)=\sqrt{x}-1, [0,3], n=6, c_k \text{ is the right endpoint}$
 - $f(x)=2\sin x, [0,5\pi/4], n=5, c_k \text{ is the right endpoint}$
- 
 ::: 
 
 ::: {#exr- } 
 Use the definition of the definite integral to evaluate the following integrals.
  
-- $ \int_{-1}^2 x^2 \, dx$
-- $ \int_{-1}^3 (x-2) \, dx$
-- $ \int_{-1}^1 (2x+1) \, dx$
-- $ \int_{-2}^1 (x^3+2x) \, dx$
- 
+- $\int_{-1}^2 x^2 \, dx$
+- $\int_{-1}^3 (x-2) \, dx$
+- $\int_{-1}^1 (2x+1) \, dx$
+- $\int_{-2}^1 (x^3+2x) \, dx$
 ::: 
 
 ::: {#exr- } 
@@ -401,7 +389,6 @@ Each of the following is given as the limit of a Riemann sum of a function $f$ o
 - $\lim_{n\to \infty} \sum_{k=1}^n 2c_k(1-c_k)^2\Delta x, [0,3]$
 - $\lim_{n\to \infty} \sum_{k=1}^n \frac{2c_k}{c_k^2+1} \Delta x, [1,2]$
 - $\lim_{n\to \infty} \sum_{k=1}^n c_k(\cos c_k)\Delta x, [0,\frac{\pi}{2}]$
- 
 ::: 
 
 ::: {#exr- } 
@@ -411,7 +398,6 @@ For each of the following make a sketch of $f$ on $[a,b]$ and then use the geome
 - $\int_{-1}^2 |x| \, dx$
 - $\int_{-2}^2 \sqrt{4-x^2}  \, dx$
 - $\int_{0}^2 \sqrt{-x^2+2x} \, dx$
- 
 ::: 
 
 ::: {#exr- } 
@@ -421,7 +407,6 @@ Given that $\int_{-1}^3 f(x) \, dx =4$ and $\int_3^6 f(x) \, dx=2$, evaluate the
 - $\int_{-1}^3 [g(x)-f(x)] \, dx$
 - $\int_{-1}^3 [3f(x)-2g(x)] \, dx$
 - $\int_{3}^{-1} [f(x)+5g(x)] \, dx$
- 
 ::: 
 
 ::: {#exr- } 
@@ -430,17 +415,15 @@ Given that $\int_{-2}^2 f(x) \, dx =3$ and $\int_0^2 f(x) \, dx=2$, evaluate the
 - $\int_{2}^0 f(x) \, dx$
 - $\int_{-2}^0 [f(x)+3] \, dx$
 - $\int_{2}^0 3f(x)\, dx-\int_0^{-2} 2f(x) \, dx$
- 
 ::: 
 
 ::: {#exr- } 
 For each of the following use the properties of the integral to prove that the inequality without evaluating the integral. 
-\ 
+
 - $\int_0^1 \frac{\sqrt{x^3+x}}{x^2+1}\, dx \geq 0$
 - $\int_0^1 x^2\, dx \leq \int_0^1 \sqrt{x} \, dx$
 - $\int_0^{\pi/4} \sin^2 x \cos x \, dx \leq \int_0^{\pi/4} \sin^2 x \, dx$
-- $\int_0^{\pi/2} \cos x \, dx \leq \int_0^{\pi/2} (x^2+1) \, dx $
- 
+- $\int_0^{\pi/2} \cos x \, dx \leq \int_0^{\pi/2} (x^2+1) \, dx$
 ::: 
 
 

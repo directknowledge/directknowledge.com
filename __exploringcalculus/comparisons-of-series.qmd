@@ -1,7 +1,7 @@
 ---
 pagetitle: "Comparisons of Series - Exploring Calculus"
 ---
-# "Comparisons of Series"
+# Comparisons of Series
 
 
 The Direct Comparison Test and the Limit Comparison Test are discussed. We work through several examples for each case and provide many exercises. Convergence tests for infinite series are only mastered through practice.
@@ -33,7 +33,6 @@ This means that its partial sums must form a bounded increasing sequence, which 
 Suppose that $\sum a_n$ and $\sum b_n$ are series with positive terms. 
  - If $\sum b_n$ is convergent and $a_n\leq b_n$ for all $n$, then $\sum a_n$ is also convergent.
 - If  $\sum b_n$ is divergent and $a_n \geq b_n$ for all $n$, then $a_n$ is also divergent. 
- 
 ::: 
 
 ::: {.proof }
@@ -86,7 +85,6 @@ Suppose that $a_n>0$ and $b_n>0$ for all $n\geq N$.
  - If $\lim_{n\to \infty} \frac{a_n}{b_n} = c>0$, then $\sum a_n$ and $\sum b_n$ both converge of diverge. 
 - If $\lim_{n\to \infty} \frac{a_n}{b_n} = 0$ and $\sum b_n$ converges, them $\sum a_n$ converges. 
 - If $\lim_{n\to \infty} \frac{a_n}{b_n} = \infty$ and $\sum b_n$ diverges, then $\sum a_n$ diverges. 
- 
 ::: 
 
 
@@ -150,7 +148,7 @@ Therefore, by the Limit Comparison Test the given series converges.
 
 ::: {#exr- } 
 Determine whether the series converges or diverges. 
-\begin{multicols}{3}
+ 
  - $\sum_{n=1}^\infty \frac{1}{n^2+2}$
 - $\sum_{n=3}^\infty \frac{1}{n-2}$
 - $\sum_{n=1}^\infty \frac{1}{3+2^n}$
@@ -164,13 +162,12 @@ Determine whether the series converges or diverges.
 - $\sum_{n=1}^\infty \frac{2+\sin n}{3^n}$
 - $\sum_{n=1}^\infty e^{-n^2}$
  
- 
 ::: 
 
 
 ::: {#exr- } 
 Determine whether the series converges or diverges. 
-\begin{multicols}{3}
+ 
  - $\sum_{n=1}^\infty \frac{\sin^2 n}{2^n}$
 - $\sum_{n=1}^\infty \frac{1+\cos n}{n^2}$
 - $\sum_{n=1}^\infty \frac{1}{n!}$
@@ -183,7 +180,6 @@ Determine whether the series converges or diverges.
 - $\sum_{n=1}^\infty \frac{\sqrt{n}+\ln n}{n^2+1}$
 - $\sum_{n=1}^\infty \frac{\sqrt[n]{n}}{n^2}$
 - $\sum_{n=1}^\infty \frac{1}{n\sqrt[n]{n}}$
- 
  
 ::: 
 

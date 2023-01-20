@@ -23,15 +23,15 @@ If $F$ is an antiderivative of the continuous function $f,$ then any other antid
 ::: {.proof }
 We show that if $F$ is differentiable in $[a,b]$ and $F'(x)=0$ for all $x$ in $[a,b],$ then $F(x)=F(a)$ for all $x$ in $[a,b].$
 By the mean-value theorem applied to $[a,x]$ for any $x$ such that $a<x\leq b,$  
-\[
+$$
 \frac{F(x)-F(a)}{x-a}=F'(c)=0
-\]
+$$
 where $a<c<x.$ 
 Thus $F(x)=F(a)=0,$ so $F(x)=F(a),$ and $F(x)$ is constant in $[a,b].$ 
 So in fact, for $F'(x)=f(x)$ with all $x$ in $[a,b],$ if we suppose $G'(x)=f(x)$ also for $x$ in $[a,b]$ then 
-\[
+$$
 \frac{d(G(x)-F(x))}{dx}=G'(x)-F'(x)=0.
-\]
+$$
 Thus $G(x)-F(x)=G(a)-F(a).$ 
 If we let $C=G(a)-F(a),$ then $G(x)=F(x)+C.$ 
 ::: 
@@ -64,18 +64,18 @@ integral notation.
 
 ::: {.solution } 
 Since 
-\[
+$$
 \frac{d}{dx}\left(\frac{x^{n+1}}{n+1}\right)=\frac{(n+1)x^n}{n+1}=x^n
-\] 
+$$ 
 the general antiderivative of $f$ is 
-\[
+$$
 F(x)=\frac{x^{n+1}}{n+1}+C,
-\]
+$$
 where $C$ is a constant, which is valid for $n\geq 0$ because $f(x)=x^n$ is defined on the interval $(-\infty ,+\infty ).$ 
 Therefore, 
-\[
+$$
 \int x^n \, dx=\frac{x^{n+1}}{n+1}+C
-\]
+$$
 where $C$ is an arbitrary constant and $n\geq 0.$
 ::: 
 
@@ -84,24 +84,23 @@ where $C$ is an arbitrary constant and $n\geq 0.$
 Suppose $f$ and $g$ are integrable functions and $a$, $b$, and $c$ are constants. 
 Then 
  
-- $ \displaystyle \int c f(u)du=c\int f(u) \, du$
-- $ \displaystyle \int [f(u)+g(u)] \, du=\int f(u) \, du+\int g(u) \, du$
-- $ \displaystyle \int [f(u)-g(u)] \, du=\int f(u) \, du-\int g(u) \, du $
-- $ \displaystyle \int [a f(u)du+b g(u)] \, du=a\int  f(u)du+b \int g(u) \, du$
- 
+- $\displaystyle \int c f(u)du=c\int f(u) \, du$
+- $\displaystyle \int [f(u)+g(u)] \, du=\int f(u) \, du+\int g(u) \, du$
+- $\displaystyle \int [f(u)-g(u)] \, du=\int f(u) \, du-\int g(u) \, du$
+- $\displaystyle \int [a f(u)du+b g(u)] \, du=a\int  f(u)du+b \int g(u) \, du$
 ::: 
 
 ::: {#thm- } 
 
 Suppose $C$ is an arbitrary constant. 
 Then  
-\[
+$$
 \int x^n \, dx=
 \begin{cases}
- \displaystyle \frac{x^{n+1}}{n+1}+C & n\neq -1 \\[10pt]
+ \displaystyle \frac{x^{n+1}}{n+1}+C & n\neq -1 \\ 
  \ln |x|+C & n=-1.
 \end{cases}
-\]
+$$
 ::: 
 
 
@@ -109,64 +108,61 @@ Then
 Suppose $u$ is a differentiable function of $x$ and $C$ is an arbitrary constant. 
  
  
-- $ \displaystyle \int 0 \, du=0+C $
-- $ \displaystyle \int e^u \, du=e^u+C $
-- $\ds\int  \sin  u \, du=-\cos  u+C $
-- $\ds\int  \cos  u \, du=\sin  u+C $
-- $\ds\int  \sec ^2 u \, du=\tan  u+C $
-- $\ds\int  \sec  u \tan  u \, du=\sec  u+C $
-- $\ds\int  \csc  u \cot  u \, du=-\csc  u+C $
-- $\ds\int  \csc ^2 u \, du=-\cot  u+C $
-- $\ds\int \frac{1}{\sqrt{1-u^2}} \, du=\sin ^{-1}u+C $
-- $\ds\int \frac{1}{1+u^2} \, du=\tan ^{-1}u+C $
-- $\ds\int \frac{1}{|u|\sqrt{u^2-1}} \, du=\sec ^{-1}u+C $
- 
+- $\displaystyle \int 0 \, du=0+C$
+- $\displaystyle \int e^u \, du=e^u+C$
+- $\displaystyle\int  \sin  u \, du=-\cos  u+C$
+- $\displaystyle\int  \cos  u \, du=\sin  u+C$
+- $\displaystyle\int  \sec ^2 u \, du=\tan  u+C$
+- $\displaystyle\int  \sec  u \tan  u \, du=\sec u+C$
+- $\displaystyle\int  \csc  u \cot  u \, du=-\csc  u+C$
+- $\displaystyle\int  \csc ^2 u \, du=-\cot  u+C$
+- $\displaystyle\int \frac{1}{\sqrt{1-u^2}} \, du=\sin ^{-1}u+C$
+- $\displaystyle\int \frac{1}{1+u^2} \, du=\tan ^{-1}u+C$
+- $\displaystyle\int \frac{1}{|u|\sqrt{u^2-1}} \, du=\sec ^{-1}u+C$
  
 ::: 
 
 
 ::: {#exm- }  
 Find the general antiderivative of the function 
-\[
+$$
 f(x)=\frac{x^2}{x^2+1}.
-\]
+$$
 ::: 
 
 ::: {.solution } 
 Since
-\[
+$$
 \frac{x^2}{x^2+1}=\frac{x^2+1-1}{x^2+1}=1-\frac{1}{x^2+1}
-\]
+$$
 we find 
 \begin{align*}
 \int \frac{x^2}{x^2+1} \, dx & =\int \left(1-\frac{1}{x^2+1}\right) \, dx 
 \\ & 
 =\int dx-\int \frac{1}{x^2+1} \, dx 
 =x-\tan ^{-1}x+C.
-\square
 \end{align*}
 ::: 
 
 
 ::: {#exm- }  
 Find the general antiderivative of the function 
-\[
+$$
 f(x)=\left(1+\frac{1}{x}\right)\left(1-\frac{4}{x^2}\right).
-\]
+$$
 :::  
 
 ::: {.solution } 
 We want to evaluate $\int \left(1+\frac{1}{x}\right)\left(1-\frac{4}{x^2}\right)dx.$ 
 Since
-\[
+$$
 \left(1+\frac{1}{x}\right)\left(1-\frac{4}{x^2}\right)=1+\frac{1}{x}-\frac{4}{x^2}-\frac{4}{x^3}
-\]
+$$
 we use the linearity rule and the power rule to find
 \begin{align*}
 \int \left(1+\frac{1}{x}\right)\left(1-\frac{4}{x^2}\right)dx & 
 =\int \left(1+x^{-1}-4x^{-2}-4x^{-3}\right) \, dx \\
 & =x+\ln x+\frac{4}{x}+\frac{2}{x^2}+C.
-\square
 \end{align*}
 ::: 
 
@@ -177,31 +173,31 @@ Find $f(x)$ given $f''(x)=x+\sqrt{x},$ $f(1)=1,$ and $f'(1)=2.$
 
 ::: {.solution } 
 First we find $f'$ by
-\[
+$$
 f'(x)=\int \left(x+\sqrt{x}\right) \, dx=\frac{x^2}{2}+\frac{2 x^{3/2}}{3}+C
-\]
+$$
 where $C$ is some constant which can be determined with $f'(1)=2.$ 
 So
-\[
+$$
 f'(1)=\frac{(1)^2}{2}+\frac{2 (1)^{3/2}}{3}+C=\frac{7}{6}+C=2 \qquad \Longrightarrow \qquad C=\frac{5}{6}.
-\]
+$$
 So in fact
-\[
+$$
 f'(x)=\frac{x^2}{2}+\frac{2 x^{3/2}}{3}+\frac{5}{6}.
-\]
+$$
 Now to find $f$ we follow the same procedure
-\[
+$$
 f(x)=\int \left(\frac{x^2}{2}+\frac{2 x^{3/2}}{3}+\frac{5}{6}\right) \, dx=\frac{x^3}{6}+\frac{4 x^{5/2}}{15}+\frac{5 x}{6}+K
-\]
+$$
 where $K$ is a constant which can be determined with $f(1)=1.$ 
 So
-\[
+$$
 f(1)=\frac{(1)^3}{6}+\frac{4 (1)^{5/2}}{15}+\frac{5 (1)}{6}+K=\frac{19}{15}+K=1\qquad \Longrightarrow \qquad K=-\frac{4}{15}.
-\]
+$$
 Therefore
-\[
+$$
 f(x)=\frac{x^3}{6}+\frac{4 x^{5/2}}{15}+\frac{5 x}{6}-\frac{4}{15}
-\] 
+$$ 
 as desired. 
 ::: 
 
@@ -223,12 +219,12 @@ Find the area under the parabola $y=x^2$ over the interval $[0,1].$
 ::: {.solution } 
 Since $f(x)=x^2$ is a continuous function with $f(x)\geq 0$ for all $x$. 
 The area function is given by 
-\[
-A(t)=\int t^2 \, dt=\frac{1}{3}t^3+C\] 
+$$
+A(t)=\int t^2 \, dt=\frac{1}{3}t^3+C$$ 
 and we can determine $C$ using $A(0)=0$ and so 
-\[
+$$
 A(0)=\frac{1}{3}(0)^3+C=0 \qquad \Longrightarrow \qquad C=0
-\] 
+$$ 
 which means $A(t)=\frac{1}{3}t^3.$ 
 Therefore the area under the curve from $[0,1]$ is $A(1)=\frac{1}{3}(1)^3=\frac{1}{3}.$
 ::: 
@@ -247,14 +243,13 @@ Find the demand function $p(x).$
 
 ::: {.solution } 
 Since
-\[
+$$
 R(x)=\int R'(x)dx=\int (240+0.1x) \, dx=240 x+0.05x^2+C
-\]
+$$
 and because $R(x)=x p(x),$ where $p(x)$ is the demand function, we must have $R(0)=0$ so that $240(0)+0.05(0)+C+0$ yielding $C=0$ and 
-\[
+$$
 p(x)=\frac{R(x)}{x}=\frac{240x+0.05x^2}{x}=240+0.05x.
-\square
-\]
+$$
 ::: 
 
 ::: {#exm- }  
@@ -269,64 +264,62 @@ The motion is vertical and we choose the positive direction to be upward.
 At time $t$ the distance above the ground is $s(t)$ and the velocity $v(t)$ is decreasing. 
 Therefore the acceleration must be negative $a(t)=\frac{dv}{dt}=-32.$ 
 Taking the antiderivative  
-\[
+$$
 v(t)=\int a(t) \, dt=-32t+C.
-\] 
+$$ 
 To determine $C$ we use the given information of $v(0)=48.$ 
 Thus $v(0)=-32(0)+C=48$ and so $C=48$ and $v(t)=-32t+48.$ 
 It follows the ball reaches its maximum height at $v(t)=0$ which means $t=\frac{48}{32}s=1.5s.$ 
 Taking the antiderivative   
-\[
+$$
 s(t)=v'(t)=\int (-32t+48) \, dt=-16 t^2+48 t+K
-\] 
+$$ 
 and using $s(0)=432$ we find that $s(0)=-16 (0)^2+48 (0)+K=432$ and so $K=432.$ 
 Therefore the height function is 
-\[
+$$
 s(t)=-16 t^2+48 t+432
-\] 
+$$ 
 and so the ball hits the ground when $s(t)=0$ meaning $t=\frac{3+3\sqrt{13}}{2}\approx 6.9 s$ by using the quadratic formula. 
 ::: 
 
 ::: {#exm- }  
 A company has found that the rate of change of its average cost for a product is 
-\[
+$$
 \bar{C}'(x)=\frac{1}{4}-\frac{100}{x^2}
-\]
+$$
 where $x$ is the number of units and cost is in dollars. 
 The average cost of producing 20 units is 40,000 dollars. 
-\ 
+
 - Find the average cost function for the product. 
 - Find the average cost of 100 units of the product. 
- 
 ::: 
 
 ::: {.solution } 
 To find $\bar{C}(x)$ we integrate, so 
-\[
+$$
 \bar{C}(x)=\int \left(\frac{1}{4}-\frac{100}{x^2}\right) \, dx=\frac{x}{4}+\frac{100}{x}+K
-\]
+$$
 to find the constant $K$ we use the given that the average cost of producing 20 units is 40,000. 
 So we find the constant $K$ by 
 $\bar{C}(20)=\frac{20}{4}+\frac{100}{20}+K=10+K=40000$ which means $K=40000-10=39990.$ 
 (a) So the average cost function for the product is $\bar{C}(x)=\frac{x}{4}+\frac{100}{x}+39990.$ 
 (b) The average cost of 100 units of the product is 
-\[
+$$
 \bar{C}(10)=\frac{10}{4}+\frac{100}{10}+39990=\frac{80005}{2}=40002.5
-\] 
+$$ 
 dollars.
 ::: 
 
 ::: {#exm- }  
 An excellent film with a very small advertising budget must depend largely on world-of-mouth advertising.
 In this case, the rate at which weekly attendance might grow can be given by
-\[
+$$
 \frac{dA}{dt}=\frac{-100}{(t+10)^2}+\frac{2000}{(t+10)^3}
-\]
+$$
 where $t$ is in the time in weeks since release and $A$ is attendance in millions. 
-\ 
+
 - Find the function that describes weekly attendance at this film. 
 - Find the attendance at this film in the tenth week. 
- 
 ::: 
 
 ::: {.solution } 
@@ -339,17 +332,17 @@ A(t)& =\int \frac{dA}{dt} \, dt
 \end{align*}
 where $t$ is in the time in weeks since release and $A$ is attendance in millions. 
 When $t=0$ the attendance was 0 and so we find $K$ by 
-\[
+$$
 A(0)=\frac{100}{0+10}-\frac{1000}{(0+10)^2}+K=K=0.
-\] 
+$$ 
 Thus 
-\[
+$$
 A(t)=\frac{100}{t+10}-\frac{1000}{(t+10)^2}
-\] 
+$$ 
 and so the attendance at this film in the tenth week is 
-\[
+$$
 A(10)=\frac{100}{10+10}-\frac{1000}{(10+10)^2}=\frac{5}{2}=2.5
-\] 
+$$ 
 million people.
 ::: 
 
@@ -364,9 +357,9 @@ $C(x)=\int 60\sqrt{x+1}dx=40 (1+x)^{3/2}+K$ where $K$ is a constant.
 Since $C(0)=340$ we find $K=300$ and so the cost function is $C(x)=40 (1+x)^{3/2}+30.$ 
 The marginal revenue is $\overline{MR}=80x$ and so the revenue function is found by integration $R(x)=\int 80 xdx=40 x^2.$ 
 Thus the profit function for this product is
-\[
+$$
 P(x)=R(x)-C(x)=40 x^2-40 (1+x)^{3/2}-300.
-\]
+$$
 (a) The loss from the sale of 3 units is $P(3)=40 (3)^2-40 (1+(3))^{3/2}-300=-260$ dollars.
 (b) The profit from the sale of 8 units is $P(8)=40 (8)^2-40 (1+(8))^{3/2}-300=1180$ dollars. 
 ::: 
@@ -411,11 +404,9 @@ $f'(x)=g'(x)=\frac{9}{(x-5)^2}$
 which is valid on any interval not containing $x=5.$ 
 Thus on any interval not containing $x=5,$ the constant difference theorem applies. 
 In fact, when $x\neq 5$,  we have
-\[
+$$
 f(x)-g(x)=\frac{x+4}{5-x}-\frac{-9}{x-5}=-1
-\square
-\]
-
+$$
 ::: 
 
 ::: {#exm- }  
@@ -426,9 +417,9 @@ Use $f$ and $g$ to demonstrate the Constant-Difference Theorem.
 ::: {.solution } 
 The functions $f$ and $g$ are polynomial functions so they are continuous and differentiable for all real numbers. 
 Also, 
-\[
+$$
 f'(x)=3(x-2)^2=3x^2-12x+4=(2x)(x-6)+\left(x^2+12\right)=g'(x)
-\]
+$$
 for all real numbers. 
 By the Constant Difference Theorem, we have $f(x)=g(x)+k$ for some real number $k.$ 
 ::: 
@@ -443,9 +434,9 @@ If $f'(c)=0$ for all $c$ in $(a,b)$ then $f$ is constant on $[a,b].$
 ::: {.proof }
 If $x_1$ and $x_2$ are different points in $[a,b]$ then by the Mean Value Theorem there exists a $c$ in $\left(x_1,x_2\right)$
 such that
-\[
+$$
 f'(c)=\frac{f\left(x_2\right)-f\left(x_1\right)}{x_2-x_1}.
-\]
+$$
 By hypothesis $f'(c)=0$ and so $f\left(x_2\right)-f\left(x_1\right)=0.$ 
 Since $x_1$ and $x_2$ were chosen arbitrarily, $f$ is a constant function on $[a,b].$ 
 ::: 
@@ -470,18 +461,17 @@ No it does not, rather it shows that the assumptions of the zero-derivative theo
 
 ::: {#exr- } 
 Find an antiderivative for the following sets of functions $f(x)$, $g(x)$, and $h(x)$. Write out an equation using an indefinite integral and each of these functions.
-\ 
+
 - $f(x)=2x,$ $g(x)=x^2,$ and $h(x)=x^2-2x+1$
 - $f(x)=-3x^{-4},$ $g(x)=x^{-4},$ and $h(x)=x^{-4}+2x+3$ 
 - $f(x)=\frac{-2}{x^3},$ $g(x)=\frac{1}{2 x^3}$ and $h(x)=x^3-\frac{1}{x^3}$ 
 - $f(x)=\frac{2}{3}x^{-1/3},$ $g(x)=\frac{1}{3}x^{-2/3}$ and $h(x)=\frac{-1}{3}x^{-4/3}$ 
-\item  
+-    
 $f(x)=\frac{1}{3x},$ $g(x)=\frac{2}{5x},$ and $h(x)=1+\frac{4}{3x}-\frac{1}{x^2}$ 
 - $f(x)=\sec ^2x,$ $g(x)=\frac{2}{3}\sec ^2\frac{x}{3}$ and $h(x)=-\sec ^2\frac{3x}{2}$ 
 - $f(x)=e^{-2x}$ $g(x)=e^{4x/3},$ and $h(x)=e^{-x/5}.$ 
 - $f(x)=3^x,$ $g(x)=2^{-x},$ and $h(x)=\left(\frac{5}{3}\right)^x.$ 
 - $f(x)=x-\left(\frac{1}{2}\right)^x$ $g(x)=x^2+2^x,$ and $h(x)=\pi ^x-x^{-1}.$ 
- 
 ::: 
 
 

@@ -11,7 +11,7 @@ Sequences are introduced. The limit of a sequence and various limits rules are s
 Basically, a \emph{sequence} is a function whose domain is a set of integers.
 
 ::: {#def- } 
-A \index{sequence} $\{a_n\} **sequence} $\{a_n\** $ is a function whose domain is the set of positive integers. 
+A \index{sequence} **sequence** is a function whose domain is the set of positive integers. 
 The functional values $a_1$, $a_2$, \ldots, $a_n$ are the \index{terms} **terms**  of the sequence, and the term $a_n$ is called the $n$th term of the sequence. 
 ::: 
 
@@ -20,7 +20,6 @@ List the terms of the sequence.
  
  - $a_n=1/n$
 - $a_n = n/(1+n)$
- 
  
 ::: 
 
@@ -38,7 +37,6 @@ Find an expression for the $n$th term of the sequence.
  
  - $\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \ldots$
 - $\frac{1}{2}, -\frac{2}{3}, \frac{3}{4}, -\frac{4}{5}, \ldots$
- 
  
 ::: 
 
@@ -69,17 +67,17 @@ The first 11 terms are $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89$.
 
 ## The Limit of a Sequence
 
-A sequence $\{a_n\}$ has a \index{limit} **limit** , written 
+A sequence $\{a_n\}$ has a \index{limit} **limit**, written 
 $$
 \lim_{n\to \infty} a_n = L
 \label{limconv}
 $$
 if $a_n$ can be made as close to $L$ as we please by taking $n$ sufficiently large. 
-If the limit in \eqref{limconv} exists the sequence is said to \index{converge} **converge** .
-Otherwise we say that the sequence \index{diverges} **diverges** . 
+If the limit in \eqref{limconv} exists the sequence is said to \index{converge} **converge**.
+Otherwise we say that the sequence \index{diverges} **diverges**. 
 
 ::: {#def- } 
-A sequence $\{a_n\}$ \index{converges} **converges**  to $L$, written
+A sequence $\{a_n\}$ \index{converges} **converges** to $L$, written
 $$
 \lim_{n\to \infty} a_n = L
 $$
@@ -98,7 +96,6 @@ If $\{a_n\}$ and $\{b_n\}$ are convergent sequences and $c$ is a constant, then
 - $\lim_{n\to \infty} (a_n b_n) = \lim_{n\to \infty} a_n \lim_{n\to \infty} b_n$
 - $\lim_{n\to \infty}\frac{a_n }{b_n} = \frac{\lim_{n\to \infty} a_n}{\lim_{n\to \infty} b_n}$ whenever $\lim_{n\to \infty} b_n \neq 0$
 - $\lim_{n\to \infty} a_n^p = \left[ \lim_{n\to \infty} a_n \right]^p$, if $p > 0$ and $a_n > 0$.
- 
 ::: 
 
 ::: {#exm- } 
@@ -330,7 +327,6 @@ The number $M$ is called an \index{upper bound} **upper bound**  of the sequence
 - A sequence $\{a_n\}$ is \index{bounded below} **bounded below**  when there is a real number $N$ such that $N \leq a_n$ for all $n$. 
 The number $N$ is called a lower bound of the sequence. 
 - A sequence $\{a_n\}$ is \index{bounded} **bounded**  when it is bounded above and bounded below. 
- 
 ::: 
 
 ::: {#thm- } \label{Bounded Convergence Theorem}
@@ -380,28 +376,24 @@ Therefore, the sequence converges to 0.
 ::: {#exr- } 
 Write the first five terms of the sequence.
  
- - $a_n = \frac{ (-1)^{n+1} 2^n}{n+1}$
+- $a_n = \frac{ (-1)^{n+1} 2^n}{n+1}$
 - $a_n =\frac{n+1}{3n-1}$
 - $a_n = \sin \frac{n\pi}{2}$
 - $a_1=4, a_{n+1}= \frac{a_n}{a_n-1}$
 - $a_n = \frac{2^n}{(2n)!}$
 - $a_n = \frac{1\cdot 3 \cdot 5 \cdots (2n-1)}{n!}$
 - $a_1 =3$, $a_{n+1}= 2a_n -1$
-- $a_1=2, a_{n+1}=3a_n +1$
- 
- 
+- $a_1=2, a_{n+1}=3a_n +1$ 
 ::: 
 
 
 ::: {#exr- } 
 Find an expression for the $n$th term of the sequence. 
  
- - $\left\{\frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \ldots \right\}$
+- $\left\{\frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \ldots \right\}$
 - $\left\{\frac{1}{1\cdot 2}, \frac{2}{2\cdot 3}, \frac{3}{3\cdot 4}, \frac{4}{4\cdot 5}, \ldots \right\}$
 - $\left\{-\frac{1}{4}, \frac{2}{9}, -\frac{3}{16}, \frac{4}{25}, \ldots\right\}$
-- $\left\{1, -\frac{2}{3}, \frac{4}{9}, -\frac{8}{27}, \ldots\right\}$
- 
- 
+- $\left\{1, -\frac{2}{3}, \frac{4}{9}, -\frac{8}{27}, \ldots\right\}$ 
 ::: 
 
 
@@ -409,7 +401,7 @@ Find an expression for the $n$th term of the sequence.
 Which of the sequences converge and which diverge? 
 Find the limit of each convergent sequence. 
  
- - $a_n = \frac{n+(-1)^n}{n}$
+- $a_n = \frac{n+(-1)^n}{n}$
 - $a_n =\sqrt{n+1}$
 - $a_n = \frac{2n+1}{1-2\sqrt{n}}$
 - $a_n =\frac{n^2-1}{2n^2+1}$
@@ -425,8 +417,6 @@ Find the limit of each convergent sequence.
 - $a_n = \frac{1}{n^2} +\frac{2}{n^2}+ \frac{3}{n^2}+\cdots + \frac{n}{n^2}$
 - $a_n = \frac{1}{n}\int_1^n \frac{1}{x}\, dx$
 - $a_n = \frac{1+2+3+\cdots + n}{n+2}-\frac{n}{2}$
- 
- 
 ::: 
 
 ::: {#exr- } 
@@ -474,26 +464,22 @@ If it converges, find its limit.
 
 ::: {#exr- } 
 Find the limit of the following sequences or state that they diverge. 
-\begin{multicols}{3}
- - $a_n = \frac{\cos n}{n}$
+
+- $a_n = \frac{\cos n}{n}$
 - $a_n = \frac{2\tan^{-1}n}{n^3+4}$
 - $a_n =\frac{n \sin^3(n\pi/2)}{n+1}$
- 
- 
 ::: 
 
 
 ::: {#exr- } 
 Determine whether the sequence is increasing, decreasing, or not monotonic. Is the sequence bounded? 
-\begin{multicols}{3}
- - $a_n = \frac{1}{2n+3}$
+
+- $a_n = \frac{1}{2n+3}$
 - $a_n =4-\frac{1}{n}$
 - $a_n = \frac{2n-3}{3n+4}$
 - $a_n=\left(\frac{2}{3}\right)^n$
 - $\sin \frac{n\pi}{6}$
 - $a_n = \frac{\ln(1/n)}{n}$
- 
- 
 ::: 
 
 
@@ -502,12 +488,10 @@ Determine whether the sequence is increasing, decreasing, or not monotonic. Is t
 Suppose that $f(x)$ is a differentiable for all $x$ in $[0,1]$ and that $f(0)=0$.
 Define the sequence $\{a_n\}$ by the rule $a_n=n f(1/n)$. 
 Show that $lim_{n\to \infty} a_n = f'(0)$. 
-\begin{multicols}{3}
- - $a_n= n \tan^{-1}\left(\frac{1}{n}\right)$
+
+- $a_n= n \tan^{-1}\left(\frac{1}{n}\right)$
 - $a_n =  n\left(e^{1/n}-1\right)$
-- $a_n = n \ln \left(1+\frac{2}{n}\right)$
- 
- 
+- $a_n = n \ln \left(1+\frac{2}{n}\right)$ 
 ::: 
 
 

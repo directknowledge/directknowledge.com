@@ -90,7 +90,7 @@ as needed.
 
 ## Convergence of Taylor Series
 
-Our next result is often called \index{Taylor's Theorem} and the remainder given in the theorem is called the \index{Lagrange form of the remainder} **Taylor's Theorem} and the remainder given in the theorem is called the \index{Lagrange form of the remainder** .
+Our next result is often called \index{Taylor's Theorem} **Taylor's Theorem** and the remainder given in the theorem is called the \index{Lagrange form of the remainder} **Lagrange form of the remainder**.
 
 ::: {#thm- } 
 \label{tayloertheorem}
@@ -176,61 +176,52 @@ By \ref{contay}, the Taylor series for $\sin x$ converges to $\sin x$.
 
 ::: {#exr- } 
 Find the Taylor polynomial $p_n(x)$ and the Taylor remainder $R_n(x)$ for the function $f$ and the values of $c$ and $n$. 
- - $f(x)=x^4+3x^3+2x+3$, $c=-1$, $n=4$
+
+- $f(x)=x^4+3x^3+2x+3$, $c=-1$, $n=4$
 - $f(x)=\sqrt{x}$, $c=4$, $n=3$
 - $f(x)=\cos x$, $c=\pi/4$, $n=3$
 - $f(x)=\cos 2x$, $c=\pi/6$, $n=3$
- 
 ::: 
 
 
 ::: {#exr- } 
 Use the definition of Taylor series to find the Taylor series, centered at $c$, for the function.
  
- 
 - $f \displaystyle (x)=\frac{1}{x}$, $c=1$
-- $ \displaystyle f(x)=x e^x$, $c=1$
+- $\displaystyle f(x)=x e^x$, $c=1$
 - $f(x)=\sin 3x$, $c=0$
 - $f(x)=e^x$, $c=1$
 - $f(x) = \tan x$, $c=\pi/4$
 - $\tan 2x$, $c=0$
- 
- 
 ::: 
 
 ::: {#exr- } 
 Prove that the Maclaurin series for the function converges to the function for all x.
- 
- - $f(x)=\sin x$
+
+- $f(x)=\sin x$
 - $f(x)=e^{-x}$
 - $f(x)=e^{-2x}$
-- $f(x)=\sin + \cos x$
- 
- 
+- $f(x)=\sin + \cos x$ 
 ::: 
 
 ::: {#exr- } 
 Use the binomial series to find the Maclaurin series for the function.
- 
- - $ \displaystyle f(x)\frac{1}{\sqrt{1-x}}$
-- $ \displaystyle f(x)=\frac{1}{4+x^2}$
-- $ \displaystyle f(x)=\frac{1}{(1+x)^4}$
-- $ \displaystyle f(x)= \sqrt[4]{1+x}$
- 
- 
+
+- $\displaystyle f(x)\frac{1}{\sqrt{1-x}}$
+- $\displaystyle f(x)=\frac{1}{4+x^2}$
+- $\displaystyle f(x)=\frac{1}{(1+x)^4}$
+- $\displaystyle f(x)= \sqrt[4]{1+x}$ 
 ::: 
 
 ::: {#exr- } 
 Find the Maclaurin series for the function.
  
- - $ \displaystyle f(x)=e^{x^2/3}$
-- $ \displaystyle f(x)=x^2 \sin x$
-- $ \displaystyle g(x)=e^{-4x}$
-- $ \displaystyle h(x)=\cos x^{3/2}$
-- $ \displaystyle f(x)=\cos^2 x$
-- $ \displaystyle h(x)=x^2 \cos x^2$
- 
- 
+- $\displaystyle f(x)=e^{x^2/3}$
+- $\displaystyle f(x)=x^2 \sin x$
+- $\displaystyle g(x)=e^{-4x}$
+- $\displaystyle h(x)=\cos x^{3/2}$
+- $\displaystyle f(x)=\cos^2 x$
+- $\displaystyle h(x)=x^2 \cos x^2$ 
 ::: 
 
 

@@ -21,8 +21,8 @@ An expression of the form
 $$
 a_1+a_2+a_3+\cdots a_n + \cdots 
 $$
-is called an \index{infinite series} or, more simply, a \index{series} **infinite series} or, more simply, a \index{series** . 
-The numbers $a_1$, $a_2$, $a_3$, are called the \index{terms} of the series; $a_n$ is called the $n$th term, or \index{general term} **terms} of the series; $a_n$ is called the $n$th term, or \index{general term** , of the series; and the series itself is denoted by the symbol
+is called an \index{infinite series} **infinite series** or, more simply, a \index{series} **series**. 
+The numbers $a_1$, $a_2$, $a_3$, are called the \index{terms} **terms** of the series; $a_n$ is called the $n$th term, or \index{general term} **general term**, of the series; and the series itself is denoted by the symbol
 $$
 \sum_{n=1}^\infty a_n
 $$
@@ -64,7 +64,7 @@ $$
 $$
 To calculate this limit we need a closed form, so we multiple by sides of \eqref{nparsum} by $1/10^6$ and obtain
 \begin{equation}
-\frac{1}{10^{6}} s_n =  \frac{142857}{10^{12}} + \frac{142857}{10^{18}} + \frac{142857}{10^{24}} + \cdots + \frac{142857}{10^{6(n+1)}}.
+\frac{1}{10^{6}} s_n = \frac{142857}{10^{12}} + \frac{142857}{10^{18}} + \frac{142857}{10^{24}} + \cdots + \frac{142857}{10^{6(n+1)}}.
 \label{nparsumtwo}
 \end{equation}
 Now we subtract \eqref{nparsumtwo} from \eqref{nparsum} and obtain
@@ -163,11 +163,9 @@ $$
 $$
 is called the \index{harmonic series} **harmonic series** .
 ::: 
- 
 ::: {#thm- } 
 The harmonic series is divergent.
 ::: 
- 
 ::: {.proof }
 Write out the partial sums, for example,
 \begin{align*}
@@ -190,7 +188,6 @@ The following observation leads us to the Divergence Test.
 ::: {#lem- } \label{Divergence Lemma}
 If $\sum_{n=1}^\infty a_n$ converges, then $\lim_{n\to \infty} a_n =0$. 
 ::: 
- 
 ::: {.proof }
 Notice that $a_n=S_n-S_{n-1}$. 
 Hence
@@ -221,12 +218,11 @@ Often times it is easier to determine the convergence of a simpler series.
 
 ::: {#thm- } \label{Convergence Rules}
 If $\sum_{n=1}^\infty a_n=A$ and $\sum_{n=1}^\infty b_n=B$ are convergent and $c$ is any real number, then $\sum_{n=1}^\infty c a_n$ and $\sum_{n=1}^\infty c b_n$ are also convergent, and
- - $\sum_{n=1}^\infty c a_n = c \sum_{n=1}^\infty a_n = cA$ and
-- $\sum_{n=1}^\infty c (a_n\pm b_n) 
-= \sum_{n=1}^\infty a_n \pm \sum_{n=1}^\infty b_n = A\pm B$. 
- 
+
+- $\sum_{n=1}^\infty c a_n = c \sum_{n=1}^\infty a_n = cA$ and
+- $\sum_{n=1}^\infty c (a_n\pm b_n) = \sum_{n=1}^\infty a_n \pm \sum_{n=1}^\infty b_n = A\pm B$. 
 ::: 
- 
+
 ::: {#exm- } 
 Evaluate the geometric series 
 $$
@@ -259,8 +255,8 @@ using the Convergence Rules.
 ::: {#exr- } 
 Determine whether the series converges. 
 If the series converges, find its sum. 
-\begin{multicols}{3}
- - $\sum_{n=1}^\infty n$
+
+- $\sum_{n=1}^\infty n$
 - $\sum_{n=1}^\infty \left(\frac{1}{2n+3}-\frac{1}{2n+1}\right)$
 - $\sum_{n=1}^\infty \frac{n+1}{2n-3}$
 - $\sum_{n=1}^\infty \left(\frac{1}{n}-\frac{1}{n+1}\right)$.
@@ -269,73 +265,62 @@ If the series converges, find its sum.
 - $\sum_{n=1}^\infty \frac{4}{(2n+3)(2n+5)}$
 - $\sum_{n=0}^\infty \frac{1}{\sqrt{n+1}}$
 - $\sum_{n=1}^\infty \frac{1+3^n}{2^n}$
- 
- 
 ::: 
 
 ::: {#exr- } 
 Determine whether the series converges or diverges. 
 If it converges, find its sum. 
  
- - $\sum_{n=1}^\infty 3\left(-\frac{1}{2}\right)^{n-1}$
+- $\sum_{n=1}^\infty 3\left(-\frac{1}{2}\right)^{n-1}$
 - $\sum_{n=1}^\infty \frac{1}{n(n+2)}$
 - $\sum_{n=1}^\infty \frac{2n-1}{3n+1}$
 - $\sum_{n=1}^\infty 5\left(\frac{4}{3}\right)^{n-1}$
 - $\sum_{n=1}^\infty \frac{3^n-1}{3^{n+1}}$
 - $\sum_{n=1}^\infty \left[\cos\left(\frac{1}{n}\right)-\cos\left(\frac{1}{n+1}\right) \right]$
- 
- 
 ::: 
 
 ::: {#exr- } 
 Show that the following series are divergent.
-\begin{multicols}{3}
- - $\sum_{n=1}^\infty (-1)^{n-1}$
+
+- $\sum_{n=1}^\infty (-1)^{n-1}$
 - $\sum_{n=1}^\infty \frac{n}{n+1}$
 - $\sum_{n=1}^\infty \frac{2n^2+1}{3n^2-1}$
 - $\sum_{n=1}^\infty \frac{n}{\sqrt{n^2+1}}$
 - $\sum_{n=1}^\infty \frac{n!}{2^n}$
 - $\sum_{n=1}^\infty \frac{2^n+1}{2^{n+1}}$
- 
- 
 ::: 
 
 ::: {#exr- } 
 Show that the series $\sum_{n=1}^\infty \left[\frac{2}{n(n+1)}-\frac{4}{3^n}\right]$ is convergent, and find its sum. 
 ::: 
- 
+
 ::: {#exr- } 
 Find a formula for the $n$th partial sum of each series and use it to find the series sum of the series converges. 
- - $\frac{1}{2}+\frac{1}{5}+\frac{1}{10}+\frac{1}{17}+\frac{1}{26} + \cdots $ 
-- $\frac{1}{3}+\frac{1}{7}+\frac{1}{11}+\frac{1}{15}+\frac{1}{19} + \cdots $ 
-- $\frac{9}{100}+\frac{9}{100^2}+ \frac{9}{100^3} +\cdots +\frac{9}{100^n} + \cdots $
-- $\frac{5}{3}-\frac{5}{9} +\frac{5}{27} -\frac{5}{81} +\cdots $
-- $1-2+4-8+\cdots + (-1)^{n-1}2^{n-1}+ \cdots $
-- $1+\frac{4}{3}+\frac{16}{9}+\frac{64}{27}+\cdots $
- 
+- $\frac{1}{2}+\frac{1}{5}+\frac{1}{10}+\frac{1}{17}+\frac{1}{26} + \cdots$ 
+- $\frac{1}{3}+\frac{1}{7}+\frac{1}{11}+\frac{1}{15}+\frac{1}{19} + \cdots$ 
+- $\frac{9}{100}+\frac{9}{100^2}+ \frac{9}{100^3} +\cdots +\frac{9}{100^n} + \cdots$
+- $\frac{5}{3}-\frac{5}{9} +\frac{5}{27} -\frac{5}{81} +\cdots$
+- $1-2+4-8+\cdots + (-1)^{n-1}2^{n-1}+ \cdots$
+- $1+\frac{4}{3}+\frac{16}{9}+\frac{64}{27}+\cdots$
 ::: 
 
 ::: {#exr- } 
 Write out the first few terms of each series to show how the series starts. 
 Then find the sum of the series.
-\begin{multicols}{3}
- - $\sum_{k=0}^\infty \frac{(-1)^k}{4^k}$
+- $\sum_{k=0}^\infty \frac{(-1)^k}{4^k}$
 - $\sum_{k=1}^\infty \frac{1}{\sqrt{k}+4}$
 - $\sum_{k=0}^\infty \left(\frac{2^{k+1}}{5^k}\right)$
 - $\sum_{k=1}^\infty \frac{n}{2^k}$
 - $\sum_{k=1}^\infty \frac{1}{e^{-k} +1}$
 - $\sum_{n=1}^\infty \frac{1}{2n^2+7n+3}$
- 
- 
 ::: 
 
 
 ::: {#exr- } 
 Use partial fractions to find the sum of each series.
  
- - $\sum_{n=1}^\infty \frac{6}{(2n-1)(2n+1)}$
+- $\sum_{n=1}^\infty \frac{6}{(2n-1)(2n+1)}$
 - $\sum_{n=1}^\infty \frac{2n+1}{n^2(n+1)^2}$
- 
  
 ::: 
 
@@ -344,7 +329,7 @@ Which series converge, and which diverge?
 Give reasons for your answers. 
 If a series converges, find its sum.
  
- - $\sum_{n=0}^\infty (\sqrt{2})^n$
+- $\sum_{n=0}^\infty (\sqrt{2})^n$
 - $\sum_{k=0}^\infty \frac{1}{(3k+1)(3k+4)}$
 - $\sum_{n=0}^\infty (-1)^{n+1} n$
 - $\sum_{n=1}^\infty \arctan n$
@@ -353,18 +338,15 @@ If a series converges, find its sum.
 - $\sum_{n=1}^\infty \ln \left(\frac{n}{2n+1}\right)$
 - $\sum_{n=0}^\infty \frac{3}{5^n}$
  
- 
 ::: 
 
 ::: {#exr- } 
 Let $f_n$ denote the Fibonacci sequence.
 Show that each of the following statements is true. 
  
- - $\frac{1}{f_{n-1}f_{n+1}} = \frac{1}{f_{n-1}f_n} - \frac{1}{f_n f_{n+1}}$
+- $\frac{1}{f_{n-1}f_{n+1}} = \frac{1}{f_{n-1}f_n} - \frac{1}{f_n f_{n+1}}$
 - $\sum_{n=2}^\infty \frac{1}{f_{n-1}f_{n+1}} =1$
-- $\sum_{n=2}^\infty \frac{1}{f_{n-1}f_{n+1}} =2$
- 
- 
+- $\sum_{n=2}^\infty \frac{1}{f_{n-1}f_{n+1}} =2$ 
 ::: 
 
 

@@ -65,7 +65,7 @@ either both converge or both diverge.
 ::: 
 
 ::: {#exm- } 
-Determine if the series $\ds\sum_{n=1}^\infty\frac{8\tan^{-1}n}{1+n^2}$ converges or diverges. 
+Determine if the series $\displaystyle\sum_{n=1}^\infty\frac{8\tan^{-1}n}{1+n^2}$ converges or diverges. 
 ::: 
 
 ::: {.solution }
@@ -85,7 +85,7 @@ Therefore, the series converges by the Integral Test.
 ::: 
 
 ::: {#exm- } 
-Determine if the series $\ds\sum_{n=1}^\infty\frac{8 n}{1+n^2}$ converges or diverges. 
+Determine if the series $\displaystyle\sum_{n=1}^\infty\frac{8 n}{1+n^2}$ converges or diverges. 
 ::: 
 
 ::: {.solution }
@@ -123,7 +123,7 @@ In a $p$-series the variable is in the base, i.e $\sum (1/n)^2$ is a $p$-series.
 
 ::: {#exm- } 
 Let $p>1$ be a real number. 
-Determine if the series $\ds\sum_{n=1}^\infty\frac{1}{n^p}$ converges or diverges. 
+Determine if the series $\displaystyle\sum_{n=1}^\infty\frac{1}{n^p}$ converges or diverges. 
 ::: 
 
 ::: {.solution }
@@ -140,7 +140,7 @@ Therefore, the series converges by the Integral Test.
 
 ::: {#exm- } 
 Let $p\leq1$ be a real number. 
-Determine if the series $\ds\sum_{n=1}^\infty\frac{1}{n^p}$ converges or diverges. 
+Determine if the series $\displaystyle\sum_{n=1}^\infty\frac{1}{n^p}$ converges or diverges. 
 ::: 
 
 ::: {.solution }
@@ -165,7 +165,7 @@ Combining the two previous examples together we have the following theorem.
 
 
 ::: {#thm- } 
-The $p$-series $\ds\sum_{n=1}^\infty \frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq 1$.
+The $p$-series $\displaystyle\sum_{n=1}^\infty \frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq 1$.
 ::: 
 
 Unfortunately, there is no theorem to give us the sum of a $p$-series 
@@ -176,37 +176,35 @@ Unfortunately, there is no theorem to give us the sum of a $p$-series
 
 ::: {#exr- } 
 Use the Integral Test to determine whether the series diverges or converges.  
-\begin{multicols}{3}
- - $\ds\sum_{n=1}^\infty \frac{1}{n^2+1}$
-- $\ds\sum_{n=1}^\infty \frac{\ln n}{n}$
-- $\ds\sum_{n=1}^\infty \frac{n+2}{n+1}$
  
+ - $\displaystyle\sum_{n=1}^\infty \frac{1}{n^2+1}$
+- $\displaystyle\sum_{n=1}^\infty \frac{\ln n}{n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n+2}{n+1}$
  
 ::: 
 
 
 ::: {#exr- } 
 Determine whether the series diverges or converges.  
-\begin{multicols}{3}
- - $\ds\sum_{n=1}^\infty \frac{1}{n^2}$
-- $\ds\sum_{n=1}^\infty \frac{1}{10^n}$
-- $\ds\sum_{n=1}^\infty \frac{3}{\sqrt{n}}$
-- $\ds\sum_{n=1}^\infty \frac{1}{\sqrt{n}}$
-- $\ds\sum_{n=1}^\infty n^{-1.001}$
-- $\ds\sum_{n=1}^\infty \frac{3n+2}{n(n+1)}$
-- $\ds\sum_{n=1}^\infty \frac{n^2}{e^n}$
-- $\ds\sum_{n=2}^\infty \frac{\ln n}{n}$
-- $\ds\sum_{n=3}^\infty \frac{(1/n)}{(\ln n) \sqrt{\ln^2 n-1}}$
-- $\ds\sum_{n=1}^\infty \frac{1}{n(1+\ln^2 n)}$
-- $\ds\sum_{n=1}^\infty \frac{n}{n^4+1}$
-- $\ds\sum_{n=1}^\infty\frac{1}{n^3 +n}$
  
+ - $\displaystyle\sum_{n=1}^\infty \frac{1}{n^2}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{10^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{3}{\sqrt{n}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{\sqrt{n}}$
+- $\displaystyle\sum_{n=1}^\infty n^{-1.001}$
+- $\displaystyle\sum_{n=1}^\infty \frac{3n+2}{n(n+1)}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n^2}{e^n}$
+- $\displaystyle\sum_{n=2}^\infty \frac{\ln n}{n}$
+- $\displaystyle\sum_{n=3}^\infty \frac{(1/n)}{(\ln n) \sqrt{\ln^2 n-1}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{n(1+\ln^2 n)}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n}{n^4+1}$
+- $\displaystyle\sum_{n=1}^\infty\frac{1}{n^3 +n}$
  
 ::: 
 
 
 ::: {#exr- } 
-Are there any values of $x$ for which $\ds\sum_{n=1}^\infty (1/ (nx))$ converges? 
+Are there any values of $x$ for which $\displaystyle\sum_{n=1}^\infty (1/ (nx))$ converges? 
 ::: 
 
 ::: {#exr- } 
@@ -218,11 +216,10 @@ $$
 
 ::: {#exr- } 
 Find the values of $p$ for which the series is convergent.
-\begin{multicols}{3}
- - $\ds\sum_{n=2}^\infty \frac{1}{n (\ln n)^p}$
-- $\ds\sum_{n=1}^\infty \frac{\ln n}{n^p}$
-- $\ds\sum_{n=1}^\infty n (1+n^2)^p$
  
+ - $\displaystyle\sum_{n=2}^\infty \frac{1}{n (\ln n)^p}$
+- $\displaystyle\sum_{n=1}^\infty \frac{\ln n}{n^p}$
+- $\displaystyle\sum_{n=1}^\infty n (1+n^2)^p$
  
 ::: 
 
@@ -231,23 +228,21 @@ Find the values of $p$ for which the series is convergent.
 Find the value(s) of $a$ for which the series converges. 
 Justify your answer. 
  
- - $\ds\sum_{n=1}^\infty \left(\frac{a}{n} -\frac{1}{n+1}\right)$
-- $\ds\sum_{n=1}^\infty \left(\frac{a}{n+1} - \frac{1}{n+2}\right)$
- 
+ - $\displaystyle\sum_{n=1}^\infty \left(\frac{a}{n} -\frac{1}{n+1}\right)$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{a}{n+1} - \frac{1}{n+2}\right)$
  
 ::: 
 
 
 ::: {#exr- } 
 Use the Integral Test to determine the convergence or divergence of the $p$-series.
-\begin{multicols}{3}
- - $\ds\sum_{n=1}^\infty \frac{1}{n^{1/2}}$
-- $\ds\sum_{n=1}^\infty \frac{1}{n^5}$
-- $\ds\sum_{n=1}^\infty \frac{1}{\sqrt[5]{n}}$
-- $\ds\sum_{n=3}^\infty \frac{1}{(n-2)^4}$
-- $\ds\sum_{n=1}^\infty \frac{3}{n^{5/3}}$
-- $\ds\sum_{n=1}^\infty \frac{1}{\sqrt[3]{27k^2}}$
  
+ - $\displaystyle\sum_{n=1}^\infty \frac{1}{n^{1/2}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{n^5}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{\sqrt[5]{n}}$
+- $\displaystyle\sum_{n=3}^\infty \frac{1}{(n-2)^4}$
+- $\displaystyle\sum_{n=1}^\infty \frac{3}{n^{5/3}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{\sqrt[3]{27k^2}}$
  
 ::: 
 

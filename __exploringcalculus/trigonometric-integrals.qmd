@@ -43,8 +43,7 @@ $$
 \sin^2 x=\frac{1}{2}(1-\cos 2x)\qquad
 \cos^2 x=\frac{1}{2}(1+\cos 2x)
 $$ 
-to reduce the powers on $\sin x $ and $\cos x$.
- 
+to reduce the powers on $\sin x$ and $\cos x$.
 ::: 
 
 ::: {#exm- } 
@@ -142,7 +141,6 @@ can be evaluated by one of the three methods.
 \int \sec^n x \, dx = \frac{1}{n-1} \sec^{n-2} x \tan x +\frac{n-2}{n-1} \int \sec^{n-2} x \, dx
 \end{equation}
 for a positive integer $n$ great than 1.
- 
 ::: 
 
 ::: {#exm- } 
@@ -251,22 +249,21 @@ where $C$ is an arbitrary constant.
 Evaluate the integrals.
  
  
-- $\ds\int_0^\pi \sin^5 \left(\frac{x}{2}\right) \, dx$
-- $\ds\int \sin^6 x \cos^3 x \, dx$
-- $\ds\int \sin^3 x \cos x\, dx$
-- $\ds\int_{-\pi/2}^{\pi/2} \cos^3 x \, dx$
-- $\ds\int_{0}^{\pi/2} \cos^5 x \, dx$
-- $\ds\int \cos^4 x \, dx$
-- $\ds\int_0^\pi \sin^4 (3t)\, dt$
-- $\ds\int_0^\pi 8 \sin^4 y \cos^2 y \, dy$
-- $\ds\int_0^\pi \cos^6 \theta\, d\theta$
-- $\ds\int_0^\pi \sin^2 x \cos^4 x \, dx$
-- $\ds\int_0^{\pi/4} 8 \cos^3 2\theta \sin 2 \theta \, d\theta$
-- $\ds\int_0^\pi \sin^2 t \cos^4 t \, dt$
-- $\ds\int x \cos^2 x\, dx$
-- $\ds\int e^x \sec^3 e^x \, dx$
-- $\ds\int_{\pi/4}^{\pi/2} \cot^3 x \, dx$
- 
+- $\displaystyle\int_0^\pi \sin^5 \left(\frac{x}{2}\right) \, dx$
+- $\displaystyle\int \sin^6 x \cos^3 x \, dx$
+- $\displaystyle\int \sin^3 x \cos x\, dx$
+- $\displaystyle\int_{-\pi/2}^{\pi/2} \cos^3 x \, dx$
+- $\displaystyle\int_{0}^{\pi/2} \cos^5 x \, dx$
+- $\displaystyle\int \cos^4 x \, dx$
+- $\displaystyle\int_0^\pi \sin^4 (3t)\, dt$
+- $\displaystyle\int_0^\pi 8 \sin^4 y \cos^2 y \, dy$
+- $\displaystyle\int_0^\pi \cos^6 \theta\, d\theta$
+- $\displaystyle\int_0^\pi \sin^2 x \cos^4 x \, dx$
+- $\displaystyle\int_0^{\pi/4} 8 \cos^3 2\theta \sin 2 \theta \, d\theta$
+- $\displaystyle\int_0^\pi \sin^2 t \cos^4 t \, dt$
+- $\displaystyle\int x \cos^2 x\, dx$
+- $\displaystyle\int e^x \sec^3 e^x \, dx$
+- $\displaystyle\int_{\pi/4}^{\pi/2} \cot^3 x \, dx$
  
 ::: 
 
@@ -274,19 +271,18 @@ Evaluate the integrals.
 Evaluate the integrals.
  
  
-- $\ds\int_0^{\pi/2} \sin x \cos x\, dx$
-- $\ds\int \sin 3 \theta \sin 4\theta\, d\theta$
-- $\ds\int \cot^3 x \csc^3 x \, dx$
-- $\ds\int_0^\pi \cos 3x \cos 4x \, dx$
-- $\ds\int \frac{\sin^3 x }{\sec^2 x} \, dx$
-- $\ds\int (\tan^2 +\tan^4 x)\, dx$
-- $\ds\int \frac{\cos x+ \sin x }{\sin 2x}\, dx$
-- $\ds\int_{-\pi/2}^{\pi/2} \cos x \cos 7x \, dx$
-- $\ds\int \frac{1}{\csc x\cot^2 x}\, dx$
-- $\ds\int \frac{1}{\cos x -1}\, dx$
-- $\ds\int \frac{1-tan^x}{\sec^2 x}\, dx$
-- $\ds\int \sin 3x \sin 6x \, dx$
- 
+- $\displaystyle\int_0^{\pi/2} \sin x \cos x\, dx$
+- $\displaystyle\int \sin 3 \theta \sin 4\theta\, d\theta$
+- $\displaystyle\int \cot^3 x \csc^3 x \, dx$
+- $\displaystyle\int_0^\pi \cos 3x \cos 4x \, dx$
+- $\displaystyle\int \frac{\sin^3 x }{\sec^2 x} \, dx$
+- $\displaystyle\int (\tan^2 +\tan^4 x)\, dx$
+- $\displaystyle\int \frac{\cos x+ \sin x }{\sin 2x}\, dx$
+- $\displaystyle\int_{-\pi/2}^{\pi/2} \cos x \cos 7x \, dx$
+- $\displaystyle\int \frac{1}{\csc x\cot^2 x}\, dx$
+- $\displaystyle\int \frac{1}{\cos x -1}\, dx$
+- $\displaystyle\int \frac{1-tan^x}{\sec^2 x}\, dx$
+- $\displaystyle\int \sin 3x \sin 6x \, dx$
  
 ::: 
 

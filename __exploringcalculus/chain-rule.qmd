@@ -1,7 +1,7 @@
 ---
 pagetitle: "Chain Rule - Exploring Calculus"
 ---
-# "Chain Rule"
+# Chain Rule
 
 ## The Chain Rule and Its Proof
 
@@ -10,32 +10,32 @@ With a lot of work, we can sometimes find derivatives without using the chain ru
 
 ::: {#thm- } [Chain Rule]
 Suppose $f$ is a differentiable function of $u$ which is a differentiable function of $x.$ Then $f(u(x))$ is a differentiable function of $x$ and 
-\[
+$$
 \frac{d f}{d x}=\frac{df}{du}\frac{du}{dx}.
-\]
+$$
 ::: 
 
 ::: {.proof }
-We wish to show $  \frac{d f}{d x}=\frac{df}{du}\frac{du}{dx}$ and will do so by using the definition of the derivative for the function $f$ with respect to $x,$ namely,  
-\[
+We wish to show $\frac{d f}{d x}=\frac{df}{du}\frac{du}{dx}$ and will do so by using the definition of the derivative for the function $f$ with respect to $x,$ namely,  
+$$
 \frac{df}{dx}=\lim _{\Delta  x\to 0}\frac{f[u(x+\Delta  x)]-f[u(x)]}{\Delta  x}
-\]
+$$
 To better work with this limit let's define an auxiliary function:
-\[
+$$
 g(t)=\left\{
 \begin{array}{cc}
   \frac{f[u(x)+t]-f[u(x)]}{t}-\frac{df}{du} & \text{ if } t\neq 0 \\
  0 & \text{ if } t=0
 \end{array}
 \right.
-\]
+$$
 Let $\Delta  u=u(x+\Delta  x)-u(x),$ then three properties of the function $g$ are 
  
-\item $  g(\Delta  u)=\frac{f[u(x)+\Delta  u]-f[u(x)]}{\Delta  u}-\frac{df}{du}$ provided $\Delta  u\neq 0$
-\item $  \left[g(\Delta  u)+\frac{df}{du}\right]\Delta  u=f[u(x)+\Delta  u]-f[u(x)]$
- \item $g$ is continuous at $t=0$ since $  \lim _{t\to 0}\left[\frac{f[u(x)+t]-f[u(x)]}{t}\right]=\frac{df}{du}$
+- $g(\Delta  u)=\frac{f[u(x)+\Delta  u]-f[u(x)]}{\Delta  u}-\frac{df}{du}$ provided $\Delta  u\neq 0$
+- $\left[g(\Delta  u)+\frac{df}{du}\right]\Delta  u=f[u(x)+\Delta  u]-f[u(x)]$
+- $g$ is continuous at $t=0$ since $\lim _{t\to 0}\left[\frac{f[u(x)+t]-f[u(x)]}{t}\right]=\frac{df}{du}$
  
-Now we can rewrite $  \frac{df}{dx}$ as follows:
+Now we can rewrite $\frac{df}{dx}$ as follows:
 \begin{align*}
 \frac{df}{dx} & =\lim _{\Delta  x\to 0}\frac{f[u(x+\Delta  x)]-f[u(x)]}{\Delta  x} 
  =\lim _{\Delta  x\to 0}\frac{f[u(x)+\Delta  u]-f[u(x)]}{\Delta  x} \\
@@ -48,7 +48,7 @@ Now we can rewrite $  \frac{df}{dx}$ as follows:
 & =\left[g(0)+\lim _{\Delta  x\to 0}\frac{df}{du}\right]\text{   }\lim _{\Delta  x\to 0}\frac{\Delta  u}{\Delta  x} 
 =\left[0+\lim _{\Delta  x\to 0}\frac{df}{du}\right]\text{   }\lim _{\Delta  x\to 0}\frac{\Delta  u}{\Delta  x} 
  =\frac{df}{du}\frac{du}{dx}.
- \end{align*}
+\end{align*}
 ::: 
  
 ## Examples Using The Chain Rule
@@ -56,68 +56,64 @@ Now we can rewrite $  \frac{df}{dx}$ as follows:
 
 ::: {#exm- } 
 Find the derivative of the function 
-\[
+$$
 y=\frac{x}{\sqrt{x^4+4}}.
-\]
+$$
 ::: 
 
 ::: {.solution }
 Using the chain rule and the quotient rule,
-\[
+$$
 \frac{dy}{dx}=\frac{\sqrt{x^4+4}(1)-x\frac{d}{dx}\left(\sqrt{x^4+4}\right)}{\left(\sqrt{x^4+4}\right)^2}=\frac{\sqrt{x^4+4}(1)-x\left(\frac{2
 x^3}{\sqrt{4+x^4}}\right)}{\left(\sqrt{x^4+4}\right)^2}
-\]
+$$
 which simplifies to
-\[
+$$
 \frac{dy}{dx}=\frac{4-x^4}{\left(4+x^4\right)^{3/2}}.
-\square
-\]
+$$
 ::: 
 
 
 ::: {#exm- } 
 Find the derivative of the function 
-\[
+$$
 g(x)=\left(\frac{3x^2-2}{2x+3}\right)^3.
-\]
+$$
 ::: 
 
 ::: {.solution }
 Using the chain rule and the quotient rule, we determine,
-\[
+$$
 \frac{dg}{dx}
 %=3\left(\frac{3x^2-2}{2x+3}\right)^2\frac{d}{dx}\left(\frac{3x^2-2}{2x+3}\right)
 =3\left(\frac{3x^2-2}{2x+3}\right)^2\left(\frac{(2x+3)6x-\left(3x^2-2\right)2}{(2x+3)^2}\right)
-\]
+$$
 which simplifies to
-\[
+$$
 \frac{dg}{dx}=\frac{6 \left(2-3 x^2\right)^2 \left(2+9 x+3 x^2\right)}{(3+2 x)^4}.
-\square
-\]
+$$
 ::: 
 
 ::: {#exm- } 
-
 Find the derivative of the function 
-\[
+$$
 h(t)=2 \cot ^2(\pi  t+2).
-\]
+$$
 ::: 
 
 ::: {.solution }
 Using the chain rule and the formula $\frac{d}{dx}(\cot  u)=-u'\csc ^2u,$
-\[
+$$
 \frac{dh}{dt}=4\cot (\pi  t+2)\frac{d}{dx}[\cot (\pi  t+2)]=-4\pi  \cot (\pi  t+2)\csc ^2(\pi  t+2).
-\square
-\]
+$$
 ::: 
 
 
 ::: {#exm- } 
 Find the derivative of the function 
-\[
+$$
 y=\sin  \sqrt[3]{x}+\sqrt[3]{\sin  x}
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -125,27 +121,26 @@ Using the chain rule,
 \begin{align*}
 \frac{dy}{dx}&=\cos  \sqrt[3]{x}\frac{d}{dx}\left(\sqrt[3]{x}\right)+\frac{1}{3}(\sin  x)^{-2/3}\frac{d}{dx}(\sin  x) \\
 & =\frac{1}{3 x^{2/3}}\cos  \sqrt[3]{x}+\frac{\cos  x}{3(\sin  x)^{2/3}}.
-\square
 \end{align*}
 ::: 
 
 ::: {#exm- } 
 Show that 
-\[
+$$
 \frac{d}{d x}( \ln |\cos  x| )=-\tan  x 
 \qquad \text{and}\qquad 
 \frac{d}{d x}(\ln|\sec  x+\tan  x|)=\sec  x.
-\]
+$$
 ::: 
 
 ::: {.solution }
 Using the differentiation rule $\frac{d}{dx}[\ln  u]=\frac{u'}{u};$ we have,
-\[
+$$
 \frac{d}{d x}( \ln |\cos  x| ) 
 =\frac{1}{\cos  x}\frac{d}{dx}(\cos  x)
 =\frac{\sin  x}{\cos  x}
 =\tan  x
-\]
+$$
 and 
 \begin{align*}
 & \frac{d}{d x}( (\ln |\sec  x+\tan  x|) ) =\frac{1}{|\sec  x+\tan  x|}\frac{d}{dx}(|\sec  x+\tan  x|) \\
@@ -160,99 +155,99 @@ using $\frac{d}{dx}[|u|]=\frac{u}{|u|}(u'), u\neq 0$.
 
 ::: {#exm- } 
 Find the derivative of the function 
-\[
+$$
 y=\sin ^4\left(x^2-3\right)-\tan ^2\left(x^2-3\right).
-\]
+$$
 ::: 
 
 ::: {.solution }
 Using the quotient rule with the chain rule,
-\[
+$$
 y'=4\sin ^3\left(x^2-3\right)\cos \left(x^2-3\right)(2x)-2\tan \left(x^2-3\right)\sec ^2\left(x^2-3\right)(2x)
-\]
+$$
 which simplifies to
-\[
+$$
 y'=4x \left[2 \sin ^3\left(x^2-3\right)\cos \left(x^2-3\right)-\tan \left(x^2-3\right)\sec^2\left(x^2-3\right)\right].
-\square
-\]
+$$
 ::: 
 
 In the following examples we continue to illustrate the chain rule.
 
 
 ::: {#exm- }  
-Let $f$ be a function for which $ \displaystyle f'(x)=\frac{1}{x^2+1}.$ If $g(x)=f(3x-1),$ what is $g'(x)?$ 
-Also, if $ \displaystyle h(x)=f\left(\frac{1}{x}\right),$ what is $h'(x)?$
+Let $f$ be a function for which $\displaystyle f'(x)=\frac{1}{x^2+1}.$ If $g(x)=f(3x-1),$ what is $g'(x)?$ 
+Also, if $\displaystyle h(x)=f\left(\frac{1}{x}\right),$ what is $h'(x)?$
 ::: 
 
 ::: {.solution }
 By the chain rule  
-\[
+$$
 g'(x)=f'(3x-1)\frac{d}{dx}(3x-1)=3f'(3x-1)=\frac{3}{(3x-1)^2+1}.
-\] 
+$$ 
 Also, by the chain rule  
-\[
+$$
 h'(x)=f'\left(\frac{1}{x}\right)\frac{d}{dx}\left(\frac{1}{x}\right)=-f'\left(\frac{1}{x}\right)\left(\frac{1}{x^2}\right)=\frac{-1}{\left(\frac{1}{x}\right)^2+1}\left(\frac{1}{x^2}\right)=\frac{-1}{x^2+1}.
- \]
+$$
 ::: 
 
 
 ::: {#exm- }  
-Let $f$ be a function for which $f(2)=-3$ and $ \displaystyle f'(x)=\sqrt{x^2+5}.$ 
-If $ \displaystyle g(x)=x^2f\left(\frac{x}{x-1}\right),$ what is $g'(2)?$
+Let $f$ be a function for which $f(2)=-3$ and $\displaystyle f'(x)=\sqrt{x^2+5}.$ 
+If $\displaystyle g(x)=x^2f\left(\frac{x}{x-1}\right),$ what is $g'(2)?$
 ::: 
 
 ::: {.solution }
 Using the chain rule and the product rule we determine,  
-\[
-g'(x)=2x f\left(\frac{x}{x-1}\right)+x^2f'\left(\frac{x}{x-1}\right)\frac{d}{dx}\left(\frac{x}{x-1}\right)\]
-\[
+$$
+g'(x)=2x f\left(\frac{x}{x-1}\right)+x^2f'\left(\frac{x}{x-1}\right)\frac{d}{dx}\left(\frac{x}{x-1}\right)
+$$
+$$
 = 2x f\left(\frac{x}{x-1}\right)+x^2f'\left(\frac{x}{x-1}\right)\left(\frac{-1}{(x-1)^2}\right).
- \] 
+$$ 
 Therefore,  
-\[
+$$
 g'(2)=2(2) f\left(\frac{2}{2-1}\right)+2^2f'\left(\frac{2}{2-1}\right)\left(\frac{-1}{(2-1)^2}\right)=-24.
-\]
+$$
 ::: 
 
 ::: {#exm- }  
 Assuming that the following derivatives exists, find 
-\[
+$$
 \frac{d}{d x}f' [f(x)]
 \qquad \text{and}\qquad
 \frac{d}{d x}f [f'(x)].
-\]
+$$
 ::: 
 
 ::: {.solution }
 Using the chain rule,  
-\[
+$$
 \frac{d}{d x}f'[f(x)] =f'' [ f(x)] f'(x)
-\] 
+$$ 
 which is the second derivative evaluated at the function multiplied by the first derivative; while,  
-\[
+$$
 \frac{d}{d x}f [f'(x)]=f'[f'(x)]f''(x)
-\] 
+$$ 
 is the first derivative evaluated at the first derivative multiplied by the second derivative. When will these derivatives be the same? 
 ::: 
 
 ::: {#exm- }  
-Show that if a particle moves along a straight line with position $s(t)$ and velocity $v(t),$ then its acceleration satisfies $a(t)=v(t)\frac{dv}{ds}.$ Use this formula to find $\frac{dv}{d s} $ in the case where $s(t)=-2t^3+4t^2+t-3.$
+Show that if a particle moves along a straight line with position $s(t)$ and velocity $v(t),$ then its acceleration satisfies $a(t)=v(t)\frac{dv}{ds}.$ Use this formula to find $\frac{dv}{d s}$ in the case where $s(t)=-2t^3+4t^2+t-3.$
 ::: 
 
 ::: {.solution }
 By the chain rule,  
-\[
+$$
 a(t)=\frac{dv}{dt}=\frac{dv}{d s}\frac{ds}{dt}=v(t)\frac{dv}{ds}
-\] 
-In the case where $s(t)=-2t^3+4t^2+t-3; $ we determine, 
-\[
+$$ 
+In the case where $s(t)=-2t^3+4t^2+t-3;$ we determine, 
+$$
 \frac{ds}{dt}=v(t)=-6t^2+8t+1 \qquad \text{and } \qquad a(t)=-12t+8.
-\] 
+$$ 
 Thus, 
-\[
+$$
 \frac{dv}{d s}=\frac{-12t+8}{-6t^2+8t+1}.
-\]
+$$
 What does this rate of change represent? 
 ::: 
 
@@ -262,27 +257,27 @@ Find an equation of the tangent line to the graph of the function $f(x)=\left(9-
 
 ::: {.solution }
 By using the chain rule we determine,  
-\[
+$$
 f'(x)=\frac{2}{3}\left(9-x^2\right)^{-1/3}(-2x)=\frac{-4x}{3\sqrt[3]{9-x^2}}
-\] 
-and so $f'(1)=\frac{-4}{3\sqrt[3]{9-1^2}}=\frac{-2}{3}.$ Therefore, an equation of the tangent line is $y-4=\left(\frac{-2}{3}\right)(x-1)$ which simplifies to $y=\frac{-2}{3}x+\frac{14}{3}.$ See Figure \ref{fig:p6}.
+$$ 
+and so $f'(1)=\frac{-4}{3\sqrt[3]{9-1^2}}=\frac{-2}{3}.$ Therefore, an equation of the tangent line is $y-4=\left(\frac{-2}{3}\right)(x-1)$ which simplifies to $y=\frac{-2}{3}x+\frac{14}{3}.$ 
 ::: 
 
 
 ::: {#exm- } 
 Determine the point(s) at which the graph of 
-\[
+$$
 f(x)=\frac{x}{\sqrt{2x-1}}
-\] 
+$$ 
 has a horizontal tangent.
 ::: 
 
 ::: {.solution }
 By using the chain rule we determine,  
-\[
+$$
 f'(x)=\frac{\sqrt{2x-1}(1)-x\frac{d}{dx}\left(\sqrt{2x-1}\right)}{\left(\sqrt{2x-1}\right)^2}=\frac{\sqrt{2x-1}(1)-x \left(\frac{1}{\sqrt{-1+2 x}}\right)}{\left(\sqrt{2x-1}\right)^2}
-\]
-which simplifies to $ \displaystyle f'(x)=\frac{-1+x}{(-1+2 x)^{3/2}}.$ 
+$$
+which simplifies to $\displaystyle f'(x)=\frac{-1+x}{(-1+2 x)^{3/2}}.$ 
 Thus the only point where $f$ has a horizontal tangent line is $(1,1)$. See Figure \ref{fig:p7}.
 ::: 
 
@@ -296,57 +291,54 @@ Given $y=6u-9$ and find $\frac{dy}{dx}$ for (a) $u=(1/2)x^4$,  (b) $u=-x/3$, and
 ::: {#exr- } 
 For each of the following functions, write the function $y=f(x)$ in the form $y=f(u)$ and $u=g(x)$, then find $\frac{dy}{dx}$.
  
-\item $  y=\left(\frac{x^2}{8}+x-\frac{1}{x}\right)^4$
-\item $  y=\sec  (\tan  x)$
-\item $  y=5 \cos ^{-4}x$
-\item $  y=e^{5-7x}$ 
-\item $  y=\sqrt{2x-x^2}$
-\item $  y=e^x \sqrt{2x-x^2}$
- 
+- $y=\left(\frac{x^2}{8}+x-\frac{1}{x}\right)^4$
+- $y=\sec  (\tan  x)$
+- $y=5 \cos ^{-4}x$
+- $y=e^{5-7x}$ 
+- $y=\sqrt{2x-x^2}$
+- $y=e^x \sqrt{2x-x^2}$
 ::: 
 
 ::: {#exr- } 
 Find the derivative of the following functions.
  
-\item $ r=-(\sec  \theta +\tan  \theta )^{-1}$
-\item $  y=\frac{1}{x}\sin ^{-5}x-\frac{x}{3}\cos ^3x$
-\item $  y=(4x+3)^4(x+1)^{-3}$
-\item $  y=(1+2x)e^{-2x}$
-\item $  h(x)=x \tan  \left(2 \sqrt{x}\right)+7$
-\item $  g(t)=\left(\frac{1+\cos  t}{\sin  t}\right)^{-1}$
-\item $  q=\sin \left(\frac{t}{\sqrt{t+1}}\right)$
-\item $  y=\theta ^3e^{-2\theta }\cos  5\theta $
-\item $  y=(1+\cos  2t)^{-4}$
-\item $  y=\left(e^{\sin (t/2)}\right)^3$
-\item $  y=\left(1+\tan ^4\left(\frac{t}{12}\right)\right)^3$
-\item $  y=4 \sin \left(\sqrt{1+\sqrt{t}}\right)$
-\item $  y=\frac{1}{9}\cot (3x-1)$
-\item $  y=\sin  \left(x^2e^x\right)$
-\item $  y=e^x \sin  \left(x^2e^x\right)$
- 
+- $r=-(\sec  \theta +\tan  \theta )^{-1}$
+- $y=\frac{1}{x}\sin ^{-5}x-\frac{x}{3}\cos ^3x$
+- $y=(4x+3)^4(x+1)^{-3}$
+- $y=(1+2x)e^{-2x}$
+- $h(x)=x \tan  \left(2 \sqrt{x}\right)+7$
+- $g(t)=\left(\frac{1+\cos  t}{\sin  t}\right)^{-1}$
+- $q=\sin \left(\frac{t}{\sqrt{t+1}}\right)$
+- $y=\theta ^3e^{-2\theta }\cos  5\theta$
+- $y=(1+\cos  2t)^{-4}$
+- $y=\left(e^{\sin (t/2)}\right)^3$
+- $y=\left(1+\tan ^4\left(\frac{t}{12}\right)\right)^3$
+- $y=4 \sin \left(\sqrt{1+\sqrt{t}}\right)$
+- $y=\frac{1}{9}\cot (3x-1)$
+- $y=\sin  \left(x^2e^x\right)$
+- $y=e^x \sin  \left(x^2e^x\right)$
 ::: 
 
 ::: {#exr- } 
 Suppose that the functions $f$, $g$, and their derivatives with respect to $x$ have the following values at $x=0$ and $x=1.$
-\[
+$$
 \begin{array}{c|cccc}
  x & f(x) & g(x) & f'(x) & g'(x) \\ \hline
  0 & 1 & 1 & 5 & 1/3 \\
  1 & 3 & -4 & -1/3 & -8/3
 \end{array}
-\]
+$$
 Find the derivatives with respect to $x$ of the following combinations at a given value of $x,$ 
  
-\item $  5 f(x)-g(x), x=1$ 
-\item $  f(x)g^3(x), x=0$ 
-\item $  \frac{f(x)}{g(x)+1}, x=1$
-\item $  f(g(x)), x=0$ 
-\item $  g(f(x)), x=0$ 
-\item $  \left(x^{11}+f(x)\right)^{-2}, x=1$
-\item $  f(x+g(x)), x=0$
-\item $  f(x g(x)), x=0$
-\item $  f^3(x)g(x), x=0$ 
- 
+- $5 f(x)-g(x), x=1$ 
+- $f(x)g^3(x), x=0$ 
+- $\frac{f(x)}{g(x)+1}, x=1$
+- $f(g(x)), x=0$ 
+- $g(f(x)), x=0$ 
+- $\left(x^{11}+f(x)\right)^{-2}, x=1$
+- $f(x+g(x)), x=0$
+- $f(x g(x)), x=0$
+- $f^3(x)g(x), x=0$ 
 ::: 
 
 ::: {#exr- } 
@@ -365,10 +357,9 @@ if anything, can be said about the values of $g'(-5)$ and $f'(g(-5))?$
 ::: {#exr- } 
 Differentiate the functions given by the following equations 
  
-\item $y=\cos^2\left(\frac{1-\sqrt{x}}{1+\sqrt{x}}\right)$
-\item $y=\sqrt{1+\tan \left(x+\frac{1}{x}\right)} $
-\item $n=\left(y+\sqrt[3]{y+\sqrt{2y-9}}\right)^8$
- 
+- $y=\cos^2\left(\frac{1-\sqrt{x}}{1+\sqrt{x}}\right)$
+- $y=\sqrt{1+\tan \left(x+\frac{1}{x}\right)}$
+- $n=\left(y+\sqrt[3]{y+\sqrt{2y-9}}\right)^8$
 ::: 
 
 ::: {#exr- } 
@@ -381,11 +372,11 @@ and $G'(x).$
 ::: 
 
 ::: {#exr- } 
-Determine if the following statement is true or false. Then justify your claim.  If $y$ is a differentiable function of $u,$ $u$ is a differentiable function of $v,$ and $v$ is a differentiable function of $x,$ then $  \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dv}\frac{dv}{dx}.$
+Determine if the following statement is true or false. Then justify your claim. If $y$ is a differentiable function of $u,$ $u$ is a differentiable function of $v,$ and $v$ is a differentiable function of $x,$ then $\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dv}\frac{dv}{dx}.$
 ::: 
 
 ::: {#exr- } 
-Let $u$ be a differentiable function of $x.$ Use $|u|=\sqrt{u^2}$ to prove that  $  \frac{d}{dx}(|u| )=\frac{u' u}{|u|}$  when $u\neq 0.$ Use the formula to find $h'$ given $h(x)=x|2x-1|.$
+Let $u$ be a differentiable function of $x.$ Use $|u|=\sqrt{u^2}$ to prove that $\frac{d}{dx}(|u| )=\frac{u' u}{|u|}$  when $u\neq 0.$ Use the formula to find $h'$ given $h(x)=x|2x-1|.$
 ::: 
 
 ::: {#exr- } 

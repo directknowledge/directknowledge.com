@@ -1,7 +1,7 @@
 ---
 pagetitle: "Monotonic Functions - Exploring Calculus"
 ---
-# "Monotonic Functions"
+# Monotonic Functions
 
 
 ## Increasing and Decreasing Functions
@@ -27,7 +27,6 @@ Suppose $f$ is continuous on $[a,b]$ and differentiable on $(a,b).$
  
 - If $f'(x)>0$ for all $x$ in $(a,b),$ then $f$ is increasing on $(a,b).$
 - If $f'(x)<0$ for all $x$ in $(a,b),$ then $f$ is decreasing on $(a,b).$ 
- 
 ::: 
 
 
@@ -38,12 +37,12 @@ Find where the function $f(x)=3x^4-4x^3-12x^2+5$ is increasing and decreasing; t
 
 ::: {.solution } 
 The derivative of $f$ is 
-\[
+$$
 f'(x)=12x^3-12x^2-24x=12x(x-2)(x+1).
-\] 
+$$ 
 Since $f$ is continuous and differentiable, to test where the function is monotonic we divide the $x$-axis according to the sign of $f'(x)$ which depending on the signs of $12x,$ $x-2,$ and $x+1.$ 
 We put our results into the following table: 
-\[
+$$
 \begin{array}{c|c|c|c|c|l}
   \text{Interval}  &  12x  &  x-2  &  x+1  &  f'(x)\text{
    } & f \\ \hline
@@ -52,7 +51,7 @@ We put our results into the following table:
  0<x<2 & + & - & + & - & \text{decreasing on } (0,2) \\
  x>2 & + & + & + & + & \text{increasing on } (2,\infty )
 \end{array}
-\]
+$$
 (see Figure ~\ref{fig:graph9}). 
  ::: 
 
@@ -63,10 +62,9 @@ We put our results into the following table:
 Suppose that $c$ is a critical number of a function that is continuous on $[a,b].$ 
 Then the following statements hold: 
  
-\item If $f'(x)>0$ for $a<x<c$ and $f'(x)<0$ for $c<x<b,$ then $f$ has a relative (local) minimum at $c.$ 
-\item If $f'(x)<0$ for $a<x<c$ and $f'(x)>0$ for $c<x<b,$ then $f$ has a relative (local) maximum at $c.$ 
-\item If neither hold then $f$ has no relative (local) extremum at $c.$ 
- 
+-   If $f'(x)>0$ for $a<x<c$ and $f'(x)<0$ for $c<x<b,$ then $f$ has a relative (local) minimum at $c.$ 
+-   If $f'(x)<0$ for $a<x<c$ and $f'(x)>0$ for $c<x<b,$ then $f$ has a relative (local) maximum at $c.$ 
+-   If neither hold then $f$ has no relative (local) extremum at $c.$ 
 ::: 
 
 
@@ -79,20 +77,20 @@ Apply the First Derivative Test to find the local extrema of the function $f(x)=
 First we find the critical numbers of $f$ by solving $f'(x)=0$ and determining where $f'(x)$ is undefined but
 $f(x)$ is defined. 
 The derivative of $f$ is 
-\[
+$$
 f'(x)=(1-x)^{2/5}+\frac{2x}{5}(1-x)^{-3/5}(-1)=\frac{5(1-x)-2x}{5(1-x)^{3/5}}=\frac{5-7x}{5(1-x)^{3/5}}.
-\] 
+$$ 
 Solving $f'(x)=0$ we find $x=5/7.$ 
 Also $f'(1)$ does not exist but $f(1)=0;$ and therefore the only critical numbers of $f$ are $x=5/7$ and $x=0.$ 
 We determine the local extrema using the following table 
-\[
+$$
 \begin{array}{c|c|c|c|l}
   \text{Interval}  &  5-7x  &  (1-x)^{3/5}  &  f'(x)  & f(x) \\ \hline
  x<\frac{5}{7} & + & + & + & \text{ increasing on} \left(-\infty ,\frac{5}{7}\right) \\
  \frac{5}{7}<x<1 & - & + & - & \text{ decreasing on} \left(\frac{5}{7},1\right) \\
  x>1 & - & - & + & \text{ increasing on }(1,+\infty )
 \end{array}
-\] \\
+$$ \\
 Therefore, $\left(\frac{5}{7},f\left(\frac{5}{7}\right)\right)$ is a local maximum and $(1,f(1))$ is a local minimum. 
 Here is the graph of the function $f(x)=x(1-x)^{2/5}.$ 
 Notice there is a corner at $(1,f(1))$ because $f$ is defined there but $f'$ is not (see Figure ~\ref{fig:graph10}). 
@@ -108,12 +106,12 @@ Sketch the graph.
 First we notice that $f$ is a polynomial and so is continuous and differentiable for all real numbers. 
 Next we find the critical numbers of $f$ by solving $f'(x)=0$ and determining where $f'(x)$ is undefined, but $f(x)$ is defined. 
 The derivative of $f$ is 
-\[
+$$
 f'(x)=3x^2(x-2)^2+2x^3(x-2)=x^2(x-2)(5x-6).
-\] 
+$$ 
 To find the critical numbers we set $f'(x)=0$ and obtain $x=0,2,6/5.$ 
 We determine the local extrema and absolute extrema using the following table:
-\[
+$$
 \begin{array}{c|c|c|c|c|l}
   \text{Interval}  &  x^2  &  x-2  &  5x-6  &  f'(x)\text{ } & f \\ \hline
  -1<x<0 & + & - & - & + & \text{ increasing on} (-1,0) \\
@@ -121,7 +119,7 @@ We determine the local extrema and absolute extrema using the following table:
  \frac{6}{5}<x<2 & + & - & + & - & \text{ decreasing on }\left(\frac{6}{5},2\right) \\
  2<x<3 & + & + & + & + & \text{ increasing on } (2,3)
 \end{array}
-\] \\
+$$ \\
 The function $f$ does not have a local extrema at $x=0.$ 
 The local maximum is 
 $$
@@ -153,38 +151,34 @@ For each of the following functions determine the critical points and apply the 
 - $f(x)=(x+1)^2$
 - $f(x)=-x^2-6x-9$ 
 - $k(x)=x^3+3x^2+3x+1$ 
- 
 ::: 
 
 ::: {#exr- } 
 Sketch the graph of a differentiable function $y=f(x)$ through the point $(1,1)$ such that 
  
-\item $f'(1)=0$
-\item $f'(x)>0$ for $x<1$ 
-\item $f'(x)<0$ for $x>1$
-\item $f'(x)>0$ for $x\neq 1$ 
-\item $f'(x)<0$ for $x\neq 1$ 
- 
+-   $f'(1)=0$
+-   $f'(x)>0$ for $x<1$ 
+-   $f'(x)<0$ for $x>1$
+-   $f'(x)>0$ for $x\neq 1$ 
+-   $f'(x)<0$ for $x\neq 1$ 
 ::: 
 
 ::: {#exr- } 
 Sketch the graph of a differentiable function $y=f(x)$ that satisfies all of the following conditions.
  
-\item a local minimum at $(1,1)$
-\item a local maximum at $(3,3)$
-\item local maximum at $(1,1)$
-\item a local minimum at $(3,3)$ 
- 
+-   a local minimum at $(1,1)$
+-   a local maximum at $(3,3)$
+-   local maximum at $(1,1)$
+-   a local minimum at $(3,3)$ 
 ::: 
 
 ::: {#exr- } 
 Sketch the graph of a differentiable function $y=h(x)$ that satisfies all of the following conditions.
  
-\item $h(0)=0$ 
-\item  for all $x$, $-2\leq h(x)\leq 2$ 
-\item $h'(x)\to +\infty $ as $x\to 0^-$
-\item $h'(x)\to +\infty $ as $x\to 0^+$ 
- 
+-   $h(0)=0$ 
+-    for all $x$, $-2\leq h(x)\leq 2$ 
+-   $h'(x)\to +\infty $ as $x\to 0^-$
+-   $h'(x)\to +\infty $ as $x\to 0^+$ 
 ::: 
 
 

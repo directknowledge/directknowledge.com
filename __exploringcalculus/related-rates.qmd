@@ -22,14 +22,13 @@ Find $\frac{d y}{d t}$ when $x=7$ given $y=5\sqrt{x+9}$ and $\frac{d x}{d t}=2.$
 
 ::: {.solution } 
 Differentiating with respect to $t$ and using the chain rule, 
-\[
+$$
 \frac{d y}{d t}=\frac{5}{2\sqrt{x+9}}\frac{d x}{d t}
-\] 
+$$ 
 and so when $x=7,$ 
-\[
+$$
 \left. \frac{d y}{d t} \right|_{x=7} =\frac{5}{2\sqrt{7+9}}(2) =\frac{5}{4}.
-\square
-\]
+$$
 ::: 
 
 
@@ -39,19 +38,20 @@ Find $\frac{d y}{d t}$ when $x=1$ given $5 x y=10$ and $\frac{d x}{d t}=-2.$
 
 ::: {.solution } 
 Differentiating with respect to $t$ and using the chain rule, 
-\[
+$$
 x \frac{d y}{d t}+y \frac{d x}{d t}=0
-\] 
+$$ 
 and so when $x=1,$ then $y=2$ and 
-$
+$$
 (1)\frac{d y}{d t}+(2)(-2) =0.
-$
+$$
 Therefore, 
-\[
+$$
 \left.\frac{d y}{d t}\right|_{x=1}=4.
-\square
-\]
+$$
 ::: 
+
+
 
 ## General vs Specific Situation
 
@@ -61,7 +61,7 @@ Distinguishing between these two situations is often the key to successfully sol
 Here are a few guidelines for solving related rate problems: 
  
 - Read the problem carefully and identify all given quantities and unknown quantities to be determined. 
-Introduce notation, make a sketch, and label the quantities.  
+- Introduce notation, make a sketch, and label the quantities.  
 - Write equations involving the variables whose rates of change either are given or are to be determined.  
 - Use implicit differentiation, by differentiating both sides with respect to he appropriate variable.  
 - Substitute known variables and known rates of change into the resulting equation to determine the missing rate of change.
@@ -79,22 +79,20 @@ Let $x$ be the radius of the top circle of the body of water and $y$ its height.
 The radius of the top circle is 20, the height of the cone is 40 ft. 
 By similar triangles, $20/40=x/y$ and so $x=\frac{1}{2}y.$ 
 The volume of the body of water is 
-\[
+$$
 V=\frac{1}{3}\pi  x^2y =\frac{1}{12}\pi  y^3.
-\] 
+$$ 
 Then 
-\[
+$$
 \frac{d V}{d t}=\frac{1}{4}\pi  y^2 \frac{d y}{d t}.
-\] 
-When $y=12,$ $x=6,$ and $\frac{d V}{d t}=80,$ we have \[80=\frac{1}{4}\pi (12)^2 \frac{d y}{d t}\] and thus 
-\[
+$$ 
+When $y=12,$ $x=6,$ and $\frac{d V}{d t}=80,$ we have $$80=\frac{1}{4}\pi (12)^2 \frac{d y}{d t}$$ and thus 
+$$
 \frac{d y}{d t}=\frac{80(4)}{\pi (144)} \text{ft.}/\min = \frac{20}{9 \pi } \text{ft.}/\min  \approx 0.71 \text{ft.}/\min .
-\square
-\]
+$$
 ::: 
 
 ::: {#exm- } 
-
 Air is being pumped into a spherical balloon at a rate of 4.5 cubic feet per minute. 
 Find the rate of change of the radius when the radius is 2 feet.
 ::: 
@@ -104,17 +102,17 @@ Let $V$ be the volume of the balloon and let $r$ be the radius.
 Because the volume is increasing at a rate of 4.5 cubic feet per minute, we know that at time $t$ the rate of change of the volume is $\frac{d V}{d t}=\frac{9}{2}.$ 
 The equation that relates the radius $r$ to the volume $V$ is $V=\frac{4}{3}\pi  r^3.$ 
 So we have 
-$
+$$
 \frac{d V}{d t}=4\pi  r^2\frac{d r}{d t}
-$ 
+$$ 
 and by solving for $\frac{d r}{dt}$ we have 
-\[
+$$
 \frac{d r}{d t}=\frac{1}{4\pi  r^2}\left(\frac{d V}{d t}\right).
-\] 
+$$ 
 Finally, when $r=2,$ the rate of change of the radius is 
-\[
+$$
 \frac{d r}{d t}=\frac{1}{16 \pi }\left(\frac{9}{2}\right) \approx 0.09
-\] 
+$$ 
 foot per minute.
 ::: 
 
@@ -127,13 +125,14 @@ When the radius is 4 feet, at what rate is the total area $A$ of the disturbed w
 
 ::: {.solution }
 For the area of a circle we use $A=\pi  r^2$ and we differentiate implicitly with respect to time $t$ leading to 
-\[\frac{d A}{d t}=2\pi  r \frac{d r}{d t}\] 
+$$
+\frac{d A}{d t}=2\pi  r \frac{d r}{d t}
+$$ 
 by using the chain rule. 
 Since $\frac{d r}{d t}=1$ and when $r=4$ we have 
-\[
+$$
 \frac{d A}{d t}=2\pi (4)(1) =8 \pi.
-\square
-\]
+$$
 ::: 
 
 
@@ -147,19 +146,20 @@ Let $x$ meters be the distance from the bottom of the ladder to the wall and $y$
 Since $x$ and $y$ are functions of time and $\frac{d x}{d t}$= 1 ft/s we are asked to find $\frac{d y}{d t}$ when $x=6$ ft. 
 The relationship between $x$ and $y$ is the Pythagorean Theorem, namely $x^2+y^2=100.$ 
 Using implicit differentiation and the chain rule we have 
-\[
+$$
 2 x \frac{d x}{d t}+2 y \frac{d y}{d t}=0.
-\] 
+$$ 
 By solving for $\frac{d y}{d t}$ we have 
-\[
+$$
 \frac{d y}{d t}=-\frac{x}{y}\frac{d x}{d t}.
-\] 
+$$ 
 When $x=6$ then $y=8 $,
-\[
+$$
 \frac{d y}{ d t}=\frac{-6}{8}(1) =\frac{-3}{4} \text{ ft/s.}
-\square
-\]
+$$
 ::: 
+
+
 
 ::: {#exm- } 
 Car A is going west at 50 mi/h and car B is going north at 60 mi/h. 
@@ -169,24 +169,24 @@ At what rate are the cars approaching each other when car A is $0.3$ mi and car 
 
 ::: {.solution }
 At a given time $t,$ let $x$ be the distance from car $A$ to the point of intersection $P$ and let $y$ be the distance from car B to $P$ and let $z$ be the distance between the cars, where $x,$ $y,$ and $z$ are measured in miles. Since $x$ and $y$ are decreasing we take the derivatives to be negative and so we are given 
-\[
+$$
 \frac{d x}{d t}=-50 \text{ mi/h} 
 \qquad \text{and} \qquad 
 \frac{d y}{d t}=-60 \text{ mi/h}.
-\] 
+$$ 
 To find $\frac{d z}{d t}$ we use the Pythagorean Theorem, namely $x^2+y^2=z^2$ and differentiate with respect to time $t$. 
 We have 
-\[
+$$
 2 z \frac{d z}{d t}=2 x\frac{d x}{d t}+2 y\frac{d y}{d t}
-\]
+$$
 and by solving for $\frac{d z}{d t}$ we have 
-\[
+$$
 \frac{d z}{d t}=\frac{1}{z}\left(x\frac{d x}{d t}+ y\frac{d y}{d t}\right).
-\] 
+$$ 
 Now when $x=0.3$ mi and $y=0.4$ mi we have $z=0.5$ mi and so  
-\[
+$$
 \frac{d z}{d t}=\frac{1}{0.5}[0.3(-50)+0.4(-60)]=-78 \text{ mi/h}.
-\] 
+$$ 
 Therefore, the cars are approaching each other at a rate of 78 mi/h.
 ::: 
 
@@ -210,26 +210,28 @@ How fast is the distance between the ships increasing at 5 P.M.?
 ::: 
 
 ::: {.solution }
-Let $A$ be the distance travelled by the first ship, and $B$ for the distance travelled by the second ship, $D$ for the distance between them, and $\theta $ the constant angle of $60{}^{\circ}.$ 
+Let $A$ be the distance travelled by the first ship, and $B$ for the distance travelled by the second ship, $D$ for the distance between them, and $\theta$ the constant angle of $60{}^{\circ}.$ 
 We need to find $\frac{d D}{d t}$ at $t=5.$ 
 The equation that relates all the variables is the law of cosines and is  $D^2=A^2+B^2-2 A B \cos \text{  }60{}^{\circ}.$  
 Using the chain rule and implicit differentiation we have  
-\[
+$$
 2 D \frac{d D}{d t}=2 A \frac{d A}{d t}+ 2B \frac{d B}{d t}-2\left(A \frac{d B}{d t}+B \frac{d A}{d t}\right) \left(\frac{1}{2}\right)
-\] 
+$$ 
 since $\cos  60{}^{\circ}=\frac{1}{2}$.
 Then at $t=5,$ $A=5(8)$ $=\text{40,}$ $B=12(4)$ $=\text{48,}$ $\frac{d A}{d t}=8,$ $\frac{d B}{ d t}=12,$ and 
-\[
+$$
 D=\sqrt{40^2+48^2-2(40)(48)\left(\frac{1}{2}\right)}=\sqrt{1984}.
-\]
+$$
 So we have,  
 \begin{align*}
 \frac{d D}{d t}
-& =\frac{2 (40) (8)+ 2(48) (12)-(40) (12)-(48)(8)}{2 \sqrt{1984}}
-\\[10pt]
+& =\frac{2 (40) (8)+ 2(48) (12)-(40) (12)-(48)(8)}{2 \sqrt{1984}} \\ 
 & =\frac{58}{\sqrt{31}}  \text{ knots} \approx 10.4171 \text{ knots}.
 \end{align*}
 ::: 
+
+
+
 
 ## Exercises
 
@@ -243,7 +245,7 @@ If $x$, $y,$ and $z$ are lengths of the edges of a rectangular box, the common l
 ::: 
 
 ::: {#exr- } 
-The length $l$ of a rectangle is decreasing at the rate of $\text{cm}/\sec $ while the width $w$ is increasing at the rate of $2 \text{cm}/\sec .$ When $l=12 \text{cm}$ and $w=5 \text{cm},$ find the rates of change of (a) the area, (b) the perimeter, (c) the lengths of the diagonals of the rectangle. Which of these quantities are decreasing and which are increasing?
+The length $l$ of a rectangle is decreasing at the rate of $\text{cm}/\sec$ while the width $w$ is increasing at the rate of $2 \text{cm}/\sec .$ When $l=12 \text{cm}$ and $w=5 \text{cm},$ find the rates of change of (a) the area, (b) the perimeter, (c) the lengths of the diagonals of the rectangle. Which of these quantities are decreasing and which are increasing?
 ::: 
 
 ::: {#exr- } 
@@ -251,11 +253,11 @@ The coordinates of a particle in the metric $x y$-plane are differentiable funct
 ::: 
 
 ::: {#exr- } 
-A 13-ft ladder is leaning against a house when its base starts to slide away. By the time the base is 12 ft from the house, the base is moving at the rate of $5 \text{ft}/\sec .$ (a) How fast is the top of the ladder sliding down the wall then? (b) At what rate is the area of the triangle formed by the ladder, wall, and ground changing then? (c) At what rate is the angle $\theta $ between the ladder and the ground changing then?
+A 13-ft ladder is leaning against a house when its base starts to slide away. By the time the base is 12 ft from the house, the base is moving at the rate of $5 \text{ft}/\sec .$ (a) How fast is the top of the ladder sliding down the wall then? (b) At what rate is the area of the triangle formed by the ladder, wall, and ground changing then? (c) At what rate is the angle $\theta$ between the ladder and the ground changing then?
 ::: 
 
 ::: {#exr- } 
-Sand falls from a conveyor belt at the rate of $10 \left.m^3\right/\min $ onto the top of a conical pile. The height of the pile is always three-eights of the base diameter. How fast are the (a) height and (b) radius changing when the pile is $4 m$ high?
+Sand falls from a conveyor belt at the rate of $10 \left.m^3\right/\min$ onto the top of a conical pile. The height of the pile is always three-eights of the base diameter. How fast are the (a) height and (b) radius changing when the pile is $4 m$ high?
 ::: 
 
 ::: {#exr- } 
@@ -263,11 +265,11 @@ Suppose that a drop of mist is a perfect sphere and that, through condensation, 
 ::: 
 
 ::: {#exr- } 
-A balloon is rising vertically above a level straight road at a constant rate of $1 \text{ft}/\sec .$ Just when the balloon is $65 \text{ft}$ above the ground, a bicycle moving at a constant rate of $17 \text{ft}/\sec $ passes under it. How fast is the distance $s(t)$ between the bicycle and balloon increasing 3 sec later?
+A balloon is rising vertically above a level straight road at a constant rate of $1 \text{ft}/\sec .$ Just when the balloon is $65 \text{ft}$ above the ground, a bicycle moving at a constant rate of $17 \text{ft}/\sec$ passes under it. How fast is the distance $s(t)$ between the bicycle and balloon increasing 3 sec later?
 ::: 
 
 ::: {#exr- } 
-A man 6 ft all walks at a rate of $5 \text{ft}/\sec $ toward a streetlight that is 16 ft above the ground. At what rates the tip of his shadow moving? At what rate is the length of his shadow changing when he is 10 ft from the base of the light?
+A man 6 ft all walks at a rate of $5 \text{ft}/\sec$ toward a streetlight that is 16 ft above the ground. At what rates the tip of his shadow moving? At what rate is the length of his shadow changing when he is 10 ft from the base of the light?
 ::: 
 
 ::: {#exr- } 

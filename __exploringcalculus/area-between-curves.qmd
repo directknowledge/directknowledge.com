@@ -1,7 +1,7 @@
 ---
 pagetitle: "Area Between Curves - Exploring Calculus"
 ---
-# "Area Between Curves"
+# Area Between Curves
 
 We explain, through several examples, how to find the area between curves (as a bounded region) using integration. We demonstrate both vertical and horizontal strips and provide several exercises.
 
@@ -170,7 +170,6 @@ Find the areas of the regions enclosed by the lines and curves.
 - $y=\sin x,$ $y=x,$ $x=\pi/2,$ $x=\pi$
 - $y=\cos x,$ $y=2-\cos x,$ $0\leq x \leq 2\pi$
 - $x=1-y^2,$ $x=y^2-1$
- 
 ::: 
 
 ::: {#exr- } 

@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="exploring-calculus">
+<title>Tangent Lines and Rates of Change - Exploring Calculus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./differentiation.html" rel="next">
+<link href="./continuous-functions.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+.book-title, #quarto-search svg {
+    color: #008000!important;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
+    font-weight: 500!important;
+    color:#008000;
+ }
+ #quarto-sidebar .text-start {
+    font-variant: small-caps;
+    font-size: 120%;
+ }
+ #quarto-sidebar .active, .active .chapter-number {
+    color:#000000!important;
+    font-weight: 700!important;
+ }
+</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+</style>
+  
+<meta property="og:title" content="Tangent Lines and Rates of Change - Exploring Calculus">
+<meta property="og:description" content="exploring-calculus">
+<meta property="og:site-name" content="Exploring Calculus">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Exploring Calculus" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
+</i> 
+ <span class="dropdown-text">Exploring Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tangent Lines and Rates of Change</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/exploring-calculus/">Exploring Calculus</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limits-and-continuity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intuitive-introduction-to-limits.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An Intuitive Introduction to Limits</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./techniques-for-finding-limits.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Techniques for Finding Limits</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./continuous-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Continuous Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tangent-lines-and-rates-of-change.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tangent Lines and Rates of Change</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Differentiation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivative-as-a-function.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Derivative as a Function</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./basic-rules-of-differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Basic Rules of Differentiation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./product-and-quotient-rules.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Product and Quotient Rules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./role-of-the-derivative.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Role of the Derivative</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivatives-of-trigonometric-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Derivatives of Trigonometric Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chain-rule.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chain Rule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./implicit-differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Implicit Differentiation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./derivatives-of-inverse-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Derivatives of Inverse Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./related-rates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Related Rates</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linearization-and-differentials.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linearization and Differentials</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./parametric-curves.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Parametric Curves</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Applications Of Derivatives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extreme-values.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Extreme Values</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mean-value-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Mean Value Theorem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monotonic-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Monotonic Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concavity-and-inflection-points.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Concavity and Inflection Points</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limits-involving-infinity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Limits Involving Infinity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./curve-sketching.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Curve Sketching</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applied-optimization-problems.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Applied Optimization Problems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./parametric-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Parametric Equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indeterminate-forms.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Indeterminate Forms</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indefinite-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Indefinite Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration-by-substitution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Integration by Substitution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./area.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Area</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./definite-integral.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Definite Integral</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamental-theorem-of-calculus.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Fundamental Theorem of Calculus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./numerical-integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Numerical Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Applications of Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./area-between-curves.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Area Between Curves</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./volumes-of-solids-of-revolution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Volumes of Solids of Revolution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./arc-length-and-surfaces-of-revolution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Arc Length and Surfaces of Revolution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./techniques-of-integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Techniques of Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration-by-parts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Integration By Parts</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trigonometric-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Trigonometric Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trigonometric-substitution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Trigonometric Substitution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./partial-fractions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Partial Fractions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./improper-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Improper Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./infinite-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Infinite Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sequences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Sequences</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./infinite-series-and-convergence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Infinite Series and Convergence</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integral-test-and-p-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Integral Test and P-Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./comparisons-of-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Comparisons of Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./alternating-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Alternating Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ratio-and-root-tests.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Ratio and Root Tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./taylor-polynomials-and-approximations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Taylor Polynomials and Approximations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./power-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Power Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./taylor-and-maclaurin-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Taylor and Maclaurin Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/exploring-calculus/"><picture><source type="image/webp" srcset="../../assets/exploring-calculus-cover.webp"><source type="image/webp" srcset="../../assets/exploring-calculus-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/exploring-calculus-cover.png" alt="Exploring Calculus Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#average-rate-of-change" id="toc-average-rate-of-change" class="nav-link active" data-scroll-target="#average-rate-of-change"><span class="toc-section-number">5.1</span>  Average Rate of Change</a></li>
+  <li><a href="#instantaneous-rate-of-change" id="toc-instantaneous-rate-of-change" class="nav-link" data-scroll-target="#instantaneous-rate-of-change"><span class="toc-section-number">5.2</span>  Instantaneous Rate of Change</a></li>
+  <li><a href="#what-is-a-tangent-line" id="toc-what-is-a-tangent-line" class="nav-link" data-scroll-target="#what-is-a-tangent-line"><span class="toc-section-number">5.3</span>  What is a Tangent Line?</a></li>
+  <li><a href="#equation-of-tangent-line" id="toc-equation-of-tangent-line" class="nav-link" data-scroll-target="#equation-of-tangent-line"><span class="toc-section-number">5.4</span>  Equation of Tangent Line</a></li>
+  <li><a href="#horizontal-tangent-lines" id="toc-horizontal-tangent-lines" class="nav-link" data-scroll-target="#horizontal-tangent-lines"><span class="toc-section-number">5.5</span>  Horizontal Tangent Lines</a></li>
+  <li><a href="#relative-rate-of-change" id="toc-relative-rate-of-change" class="nav-link" data-scroll-target="#relative-rate-of-change"><span class="toc-section-number">5.6</span>  Relative Rate of Change</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">5.7</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<div style="display:none;">
+\(
+\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}
+\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}
+\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
+\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}
+\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}
+\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}
+\newcommand{\norm}[1]{\left|\left |#1\right|\right |}
+\newcommand{\ip}[1]{\left \langle #1\right \rangle}
+\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}
+\)
+</div>
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tangent Lines and Rates of Change</span></h1>
+</header>
+<section id="average-rate-of-change" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="average-rate-of-change"><span class="header-section-number">5.1</span> Average Rate of Change</h2>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5.1 </strong></span>Suppose <span class="math inline">\(y\)</span> is a function of <span class="math inline">\(x,\)</span> say <span class="math inline">\(y=f(x).\)</span><br>
+When a change in the variable is made from <span class="math inline">\(x\)</span> to <span class="math inline">\(x+\Delta x,\)</span> there is a corresponding change to the <span class="math inline">\(y,\)</span> namely <span class="math inline">\(\Delta y=f(x+\Delta x)-f(x)\)</span>. The <strong>average rate of change</strong> of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> is <span class="math display">\[
+\frac{\Delta  y}{\Delta  x}=\frac{f(x+\Delta x)-f(x)}{\Delta  x}
+\]</span> and is also known as the <strong>difference quotient</strong> .</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.1 </strong></span>Let <span class="math inline">\(f(x)=\sqrt{x^2-9}.\)</span> Find the average rate of change from <span class="math inline">\(x=3\)</span> to <span class="math inline">\(x=6.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The average rate of change of <span class="math inline">\(f\)</span> from <span class="math inline">\(x=3\)</span> to <span class="math inline">\(x=6\)</span> is given by, <span class="math display">\[
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}=\frac{f(6)-f(3)}{6-3}=\frac{\sqrt{6^2-9}-\sqrt{3^2-9}}{3}= \sqrt{3}
+\]</span> which is also the slope of the secant line through <span class="math inline">\((3,0)\)</span> and <span class="math inline">\(\left(6,3 \sqrt{3}\right).\)</span></p>
+</div>
+<p>In general, suppose an object moves along a straight line according to an equation of motion <span class="math inline">\(s=f(t),\)</span> where <span class="math inline">\(s\)</span> is the ( <strong>displacement} (\index{directed distance</strong> ) of the object from the origin at time <span class="math inline">\(t.\)</span><br>
+The function <span class="math inline">\(f\)</span> that describes the motion is called the <strong>position function</strong> of the object. In the time interval from <span class="math inline">\(t=a\)</span> to <span class="math inline">\(t=a+h\)</span> the change in position is <span class="math inline">\(f(a+h)-f(a)\)</span> and the <strong>average velocity</strong> over this time interval is <span class="math display">\[
+\frac{f(a+h)-f(a)}{h}
+\]</span> which is the same as the slope of the secant line through these two points.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.2 </strong></span>If a billiard is dropped from a height of 500 feet, its height <span class="math inline">\(s\)</span> at time <span class="math inline">\(t\)</span> is given by the position function <span class="math inline">\(s=-16t^2+500\)</span> where <span class="math inline">\(s\)</span> is measured in feet and <span class="math inline">\(t\)</span> is measured in seconds. Find the average velocity over the intervals <span class="math inline">\([2,2.5]\)</span> and <span class="math inline">\([2,2.6]\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For the interval <span class="math inline">\([2,2.5],\)</span> the object falls from a height of <span class="math inline">\(s(2)=-16(2)^2+500=436\)</span> feet to a height of <span class="math inline">\(s(2.5)=-16(2.5)^2+500=400.\)</span><br>
+The average velocity is <span class="math display">\[
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.5)-s(2)}{2.5-2}=\frac{400-436}{2.5-2}=-72.
+\]</span> For the interval <span class="math inline">\([2,2.6],\)</span> the object falls from a height of <span class="math inline">\(s(2)=436\)</span> feet to a height of <span class="math inline">\(s(2.6)=391.84.\)</span><br>
+The average velocity is <span class="math display">\[
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.6)-s(2)}{2.6-2}=\frac{391.84-436}{2.6-2}=-73.6.
+\]</span> Note that the average velocities are negative indicating that the object is moving downward.</p>
+</div>
+</section>
+<section id="instantaneous-rate-of-change" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="instantaneous-rate-of-change"><span class="header-section-number">5.2</span> Instantaneous Rate of Change</h2>
+<p>The difference quotient <span class="math display">\[
+\frac{\Delta  y}{\Delta  x}=\frac{f\left(x_2\right)-f\left(x_1\right)}{x_2-x_1}
+\]</span> is the average rate of change of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> over the interval <span class="math inline">\(\left[x_1,x_2\right]\)</span> and can be interpreted as the slope of the secant line. Its limit as <span class="math inline">\(\Delta x\to 0\)</span> is the derivative at <span class="math inline">\(x=x_1\)</span> and is denoted by <span class="math inline">\(f'\left(x_1\right).\)</span><br>
+We interpret the limit of the average rate of change as the interval becomes smaller and smaller to be the instantaneous rate of change. Often, different branches of science have specific interpretations of the derivative.</p>
+<p>As <span class="math inline">\(\Delta x\to 0\)</span> the average rate of change approaches the <strong>instantaneous rate for change</strong> ; that is, <span class="math display">\[
+\lim _{\Delta  x\to 0} \frac{\Delta  y}{\Delta  x} = f'(x)
+\]</span> and is also known as the <strong>derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(x.\)</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.3 </strong></span>Let <span class="math inline">\(\displaystyle f(x)=\frac{x^2-x+5}{3-x}.\)</span><br>
+Find the instantaneous rate of change at <span class="math inline">\(x=2.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math display">\[
+\displaystyle f'(x)=\frac{-x^2+6 x+2}{(x-3)^2},
+\]</span> the instantaneous rate for change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=2\)</span> is given by, <span class="math display">\[
+f'(2)=\frac{-2^2+6 (2)+2}{(2-3)^2}=10.
+\]</span></p>
+</div>
+</section>
+<section id="what-is-a-tangent-line" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="what-is-a-tangent-line"><span class="header-section-number">5.3</span> What is a Tangent Line?</h2>
+<p>The tangent line problem is widely considered to be the instigating idea behind the derivative. Computing the slope of a tangent line was a problem that the French mathematician <strong>Pierre de Fermat</strong> developed. Picking up on these ideas were <strong>Isaac Newton</strong> and <strong>Gottfried Liebniz</strong> , who then developed differential calculus.</p>
+<p>For a general curve it is not easy to define what is meant by a tangent line; for example a tangent line might mean a line touches the curve only once, but this does not work in all cases. Figure <span class="math inline">\(\ref{fig:tangentlines}\)</span> shows examples of tangent lines.</p>
+<p>The important idea to remember is that a tangent line is a local concept, we say the <strong>tangent line</strong> at a point.</p>
+<p>In our first example we will calculate a series of functions whose graphs are <strong>secant lines</strong> to the graph of a given function <span class="math inline">\(f\)</span> and use them to infer an equation of the tangent line at a point.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.4 </strong></span>Let <span class="math inline">\(f(x)=2x^3-2x+2\)</span>. Find an equation of the line that passes through the points <span class="math inline">\((1/2,5/4)\)</span> and <span class="math inline">\((1,2)\)</span> and sketch the graph of both <span class="math inline">\(f\)</span> and the secant line. The equation of the secant line is <span class="math inline">\(y= \frac{3}{2} x+\frac{1}{2}\)</span>.</p>
+<p>Do the same for the points <span class="math inline">\((1/2,5/4)\)</span> and <span class="math inline">\((3/4,43/32)\)</span>. We find an equation of the secant line is <span class="math inline">\(y=\frac{3}{8}x+\frac{17}{16}\)</span>. We repeat this process several times and display the information in the following table. <span class="math display">\[
+\begin{array}{l|l|l|l} \small
+\Delta  x &amp; (x,f(x)) &amp; (x+\Delta  x,f(x+\Delta  x)) &amp; \text{Equation of secant line} \\ \hline
+0.5 &amp; (0.5,1.25) &amp; (1,2) &amp; y=1.5 x+0.5  \\
+0.25 &amp; (0.5,1.25) &amp; (0.75,1.34375)   &amp; y=0.375 x+1.0625 \\
+0.125 &amp; (0.5,1.25) &amp; (0.625,1.23828) &amp; y=-0.09375 x+1.29688  \\
+0.0625 &amp; (0.5,1.25) &amp; (0.5625,1.23096) &amp;  y=-0.304688 x+1.40234 \\
+0.03125 &amp; (0.5,1.25) &amp; (0.53125,1.23737) &amp; y=-0.404297 x+1.45215 \\
+0.015625 &amp; (0.5,1.25) &amp; (0.515625,1.24293) &amp; y=-0.452637 x+1.47632
+\end{array}
+\]</span></p>
+<p>From this table what would you say is the equation for the tangent line of the function <span class="math inline">\(f(x)=2x^3-2x+2\)</span> at <span class="math inline">\((1/2,1/4)\)</span>? Explain your conclusion. We infer the tangent line is <span class="math inline">\(y=-\frac{1}{2}x+\frac{1}{2}\)</span>.</p>
+</div>
+<p>The difference quotient <span class="math display">\[
+\frac{\Delta  y}{\Delta  x}=\frac{f\left(x_2\right)-f\left(x_1\right)}{x_2-x_1}
+\]</span> is the average rate of change of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> over the interval <span class="math inline">\(\left[x_1,x_2\right]\)</span> <span class="math inline">\(_{}\)</span> and can be interpreted as the slope of the secant line. Its limit as <span class="math inline">\(\Delta x\to 0\)</span> is the derivative at <span class="math inline">\(x=x_1\)</span> and is denoted by <span class="math inline">\(f'\left(x_1\right).\)</span><br>
+We interpret the limit of the average rate of change as the interval becomes smaller and smaller to be the instantaneous rate of change. Often,different branches of science have specific interpretations of the derivative.</p>
+<p>As <span class="math inline">\(\Delta x\to 0\)</span> the average rate of change approaches the <strong>instantaneous rate for change</strong>; that is, <span class="math display">\[
+\lim _{\Delta  x\to 0} \frac{\Delta  y}{\Delta  x} = f'(x)
+\]</span> and is also known as the <strong>derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(x.\)</span></p>
+</section>
+<section id="equation-of-tangent-line" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="equation-of-tangent-line"><span class="header-section-number">5.4</span> Equation of Tangent Line</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5.1 </strong></span>If <span class="math inline">\(f'(a)\)</span> exists then an <strong>equation of the tangent line</strong> to the curve <span class="math inline">\(y=f(x)\)</span> at the point <span class="math inline">\((a,f(a))\)</span> is <span class="math inline">\(y-f(a)=f'(a)(x-a).\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.5 </strong></span>Find equations of the tangent lines to the curve <span class="math inline">\(\displaystyle y=\frac{x-1}{x+1}\)</span> that are parallel to the line <span class="math inline">\(x-2y=1\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The line <span class="math inline">\(x-2y=1\)</span> has slope <span class="math inline">\(m=1/2\)</span> and we use this with the derivative of <span class="math inline">\(y=(x-1)/(x+1)\)</span> to find the <span class="math inline">\(x\)</span>. Since <span class="math inline">\(y'=2/(x+1)^2\)</span> we have <span class="math inline">\(1/2=(2/((x+1)^2))\)</span>. Solving <span class="math inline">\((x+1)^2=4\)</span> for <span class="math inline">\(x\)</span> we get <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=-3\)</span>. Therefore, the points of tangency are at <span class="math inline">\((1,0)\)</span> and <span class="math inline">\((-3,2)\)</span>.<br>
+The tangent lines are found by using <span class="math inline">\(y=1/2 x+b\)</span> where <span class="math inline">\(b=y-1/2 x\)</span> with <span class="math inline">\((1,0)\)</span> and <span class="math inline">\((-3,2)\)</span>. We find <span class="math inline">\(b=-1/2\)</span> and <span class="math inline">\(b=7/2\)</span> respectively. Therefore, equations of the tangent lines are <span class="math inline">\(y=\frac{1}{2}x-\frac{1}{2}\)</span> and <span class="math inline">\(y=\frac{1}{2} x+\frac{7}{2}\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.6 </strong></span>How many tangent lines to the curve <span class="math inline">\(y=x/(x+1)\)</span> pass through the point <span class="math inline">\((1,2)\)</span>? At which points do these tangent lines touch the curve?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>All tangent lines through <span class="math inline">\((1,2)\)</span> have the form <span class="math inline">\(y-2=m (x-1)\)</span> where <span class="math inline">\(m=y'(x)=\frac{1}{(x+1)^2}.\)</span><br>
+Since we our looking for the intersection (point of tangency) we eliminate <span class="math inline">\(y\)</span> as follows: <span class="math display">\[
+y=\frac{x}{x+1}=\frac{1}{(x+1)^2}(x-1)+2.
+\]</span> Solving for <span class="math inline">\(x\)</span> we obtain, <span class="math inline">\(x=-2\pm \sqrt{3}.\)</span> Thus there are two tangent lines and they are tangent at the point <span class="math display">\[
+\left(-2\pm \sqrt{3},\frac{-2\pm \sqrt{3}}{-2\pm \sqrt{3}+1}\right).
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.7 </strong></span>Find equations of both tangent lines through the point <span class="math inline">\((2,-3)\)</span> that are tangent to the parabola <span class="math inline">\(y=x^2+x.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>All tangent lines through <span class="math inline">\((2,-3)\)</span> have the form <span class="math inline">\(y+3=m (x-2)\)</span> where <span class="math inline">\(m=y'(x)=2x+1.\)</span><br>
+Since we our looking for the intersection (point of tangency) we eliminate <span class="math inline">\(y\)</span> as follows: <span class="math display">\[
+y=x^2+x=(2x+1)(x-2)-3.
+\]</span> Solving for <span class="math inline">\(x\)</span> we obtain, <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=5.\)</span><br>
+Thus there are two tangent lines and they are tangent at the points <span class="math inline">\((-1,0)\)</span> and <span class="math inline">\((5,30).\)</span><br>
+The tangent lines are <span class="math inline">\(y=-x-1\)</span> and <span class="math inline">\(y=11 x-25.\)</span></p>
+</div>
+</section>
+<section id="horizontal-tangent-lines" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="horizontal-tangent-lines"><span class="header-section-number">5.5</span> Horizontal Tangent Lines</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5.2 </strong></span>If <span class="math inline">\(f'(a)=0\)</span> then the equation of the tangent line to the curve <span class="math inline">\(y=f(x)\)</span> at the point <span class="math inline">\((a,0)\)</span> is <span class="math inline">\(y=f(a)\)</span> and <span class="math inline">\(f\)</span> is said to have <strong>a horizontal tangent line</strong> at <span class="math inline">\(x=a.\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.8 </strong></span>For what values of <span class="math inline">\(x\)</span> does the graph of <span class="math inline">\(f(x)=2x^3-3x^2-6x+87\)</span> have a horizontal tangent?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>To find the horizontal tangent lines we find where the derivative is 0. We compute, <span class="math inline">\(y'(x)=6 x^2-6 x-6.\)</span><br>
+So we need to solve <span class="math inline">\(6 x^2-6 x-6=0.\)</span><br>
+We find, <span class="math inline">\(6 x^2-6 x-6=0\)</span> and so <span class="math inline">\(x^2-x-1=0\)</span>. And using the quadratic formula we have <span class="math inline">\(x=\frac{1}{2} \left(1\pm \sqrt{5}\right).\)</span><br>
+Thus, the values of <span class="math inline">\(x\)</span> where the tangent lines are horizontal are <span class="math inline">\(\frac{1}{2} \left(1\pm \sqrt{5}\right).\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.9 </strong></span>Find the points on the curve <span class="math inline">\(y=x^3-x^2-x+1\)</span> where the tangent line is horizontal.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>To find the horizontal tangent lines we find where the derivative is 0. We compute, <span class="math inline">\(y'(x)=3 x^2-2 x-1\)</span>. So we need to solve <span class="math inline">\(3 x^2-2 x-1=0.\)</span><br>
+Using the quadratic formula we have <span class="math inline">\(x=-\frac{1}{3}\)</span> and <span class="math inline">\(x=1.\)</span><br>
+Thus, the values of <span class="math inline">\(x\)</span> where the tangents lines are horizontal are <span class="math inline">\(1\)</span> and <span class="math inline">\(-1/3.\)</span></p>
+</div>
+</section>
+<section id="relative-rate-of-change" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="relative-rate-of-change"><span class="header-section-number">5.6</span> Relative Rate of Change</h2>
+<p>Next we illustrate the importance of the relative rate of change, as compared to the difference between the absolute rate of change and the average rate of change. The absolute change is not the same as the average rate of change. Namely, the <strong>absolute change</strong> is just the differences in the values of <span class="math inline">\(f\)</span> at the boundary of the interval <span class="math inline">\([x,\Delta x],\)</span> namely <span class="math inline">\(f(x+\Delta x)-f(x);\)</span> whereas the average rate of change is the absolute change divided by the size of the interval: <span class="math display">\[
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}.
+\]</span> The average rate of change is sometimes more useful; for example, suppose you want to know how long it takes to make some money and not just the size of the money made (absolute change). Knowing the rate at which the money is being made, (the average rate of change over a given time interval) is often useful.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.10 </strong></span>Temperature readings <span class="math inline">\(T\)</span> (in degrees Celsius) were recorded every hour starting at midnight on a day in April. The time <span class="math inline">\(x\)</span> is measured in hours from midnight. <span class="math display">\[
+\begin{array}{c|ccccccccccccc}
+x (h) &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; 11 &amp; 12 \\ \hline
+T (C) &amp; 6.5 &amp; 6.1 &amp; 5.6 &amp; 4.9 &amp; 4.2 &amp; 4.0 &amp; 4.0 &amp; 4.8 &amp; 6.1 &amp; 8.3 &amp; 10.0 &amp; 12.1 &amp; 14.3
+\end{array}
+\]</span> <span class="math display">\[
+\begin{array}{c|cccccccccccc}
+x (h) &amp; 13 &amp; 14 &amp; 15 &amp; 16 &amp; 17 &amp; 18 &amp; 19 &amp; 20 &amp; 21 &amp; 22 &amp; 23 &amp; 24 \\ \hline
+T (C) &amp; 16.0 &amp; 17.3 &amp; 18.2 &amp; 18.8 &amp; 17.6 &amp; 16.0 &amp; 14.1 &amp; 11.5 &amp; 10.2 &amp; 9.0 &amp; 7.9 &amp; 7.0
+\end{array}
+\]</span> &nbsp; - Find the average rates of change of temperatures with respect to time from noon to 3:00 p.m., 2:00 p.m. and 1:00 p.m. - Estimate the instantaneous rate of change at noon.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The average rates of change are, respectively, <span class="math display">\[
+\frac{\Delta  T}{\Delta  x}=\frac{T(15)-T(12)}{3}=\frac{18.2-14.3}{3}=1.3 \, C/h
+\]</span> <span class="math display">\[
+\frac{\Delta  T}{\Delta  x}=\frac{T(14)-T(12)}{2}=\frac{17.3-14.3}{2}=1.5 \, C/H
+\]</span> <span class="math display">\[
+\frac{\Delta  T}{\Delta  x}=\frac{T(13)-T(12)}{1}=\frac{16.0-14.3}{1}=1.7 \, C/h
+\]</span> We plot the given data and use them to sketch a smooth curve that approximates the graph of the temperature function. Then we draw that tangent line at the point <span class="math inline">\(P\)</span> where <span class="math inline">\(x=12\)</span> and after measuring the sides of the triangle we estimate that the slope of the tangent line is <span class="math display">\[
+\frac{18.3-8}{14-8.5}=\frac{10.3}{5.5}\approx 1.9
+\]</span> and so the instantaneous rate of change of temperature with respect to time at noon is about <span class="math inline">\(1.9 C/h.\)</span></p>
+</div>
+<p>Sometimes we are not interested in the instantaneous rate of change and instead we may want a relative rate of change (percentage). For example suppose a student makes a 39 on a test, this would be a very good grade if the score is out of 40 points. However if the score was out of a total of 100 points then the grade is not so good.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5.2 </strong></span>Let <span class="math inline">\(y=f(x),\)</span> then the <strong>relative rate of change</strong> at <span class="math inline">\(x=x_0\)</span> is the ratio <span class="math display">\[
+\frac{f'\left(x_0\right)}{f\left(x_0\right)}.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.11 </strong></span>Let <span class="math inline">\(f(x)=\sqrt{x}.\)</span><br>
+Find the relative rate of change at <span class="math inline">\(x=5\)</span> and <span class="math inline">\(x=75.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(f'(x)=\frac{1}{2 \sqrt{x}}.\)</span><br>
+The relative rate of change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=5\)</span> is <span class="math display">\[
+\frac{f'(5)}{f(5)}=\frac{\frac{1}{2 \sqrt{5}}}{\sqrt{5}}=\frac{1}{10} \approx 0.1 \text{ or } 10\%.
+\]</span> The relative rate of change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=75\)</span> is <span class="math display">\[
+\frac{f'(75)}{f(75)}=\frac{\frac{1}{2 \sqrt{75}}}{\sqrt{75}} =\frac{1}{150} \approx 0.00666667 \text{ or } 0.6\%.
+\]</span></p>
+</div>
+<p>Often we are more interested in the relative rate of change of a quantity instead of the instantaneous rate of change. If instance, if you are earning <span class="math inline">\(25,000/\text{yr}\)</span> and receive a 5,000 raise, you would probably be very please. However, if you were making <span class="math inline">\(100,000/\text{yr}\)</span> you may not be as please since the relative change is not as much. With the <span class="math inline">\(100,000/\text{yr}\)</span> pay you only have a <span class="math inline">\(5,000/100,000=0.05=5\%\)</span> increase whereas with the <span class="math inline">\(25,000/\text{yr}\)</span> pay you have a better percentage increase of <span class="math inline">\(5,000/25,000=0.20=20\%.\)</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.12 </strong></span>Let <span class="math inline">\(f(x)=2x^2-3x+5.\)</span><br>
+&nbsp; - Find the average rate of change from <span class="math inline">\(x=2\)</span> to <span class="math inline">\(x=4.\)</span><br>
+- Find the instantaneous rate of change at <span class="math inline">\(x=2.\)</span><br>
+- Find the relative rate of change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=2\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The average rate of change of <span class="math inline">\(f\)</span> from <span class="math inline">\(x=2\)</span> to <span class="math inline">\(x=4\)</span> is given by, <span class="math display">\[
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}
+=\frac{\left(2(4)^2-3(4)+5\right)-\left(2(2)^2-3(2)+5\right)}{2}
+=9
+\]</span> Since <span class="math inline">\(f'(x)=4x-3,\)</span> the instantaneous rate for change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=2\)</span> is given by, <span class="math inline">\(f'(2)=4(2)-3\)</span> <span class="math inline">\(=5.\)</span> The relative rate of change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=2\)</span> is <span class="math display">\[
+\frac{f'(2)}{f(2)}=\frac{5}{2(2)^2-3(2)+5} =\frac{5}{7} \approx 0.714286  \text{ or } 71.
+\]</span></p>
+</div>
+</section>
+<section id="exercises" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.7</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.1 </strong></span>Find a function(s) with the following properties. (a) Find functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> such that <span class="math inline">\(f\)</span> is discontinuous at <span class="math inline">\(x=1\)</span> but <span class="math inline">\(f g\)</span> is continuous there. (b) Give an example of a function defined for all real numbers that is continuous at only one point.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.2 </strong></span>&nbsp;</p>
+<ol type="a">
+<li>Find an equation of the secant line to the graph of <span class="math inline">\(y=x^2-2x\)</span> through the points <span class="math inline">\((1,-1)\)</span> and <span class="math inline">\((-1,3)\)</span> .</li>
+<li>Find an equation of the tangent line to the graph of <span class="math inline">\(y=x^2-2x\)</span> at the point <span class="math inline">\((1,-1)\)</span> .</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.3 </strong></span>&nbsp;</p>
+<ol type="a">
+<li>Find the average rate of change of <span class="math inline">\(f(x)=x^2+3x\)</span> over the interval <span class="math inline">\([0,1]\)</span> .</li>
+<li>Find the instantaneous rate of change of <span class="math inline">\(f(x)=x^2+3x\)</span> at <span class="math inline">\(x=0\)</span> .</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.4 </strong></span>A ball is thrown straight down from the top of a 220-foot building with an initial velocity of 120 meters per second. What is the velocity after 5 seconds? After 10 seconds?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.5 </strong></span>To estimate the height of a building, a stone is dropped from the top of the building into a pool of water at ground level. How high is the building if the splash is seen <span class="math inline">\(6.8\)</span> seconds after the stone is dropped?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.6 </strong></span>Let <span class="math inline">\(s(t)=-t^3+3t^2-3t\)</span> be the position function of a body moving on a coordinate line, with <span class="math inline">\(s\)</span> in meters and <span class="math inline">\(t\)</span> in seconds. (a) Find the body’s displacement and average velocity for the time interval <span class="math inline">\(0\leq t\leq 3.\)</span> (b) Find the body’s speed and acceleration at the endpoints of the time interval <span class="math inline">\(0\leq t\leq 3.\)</span> (c) When, if ever, during the time interval <span class="math inline">\(0\leq t\leq 3\)</span> does the body change direction?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.7 </strong></span>&nbsp;</p>
+<ol type="a">
+<li>Let <span class="math inline">\(s(t)=\frac{25}{t^2}-\frac{5}{t}\)</span> be the position function of a body moving on a coordinate line, with <span class="math inline">\(s\)</span> in meters and <span class="math inline">\(t\)</span> in seconds. (b) Find the body’s displacement and average velocity for the time interval <span class="math inline">\(1\leq t\leq 5.\)</span> (c) Find the body’s speed and acceleration at the endpoints of the time interval <span class="math inline">\(1\leq t\leq 5.\)</span> When, if ever, during the time interval <span class="math inline">\(1\leq t\leq 5\)</span> does the body change direction?</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.8 </strong></span>&nbsp;</p>
+<ol type="a">
+<li>Let <span class="math inline">\(s(t)=\frac{25}{t+5}\)</span> be the position function of a body moving on a coordinate line, with <span class="math inline">\(s\)</span> in meters and <span class="math inline">\(t\)</span> in seconds. (b) Find the body’s displacement and average velocity for the time interval <span class="math inline">\(-4\leq t\leq 0.\)</span> (c) Find the body’s speed and acceleration at the endpoints of the time interval <span class="math inline">\(-4\leq t\leq 0.\)</span> When, if ever, during the time interval <span class="math inline">\(-4\leq t\leq 0\)</span> does the body change direction?</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.9 </strong></span>If an arrow is shot upward on the moon with a velocity of <span class="math inline">\(58 m/s,\)</span> its height in meters after <span class="math inline">\(t\)</span> seconds is given by <span class="math inline">\(h=58t-0.83t^2.\)</span> (a) Find the velocity of the arrow after <span class="math inline">\(1 s.\)</span> (b) Find the velocity of the arrow when <span class="math inline">\(t=a.\)</span> (c) When will the arrow hit the moon? (d) With what velocity will the arrow hit the moon?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.10 </strong></span>If a cylindrical tank holds <span class="math inline">\(100,000\)</span> gallons of water, which takes <span class="math inline">\(1 h\)</span> to drain from the bottom of the tank, then Torricelli’s Law given the volume <span class="math inline">\(V\)</span> of water remaining in the tank after <span class="math inline">\(t\)</span> minutes as <span class="math display">\[
+V(t)=100,000\left(1-\frac{t}{60}\right)^2, \qquad 0\leq t\leq 60.
+\]</span><br>
+Find the rate at which the water is flowing out of the tank after 20 minutes.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.11 </strong></span>Verify that the average over the time interval <span class="math inline">\(\left[t_0-\Delta t,t_0+\Delta t\right]\)</span> is the same as the instantaneous velocity at <span class="math inline">\(t=t_0\)</span> for the position function <span class="math inline">\(s(t)=\frac{-1}{2}a t^2+c.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.12 </strong></span>Let <span class="math inline">\(s(t)=t^2-3t+2\)</span> be the position function of a body moving on a coordinate line, with <span class="math inline">\(s\)</span> in meters and <span class="math inline">\(t\)</span> in seconds. (a) Find the body’s displacement and average velocity for the time interval <span class="math inline">\(0\leq t\leq 2.\)</span> (b) Find the body’s speed and acceleration at the endpoints of the time interval <span class="math inline">\(0\leq t\leq 2.\)</span> (c) When, if ever, during the time interval <span class="math inline">\(0\leq t\leq 2\)</span> does the body change direction?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.13 </strong></span>At time <span class="math inline">\(t\)</span> the position of a body moving along the <span class="math inline">\(s\)</span> -axis is <span class="math inline">\(s=t^3-6t^2-9t m.\)</span> (a) Find the body’s acceleration each time the velocity is zero. (b) Find the body’s speed each time the acceleration is zero. (c) Find the total distance traveled by the body from <span class="math inline">\(t=0\)</span> to <span class="math inline">\(t=2.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.14 </strong></span>A rock is thrown vertically upward from the surface of the moon at a velocity of 24 m/se (about 86 km/h) reaches a height of <span class="math inline">\(s=24t-0.8t^2\)</span> meters in <span class="math inline">\(t\)</span> sec.&nbsp;(a) Find the rock’s velocity and acceleration at time <span class="math inline">\(t.\)</span> (b) How long does it take the rock to reach its highest point? (c) How high does the rock go? (d) How long does it take the rock to reach half its maximum height?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.15 </strong></span>Had Galileo dropped a cannonball from the Tower of Pisa, 179 ft above the ground, the ball’s height above the ground <span class="math inline">\(t\)</span> sec into the fall would have been <span class="math inline">\(s=179-16t^2.\)</span> (a) What would have been the ball’s velocity, speed, and acceleration at time <span class="math inline">\(t?\)</span> (b) About how long would it have taken the ball to hit the ground? (c) What would have been the balls velocity at the moment of impact?</p>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/exploring-calculus\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./continuous-functions.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Continuous Functions</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./differentiation.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Differentiation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

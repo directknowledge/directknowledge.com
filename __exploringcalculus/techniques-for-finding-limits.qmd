@@ -22,7 +22,6 @@ For any real number $c,$  suppose the functions $f$  and $g$  both have finite l
 - (Power) $\lim _{x\to c}[f(x)]^n=\left( \lim _{x\to c}f(x) \right){}^n$  where $n$  is a rational number and whenever the limit on the right exists 
 - (Polynomial) $\lim _{x\to c}P(x)=P(c)$  for any polynomial $P$ 
 - (Rational) $\lim _{x\to c}R(x)=R(c)$  for any rational function $R$  where $c$  is in the domain of $R.$ 
- 
 ::: 
 
 
@@ -63,9 +62,9 @@ In the previous example notice that we used
 \lim _{x\to 2}\frac{(x-2)\left(2x^2+5x-6\right)}{(x-2)(x+2)}=\lim _{x\to 2}\frac{\left(2x^2+5x-6\right)}{(x+2)}.
 \end{equation}
 Now it is not true that the functions 
-\[
+$$
 f(x)=\frac{\left(2x^2+5x-6\right)}{(x+2)} \qquad \text{and} \qquad g(x)=\frac{\left(2x^2+5x-6\right)}{(x+2)}
-\] 
+$$ 
 are the same function because they have different domains. 
 But the above equality is true because $x$  is approaching 2, and not equal to 2. 
 So the point is,because $f(x)=g(x)$  when $x\neq 2$  we can indeed say \eqref{limeq} holds. 
@@ -90,34 +89,39 @@ $$\lim _{x\to -2^-}f(x)\neq \lim _{x\to -2^+}f(x)
 $$ 
 we know $\lim _{x\to -2}f(x)$ does not exist, but this does not imply anything about $\lim _{x\to -2}[f(x)+g(x)]$ nor $\lim _{x\to -2}[f(x)g(x)].$  
 To find these limits we first find the two one-sided limits, 
-\[
+$$
 \lim _{x\to -2^-}[f(x)+g(x)]=\lim _{x\to -2^-}f(x)+\lim _{x\to -2^-}g(x)=2+0=2
-\]
-\[
+$$
+$$
 \lim _{x\to -2^+}[f(x)+g(x)]=\lim _{x\to -2^+}f(x)+\lim _{x\to -2^+}g(x)=4+0=4
-\]
+$$
 and since 
-\[
+$$
 \lim _{x\to -2^-}[f(x)+g(x)]\neq \lim _{x\to -2^+}[f(x)+g(x)]
-\] 
+$$ 
 we can now say the two-sided limit $\lim _{x\to -2}[f(x)+g(x)]$  does not exist. 
 Similarly, 
-\[
-\lim _{x\to -2^-}[f(x)g(x)]=\left( \lim _{x\to -2^-}f(x) \right)\left( \lim _{x\to -2^-}g(x)\right)=2(0)=0\]
-\[
+$$
+\lim _{x\to -2^-}[f(x)g(x)]=\left( \lim _{x\to -2^-}f(x) \right)\left( \lim _{x\to -2^-}g(x)\right)=2(0)=0$$
+$$
 \lim _{x\to -2^+}[f(x)g(x)]=\left( \lim _{x\to -2^+}f(x) \right)\left( \lim _{x\to -2^+}g(x) \right)=4(0)=0
-\] 
-and therefore, $\ds\lim _{x\to -2}[f(x)g(x)]=0.$
+$$ 
+and therefore, $\displaystyle\lim _{x\to -2}[f(x)g(x)]=0.$
 ::: 
+
+
+
+
+
 
 ## Special Trigonometric Limits
 
 
 ::: {#thm- }  
 The following trigonometric limits hold:
-\[
+$$
 \lim _{x\to 0}\frac{\sin  x}{x}=1\text\qquad \text{and} \qquad \lim _{x\to 0} \frac{\cos  x-1}{x}=0
-\]
+$$
 ::: 
 
 
@@ -142,7 +146,6 @@ We have
 & \qquad =\frac{1}{2}\lim _{x\to 0} \left(\frac{\sin  x}{x}\right)\lim _{x\to 0}\left(\frac{1-\cos  x}{x}\right) 
 =\frac{1}{2}(1)(0)
 =0.
-\square
 \end{align*}
 ::: 
 
@@ -159,7 +162,6 @@ We have
 & \qquad =\lim _{x\to 0} \left(\frac{ 5\sin  5x}{5x}\right)\left(\frac{4x}{4 \sin  4x}\right) \\
 & \qquad =\lim _{x\to 0} \left(\frac{ 5\sin  5x}{5x}\right)\lim _{x\to 0}\left(\frac{4x}{4 \sin  4x}\right) 
 =\frac{5}{4}.
-\square
 \end{align*}
 ::: 
 
@@ -169,9 +171,9 @@ Given $g(x)=-27-9 x-6 x^2+x^3+x^4$  and $h(x)=21-16 x-3 x^2+2 x^3,$  compute the
 
 ::: {.solution }   
 Try a factor of $(x-3)$  from $g(x)$  obtaining 
-\[
+$$
 g(x)=(x-3)\left(9+6 x+4 x^2+x^3\right)
-\] 
+$$ 
 and a graph of $h$  is which also inspires to try to factor of $(x-3)$  from $h(x)$  obtaining $h(x)=(x-3)\left(2x^2+3x-7\right).$  
 Therefore,
 \begin{align*}
@@ -180,18 +182,17 @@ Therefore,
 & \qquad =\lim _{x\to 3}\frac{9+6 x+4 x^2+x^3}{2x^2+3x-7}
  =\frac{9+6 (3)+4 (3)^2+(3)^3}{2(3)^2+3(3)-7} 
  =\frac{9}{2}.
-\square
 \end{align*}
 ::: 
 
 ::: {#thm- }  
 If $c$  is any real number in the domain of the given function, then 
-\[
+$$
 \begin{array}{ccccc} 
-\lim _{x\to c} \cos  x=\cos  c & & \lim _{x\to c} \sin  x=\sin  c & & \lim _{x\to c} \tan  x=\tan  c \\[8pt] 
+\lim _{x\to c} \cos  x=\cos  c & & \lim _{x\to c} \sin  x=\sin  c & & \lim _{x\to c} \tan  x=\tan  c \\  
 \lim _{x\to c} \sec  x=\sec  c  & & \lim _{x\to c} \csc  x=\csc  c & & \lim _{x\to c} \cot  x=\cot  c.
 \end{array}
-\]
+$$
 ::: 
 
 ::: {#exm- } 
@@ -200,10 +201,9 @@ Compute the limit of $f(x)=\frac{x}{\sin  x-2 \cos  x}$  at $x=\pi .$
 
 ::: {.solution }   
 By using several limit rules, we have
-\[
+$$
 \lim _{x\to \pi }\frac{x}{\sin  x-2 \cos  x}=\frac{\pi }{\sin  \pi -2\cos  \pi }=\frac{\pi }{0-2(-1)}=\frac{\pi }{2}.
-\square
-\]
+$$
 ::: 
 
 
@@ -221,7 +221,6 @@ We have
 & \qquad  =\lim _{x\to \pi /4}\frac{-1}{\cos  x} 
 =\lim _{x\to \pi /4}\frac{-1}{\frac{1}{\sqrt{2}}}
 =-\sqrt{2}
-\square
 \end{align*}
 ::: 
 
@@ -232,6 +231,9 @@ Compute the limit of $f(x)=\frac{\tan  x}{\sin  x}$  as $x\to0.$
 ::: {.solution }   
 We have $\lim _{x\to 0}\frac{\tan  x}{\sin  x}$ $=\lim _{x\to 0} \left(\frac{\sin  x}{\cos  x}\right)\left(\frac{1}{\sin  x}\right)$ $=\lim _{x\to 0} \frac{1}{\cos  x}$ $=1.$ 
 ::: 
+
+
+
 
 ## Using Rationalization
 
@@ -259,7 +261,6 @@ We have
 =\lim _{x\to \pi }\left(\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}\right)\left(\frac{\sqrt{x}+\sqrt{\pi }}{\sqrt{x}+\sqrt{\pi }}\right) \\
 & \qquad =\lim _{x\to \pi }\frac{(x-\pi )\left(\sqrt{x}+\sqrt{\pi }\right)}{x-\pi } 
 =2\sqrt{\pi }
-\square
 \end{align*}
 ::: 
 
@@ -275,7 +276,6 @@ We have
 & \quad  =\lim _{x\to 1}\frac{(x-1)\left(\sqrt[3]{x^2}+\sqrt[3]{x}+1\right)}{x-1} 
 =\lim _{x\to 1}\left(\sqrt[3]{x^2}+\sqrt[3]{x}+1\right) 
 =3.
-\square
 \end{align*}
 ::: 
 
@@ -360,9 +360,9 @@ Use the squeeze rule to find the limit of $f(x)=x \cos \left(\frac{1}{x}\right)$
 ::: {.solution }  
 We are interested in this function around $x>0$ . 
 Knowing that the cosine function is always less than or equal to one, we see that when $-1\leq  x\leq  1$  we have 
-\[
+$$
 -x\leq f(x)=x \cos \left(\frac{1}{x}\right)\leq x.
-\]
+$$
 Since $\lim _{x\to 0} -x=\lim _{x\to 0} x=0$  we have $\lim _{x\to 0}x \cos  \left(\frac{1}{x}\right)=0$  by the squeeze theorem. 
 ::: 
 
@@ -382,7 +382,6 @@ Find the following limits.
 - $\lim _{x\to -2}\left(\frac{-2x-4}{x^3+2x^2}\right)$
 - $\lim _{x\to 1}\left(\frac{x-1}{\sqrt{x+3}-2}\right)$
 - $\lim _{x\to -2}\left(\frac{x+2}{\sqrt{x^2+5}-3}\right)$
- 
 ::: 
 
 ::: {#exr- } 

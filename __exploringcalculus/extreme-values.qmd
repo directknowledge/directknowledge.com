@@ -1,7 +1,7 @@
 ---
 pagetitle: "Extreme Values - Exploring Calculus"
 ---
-# "Extreme Values"
+# Extreme Values
 
 
 ## Relative Extreme Values
@@ -17,7 +17,6 @@ Let $f$ be a function defined on an open interval $I$ with $c\in I$.
 - If $f(c)\geq f(x)$ for all $x$ in $I,$ then $f(c)$ is called a \index{relative maximum} **relative maximum**  of $f$ on $I.$ 
 - If $f(c)\leq  f(x)$ for all $x$ in $I,$ then $f(c)$ is called a \index{relative minimum} **relative minimum**  of $f$ on $I.$ 
 - If $c\in I$ and $f(c)$ is either a relative maximum or a relative minimum then $f(c)$ is a relative extrema, and we say that $f(c)$ is a \index{relative extreme value} **relative extreme value**  of $f$. 
- 
 ::: 
 
 A relative maximum is sometimes called a \index{local maximum} **local maximum** .  
@@ -37,8 +36,8 @@ If $f$ has a relative extremum at $c$ and $f'(c)$ exists then $f'(c)=0.$
 ::: {.proof }
 Since $f$ is differentiable at $c,$ $f'(c)$ must be positive, zero, or negative. 
 If 
-\[f'(c)=\lim _{x\to c}\frac{f(x)-f(c)}{x-c}>0
-\] 
+$$f'(c)=\lim _{x\to c}\frac{f(x)-f(c)}{x-c}>0
+$$ 
 then there exists an interval $(a,b)$ containing $c$ such that $\frac{f(x)-f(c)}{x-c}>0$ for all $x\neq c$ in $(a,b).$ 
 This produces the following inequalities for $x$-values in the interval $(a,b).$ 
 If $x<c$ then $f(x)<f(c)$ and so $f(c)$ is not a relative minimum. 
@@ -50,13 +49,13 @@ Thus it must be the case $f'(c)=0$ as desired.
 
 ::: {#exm- }  
 Determine if the Relative Extrema Theorem applies and if so find the relative extrema for the function
-\[
+$$
 f(x)=
 \begin{cases}
  2x-3 & x<2/3 \\
  3-7x & x\geq  2/3
 \end{cases}
-\]
+$$
 :::  
 
 ::: {.solution } 
@@ -86,7 +85,6 @@ A real number $c$ is called a \index{critical number} **critical number**  of th
  
 - $c$ is in the domain of $f$ and $f'(c)=0$ or
 - $c$ is in the domain of $f$ and $c$ is not in the domain of $f'$.
- 
 ::: 
 
 Or said differently, a critical number of a function $f$ is a real number $c$ in the domain of $f$ such that $f'(c)=0$ or $f'(c)$ does not exist. 
@@ -98,21 +96,21 @@ If $f$ is a continuous function and has a relative extremum at $c,$ then $c$ is 
 
 ::: {#exm- }  
 Find the critical numbers, if there are any, for the function 
-\[
+$$
 f(x)=|x+2|-3.
-\] 
+$$ 
 ::: 
 
 ::: {.solution } 
 The function $f(x)=|x+2|-3$ can be rewritten as a piecewise function as 
-\[
+$$
 f(x)=\left\{
 \begin{array}{cc}
  x-1 & x\geq  -2 \\
  -x-5 & x<-2
 \end{array}
 \right.
-\] 
+$$ 
 The graph of the function $f$ has a sharp corner at $x=-2$ which can be seen by evaluating the left derivative of $f$ at $x=-2$ and the right derivative of $f$  at $x=-2$. 
 Therefore $f'$ is not defined at $x=-2$. 
 Since $f'$ is defined everywhere else and $f'$ is not 0 anywhere the only critical number is $-2.$ 
@@ -121,9 +119,9 @@ Since $f'$ is defined everywhere else and $f'$ is not 0 anywhere the only critic
 
 ::: {#exm- }  
 Find the critical numbers, if there are any, for the function 
-\[
+$$
 g(x)=x^3+2.
-\]
+$$
 ::: 
 
 ::: {.solution } 
@@ -136,9 +134,9 @@ In summary, critical numbers allow us to check if there are any extrema at that 
 
 ::: {#exm- }  
 Find the critical numbers, if there are any, for the function 
-\[
+$$
 h(x)=\sin  x.
-\] 
+$$ 
 ::: 
 
 ::: {.solution } 
@@ -154,23 +152,23 @@ Find the critical numbers, if there are any, for the function $f(x)=x^{2/3}(1-x)
 ::: 
 
 ::: {.solution } 
-The function $f$ has derivative, \[f'(x)=\frac{2}{3}x^{-1/3}(1-x)+x^{2/3}(-1)=\frac{2-5 x}{3 x^{1/3}}\] and so we need to check for any $x$ in the domain of $f$ such that $f'(x)=0$ or $f'(x)$ is undefined. 
+The function $f$ has derivative, $$f'(x)=\frac{2}{3}x^{-1/3}(1-x)+x^{2/3}(-1)=\frac{2-5 x}{3 x^{1/3}}$$ and so we need to check for any $x$ in the domain of $f$ such that $f'(x)=0$ or $f'(x)$ is undefined. 
 We see that $f'$ is undefined for $x=0;$ and $f'(x)=0$ for $x=\frac{2}{5}.$ 
 So for this function $f$ there are two critical numbers namely $x=0$ and $x=\frac{2}{5}.$ 
 ::: 
 
 ::: {#exm- }  
 Find the critical numbers, if there are any, for the function 
-\[
+$$
 f(x)=\sqrt{9-x^2}.
-\]
+$$
 ::: 
 
 ::: {.solution } 
 The function $f$ has derivative, 
-\[
+$$
 f'(x)=\frac{1}{2}\left(9-x^2\right)^{-1/2}(-2x)=-\frac{x}{\sqrt{9-x^2}}
-\]
+$$
 and so we need to check for any $x$ in the domain of $f$ such that $f'(x)=0$ or $f'(x)$ is undefined. 
 We see that $f'$ is undefined for
 $x=\pm 3;$ and $f'(x)=0$ for $x=0.$ 
@@ -180,28 +178,28 @@ So there are three critical numbers of $f$ namely, $x=0$ and $x=\pm 3.$
 
 ::: {#exm- }  
 Find the critical numbers, if there are any, for the function 
-\[
+$$
  \displaystyle f(x)=\frac{x^2}{x^2-3}.
-\]
+$$
 ::: 
 
 ::: {.solution }  
-The function $f$ has derivative, \[f'(x)=\frac{\left(x^2-3\right)2x-x^2(2x)}{\left(x^2-3\right)^2}=\frac{-6 x}{\left(-3+x^2\right)^2}\] and so we need to check for any $x$ in the domain of $f$ such that $f'(x)=0$ or if $f'(x)$ is undefined. We see that $f'$ is undefined for $x=\pm \sqrt{3};$ and $f'(x)=0$ for $x=0.$ 
+The function $f$ has derivative, $$f'(x)=\frac{\left(x^2-3\right)2x-x^2(2x)}{\left(x^2-3\right)^2}=\frac{-6 x}{\left(-3+x^2\right)^2}$$ and so we need to check for any $x$ in the domain of $f$ such that $f'(x)=0$ or if $f'(x)$ is undefined. We see that $f'$ is undefined for $x=\pm \sqrt{3};$ and $f'(x)=0$ for $x=0.$ 
 So there are three critical numbers of $f$ namely $x=0$ and $x=\pm \sqrt{3}.$ 
 ::: 
 
 ::: {#exm- }  
 Find the critical numbers, if there are any, for the function 
-\[
+$$
  \displaystyle f(x)=\ln  \sqrt{x-2}.
-\]
+$$
 ::: 
 
 ::: {.solution } 
 The function $f$ has derivative, 
-\[
+$$
 f'(x)=\frac{1}{2(-2+x)}
-\] 
+$$ 
 and so we need to check for any $x$ in the domain of $f$ such that $f'(x)=0$ or $f'(x)$ is undefined. 
 We see that $f'$ is undefined for $x=2;$ and there are no real numbers with $f'(x)=0.$ 
 One might be tempted to say that there is one critical numbers of $x=2.$ 
@@ -220,8 +218,7 @@ Let $f$ be a function with domain $D.$
  
 - If $f(c)\geq f(x)$ for all $x$ in $D,$ then $f$ has an \index{absolute maximum} **absolute maximum**  at $c.$ 
 - If $f(c)\leq  f(x)$ for all $x$ in $D,$ then $f$ has an \index{absolute minimum} **absolute minimum**  at $c.$  
-- If $f$ has either an absolute maximum or a absolute minimum at $c$, then we say $f$ has an \index{absolute extrema} at $c$, and we say that $f(c)$ is an \index{extreme value} **absolute extrema} at $c$, and we say that $f(c)$ is an \index{extreme value** . 
- 
+- If $f$ has either an absolute maximum or a absolute minimum at $c$, then we say $f$ has an \index{absolute extrema} **absolute extrema** at $c$, and we say that $f(c)$ is an \index{extreme value} **extreme value**. 
 ::: 
 
 Sometimes an absolute maximum is called a \index{global maximum} **global maximum** . 
@@ -235,9 +232,9 @@ State whether linear functions, quadratic functions, and the six trigonometric f
 Linear functions $f(x)=a x+b$ do not have absolute extrema on their natural domain of $\mathbb{R}$ unless in the trivial case of $a=0.$ 
 Quadratic functions $f(x)=a x^2+b x+c$ have an absolute maximum or absolute minimum depending on the sign of $a.$ 
 The vertex is given by 
-\[
+$$
 \left(\frac{-b}{2 a},f\left(\frac{-b}{2a}\right)\right)
-\] 
+$$ 
 and is always an absolute maximum (if $a>0$) or absolute minimum (if $a<0$). 
 The trigonometric functions sine and cosine have global maximum and global minimum; and since these functions are periodic they attain these values periodically. 
 However, the functions secant, cosecant, tangent and cotangent do not have any absolute maximum and absolute minimum values on their natural domain. 
@@ -254,13 +251,13 @@ The extreme value theorem is an existence theorem because the theorem tells of t
 
 ::: {#exm- }  
 State whether the function has absolute extrema on its domain
-\[
+$$
 f(x)=
 \begin{cases}
  -x^2 & x\neq 0 \\
  -1 & x=0
 \end{cases}
-\]
+$$
 ::: 
 
 ::: {.solution } 
@@ -271,13 +268,13 @@ Notice that this function is not continuous on a closed bounded interval contain
 
 ::: {#exm- }  
 State whether the function has absolute extrema on its domain
-\[
+$$
 g(x)=
 \begin{cases}
  x & x> 0 \\
  3 & x\leq  0
 \end{cases}
-\]
+$$
 ::: 
 
 ::: {.solution } 
@@ -291,9 +288,9 @@ Notice that this function is not continuous on a closed bounded interval contain
 Let $f$ be a continuous function whose domain contains $[a,b].$ 
 Then to find the absolute extrema of $f$ on $[a,b]$ perform the following steps.
  
-\item Find all critical numbers of $f$ on $[a,b]$ and evaluate $f$ for each of these numbers. 
-\item Evaluate $f$ at the boundary; that is, find $f(a)$ and $f(b).$ 
-\item Select the largest and smallest values those listed in (1) and (2). 
+-   Find all critical numbers of $f$ on $[a,b]$ and evaluate $f$ for each of these numbers. 
+-   Evaluate $f$ at the boundary; that is, find $f(a)$ and $f(b).$ 
+-   Select the largest and smallest values those listed in (1) and (2). 
  
 The largest value is the absolute maximum and the smallest value is the absolute minimum. 
 ::: 
@@ -308,7 +305,7 @@ Find the absolute extrema of $f(x)=x^4-4x^2+2$ on the interval $[-3,2]$.
 The function $f$ has derivative, $f'(x)=4 x^3-8 x$. 
 Since $f'(x)=0$ only when $x=0, \pm \sqrt{2}$ and $f'$ is defined for all $x$, the only critical numbers are $x=0, \pm \sqrt{2}$ (see Figure ~\ref{fig:graph1}). 
 The following table determines the absolute extrema  of the function $f$.
-\[ 
+$$ 
 \begin{array}{c|c|c|l}
  x & f(x) & f'(x) & \text{Conclusion} \\ \hline
  -3 & 47 & - & \text{boundary, absolute maximum} \\
@@ -317,8 +314,7 @@ The following table determines the absolute extrema  of the function $f$.
  \sqrt{2} & -2 & 0 & \text{critical number, absolute minimum} \\
  2 & 2 & - & \text{boundary}
 \end{array}
-\square
-\]
+$$
 ::: 
 
 
@@ -331,34 +327,32 @@ Find the absolute extrema of $f(x)=x^{4/5}$ on the interval $[-32,1]$.
 The function $f$ has derivative, $f'(x)=4/(5 x^{1/5})$. 
 Since $f'(x)\neq0$ for every $x$ in the domain of $f$ and $f'(x)$ is undefined only when $x=0$, the only critical numbers are $x=0$ (see Figure ~\ref{fig:graph2}). 
 The following table determines the absolute extrema  of the function $f$.
-\[
+$$
 \begin{array}{c|c|c|l}
  x & f(x) & f'(x) & \text{Conclusion} \\ \hline
  -32 & 16 & - & \text{boundary, absolute maximum} \\
  0 & 0 & 0 & \text{critical number, absolute minimum} \\
  1 & 1 & - & \text{boundary}
 \end{array}
-\square
-\]
+$$
 ::: 
 
 
 ::: {#exm- }  
-Find the absolute extrema of $ \displaystyle f(x)=\frac{x}{x+1}$ on the interval $[1,2]$.
+Find the absolute extrema of $\displaystyle f(x)=\frac{x}{x+1}$ on the interval $[1,2]$.
 ::: 
 
 
 ::: {.solution } 
 The function $f$ has derivative, $f'(x)=\frac{1}{(1+x)^2}$ and so there are no critical numbers because $x=-1$ is not in our domain of $[1,2]$ (see Figure ~\ref{fig:graph3}) and $f'$ is defined for all $x$ in $[1,2]$. 
 The following table determines the absolute extrema  of the function $f$.
-\[
+$$
 \begin{array}{c|c|c|l}
  x & f(x) & f'(x) & \text{Conclusion} \\ \hline
  1 & 1/2 & - & \text{absolute minimum} \\
  2 & 2/3 & - & \text{absolute maximum}
 \end{array}
-\square
-\]
+$$
 ::: 
 
 ::: {#exm- }  
@@ -369,15 +363,14 @@ Find the absolute extrema of $f(x)=\sin  x + \cos  x$ on the interval $[0,\pi/3]
 ::: {.solution } 
 The function $f$ has derivative, $f'(x)=\cos  x-\sin  x$ and so to find our critical number we need to solve $\sin  x=\cos  x$ or $\tan  x=1$ which is of course $x=\frac{\pi }{4}+\pi  k$ where $k$ is any integer. However, for our given domain of $[0,\pi /3]$ the only critical number is $\pi /4$ (see Figure ~\ref{fig:graph4}). 
 The following table determines the absolute extrema of the function $f$.
-\[
+$$
 \begin{array}{c|c|c|l}
  x & f(x) & f'(x) & \text{Conclusion} \\ \hline
  0 & 1 & - & \text{boundary, absolute minimum} \\
  \pi /4 & \sqrt{2} & 0 & \text{critical number, absolute maximum} \\
  \pi /3 & 1 & - & \text{boundary}
 \end{array}
-\square
-\]
+$$
 ::: 
 
 
@@ -387,10 +380,9 @@ The following table determines the absolute extrema of the function $f$.
 ::: {#exr- } 
 Find the critical numbers of the given functions. 
     
-\item $f(x)=x^2(2x-1)^{2/3}$ 
-\item $g(x)=\frac{x+1}{x^2+x+1}$
-\item $h(x)=\sqrt[3]{x^2-x}$ 
- 
+-   $f(x)=x^2(2x-1)^{2/3}$ 
+-   $g(x)=\frac{x+1}{x^2+x+1}$
+-   $h(x)=\sqrt[3]{x^2-x}$ 
 ::: 
 
 ::: {#exr- } 
@@ -429,7 +421,6 @@ Find the absolute maximum and absolute minimum values of the given function on t
 - $i(x)=\cos ^{-1}x \tan ^{-1}x\text{ on }[0,1]$ 
 - $j(x)=e^{-x}(\cos  x+\sin  x)\text{ on }[0,4\pi ]$ 
 - $k(x)=\sqrt[3]{x}\sqrt[3]{(x-3)^2}\text{ on }[-1,4]$ 
- 
 ::: 
 
 ::: {#exr- } 
@@ -458,22 +449,22 @@ Find the derivative at each critical point and determine the local extreme value
 
 ::: {#exr- } 
 Find the derivative at each critical point and determine the local extreme values for the function 
-\[y=
+$$y=
 \begin{cases}
  4-2x & x\leq 1 \\
  x+1 & x>1
 \end{cases}
-\]
+$$
 ::: 
 
 ::: {#exr- } 
 Find the derivative at each critical point and determine the local extreme values for the function 
-\[y=
+$$y=
 \begin{cases}
-\frac{-1}{4}x^2-\frac{1}{2}x+\frac{15}{4} & x\leq 1 \\[10pt]
+\frac{-1}{4}x^2-\frac{1}{2}x+\frac{15}{4} & x\leq 1 \\ 
 x^3-6x^2+8x & x>1
 \end{cases}
-\]
+$$
 ::: 
 
 ::: {#exr- } 

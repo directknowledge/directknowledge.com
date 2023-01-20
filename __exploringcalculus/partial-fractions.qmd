@@ -66,7 +66,7 @@ where $A_i$, for $i=1, 2, \ldots, n$ are constants to be determined.
 ::: 
 
 ::: {#exm- } 
-Evaluate $ \displaystyle \int \frac{1}{x(x-4)}\, dx$.
+Evaluate $\displaystyle \int \frac{1}{x(x-4)}\, dx$.
 ::: 
 
 ::: {.solution }
@@ -87,7 +87,7 @@ where $C$ is an arbitrary constant
 
 
 ::: {#exm- } 
-Evaluate $ \displaystyle \int \frac{x^2+2x+8}{x^3-4x}\, dx$.
+Evaluate $\displaystyle \int \frac{x^2+2x+8}{x^3-4x}\, dx$.
 ::: 
 
 ::: {.solution }
@@ -107,7 +107,7 @@ where $C$ is an arbitrary constant
 ::: 
 
 ::: {#exm- } 
-Evaluate $ \displaystyle \int_2^4 \frac{3x-5}{(x-1)^2}\, dx$.
+Evaluate $\displaystyle \int_2^4 \frac{3x-5}{(x-1)^2}\, dx$.
 ::: 
 
 ::: {.solution }
@@ -128,7 +128,7 @@ as desired.
 
 
 ::: {#exm- } 
-Evaluate $ \displaystyle \int \frac{x^2+10x -36}{x(x-3)^2}\, dx$.
+Evaluate $\displaystyle \int \frac{x^2+10x -36}{x(x-3)^2}\, dx$.
 ::: 
 
 ::: {.solution }
@@ -165,7 +165,7 @@ where $A_i$, $B_i$ for $i=1, 2, \ldots, n$ are constants to be determined.
 
 
 ::: {#exm- } 
-Evaluate $ \displaystyle \int \frac{8(x^2+4)}{x(x^2+8)} \, dx$.
+Evaluate $\displaystyle \int \frac{8(x^2+4)}{x(x^2+8)} \, dx$.
 ::: 
 
 ::: {.solution }
@@ -185,7 +185,7 @@ as desired.
 
 
 ::: {#exm- } 
-Evaluate $ \displaystyle \int \frac{20x}{(x-1)(x^2+4x+5)} \, dx$.
+Evaluate $\displaystyle \int \frac{20x}{(x-1)(x^2+4x+5)} \, dx$.
 ::: 
 
 ::: {.solution }
@@ -205,7 +205,7 @@ where $C$ is an arbitrary constant.
 
 
 ::: {#exm- } 
-Evaluate $ \displaystyle \int \frac{2}{x(x^2+1)^2} \, dx$.
+Evaluate $\displaystyle \int \frac{2}{x(x^2+1)^2} \, dx$.
 ::: 
 
 ::: {.solution }
@@ -225,7 +225,7 @@ where $C$ is an arbitrary constant.
 
 
 ::: {#exm- } 
-Evaluate $ \displaystyle \int \frac{3x^4+4x^3+16x^2+20x+9}{(x+2)(x^2+3)^2} \, dx$.
+Evaluate $\displaystyle \int \frac{3x^4+4x^3+16x^2+20x+9}{(x+2)(x^2+3)^2} \, dx$.
 ::: 
 
 ::: {.solution }
@@ -258,31 +258,30 @@ where $C$ is an arbitrary constant.
 ::: {#exr- } 
 Evaluate the following integrals.
  
- - $ \displaystyle \int\frac{1}{4x^2-9}\, dx$
-- $ \displaystyle \int \frac{x^2+12x+12}{x^3-4x}\, dx$
-- $ \displaystyle \int \frac{3x^2+x+4}{x^4+3x^2+2}\, dx$
-- $ \displaystyle \int \frac{2x^3-4x^2-15x+5}{x^2-2x-8}\, dx$
-- $ \displaystyle \int_0^1 \frac{2u+3}{u^2+4u+3}\, dx$
-- $ \displaystyle \int \frac{4x^2+2x-1}{x^3+x^2}\, dx$
-- $ \displaystyle \int_0^1 \frac{x}{x^2+4x+13}\,dx$
-- $ \displaystyle \int \frac{x^2+3x+2}{x(x^2+2x+2)}\, dx$
-- $ \displaystyle \int \frac{x^2+3x-4}{x^3-4x^2+4x}\, dx$
-- $ \displaystyle \int_2^3 \frac{x^3-2x+7}{x^2+x-2}\, dx$
-- $ \displaystyle \int \frac{x^2}{x^3-x^2+4x-4}\, dx$
-- $ \displaystyle \int \frac{1}{(y^2+1)(y^2+2)}\, dy$
-- $ \displaystyle \int \frac{x^2-1}{x^3+x}\, dx$
-- $ \displaystyle \int\frac{x^4+3x^2+1}{x^5+5x^3+5x}\,dx$
-- $ \displaystyle \int \frac{x^2}{x^4-2x^2-8}\, dx$
-- $ \displaystyle \int \frac{x^4-3x^2-3x-2}{x^3-x^2-2x}\, dx$
-- $ \displaystyle \int \frac{x^2+5}{x^3-x^2+x-3}\, dx$
-- $ \displaystyle \int \frac{x^3}{x^3+1}\, dx$
-- $ \displaystyle \int \frac{x}{16x^4-1}\, dx$
-- $ \displaystyle \int_1^2 \frac{x^2+10x-36}{x(x-3)^2}\, dx$
-- $ \displaystyle \int \frac{x^2+6x+4}{x^4+8x^2+16}\, dx$
-- $ \displaystyle \int \frac{x^3+2x^3+3x-2}{(x^2+2x+2)^2}\, dx$
-- $ \displaystyle \int \frac{1}{(x+1)(x^2+2x+2)^2}\, dx$
-- $ \displaystyle \int \frac{x^3+1}{x(x^2+x+1)^2}\, dx$
- 
+ - $\displaystyle \int\frac{1}{4x^2-9}\, dx$
+- $\displaystyle \int \frac{x^2+12x+12}{x^3-4x}\, dx$
+- $\displaystyle \int \frac{3x^2+x+4}{x^4+3x^2+2}\, dx$
+- $\displaystyle \int \frac{2x^3-4x^2-15x+5}{x^2-2x-8}\, dx$
+- $\displaystyle \int_0^1 \frac{2u+3}{u^2+4u+3}\, dx$
+- $\displaystyle \int \frac{4x^2+2x-1}{x^3+x^2}\, dx$
+- $\displaystyle \int_0^1 \frac{x}{x^2+4x+13}\,dx$
+- $\displaystyle \int \frac{x^2+3x+2}{x(x^2+2x+2)}\, dx$
+- $\displaystyle \int \frac{x^2+3x-4}{x^3-4x^2+4x}\, dx$
+- $\displaystyle \int_2^3 \frac{x^3-2x+7}{x^2+x-2}\, dx$
+- $\displaystyle \int \frac{x^2}{x^3-x^2+4x-4}\, dx$
+- $\displaystyle \int \frac{1}{(y^2+1)(y^2+2)}\, dy$
+- $\displaystyle \int \frac{x^2-1}{x^3+x}\, dx$
+- $\displaystyle \int\frac{x^4+3x^2+1}{x^5+5x^3+5x}\,dx$
+- $\displaystyle \int \frac{x^2}{x^4-2x^2-8}\, dx$
+- $\displaystyle \int \frac{x^4-3x^2-3x-2}{x^3-x^2-2x}\, dx$
+- $\displaystyle \int \frac{x^2+5}{x^3-x^2+x-3}\, dx$
+- $\displaystyle \int \frac{x^3}{x^3+1}\, dx$
+- $\displaystyle \int \frac{x}{16x^4-1}\, dx$
+- $\displaystyle \int_1^2 \frac{x^2+10x-36}{x(x-3)^2}\, dx$
+- $\displaystyle \int \frac{x^2+6x+4}{x^4+8x^2+16}\, dx$
+- $\displaystyle \int \frac{x^3+2x^3+3x-2}{(x^2+2x+2)^2}\, dx$
+- $\displaystyle \int \frac{1}{(x+1)(x^2+2x+2)^2}\, dx$
+- $\displaystyle \int \frac{x^3+1}{x(x^2+x+1)^2}\, dx$
  
 ::: 
 

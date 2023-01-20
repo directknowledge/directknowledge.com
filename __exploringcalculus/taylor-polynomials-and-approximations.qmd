@@ -148,17 +148,15 @@ For each of the following find the Taylor polynomial of orders $0, 1, 2,$ and 3 
 - $f(x)=\sqrt{x}$, $c=4$
 - $f(x)=\sin x$, $c=\pi/6$
  
- 
 ::: 
 
 
 ::: {#exr- } 
 For each of the following find the linearization and quadratic approximation of $f$ at $x=0$.
-\begin{multicols}{3}
+ 
  - $f(x)=\ln (\sin x)$
 - $f(x)=1/\sqrt{1-x^2}$
 - $f(x)=e^{\cos x}$
- 
  
 ::: 
 
@@ -167,16 +165,14 @@ Find the $n$th-order Taylor polynomial $p_n(x)$ at $c$ for the function $f$ and 
 Plot the graphs of $f$ and the approximating polynomials on the same set of axes.
  - $f(x)=\cos x$, $c=\pi/4$, $n=0,1,2,3,4$
 - $f(x)=e^x x$, $c=1$, $n=0,1,2,3,4$
- 
 ::: 
 
 ::: {#exr- } 
 Use a Taylor polynomial to approximate the given number to within the indicated accuracy. 
-\begin{multicols}{3}
+ 
  - $e^{0.2}$, $0.0001$
 - $-\frac{1}{2.1}$, $0.0005$
 - $\sin 69^\circ$, $0.0001$
- 
  
 ::: 
 
@@ -188,7 +184,6 @@ Find the Taylor polynomial $p_n(x)$ and the Taylor remainder $r_n(x)$ for the fu
 - $f(x)= x\sin x$, $n=2$, $c=\pi/4$
 - $f(x)=\frac{2}{x}$, $n=3$, $c=1$
 - $f(x)=x^2\cos x$, $n=2$, $c=\pi$
- 
 ::: 
 
 

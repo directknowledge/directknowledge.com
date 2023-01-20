@@ -16,9 +16,9 @@ f'=g'h+g h'.
 
 ::: {#exm- } 
 Find the derivative of the function 
-\[
+$$
 f(x)=\left(2x^3+3x\right)\left(x^2-3\right).
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -28,16 +28,15 @@ f'(x) & =g'(x)h(x)+g(x)h'(x)
  =\left(2x^3+3x\right)'h(x)+g(x)\left(x^2-3\right)' \\
 & \qquad =\left(6x^2+3\right)\left(x^2-3\right)+\left(2x^3+3x\right)(2x) 
 =10 x^4-9 x^2-9
-\square
 \end{align*}
 ::: 
 
 
 ::: {#exm- } 
 Find the derivative of the function 
-\[
+$$
 f(x)=\left(x^2+3x\right)(3-x)\left(x^4+5x-2\right).
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -54,14 +53,13 @@ Since
  =9-3 x^2
 \end{align*}
 Thus,
-$
+$$
 f'(x) =\left(9-3 x^2\right)\left(x^4+5x-2\right)+\left(x^2+3x\right)(3-x)\left(4x^3+5\right)
-$
+$$
 which simplifies to,
-\[
+$$
 f'(x)=-7 x^6+45 x^4-20 x^3+6 x^2+90 x-18.
-\square
-\]
+$$
 ::: 
 
 ## Quotient Rule
@@ -77,9 +75,9 @@ f'=\frac{h g'-g h'}{h^2}.
 
 ::: {#exm- } 
 Find the derivative of the function 
-\[
+$$
 f(x)=\frac{\left(x^3-3x\right)\left(x^2-3\right)}{(x-4)x^2}.
-\]
+$$
 ::: 
 
 ::: {.solution }
@@ -98,20 +96,20 @@ f'(x)=\frac{9}{4 x^2}-\frac{169}{4 (x-4)^2}+4+2x=\frac{2 \left(18-9 x+12 x^2-6 x
 
 ::: {#exm- } 
 Find the first and second derivatives of the function 
-\[
+$$
 f(x)=\frac{a x+b}{c x+d}.
-\]
+$$
 ::: 
 
 ::: {.solution }
 Using the product rule with $f(x)=(a x+b)(c x+d)^{-1}$ we find
-\[
+$$
 f'(x)=\frac{a}{d+c x}-\frac{c (b+a x)}{(d+c x)^2}.
-\]
+$$
 Using the quotient rule with $f(x)=g(x)/h(x)$, $g(x)=a x+b$, and $h(x)=c x+d$ we find
-\[
+$$
 f'(x)=\frac{a d-b c}{(d+c x)^2}.
-\]
+$$
 The second expression for $f'$ is easier to work with.
 ::: 
 
@@ -124,19 +122,17 @@ Determine $a$ so that $f'\left(\pm \sqrt{\frac{2}{3}}\right)=0$ given $f(x)=x^3-
 ::: {#exr- } 
 Find the first derivative and the second derivative for each of the following.
  
-\item $  y=(x-1)\left(x^2+x+1\right).$
-\item $  y=\frac{2x+5}{3x-2}.$
-\item $  f(t)=\frac{t^2-1}{t^2+t-2}.$
- 
+- $y=(x-1)\left(x^2+x+1\right).$
+- $y=\frac{2x+5}{3x-2}.$
+- $f(t)=\frac{t^2-1}{t^2+t-2}.$
 ::: 
 
 ::: {#exr- } 
 Find the derivatives of all orders for each of the following.
  
-\item $  u=\frac{\left(x^2+x\right)\left(x^2-x+1\right)}{x^4}.$
-\item $  p=\frac{q^2+3}{(q-1)^3+(q+1)^3}.$
-\item $  w=\frac{3z^2e^z}{z+1}.$
- 
+- $u=\frac{\left(x^2+x\right)\left(x^2-x+1\right)}{x^4}.$
+- $p=\frac{q^2+3}{(q-1)^3+(q+1)^3}.$
+- $w=\frac{3z^2e^z}{z+1}.$
 ::: 
 
 ::: {#exr- } 
@@ -149,17 +145,16 @@ The curves $y=x^2+a x+b$ and $y=c x-x^2$ have a common tangent line at the point
 
 ::: {#exr- } 
 If gas in a cylinder is maintained at a constant temperature $T,$ the pressure $P$ is related to the volume $V$ by a formula of the form 
-\[
+$$
 P=\frac{n R T}{V-n b}-\frac{a n^2}{V^2},
-\] 
+$$ 
 in which $a,$ $b,$ $n,$ and $R$ are constants. Find $\frac{dP}{dV}.$
 ::: 
 
 ::: {#exr- } 
 Find the first, second, and third derivatives of the following functions. 
  
-\item $y=\left(x^4+3x^2+17x+82\right)^3$ 
-\item $y=\frac{x^4+3x^2+17x+82}{\sqrt{x}}$
- 
+-   $y=\left(x^4+3x^2+17x+82\right)^3$ 
+-   $y=\frac{x^4+3x^2+17x+82}{\sqrt{x}}$
 ::: 
 

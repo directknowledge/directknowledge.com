@@ -1,7 +1,7 @@
 ---
 pagetitle: "Continuous Functions - Exploring Calculus"
 ---
-# "Continuous Functions"
+# Continuous Functions
 
 ## Continuity at a Point
 
@@ -12,7 +12,6 @@ A function is \index{continuous} **continuous**  at a point $c$ means
 - $f(c)$ is defined,
 - $\lim _{x\to c}f(x)$ exists, and 
 - $\lim _{x\to c}f(x)=f(c).$
- 
 ::: 
 
 ## Discontinuity
@@ -29,17 +28,17 @@ Find three examples of how a \index{discontinuity} **discontinuity**  might aris
  $$ 
  is discontinuous at $x=1$ because $f(1)$ is not defined. 
  So one type of discontinuity is a \index{hole} **hole**  in the function. 
- \par
+  
  Secondly, the function 
-\[
+$$
 f(x)=
 \begin{cases}
 x^2+1 & x\geq 0 \\ -x^2-2 & x<0
 \end{cases}
-\]
+$$
 is discontinuous at $x=0$ because $\lim _{x\to 0^-}f(x)=-2$ and $\lim _{x\to 0^+}f(x)=1;$ thus $\lim _{x\to 0}f(x)$ does not exist and so $f$ has a discontinuity at $x=0.$ 
-This type of discontinuity is called a $\texttt{"}$\index{jump}$\texttt{"} **jump}$\texttt{"** $. 
-\par
+This type of discontinuity is called a \index{jump} **jump**. 
+ 
 Thirdly, the function
 $$
 f(x)=\frac{x-1}{x-2}
@@ -59,12 +58,12 @@ Give some examples of continuous functions.
 ::: 
 
 ::: {.solution }   
-For example, the functions $2x^2-2x+5,$ (polynomial), $\ds\frac{x-1}{x}$ (rational), $\csc  x$ (trigonometric), and $\sec ^{-1}x$ (inverse trigonometric) are continuous on their domains. 
+For example, the functions $2x^2-2x+5,$ (polynomial), $\displaystyle\frac{x-1}{x}$ (rational), $\csc  x$ (trigonometric), and $\sec ^{-1}x$ (inverse trigonometric) are continuous on their domains. 
 Also the functions 
 $$
  \displaystyle 2x^2-2x+5+\frac{x-1}{x}(\csc  x),
 $$ 
-$\ds\sec ^{-1}\left(\frac{x-1}{x}\right),$ and $\ds\left(2x^2-2x+5\right)\left(\frac{x-1}{x}\right)$ are continuous functions on their domains. 
+$\displaystyle\sec ^{-1}\left(\frac{x-1}{x}\right),$ and $\displaystyle\left(2x^2-2x+5\right)\left(\frac{x-1}{x}\right)$ are continuous functions on their domains. 
 ::: 
 
 
@@ -100,19 +99,19 @@ $$
 
 ::: {.solution }   
 By the composition limit theorem, we have 
-\[
+$$
 \lim _{x\to 3}\left(x^2+3\right)^2 
 =\left(\lim _{x\to 3}\left(x^2+3\right)\right)^2
 =12^2
 =144.
-\]
+$$
 By the composition limit theorem, we have  
-\[
+$$
 \lim _{x\to \pi /4}\sin ^4x
 =\left(\lim _{x\to \pi /4}\sin  x\right){}^4
 =\left(\frac{\sqrt{2}}{2}\right)^4
 =\left(\frac{1}{4}\right).
-\square\]
+ $$
 ::: 
 
 ## One-Sided Continuity
@@ -143,11 +142,11 @@ The function $f(x)=\sqrt{x}$ is continuous from the right at $x=0$ because $\lim
 
 ::: {#exm- } 
 Find constants $a$ and $b$ so that 
-\[
+$$
 \begin{cases}
 a x^2+b & x>2 \\ 4 & x=2 \\ x^2-a x+b & x<2
 \end{cases}
-\]
+$$
 is continuous on $\mathbb{R}$.
 ::: 
 
@@ -160,11 +159,11 @@ Solving this system we have, $a=2/3$ and $b=4/3.$
 
 ::: {#exm- } 
 Find constants $a$ and $b$ such that $f$ is continuous at $x=1$ where 
-\[
+$$
 \begin{cases}
 a x+b & x>1 \\ 3 & x=1 \\ x^2-4x+b+3 & x<1
 \end{cases}
-\]
+$$
 ::: 
 
 ::: {.solution }   
@@ -199,16 +198,15 @@ If $f$ is a continuous function on the closed interval $[a,b]$ and $L$ is some n
 
 ::: {#exm- } 
 The population (in thousands) of a colony of bacteria $t$ minutes after the application of a toxin is given by the function 
-\[
+$$
 P(t)=
 \begin{cases}
 t^2+1 & \text{if } 0\leq t<5 \\ -8t+66 & \text{if } t\geq 5
 \end{cases}
-\]
+$$
 \ 
 - When does the colony die out?
 - Show that at some time between $t=2$ and $t=7,$ the population is $9,000.$
- 
 ::: 
 
 ::: {.solution }   
@@ -221,7 +219,7 @@ $$
 \lim _{t\to 5^-}P(t)=\lim _{t\to 5^-}\left(t^2+1\right)=26$$  we know that $P$ is continuous at $t=5$ and thus, also for all $t\geq 0.$ 
 (a) The colony dies out when $-8t+66=0$ which means $t=33/4\approx 8.25.$ 
 Therefore, the colony dies out in 8 minutes and 15 seconds. 
-\par
+ 
 (b) Since $P(2)=5,$ $P(7)=10,$ and $P$ is continuous on $(2,7),$ the intermediate value theorem yields at least one number $c$ between 2 and 7 such $P(c)=9.$ 
 Therefore, there is some time $t=c$ between $t=2$ and $t=7$ such that the population is 9,000. 
 ::: 
@@ -231,12 +229,12 @@ Therefore, there is some time $t=c$ between $t=2$ and $t=7$ such that the popula
 
 ::: {#exr- } 
 Sketch the graph of the function 
-\[ 
+$$ 
 f(x)=
 \begin{cases}
 x^2-1 & -1\leq  x<0 \\ 2x & 0<x<1 \\ 1 & x=1 \\ -2x+4 & 1<x<2 \\ 0 & 2<x<3.
 \end{cases} 
-\]
+$$
 Use the graph of the function $f$  to answer the following.
 \ 
 - Does $f(-1)$  exist?
@@ -250,7 +248,6 @@ Use the graph of the function $f$  to answer the following.
 - At what values is $f$  continuous?
 - What value should be assigned to $f(2)$ , to make the extended function continuous at $x=2?$ 
 - To what new value should $f(1)$  be assigned to remove the discontinuity?
- 
 ::: 
 
 ::: {#exr- } 
@@ -260,41 +257,23 @@ For each of the following functions determine the largest set on which the funct
 - $g(x)=\frac{1}{|x|+1}-\frac{x^2}{2}$ 
 - $g(x)=\frac{\sqrt{x^4+1}}{1+\sin ^2x}$ 
 - $g(x)=\sqrt[4]{3x-1}$ 
- 
 ::: 
 
 ::: {#exr- } 
 For each of the following functions find constants $a$  and $b$  so that the function will be continuous for all $x$  in the domain.
  
-- $f(x)=
-\begin{cases}
-\frac{\tan  a x}{\tan  b x} & x<0 \\ 4 & x=0 \\ a x+b & x>0
-\end{cases}
-$ 
-- $f(x)=
-\begin{cases}
-\frac{\sqrt{a x+b}-1}{x} & x\neq 0 \\ 1 & x=0
-\end{cases}
-$  
-- $f(x)=
-\begin{cases}
-a x+3 & x<1 \\ 5 & x=1 \\ x^2+b & x>1
-\end{cases}
-$ 
- 
+- $f(x)=\begin{cases} \frac{\tan  a x}{\tan  b x} & x<0 \\ 4 & x=0 \\ a x+b & x>0 \end{cases}$ 
+- $f(x)=\begin{cases}\frac{\sqrt{a x+b}-1}{x} & x\neq 0 \\ 1 & x=0\end{cases}$  
+- $f(x)=\begin{cases}a x+3 & x<1 \\ 5 & x=1 \\ x^2+b & x>1\end{cases}$ 
 ::: 
 
 ::: {#exr- } 
 Let $u(x)=x$  and 
-$f(x)=
-\begin{cases}
-0 & x\neq 0 \\ 1 & x=0
-\end{cases}
-$ . 
+$f(x)=\begin{cases}0 & x\neq 0 \\ 1 & x=0\end{cases}$. 
 Show, for this given $u$  and $f$ , that 
-\[
+$$
 \lim _{x\to 0}f[u(x)]\neq f\left(\lim _{x\to 0}u(x)\right).
-\]
+$$
 ::: 
 
 ::: {#exr- } 
@@ -304,7 +283,6 @@ If a function $f$  is not continuous at $x=c$ , but can be made continuous at $x
 - $f(x)=\frac{x-2}{|x-2|}$  at $c=2$ 
 - $f(x)=\frac{2-\sqrt{x}}{4-x}$  at $c=4$ 
 - $f(x)=\frac{2-x}{4-\sqrt{x}}$  at $c=16$ 
- 
 ::: 
 
 ::: {#exr- } 

@@ -222,7 +222,7 @@ where $C$ is an arbitrary constant.
 
 ::: {#exr- } 
 Evaluate the following integrals.
-\begin{multicols}{3}
+ 
  - $\int x\sin 3x \, dx$
 - $\int (\ln x)^2 \, dx$
 - $\int 2x e^{3x}\, dx$
@@ -233,13 +233,12 @@ Evaluate the following integrals.
 - $\int x\sin x\cos x\, dx$
 - $\int x^2 e^{4x}\, dx$
  
- 
 ::: 
 
 
 ::: {#exr- } 
 Evaluate the following definite integrals.
-\begin{multicols}{3}
+ 
  - $\int_0^1 x e^{-5x}\, dx $
 - $\int_0^{\ln 2} \ln 2x \,dx$
 - $\int_1^{e^2} x^2 \ln x \, dx$
@@ -247,17 +246,15 @@ Evaluate the following definite integrals.
 - $\int_0^{\pi/8} x \sec^2 2x \, dx$
 - $\int_0^1 x \arcsin^2 \, dx$
  
- 
 ::: 
 
 
 ::: {#exr- } 
 Evaluate the integral by making a $u$-substitution and then integration by parts. 
-\begin{multicols}{3}
+ 
  - $\int e^{\sqrt{x}}\, dx$
 - $\int x^5 e^{x^2}\, dx$
 - $\int \cos \sqrt{x} \, dx$
- 
  
 ::: 
 
@@ -268,7 +265,6 @@ Use the reduction formulas to evaluate the integral.
 - $\int \tan^4x \, dx$
 - $\int^{\pi/2}_0 \sin^5 x \, dx$
 - $\int \cos^5 x \, dx$
- 
  
 ::: 
 
@@ -332,7 +328,6 @@ Use integration by parts to establish the reduction formula
  - $\int \sin^n x \, dx = -\frac{1}{n} \cos x \sin^{n-1} x+\frac{n-1}{n} \int \sin^{n-2} x \, dx$
 - $\int x^n \sin x \, dx = -x^n \cos x + n \int x^{n-1} \cos x \, dx$
 - $\int x^n \cos x \, dx = -x^n \sin x + n \int x^{n-1} \sin x \, dx$
- 
 ::: 
 
 
