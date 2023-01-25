@@ -1,0 +1,1663 @@
+---
+pagetitle: Techniques of Integration - Single Variable Calculus
+---
+#  Techniques of Integration
+
+
+Techniques of Integration (A Student's Handbook) provides a comprehensive overview of the most common techniques for solving integrals. The book includes substitution, integration by parts, partial fractions, and trigonometric substitutions. Each technique is clearly explained with step-by-step examples, and practice problems are provided to help you hone your skills.
+
+Integration by parts is a technique of integration that can be used to simplify the process of integration. The basic idea is to express a given function as the product of two simpler functions. The key to using this technique effectively is to choose the two functions wisely so that the resulting product is easier to integrate than the original function. With a little practice, integration by parts can be mastered and used to tackle even the most difficult integrals.
+
+Integrals involving trigonometric functions can be tricky to solve. However, there are a few techniques that can be used to tackle these integrals. First, it can be helpful to rewrite the function in terms of another variable.
+
+For example, if you're dealing with a sine function, you could try rewriting it in terms of cosine. This can sometimes make the integral easier to work with. Another technique is to use trigonometric identities.
+
+In this chapter, you'll learn how to integrate powers of sine and cosine, and also powers of secant and tangent. With a bit of practice, trigonometric integrals can be conquered!
+
+If you've ever been stuck trying to integrate a tricky function, then trigonometric substitution might be just the technique you need. This technique is based on the fact that many difficult integrals can be simplified by making a substitution that involves a trigonometric function
+
+In this chapter you'll learn how to work with integrals involving sum and differences of squares. Trigonometric substitution can be a powerful tool for simplifying complex integrals of this form, and it's definitely worth learning if you're interested in techniques of integration. The idea is to replace a complicated integral involving a rational power of a trigonometric function with a simpler one. This can be achieved by making a suitable substitution in the integrand. 
+
+These techniques of integration have been developed over many centuries, with each new generation of mathematicians building on the work of their predecessors. One important area of research is the theory of partial fractions.
+
+Partial fractions is a mathematical technique used to integrate rational functions. In the simplest case, it involves breaking up a fraction into a sum of simpler fractions, each of which can be integrated more easily. However, partial fractions can also be used to integrate more complex rational functions. The key is to identify the structure of the function and then to apply the appropriate techniques of integration.
+
+Partial fractions are used to decompose a rational function into a sum of simpler functions, which makes it possible to integrate the function more easily. The first step in the process is to find the roots of the denominator polynomial. These roots are then used to split the denominator into a product of linear factors. The next step is to determine the coefficients of the partial fractions. This can be done by solving a system of linear equations, or by using a method known as undetermined coefficients. Once the coefficients are known, the final step is to integrate each partial fraction separately.
+
+Although partial fractions may seem like a daunting topic at first, with a little practice it is possible to master this important technique. With a little practice, partial fractions can be used to solve a wide variety of integrals.
+
+Integrals are one of the most fundamental concepts in mathematics, and improper integrals are a natural extension of this concept. However, improper integrals can be tricky to compute, due to the fact that they often involve infinity. As a result, there are a variety of techniques that can be used to tackle these integrals.
+
+The most important thing is to make sure that the limits of integration are well-defined. Once this is done, you can use various techniques of integration to compute the improper integral. These techniques include integration by parts, partial fractions, and change of variables. With practice, you will be able to master these techniques and compute any improper integral.
+
+But what exactly is an improper integral? Well, there are two types: type I and type II. A type I improper integral is one where the function diverges at one or both of the limits of integration. A type II improper integral is one where the function converges, but the limit of integration is infinite. In both cases, the integral just doesn't exist in the usual sense.
+
+So how do you deal with an improper integral? Well, intis chapter you'll learn a few techniques that can be used, depending on the situation. So if you ever find yourself faced with an improper integral, don't despair! There are techniques that can be used to deal with them. It just takes a little bit of creativity and thinking outside the box.
+
+This book is not for everyone. In fact, it's quite possible that you will finish reading this sentence and immediately close the book, never to look at it again. But if you're still reading, then there's a good chance that this book is for you.
+
+Specifically, it's for people who want to learn techniques of integration. Whether you're an experienced student or someone who just wants to brush up on your calculus skills, this book will provide you with the tools you need to succeed. So if you're looking for a book that can help you integrate techniques into your mathematical repertoire, then this is the book for you. By the time you finish this book, you should be well on your way to mastering integration techniques.
+
+This book is specifically designed for students who are having trouble with integration techniques. In it, we'll go over all the major techniques and show you how to apply them to a variety of problems. We'll also provide plenty of worked examples so that you can see how the techniques are used in practice. By the time you finish this book, you should be well on your way to mastering integration techniques.
+
+How I teach in this book: 1) I use clear and concise language 2) I provide plenty of worked examples 3) I focus on the major integrative techniques 4) I show you how to apply these techniques to a variety of problems 5) I provide plenty of opportunity for practice. So what are you waiting for? Let's get started!
+
+
+
+
+## Integration By Parts
+
+
+Here we motivate and elaborate on an integration technique known as integration by parts. We also demonstrate repeated application of this formula to evaluate a single integral. The reduction formula for integral powers of the cosine function and an example on its use is also presented.
+
+
+## Introduction
+
+There are many techniques of integration. 
+Consider for example, the following three integrals.
+\begin{equation}
+\int\frac{4}{x^2+9}\, dx
+\qquad 
+\int\frac{4x}{x^2+9}\, dx
+\qquad 
+\int\frac{4x^2}{x^2+9}\, dx
+\end{equation}
+
+How would you integrate these?
+The first uses the arctangent function, the second uses logarithms, and the third uses division. 
+Can you integrate these three integrals? 
+
+
+## The Integration by Parts Formula
+
+Let $f$ and $g$ be differentiable functions.
+Recall the product rules implies that $fg$ is a differentiable function and that 
+\begin{equation}
+[f(x) g(x) ]' = f'(x) g(x) + f(x) g'(x). 
+\end{equation}
+If we integrate both sides we obtain
+\begin{equation}
+\int [f(x) g(x) ]' dx 
+= \int f'(x) g(x) \, dx + \int f(x) g'(x) \, dx. 
+\end{equation}
+It may happen that one of the integrals on the right-hand side is easier to integrate than the other.
+
+::: {#thm- } \label{Integration by Parts}
+Let $u=f(x)$ and $v=g(x)$ be differentiable functions. 
+The differentials are $du= f'(x) \, dx$ and $dv= g'(x) \, dx$ and the formula
+\begin{equation}
+\int u \, dv = u v -\int v\, du 
+\end{equation}
+is called \index{integration by parts} **integration by parts** .
+::: 
+
+::: {#exm- } 
+Find $\int x e^x \, dx.$
+::: 
+
+::: {.solution }
+Let $u=x$ and $dv=e^x \, dx$. 
+Then $du =dx$ and $v = e^x$, we have
+\begin{equation}
+\int x e^x \, dx= x e^x - \int e^x \, dx = x e^x - e^x +C
+\end{equation}
+where $C$ is an arbitrary constant. 
+::: 
+
+::: {#exm- } 
+Find $\int x \sin x \, dx.$
+::: 
+
+::: {.solution }
+Let $u=x$ and $dv=\sin x \, dx$. 
+Then $du =dx$ and $v = -\cos x$, we have
+\begin{equation}
+\int x \sin x \, dx= - x \cos x - \int (-\cos x) \, dx = -x \cos x + \sin x +C
+\end{equation}
+where $C$ is an arbitrary constant. 
+::: 
+
+::: {#thm- } 
+Let $f(x)$ and $g(x)$ be differentiable functions. 
+Then 
+\begin{equation}
+\int_a^b f(x) g'(x)\, dx = \left. f(x)g(x) \right|_a^b - \int_a^b g(x) f'(x) \, dx.
+\end{equation}
+::: 
+
+::: {#exm- } 
+Find $\int_e^{e^2} \ln x \, dx.$
+::: 
+
+::: {.solution }
+Let $u=\ln x$ and $dv=dx$.
+Then $du =(1/x) dx$ and $v = x$, we have
+\begin{equation}
+\int_e^{e^2} \ln x \, dx = \left.x \ln x\right|_e^{e^2} - \int_e^{e^2} x\left(\frac{1}{x}\right)\, dx = \left. \left(x \ln x -x\right)\right|_e^{e^2} = e^2
+\end{equation}
+or approximately 7.3891. 
+::: 
+
+
+
+## Solving for Unknown Integral
+
+::: {#exm- } 
+Find $\int \sec^3 x\, dx$.
+::: 
+
+::: {.solution }
+Let $u=\sec x$ and $dv=\sec^2 x$.
+Then $du = \sec x\tan x\, dx$ and ${v=\int \sec^2 x\, dx}$. 
+We have 
+\begin{align*}
+\int \sec^3 x \, dx
+& = \sec x \tan x -\int \tan^2 x \sec x\, dx \\
+& = \sec x \tan x -\int (\sec^2x-1)\sec x\, dx \\
+& = \sec x \tan x -\int \sec^3x\, dx +\int \sec x\, dx \\
+& = \sec x \tan x - \int \sec^3x\, dx + \ln \vert \sec x + \tan x\vert.
+\end{align*}
+Combining these together we have
+\begin{equation}
+2 \int \sec^3 x \, dx = \sec x \tan x + \ln \vert \sec x + \tan x\vert +C
+\end{equation}
+where $C$ is an arbitrary constant. 
+Therefore we finally have
+\begin{equation}
+\int \sec^3 x \, dx = \frac{1}{2}\sec x \tan x +\ln \sqrt{\sec x + \tan x} +C
+\end{equation}
+as desired.
+::: 
+
+
+## Repeated Use of Integration by Parts
+
+
+::: {#exm- } 
+Find $\int e^x \cos x \, dx$.
+::: 
+
+::: {.solution }
+Let $u=e^x$ and $dv=\cos x \, dx$.
+Then $du=e^x$ and $v=\sin x$. 
+We find that 
+\begin{equation}
+\int e^x \cos x \, dx = e^x \sin x -\int e^x \sin x\, dx.
+\end{equation}
+Let $u=e^x$ and $dv=\sin x \, dx$.
+Then $du=e^x$ and $v=-\cos x$. 
+We find that 
+\begin{align*}
+\int e^x \cos x \, dx 
+& = e^x \sin x - \left( -e^x \cos x -\int e^x (-\cos x) \, dx \right)  \\
+& = e^x \sin x +e^x \cos x -\int e^x \cos x \, dx.
+\end{align*}
+Combining these together we have
+\begin{equation}
+2\int e^x \cos x \, dx = e^2 \sin x +e^x \cos x + C
+\end{equation}
+or in other words
+\begin{equation}
+\int e^x \cos x\, dx = \frac{e^x \sin x +e^x \cos x}{2} +C
+\end{equation}
+where $C$ is an arbitrary constant. 
+::: 
+
+
+
+
+## Reduction Formulas
+
+::: {#exm- } 
+Demonstrate the repeated use of integration by parts by proving the reduction formula
+\begin{equation}
+\int \cos^nx \, dx 
+= \frac{1}{n} \sin x \cos^{n-1} x+\frac{n-1}{n} \int \cos^{n-2} x \, dx
+\end{equation}
+where $n$ is an integer greater than 2.
+::: 
+
+::: {.solution }
+Let $u=\cos^{n-1}x$ and $dv=\cos x \, dx$.
+Then we have 
+$$
+du =(n-1)\cos^{n-2} x (-\sin x)\, dx
+$$ 
+and $v=\sin x$.
+Therefore
+\begin{align*}
+\int \cos^n \, dx & 
+= \cos^{n-1}\sin x +(n-1) \int \sin^2 x \cos^{n-2} x\, dx \\
+& = \cos^{n-1} x \sin x+ (n-1)\int (1-\cos^2 x)\cos^{n-2} x \, dx \\
+& = \cos^{n-1}\sin x +(n-1) \int\cos^{n-2} x \, dx -(n-1)\int \cos^n x\, dx
+\end{align*}
+Combining these together we have
+\begin{equation}
+n\int \cos^n x\, dx = \cos^{n-1}\sin x +(n-1)\int \cos^{n-2}x \, dx.
+\end{equation}
+The final result is 
+\begin{equation}
+\int \cos^nx \, dx 
+= \frac{\sin x \cos^{n-1}x}{n} +\frac{n-1}{n} \int \cos^{n-2} x \, dx
+\end{equation}
+where $C$ is an arbitrary constant. 
+::: 
+
+::: {#exm- } 
+Find $\int \cos ^5x\, dx$. 
+::: 
+
+::: {.solution }
+We will use the reduction formula with $n=5$ and $n=3$.
+We have 
+\begin{align*}
+\int\cos^5 \, dx & = \frac{\cos^4 \sin x}{5}+\frac{4}{5}\int \cos^3\, dx \\
+& = \frac{\cos^4 \sin x}{5}+\frac{4}{5} 
+\left( \frac{1}{3}\cos^2 \sin x +\frac{2}{3}\sin x \right) +C \\
+& = \frac{1}{5}\cos^4 \sin x + \frac{4}{15} 
+\cos^2 \sin x + \frac{8}{15}\sin x +C
+\end{align*}
+where $C$ is an arbitrary constant. 
+::: 
+
+
+## Exercises
+
+
+::: {#exr- } 
+Evaluate the following integrals.
+ 
+ - $\int x\sin 3x \, dx$
+- $\int (\ln x)^2 \, dx$
+- $\int 2x e^{3x}\, dx$
+- $\int \tan^{-1} x \, dx$
+- $\int \cos^{-1}(2x)\, dx$
+- $\int x\sec^2 x \, dx$
+- $\int \frac{xe^x}{(x+1)^2} \, dx$
+- $\int x\sin x\cos x\, dx$
+- $\int x^2 e^{4x}\, dx$
+ 
+::: 
+
+
+::: {#exr- } 
+Evaluate the following definite integrals.
+ 
+ - $\int_0^1 x e^{-5x}\, dx $
+- $\int_0^{\ln 2} \ln 2x \,dx$
+- $\int_1^{e^2} x^2 \ln x \, dx$
+- $\int_{0}^{1/\sqrt{2}} y \tan^{-1}\, dy$
+- $\int_0^{\pi/8} x \sec^2 2x \, dx$
+- $\int_0^1 x \arcsin^2 \, dx$
+ 
+::: 
+
+
+::: {#exr- } 
+Evaluate the integral by making a $u$-substitution and then integration by parts. 
+ 
+ - $\int e^{\sqrt{x}}\, dx$
+- $\int x^5 e^{x^2}\, dx$
+- $\int \cos \sqrt{x} \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Use the reduction formulas to evaluate the integral. 
+\begin{multicols}{4}
+ - $\int \sec^4 x \, dx$
+- $\int \tan^4x \, dx$
+- $\int^{\pi/2}_0 \sin^5 x \, dx$
+- $\int \cos^5 x \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Find the area of the region between $y=x\sin x$ and $y=x$ for $0\leq x \leq \pi/2$. 
+::: 
+
+
+::: {#exr- } 
+Find the area of the region under the graph of $y=(\ln x)^2$ n the interval $[1,e]$. 
+::: 
+
+::: {#exr- } 
+Find the area of the region under the graph of $y=\frac{xe^x}{(1+x)^2}$ on the interval $[0,1]$. 
+::: 
+
+::: {#exr- } 
+Given the region bounded by the graph of $y=x\cos x$, $y=0$, $x=-1$, and $x=1$. 
+Find the area of the region. 
+Find the volume of the solid generated by revolving abut the $x$-axis. 
+::: 
+
+::: {#exr- } 
+The region bounded by the graph pf $y=e^{x/2}\cos x$, $x=0$, $y=0$, and $x=\pi/2$ is revolved about eh $x$-axis.
+Find the volume if the solid generated. 
+::: 
+
+
+::: {#exr- } 
+If $f(0)=g(0)$ and $f''$ and $g''$ are continuous, prove that 
+\begin{equation}
+\int_0^a f(x)g''(x) \, dx = f(a) g'(a) -f'(a) g(a) + \int_0^a f''(x)g(x) \, dx.
+\end{equation}
+::: 
+
+
+::: {#exr- } 
+The region bounded by the graphs of $y=\sin x$, $y=0$, $x=0$, and $x=\pi$ is revolved about the line $x=-1$.
+Find the volume if the solid generated. 
+::: 
+
+::: {#exr- } 
+Suppose that $f(1)=2$, $f(4)=7$, $f'(1)=5$, $f'(4)=3$, and $f''$ is continuous.
+Find the value of $\int_1^4 x f''(x) \, dx$. 
+::: 
+
+::: {#exr- } 
+Use integration by parts to show that 
+$$
+\int f(x) \, dx = x f(x) -\int x f'(x)\, dx.
+$$
+::: 
+
+
+::: {#exr- } 
+Use the method of cylindrical shells to find the volume generated by rotating the region bounded by $y=e^{-x}$, $y=0$, $x=-1$, $x=0$, about $x=1$. 
+::: 
+
+::: {#exr- } 
+Use integration by parts to establish the reduction formula 
+ - $\int \sin^n x \, dx = -\frac{1}{n} \cos x \sin^{n-1} x+\frac{n-1}{n} \int \sin^{n-2} x \, dx$
+- $\int x^n \sin x \, dx = -x^n \cos x + n \int x^{n-1} \cos x \, dx$
+- $\int x^n \cos x \, dx = -x^n \sin x + n \int x^{n-1} \sin x \, dx$
+::: 
+
+
+
+
+
+
+## Trigonometric Integrals
+
+Integrals involving powers of sine and cosine and integrals involving powers of secant and tangent are studied. We also discuss integrals of products of sine and cosine functions involving different angles. Proficiency using trigonometric identities is assumed.
+
+## Integrals Involving Powers of Sine and Cosine
+
+The goal now is to evaluate integrals involving trigonometric functions. 
+These techniques will be indispensable we using trigonometric substitutions.  
+We begin with a simple example that demonstrates some of the ideas in this sections. 
+
+::: {#exm- } 
+Evaluate $\int \sin^3 x\, dx$. 
+::: 
+
+::: {.solution }
+We write $\sin^3 x = \sin^2 x\sin x= (1-\cos^2 x)\sin x$ and use this with the substitution $u=\cos x$ as follows
+\begin{align*}
+\int \sin^3 x\, dx 
+& = \int (1-\cos^2 x)\sin x\,  dx 
+= - \int (1-u^2) \, du \\
+& =  -  u + \frac{1}{3} u^3 +C 
+= -\cos x +\frac{1}{3} \cos^3 x +C
+\end{align*}
+where $C$ is an arbitrary constant. 
+::: 
+
+The identity $\sin^2x + \cos^2 x=1$ allows use to convert back and forth between powers of sine and cosine as needed. 
+
+::: {#thm- } 
+If $m$ and $n$ are positive integers, then the integral 
+\begin{equation}
+\int \sin^m x \cos^n x \, dx
+\label{pwoersincos}
+\end{equation}
+can be evaluated by one of the three methods. 
+ - If $m$ is odd, then split off a factor of $\sin x$, apply the identity $\sin^2 x=1-\cos^2 x$, and make the substitution $u=\cos x$. 
+- If $n$ is odd, then split off a factor of $\cos x$, apply the identity $\cos^2 x=1-\sin^2 x$, and make the substitution $u=\sin x$
+- If $m$ and $n$ are both even, use the identities 
+$$
+\sin^2 x=\frac{1}{2}(1-\cos 2x)\qquad
+\cos^2 x=\frac{1}{2}(1+\cos 2x)
+$$ 
+to reduce the powers on $\sin x$ and $\cos x$.
+::: 
+
+::: {#exm- } 
+Evaluate $\int_0^{\pi/3} \sin^4 3x \cos^3 3x \, dx$.
+::: 
+
+::: {.solution }
+Notice that $n=3$ is odd, so we have
+\begin{align*}
+\int_0^{\pi/3} \sin^4 3x \cos^3 3x \, dx 
+ & = \int_0^{\pi/3} \sin^43x (1-\sin^2 3x) \cos 3x \, dx \\
+ & = \left[ \frac{1}{15}\sin^5 3x -\frac{1}{21} \sin^7 3x\right]_0^{\pi/3}
+= 0
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Evaluate $\int \sin^3 x \cos^2 x\, dx$.
+::: 
+
+::: {.solution }
+Notice that $m=3$ is odd, so we have
+\begin{align*}
+\int \sin^3 x \cos^2 x\, dx 
+& = \int(1-\cos^2 x) \cos^2 x \sin x\, dx \\
+& = \int(\cos^2 x-\cos^4 x)\sin x \, dx 
+= -\frac{1}{3}\cos^3 x+\frac{1}{5}\cos^5 x +C
+\end{align*}
+where $C$ is an arbitrary constant.
+::: 
+
+::: {#exm- } 
+Evaluate $\int \sin^2 x \cos^4 x\, dx$.
+::: 
+
+::: {.solution }
+Notice that both $m$ and $n$ are even, so we have
+\begin{align*}
+\int \sin^2 x\cos^4 x \, dx 
+& = \frac{1}{8}\int(1-\cos 2x)(1+\cos 2x)^2 \, dx \\
+& = \frac{1}{8}\int (1-\cos^2 2x)(1+\cos 2x)\, dx \\
+& = \frac{1}{8}\int \sin^2 2x \, dx + \frac{1}{8}\int \sin^2 2x \cos 2x \, dx \\
+& = \frac{1}{16} \int (1-\cos 4x)\, dx +\frac{1}{48} \sin^3 2x  \\
+& = \frac{1}{16} x -\frac{1}{64}\sin 4x +\frac{1}{48} \sin^3 2x +C
+\end{align*}
+where $C$ is an arbitrary constant.
+::: 
+
+
+
+
+## Integrals Involving Powers of Secant and Tangent
+
+Recall the basic formulas from before:
+\begin{equation}
+\frac{d}{dx}(\tan x) = \sec^2 x
+\qquad 
+\int \tan x \, dx = \ln |\sec x|+ C 
+\end{equation}
+and for the secant function 
+\begin{equation}
+\frac{d}{dx}(\sec x) = \sec x \tan x
+\qquad 
+\int \sec x \, dx =\ln |\sec x +\tan x| +C.
+\end{equation}
+
+::: {#exm- } 
+Evaluate $\int \tan^3 x\, dx$. 
+::: 
+
+::: {.solution }
+We use the identity $\tan^2 x = \sec^2 x-1$ and we have
+\begin{align*}
+\int \tan^3 x \, dx 
+& = \int \tan x \tan^2 x \, dx 
+=\int \tan x(\sec^2 x-1)\, dx  \\
+& = \int \tan x \sec^2 x \, dx - \int \tan x \, dx 
+= \frac{\tan^2 x}{2} -\ln |\sec x | + C
+\end{align*}
+as desired. 
+::: 
+
+::: {#thm- } 
+If $m$ and $n$ are positive integers, then the integral 
+\begin{equation}
+\int \sec^m x \tan^n x \, dx
+\label{pwoersectan}
+\end{equation}
+can be evaluated by one of the three methods. 
+ - If $m$ is even, then split off a factor of $\sec x$, apply the identity $\sec^2 x=1+\tan^2 x$, and make the substitution $u=\tan x$. 
+- If $n$ is odd, then split off a factor of $\sec^2 x$, apply the identity $\tan^2 x=\sec^2 x-1$, and make the substitution $u=\sec x$. 
+- If $m$ is odd and $n$ is even, use the identity $\tan^2 x =\sec^2x -1$ and the reduction formula for powers of $\sec x$, namely 
+\begin{equation}
+\int \sec^n x \, dx = \frac{1}{n-1} \sec^{n-2} x \tan x +\frac{n-2}{n-1} \int \sec^{n-2} x \, dx
+\end{equation}
+for a positive integer $n$ great than 1.
+::: 
+
+::: {#exm- } 
+Evaluate $\int \sec^4 x \tan^9 x \, dx$.
+::: 
+
+::: {.solution }
+Notice that $m=4$ is even. 
+We let $u =\tan x$ so that $du = \sec^2 x$. 
+We have
+\begin{align*}
+\int  \sec^4 x \tan^9 x \, dx 
+& = \int u^9 (u^2+1)\, du 
+= \int (u^11 + u^9) \, du \\
+& = \frac{u^{12}}{12} +\frac{u^{10}}{10} +C
+= \frac{1}{12} \tan^{12}x +\frac{1}{10} \tan^{10} x +C
+\end{align*}
+where $C$ is an arbitrary constant.
+::: 
+
+::: {#exm- } 
+Evaluate $\int \sec^7 x \tan^5 x \, dx$.
+::: 
+
+::: {.solution }
+Notice that $n=5$ is odd. 
+We let $u =\sec x$ so that $du = \sec x \tan x$. 
+We have
+\begin{align*}
+\int \sec^7 x \tan^5 x \, dx 
+& = \int \tan^4 x \sec^6 x \sec x\tan x \, dx \\
+&= \int (\sec^2 x-1)^2 \sec^6 x\sec x \tan x\, dx \\
+& = \int (u^2 -1)^2 u^6 \, du = \int (u^{10}-2u^8 +u^6)\, du \\
+& = \frac{u^{11}}{11} -2\left(\frac{u^9}{9}\right) +\frac{u^7}{7} +C \\
+& = \frac{1}{11} \sec^{11} x -\frac{2}{9} \sec^9 x +\frac{1}{17} \sec x +C
+\end{align*}
+where $C$ is an arbitrary constant.
+::: 
+
+
+
+
+
+## Integrals Involving Products of Different Angles
+
+Integral involving product of sine and cosines functions with different angle we will make use the trigonometric formulas:
+\begin{align}
+& \sin m x \, \sin n x =\frac{1}{2}\left(\cos[(m-n)x] - \cos[(m+n)x]\right) \\
+& \sin m x \, \cos n x =\frac{1}{2}\left(\sin[(m-n)x] + \sin[(m+n)x]\right) \\
+& \cos m x \, \cos n x =\frac{1}{2}\left(\cos[(m-n)x] + \cos[(m+n)x]\right)
+\end{align}
+
+
+::: {#exm- } 
+Evaluate $\int \sin 5x \sin 7x \, dx$.
+::: 
+
+::: {.solution }
+We have 
+\begin{align*}
+\int \sin 5x \sin 7x \, dx
+& = \frac{1}{2}\left(\cos(-2x)\, dx -\int \cos 12x \, dx\right) \\
+&  = \frac{1}{2}\left(\cos 2x\, dx -\int \cos 12x \, dx\right) \\
+& = \frac{1}{2} \left(\frac{\sin 2x }{2} -\frac{\sin 12 x}{12}\right) +C \\
+& = \frac{\sin 2x}{4}- \frac{\sin 12x }{24} +C
+\end{align*}
+where $C$ is an arbitrary constant.
+::: 
+
+::: {#exm- } 
+Evaluate $\int \sin 3x \cos 7x \, dx$.
+::: 
+
+::: {.solution }
+We have 
+\begin{align*}
+\int \sin 3x \cos 7x \, dx
+& = \frac{1}{2}\left(\sin (-4x)\, dx +\int \sin 10x \, dx\right) \\
+& = \frac{1}{2}\left(\frac{\cos(-4x)}{4} - \frac{\cos 10x }{10}\right) +C \\
+& = \frac{\cos 4x}{8}-\frac{\cos 10x}{20}+ C
+\end{align*}
+where $C$ is an arbitrary constant.
+::: 
+
+::: {#exm- } 
+Evaluate $\int \cos x \cos 2x \, dx$.
+::: 
+
+::: {.solution }
+We have 
+\begin{align*}
+\int \cos x \cos 2x \, dx
+& = \frac{1}{2}\left(\int \cos(-x)\, dx+ \int \cos 3x \, dx\right) \\
+& = \frac{\sin x}{2}+\frac{\sin 3x}{6} + C
+\end{align*}
+where $C$ is an arbitrary constant.
+::: 
+
+
+
+
+
+## Exercises
+
+::: {#exr- } 
+Evaluate the integrals.
+ 
+ 
+- $\displaystyle\int_0^\pi \sin^5 \left(\frac{x}{2}\right) \, dx$
+- $\displaystyle\int \sin^6 x \cos^3 x \, dx$
+- $\displaystyle\int \sin^3 x \cos x\, dx$
+- $\displaystyle\int_{-\pi/2}^{\pi/2} \cos^3 x \, dx$
+- $\displaystyle\int_{0}^{\pi/2} \cos^5 x \, dx$
+- $\displaystyle\int \cos^4 x \, dx$
+- $\displaystyle\int_0^\pi \sin^4 (3t)\, dt$
+- $\displaystyle\int_0^\pi 8 \sin^4 y \cos^2 y \, dy$
+- $\displaystyle\int_0^\pi \cos^6 \theta\, d\theta$
+- $\displaystyle\int_0^\pi \sin^2 x \cos^4 x \, dx$
+- $\displaystyle\int_0^{\pi/4} 8 \cos^3 2\theta \sin 2 \theta \, d\theta$
+- $\displaystyle\int_0^\pi \sin^2 t \cos^4 t \, dt$
+- $\displaystyle\int x \cos^2 x\, dx$
+- $\displaystyle\int e^x \sec^3 e^x \, dx$
+- $\displaystyle\int_{\pi/4}^{\pi/2} \cot^3 x \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Evaluate the integrals.
+ 
+ 
+- $\displaystyle\int_0^{\pi/2} \sin x \cos x\, dx$
+- $\displaystyle\int \sin 3 \theta \sin 4\theta\, d\theta$
+- $\displaystyle\int \cot^3 x \csc^3 x \, dx$
+- $\displaystyle\int_0^\pi \cos 3x \cos 4x \, dx$
+- $\displaystyle\int \frac{\sin^3 x }{\sec^2 x} \, dx$
+- $\displaystyle\int (\tan^2 +\tan^4 x)\, dx$
+- $\displaystyle\int \frac{\cos x+ \sin x }{\sin 2x}\, dx$
+- $\displaystyle\int_{-\pi/2}^{\pi/2} \cos x \cos 7x \, dx$
+- $\displaystyle\int \frac{1}{\csc x\cot^2 x}\, dx$
+- $\displaystyle\int \frac{1}{\cos x -1}\, dx$
+- $\displaystyle\int \frac{1-tan^x}{\sec^2 x}\, dx$
+- $\displaystyle\int \sin 3x \sin 6x \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Find the length of the curve $y = \ln (\cos x)$ on the interval $\left[0,\frac{\pi}{3}\right]$.
+::: 
+
+::: {#exr- } 
+Find the are under the graph of $y=\sin^2 \pi x$ on the interval $[0,1]$. 
+::: 
+
+::: {#exr- } 
+Find the area of the region bounded by the curves $y=\sin^2 x$ and $y=\cos^2 x$ on $-\pi/4 \leq x \leq \pi/4$.
+::: 
+
+::: {#exr- } 
+Find the area enclosed by the graphs of $y =\sin^4 x$, $y=\cos^4 x$, $x=0$, and $x=\pi/4$. 
+::: 
+
+::: {#exr- } 
+Find the volume of the solid generated by revolving the region under the graph of 
+$$
+f(x)= \frac{\sin x}{\cos^3 x}
+$$
+on $\left[0, \frac{\pi}{4}\right]$ about the $x$-axis. 
+::: 
+
+::: {#exr- } 
+Evaluate $\int \sin x \cos x \, dx$ four different ways. 
+Two of them using $u$-substitutions, a third using integration by parts and a fourth using a trigonometric identity. 
+::: 
+
+::: {#exr- } 
+Prove that 
+$$
+\int_{-\pi}^{\pi} \sin mx \cos nx \, dx =0
+$$ where $m$ and $n$ are positive integers. 
+::: 
+
+::: {#exr- } 
+Prove that 
+$$
+\int \cos^m x\sin^n x \, dx = -\frac{\cos^{m+1} x\sin^{n-1} x}{m+n} + \frac{n-1}{m+n} \int \cos^m x \sin^{n-2} x \, dx 
+$$
+where $m$ and $n$ are positive integers. 
+::: 
+
+::: {#exr- } 
+Prove that 
+$$
+\int \sec^n x \, dx = \frac{1}{n-1} \sec^{n-2} x \tan x +\frac{n-2}{n-1} \int \sec^{n-2} x \, dx
+$$ 
+where $n$ is a positive integers. 
+::: 
+
+
+
+
+
+
+
+
+## Trigonometric Substitution
+
+
+Trigonometric substitution refers to an integration technique that uses trigonometric functions (mostly tangent, sine, and secant) to reduce an integrand to another expression so that one may utilize another known technique of integration. Here we study these three main forms and also give examples where we can use complete the square to reduce to one of these three methods.
+
+
+Trigonometric substitution are intended to transform integrals containing the expressions  
+\begin{equation}
+a^2+x^2
+\qquad
+a^2-x^2
+\qquad
+x^2-a^2
+\end{equation}
+into trigonometric integrals that can be evaluated using previously discussed methods. 
+
+## Integrals Involving $a^2+x^2$
+
+Here we intend to integrate functions containing the expression $a^2+x^2$ using a tangent substitution.  
+With $x=a \tan\theta$, we have 
+\begin{equation}
+a^2+x^2 =a^2 + a^2\tan^2 \theta= a^2(1+\tan^2 \theta ) =a^2 \sec^2 \theta.
+\end{equation}
+This indicates that an integral containing the expression $a^2+x^2$ may be evaluated by using an integral containing powers of secant. 
+We would like the substitution to be reversible so that we can change back to the original variable when finished. 
+This requires us to know that $x=a \tan \theta$ is solvable for $\theta$. 
+Therefore we require 
+\begin{equation}
+\theta = \tan^{-1}\left(\frac{x}{a}\right)
+\qquad
+\text{with}
+\qquad
+-\frac{\pi}{2} < \theta < \frac{\pi}{2}.
+\end{equation}
+
+::: {#exm- } 
+Find $\displaystyle \int \frac{1}{\sqrt{4+x^2}}\, dx$. 
+::: 
+
+::: {.solution }
+Let $x=2 \tan \theta$ so that $dx = 2\sec^2 \theta \, d\theta$ and 
+\begin{align*}
+\int \frac{1}{\sqrt{4+x^2}}\, dx  
+& =\int \frac{2\sec^2 \theta}{2\sec\theta}\, d\theta
+= \int \sec\theta \, d\theta \\
+& = \ln |\sec \theta + \tan\theta| +C
+= \ln \left|\frac{x+\sqrt{a+x^2}}{2}\right| +C
+\end{align*}
+where $C$ is an arbitrary constant.
+::: 
+
+::: {#exm- } 
+Find $\displaystyle\int \frac{1}{(1+x^2)^2}\, dx$. 
+::: 
+
+::: {.solution }
+Let $x= \tan \theta$ so that $dx = \sec^2 \theta\, d\theta$ and 
+\begin{align*}
+\int \frac{1}{(1+x^2)^2}\, dx 
+& = \int \frac{\sec^2 \theta}{\sec^4 \theta} \, d\theta
+= \int \cos^2 \theta d\theta
+= \frac{\theta}{2} +\frac{\sin 2\theta}{4} +C
+\end{align*}
+where $C$ is an arbitrary constant.
+Using the reference triangle
+The integration can be completed:
+\begin{align*}
+\int \frac{1}{(1+x^2)^2}\, dx 
+= \frac{\theta}{2} +\frac{\sin 2\theta}{4} +C 
+= \frac{1}{2}\tan^{-1} x + \frac{x}{2(1+x^2)}+C
+\end{align*}
+where $\sin2\theta$ is found using the triangle. 
+::: 
+
+
+
+
+
+## Integrals Involving $a^2-x^2$
+
+Now we intend to integrate functions containing the expression $a^2-x^2$ using a sine substitution.  
+With $x=a \sin\theta$, we have 
+\begin{equation}
+a^2-x^2 
+=a^2 - a^2\sin^2 \theta
+= a^2(1-\sin^2 \theta ) 
+=a^2 \cos^2 \theta.
+\end{equation}
+This indicates that an integral containing the expression $a^2+x^2$ may be evaluated by using an integral containing powers of cosine. 
+We would like the substitution to be reversible so that we can change back to the original variable when finished. 
+This requires us to know that $x=a \sin \theta$ is solvable for $\theta$. 
+Therefore we require 
+\begin{equation}
+\theta = \sin^{-1}\left(\frac{x}{a}\right)
+\qquad
+\text{with}
+\qquad
+-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}.
+\end{equation}
+
+::: {#exm- } 
+Find $\displaystyle\int \frac{1}{x^2 \sqrt{4-x^2}}\, dx$.
+::: 
+
+::: {.solution }
+Let $x=2\sin \theta$ so that $dx= 2\cos \theta\, d\theta$.
+This yields
+\begin{align*}
+\int \frac{1}{x^2 \sqrt{4-x^2}}\, dx 
+& = \int \frac{2\cos \theta }{(2\sin \theta)^2 \sqrt{4-4\sin^2 \theta}}\, d\theta \\
+& = \frac{1}{4} \int \frac{1}{\sin^2 \theta}\, d\theta 
+= \frac{1}{4} \int \csc^2 \theta \, d\theta = -\frac{1}{4}\cot \theta +C
+\end{align*}
+Using the reference triangle
+
+we find that $\cot \theta = \frac{\sqrt{4-x^2}}{x}$.
+The integration can be completed:
+\begin{align*}
+\int \frac{1}{x^2 \sqrt{4-x^2}}\, dx
+& = -\frac{1}{4}\frac{\sqrt{4-x^2}}{x} +C
+\end{align*}
+where $C$ is an arbitrary constant.  
+::: 
+
+
+::: {#exm- } 
+Find $\displaystyle \int \frac{\sqrt{9-x^2}}{x^2} \, dx$.
+::: 
+
+::: {.solution }
+Let $x=3\sin \theta$ so that $dx= 3\cos \theta\, d\theta$.
+This yields
+\begin{align*}
+\int \frac{\sqrt{9-x^2}}{x^2} \, dx
+& = \int \frac{3\cos \theta}{9\sin^2 \theta} (3\cos \theta)\, d\theta\\
+& = \int \cot^2 \theta \, d\theta 
+= \int (\csc^2 \theta-1)\, d\theta
+= -\cot \theta -\theta +C
+\end{align*}
+Using the reference triangle
+
+we find that $\cot \theta = \frac{\sqrt{9-x^2}}{x}$.
+The integration can be completed:
+\begin{align*}
+\int \frac{\sqrt{9-x^2}}{x^2} \, dx
+& = - \frac{\sqrt{9-x^2}}{x} - \sin^{_1}\left(\frac{x}{3}\right) +C
+\end{align*}
+where $C$ is an arbitrary constant.  
+::: 
+
+
+
+
+
+
+
+
+
+
+## Integrals Involving $x^2-a^2$
+
+Next, we intend to integrate functions containing the expression $x^2-a^2$ using a secant substitution.  
+With $x=a \sec\theta$, we have 
+\begin{equation}
+x^2-a^2 
+= a^2 \sec^2 a -a^2 
+= a^2(\sec^2\theta-1)
+= a^2\tan^2 \theta
+\end{equation}
+This indicates that an integral containing the expression $x^2-a^2$ may be evaluated by using an integral containing powers of tangent. 
+We would like the substitution to be reversible so that we can change back to the original variable when finished. 
+This requires us to know that $x=a \sec \theta$ is solvable for $\theta$. 
+Therefore we require 
+\begin{equation}
+\theta = \sec^{-1}\left(\frac{x}{a}\right)
+\qquad
+\text{with}
+\qquad
+\begin{cases}
+0\leq \theta < \pi/2 & \text{if $x/a \geq 1$} \\
+\pi/2 < \theta \leq \pi & \text{if $x/a \leq -1$.}
+\end{cases}
+\end{equation}
+
+
+::: {#exm- } 
+Find $\displaystyle\int_{\sqrt{3}}^2 \frac{\sqrt{x^2 -3}}{x}\, dx$.
+::: 
+
+::: {.solution }
+Let $x=\sqrt{3}\sec \theta$ so that $dx=\sqrt{3}\sec\theta \tan \theta \, d\theta$. 
+This yields
+\begin{align*}
+\int_{\sqrt{3}}^2 \frac{\sqrt{x^2 -3}}{x}\, dx 
+& = \int_0^{\pi/6} \frac{(\sqrt{3}\tan \theta)(\sqrt{3}\sec\theta \tan \theta)}{\sqrt{3}\sec \theta}\, d\theta \\
+& = \int_0^{\pi/6} \sqrt{3}\tan^2 \theta \, d\theta \\
+& = \sqrt{3} \int_0^{\pi/6} (\sec^2 \theta -1)  \, d\theta
+= 1-\frac{\sqrt{3}\pi}{6}
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Find $\displaystyle \int_1^4\frac{\sqrt{x^2+4x-5}}{x+2}\, dx$.
+::: 
+
+::: {.solution }
+Noting that $x^2+4x-5 = (x+2)^2-9)$ we let $u=x+2$. 
+Then $dx= du$ and we have 
+$$
+\int_1^4\frac{\sqrt{x^2+4x-5}}{x+2}\, dx 
+= \int_3^6 \frac{\sqrt{u^2-9}}{u}\, du.
+$$
+Let $u= 3\sec \theta$ (where $0\leq \theta < \pi/2$), so that $du=3\sec \theta \tan \theta \, d\theta$. 
+This yields
+\begin{align*}
+\int_1^4\frac{\sqrt{x^2+4x-5}}{x+2}\, dx
+& = \int_3^6 \frac{\sqrt{u^2-9}}{u}\, du \\
+&  = \int_0^{\pi/3} \frac{3\tan\theta}{3\sec \theta} (3\sec\theta \tan \theta\, d\theta) \\
+& = 3\int_0^{\pi/3} (\sec^2 \theta-1)\, d\theta \\
+& = 3\sqrt{3}-\pi.
+\end{align*}
+as desired.
+::: 
+
+
+## Exercises
+
+::: {#exr- } 
+Evaluate the following integrals.
+ 
+ - $\displaystyle\int \sqrt{1-9t^2 }\, dt$
+- $\displaystyle\int \frac{1}{x^3 \sqrt{x^2-4}}\, dx$
+- $\displaystyle\int \frac{5}{\sqrt{25x^2-9}}\, dx$, $x> 3/5$
+- $\displaystyle\int x^3 \sqrt{4-x^2}\, dx$
+- $\displaystyle\int \sqrt{25-t^2} \, dt$
+- $\displaystyle\int (4-x^2)^{3/2}\, dx$
+- $\displaystyle\int \frac{\sqrt{y^2-25}}{y^3}\, dy$, $y>5$
+- $\displaystyle\int e^x \sqrt{4-e^{2x}}\, dx$
+- $\displaystyle\int \frac{1}{(1+x^2)^{3/2}}\, dx$
+- $\displaystyle\int \frac{1}{\sqrt{16+4x^2}}\, dx$
+ 
+::: 
+
+::: {#exr- } 
+Evaluate the following integrals.
+ 
+ - $\displaystyle\int_1^2 \frac{\sqrt{x^2-1}}{x}\, dx$
+- $\displaystyle\int_4^6 \frac{x^2}{\sqrt{x^2-9}}\, dx$
+- $\displaystyle\int_0^1 x \sqrt{x^2+4}\, dx$
+- $\displaystyle\int_0^{\sqrt{3}/2} \frac{1}{(1-t^2)^{5/2}}\, dt$
+- $\displaystyle\int_0^a x^2 \sqrt{a^2-x^2}\, dx$
+- $\displaystyle\int_0^{3/5} \sqrt{9-25x^2}\, dx$
+- $\displaystyle\int_{\sqrt{2}/3}^{2/3} \frac{1}{x^5 \sqrt{9x^2-1}}\, dx$
+- $\displaystyle\int_4^8 \frac{\sqrt{x^2-16}}{x^2}\, dx$
+ 
+::: 
+
+::: {#exr- } 
+Find the area of the region bounded by the hyperbola ${9x^2-4y^2=36}$ and the line $x=3$. 
+::: 
+
+::: {#exr- } 
+Find the arc length of the curve over $y=\frac{1}{2} x^2$ on the interval $[0,4]$.
+::: 
+
+::: {#exr- } 
+Evaluate the following integrals.
+ 
+ - $\displaystyle\int \frac{1}{2u^2-12u+36}\, dx$
+- $\displaystyle\int \frac{1}{\sqrt{3+2x-x^2}}\, dx$
+- $\displaystyle\int \frac{x^2-2x+1}{\sqrt{x^2-2x+10}}\, dx$
+- $\displaystyle\int \frac{e^x}{\sqrt{1+e^x+e^{2x}}}\, dx$
+- $\displaystyle\int_1^2 \frac{1}{\sqrt{4x-x^2}}\, dx$
+- $\displaystyle\int_0^4 \sqrt{x(4-x)}\, dx$
+ 
+::: 
+
+::: {#exr- } 
+Verify the special integration formulas ($a > 0$).
+
+- $\displaystyle\int \sqrt{a^2 -u^2}\, du =\frac{1}{2} \left( a^2 \arcsin \frac{u}{a} + u \sqrt{a^2-u^2}\right) +C$
+- $\displaystyle\int \sqrt{u^2 -a^2}\, du =\frac{1}{2} \left( u \sqrt{u^2-a^2} -a^2 \ln | u+\sqrt{u^2-a^2} |\right) +C$, $u > a$
+- $\displaystyle\int \sqrt{u^2 +a^2}\, du =\frac{1}{2} \left( u \sqrt{u^2+a^2} +a^2 \ln |u+\sqrt{u^2+a^2}|\right) +C$.
+::: 
+
+
+
+
+
+## Partial Fractions
+
+The decomposition of a rational function into a sum of simpler rational functions is an important integration technique, known as the method of partial fractions. We illustrate this method using several examples. We concentrate on linear and quadratic factors.
+
+## The Method of Partial Fractions
+
+We now concentrate on integrals of the form 
+$$
+\label{frac}
+\int \frac{P(x)}{Q(x)} \, dx
+$$
+where $P(x)$ and $Q(x)$ are polynomial functions.
+In the case when $Q(x)$ is a constant, then the integration is accomplished using the power rule form before.  
+In the case when the degree of $P(x)$ is larger than the degree of $Q(x)$ we can use long division. 
+For example, consider the integral 
+$$
+\int \frac{x^2}{x+1}\, dx.
+$$
+By long division, we have 
+$$  
+\frac{x^2}{x+1} = x-1 + \frac{1}{x+1}
+$$
+Using the power rule and the natural logarithmic function we can easily integrate, 
+$$
+\label{intfrac}
+\int \frac{x^2}{x+1}\, dx = \frac{1}{2} x-x +\ln |x+1| +C
+$$
+where $C$ is an arbitrary constant. 
+The method of partial fractions assumes that the fraction in the integrand is always irreducible, meaning the degree of the numerator is less than the degree of the denominator. 
+
+The method of partial fractions takes advantages of the fact that certain fractions are easy to integrate using the logarithmic function. 
+For example, in \eqref{intfrac}, the integral 
+$$
+\int \frac{1}{x+1}\, dx
+$$
+is immediate. 
+So our goal is to be able to decomposition a complex fraction into simpler fractions which can be integrated easier. 
+For example, notice that 
+$$
+\frac{3x}{x^2+2x-8} = \frac{1}{x-2} +\frac{2}{x+4}.
+$$
+We ask, which is easier to integrate: the left or the right hand side? 
+
+To begin the process of partial fractions we factor $Q(x)$ into factors of the form 
+$$
+(ax+b)^n \qquad \text{and} \qquad  (ax^2 +bx+c)^n
+$$
+where $ax^2+bx+c$ are irreducible. 
+We then apply algebraic techniques to solve for the missing coefficients that decomposition $P(x)/Q(x)$ into its partial fractions.  
+
+
+## Linear Factors
+
+::: {#thm- } 
+Suppose that $f(x) = P(x)/Q(x)$, where $P(x)$ and $Q$ are polynomials with no common factors and with the degree of $P$ less than the degree of $Q$. 
+If $Q$ is the product of simple linear factors, then for each factor of the form $(ax+b)^n$, the partial fraction decomposition is the following sum of $n$ partial fractions: 
+\begin{equation}
+\frac{P(x)}{Q(x)}
+= \frac{A_1}{ax+b} + \frac{A_2 }{(ax+b)^2}
++ \cdots + \frac{A_n }{(ax+b)^n}
+\end{equation}
+where $A_i$, for $i=1, 2, \ldots, n$ are constants to be determined. 
+::: 
+
+::: {#exm- } 
+Evaluate $\displaystyle \int \frac{1}{x(x-4)}\, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+$$
+\frac{1}{x(x-4)} 
+= \frac{A}{x} + \frac{B}{x-4} 
+= \frac{(A+B) x - 4A}{x(x-4)}.
+$$
+This yields $A=-1/4$ and $B=1/4$, so we have
+\begin{align*}
+\int \frac{1}{x(x-4)}\, dx & 
+= -\frac{1}{4} \int \frac{1}{x}\, dx + \frac{1}{4}\int \frac{1}{x-4} \, dx \\
+& = -\frac{1}{4}\ln |x| +\frac{1}{4}\ln |x-4| +C 
+\end{align*}
+where $C$ is an arbitrary constant
+::: 
+
+
+::: {#exm- } 
+Evaluate $\displaystyle \int \frac{x^2+2x+8}{x^3-4x}\, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{x^2+2x+8}{x^3-4x}
+& = \frac{A}{x} + \frac{B}{x+2} + \frac{C}{x-2} \\
+& = \frac{A(x^2-4)+B(x^2-2x)+C(x^2+2x)}{x(x+2)(x-2)}
+\end{align*}
+This yields $A=-2$, $B=1$ and $C=2$, so we have
+\begin{align*}
+\int \frac{x^2+2x+8}{x^3-4x}\, dx & 
+= -2 \int \frac{1}{x}\, dx + \int \frac{1}{x+2}\, dx +2 \frac{1}{x-2} \, dx \\
+& = -2\ln |x|+\ln |x+2|+2\ln |x-2| +C
+\end{align*}
+where $C$ is an arbitrary constant
+::: 
+
+::: {#exm- } 
+Evaluate $\displaystyle \int_2^4 \frac{3x-5}{(x-1)^2}\, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{3x-5}{(x-1)^2} 
+= \frac{A}{x-1} + \frac{B}{(x-1)^2} 
+= \frac{A x +(B-A)}{(x-1)^2}
+\end{align*}
+This yields $A=3$ and $B=-2$, so we have
+\begin{align*}
+\int_2^4 \frac{3x-5}{(x-1)^2}\, dx 
+& = \int_2^4 \left[\frac{3}{x-1}-\frac{2}{(x-1)^2}\right]\, dx \\
+& = \left.\left(3\ln |x-1| + \frac{2}{x-1}\right)\right|_2^4 = 3 \ln 3 -\frac{4}{3}
+\end{align*}
+as desired.
+::: 
+
+
+::: {#exm- } 
+Evaluate $\displaystyle \int \frac{x^2+10x -36}{x(x-3)^2}\, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{x^2+10x -36}{x(x-3)^2}
+& = \frac{A}{x} + \frac{B}{x-3} +\frac{C}{(x-3)^2} \\
+& = \frac{(A+B)x^2 -(6A+3B-C)x +9A}{x(x-3)^2}
+\end{align*}
+This yields $A=-4$, $B=5$ and $C=1$, so we have
+\begin{align*}
+\int \frac{x^2+10x -36}{x(x-3)^2}\, dx 
+& = \int_1^2 \left[\frac{-4}{x} +\frac{5}{x-3} +\frac{1}{(x-3)^2} \right] \\
+& = \left.\left(-4\ln |x| + \ln |x-3| -\frac{1}{x-3}\right)\right|_1^2
+= \frac{1}{2}-9\ln 2
+\end{align*}
+as desired. 
+::: 
+
+
+
+## Quadratic Factors
+
+
+::: {#thm- } 
+Suppose that $f(x) = P(x)/Q(x)$, where $P(x)$ and $Q$ are polynomials with no common factors and with the degree of $P$ less than the degree of $Q$. 
+If $Q$ is the product of irreducible quadratic factors, then for each factor of the form $(ax^2+bx+c)^n$, the partial fraction decomposition is the following sum of $n$ partial fractions: 
+\begin{equation}
+\frac{A_1 x +B_1}{ax^2+bx+c} + \frac{A_2 x +B_2}{(ax^2+bx+c)^2}
++ \cdots + \frac{A_n x +B_n}{(ax^2+bx+c)^n}
+\end{equation}
+where $A_i$, $B_i$ for $i=1, 2, \ldots, n$ are constants to be determined. 
+::: 
+
+
+::: {#exm- } 
+Evaluate $\displaystyle \int \frac{8(x^2+4)}{x(x^2+8)} \, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{8(x^2+4)}{x(x^2+8)} 
+& = \frac{Ax+B}{x^2+8} +\frac{C}{x}
+\end{align*}
+After equating coefficients, we obtain $A=4$, $B=0$ and $C=4$, so we have
+\begin{align*}
+\int \frac{8(x^2+4)}{x(x^2+8)} \, dx 
+& = \int \left( \frac{4x}{x^2+8} +\frac{4}{x} \right) \, dx 
+= \ln [(x^2+8)^2 x^4] +C
+\end{align*}
+as desired. 
+::: 
+
+
+::: {#exm- } 
+Evaluate $\displaystyle \int \frac{20x}{(x-1)(x^2+4x+5)} \, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{20x}{(x-1)(x^2+4x+5)} 
+& = \frac{A}{x-1} +\frac{Bx+C}{x^2+4x+5}
+\end{align*}
+After equating coefficients, we obtain $A=2$, $B=-2$ and $C=10$, so we have
+\begin{align*}
+\int \frac{20x}{(x-1)(x^2+4x+5)} \, dx 
+& = \int \left( \frac{2}{x-1} +\frac{-2x+10}{x^2+4x+5} \right) \, dx \\
+& = \ln \left\vert\frac{(x-1)^2}{x^2+4x+5}\right\vert +14 \tan^{-1}(x+2) +C
+\end{align*}
+where $C$ is an arbitrary constant. 
+::: 
+
+
+::: {#exm- } 
+Evaluate $\displaystyle \int \frac{2}{x(x^2+1)^2} \, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{2}{x(x^2+1)^2}
+& = \frac{A}{x} +\frac{Bx+C}{x^2+1} +\frac{Dx+E}{(x^2+1)^2}
+\end{align*}
+After equating coefficients, we obtain $A=2$, $B=-2$ and $C=0$, $D=-2$, and $E=0$ so we have
+\begin{align*}
+\int \frac{2}{x(x^2+1)^2} \, dx 
+& = \int \left( \frac{-2}{x} +\frac{-2x}{x^2+1} +\frac{-2x}{(x^2+1)^2} \right)\, dx \\
+& = 2\ln |x| -\ln (x^2+1) +\frac{1}{x^2+1} +C
+\end{align*}
+where $C$ is an arbitrary constant. 
+::: 
+
+
+::: {#exm- } 
+Evaluate $\displaystyle \int \frac{3x^4+4x^3+16x^2+20x+9}{(x+2)(x^2+3)^2} \, dx$.
+::: 
+
+::: {.solution }
+We use the method of partial fractions and write
+\begin{align*}
+\frac{3x^4+4x^3+16x^2+20x+9}{(x+2)(x^2+3)^2}
+& = \frac{A}{x+2} + \frac{Bx+C}{x^2+3} +\frac{Dx+E}{(x^2+3)^2}
+\end{align*}
+By equating coefficients, we obtain the linear system of equations
+$$
+\begin{array}{rl}
+A+B & = 3\\
+2B+C & = 4 \\
+6A+3B+2C+D & = 16 \\
+6B +3C +2D +E & = 20 \\
+9A+6C+2E & = 9. 
+\end{array}
+$$
+Using a computer algebra system we obtain $A=1$, $B=2$, $C=0$, $D=4$, and $E=0$ so we have
+\begin{align*}
+& \int \frac{3x^4+4x^3+16x^2+20x+9}{(x+2)(x^2+3)^2} \, dx \\
+& \quad = \int \frac{1}{x+2} + \frac{2x}{x^2+3} +\frac{4x}{(x^2+3)^2} \, dx \\
+& \quad = \ln |x+2| +\ln (x^2+3) - \frac{2}{x^2+3} +C
+\end{align*}
+where $C$ is an arbitrary constant. 
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Evaluate the following integrals.
+ 
+ - $\displaystyle \int\frac{1}{4x^2-9}\, dx$
+- $\displaystyle \int \frac{x^2+12x+12}{x^3-4x}\, dx$
+- $\displaystyle \int \frac{3x^2+x+4}{x^4+3x^2+2}\, dx$
+- $\displaystyle \int \frac{2x^3-4x^2-15x+5}{x^2-2x-8}\, dx$
+- $\displaystyle \int_0^1 \frac{2u+3}{u^2+4u+3}\, dx$
+- $\displaystyle \int \frac{4x^2+2x-1}{x^3+x^2}\, dx$
+- $\displaystyle \int_0^1 \frac{x}{x^2+4x+13}\,dx$
+- $\displaystyle \int \frac{x^2+3x+2}{x(x^2+2x+2)}\, dx$
+- $\displaystyle \int \frac{x^2+3x-4}{x^3-4x^2+4x}\, dx$
+- $\displaystyle \int_2^3 \frac{x^3-2x+7}{x^2+x-2}\, dx$
+- $\displaystyle \int \frac{x^2}{x^3-x^2+4x-4}\, dx$
+- $\displaystyle \int \frac{1}{(y^2+1)(y^2+2)}\, dy$
+- $\displaystyle \int \frac{x^2-1}{x^3+x}\, dx$
+- $\displaystyle \int\frac{x^4+3x^2+1}{x^5+5x^3+5x}\,dx$
+- $\displaystyle \int \frac{x^2}{x^4-2x^2-8}\, dx$
+- $\displaystyle \int \frac{x^4-3x^2-3x-2}{x^3-x^2-2x}\, dx$
+- $\displaystyle \int \frac{x^2+5}{x^3-x^2+x-3}\, dx$
+- $\displaystyle \int \frac{x^3}{x^3+1}\, dx$
+- $\displaystyle \int \frac{x}{16x^4-1}\, dx$
+- $\displaystyle \int_1^2 \frac{x^2+10x-36}{x(x-3)^2}\, dx$
+- $\displaystyle \int \frac{x^2+6x+4}{x^4+8x^2+16}\, dx$
+- $\displaystyle \int \frac{x^3+2x^3+3x-2}{(x^2+2x+2)^2}\, dx$
+- $\displaystyle \int \frac{1}{(x+1)(x^2+2x+2)^2}\, dx$
+- $\displaystyle \int \frac{x^3+1}{x(x^2+x+1)^2}\, dx$
+ 
+::: 
+
+::: {#exr- } 
+Find the arc length of the curve $y=\ln x$ from $x=1$ to $x=2$. 
+::: 
+
+::: {#exr- } 
+Find hte area of the region bounded by the graphs of ${y=12/(x^2+5x+6)}$, $y=0$, $x=0$, and $x=1$. 
+::: 
+
+::: {#exr- } 
+Find the ares of the surface generated when the curve $y=\ln x$ is revolved about the $x$-axis. 
+::: 
+
+::: {#exr- } 
+Find the area of the region bounded by the curve ${y=x/(1+x)}$, the $x$-axis, and the line $x=4$. 
+::: 
+
+::: {#exr- } 
+Find the volume of the solid generated when the region enclosed by $x=y(1-y^2)^{1/4}$, $y=0$, $y=1$, and $x=0$ is revolved about the $y$-axis. 
+::: 
+
+::: {#exr- } 
+Find the volume of the solid obtained by revolving the region bounded by ${y=1/(x+1)}$, $y=0$, $x=0$, and $x=2$ about the $y$-axis. 
+::: 
+
+::: {#exr- } 
+Find the volume of the solid obtained by revolving the region bounded by ${y=1/(x+2)}$, $y=0$, $x=0$, and $x=3$ about the line $x=-1$.
+::: 
+
+::: {#exr- } 
+Consider the region bounded by the graphs of 
+$$
+y^2 = \frac{(2-x)^2}{(1+x)^2}
+$$
+on the interval $[0,1]$.
+Find the volume of the solid generated by revolving this region about the $x$-axis. 
+::: 
+
+
+
+
+
+
+## Improper Integrals
+
+We integrate continuous functions over unbounded intervals. We also integrate functions which are continuous except for a possibly infinite discontinuity in its domain which have unbounded range.
+
+## Infinite Limits of integration
+
+Until now, our regions of integration have been bounded regions. 
+By this we mean that when evaluating 
+$$
+\int_a^b f(x)\, dx
+$$
+we are integrating $f$ over a bounded interval $[a,b]$ and the range of $f$ is also a bounded region. 
+We will now discuss more general regions of integration such as $(a,+\infty)$, $(-\infty, b)$, and $(-\infty, +\infty)$. 
+Consider for example the following diagram. 
+We will use this to define $\int_a^{+\infty} f(x) \, dx$ as a limit. 
+Similarly we wil define $\int_{-\infty}^{b} f(x) \, dx$ as a limit by considering the diagram. 
+In either case these integrals are said to be \emph{improper}. 
+There are other cases to consider, but in all cases, we will define an \emph{improper integral} using a limit of an already known integral. 
+
+::: {#def- } 
+Suppose that $f$ is a continuous function.
+
+- The improper integral of $f$ over the interval $[a,+\infty)$ is defined to be \begin{equation} \int_a^{+\infty} f(x) \, dx  = \lim_{b\to +\infty} \int_a^b f(x)\, dx. \end{equation}
+- The improper integral of $f$ over the interval $[-\infty,b)$ is defined to be \begin{equation} \int_{-\infty}^b f(x) \, dx  = \lim_{a\to -\infty} \int_a^b f(x)\, dx. \end{equation}
+- The improper integral of $f$ over the interval $(-\infty,+\infty)$ is defined to be \begin{equation} \int_{-\infty}^{+\infty} f(x) \, dx  =\int_{-\infty}^c f(x)\, dx + \int^{+\infty}_c f(x)\, dx.\end{equation}
+ 
+Whenever the limit exists the integral is said to \index{converge} **converge**, and otherwise \index{diverge} **diverge**. 
+::: 
+
+
+::: {#exm- } 
+Determine whether the improper integral $\int_e^{\infty} \frac{1}{x\ln^2 x}\, dx$ converges or diverges. 
+::: 
+
+::: {.solution }
+We find that the integral converges to 1 since 
+\begin{align*}
+\int_e^{\infty} \frac{1}{x\ln^2 x}\, dx
+& = \lim_{b\to \infty} \int_e^b \frac{(\ln x)^{-2}}{x}\, dx\\
+& = \lim_{b\to \infty} \left[-\frac{1}{\ln x}\right]_e^b
+= \lim_{b\to \infty} \left( -\frac{1}{\ln b}+1 \right) 
+=1
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Determine whether the improper integral $\int_0^{\infty} \sin x\, dx$ converges or diverges. 
+::: 
+
+::: {.solution }
+We find the integral diverges because
+\begin{equation}
+\int_0^{\infty} \sin x\, dx 
+= \lim_{b \to \infty} \int_0^b \sin \, dx
+= \lim_{b \to \infty} [-\cos x]_0^b 
+= \lim_{b \to \infty} (-\cos b +1)
+\end{equation}
+which is a limit that does not exist. 
+::: 
+
+::: {#exm- } 
+Determine whether the improper integral $\int_{-\infty}^0 \frac{1}{x^2+2x+5}\, dx$ converges or diverges. 
+::: 
+
+::: {.solution }
+We find the integral converges since
+\begin{align*}
+\int_{-\infty}^0 \frac{1}{x^2+2x+5}\, dx 
+& = \lim_{a\to -\infty} \int_{a}^0 \frac{1}{x^2+2x+5}\, dx \\
+& = \lim_{a\to -\infty} \left[\frac{1}{2}\tan^{-1}\left(\frac{1}{2}(x+1)\right)\right]_a^0 \\
+& = \lim_{a\to -\infty} \left[\frac{1}{2}\tan^{-1}\frac{1}{2}-\frac{1}{2}\tan^{-1}\left(\frac{1}{2}(a+1)\right)\right] 
+= \frac{\pi}{4}
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Determine whether the improper integral $\int_{-\infty}^{+\infty} \frac{e^x}{1+e^{2x}}\, dx$ converges or diverges. 
+::: 
+
+::: {.solution }
+We consider the following two limits 
+\begin{align*}
+\int_{-\infty}^{+\infty} \frac{e^x}{1+e^{2x}}\, dx
+& = \lim_{a\to-\infty } \int_{a}^{0} \frac{e^x}{1+e^{2x}}\, dx + \lim_{b\to+\infty } \int_{0}^{b} \frac{e^x}{1+e^{2x}}\, dx.
+\end{align*}
+To do so we integrate $I = \int \frac{e^x}{1+e^{2x}}\, dx.$
+Let $u=e^x$, so that $du = e^x dx$. 
+Then we find
+\begin{equation}
+I = \int \frac{1}{1+u^2}\, du = \tan^{-1}u +C.
+\end{equation}
+Using this result we have 
+\begin{align*}
+\int_{-\infty}^{+\infty} \frac{e^x}{1+e^{2x}}\, dx 
+& = \lim_{a\to-\infty } \left[\tan^{-1} e^x\right]_a^0 + \lim_{b\to+\infty } \left[\tan^{-1} e^x\right]_0^b \\
+& = \lim_{a\to-\infty } \left(\frac{\pi}{4} -\tan^{-1}e^a \right) + \lim_{b\to+\infty } \left[\tan^{-1} e^b -\frac{\pi}{4} \right] 
+= \frac{\pi}{2}
+\end{align*}
+as desired. 
+::: 
+
+::: {#exm- } 
+Find the area of the region bounded by the graph of 
+$$
+y= \frac{2}{x^2-2x+2}
+$$
+and the $x$-axis. 
+::: 
+
+::: {.solution }
+If the area exists, it is found by evaluating an improper integral. 
+We find
+\begin{align*}
+A & = \int_{-\infty}^{+\infty} y \, dx 
+= \int_{-\infty}^{0} y \, dx + \int_{0}^{+\infty} y \, dx \\
+& = \lim_{a\to-\infty} \int_a^0 \frac{2}{x^2-2x+2}\, dx  +  \lim_{b\to+\infty} \int_0^b \frac{2}{x^2-2x+2} \, dx \\
+& = 2 \lim_{a\to-\infty} \int_a^0 \frac{1}{(x-1)^2+1}\, dx  +  2 \lim_{b\to+\infty} \int_0^b\frac{1}{(x-1)^2+1}\, dx \\
+& = 2 \lim_{a\to-\infty} \left[\tan^{-1}(x-1)\right]_a^0  +  \lim_{b\to+\infty} \left[\tan^{-1}(x-1)\right]_0^b 
+= 2\pi 
+\end{align*}
+as desired.
+::: 
+
+
+
+
+
+
+
+## Infinite Discontinuities
+
+
+::: {#def- } 
+Let $f$ be a function. 
+
+- If $f$ is a continuous on the interval $[a,b]$, except for an infinite discontinuity at $b$, then theimproper integral of $f$ over the interval $[a,b]$ is defined as \begin{equation} \int_a^b f(x) \, dx  = \lim_{k\to b^{-}} \int_a^k f(x) \, dx \end{equation}
+- If $f$ is a continuous on the interval $[a,b]$, except for an infinite discontinuity at $a$, then the improper integral of $f$ over the interval $[a,b]$  is defined as \begin{equation} \int_a^b f(x) \, dx  = \lim_{k\to a^{+}} \int_k^a f(x) \, dx \end{equation}
+- If $f$ is a continuous on the interval $(a,b)$, except for some $c$ in $(a,b)$ at which $f$ has an infinite discontinuity, then the improper integral of $f$ over the interval $[a,b]$ is defined as \begin{equation} \int_a^b f(x) \, dx  = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx.\end{equation}
+ 
+Whenever the limit exists the integral is said to \index{converge} **converge**, and otherwise \index{diverge} **diverge**. 
+::: 
+
+::: {#exm- } 
+Evaluate $\int_0^1 \frac{x^3}{x^4-1}\, dx$ or state that it diverges. 
+::: 
+
+::: {.solution }
+We find
+\begin{align*}
+\int_0^1 \frac{x^3}{x^4-1}\, dx 
+& = \lim_{c\to 1^-}\int_0^c \frac{x^3}{x^4-1}\, dx 
+ = \lim_{c\to 1^-} \left[\frac{1}{4}\ln | x^4 -1 |\right]_0^c \\
+& = \frac{1}{4}\lim_{c\to 1^-} \ln | c^4 -1 | = -\infty
+\end{align*}
+and so the integral diverges.
+::: 
+
+::: {#exm- } 
+Evaluate $\int_1^{11} \frac{1}{(x-3)^{2/3}}\, dx$ or state that it diverges. 
+::: 
+
+::: {.solution }
+This integral is improper at $x=3$ and so 
+\begin{equation}
+\int_1^{11} \frac{1}{(x-3)^{2/3}}\, dx 
+= \int_1^{3} \frac{1}{(x-3)^{2/3}}\, dx + \int_3^{11} \frac{1}{(x-3)^{2/3}}\, dx 
+\end{equation}
+and we evaluate each one separately. 
+We find
+\begin{align*}
+\int_1^{3} \frac{1}{(x-3)^{2/3}}\, dx
+& = \lim_{c\to 3^-} \int_1^c (x-3)^{-2/3} \, dx 
+ = \lim_{c\to 3^-} \left[3(x-3)^{1/3}\right]_1^c \\
+& = 3 \lim_{c\to 3^-} \left(2^{1/3}-(3-c)^{1/3}\right)
+= (3) 2^{1/3}
+\end{align*}
+and 
+\begin{align*}
+\int_3^{11} \frac{1}{(x-3)^{2/3}}\, dx 
+& =  \lim_{c\to 3^+} \int_c^{11} \frac{1}{(x-3)^{2/3}}\, dx 
+= \lim_{c\to 3^+} \left[3(x-3)^{1/3}\right]_c^{11} \\
+& = 3 \lim_{c\to 3^+} \left(8^{1/3}-(c-3)^{1/3}\right) 
+= 6
+\end{align*}
+Therefore we have $\int_1^{11} \frac{1}{(x-3)^{2/3}}\, dx = 6+(3)2^{1/3}$. 
+::: 
+
+::: {#exm- } 
+The region bounded by the graph of $f(x)=-\ln x$ and the $x$-axis on the interval $(0,1]$ is revolved about the $x$-axis. 
+Find the volume of the solid of revolution or state that it does not exist. 
+::: 
+
+::: {.solution }
+The volume is 
+$$
+V=\pi \int_0^1 (-\ln x)^2\, dx = \lim_{a\to 0^+} \pi \int_a^1 \ln^2 x\, dx.
+$$
+We use integration by parts with $u =\ln x$ and $dv=\ln x \, dx$.
+Then $du =(1/x) \, dx$ and $v=x\ln x -x$ and so 
+\begin{align*}
+\int \ln^2 x\, dx 
+& = x\ln^2 x-x\ln x -\int(ln x -1)\, dx  \\
+& = x\ln^2 x-x\ln x-(x\ln x-x-x) + C\\
+& = x\ln^2 x-2x\ln x-2x\ln x+2x+C
+\end{align*}
+where $C$ is an arbitrary constant. 
+We now continuing finding the volume
+\begin{align*}
+V & = \lim_{a\to 0^+}\pi \left[x\ln^2 x-2x\ln x+2x\right]_a^1 \\
+& = \lim_{a\to 0^+}\pi (2-(a\ln^2 a-2a\ln a+2a)) 
+= 2\pi
+\end{align*}
+where the last equality uses l'Hopital's rule. 
+::: 
+
+
+
+
+## Exercises
+
+
+::: {#exr- } 
+Decide if the integral converges or not. Explain your reasoning. 
+ 
+- $\int_{1}^{2} \frac{1}{x^3} \, dx$
+- $\int_{0}^{\pi/4} \csc x \, dx$
+- $\int_{-\infty}^{+\infty} \frac{\sin x}{4+x^2}\, dx$ 
+::: 
+
+
+::: {#exr- } 
+Evaluate the following integrals that converge. 
+ 
+- $\int_{-1}^{+\infty} \frac{x}{1+x^2} \, dx$
+- $\int_{1}^{+\infty} \frac{6}{x^4} \, dx$
+- $\int_{1}^{+\infty}  2^{-x} \, dx$
+- $\int_{1}^{+\infty} \frac{4}{\sqrt[4]{x}}\, dx$
+- $\int_{0}^{+\infty} x e^{-x^2} \, dx$
+- $\int_{0}^{+\infty} x e^{-x/3}\, dx$
+- $\int_{0}^{+\infty}  \frac{x}{\sqrt[5]{x^2+1}} \, dx$
+- $\int_{0}^{+\infty} e^{-x} \cos x\, dx$
+- $\int_{2}^{+\infty} \frac{1}{x\sqrt{\ln x}}\, dx$
+- $\int_{1}^{+\infty} \frac{\ln x}{x} \, dx$
+- $\int_{-\infty}^{0}  \frac{1}{\sqrt[3]{2-x}} \, dx$
+- $\int_{0}^{+\infty} \frac{x^3}{(x^2+1)^2} \, dx$
+- $\int_{-\infty}^{3} \frac{1}{x^2+9} \, dx$
+- $\int_{0}^{+\infty} \frac{e^x}{1+e^x} \, dx$
+- $\int_{-\infty}^{a}  \sqrt{e^x} \, dx$
+- $\int_{0}^{\infty} \sin\frac{x}{2}\, dx$
+- $\int_{-\infty}^{+\infty} \frac{x}{\sqrt{x^2+2}}\, dx$
+- $\int_{0}^{+\infty} \frac{1}{e^x +e^{-x}} \, dx$
+- $\int_{1}^{+\infty}  \frac{1}{x(x+1)} \, dx$
+- $\int_{0}^{+\infty} \cos \pi x \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Evaluate the following integrals that converge. 
+ 
+- $\int_{0}^{\pi/4} \frac{\sec^2 x}{1-\tan x} \, dx$
+- $\int_{0}^{5} \frac{10}{x}\, dx$
+- $\int_{0}^{\pi/2}  \sec x\tan x \, dx$
+- $\int_{0}^{8} \frac{3}{\sqrt{8-x}}\, dx$
+- $\int_{-2}^{2} \frac{1}{x^2} \, dx$
+- $\int_{0}^{e} \ln x^2 \, dx$
+- $\int_{0}^{\pi/2}  \tan x \, dx$
+- $\int_{0}^{\pi/2} \sec x \, dx$
+- $\int_{0}^{1} \frac{1}{(x-1)^{2/3}} \, dx$
+- $\int_{3}^{6} \frac{1}{\sqrt{36-x^2}}\, dx$
+- $\int_{3}^{4}  \frac{1}{(x-3)^{3/2}} \, dx$
+- $\int_{0}^{5}  \frac{1}{25-x^2} \, dx$
+- $\int_{0}^{1} \frac{1}{\sqrt{x}(x+1)} \, dx$
+- $\int_{4}^{+\infty} \frac{\sqrt{x^2}-16}{x^2}\, dx$
+- $\int_{0}^{\ln 3} \frac{e^x}{(e^x -1)^{2/3}} \, dx$
+- $\int_{0}^{8} \frac{1}{\sqrt[3]{x}}\, dx$
+- $\int_{0}^{9} \frac{1}{(x-1)^{1/3}} \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Find the area of the region between the $x$-axis and the curve $y=e^{-3x}$ for $x\geq 0$.
+::: 
+
+
+::: {#exr- } 
+Let $R$ be the region bounded by the graphs of $y=e^{-ax}$ and $y=e^{-bx}$, for $x\geq 0$, where $a > b > 0$.
+Find the area of $R$. 
+::: 
+
+
+::: {#exr- } 
+Suppose that the region between the $x$-axis and the curve $y=e^{-x}$ for $x\geq 0$ is revolved about he $x$-axis. 
+Find the volume and surface area for the solid generated. 
+::: 
+
+::: {#exr- } 
+Use integration by parts to evaluate the integral.
+  
+- $\int_0^{+\infty} x e^-2x\, dx$
+- $\int_0^1 2x\ln x\, dx$
+- $\int_1^\infty \frac{\ln x}{2x^2} \, dx$
+ 
+::: 
+
+::: {#exr- } 
+Let $R$ be the region bounded by the graph of $f(x)= 1/x^p$, where $p$ is a real number.
+For what values of $p$ does the integral $\int_0^1 f(x) \, dx$ exist? When the integral exists what is its value? 
+::: 
+
+::: {#exr- } 
+Find the arc length of the graph of $y=\sqrt{16-x^2}$ over the interval $[0,4]$.
+::: 
+
+::: {#exr- } 
+Find the surface area of the surface formed by revolving the graph of $y=2e^{-x}$ on the interval $[0,+\infty)$ about the $x$-axis. 
+::: 
+
+
+
+

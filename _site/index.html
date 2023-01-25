@@ -73,11 +73,29 @@ ul.task-list li input[type="checkbox"] {
 .navbar-title:hover, .navbar a:hover {
     color:#000000!important;
 }
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
 </style>
 
 
 <meta property="og:title" content="Direct Knowledge - Learn faster, explore deeper">
+<meta property="og:description" content="That Anyone Can Learn. This book is designed as an invitation to beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory.">
+<meta property="og:image" content="https://directknowledge.com/assets/basic-set-theory-cover.png">
 <meta property="og:site-name" content="Direct Knowledge">
+<meta property="og:image:height" content="780">
+<meta property="og:image:width" content="488">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -110,11 +128,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
-</i> 
- <span class="dropdown-text">Exploring Calculus</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
@@ -123,6 +136,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
@@ -160,68 +178,64 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<style>
-@media screen and (max-width: 786px) {
-    .dk-header {
-        margin-top:-60px!important;
-    }
-}
-@media screen and (max-width: 440px) {
-    .dk-header {
-        margin-top:-80px!important;
-    }
-    .dk-header ul, .dk-header ul li {
-        margin:0px!important;
-        padding:10px 0px!important;
-        list-style: none!important;
-        display:block;
-    }
-}
-</style>
 <div class="column-screen">
-<div class="my-5 px-2 mx-auto text-center dk-header">
-  <div class="px-4 pt-1 my-5 text-center border-bottom mx-auto" style="max-width:900px;">
-    <h1 class="display-2 fw-bold text-start">Direct Knowledge</h1>
-    <div class="col-lg-4 text-start">
-        <h2 class="display-6 fw-bold border-0 pb-2">Learn faster, explore deeper</h2>
-    </div>
-    <div class="col-lg-6 text-start mx-auto">
-        <ul class="lead mb-4">
-            <li class="p-1 fs-4"><span class="fw-bold">Learn mathematics and computer science</span> from anywhere in the world.</li>
-            <li class="p-1 fs-4">Instead of buttons on a calculator, learn mathematics <span class="fw-bold">and how to code</span>.</li>
-            <li class="p-1 fs-4">Get step-by-step explanations <span class="fw-bold">with interactive, programmable tutorials</span>.</li>
-            <li class="p-1 fs-4">Watch, listen, <span class="fw-bold">and receive instant feedback with videos and live streams</span>.</li>
-        </ul>
-    </div>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <a role="button" class="btn btn-primary btn-lg px-4 me-sm-3 text-capitalize" href="./basic-set-theory/">Get Started</a>
-        <a role="button" class="btn btn-outline-secondary btn-lg px-4" href="about.html">About</a>
-    </div>
-    <div class="overflow-hidden mt-5" style="max-height: 40vh;">
-      <div class="container px-5">
-        <img src="assets/direct-knowledge.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Learn faster, explore deeper with Direct Knowledge" width="810" height="456" loading="lazy">
+<!-- Hero -->
+<div class="p-5 text-center bg-image img-fluid" style="margin-top:-40pt;background-size: cover; background-image: url('assets/directknowledge.png'); height: 600px;background-attachment: fixed;background-repeat: no-repeat;">
+  <div class="h-100">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3 display-3 fw-bold">DIRECT KNOWLEDGE</h1>
+        <h4 class="mb-3 display-6">Learn faster, explore deeper</h4>
+        <a class="btn btn-outline-light btn-lg m-1" href="./basic-set-theory/" role="button">Sets</a>
+        <a class="btn btn-outline-light btn-lg m-1" href="./learning-number-theory/" role="button">Numbers</a>
+        <a class="btn btn-outline-light btn-lg m-1" href="./learning-linear-algebra/" role="button">Linear</a>
+        <a class="btn btn-outline-light btn-lg m-1" href="./single-variable-calculus/" role="button">Calculus</a>
+        <a class="btn btn-outline-light btn-lg m-1" href="./multivariable-calculus/" role="button">Calculus 3D</a>
       </div>
     </div>
   </div>
 </div>
+<!-- Hero -->
 </div>
-<div class="column-screen">
+<div class="column-screen bg-light">
 <div class="my-5 px-2" style="text-align:center;margin:40px auto;">
 <h2 class="fs-1 border-0 text-capitalize">Education sure has come along ways</h2>
 <h3 class="fs-3">Direct Knowledge brings technology together so you can learn faster.</h3>
 <img style="margin:40px auto;width:100%;max-width:1080px;" src="assets/vendor-logos.png" alt="Direct Knowledge brings technology together so you can learn faster.">
 </div>
 </div>
+<section id="basic-set-theory" class="level2">
+<h2 data-anchor-id="basic-set-theory">Basic Set Theory</h2>
+<p><a href="./basic-set-theory/"><img src="./assets/basic-set-theory-cover.png" class="float-end shadow ms-4 mb-4 img-fluid" alt="Basic Set Theory Book" width="150"></a> <strong>That Anyone Can Learn</strong>. This book is designed as an invitation to beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory. The text is easy to follow and provides many examples that will help readers understand the concepts discussed. Topics include propositional logic, first-order logic, set theory, functions, and relations. Additionally we introduce connection theory and concept theory. With the novel approach taken here, with this book as a guide, readers will soon be able to see the beauty and power of mathematical reasoning. <a href="./basic-set-theory/">More Information</a></p>
+</section>
+<section id="learning-number-theory" class="level2 mt-5">
+<h2 class="mt-5" data-anchor-id="learning-number-theory">Learning Number Theory</h2>
+<p><a href="./learning-number-theory/"><img src="./assets/learning-number-theory-cover.png" class="float-start shadow me-4 mb-4 img-fluid" alt="Learning Number Theory Book" width="150"></a> <strong>With Python</strong>. In this book, we cover the basics of elementary number theory. Topics include the natural numbers, divisibility in the integers, unique prime factorization, and congruence equations discussing both quadratic and polynomial congruence equations. While we explore these basic topics we’ll also learn how to use python when doing number theory. In the second part of the book we introduce automating proofs in elementary number theory using python. We’ll do this by first studying Grobner Bases in polynomial rings and then we’ll make a connection between these rings and theorems involving integer divisibility.<br>
+<a href="./learning-number-theory/">More Information</a></p>
+</section>
+<section id="learning-linear-algebra" class="level2 mt-5">
+<h2 class="mt-5" data-anchor-id="learning-linear-algebra">Learning Linear Algebra</h2>
+<p><a href="./learning-linear-algebra/"><img src="./assets/learning-linear-algebra-cover.png" class="float-start shadow me-4 mb-4 img-fluid" alt="Learning Linear Algebra Book" width="150"></a> <strong>With Python</strong>. In this book, we cover the basics of linear algebra. Topics include systems of linear equations, finite-dimensional vector spaces, linear transformations, and inner-product spaces. Determinants, eigenvalues, and eigenvectors are also covered. While we explore these basic topics we’ll also learn how to use python when doing linear algebra. In the second part of the book, we detail the structure of a linear operator by providing an algorithm for the Jordan canonical form of a linear transformation using python. <a href="./learning-number-theory/">More Information</a></p>
+</section>
+<section id="single-variable-calculus" class="level2 mt-5">
+<h2 class="mt-5" data-anchor-id="single-variable-calculus">Single Variable Calculus</h2>
+<p><a href="./single-variable-calculus/"><img src="./assets/single-variable-calculus-cover.png" class="float-end shadow ms-4 mb-4 img-fluid" alt="Single Variable Calculus Book" width="150"></a> <strong>With Python</strong>. In this book, we cover the basics of a first and second-semester course in the calculus of a single variable. Topics include limits and continuous functions, derivatives and their applications, and integrals and their applications. Techniques of integration and then infinite sequences and series are detailed. While we’re learning calculus we’ll also be exploring using the python prgramming language. We’ll study calculus numerical, symbolically, and graphcially. This three prong approach allows us to engage calculus, learn it faster, and explore it deeper. <a href="./single-variable-calculus/">More Information</a></p>
+</section>
+<section id="multivariable-calculus" class="level2 mt-5 page-columns page-full">
+<h2 class="mt-5" data-anchor-id="multivariable-calculus">Multivariable Calculus</h2>
+<p><a href="./multivariable-calculus/"><img src="./assets/multivariable-calculus-cover.png" class="float-end shadow ms-4 mb-4 img-fluid" alt="Multivariable Calculus Book" width="150"></a> <strong>With Python</strong>. In this book, we’ll explore multivariable calculus using python. Topics include multivariable functions and their limits, partial derivatives and their applications, and multiple integration and applications. We detail vector-valued functions, and then towards the end, vector calculus by examining vector fields, line integrals, surface integrals, and some amazing theorems invoving these integerals. In the end, the theory electromagnetism is developed.<br>
+<a href="./multivariable-calculus/">More Information</a></p>
 <div class="column-screen">
 <div class="border-top border-bottom bg-light mt-5" style="margin-bottom:-80px;">
 <div class="py-5 my-5 text-center">
     <h2 class="px-4 display-8 fw-bold border-0 text-black-80">Learn. Progress. Explore deeper with Direct Knowledge.</h2>
-    <a role="button" class="btn btn-primary btn-lg px-4 gap-3 rounded-3" href="./basic-set-theory/">Get Started</a>
+    <a role="button" class="btn btn-primary btn-lg px-4 gap-3 rounded-3" href="about.html">About Us</a>
 </div>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script type="application/ld+json">

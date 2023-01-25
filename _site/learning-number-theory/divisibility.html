@@ -19,7 +19,7 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <meta name="quarto:offset" content="./">
-<link href="./euclidean-algorithm.html" rel="next">
+<link href="./unique-factorization.html" rel="next">
 <link href="./peanos-axioms.html" rel="prev">
 <link href="./../assets/favicon.ico" rel="icon">
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
@@ -47,37 +47,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-.book-title {
-    font-weight:800;
-    text-transform: uppercase;
-    font-size: 150%;
-    margin:-20px -20px 20px -20px;
-    line-height:120%;
-    text-decoration: none!important;
-    display:block;
-}
-.book-title, #quarto-search svg {
-    color: #cb6d00!important;
-}
-@media screen and (max-width: 990px) {
-    .book-title {
-        padding-left: 20px!important;
-    }    
-}
-#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
-    font-weight: 500!important;
-    color:#cb6d00;
- }
- #quarto-sidebar .text-start {
-    font-variant: small-caps;
-    font-size: 120%;
- }
- #quarto-sidebar .active, .active .chapter-number {
-    color:#000000!important;
-    font-weight: 700!important;
- }
-</style>
-<style>
 @media screen and (max-width: 440px) {
     .navbar-brand-logo::after {
         content: 'DK'!important;
@@ -100,6 +69,20 @@ ul.task-list li input[type="checkbox"] {
 }
 .navbar-title:hover, .navbar a:hover {
     color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
 }
 </style>
   
@@ -136,11 +119,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
-</i> 
- <span class="dropdown-text">Exploring Calculus</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
@@ -149,6 +127,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
@@ -212,27 +195,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./euclidean-algorithm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Euclidean Algorithm</span></a>
+  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
+  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
+  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
+  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
+  <a href="./polynomial-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Polynomial Congruences</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -253,6 +236,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#divisibility-and-the-division-algorithm" id="toc-divisibility-and-the-division-algorithm" class="nav-link" data-scroll-target="#divisibility-and-the-division-algorithm"><span class="toc-section-number">2.2</span>  Divisibility and The Division Algorithm</a></li>
   <li><a href="#prime-numbers" id="toc-prime-numbers" class="nav-link" data-scroll-target="#prime-numbers"><span class="toc-section-number">2.3</span>  Prime Numbers</a></li>
   <li><a href="#greatest-common-divisors" id="toc-greatest-common-divisors" class="nav-link" data-scroll-target="#greatest-common-divisors"><span class="toc-section-number">2.4</span>  Greatest Common Divisors</a></li>
+  <li><a href="#euclidean-algorithm" id="toc-euclidean-algorithm" class="nav-link" data-scroll-target="#euclidean-algorithm"><span class="toc-section-number">2.5</span>  Euclidean Algorithm</a></li>
   </ul>
 </nav>
     </div>
@@ -618,6 +602,101 @@ a=a(1)=a(bm+nc)=a b m+a n c = t c b m +s b n c= bc(tm+sn)
 \]</span> which shows <span class="math inline">\((b,c)=1\)</span>.</p>
 </div>
 </section>
+<section id="euclidean-algorithm" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="euclidean-algorithm"><span class="header-section-number">2.5</span> Euclidean Algorithm</h2>
+<p>Divide <span class="math inline">\(a\)</span> by <span class="math inline">\(b,\)</span> obtaining the quotient <span class="math inline">\(q_1\)</span> and the remainder <span class="math inline">\(r_1\)</span>. Then, if <span class="math inline">\(r_1\)</span> is not zero, divide <span class="math inline">\(b\)</span> by <span class="math inline">\(r_1\)</span> obtaining the quotient <span class="math inline">\(q_2\)</span> and remainder <span class="math inline">\(r_2\)</span>. Then if <span class="math inline">\(r_2\)</span> is not zero then we repeat this process and divide <span class="math inline">\(r_1\)</span> by <span class="math inline">\(r_2\)</span>, obtaining the quotient <span class="math inline">\(q_3\)</span> and remainder <span class="math inline">\(r_3\)</span>. This process, or <em>algorithm</em>, is repeated until we first obtain the remainder of zero. At the conclusion of the process we have the greatest common divisor which is the last nonzero remainder.</p>
+<p>The next lemma is used in the proof of the Euclidean Algorithm.</p>
+<div id="lem-euallemm" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2.7 </strong></span>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are positive integers. If <span class="math inline">\(a=b q+r\)</span> for some positive integers <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span>, then <span class="math inline">\((a,b)=(b,r)\)</span>.</p>
+</div>
+<p>For example, in the case that <span class="math inline">\(288=40(7)+8\)</span> we have <span class="math display">\[\begin{align*}
+S&amp; =\{d\in \mathbb{Z} \mid d\mid 288 \text{ and } d\mid 40\} \\
+&amp; =\{\pm1, \pm 2, \pm 4\pm, 8\pm\}
+\end{align*}\]</span> <span class="math display">\[\begin{align*}
+T&amp; =\{d\in \mathbb{Z} \mid d\mid 40 \text{ and } d\mid 8\} \\
+&amp; =\{\pm1, \pm 2, \pm 4\pm, 8\pm\}
+\end{align*}\]</span> Clearly, <span class="math inline">\(S=T\)</span> and both sets are finite.</p>
+<div class="proof">
+<span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(a=bq+r\)</span>. Let <span class="math inline">\(S\)</span> and <span class="math inline">\(T\)</span> be the set of common divisors of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and of <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span>, respectively; that is, <span class="math display">\[
+S=\{d\in \mathbb{Z} : d\mid a \text{ and } d\mid b\}
+\quad \text{and}\quad
+T=\{d\in \mathbb{Z} : d\mid b \text{ and } d\mid r\}.
+\]</span> Let <span class="math inline">\(d\in S\)</span>. So <span class="math inline">\(d\)</span> divides <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and thus divides <span class="math inline">\(b\)</span> and <span class="math inline">\(r=a-b q\)</span>. Hence <span class="math inline">\(d\in T\)</span>.
+To show the reverse inclusion <span class="math inline">\(T\supseteq S\)</span>, if <span class="math inline">\(d\in T\)</span> then <span class="math inline">\(d\)</span> divides <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span>. Then <span class="math inline">\(d\)</span> divides <span class="math inline">\(a=bq+r\)</span> and <span class="math inline">\(b\)</span>, and so <span class="math inline">\(d\in S\)</span>.
+<p>We have shown <span class="math inline">\(S\subseteq T\)</span> and <span class="math inline">\(T\subseteq S\)</span>; and therefore, <span class="math inline">\(S=T\)</span>. Since these are finite sets the greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the same as the greatest common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.8 </strong></span>Find <span class="math inline">\((345688, 245994)\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By the Division Algorithm, <span class="math display">\[\begin{align*}
+&amp; 345688 =245994(1)+99694 \, \text{ with } \, 0\leq 99694 &lt; 245994 \\
+&amp; 245994 =99694(2)+46606 \, \text{ with } \, 0\leq 46606 &lt; 99694 \\
+&amp; 99694 =46606(2)+6482 \, \text{ with } \, 0\leq 6482 &lt; 46606 \\
+&amp; 46606 =6482(7)+1232 \, \text{ with } \, 0\leq 1232 &lt; 6482 \\
+&amp; 6482 =1232(5)+322 \, \text{ with } \, 0\leq 322 &lt; 1232 \\
+&amp; 1232 =322(3)+266 \, \text{ with } \, 0\leq 266 &lt; 322 \\
+&amp; 322 =266(1)+56 \, \text{ with } \, 0\leq 56 &lt; 266 \\
+&amp; 266 =56(4)+42 \, \text{ with } \, 0\leq 42 &lt; 56 \\
+&amp; 56 =42(1)+14 \, \text{ with } \, 0\leq 14 &lt; 42 \\
+&amp; 42  =14(3)+0 \, \text{ with } \, 0\leq 0 &lt; 14
+\end{align*}\]</span> Therefore, <span class="math inline">\((345688, 245994)=14\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.9 </strong></span>Let <span class="math inline">\(d=(328,288)\)</span>. Find <span class="math inline">\(d\)</span> and write it as a linear combination of 328 and 288.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By the Division Algorithm, <span class="math display">\[\begin{align*}
+328 &amp; =288(1)+40 \, \text{ with } \, 0\leq 40&lt;288 \\
+288 &amp; =40(7)+8 \,  \text{with} \, 0\leq 8&lt;40 \\
+40 &amp; =8(5)+0 \,  \text{ with } \, 0\leq 8&lt;40
+\end{align*}\]</span> Now, <span class="math inline">\(d=(328,288)=8\)</span> follows from <span class="math display">\[
+(328,288)=(288,40)=(40,8)=(8,0)=8
+\]</span> by <span class="math inline">\(\ref{euallemm}\)</span>. We can use the above computation to write <span class="math inline">\(8\)</span> as a line recombination of 328 and 288 using back substitution: <span class="math display">\[\begin{align*}
+&amp; 8=288-40(7) \\
+&amp; 8=288-[328-288(1)](7) \\
+&amp; 8= 8(288)-7(328)
+\square
+\end{align*}\]</span></p>
+</div>
+<p>One way to view the <strong>Euclidean algorithm</strong> is as the repeated application of the Division Algorithm and repeated application of <span class="math inline">\(\ref{euallemm}\)</span>.</p>
+<p>We can visualize the greatest common divisor. For example, a 24-by-60 rectangular area can be divided into a grid of: 1-by-1 squares, 2-by-2 squares, 3-by-3 squares, 4-by-4 squares, 6-by-6 squares or 12-by-12 squares. Therefore, 12 is the greatest common divisor of 24 and 60.</p>
+<p>The greatest common divisor of two numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the product of the prime factors shared by the two numbers, where a same prime factor can be used multiple times, but only as long as the product of these factors divides both <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. For example, since 1386 can be factored into <span class="math inline">\(2 \times 3 \times 3 \times 7 \times 11\)</span>, and 3213 can be factored into <span class="math inline">\(3 \times 3 \times 3 \times 7 \times 17\)</span>, the greatest common divisor of 1386 and 3213 equals <span class="math inline">\(63 = 3 \times 3 \times 7\)</span>, the product of their shared prime factors. In particular, if two numbers have no prime factors in common, they are relatively prime.</p>
+<blockquote class="blockquote">
+<p>A important feature of the Euclidean algorithm is that it can find the gcd efficiently without having to compute the prime factors.</p>
+</blockquote>
+<p>Factorization of large integers is believed to be a computationally very difficult problem, and the security of many modern cryptography systems is based upon its infeasibility.</p>
+<p>Consider the question of finding the greatest common divisor of two numbers. For example, let <span class="math inline">\(a=288\)</span> and <span class="math inline">\(b=3266\)</span>, what is <span class="math inline">\((3266,288)\)</span>? We apply the Division Algorithm and <span class="math inline">\(\ref{euallemm}\)</span> to obtain <span class="math display">\[
+3266=11(288)+98  \text{ with } 0\leq 98 &lt;288 \text{ and } (3266,288)=(288,98).
+\]</span> Again, we apply the Division Algorithm and <span class="math inline">\(\ref{euallemm}\)</span> to obtain <span class="math display">\[
+288=2(98)+92 \text{ with } 0\leq 92 &lt;98 \text{ and } (3266,288)=(288,98)=(98,92).
+\]</span> Again, we apply the Division Algorithm and <span class="math inline">\(\ref{euallemm}\)</span> to obtain <span class="math display">\[
+98=1(92)+6
+\text{ with } 0\leq 6 &lt;92
+\text{ and } (3266,288)
+%=(288,98)=(98,92)
+=(92,6)
+=2.
+\]</span> We now write this process in a general format.</p>
+<div id="thm-euclidean-algorithm" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2.6 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be positive positive integers with <span class="math inline">\(a\geq b\)</span>. If <span class="math inline">\(b\nmid a\)</span>, then apply the division algorithm repeatedly as follows:</p>
+<p>{2} &amp; &amp; &amp; \ &amp; &amp; &amp; \ &amp; &amp; &amp; </p>
+<p>This process ends after a finite number of steps; that is, for some <span class="math inline">\(k\)</span>: <span class="math display">\[
+r_{k-2}=r_{k-1} q_k+r_k
+\text{ with } 0\leq  r_k&lt;r_{k-1}
+\]</span> where $r_{k-1}=r_k q_{k+1}+0 $ and <span class="math inline">\(r_k=(a,b)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof follows from the property: if <span class="math inline">\(a=b q+r,\)</span> then <span class="math inline">\((a,b)=(b,r).\)</span> Thus, if <span class="math inline">\(b|a,\)</span> then <span class="math inline">\(a=b q+0\)</span> and so <span class="math inline">\((a,b)=(b,0)=b.\)</span> Notice <span class="math display">\[
+(a,b)
+=\left(b,r_0\right)
+=\left(r_0,r_1\right)
+=\cdot \cdot \cdot =\left(r_{k-2},r_{k-1}\right)
+=\left(r_{k-1},r_k\right) =\left(r_k,0\right) =r_k.
+\]</span> by <span class="math inline">\(\ref{euallemm}\)</span> as desired.</p>
+</div>
+<p>In the 19th century, the Euclidean algorithm led to the development of new number systems, such as Gaussian integers and Eisenstein integers.</p>
+</section>
 </main> <!-- /main -->
 <script type="application/ld+json">
     {
@@ -943,8 +1022,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./euclidean-algorithm.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Euclidean Algorithm</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./unique-factorization.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unique Factorization</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

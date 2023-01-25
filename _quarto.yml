@@ -1,5 +1,6 @@
-# Direct Knowledge (2023 version)
+# Direct Knowledge (2023 version
 # python -m http.server 8000
+# 
 
 project:
   type: website
@@ -27,10 +28,6 @@ website:
             href: https://directknowledge.com/basic-set-theory/
             icon: book
             aria-label: Basic Set Theory Book
-          - text: "Exploring Calculus"
-            href: https://directknowledge.com/exploring-calculus/
-            icon: book
-            aria-label: Exploring Calculus Book
           - text: "Learning Number Theory"
             href: https://directknowledge.com/learning-number-theory/
             icon: book
@@ -39,6 +36,10 @@ website:
             href: https://directknowledge.com/learning-linear-algebra/
             icon: book
             aria-label: Learning Linear Algebra Book
+          - text: "Single Variable Calculus"
+            href: https://directknowledge.com/single-variable-calculus/
+            icon: book
+            aria-label: Single Variable Calculus Book
           - text: "Multivariable Calculus"
             href: https://directknowledge.com/multivariable-calculus/
             icon: book

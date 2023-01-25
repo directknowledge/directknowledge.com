@@ -4,27 +4,69 @@
     "href": "index.html",
     "title": "Direct Knowledge",
     "section": "",
-    "text": "Direct Knowledge\n    \n        Learn faster, explore deeper\n    \n    \n        \n            Learn mathematics and computer science from anywhere in the world.\n            Instead of buttons on a calculator, learn mathematics and how to code.\n            Get step-by-step explanations with interactive, programmable tutorials.\n            Watch, listen, and receive instant feedback with videos and live streams.\n        \n    \n    \n        Get Started\n        About\n    \n    \n      \n        \n      \n    \n  \n\n\n\n\nEducation sure has come along ways\nDirect Knowledge brings technology together so you can learn faster.\n\n\n\n\n\n\n    Learn. Progress. Explore deeper with Direct Knowledge.\n    Get Started"
+    "text": "Sets\n        Numbers\n        Linear\n        Calculus\n        Calculus 3D"
+  },
+  {
+    "objectID": "index.html#basic-set-theory",
+    "href": "index.html#basic-set-theory",
+    "title": "Direct Knowledge",
+    "section": "Basic Set Theory",
+    "text": "Basic Set Theory\n That Anyone Can Learn. This book is designed as an invitation to beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory. The text is easy to follow and provides many examples that will help readers understand the concepts discussed. Topics include propositional logic, first-order logic, set theory, functions, and relations. Additionally we introduce connection theory and concept theory. With the novel approach taken here, with this book as a guide, readers will soon be able to see the beauty and power of mathematical reasoning. More Information"
+  },
+  {
+    "objectID": "index.html#learning-number-theory",
+    "href": "index.html#learning-number-theory",
+    "title": "Direct Knowledge",
+    "section": "Learning Number Theory",
+    "text": "Learning Number Theory\n With Python. In this book, we cover the basics of elementary number theory. Topics include the natural numbers, divisibility in the integers, unique prime factorization, and congruence equations discussing both quadratic and polynomial congruence equations. While we explore these basic topics we’ll also learn how to use python when doing number theory. In the second part of the book we introduce automating proofs in elementary number theory using python. We’ll do this by first studying Grobner Bases in polynomial rings and then we’ll make a connection between these rings and theorems involving integer divisibility.\nMore Information"
+  },
+  {
+    "objectID": "index.html#learning-linear-algebra",
+    "href": "index.html#learning-linear-algebra",
+    "title": "Direct Knowledge",
+    "section": "Learning Linear Algebra",
+    "text": "Learning Linear Algebra\n With Python. In this book, we cover the basics of linear algebra. Topics include systems of linear equations, finite-dimensional vector spaces, linear transformations, and inner-product spaces. Determinants, eigenvalues, and eigenvectors are also covered. While we explore these basic topics we’ll also learn how to use python when doing linear algebra. In the second part of the book, we detail the structure of a linear operator by providing an algorithm for the Jordan canonical form of a linear transformation using python. More Information"
+  },
+  {
+    "objectID": "index.html#single-variable-calculus",
+    "href": "index.html#single-variable-calculus",
+    "title": "Direct Knowledge",
+    "section": "Single Variable Calculus",
+    "text": "Single Variable Calculus\n With Python. In this book, we cover the basics of a first and second-semester course in the calculus of a single variable. Topics include limits and continuous functions, derivatives and their applications, and integrals and their applications. Techniques of integration and then infinite sequences and series are detailed. While we’re learning calculus we’ll also be exploring using the python prgramming language. We’ll study calculus numerical, symbolically, and graphcially. This three prong approach allows us to engage calculus, learn it faster, and explore it deeper. More Information"
+  },
+  {
+    "objectID": "index.html#multivariable-calculus",
+    "href": "index.html#multivariable-calculus",
+    "title": "Direct Knowledge",
+    "section": "Multivariable Calculus",
+    "text": "Multivariable Calculus\n With Python. In this book, we’ll explore multivariable calculus using python. Topics include multivariable functions and their limits, partial derivatives and their applications, and multiple integration and applications. We detail vector-valued functions, and then towards the end, vector calculus by examining vector fields, line integrals, surface integrals, and some amazing theorems invoving these integerals. In the end, the theory electromagnetism is developed.\nMore Information\n\n\n\n    Learn. Progress. Explore deeper with Direct Knowledge.\n    About Us"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Direct Knowledge is a company founded by David A. Smith, a retired mathematics professor with over 15 years of experience educating students at the University of Texas at Arlington. David is passionate about learning both mathematics and computer science, and advancing knowledge in these areas. His mission is to make it accessible for people everywhere to learn in these subjects, whenever they want, and however they want. We are doing this by building the world’s first online education platform that offers everyone free access to expert-led courses using articles, videos, and especially, interactive tutorials and live streaming."
+    "text": "Direct Knowledge is the publishing company for David A. Smith. Subjects include logic, set theory, linear and abstract algebra, number theory, calculus, differential equations, and analysis. The mission of Direct Knowledge is to bring to you the novel ideas and concepts that are explored books in these books in an online format that everyone can access. At Direct Knowledge, we examine the foundations of mathematics and computer science to uncover fascinating new ideas that can unlock solutions for modern challenges. Our goal is to inspire people around the world into action that can constructively shape our future. A spark of inspiration from which they can create something bigger than themselves."
+  },
+  {
+    "objectID": "about.html#about-david-a.-smith",
+    "href": "about.html#about-david-a.-smith",
+    "title": "About",
+    "section": "About David A. Smith",
+    "text": "About David A. Smith\nDavid A. Smith is a retired mathematics professor with over 15 years of experience educating students at the University of Texas at Arlington. David is passionate about learning both mathematics and computer science and advancing everyone’s knowledge in these areas. His mission is to make it accessible for people everywhere to learn these subjects, whenever and however they want.\nDavid A. Smith is currently the CEO and founder of Direct Knowledge. With extensive experience in higher education and a passion for learning, his professional and academic careers revolve around advancing knowledge for himself and others."
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "About",
     "section": "Education",
-    "text": "Education\nUniversity of Texas at Arlington | Arlington, TX Masters of Science in Mathematics | December 2000\nUniversity of Texas at Arlington | Arlington, TX Bachelor of Science in Mathematics | December 1996"
+    "text": "Education\n\nUniversity of Texas at Arlington | Arlington, TX. Masters of Science in Mathematics | December 2000\nUniversity of Texas at Arlington | Arlington, TX. Bachelor of Science in Mathematics | December 1996"
   },
   {
     "objectID": "about.html#experience",
     "href": "about.html#experience",
     "title": "About",
     "section": "Experience",
-    "text": "Experience\nDirect Knowledge | CEO & Founder | November 10, 2017 - present\nTarrant County College | Mathematics Lecturer 2016 – 2018\nUniversity of Texas at Arlington | Mathematics Lecturer | 2002 - 2015\nUniversity of Texas at Arlington | Graduate Teaching Assistant | 1997 - 2000"
+    "text": "Experience\n\nDirect Knowledge | CEO & Founder | November 10, 2017 - present\nTarrant County College | Mathematics Lecturer, 2016 – 2018\nUniversity of Texas at Arlington | Mathematics Lecturer, 2002 - 2015\nUniversity of Texas at Arlington | Graduate Teaching Assistant, 1997 - 2000"
   }
 ]

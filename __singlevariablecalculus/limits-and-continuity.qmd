@@ -1,0 +1,1608 @@
+---
+pagetitle: Limits and Continuity - Single Variable Calculus
+---
+# Limits and Continuity
+
+
+In mathematics, both limits and continuity play a very important role in proofs and calculations. In this book, you will learn all about limits: what they are, how to find them, and how to use them in mathematical proofs. You will also learn about the different types of discontinuities and how to deal with them. With this knowledge, you will be able to perform complex calculations with ease and confidence.
+
+Limits are the bread and butter of calculus. Without limits, we wouldn't be able to find derivatives or integrals. In short, limits are essential for understanding calculus. So what are limits? Put simply, limits are a way of describing what happens when a function gets closer and closer to a certain value.
+
+For example, if we have a function that is always increasing but never reaches a specific number, we say that the function approaches that number as its limit. This may not seem like a big deal, but limits are actually incredibly important. They allow us to define things like continuity and differentiability, which are essential concepts in calculus. So next time you're struggling with a calculus problem, remember that it all comes down to limits!
+
+Intuitively, one can think of limits as boundaries. Just as there are physical limits to what a person can do, there are limits to what a function can do. By understanding these limits, we can better understand the nature of continuity and how to take advantage of it in our calculations.
+
+In short, limits are important in calculus because they allow us to understand how functions behave at specific points within their domains.
+
+Limits are important because they help us understand continuity, derivatives, and integrals. And continuity is important because, well, the world is continuous (so it seems)! So limits are pretty important.
+
+There are a few techniques that can be helpful for finding limits. One is to think about what the function is doing approaching the point in question. Is it getting closer and closer to a certain value? If so, that value is probably the limit. Another technique is to plug in values that are close to the point in question and see what happens. This can be helpful for getting an intuition for how the function behaves near the point in question. And finally, sometimes it can be helpful to use some algebraic manipulation to simplify the expression before taking the limit.
+
+As with all things mathematical, practice makes perfect, so don't be discouraged if limits give you some trouble at first. Keep at it and you'll get the hang of it in no time!
+
+Limits are important in calculus because they allow us to determine whether a function is continuous or not. Intuitively, a function is continuous if given any two points within its domain, there exists a smooth curve that connects those points. Limits enable us to test for continuity by seeing if the function's value approaches the same number as we approach a specific point within the domain.
+
+If the function's value does approach the same number, then we say that the function is continuous at that point. If the function's value does not approach the same number, then we say that the function is discontinuous at that point. Continuity is important because it allows us to determine how a function will behave as we approach certain values within its domain.
+
+Continuity describes how a function behaves over a range of values. A function is continuous if it is smooth and uninterrupted over that range. In other words, there are no sudden jumps or discontinuities. Most functions you encounter in everyday life are continuous. For example, the position of a car on a road is continuous - there are no gaps or discontinuities in the car's position. On the other hand, a function like 1/x is not continuous, because it has a discontinuity at x=0.
+
+Together, limits and continuity allow us to understand and predict the behavior of functions at both the micro and macro levels. At the micro level, limits allow us to understand what happens to a function as x approaches a certain value. And at the macro level, continuity allows us to understand how a function behaves over a range of values. These concepts are essential for understanding and manipulating functions in calculus.
+
+The existence of limits is one of the fundamental properties distinguishing calculus from ordinary algebra and geometry. Limits are basic to differential and integral calculus and play an important role in many other branches of mathematics. They also occur in physics and other sciences in connection with limiting cases and approximations. Informally, limits describe the behavior of a function as its arguments “approach” certain defined values; they provide a precise foundation for calculus, enabling earlier work with limits to be rigorously justified.
+
+In most cases limits can be found by algebraic manipulations; more sophisticated means may sometimes be required, but even in difficult cases it is almost always possible to find some numerical indication of the desired limit. Many functions have limits at infinity that can be expressed in simple algebraic form, while others grow so rapidly that no finite limit exists.
+
+Conversely, some functions have limits that do not exist when approached from either direction (the right or left), while others that have left and right limits may not have a limit as x approaches any real number other than these two specific values. The concept of a limit is thus seen to be closely related both to that of continuity (which deals with single-valued functions only) and to that of an infinite series, which enables discontinuities and multivalued functions also to be treated rigorously by means of limits.
+
+One might wonder, "Why do we need a precise definition of limits? Can't we just say that a limit is when a function gets close to a certain value?" While this informal definition suffices in many cases, there are situations where a more precise definition is required. For example, consider the function f(x) = 1/x. As x approaches 0, this function gets closer and closer to infinity. However, it never actually reaches infinity.
+
+So if we were to use the informal definition of limits, we would say that the limit of f(x) as x approaches 0 is infinity. However, this is not very useful, since it doesn't tell us anything about what happens to the function at x = 0. To get around this problem, mathematicians have devised a more precise definition of limits.
+
+This definition allows us to say that the limit of f(x) as x approaches 0 is actually undefined. While this might not seem like a very satisfying answer, it does give us important information about the behavior of the function at x = 0. So in some cases, a more precise definition of limits can be quite helpful.
+
+However, the definition of limits is actually quite technical, and it turns out to be very useful in calculus and other areas of mathematics. Without a precise definition of limits, many important theorems would be impossible to prove. So next time you're feeling frustrated with your math homework, remember that your struggles could be helping to further the field of mathematics!
+
+Have you ever been driving down the highway and suddenly had to brake for a stop sign or red light? If so, then you've experienced limits firsthand. Whenever you're driving, you're constantly changing speeds, and your car's speedometer is measuring the rate of change of your car's velocity.
+
+But what happens when your car comes to a stop? The speedometer still measures a nonzero rate of change, but it's obvious that your car's velocity has changed dramatically. This is because the speedometer is measuring the instantaneous rate of change, or the limit of the average rate of change as the time interval approaches zero. This may seem like a lot of math jargon, but limits are actually quite intuitive.
+
+In essence, they tell us how things are changing at a given moment. And limits are not just useful for calculus; they're also essential for understanding rates of change in everyday life. So next time you're stuck in traffic, just think of it as an opportunity to learn about limits!
+
+One of the most important concepts in calculus is continuity. limits are a fundamental tool in calculus that allow us to determine whether a function is continuous at a point. Intuitively, continuity means that a function is "smooth" and doesn't have any sharp jumps or abrupt changes.
+
+Continuity is important because many of the most useful functions in calculus, such as the derivative and integral, are only defined for continuous functions. As a result, being able to identify and understand limits is essential for anyone who wants to study calculus. Luckily, limits are not as difficult as they may seem at first. With a little practice, anyone can learn to find them. And once you've mastered limits, you'll be well on your way to understanding one of the most important branches of mathematics.
+
+Limits and continuity may seem like dry, theoretical concepts, but they actually have a lot of real-world applications. For example, limits are used in calculus to determine the rate of change of a function, and they also play a role in physics when studying things like motion and acceleration. Similarly, continuity is important in many fields, including economics and computer programming. In fact, virtually any time you're dealing with change or movement, limits and continuity are likely to be involved.
+
+For example, limits can be used to understand how a car accelerates or how a projectile moves through the air. Continuity can be used to determine whether a path is smooth or whether a financial market is stable. In each of these cases, limits and continuity provide valuable insight that can help us to make better decisions.
+
+So next time you're stuck in traffic or trying to figure out why your computer keeps crashing, remember that you're actually dealing with some pretty complex math!
+
+Limits, the cornerstone of calculus, are a measure of how close a function gets to a certain value as it approaches that value from either direction. In other words, limits tell us how a function behaves near a point, such as whether it approaches the point from above or below, or oscillates around the point.
+
+Continuity is a related concept: it deals with how well a function can be defined at a point, and whether it behaves predictably near that point. A function is continuous at a point if its limit exists at that point and if the function's value at that point equals the limit. Intuitively, this means that a continuous function can be drawn without lifting one's pencil from the paper. Many of the most important results in calculus depend on continuity; in fact, one could argue that calculus is really about continuity.
+
+The idea of limits is used to define all sorts of important geometric objects such as tangent lines and curves, and these in turn are used to study functions and their behavior. Continuity is also used extensively in physics: for example, when solving problems involving fluids or electricity, one often assumes that the underlying functions are continuous. In short, continuity is a fundamental concept in calculus with far-reaching implications.
+
+In the world of mathematics, limits are important because they help to define continuity. In other words, limits tell us when a function is "continuous" or "smooth." Without limits, it would be difficult to calculate things like derivatives and integrals. So, in a sense, limits are the foundation of calculus. Without them, many of the important ideas in calculus would simply not be possible. Of course, limits can be a bit tricky to understand at first. But once you get the hang of it, you'll see that they're not so bad after all. And who knows? You might even come to enjoy working with them.
+
+
+
+
+## An Intuitive Introduction to Limits
+
+
+This lecture illustrates when a limit does not exist by giving three case examples: 
+ 
+- A limit does not exist because the \index{one-sided limits} **one-sided limits**  do not agree in value. 
+- A limit does not exist because of an oscillating behavior of a function, and
+- a limit does not exist (no finite value) because of an unbounded behavior of a function. 
+ 
+
+## Limits Using Tables
+
+
+A \index{limit} **limit**  is used to describe the behavior of a function near a point but not at the point. 
+The function need not even be defined at the point. 
+If it is defined there, the value of the function at the point does not affect the limit. 
+Intuitively, 
+\begin{equation}
+\lim _{x\to  c}f(x)=L
+\end{equation}
+means we can make$f(x)$ as close to $L$ as we wish by taking any $x$ sufficiently close to, but different from $c.$
+
+
+::: {#exm- }  
+Find the limit of $f(x)$ as $x$ \index{approaches} **approaches**  $c$ using a table of functional values for 
+\begin{equation}
+f(x)=\frac{4x-9}{x^2-4}
+\end{equation} 
+and $c=3.$ 
+::: 
+
+::: {.solution }   
+We compute, 
+$$
+\begin{array}{l|l} 
+x & f(x)  \\ \hline
+2.997 & 0.599758 \\ 
+2.998 & 0.599839 \\ 
+2.999 & 0.59992
+\end{array}
+$$
+$$
+\begin{array}{l|l} 
+x & f(x)  \\ \hline
+3.003 & 0.600238 \\ 
+3.002 & 0.600159 \\ 
+3.001 & 0.600079
+\end{array}
+$$
+Thus as $x$ approaches $3$ from the left we estimate that $f(x)$ approaches $3/5$; 
+and as $x$ approaches $3$ from the right we estimate that $f(x)$ approaches $3/5.$ 
+Therefore, we estimate 
+\begin{equation}
+\lim _{x\to 3}\frac{4x-9}{x^2-4}=\frac{3}{5}.
+\end{equation}
+::: 
+
+
+::: {#exm- }  
+We will use a guessing method to show why the formal definition of a limit is a necessity.  
+Use a table to guess the values of 
+\begin{equation}
+L=\lim _{x\to 0}\frac{2\sqrt{x+1}-x-2}{x^2}.
+\end{equation}
+::: 
+
+::: {.solution }   
+From the table 
+\begin{equation*}
+\begin{array}{cccccccc} 
+x & -0.5 & -0.1 & -0.01 & -0.001 & 0 & 0.001 & 0.005 \\ 
+f(x) & -0.3431 & -0.2633 & -0.2513 & -0.2501 & \text{-} & -0.2499 & -0.2494
+\end{array}
+\end{equation*} 
+The number $L$  is suggested to be $-0.25.$
+Interestingly, if you try 
+\begin{equation}
+x=0.0000001
+\end{equation} 
+just to make sure you have taken numbers close enough to 0, you may find that the calculator gives the value 0. 
+Does this mean that the limit is 0? 
+No, the calculator may give you a false answer because when $x$  is small enough (like $0.0000001$ ) then $2\sqrt{x+1}-x-2$ seems like 0. 
+But in fact $f(0.0000001)$ is not equal to 0. 
+:::    
+
+The point is, using technology to verify a computation can lead to misunderstanding; and in fact, a formal definition of a limit is needed. 
+Using the formal definition of a limit, we can prove what the value of the limit is without any doubt. 
+This type of proof is usually called an epsilon-delta proof since the formal definition is usually stated with the greek letters $\epsilon $  (epsilon) and $\delta $  (delta).  
+
+::: {#exm- }  
+We will use a guessing method to show why the formal definition of a limit is a necessity.  
+Use tables of values to find the limit 
+\begin{equation}
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right).
+\end{equation}
+::: 
+
+::: {.solution }   
+We construct a table of values. 
+\begin{equation*}
+\begin{array}{cccccc} 
+x & 1 & 0.5 & 0.1 & 0.05 & 0.01 \\ 
+f(x) & 1.000028 & 0.124920 & 0.001088 & 0.000222 & 0.000101
+\end{array}
+\end{equation*}
+From the table it appears that 
+\begin{equation}
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right)=0.
+\end{equation}  
+However, if we persevere with smaller values of $x,$ the next table suggests 
+\begin{equation}
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right)
+=0.0001000=\frac{1}{10,0000}
+\end{equation}
+\begin{equation}
+\begin{array}{ccc} 
+x & 0.005 & 0.001 \\ 
+f(x) & 1.00010009 & 0.00010000
+\end{array} 
+\end{equation}
+In fact, 
+\begin{equation}
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right)=\frac{1}{10,0000}
+\end{equation} 
+which is easily proven once the formal limit definition is used to prove some interesting limit rules and continuity is discussed. 
+::: 
+
+In summary, a three-pronged approach to solving limits is often: 
+ 
+- numerical approach by constructing tables of values,
+- graphical approach by sketching a graph by hand or using technology,
+- analytic approach by using algebra or calculus.
+ 
+
+## One-Sided and Two-Sided Limits
+
+Consider, for example, a piecewise function with a jump where the function is pieced together (defined or not). 
+Even though the one-sided limits might exist, they must agree in value for the \index{two-sided limit} **two-sided limit**  to exist. 
+In short, if the one-sided limits do not agree then the two-sided limit does not exist. 
+
+
+::: {#thm- }  
+The two-sided limit $\lim _{x\to c}f(x)$ exists if and only if the one-sided limits $\lim _{x\to c^+}f(x)$ and $\lim _{x\to c^-}f(x)$ both exist and $\lim _{x\to c^-}f(x)=\lim _{x\to c^+}f(x).$ 
+In which case, $\lim _{x\to c}f(x)=\lim _{x\to c^+}f(x).$ 
+::: 
+
+
+::: {#exm- } 
+Sketch the graph of the \index{piecewise function} **piecewise function**  $f$ defined by 
+\begin{equation}
+f(x)=
+\begin{cases}
+2 x^2+1 & x<2 \\ 
+4 & x=2 \\ 
+3 x & x>2.
+\end{cases}
+\end{equation}
+Evaluate the following limits,
+ 
+- $\lim_{x\to 2^-}f(x)$.
+- $\lim_{x\to 2^+}f(x)$.
+- $\lim_{x\to 2}f(x)$.
+- $\lim_{x\to 1^-}f(x)$.
+- $\lim_{x\to 1^+}f(x)$.
+- $\lim_{x\to 1}f(x)$.
+- $\lim_{x\to 4^-}f(x)$.
+- $\lim_{x\to 4^+}f(x)$.
+- $\lim_{x\to 4}f(x)$.
+  
+::: 
+
+
+
+::: {#exm- } 
+Sketch the graph of the piecewise function $g(x)$ where $g$ is defined by 
+\begin{equation}
+g(x)=
+\begin{cases}
+3x-2 & x<-1 \\ 
+4 & x=-1 \\ 
+x+5 & -1 < x < 3 \\ 
+4 & x=3 \\ 
+2-x & x>3.
+\end{cases}
+\end{equation}
+Evaluate the following limits,
+ 
+- $\lim_{x\to -1^-}g(x)$
+- $\lim_{x\to -1^+}g(x)$
+- $\lim_{x\to -1}g(x)$
+- $\lim_{x\to 3^-}g(x)$
+- $\lim_{x\to 3^+}g(x)$
+- $\lim_{x\to 3}g(x)$
+- $\lim_{x\to 4}g(x)$
+- $\lim_{x\to 0}g(x)$
+- $\lim_{x\to 1}g(x)$
+  
+::: 
+
+
+
+## Oscillating Behavior
+
+Also, consider another case where a function has an \index{oscillating behavior} **oscillating behavior** . 
+On one hand, the trigonometric functions all have an oscillating (\index{periodic} **periodic** ) behavior. 
+However, imagine a function where the oscillation becomes much more pronounced as the variable approaches a fixed point; this type of oscillating behavior is where the function may not have a limit. 
+
+::: {#exm- }  
+
+Find $\displaystyle\lim_{x\rightarrow 0} \cos \left(\frac{1}{x}\right).$ 
+::: 
+
+::: {.solution } 
+The limit does not exist because 
+$\cos \frac{1}{x}=1$ and $\cos \frac{1}{x}=-1$
+for 
+\begin{equation*}
+x=\frac{1}{2\pi },\frac{1}{4\pi },\frac{1}{6\pi },\ldots
+\quad \text{and} \quad 
+x=\frac{1}{\pi },\frac{1}{3\pi },\frac{1}{5\pi },\ldots
+\end{equation*} 
+respectively. 
+
+The graph of $y=\cos \left(\frac{1}{x}\right)$ is oscillating around $x=0,$ so we infer that the limit does not exist because$f(x)=\cos  \frac{1}{x}$ does not approach a number, but rather oscillates, as $x$ approaches 0. 
+::: 
+
+## Unbounded Behavior
+
+Finally, we illustrate the case where a function becomes unbounded as the variable approaches a fixed point; for example, a function with a vertical asymptote. 
+Without a finite number to assign the limit, we sometimes say that the limit does not exist. 
+
+::: {#exm- }  
+
+Determine $\displaystyle \lim _{x\to 0}\frac{1}{x}.$
+::: 
+
+::: {.solution }   
+Since $f$ decreases without bound as $x\to 0^-$ and $f$ increases without bound as $x\to 0^+,$ we say that $\lim _{x\to0}f(x)$ does not exist. 
+::: 
+
+
+::: {#exm- } 
+
+Determine $\displaystyle\lim _{x\to 0}\frac{1}{x^2}.$
+::: 
+
+::: {.solution }   
+Since $f$ increases without bound as $x\to 0^-$ and $f$ increases without bound as $x\to 0^+,$ we say that $\lim _{x\to0}f(x)=+\infty .$ 
+::: 
+
+
+
+
+
+## Exercises
+
+::: {#exr- } 
+Estimate the limits, if they exist, by using a table of values to two decimal places. 
+ 
+- $\lim _{x\to 2^+ }\frac{x^2-4}{x-4}$
+- $\lim _{x\to 4^+ }\frac{\frac{1}{\sqrt{x}}-\frac{1}{2}}{x-4}$
+- $\lim _{x\to 0 }\frac{\sin  2x}{x}$
+- $\lim_{x\to 0}|x|\sin  \frac{1}{x}$
+::: 
+
+::: {#exr- } 
+Sketch the graph of $f$ and $g.$ Then identify the values of $c$ for which $\lim _{x\to c}f(x)$ and $\lim _{x\to c}g(x)$ exist given 
+ 
+- $f(x)=\begin{cases} x^2 & x\leq 2 \\  8-2x & 2<x<4 \\  4 & x \geq 4  \end{cases}$
+- $g(x)= \begin{cases}\sin  x & x<0 \\ 1-\cos  x & 0\leq x\leq  \pi  \\ \cos  x & x>\pi \end{cases}$
+::: 
+
+::: {#exr- } 
+Find $a$ so that the function 
+$f(x)=\begin{cases}a x+3 & x\leq 2 \\ 3-x & x>2\end{cases}$
+satisfies $\lim _{x\to 2}f(x)=1.$
+::: 
+
+::: {#exr- } 
+Estimate the limits by using tables of values for 
+ 
+- $\lim _{x\to 13}\frac{x^3-9x^2-45x-91}{x-13}$ 
+- $\lim _{x\to 13}\frac{x^3-9x^2-39x-86}{x-13}$
+ 
+Then using long division (or \emph{synthetic division} if you know it) explain why one of the limits exists and the other does not. 
+::: 
+
+::: {#exr- } 
+Consider the function $f(x) =\frac{|x+1|-|x-1|}{x}.$ Estimate $\lim _{x\to 0}f(x)$ by evaluating $f$ at $x$-values near 0. Sketch the graph of $f.$
+::: 
+
+::: {#exr- } 
+Explain why $\lim _{x\to 2}\frac{|x-2|}{x-2}$ does not exist. 
+::: 
+
+::: {#exr- } 
+Evaluate the function $f(x)=x^2-\frac{2^x}{1000}$ for $x=1,$ $0.8,$ $0.6,$ $0.4,$ $0.2,$ $0.1,$ and $0.05.$ Guess the value of $\lim _{x\to 0}f(x).$ Evaluate the function $f(x)=x^2-\frac{2^x}{1000}$ for $x=0.04,$ $0.02,$ $0.01,$ $0.005,$ $0.003,$ and $0.001.$ Guess again.
+::: 
+
+::: {#exr- } 
+The tabular approach is a convenient device for discussing limits informally, but if it is not used carefully, it can be misleading. 
+For example, for $x>0,$ let  $f(x)=\sin  \left(\frac{\pi }{\sqrt{x}}\right)$ 
+
+- Construct a table showing the value of $x$ and $f(x)$ for $x=4,$ $4/25,$ $4/81,$ $4/169,$ and $4/289.$ Based on this table what would you say about $\lim _{x\to 0^+}f(x)?$ 
+- Construct a table showing the value of $x$ and $f(x)$ for $x=4,$ $4/49,$ $4/121,$ $4/225,$ $4/361.$ Based on this table what would you say about $\lim _{x\to 0^+}f(x)?$ 
+- Based on your results in (a) and (b) what do you conclude about $\lim _{x\to 0^+}f(x)?$ 
+::: 
+
+::: {#exr- } 
+Sketch the graph of the function 
+$$
+f(x)= \begin{cases}-(x+1)^2+1 & -1\leq x\leq 0 \\  x^2 & 0 < x < 1 \\ 1 & 1 < x < 2 \\  2 & x=2 \\  1 & 2 < x\leq  3. \end{cases}
+$$
+and then use the graph to determine which the following statements about the function $y=f(x)$ are true and which are false? 
+
+- $\lim _{\to -1^+}f(x)=1$
+- $\lim _{x\to  2}f(x)$ does not exist
+- $\lim _{x\to 2}f(x)=2$
+- $\lim _{x\to 1^-}f(x)=2$(e) $\lim _{x\to 1^+}f(x)=1$
+- $\lim _{x\to 1}f(x)$ does not exist
+- $\lim _{x\to 0^+}f(x)=\lim _{x\to 0^-}f(x)$
+- $\lim _{x\to c}f(x)$ exists at every $c$ in the open interval $(-1,1).$
+- $\lim _{x\to c}f(x)$ exists at every $c$ in the open interval $(1,3).$
+- $\lim _{x\to -1^-}f(x)=0$
+- $\lim _{x\to 3^+}f(x)$ does not exist
+::: 
+
+
+
+
+::: {#exr- } 
+Sketch the graph of the function 
+$$
+f(x)= \begin{cases} 3-x & x<2 \\  2 & x=2 \\  \frac{x}{2} & x>2. \end{cases}
+$$
+and then use the graph to determine the following?
+
+- Find $\lim _{x\to 2^+}f(x),$ $\lim _{x\to 2^-}f(x),$ and $f(2).$
+- Does $\lim _{x\to 2}f(x)$ exist? If so, what is it? If not, why not?
+- Find $\lim _{x\to -1^-}f(x)$ and $\lim _{x\to -1^+}f(x).$
+- Does $\lim _{x\to -1}f(x)$ exist? If so, what is it? If not, why not? 
+::: 
+
+::: {#exr- } 
+Let $g(x)=\sqrt{x}\sin \left(\frac{1}{x}\right).$ Use the graph of $g$ to determine the following. 
+
+- Does $\lim _{x\to 0^+}g(x)$ exist? If so, what is it? If not, why not?
+- Does $\lim _{x\to 0^-}g(x)$ exist? If so, what is it? If not, why not?
+- Does $\lim _{x\to 0}g(x)$ exist? If so, what is it? If not, why not?
+::: 
+
+::: {#exr- } 
+Graph $f(x)=\begin{cases} x^3 & x\neq 1 \\ 0 & x=1. \end{cases}$ 
+Find $\lim _{x\to 1^-}f(x)$ and $\lim _{x\to 1^+}f(x).$ Does $\lim _{x\to 1}f(x)$ exist? If so, what is it? If not, why not? 
+::: 
+
+::: {#exr- } 
+Graph $f(x)=\begin{cases} 1-x^2 & x\neq 1 \\  2 & x=1. \end{cases}$ 
+Find $\lim _{x\to 1^-}f(x)$ and $\lim _{x\to 1^+}f(x).$ Does $\lim _{x\to 1}f(x)$ exist? If so, what is it? If not, why not? 
+::: 
+
+::: {#exr- } 
+Graph $f(x)=\begin{cases} x & -1\leq x<0 \quad \text{or} \quad 0<x\leq 1 \\  1 & x=0 \\  0 & x<-1 \quad \text{or} \quad x>1.\end{cases}$ 
+
+- What is the domain and range of $f?$ 
+- At what points $c,$ if any does $\lim _{x\to c}f(x)$ exist? 
+- At what points does only the left-hand limit exist?
+- At what points does only the right-hand limit exist?
+::: 
+
+::: {#exr- } 
+Find the following limits.
+ 
+- $\lim _{x\to -7}(2x+5).$ 
+- $\lim _{x\to -2}\left(x^3-2x^2+4x+8\right).$ 
+- $\lim _{x\to 2}\left(\frac{x+3}{x+6}\right).$ 
+- $\lim _{y\to 2}\left(\frac{y+2}{y^2+5y+6}\right).$ 
+- $\lim _{y\to -3}(5-y)^{4/3}.$ 
+- $\lim _{h\to 0}\left(\frac{5}{\sqrt{5h+4}+2}\right).$ 
+- $\lim _{x\to 5}\left(\frac{x-5}{x^2-25}\right).$ 
+- $\lim _{x\to 2}\left(\frac{x^2-7x+10}{x-2}\right).$ 
+- $\lim _{x\to -2}\left(\frac{-2x-4}{x^3+2x^2}\right).$ 
+- $\lim _{x\to 1}\left(\frac{x-1}{\sqrt{x+3}-2}\right).$ 
+- $\lim _{x\to -2}\left(\frac{x+2}{\sqrt{x^2+5}-3}\right).$ 
+::: 
+
+::: {#exr- } 
+Suppose $\lim _{x\to  4}f(x)=0$  and $\lim _{x\to 4}g(x)=3.$  Using limit laws find the limits $\lim _{x\to 4}(g(x)+3),$  $\lim _{x\to 4}xf(x),$  $\lim _{x\to 4}(g(x))^2,$  and $\lim _{x\to 4}\frac{g(x)}{f(x)+1}.$  
+::: 
+
+::: {#exr- } 
+Suppose that $\lim _{x\to -2}p(x)=4,$  $\lim _{x\to -2}r(x)=0,$  and $\lim _{x\to -2}s(x)=-3.$  Using limit laws find the limits, $\lim_{x\to -2}(p(x)+r(x)+s(x)),$  $\lim _{x\to -2}p(x)r(x)s(x),$  and $\lim _{x\to -2}\left(\frac{-4p(x)+5 r(x)}{s(x)}\right).$  
+::: 
+
+::: {#exr- } 
+Using limit laws evaluate the limit, $\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}$  where $f(x)=x^2$  and $x=1.$ 
+::: 
+
+::: {#exr- } 
+Using limit laws evaluate the limit, $\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}$  where $f(x)=3x-4$  and $x=2.$ 
+::: 
+
+::: {#exr- } 
+If $\lim _{x\to -2}\frac{f(x)}{x^2}=1,$  find $\lim _{x\to -2}f(x)$  and $\lim _{x\to -2}\frac{f(x)}{x}.$ 
+::: 
+
+::: {#exr- } 
+If $\lim _{x\to 2}\frac{f(x)-5}{x-2}=3,$  find $\lim _{x\to 2}f(x).$  Also if $\lim _{x\to 2}\frac{f(x)-5}{x-2}=4$  find $\lim _{x\to 2}f(x).$ 
+::: 
+
+
+
+
+## Techniques for Finding Limits
+
+
+## Calculating Limits Using Limit Theorems
+In this topic we concentrate not on the formal definition of a limit of a function of one variable but rather give several examples which emphasis algebra and trigonometry techniques to evaluate limits of functions using basic limit theorems. 
+
+
+::: {#thm- } [Limit Theorems]
+For any real number $c,$  suppose the functions $f$  and $g$  both have finite limits at $x=c.$  Then 
+ 
+- (Constant) $\lim _{x\to c} k=k$  for any constant $k$ 
+- (Limit of $x$ ) $\lim _{x\to c} x=c$ 
+- (Multiple) $\lim _{x\to c}k f(x)=k \lim _{x\to c}f(x)$ 
+- (Sum) $\lim _{x\to c}[f(x)+g(x)]=\lim _{x\to c}f(x)+\lim _{x\to c}g(x)$ 
+- (Difference) $\lim _{x\to c}[f(x)-g(x)]=\lim _{x\to c}f(x)-\lim _{x\to c}g(x)$ 
+- (Product) $\lim _{x\to c}[f(x)g(x)]=\left( \lim _{x\to c}f(x) \right)\left( \lim _{x\to c}g(x) \right)$ 
+- (Quotient) $\lim _{x\to c}[f(x)/g(x)]=\left( \lim _{x\to c}f(x) \right)/\left( \lim _{x\to c}g(x) \right)$ 
+- (Power) $\lim _{x\to c}[f(x)]^n=\left( \lim _{x\to c}f(x) \right){}^n$  where $n$  is a rational number and whenever the limit on the right exists 
+- (Polynomial) $\lim _{x\to c}P(x)=P(c)$  for any polynomial $P$ 
+- (Rational) $\lim _{x\to c}R(x)=R(c)$  for any rational function $R$  where $c$  is in the domain of $R.$ 
+::: 
+
+
+::: {#exm- } 
+Find the limit of $f(x)=\frac{2x^3-5x+8}{x^2-3}$  at $x=3.$  
+::: 
+
+::: {.solution }   
+By using several limit rules, we have 
+\begin{align*}
+& \lim _{x\to 3}\frac{2x^3-5x+8}{x^2-3}
+=\frac{\lim _{x\to 3}\left(2x^3-5x+8\right)}{\lim _{x\to 3}\left(x^2-3\right)} \\
+& \qquad =\frac{\lim _{x\to 3}\left(2x^3\right)-\lim _{x\to 3}(5x)+\lim _{x\to 3}(8)}{\lim _{x\to 3}\left(x^2\right)-\lim _{x\to 3}(3)} \\
+& \qquad =\frac{2 \lim _{x\to 3}\left(x^3\right)- 5\lim _{x\to 3}(x)+8}{\lim _{x\to 3}\left(x^2\right)-3} \\
+& \qquad =\frac{2 \left(\lim _{x\to 3} x\right){}^3- 5(3)+8}{\left(\lim _{x\to 3}x\right){}^2-3} 
+=\frac{2 (3)^3- 5(3)+8}{(3)^2-3} 
+=\frac{47}{6}
+\end{align*}
+Notice this is the same as evaluating the rational function $f(x)$  at $x=3$.  
+::: 
+
+
+::: {#exm- }  
+Compute the limit of $f(x)=\frac{2x^3+x^2-16x+12}{x^2-4}$  at $x=2.$  
+::: 
+
+::: {.solution }   
+By using several limit rules, we have
+\begin{align*}
+& \lim _{x\to 2}\frac{2x^3+x^2-16x+12}{x^2-4} 
+=\lim _{x\to 2}\frac{(x-2)\left(2x^2+5x-6\right)}{(x-2)(x+2)} \\
+& \qquad  =\lim _{x\to 2}\frac{\left(2x^2+5x-6\right)}{(x+2)}  
+=\frac{\left(2(2)^2+5(2)-6\right)}{((2)+2)}
+ =3.
+\end{align*}
+In the previous example notice that we used 
+\begin{equation}\label{limeq}
+\lim _{x\to 2}\frac{(x-2)\left(2x^2+5x-6\right)}{(x-2)(x+2)}=\lim _{x\to 2}\frac{\left(2x^2+5x-6\right)}{(x+2)}.
+\end{equation}
+Now it is not true that the functions 
+$$
+f(x)=\frac{\left(2x^2+5x-6\right)}{(x+2)} \qquad \text{and} \qquad g(x)=\frac{\left(2x^2+5x-6\right)}{(x+2)}
+$$ 
+are the same function because they have different domains. 
+But the above equality is true because $x$  is approaching 2, and not equal to 2. 
+So the point is,because $f(x)=g(x)$  when $x\neq 2$  we can indeed say \eqref{limeq} holds. 
+This is an important part of understanding limits.
+::: 
+
+
+::: {#exm- } 
+Suppose $\lim _{x\to -2^-}f(x)=2,$  $\lim _{x\to -2^+}f(x)=4,$  $\lim _{x\to -2^-}g(x)=0,$  and $\lim _{x\to -2^+}g(x)=0,$  find
+\begin{equation*}
+\lim _{x\to -2}[f(x)+g(x)]
+\quad
+\text{and}
+\quad 
+\lim _{x\to -2}[f(x)g(x)].
+\end{equation*}
+::: 
+
+::: {.solution }   
+Since 
+$$\lim _{x\to -2^-}f(x)\neq \lim _{x\to -2^+}f(x)
+$$ 
+we know $\lim _{x\to -2}f(x)$ does not exist, but this does not imply anything about $\lim _{x\to -2}[f(x)+g(x)]$ nor $\lim _{x\to -2}[f(x)g(x)].$  
+To find these limits we first find the two one-sided limits, 
+$$
+\lim _{x\to -2^-}[f(x)+g(x)]=\lim _{x\to -2^-}f(x)+\lim _{x\to -2^-}g(x)=2+0=2
+$$
+$$
+\lim _{x\to -2^+}[f(x)+g(x)]=\lim _{x\to -2^+}f(x)+\lim _{x\to -2^+}g(x)=4+0=4
+$$
+and since 
+$$
+\lim _{x\to -2^-}[f(x)+g(x)]\neq \lim _{x\to -2^+}[f(x)+g(x)]
+$$ 
+we can now say the two-sided limit $\lim _{x\to -2}[f(x)+g(x)]$  does not exist. 
+Similarly, 
+$$
+\lim _{x\to -2^-}[f(x)g(x)]=\left( \lim _{x\to -2^-}f(x) \right)\left( \lim _{x\to -2^-}g(x)\right)=2(0)=0$$
+$$
+\lim _{x\to -2^+}[f(x)g(x)]=\left( \lim _{x\to -2^+}f(x) \right)\left( \lim _{x\to -2^+}g(x) \right)=4(0)=0
+$$ 
+and therefore, $\displaystyle\lim _{x\to -2}[f(x)g(x)]=0.$
+::: 
+
+
+
+
+
+
+## Special Trigonometric Limits
+
+
+::: {#thm- }  
+The following trigonometric limits hold:
+$$
+\lim _{x\to 0}\frac{\sin  x}{x}=1\text\qquad \text{and} \qquad \lim _{x\to 0} \frac{\cos  x-1}{x}=0
+$$
+::: 
+
+
+::: {#exm- }  
+Find $\lim _{x\to 0} \frac{\sin ^2x}{2 x}.$  
+::: 
+
+::: {.solution }   
+We have $\lim _{x\to 0}\frac{\sin ^2 x}{2x}=\lim _{x\to 0}\frac{\sin  x}{2}\frac{\sin  x}{x}=\frac{0}{2}(1)=0.$ 
+::: 
+
+
+::: {#exm- } 
+Find $\lim _{x\to 0}\frac{\sin  x(1-\cos  x)}{2 x^2}.$ 
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+& \lim _{x\to 0}\frac{\sin  x(1-\cos  x)}{2 x^2} 
+=\lim _{x\to 0} \frac{1}{2}\frac{\sin  x}{x}\frac{1-\cos  x}{x} \\
+& \qquad =\frac{1}{2}\lim _{x\to 0} \left(\frac{\sin  x}{x}\right)\lim _{x\to 0}\left(\frac{1-\cos  x}{x}\right) 
+=\frac{1}{2}(1)(0)
+=0.
+\end{align*}
+::: 
+
+
+::: {#exm- } 
+Find $\lim _{x\to 0} \frac{\sin  5x}{\sin  4x}.$ 
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+& \lim _{x\to 0} \frac{\sin  5x}{\sin  4x} 
+=\lim _{x\to 0} \left(\frac{\sin  5x}{x}\right)\left(\frac{x}{\sin  4x}\right) \\
+& \qquad =\lim _{x\to 0} \left(\frac{ 5\sin  5x}{5x}\right)\left(\frac{4x}{4 \sin  4x}\right) \\
+& \qquad =\lim _{x\to 0} \left(\frac{ 5\sin  5x}{5x}\right)\lim _{x\to 0}\left(\frac{4x}{4 \sin  4x}\right) 
+=\frac{5}{4}.
+\end{align*}
+::: 
+
+::: {#exm- } 
+Given $g(x)=-27-9 x-6 x^2+x^3+x^4$  and $h(x)=21-16 x-3 x^2+2 x^3,$  compute the limit $g(x)/h(x)$  at $x=3.$  
+::: 
+
+::: {.solution }   
+Try a factor of $(x-3)$  from $g(x)$  obtaining 
+$$
+g(x)=(x-3)\left(9+6 x+4 x^2+x^3\right)
+$$ 
+and a graph of $h$  is which also inspires to try to factor of $(x-3)$  from $h(x)$  obtaining $h(x)=(x-3)\left(2x^2+3x-7\right).$  
+Therefore,
+\begin{align*}
+& \lim _{x\to 3}\frac{-27-9 x-6 x^2+x^3+x^4}{21-16 x-3 x^2+2 x^3}
+ =\lim _{x\to 3}\frac{(x-3)\left(9+6 x+4 x^2+x^3\right)}{(x-3)\left(2x^2+3x-7\right)} \\
+& \qquad =\lim _{x\to 3}\frac{9+6 x+4 x^2+x^3}{2x^2+3x-7}
+ =\frac{9+6 (3)+4 (3)^2+(3)^3}{2(3)^2+3(3)-7} 
+ =\frac{9}{2}.
+\end{align*}
+::: 
+
+::: {#thm- }  
+If $c$  is any real number in the domain of the given function, then 
+$$
+\begin{array}{ccccc} 
+\lim _{x\to c} \cos  x=\cos  c & & \lim _{x\to c} \sin  x=\sin  c & & \lim _{x\to c} \tan  x=\tan  c \\  
+\lim _{x\to c} \sec  x=\sec  c  & & \lim _{x\to c} \csc  x=\csc  c & & \lim _{x\to c} \cot  x=\cot  c.
+\end{array}
+$$
+::: 
+
+::: {#exm- } 
+Compute the limit of $f(x)=\frac{x}{\sin  x-2 \cos  x}$  at $x=\pi .$  
+::: 
+
+::: {.solution }   
+By using several limit rules, we have
+$$
+\lim _{x\to \pi }\frac{x}{\sin  x-2 \cos  x}=\frac{\pi }{\sin  \pi -2\cos  \pi }=\frac{\pi }{0-2(-1)}=\frac{\pi }{2}.
+$$
+::: 
+
+
+::: {#exm- }  
+Compute $\lim _{x\to \pi /4}\frac{1-\tan  x}{\sin  x- \cos  x}.$  
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+& \lim _{x\to \pi /4}\frac{1-\tan  x}{\sin  x- \cos  x} 
+=\lim _{x\to \pi /4}\frac{1-\frac{\sin  x}{\cos  x}}{\sin  x- \cos  x} \\
+& \qquad =\lim _{x\to \pi /4}\frac{\frac{\cos  x-\sin  x}{\cos  x}}{\sin  x- \cos  x}   
+=\lim _{x\to \pi /4}\frac{\cos  x-\sin  x}{\cos  x}\frac{1}{\sin  x- \cos  x} \\
+& \qquad  =\lim _{x\to \pi /4}\frac{-1}{\cos  x} 
+=\lim _{x\to \pi /4}\frac{-1}{\frac{1}{\sqrt{2}}}
+=-\sqrt{2}
+\end{align*}
+::: 
+
+::: {#exm- } 
+Compute the limit of $f(x)=\frac{\tan  x}{\sin  x}$  as $x\to0.$  
+::: 
+
+::: {.solution }   
+We have $\lim _{x\to 0}\frac{\tan  x}{\sin  x}$ $=\lim _{x\to 0} \left(\frac{\sin  x}{\cos  x}\right)\left(\frac{1}{\sin  x}\right)$ $=\lim _{x\to 0} \frac{1}{\cos  x}$ $=1.$ 
+::: 
+
+
+
+
+## Using Rationalization
+
+
+::: {#exm- }  
+Compute: $\lim _{x\to 1}\frac{\sqrt{x}-1}{x-1}.$  
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+\lim _{x\to 1}\frac{\sqrt{x}-1}{x-1}=\lim _{x\to 1}\frac{\sqrt{x}-1}{x-1}\frac{\sqrt{x}+1}{\sqrt{x}+1}=\lim _{x\to 1}\frac{1}{\sqrt{x}+1}=\frac{1}{\sqrt{1}+1}=\frac{1}{2}.
+\end{align*}
+::: 
+
+
+::: {#exm- } 
+Compute the limit of $f(x)=\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}$  as $x\to\pi .$  
+::: 
+
+::: {.solution }   
+We have
+\begin{align*}
+& \lim _{x\to \pi }\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}
+=\lim _{x\to \pi }\left(\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}\right)\left(\frac{\sqrt{x}+\sqrt{\pi }}{\sqrt{x}+\sqrt{\pi }}\right) \\
+& \qquad =\lim _{x\to \pi }\frac{(x-\pi )\left(\sqrt{x}+\sqrt{\pi }\right)}{x-\pi } 
+=2\sqrt{\pi }
+\end{align*}
+::: 
+
+::: {#exm- } 
+Compute the limit of $f(x)=\frac{x-1}{\sqrt[3]{x}-1}$  as $x\to 1.$  
+::: 
+
+::: {.solution }   
+We have 
+\begin{align*}
+& \lim _{x\to 1}\frac{x-1}{\sqrt[3]{x}-1} 
+=\lim _{x\to 1}\left(\frac{x-1}{\sqrt[3]{x}-1}\right)\left(\frac{\sqrt[3]{x^2}+\sqrt[3]{x}+1}{\sqrt[3]{x^2}+\sqrt[3]{x}+1}\right) \\
+& \quad  =\lim _{x\to 1}\frac{(x-1)\left(\sqrt[3]{x^2}+\sqrt[3]{x}+1\right)}{x-1} 
+=\lim _{x\to 1}\left(\sqrt[3]{x^2}+\sqrt[3]{x}+1\right) 
+=3.
+\end{align*}
+::: 
+
+## Limits of Piecewise Functions
+
+::: {#exm- } 
+
+Find 
+\begin{equation}
+\lim _{x\to 0} 
+\begin{cases}
+2(x+1) & x<3 \\ 
+4 & x=3 \\ 
+x^2-1 & x>3
+\end{cases}
+\end{equation}
+::: 
+
+::: {.solution }   
+Since $x\to 0$  we know that $x<3$  and so we use $2(x+1)$  to evaluate the limit of the piecewise function, as follows, 
+\begin{equation}
+\lim _{x\to 0} 
+\begin{cases}
+2(x+1) & x<3 \\ 4 & x=3 \\ x^2-1 & x>3.
+\end{cases}
+=\lim _{x\to 0} 2(x+1)=2
+\end{equation}
+::: 
+
+::: {#exm- } 
+At $x=7,$  compute the limit of  
+\begin{equation}
+f(x)=
+\begin{cases}
+2\left(x-x^2\right) & x<7 \\ 
+-83 & x=7 \\ 
+(x-7)^2-84 & x>7
+\end{cases}
+\end{equation}
+::: 
+
+::: {.solution }   
+Since the function is pieced together at $x=7$  we will evaluate two one sided limit. 
+First the limit from the left, we have 
+$$
+\lim_{x\to 7^-}f(x)=-84
+$$ and for the limit from the right we have 
+$$
+\lim _{x\to 7^+}f(x)=-84.
+$$  
+Since 
+$$
+\lim _{x\to 7^-} f(x)=\lim _{x\to 7^+}f(x)
+$$ 
+we know the two-sided limit must exist and we have 
+$$
+\lim _{x\to 7}f(x)=-84
+$$ even though $f(7)=-83.$  
+::: 
+
+## Squeeze Theorem
+
+Next we state the squeeze theorem and through an example show how to use it. 
+Basically, the idea is to bound a function on both sides by functions whose limits can be more easily computed; and thus in the process squeeze the value of the limit of the original function out. 
+
+
+::: {#thm- } [Squeeze Theorem]
+Let $f, g$ and $h$  be functions of $x$ . 
+If both of the following conditions hold
+ 
+- $g(x)\leq f(x)\leq h(x)$  on an open interval containing $c$  and
+- $\lim _{x\to c}g(x) =\lim _{x\to c}h(x) =L$  
+ 
+then $\lim _{x\to c}f(x)=L.$  
+::: 
+
+
+::: {#exm- } 
+Use the squeeze rule to find the limit of $f(x)=x \cos \left(\frac{1}{x}\right)$  as $x\to 0^+.$  
+::: 
+
+::: {.solution }  
+We are interested in this function around $x>0$ . 
+Knowing that the cosine function is always less than or equal to one, we see that when $-1\leq  x\leq  1$  we have 
+$$
+-x\leq f(x)=x \cos \left(\frac{1}{x}\right)\leq x.
+$$
+Since $\lim _{x\to 0} -x=\lim _{x\to 0} x=0$  we have $\lim _{x\to 0}x \cos  \left(\frac{1}{x}\right)=0$  by the squeeze theorem. 
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Find the following limits.
+ 
+- $\lim _{x\to -7}(2x+5)$
+- $\lim _{x\to -2}\left(x^3-2x^2+4x+8\right)$
+- $\lim _{x\to 2}\left(\frac{x+3}{x+6}\right)$
+- $\lim _{y\to 2}\left(\frac{y+2}{y^2+5y+6}\right)$
+- $\lim _{y\to -3}(5-y)^{4/3}$
+- $\lim _{h\to 0}\left(\frac{5}{\sqrt{5h+4}+2}\right)$
+- $\lim _{x\to 5}\left(\frac{x-5}{x^2-25}\right)$
+- $\lim _{x\to 2}\left(\frac{x^2-7x+10}{x-2}\right)$
+- $\lim _{x\to -2}\left(\frac{-2x-4}{x^3+2x^2}\right)$
+- $\lim _{x\to 1}\left(\frac{x-1}{\sqrt{x+3}-2}\right)$
+- $\lim _{x\to -2}\left(\frac{x+2}{\sqrt{x^2+5}-3}\right)$
+::: 
+
+::: {#exr- } 
+Suppose $\lim _{x\to  4}f(x)=0$ and $\lim _{x\to 4}g(x)=3.$ Using limit laws find the limits $\lim _{x\to 4}(g(x)+3),$ $\lim _{x\to 4}xf(x),$ $\lim _{x\to 4}(g(x))^2,$ and $\lim _{x\to 4}\frac{g(x)}{f(x)+1}.$ 
+::: 
+
+::: {#exr- } 
+Suppose that $\lim _{x\to -2}p(x)=4,$ $\lim _{x\to -2}r(x)=0,$ and $\lim _{x\to -2}s(x)=-3.$ Using limit laws find the limits, $\lim_{x\to -2}(p(x)+r(x)+s(x)),$ $\lim _{x\to -2}p(x)r(x)s(x),$ and $\lim _{x\to -2}\left(\frac{-4p(x)+5 r(x)}{s(x)}\right).$ 
+::: 
+
+::: {#exr- } 
+Using limit laws evaluate the limit, $\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}$ where $f(x)=x^2$ and $x=1.$
+::: 
+
+::: {#exr- } 
+Using limit laws evaluate the limit, $\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}$ where $f(x)=3x-4$ and $x=2.$
+::: 
+
+::: {#exr- } 
+If $\lim _{x\to -2}\frac{f(x)}{x^2}=1,$ find $\lim _{x\to -2}f(x)$ and $\lim _{x\to -2}\frac{f(x)}{x}.$
+::: 
+
+::: {#exr- } 
+If $\lim _{x\to 2}\frac{f(x)-5}{x-2}=3,$ find $\lim _{x\to 2}f(x).$ Also if $\lim _{x\to 2}\frac{f(x)-5}{x-2}=4$ find $\lim _{x\to 2}f(x).$
+::: 
+
+
+
+
+## Continuous Functions
+
+## Continuity at a Point
+
+
+::: {#def- } 
+A function is \index{continuous} **continuous**  at a point $c$ means 
+ 
+- $f(c)$ is defined,
+- $\lim _{x\to c}f(x)$ exists, and 
+- $\lim _{x\to c}f(x)=f(c).$
+::: 
+
+## Discontinuity
+
+
+::: {#exm- } 
+Find three examples of how a \index{discontinuity} **discontinuity**  might arise.
+::: 
+
+::: {.solution }   
+ First, the function 
+ $$
+  \displaystyle f(x)=\frac{x^2-2x+1}{x-1}
+ $$ 
+ is discontinuous at $x=1$ because $f(1)$ is not defined. 
+ So one type of discontinuity is a \index{hole} **hole**  in the function. 
+  
+ Secondly, the function 
+$$
+f(x)=
+\begin{cases}
+x^2+1 & x\geq 0 \\ -x^2-2 & x<0
+\end{cases}
+$$
+is discontinuous at $x=0$ because $\lim _{x\to 0^-}f(x)=-2$ and $\lim _{x\to 0^+}f(x)=1;$ thus $\lim _{x\to 0}f(x)$ does not exist and so $f$ has a discontinuity at $x=0.$ 
+This type of discontinuity is called a \index{jump} **jump**. 
+ 
+Thirdly, the function
+$$
+f(x)=\frac{x-1}{x-2}
+$$ 
+is discontinuous at $x=2$ because $f(2)$ is not defined and this type of discontinuity is called a \index{pole} **pole**  because $f(x)\to+\infty $ as $x\to 2^+$. 
+::: 
+
+## Continuous Functions
+
+
+::: {#thm- } 
+If $f$ and $g$ are functions that are continuous at $x=c$ then $f\pm g,$ $f g,$ $f/g,$and $f\circ g$ are continuous at $x=c,$ provided that $c$ is in the domain of the function. 
+::: 
+
+::: {#exm- }  
+Give some examples of continuous functions.
+::: 
+
+::: {.solution }   
+For example, the functions $2x^2-2x+5,$ (polynomial), $\displaystyle\frac{x-1}{x}$ (rational), $\csc  x$ (trigonometric), and $\sec ^{-1}x$ (inverse trigonometric) are continuous on their domains. 
+Also the functions 
+$$
+ \displaystyle 2x^2-2x+5+\frac{x-1}{x}(\csc  x),
+$$ 
+$\displaystyle\sec ^{-1}\left(\frac{x-1}{x}\right),$ and $\displaystyle\left(2x^2-2x+5\right)\left(\frac{x-1}{x}\right)$ are continuous functions on their domains. 
+::: 
+
+
+::: {#thm- } 
+If $f$ is a 
+ 
+- polynomial function, 
+- rational function, 
+- trigonometric function, or 
+- inverse trigonometric function, 
+ 
+then $f$ is continuous where it is defined.
+::: 
+
+
+::: {#thm- } [Composition Limit Theorem]
+If $\lim _{x\to c}g(x)=L$ and $f$ is a continuous function at $L,$ then 
+$$
+\lim _{x\to c}(f\circ g)(x)=f(L).
+$$
+::: 
+
+
+::: {#exm- } 
+Use the \index{composition} **composition**  limit theorem to evaluate the following limits. 
+$$
+\lim _{x\to 3} \left(x^2+3\right)^2
+\quad\text{and}\quad
+\lim _{x\to \pi /4} \sin ^4 x.
+$$
+::: 
+
+
+::: {.solution }   
+By the composition limit theorem, we have 
+$$
+\lim _{x\to 3}\left(x^2+3\right)^2 
+=\left(\lim _{x\to 3}\left(x^2+3\right)\right)^2
+=12^2
+=144.
+$$
+By the composition limit theorem, we have  
+$$
+\lim _{x\to \pi /4}\sin ^4x
+=\left(\lim _{x\to \pi /4}\sin  x\right){}^4
+=\left(\frac{\sqrt{2}}{2}\right)^4
+=\left(\frac{1}{4}\right).
+ $$
+::: 
+
+## One-Sided Continuity
+
+
+::: {#def- } 
+The function $f$ is \index{continuous from the right} **continuous from the right**  at $c$ if and only if 
+$$
+\lim _{x\to c^+}f(x)=f(c)
+$$ 
+and it is \index{continuous from the left} **continuous from the left**  at $c$ if and only if 
+$$
+\lim _{x\to c^-}f(x)=f(c).
+$$
+::: 
+
+
+::: {#exm- }  
+Give an example of a function that is continuous from the right (or \index{right continuous} **right continuous** ) at $x=0.$
+::: 
+
+::: {.solution }   
+The function $f(x)=\sqrt{x}$ is continuous from the right at $x=0$ because $\lim _{x\to 0^+}\sqrt{x}=0.$ 
+::: 
+
+## Determining Parameters for Continuity
+
+
+::: {#exm- } 
+Find constants $a$ and $b$ so that 
+$$
+\begin{cases}
+a x^2+b & x>2 \\ 4 & x=2 \\ x^2-a x+b & x<2
+\end{cases}
+$$
+is continuous on $\mathbb{R}$.
+::: 
+
+::: {.solution }   
+Since $f$ is defined on $\mathbb{R},$ and $f$ is continuous for all $x\neq 2$ for any $a$ and $b$ that we choose, itis left to find an $a$ and $b$ such that  $\lim _{x\to 2^+}a x^2+b=4$ and $\lim _{x\to 2^-}\left(x^2-a x+b\right)=4.$
+Thus we have the system $4 a+b=4$ and $4-2 a+b=4.$ 
+Solving this system we have, $a=2/3$ and $b=4/3.$ 
+ ::: 
+
+
+::: {#exm- } 
+Find constants $a$ and $b$ such that $f$ is continuous at $x=1$ where 
+$$
+\begin{cases}
+a x+b & x>1 \\ 3 & x=1 \\ x^2-4x+b+3 & x<1
+\end{cases}
+$$
+::: 
+
+::: {.solution }   
+To have continuity at $x=1$ we must have $\lim _{x\to 1^-}f(x)=3$ and $\lim _{x\to 1^+}f(x)=3,$ thus $a (1)+b=3$ and $(1)^2-4(1)+b+3=3.$ 
+Therefore, $a+b=3$ and $b=3.$ 
+So $a+3=3$ and $a=0.$ 
+::: 
+
+## Removable Continuity
+
+
+::: {#exm- } 
+Determine the value for which $f(2)$ should be assigned, if any, to have 
+$$
+ \displaystyle f(x)=\sqrt{\frac{x^2-4}{x-2}}
+$$ 
+continuous at $x=2.$
+::: 
+
+::: {.solution }   
+Since $\lim _{x\to 2^-}f(x)=2$ and $\lim _{x\to 2^+}f(x)=2$ we have $\lim _{x\to 2}f(x)=2.$ 
+Therefore, if we define $f(2)=2$ the function $f$ will be continuous at $x=2.$ 
+::: 
+
+## Intermediate Value Theorem
+
+
+::: {#thm- } [Intermediate Value Theorem]
+If $f$ is a continuous function on the closed interval $[a,b]$ and $L$ is some number strictly between$f(a)$ and $f(b)$, then there exists at least one number $c$ on the open interval $(a,b)$ such that $f(c)=L.$
+::: 
+
+
+::: {#exm- } 
+The population (in thousands) of a colony of bacteria $t$ minutes after the application of a toxin is given by the function 
+$$
+P(t)=
+\begin{cases}
+t^2+1 & \text{if } 0\leq t<5 \\ -8t+66 & \text{if } t\geq 5
+\end{cases}
+$$
+\ 
+- When does the colony die out?
+- Show that at some time between $t=2$ and $t=7,$ the population is $9,000.$
+::: 
+
+::: {.solution }   
+Since 
+$$
+\lim _{t\to 5^+}P(t)=\lim _{t\to 5^+}(-8t+66)=26
+$$ 
+and 
+$$
+\lim _{t\to 5^-}P(t)=\lim _{t\to 5^-}\left(t^2+1\right)=26$$  we know that $P$ is continuous at $t=5$ and thus, also for all $t\geq 0.$ 
+(a) The colony dies out when $-8t+66=0$ which means $t=33/4\approx 8.25.$ 
+Therefore, the colony dies out in 8 minutes and 15 seconds. 
+ 
+(b) Since $P(2)=5,$ $P(7)=10,$ and $P$ is continuous on $(2,7),$ the intermediate value theorem yields at least one number $c$ between 2 and 7 such $P(c)=9.$ 
+Therefore, there is some time $t=c$ between $t=2$ and $t=7$ such that the population is 9,000. 
+::: 
+
+
+## Exercises
+
+::: {#exr- } 
+Sketch the graph of the function 
+$$ 
+f(x)=
+\begin{cases}
+x^2-1 & -1\leq  x<0 \\ 2x & 0<x<1 \\ 1 & x=1 \\ -2x+4 & 1<x<2 \\ 0 & 2<x<3.
+\end{cases} 
+$$
+Use the graph of the function $f$  to answer the following.
+\ 
+- Does $f(-1)$  exist?
+- Does the limit, $\lim _{x\to -1^+}f(x)$  exist?
+- Does the limit, $\lim _{x\to -1^+}f(x)=f(-1)$?
+- Does $f(1)$  exist?
+- Does the limit, $\lim _{x\to 1}f(x)$  exist?
+- Does the limit, $\lim _{x\to 1}f(x)=f(1)$  exist?
+- Is $f$  defined at $x=2?$ 
+- Is $f$  continuous at $x=2?$ 
+- At what values is $f$  continuous?
+- What value should be assigned to $f(2)$ , to make the extended function continuous at $x=2?$ 
+- To what new value should $f(1)$  be assigned to remove the discontinuity?
+::: 
+
+::: {#exr- } 
+For each of the following functions determine the largest set on which the function will be continuous. 
+ 
+- $g(x)=\frac{x+1}{x^2-4x+3}$ 
+- $g(x)=\frac{1}{|x|+1}-\frac{x^2}{2}$ 
+- $g(x)=\frac{\sqrt{x^4+1}}{1+\sin ^2x}$ 
+- $g(x)=\sqrt[4]{3x-1}$ 
+::: 
+
+::: {#exr- } 
+For each of the following functions find constants $a$  and $b$  so that the function will be continuous for all $x$  in the domain.
+ 
+- $f(x)=\begin{cases} \frac{\tan  a x}{\tan  b x} & x<0 \\ 4 & x=0 \\ a x+b & x>0 \end{cases}$ 
+- $f(x)=\begin{cases}\frac{\sqrt{a x+b}-1}{x} & x\neq 0 \\ 1 & x=0\end{cases}$  
+- $f(x)=\begin{cases}a x+3 & x<1 \\ 5 & x=1 \\ x^2+b & x>1\end{cases}$ 
+::: 
+
+::: {#exr- } 
+Let $u(x)=x$  and 
+$f(x)=\begin{cases}0 & x\neq 0 \\ 1 & x=0\end{cases}$. 
+Show, for this given $u$  and $f$ , that 
+$$
+\lim _{x\to 0}f[u(x)]\neq f\left(\lim _{x\to 0}u(x)\right).
+$$
+::: 
+
+::: {#exr- } 
+If a function $f$  is not continuous at $x=c$ , but can be made continuous at $x=c$  by being assigned a new value of that point, it is said to have a \emph{removable discontinuity} at $x=c.$  Which of the following functions have a removable discontinuity at $x=c$ ?
+ 
+- $f(x)=\frac{2x^2+x-15}{x+3}$  at $c=-3$ 
+- $f(x)=\frac{x-2}{|x-2|}$  at $c=2$ 
+- $f(x)=\frac{2-\sqrt{x}}{4-x}$  at $c=4$ 
+- $f(x)=\frac{2-x}{4-\sqrt{x}}$  at $c=16$ 
+::: 
+
+::: {#exr- } 
+Prove that the function $f(x)=x^3-x^2+x+1$  must have at least one real root. 
+::: 
+
+::: {#exr- } 
+Prove that the function $(x)=\sqrt{x+3}-e^x$  must have at least one real root. 
+::: 
+
+::: {#exr- } 
+Find a function(s) with the following properties. (a) Find functions $f$  and $g$  such that $f$  is discontinuous at $x=1$  but $f g$  is continuous there. (b) Give an example of a function defined for all real numbers that is continuous at only one point. 
+::: 
+
+
+
+
+
+
+## Tangent Lines and Rates of Change
+
+## Average Rate of Change
+
+
+::: {#def- } 
+Suppose $y$  is a function of $x,$  say $y=f(x).$  
+When a change in the variable is made from $x$  to $x+\Delta  x,$ there is a corresponding change to the $y,$ namely $\Delta  y=f(x+\Delta  x)-f(x)$. 
+The \index{average rate of change} **average rate of change**  of $y$  with respect to $x$  is 
+$$
+\frac{\Delta  y}{\Delta  x}=\frac{f(x+\Delta x)-f(x)}{\Delta  x}
+$$
+and is also known as the \index{difference quotient} **difference quotient** .
+::: 
+
+
+::: {#exm- } 
+Let $f(x)=\sqrt{x^2-9}.$ 
+Find the average rate of change from $x=3$  to $x=6.$ 
+::: 
+
+::: {.solution }
+The average rate of change of $f$  from $x=3$  to $x=6$  is given by, 
+$$
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}=\frac{f(6)-f(3)}{6-3}=\frac{\sqrt{6^2-9}-\sqrt{3^2-9}}{3}= \sqrt{3}
+ $$
+ which is also the slope of the secant line through $(3,0)$  and $\left(6,3 \sqrt{3}\right).$ 
+::: 
+
+In general, suppose an object moves along a straight line according to an equation of motion $s=f(t),$ where $s$ is the \index{displacement} (\index{directed distance} **displacement} (\index{directed distance** ) of the object from the origin at time $t.$  
+The function $f$ that describes the motion is called the \index{position function} **position function**  of the object. 
+In the time interval from $t=a$ to $t=a+h$  the change in position is $f(a+h)-f(a)$ and the \index{average velocity} **average velocity**  over this time interval is 
+$$
+\frac{f(a+h)-f(a)}{h}
+$$ 
+which is the same as the slope of the secant line through these two points.
+
+::: {#exm- } 
+If a billiard is dropped from a height of 500 feet, its height $s$  at time $t$  is given by the position function $s=-16t^2+500$  where $s$  is measured in feet and $t$  is measured in seconds. 
+Find the average velocity over the intervals $[2,2.5]$ and $[2,2.6]$.  
+::: 
+
+::: {.solution }
+For the interval $[2,2.5],$ the object falls from a height of $s(2)=-16(2)^2+500=436$  feet to a height of $s(2.5)=-16(2.5)^2+500=400.$  
+The average velocity is 
+$$
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.5)-s(2)}{2.5-2}=\frac{400-436}{2.5-2}=-72.
+$$
+For the interval $[2,2.6],$ the object falls from a height of $s(2)=436$  feet to a height of $s(2.6)=391.84.$  
+The average velocity is 
+$$
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.6)-s(2)}{2.6-2}=\frac{391.84-436}{2.6-2}=-73.6.
+$$
+Note that the average velocities are negative indicating that the object is moving downward.
+::: 
+
+
+## Instantaneous Rate of Change
+
+The difference quotient 
+$$
+\frac{\Delta  y}{\Delta  x}=\frac{f\left(x_2\right)-f\left(x_1\right)}{x_2-x_1}
+$$
+is the average rate of change of $y$  with respect to $x$  over the interval $\left[x_1,x_2\right]$ and can be interpreted as the slope of the secant line.
+Its limit as $\Delta x\to 0$  is the derivative at $x=x_1$ and is denoted by $f'\left(x_1\right).$  
+We interpret the limit of the average rate of change as the interval becomes smaller and smaller to be the instantaneous rate of change. 
+Often, different branches of science have specific interpretations of the derivative.
+
+
+As $\Delta  x\to 0$  the average rate of change approaches the \index{instantaneous rate for change} **instantaneous rate for change** ; that
+is, 
+$$
+\lim _{\Delta  x\to 0} \frac{\Delta  y}{\Delta  x} = f'(x)
+$$ 
+and is also known as the \index{derivative} **derivative**  of $f$  at $x.$ 
+
+
+::: {#exm- } 
+Let $\displaystyle f(x)=\frac{x^2-x+5}{3-x}.$  
+Find the instantaneous rate of change at $x=2.$ 
+::: 
+
+::: {.solution }
+Since 
+$$
+ \displaystyle f'(x)=\frac{-x^2+6 x+2}{(x-3)^2},
+$$ 
+the instantaneous rate for change of $f$ at $x=2$ is given by, 
+$$
+f'(2)=\frac{-2^2+6 (2)+2}{(2-3)^2}=10.
+$$ 
+::: 
+
+## What is a Tangent Line?
+
+The tangent line problem is widely considered to be the instigating idea behind the derivative. 
+Computing the slope of a tangent line was a problem that the French mathematician \index{Pierre de Fermat} **Pierre de Fermat**  developed. 
+Picking up on these ideas were \index{Isaac Newton} **Isaac Newton** and \index{Gottfried Liebniz} **Gottfried Liebniz** , who then developed differential calculus.
+
+For a general curve it is not easy to define what is meant by a tangent line; for example a tangent line might mean a line touches  the curve only once, but this does not work in all cases. 
+Figure \ref{fig:tangentlines} shows examples of tangent lines.
+
+
+The important idea to remember is that a tangent line is a local concept, we say the \index{tangent line} **tangent line**  at a point.
+
+In our first example we will calculate a series of functions whose graphs are \index{secant lines} **secant lines**  to the graph of a given function $f$  and use them to infer an equation of the tangent line at a point.
+
+::: {#exm- } 
+Let $f(x)=2x^3-2x+2$.
+Find an equation of the line that passes through the points $(1/2,5/4)$ and $(1,2)$  and sketch the graph of both $f$ and the secant line. 
+The equation of the secant line is $y= \frac{3}{2} x+\frac{1}{2}$.
+
+Do the same for the points $(1/2,5/4)$  and $(3/4,43/32)$. 
+We find an equation of the secant line is $y=\frac{3}{8}x+\frac{17}{16}$.
+We repeat this process several times and display the information in the following table.
+$$
+\begin{array}{l|l|l|l} \small
+\Delta  x & (x,f(x)) & (x+\Delta  x,f(x+\Delta  x)) & \text{Equation of secant line} \\ \hline
+ 0.5 & (0.5,1.25) & (1,2) & y=1.5 x+0.5  \\
+ 0.25 & (0.5,1.25) & (0.75,1.34375)   & y=0.375 x+1.0625 \\
+ 0.125 & (0.5,1.25) & (0.625,1.23828) & y=-0.09375 x+1.29688  \\
+ 0.0625 & (0.5,1.25) & (0.5625,1.23096) &  y=-0.304688 x+1.40234 \\
+ 0.03125 & (0.5,1.25) & (0.53125,1.23737) & y=-0.404297 x+1.45215 \\
+ 0.015625 & (0.5,1.25) & (0.515625,1.24293) & y=-0.452637 x+1.47632
+\end{array}
+$$
+
+From this table what would you say is the equation for the tangent line of the function $f(x)=2x^3-2x+2$ at $(1/2,1/4)$? 
+Explain your conclusion. 
+We infer the tangent line is $y=-\frac{1}{2}x+\frac{1}{2}$.
+::: 
+
+The difference quotient 
+$$
+\frac{\Delta  y}{\Delta  x}=\frac{f\left(x_2\right)-f\left(x_1\right)}{x_2-x_1}
+$$
+is the average rate of change of $y$  with respect to $x$  over the interval $\left[x_1,x_2\right]$ $_{}$  and can be interpreted as the slope of the secant line.
+Its limit as $\Delta x\to 0$  is the derivative at $x=x_1$  and is denoted by $f'\left(x_1\right).$  
+We interpret the limit of the average rate of change as the interval becomes smaller and smaller to be the instantaneous rate of change. 
+Often,different branches of science have specific interpretations of the derivative.
+
+As $\Delta  x\to 0$  the average rate of change approaches the \index{instantaneous rate for change} **instantaneous rate for change**; that
+is, 
+$$
+\lim _{\Delta  x\to 0} \frac{\Delta  y}{\Delta  x} = f'(x)
+$$ 
+and is also known as the \index{derivative} **derivative**  of $f$  at $x.$ 
+
+## Equation of Tangent Line
+
+
+
+::: {#thm- } 
+If $f'(a)$  exists then an \index{equation of the tangent line} **equation of the tangent line**  to the curve $y=f(x)$  at the point $(a,f(a))$ is 
+$y-f(a)=f'(a)(x-a).$ 
+::: 
+
+
+::: {#exm- } 
+Find equations of the tangent lines to the curve $\displaystyle y=\frac{x-1}{x+1}$ that are parallel to the line $x-2y=1$.
+::: 
+
+::: {.solution }
+The line $x-2y=1$  has slope $m=1/2$ and we use this with the derivative of 
+$y=(x-1)/(x+1)$ to find the $x$. 
+Since $y'=2/(x+1)^2$ we have $1/2=(2/((x+1)^2))$. 
+Solving $(x+1)^2=4$ for $x$ we get $x=1$ and $x=-3$. 
+Therefore, the points of tangency are at $(1,0)$  and $(-3,2)$.  
+The tangent lines are found by using $y=1/2 x+b$  where $b=y-1/2 x$  with $(1,0)$  and $(-3,2)$. 
+We find $b=-1/2$  and $b=7/2$ respectively. 
+Therefore, equations of the tangent lines are  $y=\frac{1}{2}x-\frac{1}{2}$  and $y=\frac{1}{2} x+\frac{7}{2}$.
+::: 
+
+
+::: {#exm- } 
+How many tangent lines to the curve $y=x/(x+1)$ pass through the point $(1,2)$? 
+At which points do these tangent lines touch the curve?
+::: 
+
+::: {.solution }
+All tangent lines through $(1,2)$  have the form $y-2=m (x-1)$  where $m=y'(x)=\frac{1}{(x+1)^2}.$  
+Since we our looking for the intersection (point of tangency) we eliminate $y$  as follows: 
+$$
+y=\frac{x}{x+1}=\frac{1}{(x+1)^2}(x-1)+2.
+$$ 
+Solving for $x$ we obtain, $x=-2\pm \sqrt{3}.$ 
+Thus there are two tangent lines and they are tangent at the point 
+$$
+\left(-2\pm \sqrt{3},\frac{-2\pm \sqrt{3}}{-2\pm \sqrt{3}+1}\right).
+$$ 
+
+::: 
+
+::: {#exm- } 
+Find equations of both tangent lines through the point $(2,-3)$ that are tangent to the parabola $y=x^2+x.$ 
+::: 
+
+::: {.solution }
+All tangent lines through $(2,-3)$  have the form $y+3=m (x-2)$  where $m=y'(x)=2x+1.$  
+Since we our looking for the intersection (point of tangency) we eliminate $y$  as follows: 
+$$
+y=x^2+x=(2x+1)(x-2)-3.
+$$ 
+Solving for $x$ we obtain, $x=-1$  and $x=5.$  
+Thus there are two tangent lines and they are tangent at the points $(-1,0)$  and $(5,30).$  
+The tangent lines are $y=-x-1$  and $y=11 x-25.$  
+::: 
+
+## Horizontal Tangent Lines
+
+
+::: {#thm- } 
+If $f'(a)=0$  then the equation of the tangent line to the curve $y=f(x)$  at the point $(a,0)$  is $y=f(a)$  and $f$  is said to have \index{a horizontal tangent line} **a horizontal tangent line**  at $x=a.$ 
+::: 
+
+
+::: {#exm- } 
+For what values of $x$  does the graph of $f(x)=2x^3-3x^2-6x+87$  have a horizontal tangent?
+::: 
+
+::: {.solution }
+To find the horizontal tangent lines we find where the derivative is 0. 
+We compute, $y'(x)=6 x^2-6 x-6.$  
+So we need to solve $6 x^2-6 x-6=0.$  
+We find, $6 x^2-6 x-6=0$  and so $x^2-x-1=0$. 
+And using the quadratic formula we have $x=\frac{1}{2} \left(1\pm \sqrt{5}\right).$  
+Thus, the values of $x$  where the tangent lines are horizontal are $\frac{1}{2} \left(1\pm \sqrt{5}\right).$ 
+::: 
+
+::: {#exm- } 
+Find the points on the curve $y=x^3-x^2-x+1$  where the tangent line is horizontal.
+::: 
+
+::: {.solution }
+To find the horizontal tangent lines we find where the derivative is 0. 
+We compute, $y'(x)=3 x^2-2 x-1$. 
+So we need to solve $3 x^2-2 x-1=0.$  
+Using the quadratic formula we have $x=-\frac{1}{3}$  and $x=1.$  
+Thus, the values of $x$ where the tangents lines are horizontal are $1$  and $-1/3.$ 
+::: 
+
+## Relative Rate of Change
+
+Next we illustrate the importance of the relative rate of change, as compared to the difference between the absolute rate of change and the average rate of change. 
+The absolute change is not the same as the average rate of change. 
+Namely, the \index{absolute change} **absolute change**  is just the differences in the values of $f$  at the boundary of the interval $[x,\Delta  x],$  namely $f(x+\Delta  x)-f(x);$  whereas the average rate of change is the absolute change divided by the size of the interval: 
+$$
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}.
+$$ 
+The average rate of change is sometimes more useful; for example, suppose you want to know how long it takes to make some money and not just the size of the money made (absolute change). 
+Knowing the rate at which the money is being made, (the average rate of change over a given time interval) is often useful.
+
+::: {#exm- } 
+Temperature readings $T$  (in degrees Celsius) were recorded every hour starting at midnight on a day in April. 
+The time $x$  is measured in hours from midnight.
+$$
+\begin{array}{c|ccccccccccccc}
+ x (h) & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\ \hline
+ T (C) & 6.5 & 6.1 & 5.6 & 4.9 & 4.2 & 4.0 & 4.0 & 4.8 & 6.1 & 8.3 & 10.0 & 12.1 & 14.3
+\end{array}
+$$
+$$
+\begin{array}{c|cccccccccccc}
+ x (h) & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 \\ \hline
+ T (C) & 16.0 & 17.3 & 18.2 & 18.8 & 17.6 & 16.0 & 14.1 & 11.5 & 10.2 & 9.0 & 7.9 & 7.0
+\end{array}
+$$
+\ 
+- Find the average rates of change of temperatures with respect to time from noon to 3:00 p.m., 2:00 p.m. and 1:00 p.m. 
+- Estimate the instantaneous rate of change at noon.
+::: 
+
+::: {.solution }
+The average rates of change are, respectively,
+$$
+\frac{\Delta  T}{\Delta  x}=\frac{T(15)-T(12)}{3}=\frac{18.2-14.3}{3}=1.3 \, C/h 
+$$
+$$
+\frac{\Delta  T}{\Delta  x}=\frac{T(14)-T(12)}{2}=\frac{17.3-14.3}{2}=1.5 \, C/H
+$$
+$$
+\frac{\Delta  T}{\Delta  x}=\frac{T(13)-T(12)}{1}=\frac{16.0-14.3}{1}=1.7 \, C/h
+$$
+We plot the given data and use them to sketch a smooth curve that approximates the graph of the temperature function. Then we draw that tangent line at the point $P$  where $x=12$  and after measuring the sides of the triangle  we estimate that the slope of the tangent line is 
+$$
+\frac{18.3-8}{14-8.5}=\frac{10.3}{5.5}\approx 1.9
+$$ 
+and so the instantaneous rate of change of temperature with respect to time at noon is about $1.9 C/h.$   
+::: 
+
+Sometimes we are not interested in the instantaneous rate of change and instead we may want a relative rate of change (percentage). 
+For example suppose a student makes a 39 on a test, this would be a very good grade if the score is out of 40 points. 
+However if the score was out of a total of 100 points then the grade is not so good.
+
+::: {#def- } 
+Let $y=f(x),$  then the \index{relative rate of change} **relative rate of change**  at $x=x_0$  is the ratio 
+$$
+\frac{f'\left(x_0\right)}{f\left(x_0\right)}.
+$$ 
+::: 
+
+::: {#exm- } 
+Let $f(x)=\sqrt{x}.$  
+Find the relative rate of change at $x=5$  and $x=75.$ 
+::: 
+
+::: {.solution }
+Since $f'(x)=\frac{1}{2 \sqrt{x}}.$  
+The relative rate of change of $f$  at $x=5$  is
+$$
+\frac{f'(5)}{f(5)}=\frac{\frac{1}{2 \sqrt{5}}}{\sqrt{5}}=\frac{1}{10} \approx 0.1 \text{ or } 10\%.
+$$
+The relative rate of change of $f$  at $x=75$  is
+$$
+\frac{f'(75)}{f(75)}=\frac{\frac{1}{2 \sqrt{75}}}{\sqrt{75}} =\frac{1}{150} \approx 0.00666667 \text{ or } 0.6\%.
+ $$
+::: 
+
+Often we are more interested in the relative rate of change of a quantity instead of the instantaneous rate of change. 
+If instance, if you are earning $25,000/\text{yr}$  and receive a 5,000 raise, you would probably be very please. 
+However, if you were making $100,000/\text{yr}$  you may not be as please since the relative change is not as much. 
+With the $100,000/\text{yr}$  pay you only have a  $5,000/100,000=0.05=5\%$ increase whereas with the $25,000/\text{yr}$  pay you have a better percentage increase of  $5,000/25,000=0.20=20\%.$ 
+
+::: {#exm- } 
+Let $f(x)=2x^2-3x+5.$  
+\ 
+- Find the average rate of change from $x=2$  to $x=4.$  
+- Find the instantaneous rate of change at $x=2.$  
+- Find the relative rate of change of $f$  at $x=2$ 
+::: 
+
+::: {.solution }
+The average rate of change of $f$  from $x=2$  to $x=4$  is given by,
+$$
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}
+=\frac{\left(2(4)^2-3(4)+5\right)-\left(2(2)^2-3(2)+5\right)}{2}
+=9
+$$
+Since $f'(x)=4x-3,$  the instantaneous rate for change of $f$  at $x=2$  is given by, $f'(2)=4(2)-3$  $=5.$   The relative rate of change of $f$  at $x=2$  is
+$$
+\frac{f'(2)}{f(2)}=\frac{5}{2(2)^2-3(2)+5} =\frac{5}{7} \approx 0.714286  \text{ or } 71.
+$$
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Find a function(s) with the following properties. (a) Find functions $f$  and $g$  such that $f$  is discontinuous at $x=1$  but $f g$  is continuous there. (b) Give an example of a function defined for all real numbers that is continuous at only one point. 
+::: 
+
+::: {#exr- } 
+(a) Find an equation of the secant line to the graph of $y=x^2-2x$  through the points $(1,-1)$  and $(-1,3)$ .
+(b) Find an equation of the tangent line to the graph of $y=x^2-2x$  at the point $(1,-1)$ .
+::: 
+
+::: {#exr- } 
+(a) Find the average rate of change of $f(x)=x^2+3x$  over the interval $[0,1]$ .
+(b) Find the instantaneous rate of change of $f(x)=x^2+3x$  at $x=0$ .
+::: 
+
+::: {#exr- } 
+A ball is thrown straight down from the top of a 220-foot building with an initial velocity of 120 meters per second. What is the velocity after 5 seconds? After 10 seconds?
+::: 
+
+::: {#exr- } 
+To estimate the height of a building, a stone is dropped from the top of the building into a pool of water at ground level. How high is the building if the splash is seen $6.8$  seconds after the stone is dropped?
+::: 
+
+::: {#exr- } 
+Let $s(t)=-t^3+3t^2-3t$  be the position function of a body moving on a coordinate line, with $s$  in meters and $t$  in seconds. (a) Find the body's displacement and average velocity for the time interval $0\leq t\leq 3.$  (b) Find the body's speed and acceleration at the endpoints of the time interval $0\leq t\leq 3.$  (c) When, if ever, during the time interval $0\leq t\leq 3$  does the body change direction?
+::: 
+
+::: {#exr- } 
+(a) Let $s(t)=\frac{25}{t^2}-\frac{5}{t}$  be the position function of a body moving on a coordinate line, with $s$  in meters and $t$  in seconds. (b) Find the body's displacement and average velocity for the time interval $1\leq t\leq 5.$  (c) Find the body's speed and acceleration at the endpoints of the time interval $1\leq t\leq 5.$  When, if ever, during the time interval $1\leq t\leq 5$  does the body change direction?
+::: 
+
+::: {#exr- } 
+(a) Let $s(t)=\frac{25}{t+5}$  be the position function of a body moving on a coordinate line, with $s$  in meters and $t$  in seconds. (b) Find the body's displacement and average velocity for the time interval $-4\leq t\leq 0.$  (c) Find the body's speed and acceleration at the endpoints of the time interval $-4\leq t\leq 0.$  When, if ever, during the time interval $-4\leq t\leq 0$  does the body change direction?
+::: 
+
+::: {#exr- } 
+If an arrow is shot upward on the moon with a velocity of $58 m/s,$  its height in meters after $t$  seconds is given by $h=58t-0.83t^2.$  (a) Find the velocity of the arrow after $1 s.$  (b) Find the velocity of the arrow when $t=a.$  (c) When will the arrow hit the moon? (d) With what velocity will the arrow hit the moon?
+::: 
+
+::: {#exr- } 
+If a cylindrical tank holds $100,000$  gallons of water, which takes $1 h$  to drain from the bottom of the tank, then Torricelli's Law given the volume $V$  of water remaining in the tank after $t$  minutes as 
+$$
+V(t)=100,000\left(1-\frac{t}{60}\right)^2, \qquad 0\leq t\leq 60.
+$$  
+Find the rate at which the water is flowing out of the tank after 20 minutes.
+::: 
+
+::: {#exr- } 
+Verify that the average over the time interval $\left[t_0-\Delta  t,t_0+\Delta  t\right]$  is the same as the instantaneous velocity at $t=t_0$  for the position function $s(t)=\frac{-1}{2}a t^2+c.$ 
+::: 
+
+::: {#exr- } 
+Let $s(t)=t^2-3t+2$  be the position function of a body moving on a coordinate line, with $s$  in meters and $t$  in seconds. (a) Find the body's displacement and average velocity for the time interval $0\leq t\leq 2.$  (b) Find the body's speed and acceleration at the endpoints of the time interval $0\leq t\leq 2.$  (c) When, if ever, during the time interval $0\leq t\leq 2$  does the body change direction?
+::: 
+
+::: {#exr- } 
+At time $t$  the position of a body moving along the $s$ -axis is $s=t^3-6t^2-9t m.$  (a) Find the body's acceleration each time the velocity is zero. (b) Find the body's speed each time the acceleration is zero. (c) Find the total distance traveled by the body from $t=0$  to $t=2.$ 
+::: 
+
+::: {#exr- } 
+A rock is thrown vertically upward from the surface of the moon at a velocity of 24 m/se (about 86 km/h) reaches a height of $s=24t-0.8t^2$  meters in $t$  sec. (a) Find the rock's velocity and acceleration at time $t.$  (b) How long does it take the rock to reach its highest point? (c) How high does the rock go? (d) How long does it take the rock to reach half its maximum height?
+::: 
+
+::: {#exr- } 
+Had Galileo dropped a cannonball from the Tower of Pisa, 179 ft above the ground, the ball's height above the ground $t$  sec into the fall would have been $s=179-16t^2.$  (a) What would have been the ball's velocity, speed, and acceleration at time $t?$  (b) About how long would it have taken the ball to hit the ground? (c) What would have been the balls velocity at the moment of impact?
+::: 
+
+
+

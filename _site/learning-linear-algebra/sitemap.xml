@@ -2,114 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://directknowledge.com/learning-linear-algebra/index.html</loc>
-    <lastmod>2023-01-19T19:38:44.514Z</lastmod>
+    <lastmod>2023-01-25T01:48:33.476Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/learning-linear-algebra/systems-of-linear-equations.html</loc>
-    <lastmod>2023-01-19T19:38:44.516Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/matrices-and-vectors.html</loc>
-    <lastmod>2023-01-19T19:38:44.521Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/on-the-solutions-of-linear-systems.html</loc>
-    <lastmod>2023-01-19T19:38:44.522Z</lastmod>
+    <lastmod>2023-01-25T01:48:33.480Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/learning-linear-algebra/vector-spaces.html</loc>
-    <lastmod>2023-01-19T19:38:44.524Z</lastmod>
+    <lastmod>2023-01-25T01:48:33.484Z</lastmod>
   </url>
   <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/introduction-to-linear-transformations.html</loc>
-    <lastmod>2023-01-19T19:38:44.525Z</lastmod>
+    <loc>https://directknowledge.com/learning-linear-algebra/linear-transformations.html</loc>
+    <lastmod>2023-01-25T01:48:33.490Z</lastmod>
   </url>
   <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/linear-transformations-in-geometry.html</loc>
-    <lastmod>2023-01-19T19:38:44.526Z</lastmod>
+    <loc>https://directknowledge.com/learning-linear-algebra/inner-products-spaces.html</loc>
+    <lastmod>2023-01-25T01:48:33.495Z</lastmod>
   </url>
   <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/invertible-linear-transformations.html</loc>
-    <lastmod>2023-01-19T19:38:44.528Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/subspaces.html</loc>
-    <lastmod>2023-01-19T19:38:44.531Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/kernel-and-image-of-a-linear-transformation.html</loc>
-    <lastmod>2023-01-19T19:38:44.532Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/coordinates.html</loc>
-    <lastmod>2023-01-19T19:38:44.534Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/introduction-to-linear-spaces.html</loc>
-    <lastmod>2023-01-19T19:38:44.536Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/linear-independence-and-bases.html</loc>
-    <lastmod>2023-01-19T19:38:44.537Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/finite-dimensional-linear-spaces.html</loc>
-    <lastmod>2023-01-19T19:38:44.538Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/infinite-dimensional-linear-spaces.html</loc>
-    <lastmod>2023-01-19T19:38:44.539Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/introduction-to-linear-maps.html</loc>
-    <lastmod>2023-01-19T19:38:44.542Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/coordinates-and-the-matrix-of-a-linear-map.html</loc>
-    <lastmod>2023-01-19T19:38:44.544Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/orthonormal-bases-and-orthogonal-projections.html</loc>
-    <lastmod>2023-01-19T19:38:44.545Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/gram-schmidt-process-and-qr-factorization.html</loc>
-    <lastmod>2023-01-19T19:38:44.546Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/orthogonal-transformations-and-orthogonal-matrices.html</loc>
-    <lastmod>2023-01-19T19:38:44.547Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/inner-products.html</loc>
-    <lastmod>2023-01-19T19:38:44.550Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/determinants-and-trace.html</loc>
-    <lastmod>2023-01-19T19:38:44.552Z</lastmod>
+    <loc>https://directknowledge.com/learning-linear-algebra/determinants.html</loc>
+    <lastmod>2023-01-25T01:48:33.496Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/learning-linear-algebra/eigenvalues-and-eigenvectors.html</loc>
-    <lastmod>2023-01-19T19:38:44.554Z</lastmod>
+    <lastmod>2023-01-25T01:48:33.498Z</lastmod>
   </url>
   <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/diagonalization.html</loc>
-    <lastmod>2023-01-19T19:38:44.555Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/invariant-subspaces.html</loc>
-    <lastmod>2023-01-19T19:38:44.559Z</lastmod>
-  </url>
-  <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/jordan-canonical-form.html</loc>
-    <lastmod>2023-01-19T19:38:44.607Z</lastmod>
+    <loc>https://directknowledge.com/learning-linear-algebra/canonical-forms.html</loc>
+    <lastmod>2023-01-25T01:48:33.502Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/learning-linear-algebra/references.html</loc>
-    <lastmod>2023-01-19T19:38:44.608Z</lastmod>
+    <lastmod>2023-01-25T01:48:33.502Z</lastmod>
   </url>
   <url>
-    <loc>https://directknowledge.com/learning-linear-algebra/Learning-Linear-Algebra.pdf</loc>
-    <lastmod>2023-01-19T19:38:44.019Z</lastmod>
+    <loc>https://directknowledge.com/learning-linear-algebra/Learning-Linear-Algebra-Paperback.pdf</loc>
+    <lastmod>2023-01-25T01:48:32.790Z</lastmod>
   </url>
 </urlset>

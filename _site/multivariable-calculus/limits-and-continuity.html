@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Multivariable Calculus">
+<title>Limits and Continuity - Exploring Calculus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./differentiation.html" rel="next">
+<link href="./vector-functions.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+</style>
+  
+<meta property="og:title" content="Limits and Continuity - Exploring Calculus">
+<meta property="og:description" content="Multivariable Calculus">
+<meta property="og:site-name" content="Multivariable Calculus">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Multivariable Calculus" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/multivariable-calculus/">Multivariable Calculus</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vector Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limits-and-continuity.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Differentiation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applications of Derivatives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./double-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Double Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./triple-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Triple Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-fields.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vector Fields</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./line-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Line Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/multivariable-calculus/"><picture><source type="image/webp" srcset="../../assets/multivariable-calculus-cover.webp"><source type="image/webp" srcset="../../assets/multivariable-calculus-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/multivariable-calculus-cover.png" alt="Multivariable Calculus Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#multivariable-functions" id="toc-multivariable-functions" class="nav-link active" data-scroll-target="#multivariable-functions"><span class="toc-section-number">2.1</span>  Multivariable Functions</a></li>
+  <li><a href="#functions-of-several-variables" id="toc-functions-of-several-variables" class="nav-link" data-scroll-target="#functions-of-several-variables"><span class="toc-section-number">2.2</span>  Functions of Several Variables</a></li>
+  <li><a href="#functions-of-two-variables" id="toc-functions-of-two-variables" class="nav-link" data-scroll-target="#functions-of-two-variables"><span class="toc-section-number">2.3</span>  Functions of Two Variables</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">2.4</span>  Exercises</a></li>
+  <li><a href="#multivariable-limits" id="toc-multivariable-limits" class="nav-link" data-scroll-target="#multivariable-limits"><span class="toc-section-number">2.5</span>  Multivariable Limits</a></li>
+  <li><a href="#limit-properties" id="toc-limit-properties" class="nav-link" data-scroll-target="#limit-properties"><span class="toc-section-number">2.6</span>  Limit Properties</a></li>
+  <li><a href="#limits-that-do-not-exist" id="toc-limits-that-do-not-exist" class="nav-link" data-scroll-target="#limits-that-do-not-exist"><span class="toc-section-number">2.7</span>  Limits that Do Not Exist</a></li>
+  <li><a href="#continuity-of-a-function-of-two-variables" id="toc-continuity-of-a-function-of-two-variables" class="nav-link" data-scroll-target="#continuity-of-a-function-of-two-variables"><span class="toc-section-number">2.8</span>  Continuity of a Function of Two Variables</a></li>
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1"><span class="toc-section-number">2.9</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></h1>
+</header>
+<section id="multivariable-functions" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="multivariable-functions"><span class="header-section-number">2.1</span> Multivariable Functions</h2>
+<p>Partial differentiation is a powerful mathematical tool that can be used to solve a variety of problems. In this book, we will discuss the fundamental concepts and principles of partial differentiation. We will also provide some examples to illustrate how partial differentiation can be used to find maxima and minima, optimize functions, and more.</p>
+<p>Partial differentiation is the process of taking the partial derivative of a function with respect to one or more of its variables. The partial derivative of a function is the rate of change of that function with respect to one of its variables, holding all other variables constant. Partial differentiation is used in calculus and other mathematical disciplines to find maxima and minima, as well as to study the behavior of functions near points of discontinuity.</p>
+<p>Partial differentiation has two key concepts: the derivative and the limit. The derivative is a measure of how a function changes as one of its inputs changes. The limit is the value that a function approaches as one of its inputs approaches a particular value. Partial differentiation relies on both of these concepts to quantify how a function changes near a point in space. In order to take the partial derivative of a function, we must first be able to take the derivative with respect to one variable while holding all other variables constant.</p>
+<p>Partial differentiation is a powerful tool that can be used to solve problems in many different fields, including physics, engineering, and economics.</p>
+<p>A multivariable function is a mathematical function of two or more variables. Examples of multivariable functions include the position of a moving particle in space (which depends on its velocity and acceleration), the electric and magnetic fields in electromagnetism, and the pressure, temperature, and density of a fluid in fluid mechanics. Multivariable functions can be graphed in three-dimensional space, and their behavior can be studied using calculus. In general, multivariable functions are more complicated than their single-variable counterparts. However, they can often be decomposed into simpler functions, making them easier to understand and work with.</p>
+<p>Multivariable functions can be partial differentiated with respect to each of their variables. This partial differentiation is a measure of how the function changes when one of its variables is changed, while the other variables are held constant. In other words, it helps us to understand how a function behaves when we change one of its inputs. Partial differentiation can be used to optimize a function, by finding the input that will produce the desired output. It can also be used to find maxima and minima, and to solve problems in physics and engineering. So, if you’re ever stuck trying to figure out a multivariable function, remember that partial differentiation is your friend.</p>
+<p>Multivariable limits and continuity are often some of the most challenging concepts for students to grasp in mathematics. In partial differentiation, we take the limit of a function as one or more of its variables approach infinity while the others remain finite. This can be a difficult concept to wrap one’s head around, but it is crucial for understanding many advanced mathematical concepts.</p>
+<p>Continuity, on the other hand, is a relatively straightforward concept: it simply means that a function is uninterrupted and smooth. However, proving continuity can often be quite tricky. In general, multivariable limits and continuity can be quite challenging concepts, but they are essential for understanding advanced mathematics.</p>
+<p>When it comes to math, there are a lot of big words that can be intimidating. Differentials and differentiability may sound like they belong in a horror movie, but they’re actually just two concepts that are closely related.</p>
+<p>In calculus, a differential is a small change in a variable, while differentiability refers to the ability to calculate these small changes. These concepts are important in calculus and other branches of mathematics, as they allow for the determination of things like rates of change and slopes of curves. So the next time you see a differential or differentiability, don’t be scared off - they’re just math terms!</p>
+<p>The chain rule is one of the most important concepts in calculus, and it can be a little tricky to wrap your head around at first. Basically, the chain rule says that if you have a function that is the composition of two other functions, you can take the derivative of that function by taking the derivative of each of the individual functions and then multiplying them together.</p>
+<p>The chain rule can be generalized to functions with more than two components, but the basic idea is always the same: to take the derivative of a composite function, you need to take the derivative of each individual function and then multiply them all together.</p>
+<p>Partial differentiation can also be used when taking derivatives with respect to more than one variable. However, it’s important to remember that this rule is only useful with functions that are composed of other functions - if a function is not composed of other functions, then the chain rule is not that useful at all. So, if you ever come across a function that you’re not sure how to differentiate, make sure to check whether or not it’s composed of other functions before trying using the chain rule.</p>
+<p>Partial differentiation simply means taking the derivative with respect to one variable while holding all other variables constant. For example, consider the function <span class="math inline">\(f(x,y) = x^2 + y^2\)</span>. The partial derivative of this function with respect to x is 2x, and the partial derivative with respect to y is 2y. This means that as we move across the graph of this function, it is increasing at a rate of 2x in the direction of x and at a rate of 2y in the direction of y.</p>
+<p>The gradient vector is simply a vector that contains all partial derivatives of a given function. So, for our example function <span class="math inline">\(f(x,y) = x^2 + y^2\)</span>, the gradient vector would be <span class="math inline">\(\langle2x, 2y\rangle\)</span>. This vector can be thought of as a ``directional derivative” because it tells us which way the function is increasing and by how much. The magnitude of the gradient vector tells us how steeply the function is increasing (i.e., how steeply it is “pointing” in a particular direction), and the direction tells us which way it is pointing.</p>
+<p>There are many applications for partial derivatives and gradient vectors in physics and engineering. One common application is finding local maxima and minima (i.e., points where the derivative is zero).</p>
+<p>Another common application is optimization; for example, finding the shortest path between two points or minimizing fuel consumption in a car engine. Partial derivatives and gradient vectors also play a central role in Newton’s Method for solving differential equations numerically.</p>
+<p>In short, partial derivatives and gradient vectors are essential tools for anyone who wants to understand how functions change as their inputs vary.</p>
+<p>Differentiation is all about finding rates of change. And in the world of partial differential equations, we’re usually interested in rates of change with respect to more than one variable. Enter the tangent plane and the normal line.</p>
+<p>The tangent plane to a surface at a point is the plane that just barely touches the surface at that point. It’s like if you took a really thin piece of paper and tried to flatten it out on the surface. The normal line is the line that is perpendicular to the tangent plane at the point of contact.</p>
+<p>Partial differentiation is all about taking derivatives with respect to more than one variable, so tangent planes and normal lines are going to be our best friends. We can use them to find rates of change in multiple directions, which will come in handy when we’re trying to solve partial differential equations.</p>
+<p>Partial differentiation is a way of finding the extreme values of a function of two variables. In other words, it helps us find the points where the function is at its highest or lowest.</p>
+<p>To do this, we take partial derivatives with respect to each of the variables. The partial derivative with respect to x tells us how the function changes as x changes, and the partial derivative with respect to y tells us how the function changes as y changes. If both partial derivatives are positive, then the function is increasing in both variables, and so the point is not an extreme value.</p>
+<p>However, if both partial derivatives are negative, then the function is decreasing in both variables, and so the point is an extreme value. If one partial derivative is positive and the other is negative, then the function is stylized and we need to use the second partial derivative test to determine whether the point is an extreme value.</p>
+<p>So, partial differentiation can be used to find extreme values of functions of two variables.</p>
+<p>What are Lagrange multipliers? In short, they’re a mathematical way of solving optimization problems. But what does that mean, exactly?</p>
+<p>Partial differentiation is a powerful tool that allows us to optimize functions subject to constraints. In many cases, the constrained optimization problem can be simplified by introducing Lagrange multipliers. Lagrange multiplier methods are named after Joseph-Louis Lagrange, who first developed the technique in the 18th century.</p>
+<p>The key idea is to introduce new variables, called Lagrange multipliers, which represent the constraints of the optimization problem. These multipliers can then be used to simplify the optimization problem by eliminating the need for explicit constraints. As a result, the Lagrange multiplier method is a powerful tool for solving constrained optimization problems.</p>
+<p>If you’re interested in learning partial differentiation, this book is for you. It covers all the basics, from the definition of partial derivatives to the chain rule and beyond. Plus, it includes plenty of worked examples to help you understand and master every concept.</p>
+<p>How does one go about teaching partial differentiation? It’s simply a matter of conveying an understanding clearly and concisely. Of course, that’s often easier said than done. partial differentiation can be a tricky topic to wrap your head around, let alone explain to someone else. But with a little patience and perseverance, you should be able to do it. After all, if you can partially differentiate, anyone can!</p>
+</section>
+<section id="functions-of-several-variables" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="functions-of-several-variables"><span class="header-section-number">2.2</span> Functions of Several Variables</h2>
+<p>A <strong>polynomial function</strong> of two variables is a sum of terms of the form <span class="math inline">\(cx^m y^n\)</span>, where <span class="math inline">\(c\)</span> is a real number and both <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are nonnegative integers. For example the function <span class="math display">\[
+f(x,y)=3x^3 y^5-3x^2 y^4-x y +7
+\]</span> is a polynomial function with terms <span class="math inline">\(3x^3y^5\)</span>, <span class="math inline">\(-3x^2 y^4\)</span>, <span class="math inline">\(-xy\)</span>, and <span class="math inline">\(7\)</span>. A <strong>rational function</strong> of two variables is a ratio of polynomial functions. For example the function <span class="math display">\[
+f(x,y)=\frac{3x^3 y^5-3x^2 y^4-x y +7}{x^3-y^2}
+\]</span> is a rational function with numerator <span class="math inline">\(3x^3 y^5-3x^2 y^4-x y +7\)</span> and denominator <span class="math inline">\(x^3-y^2\)</span>.</p>
+<p>A function of three variables is a rule that assigns to each ordered pair <span class="math inline">\(\left(x, y, z\right)\)</span> in a set <span class="math inline">\(D\)</span> a unique number <span class="math inline">\(f\left(x, y, z\right).\)</span> The set <span class="math inline">\(D\)</span> is called the <strong>domain</strong> of the function and is a subset of <span class="math inline">\(\mathbb{R}^3\)</span>. The collection of corresponding values <span class="math inline">\(f\left(x,y,z\right)\)</span> constitutes the <strong>range</strong> which is a subset of <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.1 </strong></span>Let <span class="math display">\[
+f(x,y,z)=x^2-2xy z+2 y z-x.
+\]</span> Find the domain of <span class="math inline">\(f\)</span> and evaluate <span class="math inline">\(f(1,2,3)\)</span>, <span class="math inline">\(f(t,2t,3t)\)</span>, <span class="math inline">\(f(x+y, x-y, 0)\)</span>, and <span class="math display">\[
+\frac{f(x+h,y,z)-f(x,y,z)}{h}, \quad
+\frac{f(x,y+h,z)-f(x,y,z)}{h}, \quad
+\frac{f(x,y,z+h)-f(x,y,z)}{h}.
+\]</span> where <span class="math inline">\(h\)</span> is an unknown quantity.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Substitution into the function yields the following: <span class="math inline">\(f(1,2,3)=0\)</span>, <span class="math display">\[
+f(t,2t,3t)=-t+13 t^2-12 t^3 \qquad
+f(x+y,x-y,0)=-x-y+(x+y)^2
+\]</span> and <span class="math display">\[\begin{align}
+&amp; \frac{f(x+h,y,z)-f(x,y,z)}{h}  =
+\frac{-h-x^2+(h+x)^2+2 x y z-2 (h+x) y z}{h}
+\\
+&amp; \frac{f(x,y+h,z)-f(x,y,z)}{h} =
+\frac{-h-x^2+(h+x)^2+2 x y z-2 (h+x) y z}{h}
+\\
+&amp; \frac{f(x,y,z+h)-f(x,y,z)}{h} =
+\frac{2 y z-2 x y z-2 y (h+z)+2 x y (h+z)}{h}
+\end{align}\]</span> The domain of <span class="math inline">\(f\)</span> is all real numbers, but rather <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+</div>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.1 </strong></span>A <strong>function</strong> of <span class="math inline">\(n\)</span> variables is a rule that assigns to each ordered pair <span class="math inline">\(\left(x_1, x_2, \ldots , x_n\right)\)</span> in a set <span class="math inline">\(D\)</span> a unique number <span class="math inline">\(f\left(x_1, x_2, \ldots , x_n\right).\)</span> The set <span class="math inline">\(D\)</span> is called the <strong>domain</strong> of the function and the set of corresponding values <span class="math inline">\(f\left(x_1, x_2, \ldots , x_n\right)\)</span> is called the <strong>range</strong>.</p>
+</div>
+<p>The <strong>graph</strong> of a function of several variables <span class="math inline">\(f\left(x_1,\ldots,x_n\right)\)</span> is the collection of all ordered <span class="math inline">\((n+1)\)</span>-tuples <span class="math inline">\(\left(x_1,\ldots,x_n,x_{n+1}\right)\)</span> such that <span class="math inline">\(\left(x_1,\ldots,x_n\right)\)</span> is in the domain of <span class="math inline">\(f\)</span> and <span class="math inline">\(x_{n+1}=f\left(x_1,\ldots,x_n\right).\)</span> Sketching by hand the graph of a function with several variables can be challenging. Let’s look at a few particular functions.</p>
+<p>For example the function <span class="math inline">\(f\)</span> defined by <span class="math display">\[\begin{equation}
+\label{polyfunc}
+f(x,y,z)=2x^3+4y^4+9z^6
+\end{equation}\]</span> is a three variable polynomial function with domain <span class="math inline">\(\mathbb{R}^3\)</span> and range <span class="math inline">\((-\infty, +\infty)\)</span>.<br>
+As another example consider the function <span class="math inline">\(g\)</span> defined by <span class="math display">\[\begin{equation}
+\label{trigfunc}
+g(w,x,y,z)=z^2+\sin w x+\cos w y.
+\end{equation}\]</span> The function <span class="math inline">\(g\)</span> is a four variable function with domain <span class="math inline">\(\mathbb{R}^4\)</span> and range <span class="math inline">\([-2,+\infty)\)</span>. Let <span class="math inline">\(h\)</span> be the function defined by <span class="math display">\[\begin{equation}
+\label{expfunc}
+h(x,y,z)=e^{xy}+z^4\sqrt[6]{x^2-4}.
+\end{equation}\]</span> Then <span class="math inline">\(h\)</span> is a three variable function with domain all ordered triples <span class="math inline">\((x,y,z)\)</span> with the requirement <span class="math inline">\(x^2-4\geq 0\)</span>. The range of <span class="math inline">\(h\)</span> is the set of all real numbers greater than 0.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.2 </strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be functions of the variables <span class="math inline">\(x_1, x_2, \ldots,x_n\)</span>. Then defined point-wise, the following functions</p>
+<ul>
+<li><span class="math inline">\((f+g)\left(x_1, x_2, \ldots, x_n\right):= f\left(x_1, x_2, \ldots, x_n\right)+g\left(x_1, x_2, \ldots, x_n\right)\)</span></li>
+<li><span class="math inline">\((f-g)\left(x_1, x_2, \ldots, x_n\right):= f\left(x_1, x_2, \ldots, x_n\right)-g\left(x_1, x_2, \ldots, x_n\right)\)</span></li>
+<li><span class="math inline">\((f g)\left(x_1, x_2, \ldots, x_n\right):= f\left(x_1, x_2, \ldots, x_n\right)g\left(x_1, x_2, \ldots, x_n\right)\)</span></li>
+<li><span class="math inline">\((f/g)\left(x_1, x_2, \ldots, x_n\right):=\dfrac{f\left(x_1, x_2, \ldots, x_n \right)}{g\left(x_1, x_2, \ldots, x_n\right)}\)</span> where <span class="math inline">\(g\left(x_1, x_2, \ldots, x_n\right)\neq 0.\)</span></li>
+</ul>
+<p>are also functions of the variables <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span>.</p>
+</div>
+<p>For example, considering the functions <span class="math inline">\(f\)</span> and <span class="math inline">\(h\)</span> defined in <span class="math inline">\(\ref{polyfunc}\)</span> and <span class="math inline">\(\ref{expfunc}\)</span>, respectively. Is <span class="math inline">\(f+h\)</span> defined as a function? Yes, by <span class="math inline">\(\ref{ptwisedeffunc}\)</span><br>
+<span class="math display">\[
+(f+h)(x,y,z)=
+2x^3+4y^4+9z^6+e^{xy}+z^4\sqrt[6]{x^2-4}
+\]</span> and notice the domain of <span class="math inline">\(f+h\)</span> is all ordered triples <span class="math inline">\((x,y,z)\)</span> with the requirement <span class="math inline">\(x^2-4\geq 0\)</span> and the range is <span class="math inline">\((-\infty,+\infty)\)</span>.</p>
+<p>Is <span class="math inline">\(g+h\)</span> defined as a function? If we use the functional rule defining <span class="math inline">\(h\)</span>, namely <span class="math inline">\(e^{xy}+z^4\sqrt[6]{x^2-4}\)</span> then the function defined by <span class="math display">\[
+h_1(w,x,y,z)=e^{xy}+z^4\sqrt[6]{x^2-4}
+\]</span> (defined as a four variable function), then the function <span class="math inline">\((g+h_1)\)</span> is defined as a function by <span class="math display">\[
+(g+h_1)(w,x,y,z)=z^2+\sin w x+\cos w y+ e^{xy}+z^4\sqrt[6]{x^2-4}.
+\]</span> using <span class="math inline">\(\ref{ptwisedeffunc}\)</span>. Notice the domain of <span class="math inline">\(g+h_1\)</span> is <span class="math inline">\(\mathbb{R}^4\)</span> and the range is <span class="math inline">\([-2,+\infty)\)</span>.</p>
+</section>
+<section id="functions-of-two-variables" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="functions-of-two-variables"><span class="header-section-number">2.3</span> Functions of Two Variables</h2>
+<p>When working with functions <span class="math inline">\(f\)</span> of two variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, we write <span class="math inline">\(z=f(x,y)\)</span> where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are the <strong>independent variables</strong> and <span class="math inline">\(z\)</span> is the <strong>dependent variable</strong>. The <strong>domain</strong> is defined to be the largest set of points for which the functional formula is defined and real-valued.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.2 </strong></span>Find the domain and range for the function <span class="math display">\[
+f(x,y)=\dfrac{1}{\sqrt{x-y}}.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The domain is <span class="math display">\[
+\{(x,y)\in \mathbb{R}^2 \mid y&lt;x\}
+\]</span> because of the square root in the denominator of <span class="math inline">\(f\)</span> and the range is <span class="math display">\[
+\{z \in \mathbb{R} \, \mid \, z&gt;0\}.
+\]</span> Notice the domain is a subset of <span class="math inline">\(\mathbb{R}^2\)</span> and the range is a subset of <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.3 </strong></span>Find the domain and range for the function <span class="math display">\[
+f(x,y)=\sqrt{\dfrac{x}{y}}.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The domain is <span class="math display">\[
+\{(x,y)\in \mathbb{R}^2\, \mid\, x y\geq 0 \text{ and } y\neq 0\}
+\]</span> because of the square root and the range is <span class="math display">\[
+\{z \in  \mathbb{R} \, \mid \, z\geq 0\}.
+\]</span> Notice the domain is a subset of <span class="math inline">\(\mathbb{R}^2\)</span> and the range is a subset of <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<p>In three dimensions, the graph of <span class="math inline">\(z=f(x,y)\)</span> is a surface in <span class="math inline">\(\mathbb{R}^3\)</span> whose <strong>projection</strong> onto the <span class="math inline">\(x y\)</span>-plane is the domain <span class="math inline">\(D\)</span>. When the plane <span class="math inline">\(z=C\)</span> intersects the surface <span class="math display">\[
+z=f(x,y),
+\]</span> the result is the curve with the equation <span class="math inline">\(f(x,y)=C\)</span> and such an intersection is called the <strong>trace</strong> of the graph of <span class="math inline">\(f\)</span> in the plane <span class="math inline">\(z=C.\)</span> The set of points <span class="math inline">\((x,y)\)</span> in the <span class="math inline">\(x y\)</span>-plane that satisfies <span class="math display">\[
+f(x,y)=C
+\]</span> is called the <strong>level curve</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(C\)</span> and an entire family of level curves is generated as <span class="math inline">\(C\)</span> varies over the range of <span class="math inline">\(f\)</span>. Level curves are obtained by projecting a trace onto the <span class="math inline">\(x y\)</span>-plane. Because level curves are used to show the shape of a surface, they are sometimes called <strong>contour curves</strong> .</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.3 </strong></span>The curves <span class="math inline">\(f(x,y)=C\)</span> in the <span class="math inline">\(xy\)</span>-plane are called the <strong>level curves</strong> of the function <span class="math inline">\(f\)</span> of two variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, where <span class="math inline">\(C\)</span> is a constant in the range of <span class="math inline">\(f\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.4 </strong></span>Sketch a few level curves for the function <span class="math display">\[
+f(x,y)=2x-3y=C
+\]</span> with <span class="math inline">\(C\geq 0\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Graphing the lines <span class="math display">\[
+y=\frac{2}{3}x-\frac{C}{3}
+\]</span> we have the family of level curves corresponding to <span class="math inline">\(C=1,\ldots,10.\)</span> The level curves show that the graph of the function <span class="math inline">\(f\)</span> is a plane in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.5 </strong></span>Sketch a few level curves for the function <span class="math display">\[
+f(x,y)=x^2+\frac{y^2}{4}=C
+\]</span> with <span class="math inline">\(C\geq 0\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Graphing the ellipses <span class="math display">\[
+\frac{x^2}{1^2}+\frac{y^2}{2^2}=C
+\]</span> in <span class="math inline">\(\mathbb{R}^2,\)</span> we have the family of level curves corresponding to <span class="math inline">\(C=1,\ldots,10.\)</span> The level curves show that the graph of the function <span class="math inline">\(f\)</span> is a elliptic paraboloid in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.6 </strong></span>Find the domain and range for the function <span class="math display">\[
+f(x,y)=\sqrt{\frac{y}{x-2}}
+\]</span> and sketch some level curves for <span class="math inline">\(f(x,y)=C\)</span> with <span class="math inline">\(C=0,1,2,3,4\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The domain of <span class="math inline">\(f\)</span> is <span class="math display">\[
+\left\{(x,y)\in \mathbb{R}^2 \mid \frac{y}{x-2}&gt;0 \right\}.
+\]</span> To sketch some level curves <span class="math display">\[
+\sqrt{\frac{y}{x-2}}=C
+\]</span> let’s square both sides <span class="math inline">\(\frac{y}{x-2}=C^2\)</span> and so <span class="math display">\[
+y=C^2(x-2).
+\]</span> The range of <span class="math inline">\(f\)</span> is <span class="math inline">\(\{z\in \mathbb{R} \mid z\geq 0\}\)</span>.</p>
+</div>
+</section>
+<section id="exercises" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">2.4</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.1 </strong></span>Let <span class="math inline">\(f(x,y,z)=x^2y e^{2x}+(x+y-z)^2.\)</span> Find each of the following.</p>
+<ul>
+<li><span class="math inline">\(f(0,0,0)\)</span></li>
+<li><span class="math inline">\(f(1,-1,1)\)</span></li>
+<li><span class="math inline">\(f(-1,1,-1)\)</span></li>
+<li><span class="math inline">\(\frac{d}{dx}f(x,x,x),\)</span></li>
+<li><span class="math inline">\(\frac{d}{dy}f(1,y,1)\)</span></li>
+<li><span class="math inline">\(\frac{d}{dz}f\left(1,1,z^2\right)\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.2 </strong></span>Find the domain and range for the multivariate function.</p>
+<ul>
+<li><span class="math inline">\(f(x,y)=\frac{1}{\sqrt{x-y}}\)</span></li>
+<li><span class="math inline">\(f(x,y)=\sqrt{\frac{y}{x}}.\)</span></li>
+<li><span class="math inline">\(f(u,v)=\sqrt{u \sin v}.\)</span></li>
+<li><span class="math inline">\(f(x,y)=e^{(x+1)/(y-2)}.\)</span></li>
+<li><span class="math inline">\(f(x,y)=\frac{1}{\sqrt{9-x^2-y^2}}.\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.3 </strong></span>Sketch some level curves of the function.</p>
+<ul>
+<li><span class="math inline">\(f(x,y)=x^2-y^2=C\)</span></li>
+<li><span class="math inline">\(f(x,y)=\frac{x}{y}=C\)</span></li>
+<li><span class="math inline">\(f(x,y)=x^2-y=C\)</span></li>
+<li><span class="math inline">\(f(x,y)=x^2+\frac{y^2}{4}=C\)</span></li>
+<li><span class="math inline">\(f(x,y)=x^3-y=C\)</span></li>
+<li><span class="math inline">\(f(x,y)=1/\sqrt{x^2-y^2}\)</span></li>
+<li><span class="math inline">\(g(x,y)=\sqrt{x \sin y}\)</span></li>
+<li><span class="math inline">\(h(x,y)=\ln (y-x)\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.4 </strong></span>Describe the trace of the quadratic surface in each coordinate plane, then sketch the surface.</p>
+<ul>
+<li><span class="math inline">\(\frac{x^2}{4}+y^2+\frac{z^2}{9}=1\)</span></li>
+<li><span class="math inline">\(\frac{x^2}{9}-y^2-z^2=1\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.5 </strong></span>Sketch the graph of the multivariate function.</p>
+<ul>
+<li><span class="math inline">\(f(x,y)=x\)</span></li>
+<li><span class="math inline">\(f(x,y)=x^3-1\)</span></li>
+<li><span class="math inline">\(f(x,y)=x^2-y\)</span></li>
+<li><span class="math inline">\(f(x,y)=x^2-y^2\)</span></li>
+<li><span class="math inline">\(f(x,y)=\sqrt{x+y}\)</span></li>
+<li><span class="math inline">\(f(x,y)=1/\sqrt{x^2-y^2}\)</span></li>
+<li><span class="math inline">\(g(x,y)=\sqrt{x \sin y}\)</span></li>
+<li><span class="math inline">\(h(x,y)=\ln (y-x)\)</span></li>
+</ul>
+</div>
+</section>
+<section id="multivariable-limits" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="multivariable-limits"><span class="header-section-number">2.5</span> Multivariable Limits</h2>
+<p>Recall when considering <span class="math display">\[
+\lim_{x\to c} f(x)=L
+\]</span> we need to examine the approach of <span class="math inline">\(x\)</span> to <span class="math inline">\(c\)</span> from two directions –namely the left-hand limit and the right-hand limit. However for functions of two variables, we write <span class="math inline">\((x,y)\to (a,b)\)</span> to mean that the point <span class="math inline">\((x,y)\)</span> is allowed to approach <span class="math inline">\((a,b)\)</span> along any path in the domain of <span class="math inline">\(f\)</span> that passes through <span class="math inline">\((a,b)\)</span>.</p>
+<p>Open and closed disks are analogous to open and closed intervals on a coordinate line. An <strong>open disk</strong> (or <strong>open ball</strong> centered at the point <span class="math inline">\((a,b)\)</span> is the set of all points <span class="math inline">\((x,y)\)</span> such that <span class="math display">\[
+\sqrt{(x-a)^2+(y-b)^2}&lt;r
+\]</span> for <span class="math inline">\(r&gt;0\)</span>. If the <strong>boundary</strong> of the disk is included, the disk is called a <strong>closed disk</strong>.</p>
+<p>A point <span class="math inline">\((a,b)\)</span> is called an <strong>interior point</strong> of a set <span class="math inline">\(S\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> if some open disk centered at <span class="math inline">\((a,b)\)</span> is contained entirely within <span class="math inline">\(S\)</span>. If <span class="math inline">\(S\)</span> is the empty set, or if every point of <span class="math inline">\(S\)</span> is an interior point, then <span class="math inline">\(S\)</span> is called an <strong>open set</strong> . The point <span class="math inline">\((a,b)\)</span> is called a <strong>boundary point</strong> of <span class="math inline">\(S\)</span> if every open disk centered at <span class="math inline">\((a,b)\)</span> contains both points that belong to <span class="math inline">\(S\)</span> and points that do not. The collection of all boundary points of <span class="math inline">\(S\)</span> is called the <strong>boundary</strong> of <span class="math inline">\(S\)</span>, and <span class="math inline">\(S\)</span> is a closed disk if it contains its boundary.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.4 </strong></span>Let <span class="math inline">\(f\)</span> be a function that is defined for all points <span class="math inline">\((x,y)\)</span> in an open disk around <span class="math inline">\((a,b)\)</span> with the possible exception of <span class="math inline">\((a,b)\)</span> itself. Then the <strong>limit</strong> of <span class="math inline">\(f(x,y)\)</span> as <span class="math inline">\((x,y)\)</span> approaches <span class="math inline">\((a,b)\)</span> is <span class="math inline">\(L\)</span>, written by <span class="math display">\[
+\lim_{(x,y)\to(a,b)} f(x,y)=L
+\]</span> if <span class="math inline">\(f(x,y)\)</span> can be made as close to <span class="math inline">\(L\)</span> as we please by restricting <span class="math inline">\((x,y)\)</span> to be sufficiently close to <span class="math inline">\((a,b)\)</span>.</p>
+</div>
+</section>
+<section id="limit-properties" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="limit-properties"><span class="header-section-number">2.6</span> Limit Properties</h2>
+<p>If <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> are real numbers then <span class="math display">\[\begin{equation}
+\label{linmultlimit}
+\lim_{(x,y)\to(a,b)}c=c,\qquad
+\lim_{(x,y)\to(a,b)}x=a, \qquad
+\lim_{(x,y)\to(a,b)}y=b.
+\end{equation}\]</span> The three limits in <span class="math inline">\(\ref{linmultlimit}\)</span> can be used with <span class="math inline">\(\ref{limthmmult}\)</span> to show that <span class="math display">\[\begin{equation}
+\label{polratlimit}
+\lim_{(x,y)\to(a,b)}p(x,y)=p(a,b)
+\qquad \text{and}\qquad
+\lim_{(x,y)\to(a,b)}r(x,y)=r(a,b)
+\end{equation}\]</span> where <span class="math inline">\(p\)</span> is a polynomial function of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> and <span class="math inline">\(r\)</span> is a rational function of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, provided <span class="math inline">\((a,b)\)</span> is in the domain of <span class="math inline">\(r\)</span>.</p>
+<p>::: {#thm- } [Limit Law] Suppose <span class="math display">\[
+\lim _{(x,y)\to \left(x_0,y_0\right)}f(x,y)=L
+\quad \text{and} \quad
+\lim _{(x,y)\to \left(x_0,y_0\right)}g(x,y)=M
+\]</span> and <span class="math inline">\(a\)</span> is a real number. Then</p>
+<ul>
+<li><span class="math inline">\(\lim _{(x,y)\to \left(x_0,y_0\right)}(a f)(x,y)=a L\)</span></li>
+<li><span class="math inline">\(\lim _{(x,y)\to \left(x_0,y_0\right)}(f+g)(x,y)=L+M\)</span></li>
+<li><span class="math inline">\(\lim _{(x,y)\to \left(x_0,y_0\right)}(f g)(x,y)=L M\)</span></li>
+<li><span class="math inline">\(\lim _{(x,y)\to \left(x_0,y_0\right)}(f/g)(x,y)=L/M\)</span><br>
+whenever <span class="math inline">\(M\neq 0.\)</span> :::</li>
+</ul>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof is left for the reader.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.7 </strong></span>Evaluate <span class="math inline">\(\lim _{(x,y)\to (1,1)}\dfrac{x^4+y^4}{x^2+y^2}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math display">\[
+r(x,y)=(x^4+y^4)/(x^2+y^2)
+\]</span> is a rational function and <span class="math inline">\((1,1)\)</span> is in the domain of <span class="math inline">\(r\)</span>, we use <span class="math inline">\(\ref{limthmmult}\)</span> to find <span class="math display">\[
+\lim _{(x,y)\to (1,1)}\dfrac{x^4+y^4}{x^2+y^2}
+=r(2,2)=1.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.8 </strong></span>Evaluate <span class="math inline">\(\lim _{(x,y)\to (0,0)}\dfrac{x^4-y^4}{x^2+y^2}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By canceling <span class="math display">\[\begin{equation}
+\label{cancellim}
+\lim _{(x,y)\to (0,0)}\frac{\left(x^2-y^2\right)\left(x^2+y^2\right)}{x^2+y^2}=\lim _{(x,y)\to (0,0)}\left(x^2-y^2\right)=0.
+\end{equation}\]</span> Notice the functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> defined by <span class="math display">\[
+f(x,y)=x^2-y^2
+\qquad \text{and}\qquad
+g(x,y)=\dfrac{x^4-y^4}{x^2+y^2}
+\]</span> are not the same functions, because they have different domains. However <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> have the same limit because whenever <span class="math inline">\((x,y)\neq(0,0)\)</span> we do indeed have <span class="math inline">\((x^4-y^4)/(x^2+y^2)=x^2-y^2\)</span>. Therefore, the ``canceling” step in <span class="math inline">\(\ref{cancellim}\)</span> is valid.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.9 </strong></span>Evaluate <span class="math inline">\(\lim_{(x,y)\to (1,2)}\dfrac{\left(x^2-1\right)\left(y^2-4\right)}{(x-1)(y-2)}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By factoring and then canceling we have <span class="math display">\[\begin{align*}
+\lim _{(x,y)\to (1,2)}\frac{\left(x^2-1\right)\left(y^2-4\right)}{(x-1)(y-2)}
+&amp; =\lim _{(x,y)\to (1,2)}\frac{(x-1)(x+1)(y-2)(y+2)}{(x-1)(y-2)} \\
+&amp; =\lim _{(x,y)\to (1,2)}(x+1)(y+2)
+=(1+1)(2+2) =8.
+\tag*{}
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.10 </strong></span>Evaluate <span class="math inline">\(\lim _{(x,y)\to (a,a)}\dfrac{x^4-y^4}{x^2-y^2}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By factoring and then canceling we have <span class="math display">\[\begin{align*}
+\lim _{(x,y)\to (a,a)}\frac{x^4-y^4}{x^2-y^2}
+&amp; =\lim _{(x,y)\to (a,a)}\frac{\left(x^2-y^2\right)\left(x^2+y^2\right)}{x^2-y^2} \\
+&amp; =\lim _{(x,y)\to (a,a)}\left(x^2+y^2\right) = 2a^2.
+\tag*{}
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="limits-that-do-not-exist" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="limits-that-do-not-exist"><span class="header-section-number">2.7</span> Limits that Do Not Exist</h2>
+<p>It is sometimes possible to show that the limit of a function does not exist by showing that the limit has different values depending on which path in the domain is used.</p>
+<p>::: {#thm- } [Limits Along Paths] </p>
+<p>If <span class="math inline">\(f(x,y)\)</span> approaches two different numbers as <span class="math inline">\((x,y)\)</span> approaches <span class="math inline">\((a,b)\)</span> along two different paths, then the limit <span class="math display">\[
+\lim_{(x,y)\to(a,b)}f(x,y)
+\]</span> does not exist. :::</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof is left for the reader.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.11 </strong></span>Evaluate <span class="math inline">\(\lim _{(x,y)\to (0,0)}\dfrac{x y}{x^2+y^2}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Along the <span class="math inline">\(x\)</span>-axis we have <span class="math display">\[
+\plim{(x,y)\to (0,0)}{y=0}\dfrac{x y}{x^2+y^2}
+=\lim _{(x,0)\to (0,0)}\frac{0}{x^2+0^2}=\lim _{x\to 0}0=0.\]</span> We have along the <span class="math inline">\(y\)</span>-axis, <span class="math display">\[
+\plim{(x,y)\to (0,0)}{x=0}\dfrac{x y}{x^2+y^2}
+=\lim _{(0,y)\to (0,0)}\frac{0}{0^2+y^2}=\lim _{y\to 0}0=0.\]</span> Along the line <span class="math inline">\(y=x\)</span> we have <span class="math display">\[
+\plim{(x,y)\to (0,0)}{y=x}\dfrac{x y}{x^2+y^2}
+=\lim _{(x,x)\to (0,0)}\frac{ x^2 }{x^2+x^2}=\lim _{x\to 0}\frac{1}{2}=\frac{1}{2}.
+\]</span><br>
+Therefore, by <span class="math inline">\(\ref{dnelim}\)</span>, the given limit does not exist (see <span class="math inline">\(\ref{fig:limdne}\)</span>).</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.12 </strong></span>Evaluate <span class="math inline">\(\lim _{(x,y)\to (0,0)}\dfrac{x y^2}{x^2+y^4}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Along the curves <span class="math inline">\(y=m x\)</span> we have <span class="math display">\[
+\plim{(x,y)\to (0,0)}{y=mx}\dfrac{x y^2}{x^2+y^4}
+=\lim _{(x,m x)\to (0,0)}\frac{m^2x^3}{x^2+m^4x^4}=\lim _{x\to 0}\frac{m^2x}{1+m^4x^2}=0 .
+\]</span> But along the curve <span class="math inline">\(x=y^2\)</span> we have <span class="math display">\[
+\plim{(x,y)\to (0,0)}{x=y^2}\dfrac{x y^2}{x^2+y^4}
+=\lim _{\left(y^2,y\right)\to (0,0)}\frac{y^4}{y^4+y^4}=\lim _{y\to 0}\frac{y^4}{y^4+y^4}=\frac{1}{2}.
+\]</span> Therefore, by <span class="math inline">\(\ref{dnelim}\)</span>, the given limit does not exist.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.13 </strong></span>Evaluate <span class="math inline">\(\lim _{(x,y)\to (0,0)}\dfrac{x^2y^2}{x^4+y^4}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(m\)</span> be any real number, then along the paths <span class="math inline">\(y=m x\)</span> we have <span class="math display">\[
+\plim{(x,y)\to (0,0)}{y=mx}\dfrac{x^2y^2}{x^4+y^4}
+=\lim _{(x,y)\to (0,0)}\frac{x^2y^2}{x^4+y^4}
+=\lim _{(x,m x)\to (0,0)}\frac{x^2(m x)^2}{x^4+(m x)^4}
+=\frac{m^2}{1+m^4}.
+\]</span> Notice as the path <span class="math inline">\(y=m x\)</span> changes (as <span class="math inline">\(m\)</span> changes) so does the value <span class="math inline">\(m^2/(1+m^4)\)</span>. Therefore, by <span class="math inline">\(\ref{dnelim}\)</span>, the given limit does not exist.</p>
+</div>
+<p>&nbsp;</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.14 </strong></span>Evaluate <span class="math inline">\(\lim _{(x,y)\to (0,0)}\dfrac{x^4y^4}{\left(x^2+y^4\right)^3}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Along the line <span class="math inline">\(y=0\)</span> we have <span class="math display">\[
+\plim{(x,y)\to (0,0)}{y=0}\dfrac{x^4y^4}{\left(x^2+y^4\right)^3}
+=\lim _{x\to 0}\frac{0}{\left(x^2+0\right)^3}=0
+\]</span> and along the path <span class="math inline">\(y=\sqrt{x}\)</span> we have <span class="math display">\[
+\plim{(x,y)\to (0,0)}{y=\sqrt{x}}\dfrac{x^4y^4}{\left(x^2+y^4\right)^3}
+=\lim_{x\to 0}\frac{x^4x^2}{\left(2x^2\right)^3}=\frac{1}{8}.
+\]</span> Therefore, by <span class="math inline">\(\ref{dnelim}\)</span>, the given limit does not exist.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.15 </strong></span>Find a function <span class="math inline">\(f(x,y)\)</span> and a point <span class="math inline">\(\left(x_0,y_0\right)\)</span> such that <span class="math display">\[
+\lim _{x\to x_0}\left(\lim _{y\to y_0}f(x,y)\right)\neq \lim _{y\to y_0}\left(\lim _{x\to x_0}f(x,y)\right).
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Consider the function <span class="math inline">\(f(x,y)=\frac{a x+b y}{c x+d y}\)</span> and the point <span class="math inline">\((0,0).\)</span> Then <span class="math display">\[
+\lim _{x\to 0}\left(\lim _{y\to 0}\frac{a x+b y}{c x+d y}\right)=\frac{a}{c}\neq \lim _{y\to 0}\left(\lim _{x\to 0}\frac{a x+b y}{c
+x+d y}\right)=\frac{b}{d}\]</span> for some values of <span class="math inline">\(a,b , c,\)</span> and <span class="math inline">\(d.\)</span> What does this say about <span class="math display">\[
+\lim _{(x,y)\to (0,0)}\left(\frac{a x+b y}{c x+d y}\right) \ ?
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.16 </strong></span>Consider the function <span class="math display">\[
+f(x,y)=\frac{x y }{x^2y^2+(x-y)^2}.
+\]</span> Notice that<br>
+<span class="math display">\[\begin{equation}
+\label{multex}
+\lim _{x\to 0}\left(\lim _{y\to 0}f(x,y)\right)=\lim _{y\to 0}\left(\lim _{x\to 0}f(x,y)\right).
+\end{equation}\]</span> Is it true, then, that <span class="math display">\[\begin{equation}
+\label{dnemultex}
+\lim _{(x,y)\to (0,0)}\left(\frac{xy}{x^2y^2+(x-y)^2}\right)
+\end{equation}\]</span> exists?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we notice the (iterated) limits in <span class="math inline">\(\ref{multex}\)</span> are both <span class="math inline">\(-1/2\)</span> as the following shows <span class="math display">\[
+\lim_{x\to0}\left[ \lim_{y\to0} \left(\frac{xy}{x^2y^2+(x-y)^2}\right) \right]
+=\lim_{x\to0}\left[ \lim_{y\to0} \left(\frac{x}{2x^2y+2(x-y)(-1)}\right) \right]
+=-\frac{1}{2}
+\]</span> <span class="math display">\[
+\lim_{y\to0}\left[ \lim_{x\to0} \left(\frac{xy}{x^2y^2+(x-y)^2}\right) \right]
+=\lim_{y\to0}\left[ \lim_{x\to0} \left(\frac{y}{2y^2x+2(x-y)(1)}\right) \right]
+=-\frac{1}{2}
+\]</span> using L’Hopitals rule. Secondly, we find that the limit in <span class="math inline">\(\ref{dnemultex}\)</span> does not exist because along the paths <span class="math inline">\(y=m x\)</span> we have <span class="math display">\[
+\plim{(x,y)\to (0,0)}{y=mx}\frac{xy}{x^2y^2+(x-y)^2}
+=\lim _{x\to 0}\left(\frac{mx^2}{m^2 x^4+(x-mx)^2}\right)
+=\frac{m}{(1-m)^2}
+\]</span> which varies as the path <span class="math inline">\(y=m x\)</span> does.</p>
+</div>
+</section>
+<section id="continuity-of-a-function-of-two-variables" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="continuity-of-a-function-of-two-variables"><span class="header-section-number">2.8</span> Continuity of a Function of Two Variables</h2>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.5 </strong></span>Let <span class="math inline">\(f\)</span> be a function that is defined on any open disk around <span class="math inline">\((a,b)\)</span>. Then <span class="math inline">\(f\)</span> is <strong>continuous</strong> at the point <span class="math inline">\((a,b)\)</span> if <span class="math display">\[
+\lim _{(x,y)\to (a,b)}f(x,y)=f(a,b).
+\]</span></p>
+</div>
+<p>::: {#thm- } [Continuous Multivariable Functions] If <span class="math inline">\(k\)</span> is a real number and <span class="math inline">\(f\)</span> and both <span class="math inline">\(g\)</span> are continuous functions at <span class="math inline">\((a,b)\)</span>, then the following functions are also continuous at <span class="math inline">\((a,b)\)</span>, provided <span class="math inline">\((a,b)\)</span> is in the domain of the function.</p>
+<ul>
+<li><span class="math inline">\(kf\)</span></li>
+<li><span class="math inline">\(f+g\)</span></li>
+<li><span class="math inline">\(f-g\)</span></li>
+<li><span class="math inline">\(f/g\)</span></li>
+<li><span class="math inline">\(f\circ g\)</span></li>
+<li><span class="math inline">\(\sqrt[n]{f}\)</span> :::</li>
+</ul>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The basic properties of limits can be used to proof this theorem. The details are left for the reader.</p>
+</div>
+<p>Since any polynomial and rational function can be built out of the continuous functions <span class="math inline">\(f(x)=x\)</span>, <span class="math inline">\(g(x,y)=y\)</span>, and <span class="math inline">\(h(x,y)=k\)</span> we can use the limits in <span class="math inline">\(\ref{multlimprop}\)</span> to realize that every polynomial is continuous on the entire plane and that rational functions are continuous on their domains.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.17 </strong></span>What is the largest set on which the function <span class="math display">\[
+f(x,y)=\left\{
+\begin{array}{ll}
+\dfrac{3x^2y}{x^2+y^2} &amp; \text{if} \quad (x,y)\neq (0,0)  \\
+  0&amp; \text{if} \quad (x,y)=(0,0)
+\end{array}
+\right.
+\]</span> is continuous?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We know <span class="math inline">\(f\)</span> is continuous for <span class="math inline">\((x,y)\neq (0,0)\)</span> since <span class="math inline">\(f\)</span> is a rational function. Since <span class="math display">\[
+\lim _{(x,y)\to (0,0)}f(x,y)=0=f(0,0)
+\]</span> we have that <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.18 </strong></span>What is the largest set on which the function <span class="math display">\[
+h(x,y)=\ln \left(x^2+y^2-1\right)
+\]</span> is continuous?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(f(x,y)=x^2+y^2-1\)</span> and <span class="math inline">\(g(t)=\ln t\)</span>. Then <span class="math display">\[
+h(x,y)=\ln \left(x^2+y^2-1\right)=(g\circ f)(x,y).
+\]</span> Now <span class="math inline">\(f\)</span> is continuous everywhere since it is a polynomial and <span class="math inline">\(g\)</span> is continuous on its domain <span class="math inline">\(\{t \mid t\geq 0\}\)</span>. Thus, <span class="math inline">\(h\)</span> is continuous on its domain <span class="math display">\[
+D=\left\{(x,y) \mid x^2+y^2&gt;1 \right\}
+\]</span> which consists of all points outside the circle <span class="math inline">\(x^2+y^2=1.\)</span></p>
+</div>
+</section>
+<section id="exercises-1" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="exercises-1"><span class="header-section-number">2.9</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.6 </strong></span>Where is <span class="math inline">\(f(x,y)=\sqrt{\frac{x^2+y^2}{(x-y)^2+1}}\)</span> is continuous?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.7 </strong></span>Given <span class="math inline">\(\lim _{(x,y)\to (0,0)}\frac{x^4y^4}{\left(x^2y^2\right)^{3/2}}\)</span>, find the limit.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.8 </strong></span>Find <span class="math inline">\(\lim _{(x,y)\to (\pi /2,1)}\frac{1+\cos 2x}{y-e^y}.\)</span> Explain why.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.9 </strong></span>Evaluate the limit.</p>
+<ul>
+<li><span class="math inline">\(\lim_{(x,y)\to (-1,0)}\left(x y^2+x^3y+5\right)\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\left(5x^2-2 x y+y^2+3\right)\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,1)}e^{x^2+x}\ln \left(e y^2\right)\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (a,a)}\frac{x^4-y^4}{x^2-y^2}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (1,2)}\frac{\left(x^2-1\right)\left(y^2-4\right)}{(x-1)(y-2)}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\frac{x^2y^2}{x^4+y^4}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\frac{x^2y^2}{x^2+y^2}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\sin x+ \sin y\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\frac{x^2+y^2}{\sqrt{x^2+y^2+4}-2}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\frac{1-\cos \left(x^2+y^2\right)}{x^2+y^2}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\frac{\sin \left(x^3+y^3\right)}{\sqrt{x^6+y^6}}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (-1,0)}\left(x y^2+x^3y+5\right)\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\left(5x^2-2 x y+y^2+3\right)\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,1)}e^{x^2+x}\ln \left(e y^2\right)\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\frac{x^2y^2}{x^2+y^2}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\sin x+ \sin y\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\frac{x^2+y^2}{\sqrt{x^2+y^2+4}-2}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\frac{1-\cos \left(x^2+y^2\right)}{x^2+y^2}\)</span></li>
+<li><span class="math inline">\(\lim_{(x,y)\to (0,0)}\frac{\sin \left(x^3+y^3\right)}{\sqrt{x^6+y^6}}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.10 </strong></span>Is the function <span class="math inline">\(f\)</span> defined by <span class="math display">\[
+f(x,y)=
+\begin{cases}
+\dfrac{x y^2}{x^2+y^4} &amp; \quad (x,y)\neq (0,0)  \\
+0 &amp;  \quad (x,y)=(0,0)
+\end{cases}
+\]</span> continuous at <span class="math inline">\((0,0)?\)</span> Explain.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.11 </strong></span>Is the function <span class="math inline">\(f\)</span> defined by <span class="math display">\[
+g(x,y)=
+\begin{cases}
+  \dfrac{x y^3}{x^2+y^6} &amp; \quad (x,y)\neq (0,0)  \\
+0 &amp; \quad (x,y)=(0,0)
+\end{cases}
+\]</span> continuous at <span class="math inline">\((0,0)?\)</span> Explain.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.12 </strong></span>Given that the function <span class="math inline">\(f\)</span> defined by <span class="math display">\[
+f(x,y)=
+\begin{cases}
+\dfrac{3x^3-3y^3}{x^2-y^2} &amp; \quad x^2\neq y^2  \\
+B &amp; \text{otherwise}
+\end{cases}
+\]</span> is continuous at the point <span class="math inline">\((0,0)\)</span> what is the value of <span class="math inline">\(B?\)</span> Explain.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.13 </strong></span>Given that the function <span class="math inline">\(f\)</span> defined by <span class="math display">\[
+f(x,y)=
+\begin{cases}
+\dfrac{x^3+y^3}{x^2+y^2} &amp; \quad (x,y)\neq (0,0)  \\
+A &amp; \quad (x,y)=(0,0)
+\end{cases}
+\]</span> is continuous at the point <span class="math inline">\((0,0)\)</span> what is the value of <span class="math inline">\(A?\)</span> Explain.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.14 </strong></span>Let <span class="math inline">\(f(x,y)=\begin{cases} \frac{x^2 y^2}{x^4+y^4+1} &amp; \text{if } (x,y)\neq (0,0) \\ 0 &amp; \text{if } (x,y)= (0,0). \end{cases}\)</span> Explain why <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\((0,0)\)</span>.</p>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/multivariable-calculus\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./vector-functions.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vector Functions</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./differentiation.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Differentiation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

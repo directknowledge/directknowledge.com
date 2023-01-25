@@ -3,6 +3,14 @@ pagetitle: "Learning Linear Algebra - From Python to Proofs"
 ---
 # Preface {.unnumbered}
 
+- @axler2016linear
+- @bretscher2009linear
+- @smith2012linear
+- @lay2012linear
+- @hefferon2020linear
+- @weintraub2009jordan
+- @defranza2015introduction
+- @hoffman1971linear
 
 ::: {.content-visible when-format="pdf"}
 \pagenumbering{roman}

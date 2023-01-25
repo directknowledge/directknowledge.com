@@ -17,6 +17,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 <meta name="quarto:offset" content="./">
 <link href="./systems-of-linear-equations.html" rel="next">
@@ -46,37 +65,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-.book-title {
-    font-weight:800;
-    text-transform: uppercase;
-    font-size: 150%;
-    margin:-20px -20px 20px -20px;
-    line-height:120%;
-    text-decoration: none!important;
-    display:block;
-}
-.book-title, #quarto-search svg {
-    color: #0047AB!important;
-}
-@media screen and (max-width: 990px) {
-    .book-title {
-        padding-left: 20px!important;
-    }    
-}
-#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
-    font-weight: 500!important;
-    color:#0047AB;
- }
- #quarto-sidebar .text-start {
-    font-variant: small-caps;
-    font-size: 120%;
- }
- #quarto-sidebar .active, .active .chapter-number {
-    color:#000000!important;
-    font-weight: 700!important;
- }
-</style>
-<style>
 @media screen and (max-width: 440px) {
     .navbar-brand-logo::after {
         content: 'DK'!important;
@@ -99,6 +87,20 @@ ul.task-list li input[type="checkbox"] {
 }
 .navbar-title:hover, .navbar a:hover {
     color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
 }
 </style>
 <meta property="og:title" content="Learning Linear Algebra - From Python to Proofs">
@@ -134,11 +136,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
-</i> 
- <span class="dropdown-text">Exploring Calculus</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
@@ -147,6 +144,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
@@ -205,122 +207,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matrices-and-vectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matrices and Vectors</span></a>
+  <a href="./vector-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Vector Spaces</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./on-the-solutions-of-linear-systems.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On the Solutions of Linear Systems</span></a>
+  <a href="./linear-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Linear Transformations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vector-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Vector Spaces</span></a>
+  <a href="./inner-products-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Inner Products Spaces</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction-to-linear-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to Linear Transformations</span></a>
+  <a href="./determinants.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Determinants</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linear-transformations-in-geometry.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Linear Transformations in Geometry</span></a>
+  <a href="./eigenvalues-and-eigenvectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./invertible-linear-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Invertible Linear Transformations</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./subspaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Subspaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./kernel-and-image-of-a-linear-transformation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kernel and Image of a Linear Transformation</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./coordinates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Coordinates</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./introduction-to-linear-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Linear Spaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./linear-independence-and-bases.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Linear Independence and Bases</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./finite-dimensional-linear-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Finite-dimensional Linear Spaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./infinite-dimensional-linear-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Infinite-dimensional Linear Spaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./introduction-to-linear-maps.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Introduction to Linear Maps</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./coordinates-and-the-matrix-of-a-linear-map.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Coordinates and the Matrix of a Linear Map</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./orthonormal-bases-and-orthogonal-projections.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Orthonormal Bases and Orthogonal Projections</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./gram-schmidt-process-and-qr-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Gram-Schmidt Process and QR Factorization</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./orthogonal-transformations-and-orthogonal-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Orthogonal Transformations and Orthogonal Matrices</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./inner-products.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Inner Products</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./determinants-and-trace.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Determinants and Trace</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./eigenvalues-and-eigenvectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./diagonalization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Diagonalization</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./invariant-subspaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Invariant Subspaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./jordan-canonical-form.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Jordan Canonical Form</span></a>
+  <a href="./canonical-forms.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Canonical Forms</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -343,24 +255,21 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div style="display:none;">
-\(
-\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}
-\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}
-\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
-\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}
-\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}
-\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}
-\newcommand{\norm}[1]{\left|\left |#1\right|\right |}
-\newcommand{\ip}[1]{\left \langle #1\right \rangle}
-\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}
-\)
-</div>
 <header id="title-block-header">
 <h1 class="title d-none d-lg-block display-7">Learning Linear Algebra</h1>
 </header>
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
+<ul>
+<li><span class="citation" data-cites="axler2016linear">Axler (<a href="references.html#ref-axler2016linear" role="doc-biblioref">2016</a>)</span></li>
+<li><span class="citation" data-cites="bretscher2009linear">Bretscher (<a href="references.html#ref-bretscher2009linear" role="doc-biblioref">2009</a>)</span></li>
+<li><span class="citation" data-cites="smith2012linear">Smith (<a href="references.html#ref-smith2012linear" role="doc-biblioref">2012</a>)</span></li>
+<li><span class="citation" data-cites="lay2012linear">Lay (<a href="references.html#ref-lay2012linear" role="doc-biblioref">2012</a>)</span></li>
+<li><span class="citation" data-cites="hefferon2020linear">Hefferon (<a href="references.html#ref-hefferon2020linear" role="doc-biblioref">2020</a>)</span></li>
+<li><span class="citation" data-cites="weintraub2009jordan">Weintraub (<a href="references.html#ref-weintraub2009jordan" role="doc-biblioref">2009</a>)</span></li>
+<li><span class="citation" data-cites="defranza2015introduction">DeFranza and Gagliardi (<a href="references.html#ref-defranza2015introduction" role="doc-biblioref">2015</a>)</span></li>
+<li><span class="citation" data-cites="hoffman1971linear">Hoffman and Kunze (<a href="references.html#ref-hoffman1971linear" role="doc-biblioref">1971</a>)</span></li>
+</ul>
 <div>
 <section id="about-this-book" class="level2">
 <h2 class="anchored" data-anchor-id="about-this-book">About this book</h2>
@@ -377,6 +286,32 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="acknowledgements" class="level2 unlisted">
 <h2 class="unlisted anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-axler2016linear" class="csl-entry" role="doc-biblioentry">
+Axler, S. 2016. <em>Linear Algebra Done Right</em>. Third. Undergraduate Texts in Mathematics. Springer International Publishing. <a href="https://books.google.com/books?id=h3cnvgAACAAJ">https://books.google.com/books?id=h3cnvgAACAAJ</a>.
+</div>
+<div id="ref-bretscher2009linear" class="csl-entry" role="doc-biblioentry">
+Bretscher, O. 2009. <em>Linear Algebra with Applications</em>. Fourth. Pearson Prentice Hall. <a href="https://books.google.com/books?id=11iuPwAACAAJ">https://books.google.com/books?id=11iuPwAACAAJ</a>.
+</div>
+<div id="ref-defranza2015introduction" class="csl-entry" role="doc-biblioentry">
+DeFranza, J., and D. Gagliardi. 2015. <em>Introduction to Linear Algebra with Applications</em>. Waveland Press. <a href="https://books.google.com/books?id=LZi3BgAAQBAJ">https://books.google.com/books?id=LZi3BgAAQBAJ</a>.
+</div>
+<div id="ref-hefferon2020linear" class="csl-entry" role="doc-biblioentry">
+Hefferon, J. 2020. <em>Linear Algebra</em>. Fourth. Orthogonal Publishing L3C. <a href="https://books.google.com/books?id=fvCUzQEACAAJ">https://books.google.com/books?id=fvCUzQEACAAJ</a>.
+</div>
+<div id="ref-hoffman1971linear" class="csl-entry" role="doc-biblioentry">
+Hoffman, K., and R. A. Kunze. 1971. <em>Linear Algebra</em>. Second. Featured Titles for Linear Algebra (Advanced) Series. Prentice-Hall. <a href="https://books.google.com/books?id=Jk7MtwEACAAJ">https://books.google.com/books?id=Jk7MtwEACAAJ</a>.
+</div>
+<div id="ref-lay2012linear" class="csl-entry" role="doc-biblioentry">
+Lay, D. C. 2012. <em>Linear Algebra and Its Applications</em>. Fourth. Addison-Wesley. <a href="https://books.google.com/books?id=\_4bjtgAACAAJ">https://books.google.com/books?id=\_4bjtgAACAAJ</a>.
+</div>
+<div id="ref-smith2012linear" class="csl-entry" role="doc-biblioentry">
+Smith, L. 2012. <em>Linear Algebra</em>. Second. Undergraduate Texts in Mathematics. Springer New York. <a href="https://books.google.com/books?id=hmXlBwAAQBAJ">https://books.google.com/books?id=hmXlBwAAQBAJ</a>.
+</div>
+<div id="ref-weintraub2009jordan" class="csl-entry" role="doc-biblioentry">
+Weintraub, S. H. 2009. <em>Jordan Canonical Form: Theory and Practice</em>. Synthesis Lectures on Mathematics and Statistics. Morgan &amp; Claypool Publishers. <a href="https://books.google.com/books?id=qDPMLisVSCIC">https://books.google.com/books?id=qDPMLisVSCIC</a>.
+</div>
+</div>
 </section>
 </section>
 </main> <!-- /main -->

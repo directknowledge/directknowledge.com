@@ -1,7 +1,7 @@
 ---
 pagetitle: "Coordinates - Learning Linear Algebra"
 ---
-# Coordinates
+## Coordinates
 
 ::: {#def- } 
 Let $\mathcal{B}=(v_1,...,v_n)$ be a basis of a subspace $V$ of $\mathbb{R}^n$. 

@@ -1,7 +1,8 @@
 ---
 pagetitle: "Euclidean Algorithm - Learning Number Theory"
 ---
-# Euclidean Algorithm
+
+## Euclidean Algorithm
 
 
 Divide $a$ by $b,$ obtaining the quotient $q_1$ and the remainder $r_1$. Then, if $r_1$ is not zero, divide $b$ by $r_1$ obtaining the quotient $q_2$ and remainder $r_2$. Then if $r_2$ is not zero then we repeat this process and divide $r_1$ by $r_2$, obtaining the quotient $q_3$ and remainder $r_3$. This process, or *algorithm*, is repeated until we first obtain the remainder of zero. At the conclusion of the process we have the greatest common divisor which is the last nonzero remainder.

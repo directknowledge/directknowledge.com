@@ -19,8 +19,8 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <meta name="quarto:offset" content="./">
-<link href="./triple-integrals-in-cylindrical-and-spherical-coordinates.html" rel="next">
-<link href="./surface-area.html" rel="prev">
+<link href="./vector-fields.html" rel="next">
+<link href="./double-integrals.html" rel="prev">
 <link href="./../assets/favicon.ico" rel="icon">
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
@@ -47,37 +47,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-.book-title {
-    font-weight:800;
-    text-transform: uppercase;
-    font-size: 150%;
-    margin:-20px -20px 20px -20px;
-    line-height:120%;
-    text-decoration: none!important;
-    display:block;
-}
-.book-title, #quarto-search svg {
-    color: #008000!important;
-}
-@media screen and (max-width: 990px) {
-    .book-title {
-        padding-left: 20px!important;
-    }    
-}
-#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
-    font-weight: 500!important;
-    color:#008000;
- }
- #quarto-sidebar .text-start {
-    font-variant: small-caps;
-    font-size: 120%;
- }
- #quarto-sidebar .active, .active .chapter-number {
-    color:#000000!important;
-    font-weight: 700!important;
- }
-</style>
-<style>
 @media screen and (max-width: 440px) {
     .navbar-brand-logo::after {
         content: 'DK'!important;
@@ -100,6 +69,20 @@ ul.task-list li input[type="checkbox"] {
 }
 .navbar-title:hover, .navbar a:hover {
     color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
 }
 </style>
   
@@ -136,11 +119,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
-</i> 
- <span class="dropdown-text">Exploring Calculus</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
@@ -149,6 +127,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
@@ -177,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Triple Integrals</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Triple Integrals</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -202,127 +185,42 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vector-valued-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vector-valued Functions</span></a>
+  <a href="./vector-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vector Functions</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivatives-and-integrals-of-vector-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Derivatives and Integrals of Vector Functions</span></a>
+  <a href="./limits-and-continuity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./arc-length-and-curvature.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Arc Length and Curvature</span></a>
+  <a href="./differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Differentiation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./multivariable-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multivariable Functions</span></a>
+  <a href="./applications-of-derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Applications of Derivatives</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./multivariable-limits-and-continuity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Multivariable Limits and Continuity</span></a>
+  <a href="./double-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Double Integrals</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./partial-derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Partial Derivatives</span></a>
+  <a href="./triple-integrals.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Triple Integrals</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./differentials-and-differentiability.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Differentials and Differentiability</span></a>
+  <a href="./vector-fields.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vector Fields</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./multivariable-chain-rules.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multivariable Chain Rules</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./directional-derivatives-and-gradient-vectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Directional Derivatives and Gradient Vectors</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tangent-planes-and-normal-lines.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tangent Planes and Normal Lines</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./extreme-values-of-two-variable-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Extreme Values of Two Variable Functions</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./lagrange-multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lagrange Multipliers</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./double-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Double Integrals</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./iterated-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Iterated Integrals</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./double-integrals-in-polar-coordinates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Double Integrals In Polar Coordinates</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./applications-of-double-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Applications of Double Integrals</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./surface-area.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Surface Area</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./triple-integrals.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Triple Integrals</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./triple-integrals-in-cylindrical-and-spherical-coordinates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Triple Integrals in Cylindrical and Spherical Coordinates</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./change-of-variables-in-multiple-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Change of Variables In Multiple Integrals</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./vector-fields.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Vector Fields</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./divergence-and-curl.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Divergence and Curl</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./line-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Line Integrals</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./independence-of-path-and-conservative-vector-fields.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Independence of Path and Conservative Vector Fields</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./greens-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Green’s Theorem</span></a>
+  <a href="./line-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Line Integrals</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -339,35 +237,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Chapter Contents</h2>
    
   <ul>
-  <li><a href="#the-definition-of-a-triple-integral" id="toc-the-definition-of-a-triple-integral" class="nav-link active" data-scroll-target="#the-definition-of-a-triple-integral"><span class="toc-section-number">18.1</span>  The Definition of a Triple Integral</a></li>
-  <li><a href="#basic-properties-of-triple-integrals" id="toc-basic-properties-of-triple-integrals" class="nav-link" data-scroll-target="#basic-properties-of-triple-integrals"><span class="toc-section-number">18.2</span>  Basic Properties of Triple Integrals</a></li>
-  <li><a href="#fubinis-theorem-for-triple-integrals" id="toc-fubinis-theorem-for-triple-integrals" class="nav-link" data-scroll-target="#fubinis-theorem-for-triple-integrals"><span class="toc-section-number">18.3</span>  Fubini’s Theorem for Triple Integrals</a></li>
-  <li><a href="#volume-as-a-triple-integral" id="toc-volume-as-a-triple-integral" class="nav-link" data-scroll-target="#volume-as-a-triple-integral"><span class="toc-section-number">18.4</span>  Volume as a Triple Integral</a></li>
-  <li><a href="#applications-of-triple-integrals" id="toc-applications-of-triple-integrals" class="nav-link" data-scroll-target="#applications-of-triple-integrals"><span class="toc-section-number">18.5</span>  Applications of Triple Integrals</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">18.6</span>  Exercises</a></li>
+  <li><a href="#the-definition-of-a-triple-integral" id="toc-the-definition-of-a-triple-integral" class="nav-link active" data-scroll-target="#the-definition-of-a-triple-integral"><span class="toc-section-number">6.1</span>  The Definition of a Triple Integral</a></li>
+  <li><a href="#basic-properties-of-triple-integrals" id="toc-basic-properties-of-triple-integrals" class="nav-link" data-scroll-target="#basic-properties-of-triple-integrals"><span class="toc-section-number">6.2</span>  Basic Properties of Triple Integrals</a></li>
+  <li><a href="#fubinis-theorem-for-triple-integrals" id="toc-fubinis-theorem-for-triple-integrals" class="nav-link" data-scroll-target="#fubinis-theorem-for-triple-integrals"><span class="toc-section-number">6.3</span>  Fubini’s Theorem for Triple Integrals</a></li>
+  <li><a href="#volume-as-a-triple-integral" id="toc-volume-as-a-triple-integral" class="nav-link" data-scroll-target="#volume-as-a-triple-integral"><span class="toc-section-number">6.4</span>  Volume as a Triple Integral</a></li>
+  <li><a href="#applications-of-triple-integrals" id="toc-applications-of-triple-integrals" class="nav-link" data-scroll-target="#applications-of-triple-integrals"><span class="toc-section-number">6.5</span>  Applications of Triple Integrals</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">6.6</span>  Exercises</a></li>
+  <li><a href="#cylindrical-coordinates" id="toc-cylindrical-coordinates" class="nav-link" data-scroll-target="#cylindrical-coordinates"><span class="toc-section-number">6.7</span>  Cylindrical Coordinates</a></li>
+  <li><a href="#spherical-coordinates" id="toc-spherical-coordinates" class="nav-link" data-scroll-target="#spherical-coordinates"><span class="toc-section-number">6.8</span>  Spherical Coordinates</a></li>
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1"><span class="toc-section-number">6.9</span>  Exercises</a></li>
+  <li><a href="#change-of-variables-in-multiple-integrals" id="toc-change-of-variables-in-multiple-integrals" class="nav-link" data-scroll-target="#change-of-variables-in-multiple-integrals"><span class="toc-section-number">6.10</span>  Change of Variables In Multiple Integrals</a>
+  <ul class="collapse">
+  <li><a href="#jacobians" id="toc-jacobians" class="nav-link" data-scroll-target="#jacobians"><span class="toc-section-number">6.10.1</span>  Jacobians</a></li>
+  </ul></li>
+  <li><a href="#change-of-variable-in-a-double-integral" id="toc-change-of-variable-in-a-double-integral" class="nav-link" data-scroll-target="#change-of-variable-in-a-double-integral"><span class="toc-section-number">6.11</span>  Change of Variable in a Double Integral</a></li>
+  <li><a href="#change-of-variable-in-a-triple-integral" id="toc-change-of-variable-in-a-triple-integral" class="nav-link" data-scroll-target="#change-of-variable-in-a-triple-integral"><span class="toc-section-number">6.12</span>  Change of Variable in a Triple Integral</a></li>
+  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2"><span class="toc-section-number">6.13</span>  Exercises</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div style="display:none;">
-\(
-\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}
-\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}
-\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
-\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}
-\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}
-\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}
-\newcommand{\norm}[1]{\left|\left |#1\right|\right |}
-\newcommand{\ip}[1]{\left \langle #1\right \rangle}
-\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}
-\)
-</div>
 <header id="title-block-header">
-<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Triple Integrals</span></h1>
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Triple Integrals</span></h1>
 </header>
-<section id="the-definition-of-a-triple-integral" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="the-definition-of-a-triple-integral"><span class="header-section-number">18.1</span> The Definition of a Triple Integral</h2>
+<section id="the-definition-of-a-triple-integral" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="the-definition-of-a-triple-integral"><span class="header-section-number">6.1</span> The Definition of a Triple Integral</h2>
 <p>Suppose <span class="math inline">\(f(x,y,z)\)</span> is defined on a closed bounded solid region <span class="math inline">\(R,\)</span> which in turn is contained in a box <span class="math inline">\(B\)</span> in space. We partition <span class="math inline">\(B\)</span> into a finite number of smaller boxes, call this partition <span class="math inline">\(P,\)</span> we choose a representative point <span class="math inline">\(\left(x_k^*,y_k^*,z_k^*\right)\)</span> from each subdivision in the partition and we form the sum, <span class="math display">\[
 \sum _{k=1}^N f\left(x_k^*,y_k^*,z_k^*\right)\triangle  V_k
 \]</span> where <span class="math inline">\(\triangle V_k\)</span> is the volume of the <span class="math inline">\(k\)</span>-th representative subdivision. This sum is called the <strong>Riemann sum</strong> of <span class="math inline">\(f(x,y,z)\)</span> with respect to the partition <span class="math inline">\(P\)</span> and the cell representation <span class="math inline">\(\left(x_k^*,y_k^*,z_k^*\right).\)</span> To measure the size of the rectangles in the partition <span class="math inline">\(P,\)</span> we define the norm <span class="math inline">\(\|P\|\)</span> of the partition to be the length of the longest diagonal of any of the subdivisions in the partition. We refine the partition by subdividing the subdivisions in such a way that the norm decreases. When this process is applied to the Riemann sum and the norm decreases to zero, we write</p>
@@ -375,8 +270,8 @@ ul.task-list li input[type="checkbox"] {
 \iiint_R f(x,y,z) \, d V = \lim _{\|P\|\to 0}\sum _{k=1}^N f\left(x_k^*,y_k^*,z_k^*\right)\triangle  V_k.
 \]</span> If this limit exists, its value is called the <strong>triple integral</strong> of <span class="math inline">\(f\)</span> over the closed bounded region <span class="math inline">\(R.\)</span></p>
 </section>
-<section id="basic-properties-of-triple-integrals" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="basic-properties-of-triple-integrals"><span class="header-section-number">18.2</span> Basic Properties of Triple Integrals</h2>
+<section id="basic-properties-of-triple-integrals" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="basic-properties-of-triple-integrals"><span class="header-section-number">6.2</span> Basic Properties of Triple Integrals</h2>
 <p>::: {#thm- } [Properties of Triple Integrals] Assume that all the given integrals exist on a rectangular region <span class="math inline">\(R\)</span> for given functions <span class="math inline">\(f(x,y,z)\)</span> and <span class="math inline">\(g(x,y,z).\)</span></p>
 <ul>
 <li>For constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b,\)</span> <span class="math display">\[
@@ -389,12 +284,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>:::</p>
 </section>
-<section id="fubinis-theorem-for-triple-integrals" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="fubinis-theorem-for-triple-integrals"><span class="header-section-number">18.3</span> Fubini’s Theorem for Triple Integrals</h2>
+<section id="fubinis-theorem-for-triple-integrals" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="fubinis-theorem-for-triple-integrals"><span class="header-section-number">6.3</span> Fubini’s Theorem for Triple Integrals</h2>
 <p>::: {#thm- } <a href="#fubinis-theorem-for-triple-integrals">Fubini’s Theorem for Triple Integrals</a> If <span class="math inline">\(f(x,y,z)\)</span> is continuous over a rectangular box <span class="math inline">\(B =\{(x,y,z) \mid a\leq x\leq b, c\leq y\leq d, r\leq z\leq s \},\)</span> then the triple integral may be evaluated by the iterated integral <span class="math display">\[
 \iiint_R f(x,y) \, d V=\int _r^s\int _c^d\int _a^bf(x,y,z) \, dx dy dz\]</span> The iterated integral can be performed in any order, with appropriate adjustments to the limits of integration. :::</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18.1 </strong></span>Evaluate the triple integral over <span class="math inline">\(B\)</span> given <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.1 </strong></span>Evaluate the triple integral over <span class="math inline">\(B\)</span> given <span class="math display">\[
 \iiint_B x y z^2 \, d V
 \quad \text{and} \quad
 B=\{(x,y,z)\mid  0\leq x\leq 1,-1\leq y\leq 2,0\leq z\leq 3\}.
@@ -406,7 +301,7 @@ B=\{(x,y,z)\mid  0\leq x\leq 1,-1\leq y\leq 2,0\leq z\leq 3\}.
 \]</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18.2 </strong></span>Evaluate the triple integral over <span class="math inline">\(B\)</span> given <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.2 </strong></span>Evaluate the triple integral over <span class="math inline">\(B\)</span> given <span class="math display">\[
 \iiint_B z^2 y e^x \, d V
 \quad \text{and} \quad
 B=\{(x,y,z) \mid  0\leq x\leq 1,1\leq y\leq 2,-1\leq z\leq 1\}.
@@ -422,7 +317,7 @@ B=\{(x,y,z) \mid  0\leq x\leq 1,1\leq y\leq 2,-1\leq z\leq 1\}.
 \end{align*}\]</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18.3 </strong></span>Evaluate the iterated integral <span class="math inline">\(\int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \,d\theta\)</span></p>
+<p><span class="theorem-title"><strong>Example 6.3 </strong></span>Evaluate the iterated integral <span class="math inline">\(\int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \,d\theta\)</span></p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>We find<br>
@@ -439,7 +334,7 @@ B=\{(x,y,z) \mid  0\leq x\leq 1,1\leq y\leq 2,-1\leq z\leq 1\}.
 \iiint_R f(x,y) \, d V=\iint_D \left(\int_{u(x,y)}^{v(x,y)} f(x,y,z) \, dz\right)dA.
 \]</span> :::</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18.4 </strong></span>Evaluate <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.4 </strong></span>Evaluate <span class="math display">\[
 \iiint_D\frac{z}{\sqrt{x^2+y^2}} \, dx \, dy \, dz
 \]</span> and <span class="math inline">\(D\)</span> is the solid bounded above by the plane <span class="math inline">\(z=2\)</span> and below by the surface <span class="math inline">\(x^2+y^2-2z=0.\)</span></p>
 </div>
@@ -455,7 +350,7 @@ B=\{(x,y,z) \mid  0\leq x\leq 1,1\leq y\leq 2,-1\leq z\leq 1\}.
 \end{align*}\]</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18.5 </strong></span>Change the order of integration to show that<br>
+<p><span class="theorem-title"><strong>Example 6.5 </strong></span>Change the order of integration to show that<br>
 <span class="math display">\[
 \int _0^x\int _0^vf(u) \, du \, dv=\int _0^x(x-u)f(u) \, du
 \]</span> Also, show that <span class="math display">\[
@@ -469,10 +364,10 @@ B=\{(x,y,z) \mid  0\leq x\leq 1,1\leq y\leq 2,-1\leq z\leq 1\}.
 =\int _0^x(x-u)f(u) \, du\end{align*}\]</span> as desired.</p>
 </div>
 </section>
-<section id="volume-as-a-triple-integral" class="level2" data-number="18.4">
-<h2 data-number="18.4" class="anchored" data-anchor-id="volume-as-a-triple-integral"><span class="header-section-number">18.4</span> Volume as a Triple Integral</h2>
+<section id="volume-as-a-triple-integral" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="volume-as-a-triple-integral"><span class="header-section-number">6.4</span> Volume as a Triple Integral</h2>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18.6 </strong></span>Find the volume of the bounded solid bounded by the sphere <span class="math inline">\(x^2+y^2+z^2=2\)</span> and the paraboloid <span class="math inline">\(x^2+y^2=z\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.6 </strong></span>Find the volume of the bounded solid bounded by the sphere <span class="math inline">\(x^2+y^2+z^2=2\)</span> and the paraboloid <span class="math inline">\(x^2+y^2=z\)</span>.</p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>By solving for the intersection, <span class="math inline">\(x^2+y^2+z^2=2\)</span> with <span class="math inline">\(z=x^2+y^2\)</span> and so <span class="math inline">\(z^2+z-2=0\)</span> leads to <span class="math inline">\(z=1.\)</span> Therefore region of integration is <span class="math inline">\(x^2+y^2=1\)</span> and so we have a <span class="math inline">\(z\)</span>-simple region with<br>
@@ -489,7 +384,7 @@ V&amp; =4\int _0^1\int _0^{\sqrt{1-x^2}}\int _{x^2+y^2}^{\sqrt{2-x^2-y^2}} \, dz
 \end{align*}\]</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18.7 </strong></span>Find the volume of the bounded solid bounded by the cylinders <span class="math inline">\(y=z^2\)</span> and <span class="math inline">\(y=2-z^2\)</span> and the planes <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=-2.\)</span></p>
+<p><span class="theorem-title"><strong>Example 6.7 </strong></span>Find the volume of the bounded solid bounded by the cylinders <span class="math inline">\(y=z^2\)</span> and <span class="math inline">\(y=2-z^2\)</span> and the planes <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=-2.\)</span></p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>We represent this solid as a <span class="math inline">\(x\)</span>-simple region. The curves intersect where <span class="math inline">\(y=z^2\)</span> and <span class="math inline">\(y=2-z^2\)</span> and so <span class="math inline">\(z=\pm 1.\)</span> Therefore the volume is given by,<br>
@@ -502,7 +397,7 @@ V&amp; =2\int _0^1\int _{z^2}^{2-z^2}\int _{-2}^1 \, dx \, dy \, dz
 \end{align*}\]</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18.8 </strong></span>Find the volume of the bounded solid the tetrahedron <span class="math inline">\(T\)</span> bounded by the planes <span class="math inline">\(x+2y+z=2,\)</span> <span class="math inline">\(x=2y,\)</span> <span class="math inline">\(x=0,\)</span> and <span class="math inline">\(z=0.\)</span></p>
+<p><span class="theorem-title"><strong>Example 6.8 </strong></span>Find the volume of the bounded solid the tetrahedron <span class="math inline">\(T\)</span> bounded by the planes <span class="math inline">\(x+2y+z=2,\)</span> <span class="math inline">\(x=2y,\)</span> <span class="math inline">\(x=0,\)</span> and <span class="math inline">\(z=0.\)</span></p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>The vertices of the tetrahedron are <span class="math inline">\((0,0,2),\)</span> <span class="math inline">\(\left(1,\frac{1}{2},0\right),\)</span> and <span class="math inline">\((0,1,0).\)</span> So the region of integration in the <span class="math inline">\(x y\)</span>-plane is bounded by the lines <span class="math inline">\(x=0,\)</span> <span class="math inline">\(y=\frac{1}{2}x,\)</span> and <span class="math inline">\(y=1-\frac{1}{2}x\)</span> and is described by the set <span class="math display">\[
@@ -517,10 +412,10 @@ V&amp; =\iiint_R \, d V
 \end{align*}\]</span></p>
 </div>
 </section>
-<section id="applications-of-triple-integrals" class="level2" data-number="18.5">
-<h2 data-number="18.5" class="anchored" data-anchor-id="applications-of-triple-integrals"><span class="header-section-number">18.5</span> Applications of Triple Integrals</h2>
+<section id="applications-of-triple-integrals" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="applications-of-triple-integrals"><span class="header-section-number">6.5</span> Applications of Triple Integrals</h2>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18.1 </strong></span>The <strong>average value</strong> of a function <span class="math inline">\(f\)</span> of three variables over a solid region <span class="math inline">\(R\)</span> is defined to be <span class="math display">\[f_{\text{av}}=\frac{1}{V(R)}\underset{R}{\int \int \int} f(x,y,z)\, dV\]</span> where <span class="math inline">\(V(R)\)</span> is the volume of the solid <span class="math inline">\(R\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 6.1 </strong></span>The <strong>average value</strong> of a function <span class="math inline">\(f\)</span> of three variables over a solid region <span class="math inline">\(R\)</span> is defined to be <span class="math display">\[f_{\text{av}}=\frac{1}{V(R)}\underset{R}{\int \int \int} f(x,y,z)\, dV\]</span> where <span class="math inline">\(V(R)\)</span> is the volume of the solid <span class="math inline">\(R\)</span>.</p>
 </div>
 <p>If a body in space occupies a region <span class="math inline">\(R\)</span> then the mass of the body is the triple integral of the mass density. The first moment of the body about a plane is the triple integral of the product of the signed distance to the plane and the mass density function where the distance is from the differential element of volume <span class="math inline">\(dx\, dydz.\)</span> The second moment (called <strong>moment of inertia</strong> ) of a body about an axis is the triple integral of the product square of the distance from the axis and the mass density function where the distance is from the differential element of volume <span class="math inline">\(dx\, dydz.\)</span> For example, a moment of inertia is used in computing kinetic energy of rotation <span class="math inline">\((1/2)I \omega ^2\)</span> where <span class="math inline">\(\omega\)</span> is the angular speed of rotation.</p>
 <p>Suppose <span class="math inline">\(R\)</span> is a region in space and that <span class="math inline">\(\delta\)</span> is a continuous density function of <span class="math inline">\(R\)</span>. Then for a body occupying a region <span class="math inline">\(R\)</span> in space the center of mass is located at the point <span class="math inline">\((\overline{x},\overline{y}, \overline{z})\)</span> where <span class="math display">\[
@@ -543,7 +438,7 @@ m=\underset{R}{\int \int \int} \delta(x,y,z) dV
 <span class="math display">\[ I_L=\underset{R}{\int \int \int } r^2 \delta (x,y,z)dV\]</span> where <span class="math inline">\(r(x,y,z)\)</span> is the distance from the point <span class="math inline">\((x,y,z)\)</span> to the line <span class="math inline">\(L.\)</span> Intuitively speaking, the moment of inertia <span class="math inline">\(I\)</span> is a measure of the resistance of a body to rotational motion.</p>
 <p>% Moreover, the <strong>radius of gyration</strong> about a line <span class="math inline">\(L\)</span> is given as <span class="math inline">\(R_L=\sqrt{\left.I_L\right/M}\)</span> where <span class="math inline">\(M\)</span> is the total mass of the object.</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18.9 </strong></span>Find the moment of inertia about the <span class="math inline">\(z\)</span>-axis of the solid tetrahedron <span class="math inline">\(S\)</span> with vertices <span class="math inline">\((0,0,0)\)</span>, <span class="math inline">\((0,1,0)\)</span>, <span class="math inline">\((1,0,0)\)</span>, <span class="math inline">\((0,0,1)\)</span>, and density <span class="math inline">\(\delta(x,y,z)=x\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.9 </strong></span>Find the moment of inertia about the <span class="math inline">\(z\)</span>-axis of the solid tetrahedron <span class="math inline">\(S\)</span> with vertices <span class="math inline">\((0,0,0)\)</span>, <span class="math inline">\((0,1,0)\)</span>, <span class="math inline">\((1,0,0)\)</span>, <span class="math inline">\((0,0,1)\)</span>, and density <span class="math inline">\(\delta(x,y,z)=x\)</span>.</p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>The solid <span class="math inline">\(S\)</span> can be described as the set of all <span class="math inline">\((x,y,z)\)</span> such that <span class="math inline">\(0\leq x\leq 1\)</span>, <span class="math inline">\(0\leq y \leq 1-x\)</span>, and <span class="math inline">\(0\leq z\leq 1-x-y\)</span>. Thus, <span class="math display">\[\begin{align*}
@@ -558,10 +453,10 @@ I_z&amp;=\underset{S}{\int \int \int}(x^2+y^2)\delta(x,y,z) \, dV
 \end{align*}\]</span></p>
 </div>
 </section>
-<section id="exercises" class="level2" data-number="18.6">
-<h2 data-number="18.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">18.6</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">6.6</span> Exercises</h2>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.1 </strong></span>Find the following iterated integrals.</p>
+<p><span class="theorem-title"><strong>Exercise 6.1 </strong></span>Find the following iterated integrals.</p>
 <ul>
 <li><span class="math inline">\(\int _1^4\int _{-2}^3\int _2^5 \, dx \, dy \, dz.\)</span></li>
 <li><span class="math inline">\(\int _{-1}^3\int _0^2\int _{-2}^2 \, dy \, dz \, dx.\)</span></li>
@@ -575,7 +470,7 @@ I_z&amp;=\underset{S}{\int \int \int}(x^2+y^2)\delta(x,y,z) \, dV
 </ul>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.2 </strong></span>Evaluate the triple integral over the given region</p>
+<p><span class="theorem-title"><strong>Exercise 6.2 </strong></span>Evaluate the triple integral over the given region</p>
 <ul>
 <li><span class="math inline">\(\underset{D}{\int \int \int }\left(x^2y+y^2z\right)\,dV\)</span> where <span class="math inline">\(D\)</span> is the boxed region defined by <span class="math inline">\(1\leq x\leq 3\)</span>, <span class="math inline">\(-1\leq y\leq 1\)</span>, and <span class="math inline">\(2\leq z\leq 4.\)</span></li>
 <li><span class="math inline">\(\underset{D}{\int \int \int }(x y+2 y z)\, dV\)</span> where <span class="math inline">\(D\)</span> is the boxed region defined by <span class="math inline">\(2\leq x\leq 4\)</span>, <span class="math inline">\(1\leq y\leq 3\)</span>, and <span class="math inline">\(-2\leq z\leq 4.\)</span></li>
@@ -584,53 +479,740 @@ I_z&amp;=\underset{S}{\int \int \int}(x^2+y^2)\delta(x,y,z) \, dV
 </ul>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.3 </strong></span>Find the volume of the region between the two elliptic paraboloids <span class="math inline">\(z=\left.x^2\right/(9+y^2-4)\)</span> and <span class="math inline">\(z=\left.-x^2\right/(9-y^2+4).\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.3 </strong></span>Find the volume of the region between the two elliptic paraboloids <span class="math inline">\(z=\left.x^2\right/(9+y^2-4)\)</span> and <span class="math inline">\(z=\left.-x^2\right/(9-y^2+4).\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.4 </strong></span>Change the order of integration to show that <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercise 6.4 </strong></span>Change the order of integration to show that <span class="math display">\[
 \int _0^x\int _0^vf(u) \, du \, dv=\int _0^x(x-u)f(u) \, du.
 \]</span> Also, show that <span class="math display">\[
 \int _0^x\int _0^v\int _0^uf(w) dw du dv =\frac{1}{2}\int _0^x(x-w)2f(w) \, dw.
 \]</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.5 </strong></span>Higher-dimensional multiple integrals can be defined and evaluated in essentially the same way as double integrals and triple integrals. Evaluate the multiple integrals <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercise 6.5 </strong></span>Higher-dimensional multiple integrals can be defined and evaluated in essentially the same way as double integrals and triple integrals. Evaluate the multiple integrals <span class="math display">\[
 \underset{H}{\int \int \int \int }x y w^2 \, dx \, dy \, dz \, dw
 \]</span> where <span class="math inline">\(H\)</span> is the four-dimensional (hyperbox) defined by <span class="math inline">\(0\leq x\leq 1,\)</span> <span class="math inline">\(0\leq y\leq 2,\)</span> <span class="math inline">\(-1\leq z\leq 1,\)</span> and <span class="math inline">\(1\leq w\leq 2.\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.6 </strong></span>Find the volume <span class="math inline">\(V\)</span> of the solids bounded by the graphs of the equations by using triple integration. The solid bounded by the sphere <span class="math inline">\(x^2+y^2+z^2=2\)</span> and the paraboloid <span class="math inline">\(x^2+y^2=z.\)</span> The solid of the region bounded by the cylinders <span class="math inline">\(y=z^2\)</span> and <span class="math inline">\(y=2-z^2\)</span> and the planes <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=-2.\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.6 </strong></span>Find the volume <span class="math inline">\(V\)</span> of the solids bounded by the graphs of the equations by using triple integration. The solid bounded by the sphere <span class="math inline">\(x^2+y^2+z^2=2\)</span> and the paraboloid <span class="math inline">\(x^2+y^2=z.\)</span> The solid of the region bounded by the cylinders <span class="math inline">\(y=z^2\)</span> and <span class="math inline">\(y=2-z^2\)</span> and the planes <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=-2.\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.7 </strong></span>Evaluate the multiple integral <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercise 6.7 </strong></span>Evaluate the multiple integral <span class="math display">\[
 \underset{H}{\int \int \int \int }e^{x-2y+z+w} \, dw \, dz \, dy \, dx
 \]</span> where <span class="math inline">\(H\)</span> is the four-dimensional region bounded by the hyperplane <span class="math inline">\(x+y+z+w=4\)</span> and the coordinate spaces <span class="math inline">\(x=0,\)</span> <span class="math inline">\(y=0,\)</span> <span class="math inline">\(z=0,\)</span> and <span class="math inline">\(w=0\)</span> in the first hyperoctant (where <span class="math inline">\(x\geq 0,\)</span> <span class="math inline">\(y\geq 0,\)</span> <span class="math inline">\(z\geq 0,\)</span> <span class="math inline">\(w\geq 0\)</span>).</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.8 </strong></span>A solid of constant density is bounded below by the plane <span class="math inline">\(z=0,\)</span> on the sides by the elliptical cylinder <span class="math inline">\(x^2+4y^2=4,\)</span> and above by the plane <span class="math inline">\(z=2-x.\)</span> Find <span class="math inline">\(\bar{x} ,\)</span> <span class="math inline">\(\bar{y} ,\)</span> and then evaluate the integral <span class="math display">\[
+<p><span class="theorem-title"><strong>Exercise 6.8 </strong></span>A solid of constant density is bounded below by the plane <span class="math inline">\(z=0,\)</span> on the sides by the elliptical cylinder <span class="math inline">\(x^2+4y^2=4,\)</span> and above by the plane <span class="math inline">\(z=2-x.\)</span> Find <span class="math inline">\(\bar{x} ,\)</span> <span class="math inline">\(\bar{y} ,\)</span> and then evaluate the integral <span class="math display">\[
 M_{x y}=\int _{-2}^2\int _{-(1/2)\sqrt{4-x^2}}^{1/2\sqrt{4-x^2}}\int_0^{2-x}z \, dz \, dy \, dx
 \]</span> to determine <span class="math inline">\(\bar{z}.\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.9 </strong></span>Find the centroid and the moments of inertia <span class="math inline">\(I_x ,\)</span> <span class="math inline">\(I_y ,\)</span> and <span class="math inline">\(I_z\)</span> of the tetrahedron whose vertices are <span class="math inline">\((0,0,0),\)</span> <span class="math inline">\((1,0,0),\)</span> and <span class="math inline">\((0,0,1).\)</span> Find the radius of gyration of the tetrahedron about the <span class="math inline">\(x\)</span>-axis. Compare it with the distance from the centroid to the <span class="math inline">\(x\)</span>-axis.</p>
+<p><span class="theorem-title"><strong>Exercise 6.9 </strong></span>Find the centroid and the moments of inertia <span class="math inline">\(I_x ,\)</span> <span class="math inline">\(I_y ,\)</span> and <span class="math inline">\(I_z\)</span> of the tetrahedron whose vertices are <span class="math inline">\((0,0,0),\)</span> <span class="math inline">\((1,0,0),\)</span> and <span class="math inline">\((0,0,1).\)</span> Find the radius of gyration of the tetrahedron about the <span class="math inline">\(x\)</span>-axis. Compare it with the distance from the centroid to the <span class="math inline">\(x\)</span>-axis.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.10 </strong></span>A solid cube, 2 units on a side, is bounded by the planes <span class="math inline">\(x=\pm 1,\)</span> <span class="math inline">\(z=\pm 1,\)</span> <span class="math inline">\(y=3\)</span> and <span class="math inline">\(y=5.\)</span> Find the center of mass, moments of inertia, and radii of gyration about the coordinate axes.</p>
+<p><span class="theorem-title"><strong>Exercise 6.10 </strong></span>A solid cube, 2 units on a side, is bounded by the planes <span class="math inline">\(x=\pm 1,\)</span> <span class="math inline">\(z=\pm 1,\)</span> <span class="math inline">\(y=3\)</span> and <span class="math inline">\(y=5.\)</span> Find the center of mass, moments of inertia, and radii of gyration about the coordinate axes.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.11 </strong></span>A solid in the first octant is bounded by the coordinate lanes and the plane <span class="math inline">\(x+y+z=2.\)</span> The density of the solid is <span class="math inline">\(\delta (x,y,z)=2x.\)</span> Find the mass and the center of mass.</p>
+<p><span class="theorem-title"><strong>Exercise 6.11 </strong></span>A solid in the first octant is bounded by the coordinate lanes and the plane <span class="math inline">\(x+y+z=2.\)</span> The density of the solid is <span class="math inline">\(\delta (x,y,z)=2x.\)</span> Find the mass and the center of mass.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.12 </strong></span>Find the mass of the solid region bounded by the parabolic surface <span class="math inline">\(z=16-2x^2-2y^2\)</span> and <span class="math inline">\(z=2x^2+2y^2\)</span> if the density of the solid is <span class="math inline">\(\delta (x,y)=\sqrt{x^2+y^2}.\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.12 </strong></span>Find the mass of the solid region bounded by the parabolic surface <span class="math inline">\(z=16-2x^2-2y^2\)</span> and <span class="math inline">\(z=2x^2+2y^2\)</span> if the density of the solid is <span class="math inline">\(\delta (x,y)=\sqrt{x^2+y^2}.\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.13 </strong></span>The container is in the shape of the region bounded by <span class="math inline">\(y=0,\)</span> <span class="math inline">\(z=0,\)</span> <span class="math inline">\(z=4-x^2,\)</span> and <span class="math inline">\(x=y^2.\)</span> The density of the liquid filling the region is <span class="math inline">\(\delta (x,y)=k x y\)</span> where <span class="math inline">\(k\)</span> is a constant.</p>
+<p><span class="theorem-title"><strong>Exercise 6.13 </strong></span>The container is in the shape of the region bounded by <span class="math inline">\(y=0,\)</span> <span class="math inline">\(z=0,\)</span> <span class="math inline">\(z=4-x^2,\)</span> and <span class="math inline">\(x=y^2.\)</span> The density of the liquid filling the region is <span class="math inline">\(\delta (x,y)=k x y\)</span> where <span class="math inline">\(k\)</span> is a constant.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.14 </strong></span>Find the centroid for the part of the spherical solid with density <span class="math inline">\(\delta =2\)</span> described by <span class="math inline">\(x^2+y^2+z^2\leq 9,\)</span> <span class="math inline">\(x\geq 0,\)</span> <span class="math inline">\(y\geq 0,\)</span> and <span class="math inline">\(z\geq 0.\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.14 </strong></span>Find the centroid for the part of the spherical solid with density <span class="math inline">\(\delta =2\)</span> described by <span class="math inline">\(x^2+y^2+z^2\leq 9,\)</span> <span class="math inline">\(x\geq 0,\)</span> <span class="math inline">\(y\geq 0,\)</span> and <span class="math inline">\(z\geq 0.\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18.15 </strong></span>Find the centroid for the solid bounded by the surface <span class="math inline">\(z=\sin x,\)</span> <span class="math inline">\(x=0,\)</span> <span class="math inline">\(x=\pi ,\)</span> <span class="math inline">\(y=0,\)</span> <span class="math inline">\(z=0,\)</span> and <span class="math inline">\(y+z=1,\)</span> where the density is <span class="math inline">\(\delta =1.\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.15 </strong></span>Find the centroid for the solid bounded by the surface <span class="math inline">\(z=\sin x,\)</span> <span class="math inline">\(x=0,\)</span> <span class="math inline">\(x=\pi ,\)</span> <span class="math inline">\(y=0,\)</span> <span class="math inline">\(z=0,\)</span> and <span class="math inline">\(y+z=1,\)</span> where the density is <span class="math inline">\(\delta =1.\)</span></p>
+</div>
+</section>
+<section id="cylindrical-coordinates" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="cylindrical-coordinates"><span class="header-section-number">6.7</span> Cylindrical Coordinates</h2>
+<p>Each point in three dimensions is uniquely represented in cylindrical coordinates by <span class="math inline">\((r,\theta ,z)\)</span> using <span class="math inline">\(0\leq r&lt;\infty ,\)</span> <span class="math inline">\(0\leq \theta &lt; 2\pi ,\)</span> and <span class="math inline">\(-\infty &lt;z&lt;+\infty .\)</span> The conversion formulas involving rectangular coordinates <span class="math inline">\((x,y,z)\)</span> and cylindrical coordinates <span class="math inline">\((r,\theta ,z)\)</span> are <span class="math display">\[\begin{align*}
+r=\sqrt{x^2+y^2} &amp; \qquad &amp;
+\tan  \theta =\frac{y}{x} &amp;  \qquad  &amp;
+z=z \\
+x=r \cos  \theta &amp;  &amp;
+y=r \sin  \theta  &amp;  &amp;
+z=z.\end{align*}\]</span> A triple integral %<span class="math display">\[\iiint_Rf(x,y,z) \, dV\]</span> over a region <span class="math inline">\(R\)</span> can sometimes be evaluated by transforming to cylindrical coordinates if the region of integration <span class="math inline">\(R\)</span> is <span class="math inline">\(z\)</span>-simple and the projection of <span class="math inline">\(R\)</span> onto the <span class="math inline">\(x y\)</span>-plane is a region <span class="math inline">\(D\)</span> that can be described naturally in terms of polar coordinates.</p>
+<p>::: {#thm- } [Triple Integrals in Cylindrical Coordinates] Assume <span class="math inline">\(R\)</span> is a solid region with continuous upper surface <span class="math inline">\(z=v(r,\theta )\)</span> and continuous lower surface <span class="math inline">\(z=u(r,\theta )\)</span> and assume is <span class="math inline">\(D\)</span> be the projection of the solid onto the <span class="math inline">\(x y\)</span>-plane expressed in polar coordinates: <span class="math display">\[
+D=\{(r,\theta):\alpha \leq r \leq \beta, r_1(\theta) \leq r(\theta) \leq r_2(\theta) \}
+\]</span> where <span class="math inline">\(r_1\)</span> and <span class="math inline">\(r_2\)</span> are continuous functions of <span class="math inline">\(\theta\)</span>. If <span class="math inline">\(f(x,y,z)\)</span> is continuous on <span class="math inline">\(R,\)</span> then the triple integral of <span class="math inline">\(f\)</span> over <span class="math inline">\(R\)</span> can be evaluated as follows <span class="math display">\[
+\iiint_Rf(x,y,z)dV=\int _{\alpha }^{\beta }\int _{r_1(\theta )}^{r_2(\theta )}\int _{u(r,\theta )}^{v(r,\theta )}f(r \cos  \theta ,r \sin  \theta ,z) r dz dr \, d\theta .
+\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.10 </strong></span>Find the volume of the bounded solid bounded by the paraboloid <span class="math inline">\(4x^2+4y^2+z=1\)</span> and the <span class="math inline">\(x y\)</span>-plane.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The projection of the solid region onto the <span class="math inline">\(x y\)</span>-plane is the region enclosed by <span class="math inline">\(x^2+y^2=\frac{1}{4}\)</span>. In cylindrical coordinates the volume is determined as, <span class="math display">\[\begin{align*}
+4\int _0^{\pi /2}\int _0^{1/2}\int _0^{1-4r^2}rdzdrd\theta
+&amp; =4\int _0^{\pi /2}\int _0^{1/2}\left(r-4 r^3\right)drd\theta
+\\
+&amp; =4\int_0^{\pi /2} \frac{1}{16} \, d\theta
+=\frac{\pi }{8}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.11 </strong></span>Evaluate the iterated integral <span class="math display">\[
+I=\int _{-1}^1\int _{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}\int _{x^2+y^2}^{\sqrt{2-x^2-y^2}}z \, dz \, dy \, dx.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>In Cartesian coordinates the region of integration <span class="math inline">\(D\)</span> is given as <span class="math display">\[
+\left\{(x,y,z) \mid x^2+y^2\leq z\leq  \sqrt{2-x^2-y^2},  -\sqrt{1-x^2}\leq y\leq  \sqrt{1-x^2}, -1\leq  x\leq 1\right\}
+\]</span> We use cylindrical coordinates to evaluate the triple iterated integral <span class="math inline">\(I\)</span> as follows <span class="math display">\[\begin{align*}
+I&amp; =\int _0^{2\pi }\int _0^1\int _{r^2}^{\sqrt{2-r^2}}z r dzdrd\theta
+\\
+&amp; =\int _0^{2\pi }\int _0^1r \left(-\frac{r^4}{2}-\frac{r^2}{2}+1\right)drd\theta
+=\int_0^{2\pi } \frac{7}{24} \, d\theta
+=\frac{7 \pi }{12}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.12 </strong></span>Evaluate the triple integral over the given region <span class="math display">\[
+I=\iiint_R\left(x^4+2x^2y^2+y^4\right) \, dx \, dy \, dz
+\]</span> where <span class="math inline">\(R\)</span> is the cylindrical solid <span class="math inline">\(x^2+y^2\leq a^2\)</span> with <span class="math inline">\(0\leq z\leq \frac{1}{\pi }\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We consider the region of integration as being <span class="math inline">\(z\)</span>-simple by projecting onto the <span class="math inline">\(x y\)</span>-plane; and in the <span class="math inline">\(x y\)</span>-plane the region is bounded by <span class="math inline">\(x^2+y^2=a^2\)</span>. Notice that<br>
+<span class="math display">\[
+x^4+2x^2y^2+y^4=\left(x^2+y^2\right)^2.
+\]</span> In cylindrical coordinates the triple integral is evaluated as, <span class="math display">\[\begin{align*}
+I
+&amp; =4\int _0^{\pi /2}\int _0^a\int _0^{1/\pi }r^4r dzdrd\theta
+\\
+&amp; =4\int _0^{\pi /2}\int _0^a\frac{r^5}{\pi }drd\theta
+=4\int_0^{\pi /2} \frac{a^6}{6 \pi } \, d\theta
+=\frac{a^6}{3}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.13 </strong></span>Evaluate the iterated integral <span class="math display">\[
+\int _0^{\pi }\int _0^2\int _0^{\sqrt{4-r^2}}r \sin  \theta \,dz \, dr \,d\theta .
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We find<br>
+<span class="math display">\[\begin{align*}
+\int _0^{\pi }\int _0^2\int _0^{\sqrt{4-r^2}}r \sin \theta  \, dz \, dr \, d\theta
+&amp; =\int _0^{\pi }\int _0^2r \sqrt{4-r^2} \sin \theta \, dr \, d\theta
+\\
+&amp; =\int_0^{\pi } \frac{8 \sin \theta }{3} \, d\theta
+=\frac{16}{3}
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.14 </strong></span>Evaluate the iterated integral <span class="math display">\[
+\int _0^{\pi /4}\int _0^1\int _0^{\sqrt{r}}r^2 \sin  \theta \, dz \, dr \, d\theta.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We find<br>
+<span class="math display">\[\begin{align*}
+\int _0^{\pi /4}\int _0^1\int _0^{\sqrt{r}}r^2 \sin \theta  \, dz \, dr \, d\theta
+&amp; =\int _0^{\pi /4}\int _0^1r^{5/2} \sin \theta \, dr \, d\theta
+\\
+&amp; =\int_0^{\pi /4} \frac{2 \sin \theta }{7} \, d\theta
+=\frac{2}{7} \left(1-\frac{1}{\sqrt{2}}\right)
+=\frac{2-\sqrt{2}}{7}
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="spherical-coordinates" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="spherical-coordinates"><span class="header-section-number">6.8</span> Spherical Coordinates</h2>
+<p>Each point in three dimensions is uniquely represented in spherical coordinates by <span class="math inline">\((\rho ,\theta ,\phi )\)</span> using <span class="math inline">\(0\leq \rho &lt;\infty ,\)</span> <span class="math inline">\(0\leq \theta &lt; 2\pi ,\)</span> and <span class="math inline">\(0\leq \phi \leq \pi .\)</span> The conversion formulas from rectangular coordinates <span class="math inline">\((x,y,z)\)</span> to spherical coordinates <span class="math inline">\((\rho ,\theta ,\phi )\)</span> are <span class="math display">\[\begin{array}{lllll}
+\rho =\sqrt{x^2+y^2+z^2} &amp; \qquad &amp;  \theta = \tan^{-1} \left( \frac{y}{x}\right) &amp; \qquad &amp;\phi =\cos ^{-1}\left(\frac{z}{\sqrt{x^2+y^2+z^2}}\right) \\
+x=\rho  \sin \phi  \cos \theta  &amp; &amp; y =\rho  \sin \phi \sin \theta  &amp; &amp; z=\rho  \cos \phi
+\end{array}\]</span> Using Jacobians, we can show that the element of volume in spherical coordinates is <span class="math display">\[
+dV=\rho ^2 \sin \phi \,d\rho \, d\theta \, d\phi.
+\]</span></p>
+<p>::: {#thm- } [Triple Integrals in Spherical Coordinates] If <span class="math inline">\(f(x,y,z)\)</span> is continuous on the closed bounded region <span class="math inline">\(R\)</span>, then the triple integral of <span class="math inline">\(f\)</span> over <span class="math inline">\(R\)</span> is given by <span class="math display">\[\begin{align*}
+&amp; \iiint_Rf(x,y,z)dV
+\\
+&amp; = \iiint_S f(\rho  \sin \phi \cos  \theta ,\rho  \sin \phi \sin \theta ,\rho  \cos \phi ) \, \rho ^2 \sin \phi \, d\rho \, d\phi \, d\theta
+\end{align*}\]</span> where <span class="math inline">\(S\)</span> is the region <span class="math inline">\(R\)</span> expressed in spherical coordinates. :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.15 </strong></span>Find the volume of the bounded solid <span class="math inline">\(S\)</span> inside the sphere of radius <span class="math inline">\(a\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since an equation of the sphere is <span class="math inline">\(\rho =a\)</span> for <span class="math inline">\(0\leq \theta &lt;2\pi\)</span> and <span class="math inline">\(0\leq \phi \leq \pi ,\)</span> the volume is determined by evaluating a triple iterated integral in spherical coordinates <span class="math display">\[\begin{align*}
+\iiint_S  \, dV
+&amp; =\int _0^{2\pi }\int _0^{\pi }\int _0^a\rho ^2 \sin \phi \, d\rho \, d\phi \, d\theta
+\\
+&amp; = \int _0^{2\pi }\int _0^{\pi }\frac{1}{3} a^3 \sin \phi \, d\phi \, d\theta
+%=\int_0^{2\pi } \frac{2 a^3}{3} \, d\theta
+=\frac{4 a^3 \pi }{3}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.16 </strong></span>Evaluate the triple integral over the given region <span class="math display">\[
+I=\iiint_D z^2 \, dx \, dy \, dz
+\]</span> where <span class="math inline">\(D\)</span> is the solid hemisphere <span class="math inline">\(x^2+y^2+z^2\leq 1\)</span> and <span class="math inline">\(z\geq 0\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Using spherical coordinates to evaluate the triple integral <span class="math display">\[\begin{align*}
+I=&amp;4\int _0^{\pi /2}\int _0^{\pi /2}\int _0^1 \rho ^4 \cos ^2 \phi  \sin \phi  \ d\rho \, d\theta \, d\phi
+\\
+&amp; =4\int _0^{\pi /2}\int _0^{\pi /2}\frac{1}{5} \cos ^2 \phi \sin \phi  \ d\theta \, d\phi
+\\
+&amp;=4\int_0^{\pi /2} \frac{1}{10} \pi  \cos ^2 \phi  \sin \phi  \, \ d\phi
+\\
+&amp; =\frac{4\pi }{10}\left(-\frac{\cos \phi }{4}-\frac{1}{12} \cos (3 \phi )\right)
+=\frac{2 \pi }{15}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.17 </strong></span>Evaluate the triple integral over the given region <span class="math display">\[
+I=\iiint_D \frac{dx\, dydz}{\sqrt{x^2+y^2+z^2}}
+\]</span> where <span class="math inline">\(D\)</span> is the solid sphere <span class="math inline">\(x^2+y^2+z^2\leq 3.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since the integrand is symmetric about the origin we can use symmetry. In spherical coordinates the triple integral <span class="math inline">\(I\)</span> evaluates to, <span class="math display">\[\begin{align*}
+I
+&amp; =8\int _0^{\pi /2}\int _0^{\pi /2}\int _0^{\sqrt{3}} \rho  \sin \phi  \, d\rho \, d\theta \, d\phi
+\\
+&amp; =8\int _0^{\pi /2}\int _0^{\pi /2}\frac{3 \sin \phi }{2} \, d\theta \, d\phi
+\\
+&amp; =8\int_0^{\pi /2} \frac{3}{4} \pi  \sin (\phi ) \, d\phi
+=6 \pi.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.18 </strong></span>Evaluate the iterated integral <span class="math display">\[
+I =\int _0^{\pi /2}\int _0^{2\pi }\int _0^2 \cos  \phi  \sin  \phi \,d\rho \,d\theta d\phi.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We find<br>
+<span class="math display">\[\begin{align*}
+I &amp; =\int _0^{\pi /2}\int _0^{2\pi }2 \cos \phi  \sin \phi \, d\theta \, d\phi
+\\
+&amp; = \int_0^{\pi /2} 4 \pi  \cos \phi  \sin \phi  \, d\phi
+=2 \pi.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.19 </strong></span>Evaluate the iterated integral <span class="math display">\[
+I=\int _0^{\pi /2}\int _0^{\pi /4}\int _0^{\cos  \phi }\rho ^2 \sin  \phi \, d\rho \, d\theta \, d\phi.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We find<br>
+<span class="math display">\[\begin{align*}
+I&amp; =\int _0^{\pi /2}\int _0^{\pi /4}\frac{1}{3} \cos ^3 \phi  \sin \phi \, d\theta \, d\phi  
+\\
+&amp; =\int_0^{\pi /2} \frac{1}{12} \pi  \cos ^3(\phi ) \sin \phi  \, d\phi
+=\frac{\pi }{48}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.20 </strong></span>Find the volume of the bounded solid in the spherical solid <span class="math inline">\(\rho \leq 4\)</span> after the solid cone <span class="math inline">\(\phi \leq \pi /6\)</span> has been removed.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We will use spherical coordinates and evaluate a triple iterated integral to find the volume <span class="math display">\[\begin{align*}
+V&amp; =\int _0^{2\pi }\int _{\pi /6}^{\pi }\int _0^4\rho ^2 \sin \phi  \, d\rho \, d\phi \, d\theta
+=\int _0^{2\pi }\int _{\pi /6}^{\pi }\frac{64 \sin \phi }{3} \, d\phi \, d\theta
+\\
+&amp; =\int_0^{2\pi } \frac{64}{3} \left(1+\frac{\sqrt{3}}{2}\right) \, d\theta
+=\frac{64\pi }{3} \left(2+\sqrt{3}\right).
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.21 </strong></span>Evaluate the triple iterated integral <span class="math display">\[
+I=\int _0^3\int _0^{\sqrt{9-y^2}}\int _{\sqrt{x^2+y^2}}^{\sqrt{18-x^2-y^2}}\left(x^2+y^2+z^2\right) \, dz \, dx \,dy.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Converting to spherical coordinates we evaluate <span class="math inline">\(I\)</span> as follows, <span class="math display">\[\begin{align*}
+I&amp;=\int _0^{\pi /4}\int _0^{\pi /2}\int _0^{3\sqrt{2}}\rho ^4 \sin \phi  \, d\rho \, d\theta \, d\phi
+\\
+&amp; =\int _0^{\pi /4}\int _0^{\pi /2}\frac{972}{5} \sqrt{2} \sin \phi  \, d\theta \, d\phi
+\\
+&amp;=\int_0^{\pi /4} \frac{486}{5} \sqrt{2} \pi  \sin \phi  \, d\phi
+=\frac{486\pi }{5} \left(\sqrt{2} -1\right).
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="exercises-1" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="exercises-1"><span class="header-section-number">6.9</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.16 </strong></span>Evaluate the following iterated integrals.</p>
+<ul>
+<li><span class="math inline">\(\int _0^{\pi }\int _0^2\int _0^{\sqrt{4-r^2}}r \sin \theta \, dz \, dr \, d\theta\)</span></li>
+<li><span class="math inline">\(\int _0^{\pi /4}\int _0^1\int _0^{\sqrt{r}}r^2 \sin \theta \, dz \, dr \, d\theta\)</span></li>
+<li><span class="math inline">\(\int _0^{2\pi }\int _0^4\int _0^1z r \, dz \, dr \, d\theta\)</span></li>
+<li><span class="math inline">\(\int _{-\pi /4}^{\pi /3}\int _0^{\sin \theta }\int _0^{4 \cos \theta } r \, dz \, dr \, d\theta\)</span></li>
+<li><span class="math inline">\(\int _0^{\pi /2}\int _0^{\pi /4}\int _0^{\cos \phi }\rho ^2 \sin \phi \, d\rho \, d\theta \, d\phi\)</span></li>
+<li><span class="math inline">\(\int _0^{\pi /2}\int _0^{2\pi }\int _0^2 \cos \phi \sin \phi \, d \rho \, d\theta \, d\phi\)</span></li>
+</ul>
+</div>
+</section>
+<section id="change-of-variables-in-multiple-integrals" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="change-of-variables-in-multiple-integrals"><span class="header-section-number">6.10</span> Change of Variables In Multiple Integrals</h2>
+<section id="jacobians" class="level3" data-number="6.10.1">
+<h3 data-number="6.10.1" class="anchored" data-anchor-id="jacobians"><span class="header-section-number">6.10.1</span> Jacobians</h3>
+<p>If <span class="math inline">\(x=x(u,v)\)</span> and <span class="math inline">\(y=y(u,v)\)</span> then the <strong>Jacobian</strong> of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> is <span class="math display">\[
+\frac{\partial (x,y)}{\partial (u,v)}
+=J(u,v)=\left|
+\begin{array}{cc}
+\frac{\partial x}{\partial u} &amp; \frac{\partial x}{\partial v} \\
+\frac{\partial y}{\partial u} &amp; \frac{\partial y}{\partial v}
+\end{array}
+\right|=\frac{\partial x}{\partial u}\frac{\partial y}{\partial v}-\frac{\partial y}{\partial u}\frac{\partial x}{\partial v}.
+\]</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.22 </strong></span>Determine the Jacobian for the transformation from the rectangular plane to the polar plane.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The conversion formulas are <span class="math inline">\(x=r \cos \theta\)</span> and <span class="math inline">\(y=r \sin \theta .\)</span> So the Jacobian is <span class="math display">\[
+J(r,\theta )=\left|
+\begin{array}{cc}
+\frac{\partial x}{\partial r} &amp; \frac{\partial x}{\partial \theta }  \\
+\frac{\partial y}{\partial r} &amp; \frac{\partial y}{\partial \theta }
+\end{array}
+\right|=\left|
+\begin{array}{cc}
+\cos  \theta  &amp; -r \sin  \theta  \\
+\sin  \theta  &amp; r \cos  \theta
+\end{array}
+\right|
+=r \cos ^2 \theta -\left(-r \sin ^2 \theta \right)=r.
+\]</span></p>
+</div>
+<p>More generally for <span class="math display">\[
+x_1=x_1\left(u_1,\text{\ldots},u_n\right), \quad
+x_2=x_2\left(u_1,\ldots,u_n\right), \quad \ldots \quad
+x_n=x_n\left(u_1,\text{\ldots},u_n\right)
+\]</span> the <strong>Jacobian</strong> of <span class="math inline">\(x_1,\ldots, x_n\)</span> with respect to <span class="math inline">\(u_1,\ldots,u_n\)</span> is <span class="math display">\[
+J\left(u_1,\text{\ldots},u_n\right)=\left|
+\begin{array}{ccc}
+\frac{\partial x_1}{\partial u_1} &amp; \text{\ldots} &amp; \frac{\partial x_1}{\partial u_n} \\
+\text{\ldots} &amp; \text{\ldots} &amp; \text{\ldots} \\
+\frac{\partial x_n}{\partial u_1} &amp; \text{\ldots} &amp; \frac{\partial x_n}{\partial u_n}
+\end{array}
+\right|.
+\]</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.23 </strong></span>Determine the Jacobian for the transformation from rectangular coordinates to cylindrical coordinates</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The conversion formulas are <span class="math inline">\(x=r \cos \theta ,\)</span> <span class="math inline">\(y=r \sin \theta ,\)</span> and <span class="math inline">\(z=z.\)</span> So the Jacobian is <span class="math display">\[\begin{align*}
+J(r,\theta ,z)
+=\left|
+\begin{array}{ccc}
+\frac{\partial x}{\partial r} &amp; \frac{\partial x}{\partial \theta } &amp; \frac{\partial x}{\partial z}  \\
+\frac{\partial y}{\partial r} &amp; \frac{\partial y}{\partial \theta } &amp; \frac{\partial y}{\partial z}  \\
+\frac{\partial z}{\partial r} &amp; \frac{\partial z}{\partial \theta } &amp; \frac{\partial z}{\partial z}
+\end{array}
+\right|
+&amp; =\left|
+\begin{array}{ccc}
+\cos  \theta  &amp; -r \sin  \theta  &amp; 0 \\
+\sin  \theta  &amp; r \cos  \theta  &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}
+\right|
+\\
+&amp; =r \cos ^2 \theta -\left(-r \sin ^2 \theta \right)=r.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.24 </strong></span>Determine the Jacobian for the transformation from rectangular coordinates to spherical coordinates.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The conversion formulas are <span class="math inline">\(x=\rho \sin \phi \cos \theta ,\)</span> <span class="math inline">\(y=\rho \sin \phi \sin \theta\)</span> and <span class="math inline">\(z=\rho \cos \phi .\)</span> So the Jacobian <span class="math inline">\(J(\rho ,\theta ,\phi )\)</span> is <span class="math display">\[\begin{align*}
+\left|
+\begin{array}{ccc}
+\frac{\partial x}{\partial \rho } &amp; \frac{\partial x}{\partial \theta } &amp; \frac{\partial x}{\partial \phi } \\
+\frac{\partial y}{\partial \rho } &amp; \frac{\partial y}{\partial \theta } &amp; \frac{\partial y}{\partial \phi } \\
+\frac{\partial z}{\partial \rho } &amp; \frac{\partial z}{\partial \theta } &amp; \frac{\partial z}{\partial \phi }
+\end{array}
+\right|
+&amp; =\left|
+\begin{array}{ccc}
+\sin  \phi  \cos  \theta  &amp; -\text{$\rho $sin} \phi  \sin  \theta  &amp; \rho  \cos  \phi  \cos  \theta  \\
+\sin  \phi  \sin  \theta  &amp; \rho  \sin  \phi  \cos  \theta  &amp; \rho  \cos  \phi  \sin  \theta  \\
+\cos  \phi  &amp; 0 &amp; -\rho  \sin  \phi
+\end{array}
+\right|
+\\
+&amp; =-\rho ^2 \sin  \phi .
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.25 </strong></span>Find the Jacobian <span class="math inline">\(\frac{\partial (x,y)}{\partial (u,v)}\)</span> given <span class="math display">\[
+u=\frac{x}{x^2+y^2}
+\quad \text{and} \quad
+v=\frac{y}{x^2+y^2}.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The Jacobian is<br>
+<span class="math display">\[\begin{align*}
+J(x,y) &amp; = \left|
+\begin{array}{cc}
+\partial _x \left(\frac{x}{x^2+y^2}\right) &amp; \partial _y \left(\frac{x}{x^2+y^2}\right)  \\
+\partial _x \left(\frac{y}{x^2+y^2}\right) &amp; \partial _y \left(\frac{y}{x^2+y^2}\right)
+\end{array}
+\right|
+=\left|
+\begin{array}{cc}
+\frac{y^2-x^2}{\left(x^2+y^2\right)^2} &amp; -\frac{2 x y}{\left(x^2+y^2\right)^2}  \\
+-\frac{2 x y}{\left(x^2+y^2\right)^2} &amp; \frac{x^2-y^2}{\left(x^2+y^2\right)^2}
+\end{array}
+\right|
+\\
+&amp; =\frac{y^2-x^2}{\left(x^2+y^2\right)^2}\frac{x^2-y^2}{\left(x^2+y^2\right)^2}-\frac{2 x y}{\left(x^2+y^2\right)^2}\frac{2 x y}{\left(x^2+y^2\right)^2}
+=-\frac{1}{\left(x^2+y^2\right)^2}.
+\end{align*}\]</span> Since<br>
+<span class="math display">\[
+u^2+v^2=\left(\frac{x}{x^2+y^2}\right)^2+\left(\frac{y}{x^2+y^2}\right)^2=\frac{1}{x^2+y^2}
+\]</span> we find <span class="math display">\[
+J(u,v)=\frac{1}{J(x,y)}=\frac{-1}{\left(u^2+v^2\right)^2}.
+\]</span></p>
+</div>
+</section>
+</section>
+<section id="change-of-variable-in-a-double-integral" class="level2" data-number="6.11">
+<h2 data-number="6.11" class="anchored" data-anchor-id="change-of-variable-in-a-double-integral"><span class="header-section-number">6.11</span> Change of Variable in a Double Integral</h2>
+<p>::: {#thm- } <a href="#change-of-variable-in-a-double-integral">Change of Variable in a Double Integral</a></p>
+<p>Let <span class="math inline">\(z=f(x,y)\)</span> be a continuous function on a region <span class="math inline">\(R\)</span> in the <span class="math inline">\(x y\)</span>-plane, and let <span class="math inline">\(T\)</span> be a one-to-one transformation that maps the region <span class="math inline">\(D\)</span> in the <span class="math inline">\(u v\)</span>-plane onto <span class="math inline">\(R\)</span> under the change of variables <span class="math inline">\(x=x(u,v)\)</span> and <span class="math inline">\(y=y(u,v),\)</span> where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are continuously differentiable functions on <span class="math inline">\(R.\)</span> If <span class="math inline">\(J(u,v)\neq 0,\)</span> then<br>
+<span class="math display">\[
+\iint_R f(x,y)dx\, dy=\iint_D f(x(u,v),y(u,v))| J(u,v)| du dv.
+\]</span> :::</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(T\)</span> be the transformation from the <span class="math inline">\(u v\)</span>-plane to the <span class="math inline">\(x y\)</span>-plane given by <span class="math inline">\(x=x(u,v)\)</span> and <span class="math inline">\(y=y(u,v)\)</span>. We will consider the effect that <span class="math inline">\(T\)</span> has on the area of a small rectangular region <span class="math inline">\(D\)</span> in the <span class="math inline">\(uv\)</span>-plane with vertices <span class="math inline">\((u_0,v_0)\)</span>, <span class="math inline">\((u_0+\Delta u,v_0)\)</span>, <span class="math inline">\((u_0,v_0+\Delta v)\)</span>, and <span class="math inline">\((u_0+\Delta u,v_0+\Delta v)\)</span> where <span class="math inline">\((u_0,v_0)\)</span> is a given point and both <span class="math inline">\(\Delta u\)</span> and <span class="math inline">\(\Delta v\)</span> are increments of <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> respectively. Let <span class="math inline">\(L_1\)</span> be the line segment between the vertices <span class="math inline">\((u_0,v_0)\)</span> and <span class="math inline">\((u_0+\Delta u,v_0)\)</span> and also let <span class="math inline">\(L_2\)</span> be the line segment between the vertices <span class="math inline">\((u_0,v_0)\)</span> and <span class="math inline">\((u_0,v_0+\Delta v)\)</span>.</p>
+<p>Define the vector function <span class="math inline">\(\vec{r}\)</span> by <span class="math display">\[
+\vec{r}(u,v)=x(u,v)\vec{i}+y(u,v)\vec{j}
+\]</span> and also <span class="math display">\[
+\vec{a}=\vec{r}(u_0+\Delta u,v_0)-\vec{r}(u_0,v_0)
+\quad \text{and} \quad
+\vec{b}=\vec{r}(u_0,v_0+\Delta v)-\vec{r}(u_0,v_0).
+\]</span> Notice that <span class="math inline">\(T(D)=R\)</span> is a region in the <span class="math inline">\(xy\)</span>-plane whose area can be approximated by <span class="math inline">\(|\vec{a}\times \vec{b}|\)</span> because we are assuming <span class="math inline">\(\Delta u\)</span> and <span class="math inline">\(\Delta v\)</span> are small increments in <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> and <span class="math inline">\(T\)</span> is a continuous one-to-one onto transformation. Let <span class="math inline">\(\Delta A\)</span> denote the area of <span class="math inline">\(R\)</span>, it follows <span class="math display">\[\begin{align*}
+\Delta A \approx |\vec{a}\times \vec{b}| &amp; =
+\left|
+\frac{\vec{r}(u_0+\Delta u,v_0)-\vec{r}(u_0,v_0) \Delta u}{ \Delta u} \times \frac{\vec{r}(u_0,v_0+\Delta v)-\vec{r}(u_0,v_0) \Delta v}{ \Delta v}
+\right | \\
+&amp; \approx \left| \vec{r}_u \Delta u \times \vec{r}_v \Delta v \right|
+= \left| \vec{r}_u \times \vec{r}_v \right| \Delta u \Delta v \end{align*}\]</span> If we consider the factor <span class="math inline">\(\left| \vec{r}_u \times \vec{r}_v \right|\)</span> in terms of the functions which define the transformation <span class="math inline">\(T\)</span> we are lead to <span class="math display">\[
+\vec{r}_u \times \vec{r}_v
+=\left| \begin{array}{ccc} \vec{i} &amp; \vec{j} &amp; \vec{k} \\ x_u &amp; y_u &amp; 0 \\ x_v &amp; y_v &amp; 0 \end{array} \right|
+=0\vec{i}-0\vec{j}+(x_u y_v-x_v y_u) \vec{k}
+\]</span> which implies <span class="math display">\[
+|\vec{r}_u \times \vec{r}_v |
+=x_u y_v-x_v y_u
+=\left| \begin{array}{cc} x_u &amp; y_u \\ x_v &amp; y_v \end{array} \right|
+=\left| \begin{array}{cc} x_u &amp; x_v \\ y_u &amp; y_v \end{array} \right|
+=\left| \frac{\partial (x,y)}{\partial (u,v)} \right|.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.26 </strong></span>Use a change of variables to evaluate the integral <span class="math display">\[
+\iint_R e^{(x+y)/(x-y)} \, dA,
+\]</span> where <span class="math inline">\(R\)</span> is the trapezoidal region with vertices <span class="math inline">\((1,0),\)</span> <span class="math inline">\((2,0),\)</span> <span class="math inline">\((0,-2),\)</span> and <span class="math inline">\((0,-1)\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since it is not easy to integrate <span class="math inline">\(f(x,y)=e^{(x+y)/(x-y)},\)</span> we make a change of variables suggested by the form of <span class="math inline">\(f\)</span> namely: <span class="math inline">\(u=x+y\)</span> and <span class="math inline">\(v=x-y.\)</span> Solving for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> <span class="math display">\[
+x=\frac{1}{2}(u+v)\qquad \text{and} \qquad y=\frac{1}{2}(u-v)
+\]</span><br>
+to find the Jacobian is <span class="math display">\[
+J(u,v)=\left|\!
+\begin{array}{cc}
+1/2 &amp; 1/2 \\
+1/2 &amp; -1/2
+\end{array}
+\! \right|=-\frac{1}{2}.
+\]</span> To find the region <span class="math inline">\(D\)</span> in the <span class="math inline">\(u v\)</span>-plane corresponding to <span class="math inline">\(R\)</span> we note that the sides of <span class="math inline">\(R\)</span> lie on the lines <span class="math inline">\(y=0,\)</span> <span class="math inline">\(x-y=2,\)</span> <span class="math inline">\(x=0,\)</span> <span class="math inline">\(x-y=1\)</span> and using the rules for the transformation, <span class="math inline">\(x=(u+v)/2\)</span> and <span class="math inline">\(y=(u-v)/2\)</span> the images of the lines in the <span class="math inline">\(u v\)</span>-plane are <span class="math inline">\(u=v, v=2, u=-v ,\)</span> and <span class="math inline">\(v=1.\)</span> Thus the region <span class="math inline">\(D\)</span> is the trapezoidal region with vertices <span class="math inline">\((1,1),\)</span> <span class="math inline">\((2,2),\)</span> <span class="math inline">\((-2,2)\)</span> and <span class="math inline">\((-1,1);\)</span> that is <span class="math display">\[
+D=\{(u,v)|1\leq v\leq 2, -v\leq u\leq v\}.
+\]</span> Therefore we can evaluate the integral as follows <span class="math display">\[\begin{align*}
+\iint_R e^{(x+y)/(x-y)} \, dA
+&amp; =\iint_D  e^{u/v} \left(\frac{1}{2}\right) \, dA
+\\
+&amp;=\int _1^2\int _{-v}^ve^{u/v}\left(\frac{1}{2}\right) \, du \, dv
+\\
+&amp; =\frac{1}{2}\int _1^2\left(e-e^{-1}\right)v dv
+=\frac{3}{4}\left(e-e^{-1}\right).
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.27 </strong></span>Use a change of variables to evaluate the integral <span class="math display">\[
+\iint_R 3 x y \, dA
+\]</span> where <span class="math inline">\(R\)</span> is the region bounded by the lines <span class="math inline">\(x-2y=0,\)</span> <span class="math inline">\(x-2y=-4,\)</span> <span class="math inline">\(x+y=4,\)</span> and <span class="math inline">\(x+y=1\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(u=x+y\)</span> and <span class="math inline">\(v=x-2y.\)</span> Then solving for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> produces <span class="math inline">\(x=\frac{1}{3}(2u+v)\)</span> and <span class="math inline">\(y=\frac{1}{3}(u-v).\)</span> The Jacobian of <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> is <span class="math display">\[
+J(u,v)=\left|\!
+\begin{array}{cc}
+\frac{2}{3} &amp; \frac{1}{3} \\
+\frac{1}{3} &amp; \frac{-1}{3}
+\end{array}
+\! \right|=\left(\frac{2}{3}\right)\left(\frac{-1}{3}\right)-\left(\frac{1}{3}\right)\left(\frac{1}{3}\right)=-\frac{1}{3}.
+\]</span> The bounds under the transformation determined by the following equations <span class="math display">\[\begin{align*}
+&amp; x+y =1 \Longrightarrow u=1 &amp;  x+y =4 \Longrightarrow u=4 \\
+&amp;  x-2y =0 \Longrightarrow  v =0 &amp;  x-2y =-4 \Longrightarrow  v=-4\end{align*}\]</span> We consider the region <span class="math inline">\(D\)</span> in the <span class="math inline">\(u v\)</span>-plane as vertically simple. Then it follows <span class="math display">\[\begin{align*}
+\iint_R 3 x y \, dA
+&amp; =\iint_D 3 \frac{1}{3}(2u+v) \frac{1}{3}(u-v)\, |J(u,v)| \, dv \, du
+\\
+&amp; =\int _1^4\int _{-4}^0\frac{1}{3}\left(2u^2-u v-v^2\right)\left|-\frac{1}{3}\right| \, dv \, du
+\\
+&amp; =\int _1^4\int _{-4}^0\frac{1}{9}\left(2u^2-u v-v^2\right) dv du
+\\
+&amp; =\int_1^4 \frac{1}{9} \left(8 u^2+8 u-\frac{64}{3}\right) \, du  
+=\frac{164}{9}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.28 </strong></span>Use a change of variables to evaluate the integral <span class="math display">\[
+\iint_R (x+y)^2\sin ^2(x-y)\, dA,
+\]</span> where <span class="math inline">\(R\)</span> is the region bounded by the square with vertices <span class="math inline">\((0,1),\)</span> <span class="math inline">\((1,2),\)</span> <span class="math inline">\((2,1),\)</span> and <span class="math inline">\((1,0).\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The region <span class="math inline">\(R\)</span> is bounded by the lines <span class="math inline">\(x-y=1,\)</span> <span class="math inline">\(x-y=-1,\)</span> <span class="math inline">\(x+y=1,\)</span> and <span class="math inline">\(x+y=3.\)</span> Let <span class="math inline">\(u=x+y\)</span> and <span class="math inline">\(v=x-y,\)</span> then solving for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> produces <span class="math inline">\(x=\frac{1}{2}(u+v)\)</span> and <span class="math inline">\(y=\frac{1}{2}(u-v).\)</span> The Jacobian of <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> is <span class="math display">\[
+J(u,v)=\left|\!
+\begin{array}{cc}
+1/2 &amp; 1/2 \\
+1/2 &amp; -1/2
+\end{array}
+\! \right|=\left(\frac{1}{2}\right)\left(\frac{-1}{2}\right)-\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)=-\frac{1}{2}.
+\]</span> The bounds under the transformation determined by the following equations <span class="math display">\[\begin{align*}
+&amp;  x+y=1  \Longrightarrow  u=1 &amp;  x+y=3  \Longrightarrow  u=3 \\
+&amp;  x-y=-1  \Longrightarrow  v=-1 &amp;  x-y=1 \Longrightarrow  v=1
+\end{align*}\]</span> Let’s consider the region <span class="math inline">\(D\)</span> in the <span class="math inline">\(u v\)</span>-plane as horizontally simple. It follows <span class="math display">\[\begin{align*}
+\iint_R (x+y)^2\sin ^2(x-y) \, dA
+&amp; =\iint_D u^2 \sin ^2v |J(u,v)| \, du \, dv
+\\
+&amp;=\frac{1}{2}\int _{-1}^1\int _1^3u^2 \sin ^2(v) \, du \, dv
+\\
+&amp; =\frac{1}{2}\int_{-1}^1 \frac{26 \sin ^2(v)}{3} \, dv
+=\frac{13}{6} (2-\sin 2).
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.29 </strong></span>Use a change of variables to evaluate the integral <span class="math display">\[
+\iint_R y^3(2x-y)\cos (2x-y) \, dy \, dx.
+\]</span> where <span class="math inline">\(R\)</span> is the region bounded by the parallelogram with vertices <span class="math inline">\((0,0),\)</span> <span class="math inline">\((2,0),\)</span> <span class="math inline">\((3,2),\)</span> and <span class="math inline">\((1,2).\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The boundary lines of the parallelogram are <span class="math inline">\(y=0,\)</span> <span class="math inline">\(y=2,\)</span> <span class="math inline">\(y=2x,\)</span> and <span class="math inline">\(y=2x-4.\)</span> Let <span class="math inline">\(u=2x-y\)</span> and <span class="math inline">\(v=y\)</span> with boundary lines <span class="math inline">\(u=0,\)</span> <span class="math inline">\(u=4,\)</span> <span class="math inline">\(v=0,\)</span> and <span class="math inline">\(v=2.\)</span> Solving for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> produces <span class="math inline">\(x=\frac{1}{2}(u+v)\)</span> and <span class="math inline">\(y=v.\)</span> Since the Jacobian is <span class="math display">\[
+J(u,v)=\left|
+\begin{array}{cc}
+1/2 &amp; 1/2 \\
+0 &amp; 1
+\end{array}
+\right|=\frac{1}{2},
+\]</span> we evaluate the integral as follows <span class="math display">\[\begin{align*}
+&amp;\iint_D y^3(2x-y)\cos (2x-y) \, dy \, dx
+=\int _0^4\int _0^2v^3u \cos (u)\frac{1}{2} \, dv \, du \\
+&amp;\quad =\int_0^4 2 u \cos (u) \, du
+=-2+2 \cos (4)+8 \sin (4).
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.30 </strong></span>Use a change of variables to evaluate the integral <span class="math display">\[
+\iint_R \left(x^4-y^4\right)e^{x y} \, dA
+\]</span> where <span class="math inline">\(R\)</span> is the region bounded by the hyperbolas <span class="math inline">\(x y=1,\)</span> <span class="math inline">\(x y=2,\)</span> <span class="math inline">\(x^2-y^2=1,\)</span> and <span class="math inline">\(x^2-y^2=4.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(u=x y\)</span> and <span class="math inline">\(v=x^2-y^2.\)</span> Then <span class="math display">\[
+\frac{\partial (u,v)}{\partial (x,y)}=\left|
+\begin{array}{cc}
+y &amp; x \\
+2x &amp; -2y
+\end{array}
+\right|=-2y^2-2x^2=-2(x^2+y^2).
+\]</span> Notice % <span class="math inline">\(v^2=\left(x^2-y^2\right)^2=x^4-2x^2y^2+y^4\)</span> we have <span class="math display">\[
+\left(x^2+y^2\right)^2
+=x^4-2x^2y^2+y^4+4x^2y^2
+=v^2+4u^2.
+\]</span> Thus <span class="math inline">\(x^2+y^2=\sqrt{v^2+4u^2}\)</span> and so <span class="math inline">\(J(u,v)=\frac{-1}{2\sqrt{v^2+4u^2}}.\)</span> We will make use of<br>
+<span class="math display">\[
+\frac{\partial  (u,v)}{\partial (x,y)}\frac{\partial  (x,y)}{\partial (u,v)}=1
+\]</span> because it is easier not to solve for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in terms of <span class="math inline">\(u\)</span> and <span class="math inline">\(v.\)</span> So we evaluate the integral as follows <span class="math display">\[\begin{align*}
+\iint_R\left(x^4-y^4\right)e^{x y} \, dA
+&amp; =\int _1^4\int _1^2e^uv\sqrt{v^2+4u^2}\left|\frac{-1}{2\sqrt{v^2+4u^2}} \right|dudv
+\\
+&amp; =\frac{1}{2}\int _1^4\int _1^2v e^u \, du \, dv
+\\
+&amp; =\frac{1}{2}\int_1^4 \left(-e+e^2\right) v \, dv
+=\frac{15}{4}e(e-1).
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.31 </strong></span>Use a change of variables to evaluate the integral <span class="math display">\[
+I=\iint_R \ln \left(\frac{x-y}{x+y}\right) \, dy \, dx
+\]</span> where <span class="math inline">\(R\)</span> is the triangular region bounded by the vertices <span class="math inline">\((1,0),\)</span> <span class="math inline">\((4,-3),\)</span> <span class="math inline">\((4,1)\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(u=x-y\)</span> and <span class="math inline">\(v=x+y\)</span> so that <span class="math inline">\(x=\frac{1}{2}(u+v)\)</span> and <span class="math inline">\(y=\frac{-1}{2}u+\frac{1}{2}.\)</span> Then the Jacobian is <span class="math display">\[
+J(u,v)=\left|
+\begin{array}{cc}
+1/2 &amp; 1/2 \\
+-1/2 &amp; 1/2
+\end{array}
+\right|=\frac{1}{2}.
+\]</span> The given the region <span class="math inline">\(R\)</span> is bounded by the lines <span class="math inline">\(x-3y=1,\)</span> <span class="math inline">\(x+y=1,\)</span> and <span class="math inline">\(x=4\)</span> which transform into <span class="math inline">\(2u-v=1,\)</span> <span class="math inline">\(v=1,\)</span> and <span class="math inline">\(u+v=8.\)</span> Therefore we evaluate the integral as follows, <span class="math display">\[\begin{align*}
+I&amp; =\frac{1}{2}\int _1^5\int _{(v+1)/2}^{8-v}\ln \left(\frac{u}{v}\right)du dv
+\\
+&amp;=\frac{1}{4}\int_1^5 \left[-(v+1)\ln \left(\frac{v+1}{2v}\right)+2(8-v)\ln \left(\frac{8-v}{v}\right)+3(v-5)\right] \, dv
+\\
+&amp;=\frac{1}{4}\left(49\ln  7-\frac{75}{2}\ln  5-27\ln  3+6\right).
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.32 </strong></span>Use a change of variables to evaluate the integral <span class="math display">\[
+I=\iint_D\exp \left(-\frac{x^2}{a^2}-\frac{y^2}{b^2}\right) \, dy \, dx,
+\]</span> where <span class="math inline">\(D\)</span> is the region bounded by the quarter ellipse <span class="math inline">\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1,\)</span> in the first octant.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let’s try the change of variables <span class="math inline">\(x=a r \cos \theta\)</span> and <span class="math inline">\(y=b r \sin \theta\)</span> with <span class="math inline">\(0\leq r&lt;\infty\)</span> and <span class="math inline">\(0\leq \theta &lt;2\pi ;\)</span> to see if we can simply the region of integration and the integrand. Notice <span class="math display">\[
+-\frac{x^2}{a^2}-\frac{y^2}{b^2}=-\left[\frac{x^2}{a^2}+\frac{y^2}{b^2}\right]=-\left[\frac{(a r \cos  \theta )^2}{a^2}+\frac{(b r \sin
+\theta )^2}{b^2}\right]=-r^2
+\]</span> using <span class="math inline">\(\sin ^2\theta +\cos ^2\theta =1.\)</span> Further the region of becomes <span class="math inline">\(r^2=1\)</span> or <span class="math inline">\(r=1\)</span> which is the circle of radius 1. We wish to use<br>
+<span class="math display">\[
+\iint_D f(x,y)dx\, dy=\iint_R f(x(u,v),y(u,v)) |J(u,v)| \, du \, dv
+\]</span> so we compute the Jacobian, <span class="math display">\[
+J(r,\theta )=\left|
+\begin{array}{cc}
+a \cos  \theta  &amp; -a \text{rsin} \theta \\
+b \sin  \theta  &amp; b r \cos  \theta
+\end{array}
+\right|=a b r \cos  \theta +a b r \sin ^2\theta =a b r.
+\]</span> Now then we have, <span class="math display">\[\begin{align*}
+I&amp; =\int _0^{\pi /2}\int _0^1e^{-r^2}|a b r| \, dr \, d\theta
+=\int _0^{\pi /2}\int _0^1e^{-r^2}a b r \, dr \, d\theta \\
+&amp;  =\int_0^{\pi /2} a b \left(\frac{1}{2}-\frac{1}{2 e}\right) \, d\theta
+=\frac{a b \pi }{4}\left(1-e^{-1}\right).
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.33 </strong></span>Use a change of variables to evaluate the integral <span class="math display">\[
+\iint_D \left(\frac{x-y}{x+y}\right)^4 \, dy \, dx,
+\]</span> where <span class="math inline">\(D\)</span> be the region in the <span class="math inline">\(x y\)</span>-plane that is bounded by the coordinate axes and the line <span class="math inline">\(x+y=1\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The region is transformed into <span class="math inline">\(0\leq v\leq 1\)</span> and <span class="math inline">\(-v\leq u\leq v\)</span> and so <span class="math display">\[
+\iint_R \left(\frac{x-y}{x+y}\right)^4 \, dy \, dx
+=\int _0^1\int _{-v}^v\frac{u^4}{v^4}\left(\frac{1}{2}\right) \, du \, dv
+=\int_0^1 \frac{v}{5} \, dv
+=\frac{1}{10}.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.34 </strong></span>Use integration and a change of variables determine the area of an ellipse</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Assume the ellipse is given in standard form by <span class="math display">\[
+\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2=1.
+\]</span> Let <span class="math inline">\(u=\frac{x}{a}\)</span> and <span class="math inline">\(v=\frac{y}{b},\)</span> then the ellipse in the <span class="math inline">\(x y\)</span>-plane corresponds to the unit circle <span class="math inline">\(u^2+v^2=1\)</span> in the <span class="math inline">\(u v\)</span>-plane. Since <span class="math inline">\(x=a u\)</span> and <span class="math inline">\(y=b v,\)</span> the Jacobian is %<span class="math inline">\(\left| \begin{array}{cc} a &amp; 0 \\ 0 &amp; b \end{array}\right|=\)</span> <span class="math inline">\(a b\)</span> and so the area of an ellipse is given by <span class="math display">\[\begin{align*}
+A&amp;=4\int _0^a\int_0^{b \sqrt{1-x^2/a^2}} dy \, dx
+=4\int _0^1\int _0^{ \sqrt{1-u^2}}a b dv du
+%=ab 4\int _0^1\int _0^{ \sqrt{1-u^2}} dv du
+% \\ &amp; =4\int_0^1 a b \sqrt{1-u^2} \, du
+= a b \pi\end{align*}\]</span> since <span class="math inline">\(\pi\)</span> is the area of the unit circle.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.35 </strong></span>A rotation of the <span class="math inline">\(x y\)</span>-plane through the fixed angle <span class="math inline">\(\theta\)</span> is given by<br>
+<span class="math display">\[
+x=u \cos\theta -v \sin  \theta
+\qquad \text{and} \qquad
+y=u \sin  \theta +v \cos  \theta
+\]</span> Compute the Jacobian <span class="math inline">\(\frac{\partial (x,y)}{\partial (u,v)}.\)</span> Let <span class="math inline">\(E\)</span> denote the region bounded by the ellipse <span class="math inline">\(x^2+x y+y^2=3.\)</span> Use a rotation of <span class="math inline">\(\pi /4\)</span> to obtain an integral that is equivalent to<br>
+<span class="math display">\[
+\iint_E y \, dy \, dx.
+\]</span> Evaluate the transformed integral.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We find <span class="math inline">\(J(u,v)=1\)</span> and so <span class="math inline">\(dx\, dy=du\, dv.\)</span> A rotation of <span class="math inline">\(\frac{\pi }{4}\)</span> eliminates the <span class="math inline">\(u v\)</span>-term so we use the transformation<br>
+<span class="math display">\[
+x=\frac{\sqrt{2}}{2}(u-v)
+\qquad \text{and}\qquad
+y=\frac{\sqrt{2}}{2}(u+v)
+\]</span> Then <span class="math inline">\(x^2+x y+y^2\)</span> becomes <span class="math inline">\(\left(\frac{u}{\sqrt{2}}\right)^2+\left(\frac{v}{\sqrt{6}}\right)^2=1.\)</span> Therefore,<br>
+<span class="math display">\[\begin{align*}
+\iint_E y \, dy \, dx
+&amp; =4\int _0^{\sqrt{2}}\int _0^{\sqrt{6-3u^2}}\frac{\sqrt{2}}{2}(u+v)(1)\, dv \, du \\
+&amp; =4\int_0^{\sqrt{2}} \frac{-\frac{3 u^2}{2}+\sqrt{6-3 u^2} u+3}{\sqrt{2}} \, du
+=8+\frac{8}{\sqrt{3}}=\frac{8\sqrt{3}+8}{\sqrt{3}}
+% \\ &amp;
+%=\frac{24+8\sqrt{3}}{3}=\frac{8}{3}\left(3+\sqrt{3}\right)
+%\approx 12.6188.
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="change-of-variable-in-a-triple-integral" class="level2" data-number="6.12">
+<h2 data-number="6.12" class="anchored" data-anchor-id="change-of-variable-in-a-triple-integral"><span class="header-section-number">6.12</span> Change of Variable in a Triple Integral</h2>
+<p>::: {#thm- } <a href="#change-of-variable-in-a-triple-integral">Change of Variable in a Triple Integral</a> Let <span class="math inline">\(f\)</span> be a continuous function on a region <span class="math inline">\(R\)</span> in the <span class="math inline">\(x y z\)</span>-space, and let <span class="math inline">\(T\)</span> be a one-to-one transformation that maps the region <span class="math inline">\(D\)</span> in the <span class="math inline">\(u v w\)</span>-space onto <span class="math inline">\(R\)</span> under the change of variables <span class="math inline">\(x=x(u,v,w),\)</span> <span class="math inline">\(y=y(u,v,w),\)</span> and <span class="math inline">\(z=z(u,v,w)\)</span> where functions <span class="math inline">\(x,\)</span> <span class="math inline">\(y,\)</span> and <span class="math inline">\(z\)</span> are continuously differentiable functions on <span class="math inline">\(D.\)</span> If <span class="math inline">\(J(u,v,w)\neq 0,\)</span> then <span class="math display">\[\begin{align*}
+&amp; \iiint_Rf(x,y,z) \, dx \, dy \, dz
+\\
+&amp; \qquad = \iiint_D f(x(u,v,w),y(u,v,w),z(u,v,w)) \left|J(u,v,w)\right| \, du \, dv \, dw.
+\end{align*}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.36 </strong></span>Use integration and a change of variables the volume of an ellipsoid</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Assume the ellipsoid is given in standard form by <span class="math display">\[
+\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2+\left(\frac{z}{c}\right)^2=1.
+\]</span> Let <span class="math inline">\(u=\frac{x}{a},\)</span> <span class="math inline">\(v=\frac{y}{b},\)</span> and <span class="math inline">\(w=\frac{z}{c}\)</span> then the ellipsoid corresponds to the unit sphere <span class="math inline">\(u^2+v^2+w^2=1.\)</span> Since <span class="math inline">\(x=a u,\)</span> <span class="math inline">\(y=b v,\)</span> <span class="math inline">\(z=c w,\)</span> the Jacobian is <span class="math inline">\(a b c\)</span> <span class="math display">\[
+J(u,v,w)=\left| \begin{array}{ccc}  a &amp; 0 &amp; 0 \\  0 &amp; b &amp; 0 \\  0 &amp; 0 &amp; c \end{array} \right|=a b c
+\]</span> and so the volume of an ellipsoid is given by <span class="math display">\[\begin{align*}
+V &amp; = 8\int _0^a\int _0^{ \sqrt{1-x^2/a^2}}\int _0^{ \sqrt{1-x^2/a^2-y^2/b^2}} \, dz \, dy \, dx
+\\
+&amp; =8\int _0^1\int _0^{ \sqrt{1-u^2}}\int _0^{ \sqrt{1-u^2-v^2}}a b c \, dw \, dv \, du
+= \frac{4}{3}a b c \pi .
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="exercises-2" class="level2" data-number="6.13">
+<h2 data-number="6.13" class="anchored" data-anchor-id="exercises-2"><span class="header-section-number">6.13</span> Exercises</h2>
+<p>In Exercises <span class="math inline">\(\ref{jst}\)</span>-<span class="math inline">\(\ref{jfn}\)</span>, find the Jacobian of the change of variables.</p>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.17 </strong></span> <span class="math inline">\(x=u^2\)</span> and <span class="math inline">\(y=u+v\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.18 </strong></span><span class="math inline">\(x=u \cos v\)</span> and <span class="math inline">\(y=u \sin v\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.19 </strong></span><span class="math inline">\(x=\frac{u}{v},\)</span> <span class="math inline">\(y=\frac{v}{w},\)</span> and <span class="math inline">\(z=\frac{w}{u}\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.20 </strong></span><span class="math inline">\(u=y e^{-x}\)</span> and <span class="math inline">\(v=e^x\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.21 </strong></span><span class="math inline">\(u=\frac{x}{x^2+y^2}\)</span> and <span class="math inline">\(v=\frac{y}{x^2+y^2}\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.22 </strong></span>&nbsp;</p>
+</div>
+<p>In Exercises <span class="math inline">\(\ref{cvst}\)</span>-<span class="math inline">\(\ref{cvfn}\)</span>, use a change of variables to compute the following integrals.</p>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.23 </strong></span> <span class="math inline">\(\iint_D \left(\frac{x-y}{x+y}\right)^5 \, dy \, dx\)</span> where <span class="math inline">\(D\)</span> is the region in the <span class="math inline">\(x y\)</span>-plane bounded by the coordinate axes and the line <span class="math inline">\(x+y=1\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.24 </strong></span><span class="math inline">\(\iint_D(x-y)e^{x^2+y^2} \, dy \, dx\)</span> where <span class="math inline">\(D\)</span> is the region in the <span class="math inline">\(x y\)</span>-plane bounded by the coordinate axes and the line <span class="math inline">\(x+y=1\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.25 </strong></span><span class="math inline">\(\iint_D\left(\frac{2x+y}{x-2y+5}\right)^2 \, dy \, dx\)</span> where <span class="math inline">\(D\)</span> is the square in the <span class="math inline">\(x y\)</span>-plane with vertices <span class="math inline">\((0,0),\)</span> <span class="math inline">\((1,-2),\)</span> <span class="math inline">\((3,-1),\)</span> and <span class="math inline">\((2,1)\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.26 </strong></span><span class="math inline">\(\iint_D\sqrt{(2x+y)(x-2y)} \, dy \, dx\)</span> where <span class="math inline">\(D\)</span> is the square in the <span class="math inline">\(x y\)</span>-plane with vertices <span class="math inline">\((0,0),\)</span> <span class="math inline">\((1,-2),\)</span> <span class="math inline">\((3,-1),\)</span> and <span class="math inline">\((2,1)\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.27 </strong></span><span class="math inline">\(\iint_D e^{(2y-x)(y+2x)} \, dA\)</span> where <span class="math inline">\(D\)</span> is the trapezoid with vertices <span class="math inline">\((0,2),\)</span> <span class="math inline">\((1,0),\)</span> <span class="math inline">\((4,0),\)</span> and <span class="math inline">\((0,8)\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.28 </strong></span> <span class="math inline">\(\iint_Ry^3(2x-y)\cos (2x-y)\, dy \, dx\)</span> where <span class="math inline">\(D\)</span> is the region bounded by the parallelogram with vertices <span class="math inline">\((0,0),\)</span> <span class="math inline">\((2,0),\)</span> <span class="math inline">\((3,2),\)</span> and <span class="math inline">\((1,2)\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.29 </strong></span>Under the change of variables <span class="math inline">\(x=s^2-t^2,\)</span> <span class="math inline">\(y=2s t,\)</span> the quarter circle region in the <span class="math inline">\(s t\)</span>-plane given by <span class="math inline">\(s^2+t^2\leq 1,\)</span> <span class="math inline">\(s\geq 0,\)</span> <span class="math inline">\(t\geq 0\)</span> is mapped onto a certain region <span class="math inline">\(D\)</span> of the <span class="math inline">\(x y\)</span>-plane. Evaluate <span class="math display">\[
+\iint_R\frac{1}{\sqrt{x^2+y^2}} \, dy \, dx.
+\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6.30 </strong></span>A rotation of the <span class="math inline">\(x y\)</span>-plane through the fixed angle <span class="math inline">\(\theta\)</span> is given by <span class="math inline">\(x=u \cos \theta -v \sin \theta\)</span> and <span class="math inline">\(y=u \sin \theta +v \cos \theta.\)</span> Determine the Jacobian <span class="math inline">\(J(u,v).\)</span> Let <span class="math inline">\(E\)</span> denote the region bounded by the ellipse <span class="math inline">\(x^2+x +y^2=3.\)</span> Use a rotation of <span class="math inline">\(\pi /4\)</span> to obtain an integral that is equivalent to <span class="math display">\[
+\iint_E y \, dy \, dx.
+\]</span> Evaluate the transformed integral.</p>
 </div>
 </section>
 </main> <!-- /main -->
@@ -953,13 +1535,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./surface-area.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Surface Area</span></span>
+      <a href="./double-integrals.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Double Integrals</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./triple-integrals-in-cylindrical-and-spherical-coordinates.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Triple Integrals in Cylindrical and Spherical Coordinates</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./vector-fields.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vector Fields</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

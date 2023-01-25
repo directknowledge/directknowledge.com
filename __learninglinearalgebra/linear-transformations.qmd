@@ -7,8 +7,6 @@ This book is designed to help students from beginners to pro as they learn and g
 
 In this book, students will learn the basics of linear transformations and how to apply them in various situations. By the end of this book, students will be well-prepared to tackle any problem that involves linear transformations.
 
-##  Vector Spaces
-
 Linear transformations are a critical tool in mathematics, allowing us to understand how certain objects change under certain conditions. In particular, they help us to understand how vector spaces change when we apply a linear transformation to them.
 
 A vector space is a set of vectors that can be added together and scaled by real numbers. Linear transformations preserve the structure of vector spaces, meaning that they preserve the concept of addition and scalar multiplication.
@@ -21,17 +19,11 @@ Vector spaces and linear transformations are important in physics because they p
 
 For example, the motion of a particle in a straight line can be described as a vector in a vector space, and the force that causes the particle to accelerate can be described as a linear transformation of that vector. Similarly, the electric field in an insulating material can be described as a vector, and the charge that produces that field can be described as a linear transformation of that vector.
 
-##  Linear Transformations in Geometry
-
 Linear transformations are one of the most important tools in mathematical geometry, and they can be used to describe a wide variety of geometric operations. The best-known linear transformation is the translation, which simply moves a figure from one point to another. But there are many other possibilities, including scaling (which changes the size of a figure), rotation (which turns a figure around a fixed point), and reflection (which flips a figure over a line or plane).
 
 Linear transformations can be represented by matrices, which makes them easy to work with in computer programs. And because they preserve straight lines and angles, they are often very useful for solving problems in physics and engineering. In short, linear transformations are a powerful tool for understanding and manipulating the shapes of objects in our world.
 
-##  Invertible Linear Transformations
-
 Invertible linear transformations are a special type of linear transformation that has an inverse function. This means that it can be undone and that it is reversible. Invertible linear transformations are important in many fields, such as engineering and physics. They are used to model systems that can be reversed, such as springs and magnets. Invertible linear transformations are also used in computer graphics and image processing, where they are used to rotate and resize images.
-
-##  The Kernel and Image of a Linear Transformation
 
 Linear transformations are a critical tool in mathematics, used to abstract and study problems in a wide variety of fields. In this book, you'll learn about the kernel and image of a linear transformation.
 
@@ -48,8 +40,6 @@ The image of a linear transformation $T$ is the set of all vectors $y$ in the co
 
 The kernel and image of a linear transformation encode important information about how that transformation behaves. By understanding these concepts, we can better analyze and work with linear transformations.
 
-##  Coordinates
-
 In mathematics, a coordinate matrix is a matrix whose elements are the coordinates of a given vector with respect to a given basis. In other words, if $v$ is a vector in $\mathbb{R}^n$ and $B$ is an $n×n$ matrix, then the product $Bv$ is another vector in $\mathbb{R}^n$ whose coordinates with respect to the standard basis are precisely the entries of the matrix $B$.
 
 Coordinate matrices are used to represent linear transformations. Given a linear transformation $T:V\to W$ between two finite-dimensional vector spaces $V$ and $W$, there is a unique coordinate matrix $A$ such that for any vector $v\in V$, we have $T(v)=Av$.
@@ -60,7 +50,2405 @@ For instance, if $B$ is a basis for $V$ and $C$ is a basis for $W$, then the mat
 
 In short, coordinate matrices are useful when working with linear transformations because they make it easy to change between different bases.
 
-##  Conclusion
-
 In this book, we've learned about linear transformations and their properties. We've seen how to represent them using matrices, and how to use these matrices to change between different bases. We've also learned about the kernel and image of a linear transformation, and how these concepts can be used to better understand the behavior of linear transformations. With this knowledge in hand, we're now ready to tackle more advanced topics in linear algebra.
+
+
+## Introduction to Linear Transformations
+
+
+A linear transformation is a function of the form $\vec y =A \vec x$ where $A$ is an $n\times m$ matrix.
+More specifically, a linear transformation is a function that assigns to each $\vec x\in \mathbb{R}^m$, a unique $\vec y\in \mathbb{R}^n$ -- and this assignment is defined by a matrix $A$. 
+When $A$ is the identity matrix and $T(\vec x)=A \vec x$ we call $T$ the \index{identity transformation} **identity transformation** .
+
+::: {#def- } 
+\label{lintrdef}
+A function $T$ from $\mathbb{R}^m$ to $\mathbb{R}^n$ is called a \index{linear transformation} **linear transformation**  if there exists an $n\times m$ matrix $A$ such that $T(\vec x)=A \vec x$, for all $\vec x$ in the vector space $\vec R^m$.
+::: 
+
+::: {#lem- } 
+Let $T$ be a linear transformation from $\mathbb{R}^m$ to $\mathbb{R}^n$, then the matrix of $T$ is
+\begin{equation}
+\label{trancol}
+A=\begin{bmatrix} | &  & | \\ T(\vec e_1) & \cdots & T(\vec e_m) \\ | &  & | \end{bmatrix}
+\end{equation}
+where $\vec e_i$ (for $0\leq i \leq m$) are the standard vectors.
+::: 
+
+::: {.proof }
+Suppose $T$ is a linear transformation from $\mathbb{R}^m$ to $\mathbb{R}^n$, then there exists an $n\times m$ matrix $A$ such that $T(\vec x)=A\vec x$ for all $\vec x\in \mathbb{R}^m$. Let $\vec e_1, ..., \vec e_m$ be the standard vectors of $\mathbb{R}^m$ and let 
+$A=[a_{ij}]$, then 
+$$
+T(\vec e_1)=A \vec e_1=
+\begin{bmatrix}
+a_{11} & \cdots & a_{1m} \\ 
+\vdots & \cdots & \vdots \\ 
+a_{n1} & \cdots & a_{nm} 
+\end{bmatrix} 
+\vectorthree{1}{\vdots}{0}
+=\vectorthree{a_{11}}{\vdots}{a_{n1}}
+$$
+$$
+\vdots
+$$
+$$
+T(\vec e_m)=A \vec e_m=
+\begin{bmatrix}
+a_{11} & \cdots & a_{1m} \\ 
+\vdots & \cdots & \vdots \\ 
+a_{n1} & \cdots & a_{nm} 
+\end{bmatrix} 
+\vectorthree{0}{\vdots}{1}
+=\vectorthree{a_{1m}}{\vdots}{a_{nm}}
+$$
+which are the columns of the matrix $A$.
+::: 
+
+::: {#exm- } 
+Determine the linear transformation $T$ given by the system of linear equations:
+$$
+\begin{array}{l}
+y_1=  7x_1+3x_2-9x_3+8x_4 \\
+y_2 =  6x_1+2x_2-8x_3+7x_4 \\
+y_3 =  8x_1+4x_2+7x_4
+\end{array}
+$$
+The matrix of the linear transformation is 
+$A=\begin{bmatrix} 7 & 3 & -9 & 8 \\ 6 & 2 & -8 & 7 \\ 8 & 4 & 0 & 7 \end{bmatrix}$
+since
+$$
+T(\vec e_1)=\vectorthree{7}{6}{8},  
+\qquad
+T(\vec e_2)=\vectorthree{3}{2}{4}, 
+\qquad 
+T(\vec e_3)=\vectorthree{-9}{-8}{0}, 
+\qquad 
+T(\vec e_4)=\vectorthree{8}{7}{7}.
+$$
+Notice $T$ is a linear transformation from $\mathbb{R}^4$ to 
+$\mathbb{R}^3$ and $A$ is a $3\times 4$ matrix. 
+
+::: 
+
+::: {#exm- } 
+Is the transformation $T(\vec{x})=\vec{v}\cdot \vec{x}$ from $\mathbb{R}^3$ to $\mathbb{R}$ a linear transformation? If so, find the matrix of $T$. 
+Let $\vec{v}=\vectorthree{v_1}{v_2}{v_3}$. Then 
+$$
+T(\vec{x})=\vec{v}\cdot \vec{x}=\vectorthree{v_1}{v_2}{v_3}\cdot \vectorthree{x_1}{x_2}{x_3}=v_1 x_1+v_2 x_2+v_3 x_3 =
+\begin{bmatrix}v_1 & v_2 & v_3 \end{bmatrix}\vec{x}.$$
+Therefore, by \ref{lintrdef}, $T$ is a linear transformation with matrix 
+$$
+\begin{bmatrix}v_1 & v_2 & v_3 \end{bmatrix}.
+$$
+
+::: 
+
+::: {#exm- } 
+Is the transformation $T(\vec{x})=\vec{v}\times \vec{x}$ from $\mathbb{R}^3$ to $\mathbb{R}$ a linear transformation? If so, find the matrix of $T$. 
+Let $\vec{v}=\vectorthree{v_1}{v_2}{v_3}$. Then 
+$$
+T(\vec{x})=\vec{v}\times \vec{x}=\vectorthree{v_1}{v_2}{v_3}\times \vectorthree{x_1}{x_2}{x_3}
+=\begin{bmatrix}v_2x_3 -v_3x_2\\ v_3x_1-v_1x_3 \\ v_1 x_2-v_2x_1 \end{bmatrix}
+=\begin{bmatrix}0 & -v_3 & v_2\\ v_3 & 0 & -v_1 \\ -v_2 & v_1 & 0 \end{bmatrix}\vec{x}
+$$
+Therefore, by \ref{lintrdef}, $T$ is a linear transformation with matrix 
+$$
+\begin{bmatrix}0 & -v_3 & v_2\\ v_3 & 0 & -v_1 \\ -v_2 & v_1 & 0 \end{bmatrix}.
+$$
+::: 
+
+::: {#thm- } 
+\label{thm:linthm}
+A function $T$ from $\mathbb{R}^m$ to $\mathbb{R}^n$ is a linear transformation if and only if both of the following hold:
+ 
+- $T(\vec v+ \vec w)=T(\vec v)+T(\vec w)$ for all vectors $\vec v$ and $\vec w$ in $\mathbb{R}^m$, and
+- $T(k \vec v)=k T(\vec v)$ for all vectors $\vec v$ in $\mathbb{R}^m$ and all scalars $k$.
+ 
+::: 
+
+::: {.proof }
+Suppose $T$ is a linear transformation from $\mathbb{R}^m$ to $\mathbb{R}^n$, then there exists an $n\times m$ matrix $A$ such that $T(\vec x)=A\vec x$ for all $\vec x\in \mathbb{R}^m$. The proof of each part follows.
+ 
+- Let $\vec u, \vec v\in \mathbb{R}^m$, then $T(\vec v+\vec w)=A (\vec v+\vec w)=A \vec v+A \vec w=T(\vec v)+T(\vec w)$.
+- Let $\vec v\in \mathbb{R}^m$ and $k\in \mathbb{R}$. Then $T(k \vec v)=A(k \vec v)=(A k) \vec v=k(A \vec v)=k T(\vec v)$.
+ 
+Now suppose both (i) and (ii) hold. We need to find a matrix $A$ such that $Tx =A \vec x$ for all $\vec x\in \mathbb{R}^m$. We can use the standard vectors in $\mathbb{R}^m$. Then by  \ref{trancol}, 
+\begin{align*}
+T(\vec x)  & = T(x \vec e_1+\cdots + x_m \vec e_m)
+=T(x_1\vec e_1)+\cdots +T(x_m\vec e_m) \\
+& = x_1 T(\vec e_1)+\cdots +x_m T(\vec e_m) 
+=
+\begin{bmatrix} | &  & | \\ 
+T(\vec e_1) & \cdots & T(\vec e_m) \\ 
+| &  & | \end{bmatrix} 
+\vectorthree{x_1}{\vdots}{x_m}=A\vec x
+\end{align*}
+as desired.
+::: 
+
+::: {#exm- } 
+Write $\vectorthree{-1}{1}{0}$ as a linear combination of $\vectorthree{3}{-1}{2}$ and $\vectorthree{1}{0}{1}$. 
+Let $T:\mathbb{R}^3\to\mathbb{R}$ be a linear transformation with 
+$T\vectorthree{3}{-1}{2}=5$ 
+and 
+$T\vectorthree{1}{0}{1}=2$. 
+Find 
+$T\vectorthree{-1}{1}{0}$. 
+Notice
+$$
+\vectorthree{-1}{1}{0}=
+(-1)\vectorthree{3}{-1}{2}+2\vectorthree{1}{0}{1}.
+$$
+Therefore, 
+$$
+T\vectorthree{-1}{1}{0}
+=T\left((-1)\vectorthree{3}{-1}{2}+2\vectorthree{1}{0}{1}\right)
+=(-1)\, T\vectorthree{3}{-1}{2}+2 \, T\vectorthree{1}{0}{1}
+=-1.
+$$
+::: 
+
+::: {#exm- } 
+Let $T:\mathbb{R}^2\to\mathbb{R}^2$ be defined by $T\vectortwo{x_1}{x_2}=\vectortwo{2x_1}{x_2^2}$. Is $T$ a linear transformation?
+Let $\alpha=\vectortwo{x_1}{x_2}$ and $\beta=\vectortwo{y_1}{y_2}$. Then
+\begin{align*}
+T(\alpha+\beta) & 
+=T\left(\vectortwo{x_1}{x_2}+\vectortwo{y_1}{y_2}\right) 
+=T\vectortwo{x_1+y_1}{x_2+y_2}
+=\vectortwo{2(x_1+y_1)}{(x_2+y_2)^2}
+\end{align*}
+On the other hand
+\begin{align*}
+T(\alpha)+T(\beta) & 
+=T\vectortwo{x_1}{x_2}+T\vectortwo{y_1}{y_2} 
+=\vectortwo{2x_1}{x_2^2} + \vectortwo{2y_1}{y_2^2} 
+= \vectortwo{2(x_1+y_1)}{x_2^2+y_2^2}
+\end{align*}
+Since $T(\alpha+\beta)\neq T(\alpha)+T(\beta)$, we use \ref{thm:linthm} to conclude that $T$ is not  linear transformation. 
+
+::: 
+
+::: {#thm- }  
+Let $T$ be a linear transformation from $\mathbb{R}^m$ to 
+$\mathbb{R}^n$.
+ 
+- If $\vec{0}_m$ is the zero vector in $\mathbb{R}^m$, then $T(\vec{0}_m)$ is the zero vector in $\mathbb{R}^n$.
+- For all $\vec{v}$ in $\mathbb{R}^m$, $T(-\vec{v})=-T(\vec{v})$.
+- For all $\vec{u}, \vec{v}$ in $\mathbb{R}^m$, 
+$T(\vec{u}-\vec{v})=T(\vec{u})-T(\vec{v})$.
+- For all $a_1,...,a_n\in \mathbb{R}$ and for all $\vec{v}_1, ...., \vec{v}_n\in \mathbb{R}^m$, 
+$$
+T(a_1\vec{v}_1+a_2\vec{v}_2+\cdots + a_n\vec{v}_n)
+=a_1T(\vec{v}_1)+a_2T(\vec{v}_2)+\cdots+a_nT(\vec{v}_n).
+$$
+  
+::: 
+
+::: {.proof }
+There proof is for the reader.
+::: 
+
+
+
+
+
+
+## Linear Transformations in Geometry
+
+
+Next we give several examples of linear transformations from $\mathbb{R}^2$ to $\mathbb{R}^2$ that are commonly used in plane geometry.
+
+::: {#thm- } 
+Let $T$ be a linear transformation from  $\mathbb{R}^2$ to $\mathbb{R}^2$. If the matrix of $T$ is of the form
+$$
+\begin{bmatrix} k & 0 \\ 0 & k  \end{bmatrix}
+$$
+then $T$ is a \index{scaling} **scaling**  transformation.
+If $k>1$ then the scaling is called a \index{dilation} **dilation**, and is called a \index{contraction} **contraction** when $k<1$.
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#exm- } 
+Is the linear transformation given by the system of linear equations
+$$
+\left\{
+\begin{array}{l}
+y_1=  7x_1 \\
+y_2 =  7x_2 \\
+\end{array}
+\right.
+$$
+from $\mathbb{R}^2$ to  $\mathbb{R}^2$ a scaling?
+The answer is yes since the matrix of the linear transformation is 
+$\begin{bmatrix} 7 & 0 \\ 0 & 7 \end{bmatrix}$, which by definition is a scaling. For example, we can write 
+$$
+T(\vec x)=\begin{bmatrix} 7 & 0 \\ 0 & 7 \end{bmatrix} \vec x.
+$$
+We can use $T$ to dilate the vector $\vectortwo{1}{2}$ by $7$ to obtain 
+$$
+T\vectortwo{1}{2}
+=\begin{bmatrix} 7 & 0 \\ 0 & 7 \end{bmatrix}\vectortwo{1}{2}
+=\vectortwo{7}{14}.
+$$
+
+::: 
+
+::: {#thm- } 
+\label{orthproj}
+Let $T$ be a linear transformation from  $\mathbb{R}^2$ to $\mathbb{R}^2$. If the matrix of $T$ is of the form
+$$
+\frac{1}{w_1^2+w_2^2} \begin{bmatrix} w_1^2 & w_1 w_2 \\ w_1 w_2 & w_2^2  \end{bmatrix}
+$$
+then $T$ is an \index{orthogonal projection} **orthogonal projection** transformation onto the line $L$ spanned by any nonzero vector $\vec w = \begin{bmatrix} w_1 \\ w_2  \end{bmatrix}$ parallel to $L$.
+::: 
+
+::: {.proof }
+Suppose line $L$ is spanned by $\vec w$. We can decompose any vector $\vec x$ as $\vec x^{||}+\vec x^\perp$ as diagrammed:
+Notice $\vec x^\perp$ is the perpendicular component so 
+\begin{equation}\label{perpeq}
+\vec w \cdot \vec x^\perp =0 
+\qquad \text{or equivalently} \qquad
+\vec w \cdot (\vec x -\vec x^{||}) =0.
+\end{equation}
+To project $\vec x$ onto the line $L$ we notice 
+\begin{equation}\label{projfac}
+\vec x^{||}=k \vec w
+\end{equation}
+for some scalar $k$. By substitution, of \ref{projfac} into \ref{perpeq} and solving for $k$ we obtain 
+\begin{equation}\label{facdef}
+k=\frac{\vec w \cdot \vec x}{\vec w \cdot \vec w}.
+\end{equation}
+Using  \ref{projfac} and \ref{facdef} we define the orthogonal projection of a vector $\vec x$ onto a given line $L$ as
+\begin{equation}\label{projdef}
+\text{proj}_L(\vec x)
+=\frac{\vec w \cdot \vec x}{\norm{\vec w}^2}\vec w.
+\end{equation}
+We would like to have \ref{projdef} in the form of a matrix. 
+To do so let $\vec w=\vectortwo{w_1}{w_2}$  and $\vec x=\vectortwo{x_1}{x_2}$. 
+Then from \ref{facdef} and \ref{projdef} we find
+\begin{align*}
+\text{proj}_L(\vec x) 
+& = \frac{1}{\norm{\vec w}^2} \left((x_1 w_1+x_2 w_2)\vectortwo{w_1}{w_2} \right) \\
+& = \frac{1}{\norm{\vec w}^2} \left((x_1 w_1\vectortwo{w_1}{w_2}+x_2 w_2 \vectortwo{w_1}{w_2} \right) \\
+& = \frac{1}{\norm{\vec w}^2} \left(\vectortwo{x_1 w_1^2}{x_1w_1 w_2}+\vectortwo{x_2w_1w_2}{x_2w_2^2} \right) \\
+& = \frac{1}{\norm{\vec w}^2} \vectortwo{x_1 w_1^2+x_2w_1w_2}{x_1w_1 w_2+x_2w_2^2} 
+= \frac{1}{\norm{\vec w}^2}
+\begin{bmatrix} w_1^2 & w_1 w_2 \\ w_1 w_2 & w_2^2  \end{bmatrix}
+\vectortwo{x_1}{x_2}
+.
+\tag*{ }
+\end{align*} 
+::: 
+
+::: {#exm- } 
+Find the matrix $A$ of the orthogonal projection onto the line $L$ spanned by $\vec w = \begin{bmatrix} 4 \\3  \end{bmatrix}$ 
+and project the vector
+ $\vec u=\vectortwo{1}{5}$ onto the line $L$ spanned by $\vec w$.
+By \ref{orthproj}, the matrix is 
+$$
+A=\frac{1}{w_1^2+w_2^2}
+\begin{bmatrix}
+w_1^2 & w_1 w_2 \\
+w_1 w_2 & w_2^2
+\end{bmatrix}
+=\frac{1}{25}
+\begin{bmatrix}
+16 & 12 \\
+12 & 9
+\end{bmatrix}
+=
+\begin{bmatrix}
+16/25 & 12/25 \\
+12/25 & 9/25
+\end{bmatrix}
+.
+$$
+For example, we can project the vector
+ $\vec u$ onto the line $L$ spanned by $\vec w$.  The matrix $A$ defines this linear transformation $T$ and so to project onto the line $L$ is just matrix multiplication:
+$$
+T\vectortwo{1}{5}=\frac{1}{25}
+\begin{bmatrix}
+16 & 12 \\
+12 & 9
+\end{bmatrix}
+\vectortwo{1}{5}
+=\vectortwo{76/25}{57/25}.
+%\approx \vectortwo{3.04}{2.28}.
+\tag*{ }
+$$
+
+::: 
+
+::: {#thm- } 
+\label{reflmatrix}
+Let $T$ be a linear transformation from  $\mathbb{R}^2$ to $\mathbb{R}^2$. If the matrix of $T$ is of the form
+$$
+\begin{bmatrix} 2 u_1^2-1 & 2 u_1 u_2 \\ 2 u_1 u_2 & 2 u_2^2 -1   \end{bmatrix}
+$$ 
+then $T$ defines a \index{reflection} **reflection**  transformation about the line $L$, 
+where $\vec u = \begin{bmatrix} u_1 \\ u_2  \end{bmatrix}$ is any unit vector lying on $L$.
+::: 
+
+::: {.proof }
+Suppose we want to reflect $\vec x$ through the line $L$ as diagrammed:
+Then 
+\begin{equation}\label{ref1}
+\text{ref}_L(\vec x)=\vec x^{||}-\vec x^\perp  
+\end{equation}
+and
+\begin{equation}\label{ref2}
+\text{proj}_L(\vec x)=\vec x^{||}.
+\end{equation}
+By subtracting \ref{ref2} from \ref{ref1}, we obtain
+\begin{equation}\label{ref3}
+\text{ref}_L(\vec x)=2 \text{proj}_L(\vec x)-\vec x.
+\end{equation}
+For simplicity assume $L$ is a any line that passes through the origin and let $\vec u$ be a unit vector $\vec u = \begin{bmatrix} u_1 \\ u_2  \end{bmatrix}$ lying on $L$. 
+Notice \ref{projdef} in the special case of a unit vector $\vec u$ becomes 
+$\text{proj}_L(\vec x)=(\vec u\cdot \vec x)\vec u.$
+Then 
+\begin{align*}
+\text{ref}_L(\vec x)& =2 \text{proj}_L(\vec x)-\vec x 
+=2(\vec u\cdot \vec x)\vec u-\vec x \\
+& = 2(u_1x_1+u_2x_2)\begin{bmatrix} u_1 \\ u_2  \end{bmatrix}-\begin{bmatrix} x_1 \\ x_2  \end{bmatrix}
+=2u_1 x_1 \begin{bmatrix} u_1 \\ u_2  \end{bmatrix}+2u_2x_2 \begin{bmatrix} u_1 \\ u_2  \end{bmatrix}-\begin{bmatrix} x_1 \\ x_2  \end{bmatrix} \\
+& = \begin{bmatrix}  
+2u_1^2x_1+2u_1 u_2x_2-x_1 \\ 2u_1u_2x_1+2u_2^2 u_2x_2-x_2 
+\end{bmatrix} 
+= \begin{bmatrix}  
+2u_1^2-1 & 2u_1 u_2\\
+2u_1 u_2 & 2u_2^2-1
+\end{bmatrix}
+\vectortwo{x_1}{x_2}.
+\tag*{ }
+\end{align*}
+::: 
+
+::: {#exm- } 
+Find the matrix $A$ of a reflection through the line through the origin spanned by $\vec w = \begin{bmatrix} 4 \\3  \end{bmatrix}$ and use it to reflect $\begin{bmatrix} 1 \\5  \end{bmatrix}$ about the line $L$.
+Let $\vec u=\vectortwo{4/5}{3/5}$.  We notice $\vec u$ is a unit vector, since $\norm{u}=1$. Then, by \ref{reflmatrix}, the matrix we seek is 
+$$
+A=\begin{bmatrix}
+7/25 & 24/25 \\ 24/25 & -7/25
+\end{bmatrix}.
+$$
+We can reflect the vector $\begin{bmatrix} 1 \\5  \end{bmatrix}$ about the line $L$ using matrix multiplication
+$$
+T \begin{bmatrix} 1 \\5  \end{bmatrix}
+=
+\frac{1}{25}
+\begin{bmatrix}
+7 & 24 \\ 24 & -7
+\end{bmatrix}
+\begin{bmatrix} 1 \\5  \end{bmatrix}
+=\vectortwo{127/25}{-11/25}.
+%\approx \vectortwo{5.08}{-0.44}.
+\tag*{ }
+$$
+
+::: 
+
+::: {#thm- } 
+\label{rotmatrix}
+Let $T$ be a linear transformation from  $\mathbb{R}^2$ to $\mathbb{R}^2$. If the matrix of $T$ is of the form
+$$
+\begin{bmatrix} 
+\cos \theta & -\sin \theta  \\ 
+\sin \theta & \cos \theta  \end{bmatrix}
+$$
+then $T$ is a (counterclockwise) \index{rotation} **rotation**  transformation through an angle $\theta$.
+::: 
+
+::: {.proof }
+If a vector $\vec x=\vectortwo{x_1}{x_2}$ is rotated through an angle of $\pi/2$, then a vector $\vec y=\vectortwo{-x_2}{x_1}$ is obtained, via $\vec x\cdot \vec y =\vec 0$. More generally, if we rotate (counterclockwise) a given $\vec x$ through an angle $\theta$ we determine
+\begin{align*}
+T(\vec x)&=(\cos \theta) \vec x+(\sin\theta) \vec y
+=(\cos \theta)\vectortwo{x_1}{x_2}+(\sin \theta)\vectortwo{-x_2}{x_1} \\
+&=\vectortwo{(\cos \theta)x_1-(\sin\theta))x_2}{(\sin \theta)x_1-(\cos\theta))x_2} 
+=\begin{bmatrix} \cos \theta & -\sin \theta  \\ \sin \theta & \cos \theta  \end{bmatrix} \vectortwo{x_1}{x_2}
+=\begin{bmatrix} \cos \theta & -\sin \theta  \\ \sin \theta & \cos \theta  \end{bmatrix} \vec x
+\end{align*}
+as seen from the diagram.
+::: 
+
+::: {#exm- } 
+Find the matrix of the linear transformation that rotates the vector $\begin{bmatrix} 4 \\ 2  \end{bmatrix}$ by 30 degrees counterclockwise.
+By \ref{rotmatrix}, the matrix of this transformation is $A=\begin{bmatrix} \sqrt{3}/2 & -1/2 \\  1/2 & \sqrt{3}/2 \end{bmatrix}.$
+We will use matrix multiplication to perform the transformation
+$$
+T\vectortwo{4}{2}
+= \begin{bmatrix} \frac{\sqrt{3}}{2} & \frac{-1}{2} \\
+\frac{1}{2} & \frac{\sqrt{3}}{2}
+\end{bmatrix}
+\vectortwo{4}{2}
+=\cos 30^\circ \vectortwo{4}{2}+\sin 30^\circ \vectortwo{4}{2}
+=\vectortwo{2\left(\sqrt{3}+1\right)}{\sqrt{3}+1}.
+\approx \vectortwo{2.46}{3.73}
+$$
+::: 
+
+::: {#thm- } 
+\label{shearmatrix}
+Let $T$ be a linear transformation from  $\mathbb{R}^2$ to $\mathbb{R}^2$. If the matrix of $T$ is of the form
+$$
+\begin{bmatrix} 1 & 0  \\ k & 1  \end{bmatrix}
+\qquad \text{or} \qquad
+\begin{bmatrix} 1 & k  \\ 0 & 1  \end{bmatrix},
+$$
+where $k$ is any constant, then $T$ defines a \index{vertical shear} **vertical shear** or \index{horizontal shear} **horizontal shear** transformation, respectively. 
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#exm- } 
+Given the vector $\begin{bmatrix} 2 \\3  \end{bmatrix}$ in $\mathbb{R}^2$ show geometrically a vertical shear of 2 and a horizontal shear of $\frac{1}{2}$.
+By \ref{shearmatrix}, we can apply these linear transformations using matrix multiplication by using the matrices 
+$\begin{bmatrix} 1 & 0  \\ 2 & 1  \end{bmatrix}$ 
+and 
+$\begin{bmatrix} 1 & 1/2  \\ 0 & 1  \end{bmatrix}$.
+$$
+\label{verticalshear}
+\text{Vertical Shear: \quad }  T\begin{bmatrix} 2 \\3  \end{bmatrix} 
+= \begin{bmatrix} 1 & 0  \\ 2 & 1  \end{bmatrix} \begin{bmatrix} 2 \\3  \end{bmatrix} = \begin{bmatrix} 2 \\7  \end{bmatrix}
+$$
+$$
+\label{horizontalshear}
+\text{Horizontal Shear: \quad } T\begin{bmatrix} 2 \\3  \end{bmatrix} 
+= \begin{bmatrix} 1 & 1/2  \\ 0 & 1  \end{bmatrix} \begin{bmatrix} 2 \\3  \end{bmatrix} =\begin{bmatrix} 7/2 \\3  \end{bmatrix} 
+$$
+
+::: 
+
+::: {#exm- } 
+Interpret the linear transformation
+$T(\vec x)=\begin{bmatrix} 0 & -1 \\ -1 & 0 \end{bmatrix}\vec x$
+geometrically.
+The transformation has a matrix of the form
+$$
+\begin{bmatrix} 2u_1^2-1 & 2 u_1 u_2 \\ 2u_1 u_2 & 2u_2^2-1 \end{bmatrix}
+$$
+where $u_1=\sqrt{2}/2$ and $u_2=-\sqrt{2}/2$ since $2u_1^2-1=0$, $2u_2^2-1=0$, and $2u_1 u_2=-1$. 
+Since $|| \vec u ||=1$ and $\vec u$ lies on the line $y=x$, then matrix $\begin{bmatrix} 0 & -1 \\ -1 & 0 \end{bmatrix}$ represents the linear transformation which is a reflection through the line $y=x$.
+
+::: 
+
+\begin{align*}
+\text{scaling} \quad & 
+\begin{bmatrix} k & 0 \\ 0 & k  \end{bmatrix} &
+\text{shears} \quad &  
+\begin{bmatrix} 1 & 0  \\ k & 1  \end{bmatrix}
+ \text{ or }
+\begin{bmatrix} 1 & k  \\ 0 & 1  \end{bmatrix} \\
+\text{reflection} \quad & 
+\begin{bmatrix} 2 u_1^2-1 & 2 u_1 u_2 \\ 2 u_1 u_2 & 2 u_2^2 -1   \end{bmatrix} & 
+\text{rotation} \quad & 
+\begin{bmatrix} \cos \theta & -\sin \theta  \\ \sin \theta & \cos \theta  \end{bmatrix} &  \\
+\text{orthogonal projection} \quad &
+\frac{1}{w_1^2+w_2^2} \begin{bmatrix} w_1^2 & w_1 w_2 \\ w_1 w_2 & w_2^2  \end{bmatrix} & 
+\end{align*}
+
+::: {#exm- } 
+Interpret the linear transformation $T(\vec x)=\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix} \vec x$, geometrically. Explain.
+This is a rotation combined with a scaling. The transformation rotates 45 degrees counterclockwise and has a scaling factor of $\sqrt{2}$. 
+::: 
+
+
+
+
+
+
+## Introduction to Linear Maps
+
+
+
+::: {#def- } 
+Let $V$ and $W$ be linear spaces. A function $T$ from $V$ to $W$ is called a \index{linear map} **linear map** if 
+$$
+T(f+g)=T(f)+T(g) 
+\qquad \text{and}\qquad
+T(k f)=k T(f)
+$$
+for all elements $f$ and $g$ of $V$ and for all scalars $k$. 
+::: 
+
+The collection of all linear maps from $V$ to $W$ is denoted by $\mathcal{L}(V,W)$ and if $T$ is a linear map from $V$ to $W$ we denote this by $T\in \mathcal{L}(V,W)$.
+
+::: {#def- } 
+Let $T\in \mathcal{L}(V,W)$. 
+ 
+- Then the \index{kernel} **kernel**  of $T$ is the subset of $V$ consisting of the vectors that $T$ maps to 0; that is  
+$\ker(T)=\{v\in V \, | \, T v=0\}.$
+- Then the \index{image} **image**  of $T$ is the subset of $W$ consisting of the vectors of the form $Tv$ for some $v\in V$; that is 
+$\text{im}(T)=\{w\in W \, | \, \text{ there exists } v \in V \text{ such that } w=T v\}.$
+ 
+::: 
+ 
+::: {#exm- } 
+The function from $C^{\infty}$ to $C^{\infty}$ defined by $T(f)=f''$ is a linear map.  Find the kernel and image of $T$. 
+
+::: 
+
+::: {#exm- } 
+The function from $C^{\infty}$ to $C^{\infty}$ defined by $T(f)=\int_0^1 f(x) \, dx $ is a linear map.  Find the kernel and image of $T$.  
+
+::: 
+ 
+::: {#thm- } 
+If $T \in \mathcal{L}(V,W),$ then null $T$ is a subspace of $V$.
+::: 
+
+::: {.proof }
+By definition, $\text{ker} T=\{v\in V \mid T v=0\}$ and so $\text{ker} T \subseteq W$. Let $u, v\in \text{ker} T$. Then, $T(u+v)=T u+ Tv=0+0=0$ which shows, $u+v\in \text{ker} T$, for all $u , v \in \text{ker} T$. Let $k$ be a scalar and $u\in \text{ker} T$. Then $T(k u)=k T u= k(0)=0$, which shows, $k u\in \text{ker} T$ for all scalars $k$ and all $u\in \text{ker} T$. Since $T(0)=T(0+0)=T(0)+T(0)$, $T(0)=0$ in $W$ which shows, $0\in \text{ker} T$. Therefore, $\text{ker} T$ is a subspace of $W$. 
+::: 
+
+::: {#def- } 
+A linear map $T: V\rightarrow W$ is called \index{injective} **injective**  whenever $u, v\in V$ and $T u=T v$, we have $u=v$.
+::: 
+ 
+::: {#thm- } 
+Let $T\in \mathcal{L}(V,W)$, then $T$ is injective if and only if null $T=\{0\}$.
+::: 
+
+::: {.proof }
+Suppose $T$ is injective. Since $T(0)=0$, $0\in \text{ker} T$ and so $\{0\}\subseteq \text{ker} T$. Let $v\in \text{ker} T$. Then $T(0)=0=T(v)$ yields $v=0$ because $T$ is injective. Thus, $\text{ker} T\subseteq \{0\}$. Therefore, $\text{ker} T=\{0\}$. Conversely, assume $\text{ker} T=\{0\}$. Let $u, v\in V$. If $Tu=Tv$, then $T(u-v)=Tu - T v=0$ which shows $u-v \in \text{ker} T$. Thus $u=v$ and therefore, $T$ is injective. 
+::: 
+
+::: {#def- } 
+For $T\in \mathcal{L}(V,W)$, the \index{image} **image**  of $T$, denoted by 
+$\text{im}(T)$, is the subset of $W$ consisting of those vectors that are of the form $T v$ for some $v\in V$.
+::: 
+
+::: {#def- } 
+A linear map $T: V\rightarrow W$ is called \index{surjective} **surjective**  if its range equals $W$.
+::: 
+ 
+::: {#thm- } 
+If $T\in \mathcal{L}(V,W)$, then $\text{im} T$ is a subspace of $W$.
+::: 
+
+::: {.proof }
+By definition, $\text{im} T=\{T v \mid v\in V\}\subseteq W$. Let $w_1,w_2\in W \in \text{im} T$. Then there exists $v_1,v_2\in V$ such that $w_1=Tv_1$ and $w_2=T v_2$. By linearity of $T$, $w_1+w_2=Tv_1+Tv_2=T(v_1+v_2)$ which shows $w_1+w_2\in \text{im} T$ for all $w_1,w_2 \in \text{im} T$. Let $w\in \text{im} T$ and let $k$ be a scalar. Then there exists $v\in V$ such that $w=T v$. By linearity of $T$, $ kw =k Tv =T(k v)$ which shows $kw\in \text{im} T$ for all $w\in \text{im} T$ and for all scalars $k$. Therefore, $\text{im} T$ is a subspace of $W$. 
+::: 
+
+::: {#thm- } [Rank-Nullity Theorem]
+If $V$ is finite-dimensional and $T\in \mathcal{L}(V,W)$, then range $T$ is finite-dimensional and $\text{dim}  V= \text{dim}  (\text{im} T) + \text{dim}  (\text{ker}  T)$. 
+::: 
+
+::: {.proof }
+Since $V$ is a finite-dimensional and $\text{ker} T$ is a subspace of $V$, $\text{ker} T$ is finite-dimensional and so let $(u_1,\ldots,u_n)$ be a basis of $\text{ker} T$. Since $(u_1,\ldots,u_n)$ is linearly independent in $V$, it can be extended to a basis of $V$, say $\mathcal{B}=(u_1,\ldots,u_n,v_1,\ldots,v_m)$. It suffices to show $(T v_1,\ldots, T v_m)$ is a basis of $\text{im} T$, for then $\text{im} T$ is finite-dimensional is proven and $\text{dim} V=n+m=\text{dim}  \text{ker} T+\text{dim} \text{im} T$ holds as well. 
+
+Let $w\in \text{im} T$. Then there exists $v\in V$ and scalars $a_1,\ldots,a_n, b_1,\ldots,b_m$ such that 
+$$w=Tv=T(a_1 u_1+\cdots + a_n u_n+b_1 v_1+\cdots + b_m v_m)=b_1 T v_1+\cdots + b_m T v_m.$$
+ Thus  $(T v_1,\ldots,T v_m)$ spans $\text{im} T$. Suppose $c_1,\ldots,c_m$ are scalars such that $c T v_1+\cdots + c_m T v_m=0$. Then there exist scalars $d_1,\ldots,d_n$ such that 
+ $$c_1 v_1+\cdots + c_m v_m=d_1 u_1+\cdots +d_n u_n.$$ 
+ Since $\mathcal{B}$ is a basis of $V$ and $c_1 v_1+\cdots c_m v_m+(-d_1) u_1 + \cdots +(-d_n)u_n=0$ it follows $c_1=\cdots = c_m = d_1 = \cdots = \cdots =d_n=0$. In particular, $c_1=\cdots = c_m=0$ shows $T v_1,\ldots, T v_m$ are linearly independent. Therefore, $(T v_1,\ldots, T v_m)$ is a basis fo $\text{im} T$.
+::: 
+
+::: {#cor- } 
+If $V$ and $W$ are finite-dimensional vector spaces with $T\in \mathcal{L}(V,W)$, then 
+ 
+- $\text{dim}  V > \text{dim}  W \implies T$ is not injective, and
+- $\text{dim}  V < \text{dim}  W \implies T$ is not surjective.
+ 
+::: 
+
+::: {.proof }
+The proof of each part follows.
+ 
+- By the Rank-Nullity Theorem, 
+$\text{dim}  V=\text{dim}  \text{ker} T+ \text{dim}  \text{im} T \leq \text{dim}  \text{ker} T +\text{dim}  W.$
+Since $\text{dim}  V > \text{dim}  W $, it follows 
+$0<\text{dim}  V-\text{dim}  W\leq \text{dim}  \text{ker} T.$
+Thus, $\text{ker} T \neq \{0\}$ and so $T$ is not injective. 
+- Again by the Rank-Nullity Theorem, $\text{dim}  V=\text{dim}  \text{ker} T+ \text{dim}  \text{im} T$ and so $\text{dim}  \text{im} T\leq \text{dim}  V$. Since $\text{dim}  V < \text{dim}  W $, $0<\text{dim}  W-\text{dim}  V\leq \text{dim}  W-\text{dim}  \text{im} T$ and so there exists a nonzero element $w\in W$ with $w\in \text{im} T$. Therefore, $T$ is not surjective. 
+ 
+::: 
+
+::: {#exm- } 
+Suppose that $T$ is a linear map from $V$ to $\mathbb{F}$. Prove that if $u \in V$ is not in $\text{ker}  T$, then $V=\text{ker} T \, \oplus \{a u:a\in F\}$.
+Let $U=\{a u \mid a\in \mathbb{F}\}$. The following arguments show $V=\text{ker} T +U$ and $\text{ker} T \cap U=\{0\}$, respectively.
+ 
+- Let $v\in V$ with $Tv=b$. Since $Tu\neq 0$ there is a $u_1 \in U$ such that $T u_1=b$. Then we can write $v=u_1+(v-u_1)$, and $v-u_1\in \text{ker} T$. This gives $V=\text{ker} T+ U$.
+- Let $v\in \text{ker} T \cap U$, then there exists $a \in \mathbb{F}$ such that $v=a u$ and so $T(v)=a T u=0$ since $T v\in \text{ker} T$. Thus $a=0$ and so $v=0$ meaning $\text{ker} T \cap U\subseteq \{0\}$. Since $0 \in \text{ker} T \cap U$, it follows $\text{ker} T \cap U= \{0\}$. 
+ 
+ 
+
+::: 
+
+::: {#exm- } 
+Suppose that $T\in \mathcal{L}(U,W)$ is injective and $(v_1,\ldots,v_n)$ is linearly independent in $V$. Prove that $(T v_1,\ldots,T v_n)$ is linearly independent in $W$.
+Suppose $a_1 T v_1+ \cdots a_n T v_n=0$ in $W$ where $a_1,\ldots,a_n \in \mathbb{F}$. Then by linearity of $T$, $T(a_1 v_1 + \cdots + a_n v_n)=0$. Since $T(0)$ and $T$ is injective, $a_1 v_1+\cdots + a_n v_n=0$. Since $(v_1,\ldots,v_n)$ is linearly independent $a_1=\cdots = a_n =0$. Therefore, $(T v_1,\ldots, T v_n)$ is linearly independent. 
+
+::: 
+
+::: {#exm- } 
+Show that every linear map from a one-dimensional vector space to itself is multiplication by some scalar. More precisely, prove that if $\text{dim}  V=1$ and $T\in \mathcal{L}(V,V)$, then there exists $a\in \mathbb{F}$ such that $T v=a v$ for all $v\in V$.
+Let $\{w\}$ be a basis of $V$, and let $v\in V$. Then there exists $c\in \mathbb{F}$ such that $v=c w$. Applying $T$ yields,
+$$
+T v=T(c w)=cTw=c(a w)=(ca)w=a(cw)=a v
+$$
+where $Tw=aw$ since $Tw\in V$ and $\{w\}$ is a basis of $V$. 
+
+::: 
+
+::: {#exm- } 
+\index{linear extension} **linear extension** 
+Suppose that $V$ is finite-dimensional. Prove that any linear map on a subspace of $V$ can be extended to a linear map on $V$. In other words, show that if $U$ is a subspace of $V$ and $S\in \mathcal{L}(U,W)$, then there exists $T\in \mathcal{L}(V,W)$ such that $Tu=Su$ for all $u\in U$.
+Let $(u_1,\ldots,u_n)$ be a basis of $U$ and extend this basis of $U$ to a basis of $V$, say $(u_1,\ldots,u_n, v_1,\ldots,v_m)$. Define $T$ as the linear extension of $S$, as follows
+$$
+T(u_i)=S(u_i) \text{ for } 1\leq i \leq n \hspace{.5cm} \text{ and } \hspace{.5cm}  T(v_j)=v_j \text{ for } 1\leq j \leq m.
+$$
+Then for all  $u\in U$,
+\begin{align*}
+T(u) & =T(a_1 u_1+\cdots + a_n u_n) 
+ =a_1 T u_1+\cdots a_n T u_n \\
+& =a_1 S u_1+\cdots +a_n S u_n 
+=S(a_1u_1+\cdots a_n u_n) 
+=S(u)
+\end{align*} 
+where $a_1,\ldots,a_n\in \mathbb{F}$. By definition of $T$, $T\in \mathcal{L}(V,W)$.
+
+::: 
+
+::: {#exm- } 
+Prove that if $S_1,\ldots,S_n$ are injective linear maps such that $S_1  \cdots S_n$ makes sense, then $S_1 \cdots S_n$ is injective.
+Suppose $v$ and $w$ are any vectors and $(S_1\cdots S_n)v=(S_1\cdots S_n)w$. Then by definition of composition, $S_1(S_2\cdots S_n)v=S_1(S_2\cdots S_n)w$, and since $S_1$ is injective $S_2(S_3\cdots S_n)v=S_2(S_3\cdots S_n)w$. Since $S_2,\ldots,S_n$ are all injective $v=w$ as desired showing $S_1\cdots S_n$ is injective. 
+
+::: 
+
+::: {#exm- } 
+Prove that if $(v_1,\ldots,v_n)$ spans $V$ and $T\in \mathcal{L}(V,W)$ is surjective, then $(T v_1,\ldots,T v_n)$ spans $W$.
+Let $w\in W$. Then, since $T$ is surjective, there exists $v\in V$ such that $T(v)=w$. Since $(v_1,\ldots,v_n)$ spans $V$ there exists scalars $a_1,\ldots,a_n$ such that $v=a_1 v_1+ \dots a_n v_n$ and by linearity of $T$, $T(v)=a_1 T v_1+ \cdots a_n T v_n=w.$ Therefore, $(T v_1,\ldots,T v_n)$ spans $W$ because every element $w$ in $W$ is a linear combination of the $T v$'s.
+
+::: 
+
+::: {#exm- } 
+Suppose that $V$ is finite-dimensional and that $T\in \mathcal{L}(V,W)$. Prove that there exists a subspace $U$ of $V$ such that $U\cap \text{ker} T=\{0\}$ and range $T = \{T u : u\in U\}$.
+Since $V$ is finite-dimensional so is $\text{ker} T$. Let $(v_1,\ldots,v_n)$ be a basis of $\text{ker} T$ and extend this basis to a basis of $V$, 
+namely let $\mathcal{B}=(v_1,\ldots,v_n,u_1,\ldots,u_m)$ be a basis of $V$.  Let $U=\text{span} (u_1,\ldots,u_m)$, we will show $U\cap \text{ker} T=\{0\}$ and range $T = \{T u : u\in U\}$. Clearly, $\{0\}\subseteq U\cap \text{ker} T$ since both $U$ and $\text{ker} T$ are subspaces. Let $v\in U\cap \text{ker} T$. Then $v\in U$ implies there exists $a_1,\ldots,a_m$ such that $v=a_1 u_1+\cdots +a_m u_m$. Then $v\in \text{ker} T$ implies there exists $b_1,\ldots,b_n$ such that $v=b_1 v_1+\cdots +b_n v_n$.  Then $a_1 u_1+\cdots +a_m u_m+(-b_1)v_1+\cdots +(-b_n)v_n=0$ and since $\mathcal{B}$ is a basis of $V$ the $u$'s and $v$'s are linearly independent and so $a_1=\cdots =a_m=b_1=\cdots =b_n=0$ meaning $v=0$; and so $\text{ker} T = \{0\}$.  Let $v\in V$. Then $T(v)=a_1T v_1+\cdots +a_n T v_n+b_1 T u_1+\cdots + b_m T u_m=b_1 Tu_1+\cdots +b_m T u_m$ showing $\{T v : v\in T\}\subseteq \{T v : v\in U\}$ conversely is obvious, since $U\subseteq V$.
+
+::: 
+
+::: {#exm- } 
+Prove that if there exists a linear map on $V$ whose null space and range are both finite-dimensional, then $V$ is finite-dimensional.
+::: 
+
+::: {#exm- } 
+Suppose that $V$ and $W$ are finite-dimensional and $T\in \mathcal{L}(V,W)$. Prove that there exists a surjective linear map from $V$ onto $W$ if and only if $\text{dim}  W \leq \text{dim}  V$.
+Suppose $T$ is a linear map of $V$ onto $W$, then $\text{dim}  V=\text{dim}  \text{ker} T+\text{dim}  \text{im} T$. Since $\text{dim}  \text{ker} T \geq 0$, $\text{dim}  V\geq \text{dim}  \text{im} T=\text{dim}  W$, since $T$ is onto. Conversely, assume $m=\text{dim}  W\leq \text{dim}  V=n$ with bases of $W$ say $(w_1,\ldots,w_m)$ and of $V$ say $(v_1,\ldots,v_n)$. Define $T$ to be the linear extension of:
+$$
+\begin{cases}
+T(v_i)=w_i & \text{ if } 1\leq i\leq m \\
+T(v_i)=0 & \text{ if } i>m
+\end{cases}
+$$
+Then $T$ is surjective since: if $w\in W$ then there exists $a_i\in \mathbb{F}$ such that $w=a_1 w_1+\cdots + a_m w_m=a_1 T(v_1)+\cdots + a_m T(v_m)=T(a_1 v_1+\cdots + a_m v_m)$ showing every element in $W$ is in $\text{im} T$.
+
+::: 
+
+::: {#exm- } 
+Suppose that $W$ is finite-dimensional and $T\in \mathcal{L}(V,W)$. Prove that $T$ is injective if and only if there exists $S\in \mathcal{L}(W,V)$ such that $S T$ is the identity map on $V$.
+Suppose $S\in\mathcal{L}(W,V)$ and $ST$ is the identity on $V$. Then $\text{ker} T\subseteq \text{ker} ST=\{0\}$ and so $\text{ker} T=\{0\}$. Therefore, $T$ is injective. Conversely, suppose $T$ is injective. So we can define $S_1\in\mathcal{L}(W,V)$ by the following: $S_1(w)=v$ where $v=T^{-1}(w)$ (since $T$ is injective). So $S_1:\text{im} T \rightarrow V$ and since $W$ is finite-dimensional, by \ref{Linear Extension}, $S_1$ can be extended to $S: W\rightarrow V$ and by definition of $S_1$, if $v\in V$, then $ST(v)=S(Tv)=T^{-1}(Tv)=v$.
+
+::: 
+
+::: {#exm- } 
+Suppose that $V$ is finite-dimensional and $T\in \mathcal{L}(V,W)$. Prove that $T$ is surjective if and only if there exists $S\in \mathcal{L}(W,V)$ such that $T S$ is the identity map on $W$.
+We will present two proofs.
+ 
+- Suppose $S\in \mathcal{L}(W,V)$ and $TS=I_W$. Let $w\in W$. Then $v=S(w)\in V$ is such that $T(v)=TS(w)=w$ and therefore $T$ is surjective. Conversely, suppose $T$ is surjective. Since $V$ is a finite-dimensional vector space and $T$ is a linear map, $W$ is finite-dimensional. Let $(v_1,\ldots,v_n)$ be a basis for $V$. Since $T$ is surjective, $(T v_1,\ldots,T v_n)$ spans $W$. Also since $T$ is surjective $\text{dim}  W\leq \text{dim}  V=n$ Any spanning set reduced to a basis say $(T v_1,\ldots,T v_m)$ is a basis of $W$ where $m\leq n$. Define $S$ as the linear extension of $S(T v_i)=v_i$ for each $1\leq i \leq m$. Then, for all $w\in W$, $S(w)=S(a_1 T v_1+\cdots +a_m T v_m)=a_1 ST v_1+\cdots + a_m ST v_m=a_1 v_1+\cdots + a_m v_m=w$ for scalars $a_1,\ldots,a_m\in \mathbb{F}$, and so $TS=I_W$.
+- Suppose $T$ is surjective. Using \ref{Null Space Decomposition}, there exists a subspace $U$ of $V$ such that $U\cap \text{ker} T=\{0\}$ and $\text{im} T=\{T u : u\in U\}$. Define $T_1: U\rightarrow W$ by $T_1 u=T u$ for $u\in U$. Notice $T_1$ is injective and surjective and so $T_1$ has an inverse. Define $S=T_1^{-1}$ we have $TS w= T_1 T_1^{-1}w=w$ for all $w\in W$.
+ 
+ 
+
+::: 
+
+A linear map $T\in \mathcal{L}(V,W)$ is called \index{invertible} **invertible** if there exists a linear map $S\in \mathcal{L}(W,V)$ such that $S T$ equals the identity map on $V$ and $TS$ equal the identity map on $W$.
+Given $T\in\mathcal{L}(V,W)$. A linear map $S\in\mathcal{L}(W,V)$ satisfying $S T=I$ and $T S=I$ is called an \index{inverse} **inverse**  of $T$.
+Two vector spaces are called \index{isomorphic} **isomorphic** if there is an invertible linear map from one vector space onto the other one.
+
+::: {#thm- } 
+If $\mathcal{B}=(f_1,\ldots,f_n)$ is a basis of a linear space $V$, then the coordinate transformation 
+$$
+L_{\mathcal{B}}(f) = [f]_{\mathcal{B}}
+$$ 
+from $V$ to $\mathbb{R}^n$ is an isomorphism. Thus any linear space $V$ is isomorphic to $\mathbb{R}^n$. 
+::: 
+
+::: {.proof }
+The proof if left for the reader.
+::: 
+
+An invertible linear transformation $T$ is called an \index{isomorphism} **isomorphism**. Recall the rank-nullity theorem states that if $V$ and $W$ are finite-dimensional vector spaces and $T$ is a linear transformation from $V$ to $W$ then $\text{dim}  V=\text{dim}  \ker T+\text{dim}  \text{im} T$ where $\text{dim}  \ker T$ is called the \index{nullity} **nullity** and $\text{dim}  \text{im} T$ is called the \index{rank} **rank**.
+
+::: {#thm- } 
+If $V$ and $W$ are finite-dimensional linear spaces, then 
+ 
+- $T$ is an isomorphism from $V$ to $W$ if and only if $\ker(T)= \{0\}$ and $\text{im} (T)=W$,
+- if $V$ is isomorphic to $W$, then $\text{dim} (V)=\text{dim} (W)$,
+- if $\text{dim} (V)=\text{dim} (W)$ and $\ker(T)=\{0\}$, then $T$ is an isomorphism, and
+- if $\text{dim} (V)=\text{dim} (W)$ and $\text{im}(T)=W$, then $T$ is an isomorphism.
+ 
+::: 
+
+::: {.proof }
+The proof of each part follows.
+ 
+- Suppose $T$ is an isomorphism from $V$ to $W$. This means there exists an invertible linear transformation $T^{-1}$ from $W$ to $V$ such that $T(T^{-1})=I_W$ and $T^{-1}(T)=I_V$, where $I_W$ and $I_V$ are the identity transformations on $W$ and $V$ respectively. We will use $T^{-1}$ to show $\ker  T=\{0\}$ and $\text{im}  T= W$. Since $\ker T$ is a subspace, $\{0\}\subset \ker T$. Conversely, suppose $f\in \ker T$. Then $T(f)=0$ and so $T^{-1}(T(f))=f=0$ so that $\ker T\subseteq \{0\}$. Thus  $\ker T = \{0\}$. Since $\text{im} T$ is a subspace of $W$, $\text{im} T\subseteq W$. To show conversely, let $w\in W$. Then $T^{-1}(w)\in V$ and so $T(T^{-1}w)=w$ shows $w\in \text{im} T$.  Thus $\text{im} T=W$. 
+
+Conversely, suppose $\ker T=\{0\}$ and $\text{im} T=W$. We will show $T$ is an isomorphism, which means we must show $T(f)=g$ has a unique solution $f$ for each $g\in W$. Now since $\text{im} T=W$, $T(f)=g$ has at least one solution, say $f$. Suppose $T(f)=g$ has two solutions, say $T(f_1)=g=T(f_2)$. Then $0=T(f_1)-T(f_2)=T(f_1-f_2)$
+shows $f_1-f_2\in \ker T$. Since $\ker T=\{0\}$, $f_1=f_2$ must follow, which means $T(f)=g$ must have only one solution, so that $T^{-1}$ exists, and therefore, $T$ is an isomorphism.  
+- If $V$ is isomorphic to $W$, then there exists a linear transformation $T$ such that $\ker T=\{0\}$ and $\text{im} T=W$. By the rank-nullity theorem, $\text{dim}  V=\text{dim}  \ker T + \text{dim}  \text{im} T=0+\text{dim}  W$.
+- By the previous part, $T$ is an isomorphism when $\ker =\{0\}$ and $\text{im} T=W$. We are assuming $\ker T=\{0\}$ so it remains to show $\text{im} T=W$. By the rank-nullity theorem $\text{dim}  V=\text{dim}  \ker T+\text{dim}  \text{im} T=\text{dim}  \ker T+\text{dim}  W=\text{dim}  W$. Thus, $\ker T=0$ and so $\ker T=\{0\}$. Therefore, $T$ is an isomorphism.
+- By the previous part, $T$ is an isomorphism when $\ker =\{0\}$ and $\text{im} T=W$. We are assuming $\text{im} T=W$ so it remains to show $\ker T=\{o\}$. By the rank-nullity theorem $\text{dim}  V=\text{dim}  \ker T+\text{dim}  \text{im} T=\text{dim}  \text{im} T=\text{dim}  W$. Therefore, $\text{im} T=W$ and so $T$ is an isomorphism.
+ 
+::: 
+
+::: {#exm- } 
+Show that the transformation $T(A)=S^{-1}AS$, from $\mathbb{R}^{2\times 2}$ to $\mathbb{R}^{2\times 2}$ where $S=\begin{bmatrix} 1 & 2 \\ 3 & 4  \end{bmatrix}$ is an isomorphism.
+Notice that $\text{dim}  \mathbb{R}^{2\times 2}=\text{dim}  \mathbb{R}^{2\times 2}$. Can we determine an invertible linear transformation $T^{-1}$? Checking the linearity conditions,$$
+T(A_1+A_2)=S^{-1}(A_1+A_2)S=S^{-1}A_1S+S^{-1}A_2S=T(A_1)+T(A_2)
+$$
+and$$
+T(k A)=S^{-1}(k A)S=kS^{-1}A S=k T(A).
+$$
+Now we know $T$ is a linear transformation. Is it invertible? We need to solve the equation, $B=S^{-1} A S$ for input $A$. We can do this because $S$ is an invertible matrix, so $S B=S(S^{-1}AS)=AS$ and multiplying by $S^{-1}$ on the right $S BS^{-1}=A$ so that $T$ is invertible, and the linear transformation is $T^{-1}(B)=S B S^{-1}$.
+
+::: 
+
+::: {#exm- } 
+Is the transformation $L( f)=\vectorthree{f(1)}{f(2)}{f(3)}$ from $\mathcal{P}_3$ to $\mathbb{R}^3$ an isomorphism?
+Since $\text{dim}  \mathcal{P}_3=4$ and $\text{dim}  \mathbb{R}^3=3$, the spaces $\mathcal{P}_3$ and $\mathbb{R}^3$ fail to be isomorphic, so that $L$ is not an isomorphism. 
+
+::: 
+
+::: {#exm- } 
+Is the transformation $L( f)=\vectorthree{f(1)}{f(2)}{f(3)}$ from $\mathcal{P}_2$ to $\mathbb{R}^3$ an isomorphism?
+Notice $\text{dim}  \mathcal{P}_2=3$ and $\text{dim}  \mathbb{R}^3=3$ so the dimensions of the domain and the target space have the same dimension. 
+Checking the linearity conditions,
+$$
+L(f_1+f_2)
+=\vectorthree{(f_1+f_2)(1)}{(f_1+f_2)(2)}{(f_1+f_2)(3)}
+=\vectorthree{f_1(1)}{f_1(2)}{f_1(3)}+\vectorthree{f_2(1)}{f_2(2)}{(f_2(3)}=L(f_1)+L(f_2)
+$$
+and
+$$
+T(k f)=\vectorthree{(k f)(1)}{(k f)(2)}{(kf)(3)}
+=k\vectorthree{f(1)}{f(2)}{f(3)}
+=k T(f).
+$$
+The kernel of $T$ consists of all polynomials $f(x)$ in $\mathcal{P}_2$ such that 
+$$
+T(f(x))=\vectorthree{f(1)}{f(2)}{f(3)}=\vectorthree{0}{0}{0}.
+$$ 
+Since a nonzero polynomial in $\mathcal{P}_2$ has at most two zeros, the zero polynomial is the only solution, so that $\ker T=\{0\}$. Therefore, $T$ is an isomorphism. 
+
+::: 
+
+::: {#exm- } 
+Determine whether the transformation $$T(M)=M\begin{bmatrix} 2 & 0 \\ 0 & 3  \end{bmatrix}-\begin{bmatrix} 3 & 0 \\ 0 & 4  \end{bmatrix}M$$ from $\mathbb{R}^{2\times 2}$ to $\mathbb{R}^{2\times 2}$ is an isomorphism.
+Notice that $\text{dim}  \mathbb{R}^{2\times 2}=\text{dim} \mathbb{R}^{2\times 2}$. Can we determine an invertible linear transformation $T^{-1}$? Checking the linearity conditions,$$
+\begin{array}{rl}
+T(M+N)
+&=(M+N)\begin{bmatrix} 2 & 0 \\ 0 & 3  \end{bmatrix}-\begin{bmatrix} 3 & 0 \\ 0 & 4  \end{bmatrix}(M+N) \\
+&=M\begin{bmatrix} 2 & 0 \\ 0 & 3  \end{bmatrix}-\begin{bmatrix} 3 & 0 \\ 0 & 4  \end{bmatrix}M
++ N\begin{bmatrix} 2 & 0 \\ 0 & 3  \end{bmatrix}-\begin{bmatrix} 3 & 0 \\ 0 & 4  \end{bmatrix}N  =T(M)+T(N)
+\end{array}
+$$
+and$$
+\begin{array}{rl}
+T(k M)
+& =(kM)\begin{bmatrix} 2 & 0 \\ 0 & 3  \end{bmatrix}-\begin{bmatrix} 3 & 0 \\ 0 & 4  \end{bmatrix}(Mk) \\
+& =k \left ( M\begin{bmatrix} 2 & 0 \\ 0 & 3  \end{bmatrix}-\begin{bmatrix} 3 & 0 \\ 0 & 4  \end{bmatrix}M \right ) k
+ = k T(M)
+\end{array}
+$$
+The kernel of $T$ consists of $M=\begin{bmatrix} a & b \\ c & d  \end{bmatrix}$ such that$$
+\begin{bmatrix} a & b \\ c & d  \end{bmatrix}
+\begin{bmatrix} 2 & 0 \\ 0 & 3  \end{bmatrix}-\begin{bmatrix} 3 & 0 \\ 0 & 4  \end{bmatrix}
+\begin{bmatrix} a & b \\ c & d  \end{bmatrix}
+=
+\begin{bmatrix} -a & 0 \\ -2c & -d  \end{bmatrix}
+\begin{bmatrix} 0 & 0 \\ 0 & 0  \end{bmatrix}.
+$$
+Thus $a=c=d=0$. However, when $M=\begin{bmatrix} 0 & 1 \\ 0 & 0  \end{bmatrix}$ then $T(M)=0$ so that $\ker T \neq \{0\}$, and so $T$ is not an isomorphism. 
+
+::: 
+
+::: {#exm- } 
+Determine whether the transformation $T(f(t))=\vectorthree{f(1)}{f'(2)}{f(3)}$ from $\mathcal{P}_2$ to $\mathbb{R}^3$ is a linear transformation. Then determine whether $T$ is an isomorphism and if not then find its image and kernel.
+This transformation is linear since$$
+T(f(t)+g(t))=\vectorthree{f(1)+g(1)}{f'(2)+g'(2)}{f(3)+g(3)}=
+\vectorthree{f(1)}{f'(2)}{f(3)}+ \vectorthree{g(1)}{g'(2)}{g(3)}=
+T(f(t))+T(g(t))
+$$
+and
+$$
+T(k f(t))=\vectorthree{kf(1)}{k f'(2)}{k f(3)}=
+k \vectorthree{f(1)}{f'(2)}{f(3)}=
+k T(f(t)).
+$$
+Since $T(t-1)(t-3))=T(t^2-4t+3)=\vec 0$ shows $\ker T \neq \{0\}$, T is not an isomorphism.
+
+::: 
+
+::: {#thm- } 
+A linear map is invertible if and only if it is injective and surjective.
+::: 
+
+::: {.proof }
+Suppose $T\in \mathcal{L}(V,W)$ is invertible with inverse $T$. Let $u,v\in V$. If $Tu=Tv$ then 
+$$u=(T^{-1})u)=T^{-1}(Tu)=T^{-1}(Tv)=(T^{-1}T)(v)=v$$ 
+and so $T$ is injective. If $w\in W$, then $v=T^{-1} w\in V$ with $T v=T(T^{-1}w)=w$ shows $T$ is surjective. Assume $T$ is injective and surjective. For each $w\in W$ assign $T(v)=w$. Such $S(w)=v$ exists because $T$ is surjective and is unique since $T$ is injective. Then $T(v)=w$ shows $ST(v)=S(w)=v$ so that $ST$ is the identity on $V$. Also, $TS(w)=T(Sw)=Tv=w$ shows $TS$ is the identity on $W$. Thus $S$ and $T$ are inverses. 
+
+Now $S$ is linear since:
+ 
+- if $w_1,w_2\in W$, then there exists a unique $v_1$ and $v_2$ such that $Tv_1=w_1$ and $Tv_2=w_2$, $S(w_1)=v_1$, and $S(w_2)=v_2$. By linearity of $T$, $S(w_1+w_2)=S(T v_1+Tv_2)=(ST)(v_1+v_2)=v_1+v_2=S(w_1)+S(w_2)$.
+- If $w\in W$ and $k\in \mathbb{F}$ then there exists a unique $v\in V$ such that $Tv=w$ and $S(w)=v$. By linearity of $T$, $S(kw)=S(k Tv)=S(T k v)=k v=kS(w)$.
+ 
+Therefore $S$ is linear and is the inverse of $T$.
+::: 
+
+Consider the transformation 
+$$
+L \left( \, \begin{bmatrix} a & b \\ c & d  \end{bmatrix} \, \right)=\vectorfour{a}{b}{c}{d}
+$$
+from $\mathbb{R}^{2\times 2}$ to $\mathbb{R}^4$. Note that $L$ is the coordinate transformation $L_{\mathcal{B}}$ with respect to the basis
+$$
+\mathcal{B}=
+\left( 
+\begin{bmatrix} 1 & 0 \\ 0 & 0  \end{bmatrix},
+\begin{bmatrix} 0 & 1 \\ 0 & 0  \end{bmatrix},
+\begin{bmatrix} 0 & 0 \\ 1 & 0  \end{bmatrix},
+\begin{bmatrix} 0 & 0 \\ 0 & 1  \end{bmatrix}
+\right)
+$$
+Being a coordinate transformation, $L$ is both linear and invertible. Therefore $L$ is an isomorphism. 
+
+::: {#thm- } 
+Let $T$ be the linear transformation from $V$ to $V$ and let $B$ be the matrix of $T$ with respect to a basis $\mathcal{B}=(f_1,\ldots,f_n)$ of $V$. Then 
+$$
+B=
+\begin{bmatrix}[T(f_1)]_{\mathcal{B}} & \cdots & [T(f_n)]_{\mathcal{B}}]
+\end{bmatrix}
+$$
+In other words, the columns of $B$ are the $\mathcal{B}$-coordinate vectors of the transformation of the basis elements $f_1,\ldots,f_n$ of $V$. 
+::: 
+
+::: {.proof }
+The proof if left for the reader.
+::: 
+
+::: {#thm- } 
+Two finite-dimensional vector spaces are isomorphic if and only if they have the same dimension.
+::: 
+
+::: {.proof }
+Suppose $V$ and $W$ are finite-dimensional vector spaces that are isomorphic. If $\text{dim}  V > \text{dim}  W$, then no linear map between $T$ and $W$ can be injective. Thus $V$ and $W$ are not isomorphic contrary to hypothesis. If $\text{dim}  V < \text{dim}  W$, then no linear map between $V$ and $W$ can be surjective. Thus $V$ and $W$ are not isomorphic contrary to hypothesis. Therefore, $\text{dim}  V =\text{dim}  W$. 
+
+Suppose $V$ and $W$ are vector spaces with $\text{dim}  V=\text{dim}  W=n$. Let $(v_1,\ldots,v_n)$ ba a basis of $V$ and let $(w_1,\ldots,w_n)$ be a basis of $W$. Define a linear map $T$ by $T(a_1 v_1+\cdots +a_n v_n)=a_1 w_1+\cdots +a_n w_n$. It's an easy exercise to show $T$ is linear, injective, and surjective. Thus $T$ is an isomorphism as required.
+::: 
+
+::: {#thm- } 
+\label{simrep}
+If $A$ and $B$ are matrices of a linear transformation $T$ with respect to different bases, then $A$ and $B$ are similar matrices.
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#thm- } 
+Suppose $V$ and $W$ are finite-dimensional vector spaces, then $\mathcal{M}$ is an invertible linear map between $\mathcal{L}(V,W)$ and $Mat(m,n,\mathbb{F})$
+::: 
+
+::: {.proof }
+Suppose $(v_1,\ldots,v_n)$ and $w_1,\ldots,w_m)$ are bases of $V$ and $W$ respectively. For each $T\in \mathcal{L}(V,W)$ we assign,$$
+\mathcal{M}(T)=\begin{bmatrix}a_{11} & & a_{1n}  \\ \vdots & \cdots & \vdots \\ a_{m1} & & a_{mn} \end{bmatrix}.
+$$
+where $T v_k=a_{1k} w_1+\cdots + a_{mk} w_m$. Since $(w_1,\ldots,w_m)$ is a basis of $W$, This assigment is well-defined. The following arguments show $\mathcal{M}$ is linear, injective, and surjective, respectively. 
+ 
+- If $S,T\in \mathcal{L}(V,W)$, then $\mathcal{M}(S+T)=\mathcal{M}(S)+\mathcal{M}(T)$ follows by the definition of matrix addition. If $S\in \mathcal{L}(V,W)$ and $k\mathbb{F}$, then $\mathcal{M}(kS)=k\mathcal{M}(S)$ follows by the definition of scalar multiplication of matrices. 
+- If $T\in \mathcal{L}(V,W)$ with $\mathcal{M}(T)=0$, then for entries in $[a_{ij}]$ are zero showing $T v_k=0$ for each $k$. Since $(v_1,\ldots,v_n)$ is a basis of $V$, $T$ must be the zero map, and so $\text{ker} \mathcal{M}=\{0\}$. Therefore, $\mathcal{M}$ is injective. 
+- If $A \in Mat(m,n,\mathbb{F})$ then $A$ is an $m\times n$ matrix with entries $[a_{ij}]$. We define $Tv_k=a_{1k} w_1+\cdots a_{mk} w_m$ for each $k$. Then, by the definition of the matrix of a linear map, $\mathcal{M}(T)=A$ and so $\mathcal{M}$ is surjective. 
+::: 
+
+::: {#thm- } 
+If $V$ and $W$ are finite-dimensional, then $\mathcal{L}(V,W)$ is finite-dimensional and $\text{dim}  \mathcal{L}(V,W) =(\text{dim}  V) (\text{dim}  W)$.
+::: 
+
+::: {.proof }
+If $V$ and $W$ are  finite-dimensional vector spaces then $\mathcal{L}(V,W)$ is isomorphic to $Mat(m,n,\mathbb{F})$ where $n=\text{dim}  V$ and $m=\text{dim}  W$.
+If follows
+$$
+\text{dim}  \mathcal{L}(V,W) =\text{dim}  Mat(mn,\mathbb{F})= m n=(\text{dim}  W)(\text{dim}  V).
+$$
+since $\text{dim}  Mat(m,n,\mathbb{F})= m n$.
+::: 
+
+::: {#thm- } 
+If $V$ is finite-dimensional and $T\in \mathcal{L}(V)$, the the following are equivalent: 
+
+- $T$ is invertible,
+- $T$ is injective, and 
+- $T$ is surjective.
+::: 
+
+::: {.proof }
+The proof of each part follows.
+ 
+- Suppose $T$ is invertible, then by definition $T$ is injective. 
+- Suppose $T$ is injective. Thus $\text{ker} T=\{0\}$. Since $V$ is finite-dimensional, we can apply the Rank-Nullity Theorem so $\text{dim}  V=\text{dim}  \text{im} T$. Since $\text{im} T$ is a subspace of $V$ with the same dimension as $V$, $\text{im} T=V$. Therefore, $T$ is surjective. 
+- Suppose $T$ is surjective. Then $T(V)=V$ and so $\text{dim}  V=\text{dim}  \text{im} T$. Since $V$ is finite-dimensional, $\text{dim}  V=\text{dim}  \text{ker} T+\text{dim}  \text{im}$ T by the Rank-Nullity Theorem. Thus, $\text{dim}  \text{ker} T =0$ and so $\text{ker} T=\{0\}$. Therefore, $T$ is injective, and since $T$ is injective and surjective, $T$ is invertible. 
+::: 
+
+
+
+
+## Kernel and Image of a Linear Transformation
+
+
+In this section we introduce the kernel and image of a linear transformation. We show how they can be realized as geometric objects and demonstrate how to find spanning sets for them. 
+
+::: {#def- } 
+Let $T$ be a linear transformation from $\mathbb{R}^m$ to $\mathbb{R}^n$ with $n\times m$ matrix $A$. 
+ 
+- The \index{kernel} **kernel** of $T$, denoted by $\ker(T)$, is the set of all vectors $\vec x$ in $\mathbb{R}^n$ such that $T(\vec x)=A \vec x = \vec 0$.
+- The \index{image} **image** of $T$, denoted by $\text{im}(T)$, is the set of all vectors in $\mathbb{R}^n$ of the form $T (\vec x)=A\vec x$. 
+ 
+The kernel and image of a matrix $A$ of $T$ is defined as the kernel and image of $T$. 
+::: 
+
+Now to adequately describe the kernel and image of a linear transformation we need the concept of the span of a collection of vectors. 
+We will see that one of the best ways to describe the kernel and image of a linear transformation is to describe them in terms of collections of linear combinations of vectors. 
+
+The next three lemmas describe basic properties of kernel and image.
+
+::: {#lem- } 
+The kernel of any linear transformation $T$ has the following properties:
+ 
+- $\vec 0 \in \ker(T)$, 
+- if $\vec v, \vec w\in \ker(T)$, then $\vec v+\vec w\in \ker(T)$, and 
+- if $\vec v\in \ker(T)$ and $k\in \mathbb{R}$, then $k\vec v\in \ker(T)$.
+ 
+::: 
+
+::: {.proof }
+Let $A$ be the matrix for $T$. Then $A\vec 0=\vec 0$ which shows $\vec 0 \in \ker(T)$. If $\vec v, \vec w\in \ker(T)$, then 
+$A\vec v=\vec 0$ and $A\vec w=\vec 0$. Thus, $A\vec v+A\vec w=A(\vec v+\vec w)=\vec 0$ implying $\vec v+\vec w\in \ker(T)$. If $\vec v\in \ker(T)$ and $k\in \mathbb{R}$, then $\vec 0=A\vec v$ implying $A(k \vec v)=\vec 0$. Thus, $k\vec v\in \ker(T)$.
+::: 
+
+::: {#lem- }  
+Let $T$ be a linear transformation with matrix $A$. 
+ 
+- If $A$ is an $n\times n$ matrix, then $\ker(A)=\{\vec 0\}$ if and only if $\text{rank} (A)=n$.
+- If $A$ is an $n\times m$ matrix, then 
+ 
+- $\ker(A)=\{\vec 0\} \implies m\geq n$
+- $m>n \implies \ker(A)$ contains non-zero vectors
+ 
+- If $A$ is a square matrix, then $\ker(A)=\{\vec 0\}$ if and only if $A$ is invertible. 
+ 
+::: 
+
+::: {.proof }
+If $T$ is a linear transformation $T(\vec x )=A\vec x$ from $\mathbb{R}^m$ to $\mathbb{R}^n$ where $m>n$, then there will be free variables for the equation $T(\vec x)=A\vec x=\vec 0$; that is the system will have infinitely many solutions. Therefore, the kernel of $T$ will consists of infinitely many vectors. If $m=n$ and for an invertible $n\times n$ matrix $A$, how do we find $\ker(A)$? Since $A$ is invertible, $A\vec x=\vec 0$ can be solved by $A^{-1}(A \vec x)=A^{-1}\vec 0$ showing $\vec x=\vec 0$; that is the only solution to the system $A \vec x=\vec 0$ is $\vec 0$ so that $\ker(A)=\{\vec 0\}$ whenever $A$ is invertible. 
+::: 
+
+::: {#lem- } 
+The image of any linear transformation $T$ has the following properties:
+ 
+- $\vec 0 \in \text{im}(T)$, 
+- if $\vec v, \vec w\in \text{im}(T)$, then $\vec v+\vec w\in \text{im}(T)$, and 
+- if $\vec v\in \text{im}(T)$ and $k\in \mathbb{R}$, then $k\vec v\in \text{im}(T)$.
+ 
+::: 
+
+::: {.proof }
+Let $A$ be the matrix for $T$. Then $A\vec 0=\vec 0$ which shows $\vec 0 \in \text{im}(T)$. 
+If $\vec v, \vec w\in \text{im}(T)$, then there exists $\vec x$ and $\vec y$ such that 
+$A\vec x=\vec v$ and $A\vec y=\vec w$. 
+Thus, $\vec v+\vec w=A\vec x+A\vec y=A(\vec x+\vec y)$ implying $\vec v+\vec w\in \text{im}(T)$. If $\vec v\in \text{im}(T)$ and $k\in \mathbb{R}$, then there exists $\vec u$ such that $\vec v=A\vec u$ implying $A(k \vec u)=k \vec v$. Thus, $k\vec v\in \text{im}(T)$.
+::: 
+
+::: {#thm- } 
+\label{imspan}
+Let $T:\mathbb{R}^m\to \mathbb{R}^n$ be a linear transformation with matrix $A$. Then 
+$\text{im}(T)=\text{span}(\vec v_1, ....,\vec v_m)$ where $\vec v_1, ..., \vec v_m$ are the column vectors of $A$.
+::: 
+
+::: {.proof }
+Since $\vec v_1,...,\vec v_m$ are the column vectors of $A$ 
+\begin{equation}
+\label{lineq}
+T(\vec x)=
+A \vec x =
+\begin{bmatrix}
+\vec v_1 & \cdots & \vec v_m
+\end{bmatrix}
+\vectorthree{x_1}{\vdots}{x_m}=x_1 v_1+\cdots + x_m v_m. 
+\end{equation}
+If $\vec u\in \text{span}(\vec v_1, ....,\vec v_m)$ then there exists $x_1, ..., x_m$ such that $u=x_1 v_1+\cdots +x_m v_m$. By  \ref{lineq}, $u=T(\vec x)$ for $\vec x\in \mathbb{R}^m$. Thus, $\vec u\in \text{im}(T)$. Conversely, assume $\vec u\in\text{im}(T)$. Then there exists $\vec x$ such that $\vec u=T(\vec x)$. By  \ref{lineq}, there exists $x_1, ...,x_m$ such that $u=x_1 v_1+\cdots +x_m v_m$. Therefore, $\vec u \in \text{span}(\vec v_1, ....,\vec v_m)$ and so $\text{im}(T)=\text{span}(\vec v_1, ....\vec v_m)$ follows.::: 
+
+::: {#exm- } 
+Find vectors that span $\ker(A)$ and $\text{im}(A)$ given 
+$$
+A=
+\begin{bmatrix}
+2 & 1 & 3 \\
+3 & 4 & 2 \\
+6 & 5 & 7
+\end{bmatrix}.
+$$
+Describe $\text{im}(A)$ geometrically.
+To first find a spanning set of $\ker(A)$ we solve the system $A\vec x=\vec 0$. We use the augmented matrix and elementary row operations and find reduced row-echelon form
+$$
+\text{rref}(A)=
+\begin{bmatrix}
+1 & 0 & 2 & 0 \\
+0 & 1 & -1 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}.
+$$
+Thus the solution set is 
+$$
+\vectorthree{x_1}{x_2}{x_2}=t\vectorthree{-2}{1}{1}:=t\vec{w}
+$$ 
+where $t\in \mathbb{R}$. 
+Therefore $\ker(A)=\text{span}(\vec{w})$. 
+Next we find $\text{im}(A).$ To do so let $\vec v_1, \vec v_2, \vec v_3$ be the column vectors of the matrix 
+$A$. 
+Since $\text{im}(A)$ is spanned by the columns of $A$ and 
+$\vec v_3=2\vec v_1+(-1)\vec v_2$, we find  $\text{im}(A)=\text{span}\left(\vec v_1, \vec v_2\right)$.
+Therefore the image of $A$ is a plane in $\mathbb{R}^3$ that passes through the origin.
+
+::: 
+
+::: {#exm- } 
+Give an example of a matrix $A$ such that $\text{im}(A)$ is the plane with normal vector $\vec w=\vectorthree{1}{3}{2}$ in $\mathbb{R}^3$.
+Since $\vec w$ is a normal vector we let $A=\begin{bmatrix} 1& 3 & 2\end{bmatrix}$. First we find 
+$\ker(A)$ because 
+$$
+\begin{bmatrix} 1& 3 & 2\end{bmatrix} \vectorthree{x}{y}{z}=\vectorthree{0}{0}{0}
+$$ 
+is the plane $x+3y+2z=0$ where  $\vec w$ is a normal vector.
+Let $z=t$ and $y=s$, then $x=-3s-2t$ so the solutions to the system $A\vec x=\vec 0$ are 
+$$
+\vectorthree{x}{y}{z}=\vectorthree{-3s-2t}{s}{t}=s\vectorthree{0}{1}{-3}+t\vectorthree{1}{0}{-2}
+:=s\vec u+t \vec v
+$$ 
+where $s$ and $t$ are real numbers; and thus $\ker(A)=\text{span}(\vec{u}, \vec{v})$. 
+These vectors yield the image of $A$ since $\text{im}(A)$ is the plane with normal vector $\vec w$ so 
+$A$ is one such matrix; and $\text{im}(A)=\text{span}(\vec{u}, \vec{v})$ 
+is the plane in $\mathbb{R}^3$ with normal vector $\vec{w}$.
+
+::: 
+
+The kernel, being the most important subspace, has a special name for its dimension; namely, the dimension of $\ker A$ is called the \index{nullity} **nullity** of $A$. 
+
+::: {#exm- } 
+Find the reduced row-echelon form of the matrix
+$$
+A=
+\begin{bmatrix}
+1 & 2 & 3 & 2 & 1 \\
+3 &  6 & 9 & 6 & 3 \\
+1 & 2 & 4 & 1 & 2 \\
+2 & 4 & 9 & 1 & 2
+\end{bmatrix}.
+$$
+Find a basis and state the dimension for the image and kernel of 
+$A$.  
+
+::: 
+
+
+
+::: {#exm- } 
+Find vectors that span $\ker(A)$ and $\text{im}(A)$ given 
+$$
+A=
+\begin{bmatrix}
+1 & -1 & -1 & 1 & 1 \\
+-1 & 1 & 0 & -2 & 2 \\
+1 & -1 & -2 & 0 & 3 \\
+2 & -2 & -1 & 3 & 4
+\end{bmatrix}.
+$$
+We will solve the system $A\vec x=\vec 0$ to find $\ker(A)$.
+Using the augmented matrix and elementary row operations, we find 
+$$
+\text{rref}(A)=
+\begin{bmatrix}
+1 & -1 & 0 & 2 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0
+\end{bmatrix}.
+$$
+So the solutions to the system $A\vec x=\vec 0$ are 
+$$
+\vectorfive{x_1}{x_2}{x_3}{x_4}{x_5}=\vectorfive{s-2t}{s}{-t}{t}{0}=s\vectorfive{1}{1}{0}{0}{0}+t\vectorfive{-2}{0}{-1}{1}{0}:=s\vec{u}+t\vec{v}
+$$
+where $s,t\in \mathbb{R}$. Therefore $\ker(A)=\text{span}(\vec{u},\vec{v}).$
+Since $\text{im}(A)$ is the span of the column vectors of $A$, we let 
+$\vec{v}_1,\vec{v}_2,\vec{v}_3,\vec{v}_4,\vec{v}_5$ be the column vectors of $A$. By \ref{imspan}, 
+$\text{im}(A)=\text{span}(\vec{v}_1,\vec{v}_2,\vec{v}_3,\vec{v}_4,\vec{v}_5).$
+Using $\text{rref}(A)$ as a guide, we notice $\vec{v}_2=(-1)\vec{v}_1$ so we eliminate $\vec{v}_2$. Also, 
+$\vec{v}_4=(2)\vec{v}_1+\vec{v}_3$ so we also eliminate $\vec{v}_4$.
+Therefore, $\text{im}(A)=\text{span}(\vec{v}_1,\vec{v}_2,\vec{v}_5)$.
+
+::: 
+
+::: {#exm- } 
+Give an example of a linear transformation whose kernel is the line spanned by 
+$\vec{w}=\begin{bmatrix}-1 \\ 1 \\2\end{bmatrix}$.
+Considering the intersection of the planes $x+y=0$ and $2x+z=0$, we try to use the linear transformation, $$
+T(\vec{x})
+=T\vectorthree{x}{y}{z}=\vectortwo{x+y}{2x+z}
+=\begin{bmatrix}
+1 & 1 & 0\\
+2 & 0 & 1 
+\end{bmatrix}\vec{x}:=A\vec{x}. $$
+To find the kernel of $T$ we solve $A \vec x= \vec 0$. Since
+$\text{rref}(A)=\begin{bmatrix}
+ 1 & 0 & 1/2 \\
+ 0 & 1 & -1/2
+\end{bmatrix}$
+the solutions are of the form $t \vec{w}$ where $t$ is a real number. Therefore it suffices to let $T$ be the requested linear transformation. 
+
+::: 
+
+::: {#exm- } 
+Express the line $L$ in $\mathbb{R}^3$ spanned by the vector 
+$\vec{w}=\begin{bmatrix} 1 \\1 \\1  \end{bmatrix}$ 
+as the image of a matrix $A$ and as the kernel of a matrix $B$.
+Let $A=\vec{w}$, then $L=\text{im}(A)=\text{span}(\vec{w})$. 
+Therefore it suffices to let $A$ be the requested matrix. 
+Considering the intersection of the planes $x=y$ and $y=z$, we try to find $B$ using the linear transformation 
+$$
+T(\vec{x})
+=T\vectorthree{x}{y}{z}=\vectortwo{x-y}{y-z}
+=\begin{bmatrix}
+1 & -1 & 0\\
+0 & 1 & -1
+\end{bmatrix}
+:= B \vec{x}
+$$ 
+To find the kernel of $T$ we solve $B \vec x= \vec 0$. Since 
+$\text{rref}(B)=\begin{bmatrix}
+ 1 & 0 & -1 \\
+ 0 & 1 & -1
+\end{bmatrix}$ 
+the solutions are of the form $t \vec{w}$ where $t$ is a real number. 
+Therefore it suffices to let $B$ be the other requested matrix. 
+
+::: 
+
+::: {#exm- } 
+Find a basis for the kernel and the image of the linear transformations defined by
+$$
+T_1 = \left \{
+\begin{array}{rl} 
+y_1 = & x_1+x_2+3x_3 \\
+y_2 = & 2x_1+x_2+4x_3 
+\end{array} 
+\right . 
+\qquad \text{with} \qquad 
+\text{rref}(T_1)  = \begin{bmatrix}
+1 & 0 &1 \\
+0 & 1 & 2
+\end{bmatrix}.
+$$
+All solutions to the system $A\vec x=\vec 0$ are 
+$\vectorthree{x_1}{x_2}{x_3}=t\vectorthree{-1}{-2}{1}$
+where $t\in\mathbb{R}$.
+Since $\vectorthree{-1}{-2}{1}$ is linearly independent and spans the kernel, the vector $\vectorthree{-1}{-2}{1}$ forms a basis of $\ker(A)$. Since the columns of $A$ spans the image of $A$ and $\vectortwo{3}{4}=(1)\vectortwo{1}{2}+(2)\vectortwo{1}{1}$ we find the vector $\vectortwo{3}{4}$ redundant. Since the remaining vectors are linearly independent and span $\text{im}(A)$, they form a basis for $\text{im}(A)$.
+
+::: 
+
+::: {#exm- } 
+Find a basis for the kernel and the image of the linear transformations defined by
+$$
+T_2 = 
+\left \{
+\begin{array}{rlll}
+y_1= & x_1 +3x_2 +9x_3  \\
+y_2= & 4x_1+5 x_2 +8x_3  \\
+y_3= & 7x_1+6 x_2 +3x_3  \\
+\end{array}
+\right . 
+\qquad \text{with} \qquad 
+\text{rref}(T_2)  = \begin{bmatrix}
+ 1 & 0 & -3 \\
+ 0 & 1 & 4 \\
+ 0 & 0 & 0
+\end{bmatrix}
+$$
+To find a basis of the kernel we solve $A\vec x = \vec 0$ where $A$ is the matrix of the given transformation. Since 
+$$
+\text{rref(A)}=
+\begin{bmatrix} 1 & 0 &-3 \\ 0 & 1 & 4 \\ 0 & 0 & 0 \end{bmatrix}
+$$
+all solutions have the form $\vectorthree{3t}{-4t}{t}$. Therefore a basis of the kernel of $A$ is $\vectorthree{3}{-4}{1}$.
+In the original matrix $A$ the third column is redundant since $\vectorthree{9}{8}{3}=(-3)\vectorthree{1}{4}{7}+(4)\vectorthree{3}{5}{6}$, and since the vectors $\vectorthree{1}{4}{7}$ and $\vectorthree{3}{5}{6}$ are linearly independent and span, they form a basis of $\text{im}(A)$.
+
+::: 
+
+::: {#exm- } 
+Find a basis for the kernel and the image of the linear transformations defined by
+$$
+T_3 = 
+\left \{
+\begin{array}{rlllll}
+y_1= & 4x_1+8 x_2 +x_3 +x_4+6x_5 \\
+y_2= & 3x_1+6 x_2 +x_3 +2x_4+5x_5 \\
+y_3= & 2x_1+4 x_2 +x_3 +9x_4+10x_5 \\
+y_4= & x_1+ 2x_2 + 3x_3 +2x_4 \\
+\end{array}
+\right . 
+\quad \text{with} \quad 
+\text{rref}(T_3)  = \begin{bmatrix}
+1 & 2 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 &1
+\end{bmatrix}
+$$
+The solutions to the system $A\vec x=\vec 0$ are 
+$$
+\vec x=\vectorfive{x_1}{x_2}{x_3}{x_4}{x_5}=t \vectorfive{-2}{1}{0}{0}{0}=t \vec v \qquad \text{where $t\in\mathbb{R}$.}
+$$
+The vector $\vec v$ is linearly independent and spans $\ker(A)$; thus it forms a basis for $\ker(A)$. Since $\vectorfour{8}{6}{4}{2}=2\vectorfour{4}{3}{2}{1}$ the vector $\vectorfour{8}{6}{4}{2}$ is redundant and since the column vectors of $A$ are linearly independent and span $\text{im}(A)$, we have that the vectors $\vectorfour{4}{3}{2}{1}$,  $\vectorfour{1}{1}{1}{3}$,  $\vectorfour{1}{2}{9}{2}$, and  $\vectorfour{6}{5}{10}{0}$ form a basis of $\text{im}(A)$.
+
+::: 
+
+::: {#exm- } 
+Show $\ker(A)\neq \ker(B)$ where
+$$
+A=
+\begin{bmatrix}
+1 & 0 & 2 & 0 & 4 & 0 \\
+0 & 1 & 3 & 0 & 5 & 0 \\
+0 & 0 & 0 & 1 & 6 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1
+\end{bmatrix}
+\qquad \text{and} \qquad
+%$ and $
+B=
+\begin{bmatrix}
+1 & 0 & 2 & 0 & 0 & 4 \\
+0 & 1 & 3 & 0 & 0 & 5 \\
+0 & 0 & 0 & 1 & 0 & 6 \\
+0 & 0 & 0 & 0 & 1 & 7
+\end{bmatrix}.
+$$
+We solve the system $A\vec x=\vec 0$, written out we find:
+$$
+\begin{bmatrix}
+x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6
+\end{bmatrix}
+= s
+\begin{bmatrix}
+-4 \\ -5 \\ 0 \\ 6 \\ 1 \\ 0
+\end{bmatrix}
++t
+\begin{bmatrix}
+-2 \\ -3 \\ 1\\ 0 \\ 0 0 
+\end{bmatrix}
+=s\vec v_1+t\vec v_2
+\quad \text{ where $s,t\in \mathbb{R}$}.
+$$
+Since $v_1$ and $v_2$ are linearly independent and span 
+$\ker(A)$, they form a basis of the kernel of $A$. By noticing 
+$B \vec v_1\neq \vec 0$ we conclude $\ker(A)\neq \ker(B)$.
+
+::: 
+
+::: {#thm- } 
+\label{dimenimgrank}
+For any matrix $A$, $\dim(\text{im} A )=\text{rank}(A)$. 
+::: 
+
+::: {.proof }
+::: 
+
+::: {#thm- } [Rank-Nullity]
+Let $T$ be a linear transformation from $\mathbb{R}^m$ to $\mathbb{R}^n$ with $n\times m$ matrix $A$. Then 
+$$
+\text{rank}(A)+\text{nullity}(A)
+=\dim(\text{im} A)+\dim(\ker A)=m.
+$$
+::: 
+
+::: {.proof }
+Let $\vec{y}=A\vec{x}$ be the corresponding system of linear equations. Recall,  
+\begin{equation}
+\label{varequ} \small
+\begin{tabular}{ccccccc} 
+$\left(\parbox[c]{1.55cm}{\begin{center}
+number of free variables
+\end{center}}\right)$ & $=$  & 
+$\left(\parbox[c]{1.55cm}{\begin{center}
+total number of variables
+\end{center}}\right)$ & $-$  & 
+$\left(\parbox[c]{1.55cm}{\begin{center}
+number of leading variables
+\end{center}}\right)$ & $=$  
+& $\parbox[c]{1.75cm}{\begin{center}
+\normalsize
+$m-\text{rank}(A)$
+\end{center}}$
+\end{tabular} 
+\end{equation}
+Apparently, the number of free variables is the dimension of the kernel of $A$. Thus \ref{varequ} becomes $\text{nullity}(A)=m-\text{rank}(A)$. By \ref{dimenimgrank} we arrive at the conclusion $\text{rank}(A)+\text{nullity}(A)=m$.
+::: 
+
+::: {#exm- } 
+If possible, find a $3\times 3$ matrix such that $\text{im} A=\ker A$.
+
+::: 
+
+::: {#exm- } 
+If possible, find a $4\times 4$ matrix such that $\text{im} A=\ker A$.
+
+::: 
+
+::: {#exm- } 
+Give an example of a $4\times 5$ matrix $A$ with 
+$\dim(\ker A)=3$.
+
+::: 
+
+::: {#thm- } 
+The vectors $\vec{v}_1,\ldots,\vec{v}_n$ in $\mathbb{R}^n$ form a basis of $\mathbb{R}^n$ if and only if the matrix whose columns consists of $\vec{v}_1,...,\vec{v}_n$ is invertible. 
+::: 
+
+::: {.proof }
+::: 
+
+For example, consider the matrix 
+$$
+A=
+\begin{bmatrix}
+1 & 2 & 1 & 2 \\
+1 & 2 & 2 & 3 \\
+1 & 2 & 3 & 4
+\end{bmatrix}
+$$ 
+What is the smallest number of vectors needed to span the image of $A$? Of course we know, 
+$$
+\text{im}(A)=\text{span}\left(\vectorthree{1}{1}{1},\vectorthree{2}{2}{2},\vectorthree{1}{2}{3},\vectorthree{2}{3}{4}\right).
+$$
+However, it is easy to show that $\vectorthree{2}{3}{4}$ and $\vectorthree{2}{2}{2}$ are redundant; and that the remaining vectors are linearly independent. Thus, 
+$$
+\text{im}(A)=\text{span}\left(\vectorthree{1}{1}{1},\vectorthree{1}{2}{3}\right).
+$$
+Clearly, the image of the linear transformation defined by $A$ is more easily understood by having a spanning set of linearly independent vectors.
+
+
+
+
+## Invertible Linear Transformations
+
+An $n\times n$ matrix $A$ is called \index{invertible} **invertible** if and only if there exists a matrix $B$ such that $A B=I_n$ and $BA=I_n$. Using the inverse of a matrix we also define the inverse of a linear transformation.  
+Let $T(\vec x)=A\vec x$ be a linear transformation from $\mathbb{R}^n$ to $\mathbb{R}^n$.  If the matrix $A$ has inverse $A^{-1}$, then the linear transformation defined by $A^{-1} \vec x$ is called the \index{inverse transformation} **inverse transformation** of $T$ and is denoted by $T^{-1}(\vec x)=A^{-1}.$ 
+
+A function $T$ from $X$ to $Y$ is called \index{invertible} **invertible** if the equation $T(x)=y$ has a unique solution $x\in X$ for each $y\in Y$. A square matrix $A$ is called \index{invertible} **invertible** if the linear transformation $\vec y=T(\vec x)=A\vec x$ is invertible. In this case, then matrix of $T^{-1}$ is denoted by $A^{-1}$. If the linear transformation is invertible, then its inverse is $\vec x = T^{-1} (\vec y)=A^{-1}.$
+
+::: {#exm- } 
+Find the inverse transformation of the following linear transformation:
+$$
+\begin{array}{rl}
+y_1 = & x_1+3x_2+3x_3 \\
+y_2 = & x_1+4x_2+8x_3 \\
+y_3 = & 2x_1+7x_2+12x_3
+\end{array}.
+$$
+To find the inverse transformation we solve for $x_1, x_2, x_3$ in terms of $y_1,.y_2,y_3$.
+To do this we find the inverse matrix of 
+$$
+A=
+\begin{bmatrix}
+1 & 3 & 3 \\
+1 & 4 & 8 \\
+2 & 7 & 12
+\end{bmatrix}.
+$$
+Applying elementary-row operations,
+$$
+\begin{bmatrix}
+1 & 3 & 3 & 1 & 0 & 0 \\
+1 & 4 & 8 & 0 & 1 & 0 \\
+2 & 7 & 12 & 0 & 0 & 1
+\end{bmatrix}\begin{array}{c}
+\stackrel{\longrightarrow}{R_2-R_1} \\
+\stackrel{\longrightarrow}{-2R_1+R_3}
+\end{array}
+\begin{bmatrix}1 & 3 & 3 & 1 & 0 & 0 \\
+0 & 1 & 5 & 1 & 1 & 0 \\
+0 & 1 & 6 & -2 & 0 & 1
+\end{bmatrix}
+$$
+$$
+\stackrel{\longrightarrow}{-R_2+R_3}
+\begin{bmatrix}
+1 & 3 & 3 & 1 & 0 & 0 \\
+0 & 1 & 5 & -1 & 1 & 0 \\
+0 & 0 & 1 & -1 & -1 & 1
+\end{bmatrix}\stackrel{\longrightarrow}{-5R_3+R_2}
+\begin{bmatrix}1 & 3 & 3 & 1 & 0 & 0 \\
+0 & 1 & 0 & 4 & 6 & -5 \\
+0 & 0 & 1 & -1 & -1 & 1
+\end{bmatrix}
+$$
+$$
+\stackrel{\longrightarrow}{-3R_3+R_1}
+\begin{bmatrix}
+1 & 3 & 0 & 4 & -3 & 3 \\
+0 & 1 & 0 & 4 & 6 &-5 \\
+0 & 0 & 1 & -1 & -1 & 1 
+\end{bmatrix}\stackrel{\longrightarrow}{-3R_2+R_1}
+\begin{bmatrix}
+1 & 0 & 0 & -8 & -15 & 12 \\
+0 & 1 & 0 & 4 & 6 & -5 \\
+0 & 0 & 1 & -1 & -1 & 1
+\end{bmatrix}$$
+we find 
+$$
+A^{-1}=
+\begin{bmatrix}
+-8 & -15 & 12 \\
+4 & 6 & -5 \\
+1 & -1 & 1 
+\end{bmatrix}.
+$$
+Therefore the requested linear transformation is 
+$$
+\begin{array}{rl}
+x_1 = & -8y_1-15y_2+12y_3 \\
+x_2 = & 4y_1+6y_2-5y_3 \\
+x_3 = & -y_1-y_2+y_3.
+\end{array}
+$$
+
+::: 
+
+Of course inverse transformations makes sense in terms of inverse functions; that is, if $T^{-1}$ is the inverse transformation of $T$ then $(T\circ T^{-1})(\vec x)=\vec x$ and 
+$(T^{-1 }\circ T)(\vec x)=\vec x$. For example, for $T$ given in \ref{invtranseq} we illustrate 
+$$
+(T^{-1}\circ T)\vectorthree{1}{2}{3}=T^{-1}\vectorthree{2}{4}{-5}=\vectorthree{1}{2}{3}
+$$
+as one can verify.
+
+::: {#exm- } 
+Find the inverse of the linear transformation 
+\begin{align*}
+& y_1 = 3x_1 +5x_2 \\
+& y_2 =3x_1+4x_2. 
+\end{align*}
+Reducing the system 
+$$
+\begin{bmatrix}
+3x_1+5x_2& =y_1 \\ 
+3x_1+4x_2 & =y_2
+\end{bmatrix}
+$$
+we obtain 
+$$
+\begin{bmatrix}
+x_1 & =-\frac{4}{3}y_1+\frac{5}{3}y_2 \\
+x_2 & = y_1-y_2
+\end{bmatrix}.
+$$
+
+::: 
+
+::: {#thm- }  
+Let $A$ be an $n\times n$ matrix. Then
+ 
+- $A$ is invertible if and only if rref($A$)$=I_n$, 
+- $A$ is invertible if and only if $\text{rank}(A)=n$, and 
+- $A$ is invertible if and only if $A^{-1} A= I_n$ and $A A^{-1}=I_n$.
+ 
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+To find the inverse of an $n \times n$ matrix $A$, form the augmented matrix $[ \, A \,  | \,  I_n \,  ]$ and compute $\text{rref}(\, [ \,  A \,  |  \,  I_n \, ] \, ) $. If $\text{rref}(\, [ \,  A \,  |  \,  I_n \, ] \, ) $ is of the form $\text{rref}(\, [ \,  I_n \,  |  \,  B \, ] \, ) $, then $A$ is invertible and $A^{-1}=B$. 
+Otherwise $A$ is not invertible. 
+For example
+\begin{equation}
+\label{invtranseq}
+=\text{rref}\left(
+\begin{bmatrix}
+ 1 & -1 & 1 & 1 & 0 & 0 \\
+ 1 & 0 & 1 & 0 & 1 & 0 \\
+ -1 & -2 & 0 & 0 & 0 & 1
+\end{bmatrix}
+\right)
+ = 
+\begin{bmatrix}
+ 1 & 0 & 0 & 2 & -2 & -1 \\
+ 0 & 1 & 0 & -1 & 1 & 0 \\
+ 0 & 0 & 1 & -2 & 3 & 1
+\end{bmatrix}
+= [ \,  I_3 \,  |  \,  B \, ] 
+\end{equation}
+shows $B=A^{-1}$ where 
+$$
+B=
+\begin{bmatrix}
+2 & -2 & -1 \\
+-1 & 1 & 0 \\
+-2 & 3 & 1
+\end{bmatrix}
+$$ and 
+$$A=
+\begin{bmatrix}
+ 1 & -1 & 1  \\
+ 1 & 0 & 1 \\
+ -1 & -2 & 0 
+\end{bmatrix}
+$$
+as one can verify, by showing $AB=I_3$ and $BA=I_3$.
+
+::: {#thm- }  
+Let $A$ and $B$ be $n \times n$ matrices. Then 
+ 
+- if $A$ and $B$ are invertible, then $B A$ is invertible as well and 
+$$
+(B A)^{-1}= A^{-1}B^{-1}
+$$
+- if $B A= I_n$, then $A$ and $B$ are both invertible, 
+$$
+A^{-1}=B, \qquad B^{-1}=A, \qquad \text{ and } \qquad AB = I_n.
+$$
+ 
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#exm- } 
+Find the inverse matrices of
+$$
+A=
+\begin{bmatrix} 2 & 3 \\ 6 & 9 \end{bmatrix}
+$$
+and 
+$$
+B=
+\begin{bmatrix} 1 & 2 \\ 3 & 9 \end{bmatrix}
+$$
+Since 
+$\text{rref}(A)=\begin{bmatrix} 1/2 & 3/2 \\ 0 & 0 \end{bmatrix}\neq I_2$, $A^{-1}$ does not exist. The inverse of $B$ does exist and 
+$B^{-1}=\begin{bmatrix} 3 & -2/3  \\ -1 & 1/3 \end{bmatrix}$ 
+since $B^{-1}B=I_2$ and $B B^{-1}=I_2$.
+
+::: 
+
+::: {#exm- } 
+\label{2by2inv}
+Show that $A=\begin{bmatrix} a & b \\ c& d \end{bmatrix}$ is invertible if and only if $a d- b c \neq 0$ and when possible 
+\begin{equation}
+\label{twodet}
+A^{-1}=\frac{1}{a d - b c}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}.
+\end{equation}
+We proceed to find the inverse:
+$$
+\begin{bmatrix}
+a & b  & 1 & 0 \\
+c & d & 0 & 1 
+\end{bmatrix}\begin{array}{c}
+\stackrel{\longrightarrow}{\frac{1}{a} R_1}
+\\
+\stackrel{\longrightarrow}{\frac{1}{c} R_2}
+\end{array}
+\begin{bmatrix}
+1 & \frac{b}{a} & \frac{1}{a} & 0 \\
+1 & \frac{d}{c} & 0 & \frac{1}{c}
+\end{bmatrix}\begin{array}{c}
+\stackrel{\longrightarrow}{-R_1+R_2}
+\end{array}
+\begin{bmatrix}
+1 & \frac{b}{a} & \frac{1}{a} & 0 \\
+0 & \frac{ad-bc}{ac} & \frac{-1}{a} & \frac{1}{c}
+\end{bmatrix}
+$$
+$$
+\begin{array}{c}
+\stackrel{\longrightarrow}{\frac{ac}{ad-bc} R_2}
+\end{array}
+\begin{bmatrix}
+1 & \frac{b}{a} & \frac{1}{a} & 0 \\
+0 & 1 & \frac{-c}{ad-bc} & \frac{a}{ad-bc}
+\end{bmatrix}\begin{array}{c}
+\stackrel{\longrightarrow}{\frac{-b}{a}R_2+R_1}
+\end{array}
+\begin{bmatrix}
+1 & 0 & \frac{d}{ad-bc} & \frac{-b}{ad-bc} \\
+0 & 1 & \frac{-c}{ad-bc} & \frac{a}{ad-bc}
+\end{bmatrix}
+$$
+Therefore,
+$A$ is invertible if and only if $a d- b c \neq 0$ and \ref{twodet} holds.
+
+::: 
+
+::: {#exm- } 
+For which values of constants $a, b, c,$ is the matrix 
+$$
+A=
+\begin{bmatrix}
+0 & a & b \\
+-a & 0 & c \\
+-b & -c & 0 
+\end{bmatrix}
+$$
+invertible? 
+Suppose $a\neq 0$. Applying row-operations
+$$
+\begin{bmatrix}
+0 & a & b & 1 & 0 & 0\\
+-a & 0 & c & 0 & 1 & 0 \\
+-b & -c & 0 & 0 & 0 & 1
+\end{bmatrix}\begin{array}{c}
+\stackrel{\longrightarrow}{R_2\leftrightarrow R_1}
+\end{array}
+\begin{bmatrix}
+-a & 0 & c & 0 & 1 & 0 \\
+0 & a & b & 1 & 0 & 0\\
+-b & -c & 0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+$$
+\stackrel{\longrightarrow}{-\frac{1}{a}R_1}
+\begin{bmatrix}
+1 & 0 & -\frac{c}{a} & 0 & -\frac{1}{a} & 0 \\
+0 & a & b & 1 & 0 & 0\\
+-b & -c & 0 & 0 & 0 & 1
+\end{bmatrix}\stackrel{\longrightarrow}{bR_1+R_3}
+\begin{bmatrix}
+1 & 0 & -\frac{c}{a} & 0 & -\frac{1}{a} & 0 \\
+0 & a & b & 1 & 0 & 0\\
+0 & -c & \frac{-bc}{a} & 0 & \frac{-b}{a} & 1
+\end{bmatrix}
+$$
+$$
+\stackrel{\longrightarrow}{\frac{1}{a}R_2}
+\begin{bmatrix}
+1 & 0 & -\frac{c}{a} & 0 & -\frac{1}{a} & 0 \\
+0 & 1 & \frac{b}{a} & \frac{1}{a} & 0 & 0\\
+0 & -c & \frac{-bc}{a} & 0 & \frac{-b}{a} & 1
+\end{bmatrix}\stackrel{\longrightarrow}{cR_2+R_3}
+\begin{bmatrix}
+1 & 0 & -\frac{c}{a} & 0 & -\frac{1}{a} & 0 \\
+0 & 1 & \frac{b}{a} & \frac{1}{a} & 0 & 0\\
+0 & 0 & 0 & \frac{c}{a} & \frac{-b}{a} & 1
+\end{bmatrix}
+$$
+Thus, if $a\neq 0$ then $A$ is not invertible, since $\text{rref}{(A)}\neq I_3$. If $a=0$, then clearly, $\text{rref}{(A)}\neq I_3$, and so $A$ is not invertible in either case. Therefore, there are no constants $a, b, c$ for which $A$ is invertible. 
+
+::: 
+
+::: {#cor- } 
+Let $A$ be an $n \times n$ matrix.
+ 
+- Consider a vector $\vec b$ in $\mathbb{R}^n$. If $A$ is invertible, then the system $A \vec x = \vec b$ has the unique solution $\vec x = A^{-1} b$. If $A$ is non-invertible, then the system $A \vec x = \vec b$ has infinitely many solutions or none.
+- The system $A \vec x = \vec 0$ has $\vec x = \vec 0$ as a solution. If $A$ is invertible, then this is the only solution. If $A$ is non-invertible, then the system $A \vec x= \vec 0$ has infinitely many solutions. 
+ 
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#exm- } 
+Find all invertible matrices $A$ such that $A^2=A$. 
+Since $A$ is invertible we multiply by $A^{-1}$ to obtain:
+$$
+A=IA=(A^{-1}A)A=A^{-1}(A^2)=A^{-1}A=I_n
+$$
+and therefore $A$ must be the identity matrix. 
+
+::: 
+
+::: {#exm- } 
+For which values of constants $b$ and $c$ is the matrix
+$$
+B=
+\begin{bmatrix}0 & 1 & b \\
+-1 & 0 & c \\
+-b & -c & 0
+\end{bmatrix}
+$$
+invertible?
+The matrix $B$ is not invertible for any $b$ and $c$ since$$
+\text{rref}(B)=
+\begin{bmatrix}1 & 0 & -c \\
+0 & 1 & b \\
+0 & 0 & 0 
+\end{bmatrix}\neq I_3
+$$ 
+for all $b$ and $c$.
+
+::: 
+
+::: {#exm- } 
+Find the matrix $A$ satisfying the equation
+$$
+\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}
+A
+\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}
+=
+\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}
+.$$
+Let $B=\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$ and $C=\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}$. Then
+$$
+B^{-1}=\begin{bmatrix} 1& 0 \\ 0 &-1\end{bmatrix}
+\qquad \text{and}\qquad
+C^{-1}=\begin{bmatrix} 1/2 & 0 \\ 0 & -1/2 \end{bmatrix}.
+$$
+Multiplying on the right by $B^{-1}$ and on the left by $C^{-1}$ we find
+$$
+A=B^{-1}\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}C^{-1}
+=\begin{bmatrix} 1/2 & -1/2 \\ -1/2 & 1/2\end{bmatrix}.
+$$
+
+::: 
+
+::: {#exm- } 
+Suppose that $A$, $B$, and $C$ are $n\times n$ matrices and that both $A$ and $B$ commute with $C$. Show that $AB$ commutes with $C$.  
+To show that $AB$ commutes with $C$ we need to show $(AB)C=C(AB)$. This is easy since
+$$
+(AB)C=A(BC)=A(CB)=(AC)B=(CA)B=C(AB).
+$$
+Can you justify each step?
+
+::: 
+
+::: {#exm- } 
+Show that $AB=BA$ if and only if $(A-B)(A+B)=A^2-B^2$.
+Suppose $AB=BA$ we will show $(A-B)(A+B)=A^2-B^2$. Starting with the left-hand side we obtain
+\begin{align*}
+(A-B)(A+B)
+& =(A-B)A+(A-B)B
+=A^2-BA+AB-B^2 \\
+& =A^2-BA+BA-B^2
+=A^2-B^2
+\end{align*}
+Now suppose $(A-B)(A+B)=A^2-B^2$, we will show $AB=BA$. This is easy since
+$$ 
+(A-B)(A+B)
+%=(A-B)A+(A-B)B
+=A^2-BA+AB-B^2
+=A^2-B^2
+$$
+implies $-BA+AB=0$ as desired.
+
+::: 
+
+
+
+
+
+
+## Coordinates
+
+::: {#def- } 
+Let $\mathcal{B}=(v_1,...,v_n)$ be a basis of a subspace $V$ of $\mathbb{R}^n$. 
+For any $\vec x \in V$ we can write $\vec v= c_1 \vec v_1 + \cdots +c_m \vec v_m$. 
+The scalars $c_1,...,c_m$ are called the 
+\index{$\mathcal{B}$-coordinates} **$\mathcal{B}$-coordinates**  of $\vec x$ and the vector 
+$$
+\left [ \vec x \right ]_{\mathcal{B}}:= \vectorthree{c_1}{\hdots}{c_m}
+$$ 
+is called the \index{$\mathcal{B}$-coordinate vector} **$\mathcal{B}$-coordinate vector**  of $\vec x$
+::: 
+
+For example the coordinates of $\vectortwo{-2}{4}$ with respect the  standard basis $\mathcal{B}=(\vec{e}_1,\vec{e}_2)$ is 
+$\vectortwo{-2}{4}$ since 
+$\vectortwo{-2}{4}=-2\vec{e}_1+4\vec{e}_2$ which written as 
+$\vectortwo{-2}{4}_{\mathcal{B}}=\vectortwo{-2}{4}.$
+Notice the coordinates of $\vectortwo{-2}{4}$ with respect the basis $\mathcal{B}'=\left(\vectortwo{2}{0},\vectortwo{0}{2}\right)$ is 
+$\vectortwo{-1}{2}$ since 
+$\vectortwo{-2}{4}=(-1)\vectortwo{2}{0}+2\vectortwo{0}{2}$
+which written as 
+$\vectortwo{-2}{4}_{\mathcal{B}'}=\vectortwo{-1}{2}.$
+
+::: {#exm- } 
+Consider the plane $2x_1-3x_2+4x_3=0$ with basis 
+$$
+\mathcal{B}=\left(\vectorthree{8}{4}{-1}, \vectorthree{5}{2}{-1}\right).
+$$ 
+Let $[\vec x]_{\mathcal{B}} = \vectortwo{2}{-1}$. Find $\vec x$.
+By definition of coordinates 
+$$
+\vec x= 2\vectorthree{8}{4}{-1} +(-1)\vectorthree{5}{2}{-1}=\vectorthree{11}{6}{-1}.
+$$
+
+::: 
+
+::: {#lem- } 
+\label{lincoord}
+If $\mathcal{B}=(\vec{v}_1,...,\vec{v}_n)$ is a basis of a subspace $V$ of $\mathbb{R}^n$, then 
+ 
+- $[\vec x]_{\mathcal{B}}+[\vec y]_{\mathcal{B}}=[\vec x+\vec y]_{\mathcal{B}}$, for all vectors $\vec x, \vec y$
+- $[k\vec x]_{\mathcal{B}}=k[\vec x]_{\mathcal{B}}$, for all vectors $\vec x$, and all scalars $k$.
+ 
+::: 
+
+::: {.proof }
+Let 
+$[\vec x]_{\mathcal{B}}=c_1 \vec{v}_1+\cdots + c_n \vec{v}_n$  
+and 
+$[\vec y]_{\mathcal{B}}=d_1 \vec{v}_1+\cdots + d_n \vec{v}_n$ 
+be the representation of $\vec{x}$ and $\vec{y}$ with respect to $\mathcal{B}$. Then 
+$$
+[\vec x]_{\mathcal{B}}+[\vec y]_{\mathcal{B}}
+=\vectorthree{c_1}{\vdots}{c_3}+\vectorthree{d_1}{\vdots}{d_3}
+=\vectorthree{c_1+d_1}{\vdots}{c_n+d_n}
+=[\vec x+y]_{\mathcal{B}}
+$$
+where the last equality holds since 
+$$
+\vec{x}+\vec{y}=(c_1+d_1)\vec{v}_1+\cdots (c_n+d_n)\vec{v}_n.$$
+We leave the proof of the second part for the reader. 
+::: 
+
+::: {#exm- } 
+Determine whether the vector $\vec x = \vectorthree{1}{-2}{-2}$ is in $\text{span} V$ of the vectors $\vec{v}_1=\vectorthree{8}{4}{-1}$ and $\vec{v}_2=\vectorthree{5}{2}{-1}$ and if so write the coordinates of $\vec x$ with respect to this basis of $V$.
+We need to find scalars $c_1$ and $c_2$ such that $\vec x=c_1 \vec v_1+c_2 \vec v_2$. Solving this system we find $c_1=-3$ and $c_2=5$. Therefore we find, $[\vec x]_{\mathcal{B}}=\vectortwo{-3}{5}$ where $\mathcal{B}=(\vec v_1, \vec v_2)$.
+
+::: 
+
+::: {#exm- } 
+Consider the plane $x+2y+z=0$. Find a basis of this plane. Find another basis $\mathcal{B}$ of this plane such that 
+$[\vec x]_{\mathcal{B}}=\vectortwo{2}{-1}$ for 
+$\vec x = \vectorthree{1}{-1}{1}$.
+We find a basis by letting $z=t$ and $y=s$ be free variables. Then 
+$x=-t-2s$. All solutions to the equation $x+2y+z=0$ are 
+$$
+\vectorthree{x}{y}{z}
+=\vectorthree{-t-2s}{s}{t}
+=t\vectorthree{-1}{0}{1}+s\vectorthree{-2}{1}{0}.
+$$
+So a basis for the plane is 
+$\mathcal{B}=\left(\vectorthree{-1}{0}{1},\vectorthree{-2}{1}{0}\right).$
+Notice $\vectorthree{1}{-1}{1}=(1)\vectorthree{-1}{0}{1}+(-1)\vectorthree{-2}{1}{0}$ and thus 
+$\vectorthree{1}{-1}{1}_{\mathcal{B}}=\vectortwo{1}{-1}$. 
+Thus this is not the basis we seek. 
+However, notice 
+$$
+\vectorthree{1}{-1}{1}
+=2\vectorthree{x_1}{0}{-x_1}+(-1)\vectorthree{-2y_2}{y_2}{0}
+$$ 
+holds when $y_2=1$ and $x_1=-1/2$. 
+Also notice the vectors $\vectorthree{-1/2}{0}{1/2}$ and 
+$\vectorthree{-2}{1}{0}$ span the plane and are linearly independent. Therefore we have the basis we seek, namely
+$$
+\mathcal{B}
+=\left(\vectorthree{-1/2}{0}{1/2},\vectorthree{-2}{1}{0}\right).
+$$
+ 
+::: 
+
+::: {#lem- } 
+\label{lem:bmatrix}
+Let $T$ be a linear transformation from $\mathbb{R}^n$ to $\mathbb{R}^n$ and $\mathcal{B}=(\vec{v}_1,...,\vec{v}_n)$ a basis of $\mathbb{R}^n$. The $n\times n$ matrix $B$ that transforms 
+$[ \vec{x}]_{\mathcal{B}}$ into $[T(\vec x)]_{\mathcal{B}}$ is called the \index{$\mathcal{B}$-matrix} **$\mathcal{B}$-matrix**  of $T$, written as 
+$[T(\vec x)]_{\mathcal{B}}=B [ \vec x ]_{\mathcal{B}}$ for all $\vec x$ in $\mathbb{R}^n$ and 
+$$
+B=
+\begin{bmatrix} 
+[T(\vec v_1)]_{\mathcal{B}} &  \cdots & [T(\vec v_n)]_{\mathcal{B}}
+\end{bmatrix}.
+$$
+::: 
+
+::: {.proof }
+Since $\mathcal{B}$ is a basis of $\mathbb{R}^n$, there exists scalars $c_1, ..., c_n$ such that 
+$\vec{x}=c_1 \vec{v}_1+c_2\vec{v}_2+\cdots + c_n \vec{v}_n$. Using the linearity of $T$ we find
+$$
+T(\vec{x})=c_1 T(\vec{v}_1)+c_2 T(\vec{v}_2)+\cdots +c_n T(\vec{v}_n).
+$$
+By \ref{lincoord} we find
+\begin{align*}
+[T(\vec{x})]_{\mathcal{B}}
+& = c_1 [T(\vec{v}_1)]_{\mathcal{B}} + c_2 [T(\vec{v}_2)]_{\mathcal{B}} + \cdots +c_n [T(\vec{v}_n)]_{\mathcal{B}} \\
+& =
+\begin{bmatrix} 
+[T(\vec v_1)]_{\mathcal{B}} &  \cdots & [T(\vec v_n)]_{\mathcal{B}}
+\end{bmatrix}
+[\vec{x}]_{\mathcal{B}}
+\end{align*}
+as desired. 
+::: 
+
+::: {#exm- } 
+Find the matrix $\mathcal{B}$ of the linear transformation 
+$T(\vec x)=A \vec x$ where
+$$
+A=\begin{bmatrix} 
+5 & -4 & -2 \\
+-4 & 5 & -2 \\
+-2 & -2 & 8
+\end{bmatrix}
+$$ 
+with respect to the basis 
+$\mathcal{B}=\left ( \vectorthree{2}{2}{1}, \vectorthree{1}{-1}{0}, \vectorthree{0}{1}{-2} \right )$.
+By \ref{lem:bmatrix}, $T$ with respect to $\mathcal{B}$ has the following matrix $B$.
+$$
+\begin{bmatrix}
+\left[T\vectorthree{2}{2}{1}\right]_{\mathcal{B}} &
+\left[T\vectorthree{1}{-1}{0}\right]_{\mathcal{B}} &
+\left[T\vectorthree{0}{1}{-2}\right]_{\mathcal{B}} 
+\end{bmatrix}
+=
+\begin{bmatrix}
+\vectorthree{0}{0}{0}_{\mathcal{B}} &
+\vectorthree{9}{-9}{0}_{\mathcal{B}} &
+\vectorthree{0}{9}{-18}_{\mathcal{B}}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 9 & 0 \\
+0 & 0 & 9 
+\end{bmatrix}.
+$$
+
+::: 
+
+::: {#thm- } 
+Let $T$ be a linear transformation from $\mathbb{R}^n$ to $\mathbb{R}^n$ with standard matrix $A$ and let $B$ be the $\mathcal{B}$-matrix of $T$ where $\mathcal{B}= (\vec{v}_1,...,\vec{v}_n)$ then $A S= S B$ where 
+$$
+S= \begin{bmatrix} 
+\vec{v}_1 & \cdots &  \vec{v}_n 
+\end{bmatrix}
+.$$
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#def- } 
+Two $n\times n$ matrices $A$ and $B$ are called \index{similar} **similar**  if there exists an invertible matrix $S$ such that $A S= S B$.
+::: 
+
+::: {#exm- } 
+Determine whether the following two matrices are similar.
+$$
+A=\begin{bmatrix} 1 & 2 \\ 4 &3 \end{bmatrix} 
+\qquad \text{and} \qquad
+B=\begin{bmatrix} 5 & 0 \\ 0 & -1 \end{bmatrix}$$
+We are looking for a  matrix 
+$$
+S=
+\begin{bmatrix} x & y \\ z & t\end{bmatrix}
+$$ 
+such that $AS=SB$. Writing out we find
+$$
+\begin{bmatrix} 1 & 2 \\ 4 &3 \end{bmatrix} 
+\begin{bmatrix} x & y \\ z & t\end{bmatrix}
+=
+\begin{bmatrix} x & y \\ z & t\end{bmatrix}
+\begin{bmatrix} 5 & 0 \\ 0 & -1 \end{bmatrix} 
+\quad \implies \quad 
+\begin{bmatrix} x+2z & y+2t \\ 4x+3z & 4y+3t \end{bmatrix} 
+=
+\begin{bmatrix} 5x & -y  \\ 5z & -t \end{bmatrix}. 
+$$ 
+This leads to $z=2x$ and $t=-y$ so that $S$ is any invertible matrix of the form 
+\begin{equation}
+\label{simform}
+\begin{bmatrix}x & y \\ 2x & -y\end{bmatrix}.
+\end{equation} 
+Since $S= \begin{bmatrix}1 & 1 \\ 2 & -1 \end{bmatrix}$ is invertible and of the form in \eqref{simform}, we can say, yes $A$ is similar to $B$. 
+
+::: 
+
+::: {#thm- } 
+If $A$ is similar to $B$ then $A^k$ is similar to $B^k$ for any positive integer $k$. 
+::: 
+
+::: {.proof }
+If $A$ is similar to $B$ then there exists an invertible matrix $S$ such that $B=S^{-1}A S$. Then
+$$
+B^k=(S^{-1}AS)(S^{-1}AS)\cdots (S^{-1}AS)=S^{-1}A^k S
+$$
+which shows that $B^k$ is similar to $A^k$. 
+::: 
+
+::: {#thm- } 
+\label{simsamelin}
+Two $n\times n$ matrices $A$, $A'$ are similar if and only if they are matrices of the same linear transformation $T$ from 
+$\mathbf{R}^n$ to $\mathbf{R}^n$ with respect to two bases for 
+$\mathbf{R}^n$
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#thm- } 
+Similar matrices have the same rank. 
+::: 
+
+::: {.proof }
+Let $A$ and $B$ be similar matrices. By \ref{simsamelin} $A$ and $B$ represent the same linear transformation. Thus they must have the same rank. 
+::: 
+
+::: {#exm- } 
+Are the following similiar matrices?
+$$
+A=
+\begin{bmatrix}
+-1 & 2 & 1 \\
+2 & 0 & 1 \\
+2 & 2 & 2
+\end{bmatrix}
+\qquad \text{and}\qquad 
+B=
+\begin{bmatrix}
+-1 & 2 & 1 \\
+2 & 0 & 1 \\
+1 & 2 & 2 
+\end{bmatrix}
+$$
+Since $\text{rank}(A)=3$ and $\text{rank}(B)=2$, these are not similar matrices.  
+
+::: 
+
+::: {#thm- } 
+\label{simequiv}
+Similarity of matrices is an equivalence relation. 
+::: 
+
+::: {.proof }
+To show transitivity, assume $A$ is similar to $B$ and $B$ is similar to $C$, then there exists invertible matrices $E$ and $F$ such that $AE=EB$ and $BF=FC$. Then 
+$$
+A=EBE^{-1}=E(FCF^{-1})E^{-1}=(EF)C(F^{-1}E^{-1})=(EF)C(EF)^{-1}
+$$
+which shows that $A$ is similar to $C$. 
+The proof of the reflexive property and the symmetric property are left for the reader. 
+::: 
+
+By \ref{simequiv}, a linear transformation represents a whole class of (similar) matrices. That is the collection of $n\times n$ matrices is partitioned into non overlapping sets of matrices, with all matrices in any such set being similar and representing the same linear transformation from $\mathbf{R}^n$ to $\mathbf{R}^n$.
+
+
+
+
+## Coordinates and the Matrix of a Linear Map
+
+Let $V$ and $W$ be finite dimensional linear spaces.
+
+::: {#def- } 
+
+## The Matrix of a Linear Map
+Let $T\in \mathcal{L}(V,W)$ and let $b_1=\{v_1,\ldots ,v_n\}$ be a basis for $V$ and $b_2=\{w_1,\ldots ,w_m\}$ be a base for $W$. Then the \index{matrix of $T$} matrix of $T$  with respect to the bases $b_1$ and $b_2$ is
+$$ \begin{bmatrix}
+a_{1 1} & \cdots & a_{1 n} \\
+\vdots & \cdots & \vdots \\
+a_{m 1} & \cdots & a_{m n} \\
+\end{bmatrix}
+$$
+where the $a_{i j}\in \mathbb{F}$ are determined by $T v_k=a_{1 k}w_1+\cdots +a_{m k}w_m$ for each $k=1,\ldots ,n$.
+::: 
+
+
+
+::: {#exm- } 
+Consider the linear transformation $T(f)=f'+f''$ from $\mathcal{P}_2$ to $\mathcal{P}_2$. Since $\mathcal{P}_2$ is isomorphic to $\mathbb{R}^3$ with isomorphism given by a $3\times 3$ matrix $B$, how do we find this matrix $B$?
+Let $a+b x+c x^2$, then we write $T$ as 
+\begin{align*}
+T(a+b x+c x^2)& =(a+b x+c x^2)'+(a+b x+c x^2)'' \\
+& =b+2c x+2c=(b+2c)+2cx.
+\end{align*}
+Next let's write the input $f(x)=a+b x+c x^2$ and the output $T(f(x))=(b+2c)+2c x$ in coordinates with respect to the standard bases $\mathcal{B}=(1, x, x^2)$ of $\mathcal{P}_2$
+Written in $\mathcal{P}_2$ coordinates, transformation $T$ takes $[f(x)]_{\mathcal{B}}$ to
+$$
+[T(f(x))]_{\mathcal{B}}=\vectorthree{b+2c}{2c}{0}=
+\begin{bmatrix}
+0 & 1 & 2 \\
+0 & 0 & 2 \\
+0 & 0 & 0 
+\end{bmatrix} 
+\vectorthree{a}{b}{c}
+= \begin{bmatrix}
+0 & 1 & 2 \\
+0 & 0 & 2 \\
+0 & 0 & 0 
+\end{bmatrix} 
+[f(x)]_{\mathcal{B}}
+$$
+The matrix 
+$$
+B= \begin{bmatrix}
+0 & 1 & 2 \\
+0 & 0 & 2 \\
+0 & 0 & 0 
+\end{bmatrix} 
+$$ 
+is called the \index{$\mathcal{B}$-matrix} $\mathcal{B}$-matrix of the transformation $T$. 
+::: 
+
+
+
+::: {#exm- } 
+Find the $B$-matrix for the linear transformation given by 
+$$
+T(M)=\begin{bmatrix} 1 & 2 \\ 3 & 4  \end{bmatrix} M - M \begin{bmatrix} 5 & 0 \\ 0 & -1  \end{bmatrix}M
+$$ 
+from $\mathbb{R}^{2\times 2}$ to $\mathbb{R}^{2\times 2}$. Determine whether $T$ is an isomorphism and if not find kernel, image, nullity, and the rank of $T$. 
+We will use the standard basis of $\mathbb{R}^{2 \times 2}$:
+$$
+\mathcal{B}=
+\left ( 
+\begin{bmatrix} 1 & 0 \\ 0 & 0  \end{bmatrix},
+\begin{bmatrix} 0 & 1 \\ 0 & 0  \end{bmatrix},
+\begin{bmatrix} 0 & 0 \\ 1 & 0  \end{bmatrix},
+\begin{bmatrix} 0 & 0 \\ 0 & 1  \end{bmatrix}
+\right )
+$$
+and we will construct the $\mathcal{B}$-matrix column-by-column:
+$$
+\begin{array}{rl}
+B & =
+\begin{bmatrix} \left [ T\begin{bmatrix} 1 & 0 \\ 0 & 0  \end{bmatrix} \right ]_{\mathcal{B}} & 
+\left [T[\begin{bmatrix} 0 & 1 \\ 0 & 0  \end{bmatrix}\right ]_{\mathcal{B}} &
+\left [ T\begin{bmatrix} 0 & 0 \\ 1 & 0  \end{bmatrix}\right ]_{\mathcal{B}} & 
+\left [ T\begin{bmatrix} 0 & 0 \\ 0 & 1  \end{bmatrix} \right ]_{\mathcal{B}}
+\end{bmatrix}\\
+\\
+&=
+\begin{bmatrix} \begin{bmatrix} -4 & 0 \\ 4 & 0  \end{bmatrix}_{\mathcal{B}} & 
+\begin{bmatrix} 0 & 2 \\ 0 & 4  \end{bmatrix}_{\mathcal{B}} &
+\begin{bmatrix} 2 & 0 \\ -2 & 0  \end{bmatrix}_{\mathcal{B}} & 
+\begin{bmatrix}  0 & 2 \\ 0 & 4  \end{bmatrix}_{\mathcal{B}}
+\end{bmatrix}
+=
+\begin{bmatrix} -4 & 0 & 2 & 0\\
+0 & 2 & 0 & 2 \\
+4 & 0 & -2 & 0 \\
+0 & 4 & 0 & 4
+\end{bmatrix}\end{array}
+$$
+with
+$$
+\text{rref}(B)=
+\begin{bmatrix} 1 & 0 & -\frac{1}{2} & 0\\
+0 & 1 & 0 & 1 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}.
+$$
+After eliminating redundant columns from $B$ we find a basis of $\text{im} T$ is 
+$$\left(\, \vectorfour{-4}{0}{4}{0},\vectorfour{0}{2}{0}{4} \, \right).$$ 
+To find $\ker T$ we solve $B \vec x=\vec 0$ and using the 
+$\text{rref}(B)$ we find 
+$$\left(\, \vectorfour{-\frac{1}{2}}{0}{1}{0},\vectorfour{0}{-1}{0}{1} \, \right)$$ 
+to be a  basis for $\ker T.$  Notice since the rank of $T$ is $2=\text{dim}  \text{im} T$, $T$ is not an isomorphism. Therefore, since $\ker T\neq \{0\}$, $T$ is not an isomorphism. 
+::: 
+
+
+
+::: {#exm- } 
+Find the matrix of the linear transformation $T(f(t))=f(3)$ from $\mathcal{P}_2$ to $\mathcal{P}_2$ with respect to the basis $(1,t-3,(t-3)^2)$. Determine whether the transformation is an isomorphism, it it isn't an isomorphism then determine the kernel and image of $T$, and also determine the nullity and rank of $T$.
+The matrix of $T$ is
+$$
+B=\begin{bmatrix} [T(1)]_{\mathcal{B}} & [T(x-3)]_{\mathcal{B}} & [T((x-3)^2)]_{\mathcal{B}} \end{bmatrix} 
+= \begin{bmatrix} 
+[1]_{\mathcal{B}} & [0]_{\mathcal{B}} & [0]_{\mathcal{B}} 
+\end{bmatrix} 
+= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\  0 & 0 & 0  \end{bmatrix}.
+$$
+Notice the vectors $\vectorthree{0}{1}{0}, \vectorthree{0}{0}{1}$ form a basis of the kernel of $B$ and $\vectorthree{1}{0}{0}$ is a basis of the image of $B$. Therefore, the rank is 1 and the nullity is 2; and therefore, $T$ is not an isomorphism. 
+::: 
+
+
+
+::: {#def-matrix-of-a-vector }
+
+## The Matrix of a Vector
+Let $b=\{v_1,\ldots ,v_n\}$ be a basis for $V$ and let $v\in V$. We define the matrix of $v$, denoted by $\mathcal{M}(v)$, to be the $n$-by-1 matrix $\begin{bmatrix} b_{1} & \cdots& b_{n} \end{bmatrix}^T$.
+::: 
+
+
+::: {#thm- } 
+If $T\in \mathcal{L}(V,W)$, then $\mathcal{M}(Tv)=\mathcal{M}(T) \mathcal{M}(v)$ for all $v\in V$.
+::: 
+
+::: {.proof }
+Let $(v_1,\ldots ,v_n)$ be a basis of $V$ and $(w_1,\ldots ,w_m)$ be a basis of $W$. If $v\in V$, then there exists $b_1,\ldots ,b_n\in \mathbb{F}$ such that $v=b_1 v_1+\cdots + b_n v_n$ 
+so that $\mathcal{M}(v)=\begin{bmatrix} b_{1} & \cdots& b_{n} \end{bmatrix}^T$. For each $k$, $1\leq k \leq n$ we write $T v_k=a_{1k}w_1+ \cdots + a_{m k} w_m$ and so by definition of the matrix of a linear map $T$:
+$$
+\mathcal{M}=\begin{bmatrix}a_{11} & & a_{1n}  \\ \vdots & \cdots & \vdots \\ a_{m1} & & a_{mn} \end{bmatrix}.
+$$
+By linearity of $T$:
+$$
+\begin{array}{rl}
+Tv& =b_1 T v_1+\cdots b_n T v_n \\
+& = b_1 \left(\sum_{j=1}^m a_{j 1}w_j \right)+\cdots +b_n \left(\sum_{j=1}^m a_{j n}w_j \right) \\
+& =w_1(a_{11}b_1+\cdots + a_{1n}b_n)+\cdots + w_m(a_{m1}b_1+\cdots + a_{mn}b_n).
+\end{array}
+$$
+Therefore, 
+$$
+\mathcal{M}(T v)=
+\vectorthree{a_{11}b_1+\cdots + a_{1n}b_n}{\cdots}{a_{m1}b_1+\cdots + a_{mn}b_n}
+=\mathcal{M}(T)\mathcal{M}(v).
+$$
+where the last equality holds by definition of matrix multiplication.
+::: 
+
+Let $\overline{u}=(u_1,\ldots ,u_p)$ be a basis of $U$, let $\overline{v}=(v_1,\ldots ,v_n)$ be a basis of $V$, and let $\overline{w}=(w_1,\ldots ,w_m)$ be a basis of $W$. If $T\in \mathcal{L}(U,V)$ and $S\in \mathcal{L}(V,W)$, then $ST\in \mathcal{L}(U,W)$ and by the definition of matrix multiplication,
+\begin{equation}\label{matrix multiplication}
+\mathcal{M}(ST,\overline{u},\overline{w})=\mathcal{M}(S,\overline{v},\overline{w}) \mathcal{M}(T,\overline{u},\overline{v}).
+\end{equation}
+
+
+
+::: {#thm-matrix-inversion } 
+If $\overline{u}=(u_1,\ldots ,u_p)$ and $\overline{v}=(v_1,\ldots ,v_n)$ are bases of $V$, then $\mathcal{M}(I,\overline{u},\overline{v})$ is invertible and
+$$
+\mathcal{M}(I,\overline{u},\overline{v})^{-1}=\mathcal{M}(I,\overline{v},\overline{u}).
+$$
+::: 
+
+::: {.proof }
+In \ref{matrix multiplication}, replace $U$ and $W$ with $V$, replace $w_j$ with $u_j$, and replace $S$ and $T$ with $I$, getting 
+$$
+I=\mathcal{M}(I,(\overline{v},\overline{u}))\mathcal{M}(I,\overline{u},\overline{v}).
+$$
+Now interchange the roles of the $u$'s and $v$'s, getting
+$$
+I=\mathcal{M}(I,(\overline{u},\overline{v}))\mathcal{M}(I,\overline{v},\overline{u}).
+$$
+These equations give the desired result.
+::: 
+
+
+
+For example, obviously,
+$$
+\mathcal{M}\left(I,\left(\vectortwo{4}{2},\vectortwo{5}{3}\right),\left(\vectortwo{1}{0},\vectortwo{0}{1}\right)\right)=\begin{bmatrix}  4 & 5 \\ 2 & 3 \end{bmatrix} .
+$$
+The inverse of the matrix above is $\begin{bmatrix} 3/2 & -5/2 \\ -1 & 2\end{bmatrix}$. Thus,
+$$
+\mathcal{M}\left(I,\left(\vectortwo{1}{0},\vectortwo{0}{1}\right),\left(\vectortwo{4}{2},\vectortwo{5}{3}\right)\right)
+=\begin{bmatrix} 3/2 & -5/2 \\ -1 & 2\end{bmatrix}.
+$$
+
+
+
+::: {#thm- } 
+Suppose $T\in\mathcal{L}(V)$. Let $\overline{u}=(u_1,\ldots ,u_n)$ and $(v_1,\ldots ,v_n)$ be bases of $V$. Let $A=\mathcal{M}(I,\overline{u},\overline{v})$. Then 
+\begin{equation}\label{change of basis}
+\mathcal{M}(T,\overline{u})=A^{-1}\mathcal{M}(T,\overline{v})A.
+\end{equation}
+::: 
+
+::: {.proof }
+In \ref{matrix multiplication}, replace $U$ and $W$ with $V$, replace $w_j$ with $v_j$, replace $T$ with $I$, and replace $S$ with $T$, getting
+\begin{equation}\label{rchange}
+\mathcal{M}(T,\overline{u},\overline{v})=\mathcal{M}(T,\overline{v})A.
+\end{equation}
+In \ref{matrix multiplication}, replace $U$ and $W$ with $V$, replace $w_j$ with $u_j$, replace $S$ with $I$, and replace $S$ with $T$, getting
+\begin{equation}\label{lchange}
+\mathcal{M}(T,\overline{u})=A^{-1}\mathcal{M}(T,\overline{u},\overline{v})
+\end{equation}
+by \ref{matrix inversion}. Substitution of \ref{rchange} into \ref{lchange} yields \ref{change of basis}.
+::: 
+
+
+
+::: {#exm- } 
+Prove that every linear map from $\text{Mat}(n,1,F)$ to $\text{Mat}(m,1,F)$ is given by matrix multiplication. In other words, prove that if 
+$T$ is a linear transformation from $\text{Mat}(n,1,F)$ to $\text{Mat}(m,1,F))$, then there exists an $m$-by-$n$ matrix $A$ such that $T B=A B$ for every $B\in \text{Mat}(n,1,F).$
+Let $(e_1,\ldots ,e_n)$ be a basis for $Mat(n,1,\mathbb{F})$ and let $(v_1,\ldots ,v_m)$ be a basis for $Mat(m,1,\mathbb{F})$.
+For each $k$, there exists $a_{1k},\ldots ,a_{mk}\in \mathbb{F}$ such that $T e_k=a_{1k} v_1+\cdots a_{mk} v_m$. Define the $m \times n$ matrix $A$ as follows:
+$$
+A=\begin{bmatrix} T e_1 & \cdots & T e_n \end{bmatrix}.
+$$
+If $B\in Mat(n,1,\mathbb{F})$ there exists $b_1,\ldots ,b_n\in \mathbb{F}$ such that $B=b_1 e_1+\cdots + b_n e_n$, and thus 
+$$
+TB=T(b_1 e_1+\cdots + b_n e_n)=b_1 T e_1+\cdots + b_n T e_n= BA
+$$
+as desired. Notice the word "the" follows since $(v_1,\ldots ,v_m)$ is a basis. In other words one bases have been chosen, the matrix $A$ is unique. 
+::: 
+
+
+
+::: {#exm- } 
+Suppose that $V$ is finite-dimensional and $S,T\in \mathcal{L}(V)$. Prove that $S T$ is invertible if and only if both $S$ and $T$ are invertible.
+Suppose both $S$ and $T$ are invertible. Then both $S$ and $T$ are injective and surjective. Thus, $ST$ is both injective and surjective showing $ST$ is invertible. Conversely, suppose $ST$ is invertible. Since $\text{ker} T\subseteq \text{ker} ST =\{0\}$ because $ST$ is injective, $T$ is also injective. Thus, $T$ is invertible. Since $ST$ is surjective, if $w\in W$, then there exists $v\in V$ such that $(ST)v=w$. Rewriting $S(Tv)=w$, showing $S$ is surjective. Thus, $S$ is also invertible. 
+::: 
+
+
+
+::: {#exm- } 
+Suppose that $V$ is finite-dimensional and $S,T\in \mathcal{L}(V)$. Prove that $S T=I$ if and only if $T S=I$.
+Without loss of generality, we will show $ST=I \text{im}plies TS=I$. Suppose $ST=I$. Since $I$ is invertible, the previous exercise implies $S$ and $T$ are both invertible. Then $ST=I \text{im}plies S^{-1}(ST)=S^{-1}I \text{im}plies T=S^{-1}$. Therefore, $TS=S^{-1}S=I$.
+::: 
+
+
+
+::: {#exm- } 
+Suppose that $V$ is finite-dimensional and $T\in \mathcal{L}(V)$. Prove that $T$ is a scalar multiple of the identity if and only if $S T=T S$ for every $S\in \mathcal{L}(V)$.
+If $T$ is a scalar multiple of the identity, say $T=\alpha I$, then for all $v\in V$,
+$$
+S T v=S \alpha v= \alpha S v= TS v.
+$$
+Conversely, suppose $ST=TS$ for every $S\in \mathcal{L}(V)$.  Pick a basis $v_1,\ldots ,v_N)$ for $V$. For $m=1,\ldots ,N$, define linear maps $S+m\in \mathcal{L}(V)$ by$$
+S_m=v_n=\left\{ \begin{array}{rl} v_m & \text{ if } m=n \\ 0 & \text{ if } m\neq n \end{array} \right.
+$$
+Now if $v=\sum \alpha_n v_n$, then$$
+S_m\sum \alpha_n v_n=\alpha_m v_m
+$$
+Thus the only vectors satisfying $S_m v=v$ are $v=\alpha v_m$ for some $\alpha \in \mathbb{F}$. The condition $S_m T=T S_m$ gives$$
+S_m T v_m=T S_m v_m=T v_m
+$$
+and by the above observation $T v_m=\alpha_m v_m$. Now consider another collection of linear maps $A(m,n)$ defined by$$
+A(m,n) v_m=v_n, \hspace{1cm} A(m,n)v_n=v_m, \hspace{1cm} A(m,n)v_k=0, \text{ when } k\neq m,n.$$
+The condition $A(m,n)T v_n=T A(m,n) v_n$ gives
+$$
+A(m,n)T v_n=TA(m,n)v_n=T v_m=\alpha_m v_m
+$$
+and
+$$
+A(m,n)\alpha_n v_n=A(m,n)\alpha_n v_n=\alpha_nA(m,n)v_n=\alpha_n v_m.
+$$
+Whence $\alpha_m v_m=\alpha_n v_m$ that is, $\alpha_m=\alpha_n$ for $m,n=1,\ldots ,N$; and thus $T$ is a scalar multiple of the identity. 
+::: 
+
+
+
+::: {#exm- } 
+Prove that if $V$ is finite-dimensional with $\text{dim}  V > 1$, then the set of non-invertible operators on $V$ is not a subspace of $\mathcal{L}(V)$.
+Suppose $(v_1,\ldots ,v_n)$ is a basis of $V$, with $n \geq 2$. Define the linear maps $S$ and $T$ by 
+$$S v_1=v_1, \hspace{1cm} S v_k =0, \text{ when } k\geq 2$$
+$$T v_1=0, \hspace{1cm} T v_k =v_k, \text{ when } k\geq 2.$$
+Since $S$ and $T$ have nontrivial null spaces, they are not invertible. However, $(S+T) v_k=v_k$, for $k=1,\ldots ,n,$ so $S+T=I$, which is invertible. Thus the set of noninvertible operators on $V$ with $n\geq 2$ is not closed under addition. 
+::: 
+
+
+
+
+
+
+
+
+
+
+
 

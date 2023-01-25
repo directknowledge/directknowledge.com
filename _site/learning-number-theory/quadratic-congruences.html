@@ -19,7 +19,7 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./polynomial-congruences.html" rel="next">
 <link href="./eulers-theorem.html" rel="prev">
 <link href="./../assets/favicon.ico" rel="icon">
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
@@ -47,37 +47,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-.book-title {
-    font-weight:800;
-    text-transform: uppercase;
-    font-size: 150%;
-    margin:-20px -20px 20px -20px;
-    line-height:120%;
-    text-decoration: none!important;
-    display:block;
-}
-.book-title, #quarto-search svg {
-    color: #cb6d00!important;
-}
-@media screen and (max-width: 990px) {
-    .book-title {
-        padding-left: 20px!important;
-    }    
-}
-#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
-    font-weight: 500!important;
-    color:#cb6d00;
- }
- #quarto-sidebar .text-start {
-    font-variant: small-caps;
-    font-size: 120%;
- }
- #quarto-sidebar .active, .active .chapter-number {
-    color:#000000!important;
-    font-weight: 700!important;
- }
-</style>
-<style>
 @media screen and (max-width: 440px) {
     .navbar-brand-logo::after {
         content: 'DK'!important;
@@ -100,6 +69,20 @@ ul.task-list li input[type="checkbox"] {
 }
 .navbar-title:hover, .navbar a:hover {
     color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
 }
 </style>
   
@@ -136,11 +119,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
-</i> 
- <span class="dropdown-text">Exploring Calculus</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
@@ -149,6 +127,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
@@ -177,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -212,27 +195,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./euclidean-algorithm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Euclidean Algorithm</span></a>
+  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
+  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
+  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
+  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
+  <a href="./polynomial-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Polynomial Congruences</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -249,28 +232,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Chapter Contents</h2>
    
   <ul>
-  <li><a href="#general-quadratic-congruence" id="toc-general-quadratic-congruence" class="nav-link active" data-scroll-target="#general-quadratic-congruence"><span class="toc-section-number">7.1</span>  General Quadratic Congruence</a>
+  <li><a href="#general-quadratic-congruence" id="toc-general-quadratic-congruence" class="nav-link active" data-scroll-target="#general-quadratic-congruence"><span class="toc-section-number">6.1</span>  General Quadratic Congruence</a>
   <ul class="collapse">
-  <li><a href="#quadratic-residues" id="toc-quadratic-residues" class="nav-link" data-scroll-target="#quadratic-residues"><span class="toc-section-number">7.1.1</span>  Quadratic Residues</a></li>
-  <li><a href="#the-legendre-symbol" id="toc-the-legendre-symbol" class="nav-link" data-scroll-target="#the-legendre-symbol"><span class="toc-section-number">7.1.2</span>  The Legendre Symbol</a></li>
+  <li><a href="#quadratic-residues" id="toc-quadratic-residues" class="nav-link" data-scroll-target="#quadratic-residues"><span class="toc-section-number">6.1.1</span>  Quadratic Residues</a></li>
+  <li><a href="#the-legendre-symbol" id="toc-the-legendre-symbol" class="nav-link" data-scroll-target="#the-legendre-symbol"><span class="toc-section-number">6.1.2</span>  The Legendre Symbol</a></li>
   </ul></li>
-  <li><a href="#eulers-and-gausss-criterion" id="toc-eulers-and-gausss-criterion" class="nav-link" data-scroll-target="#eulers-and-gausss-criterion"><span class="toc-section-number">7.2</span>  Euler’s and Gauss’s Criterion</a></li>
-  <li><a href="#quadratic-characters" id="toc-quadratic-characters" class="nav-link" data-scroll-target="#quadratic-characters"><span class="toc-section-number">7.3</span>  Quadratic Characters</a></li>
-  <li><a href="#properties-of-the-legendre-symbol" id="toc-properties-of-the-legendre-symbol" class="nav-link" data-scroll-target="#properties-of-the-legendre-symbol"><span class="toc-section-number">7.4</span>  Properties of the Legendre Symbol</a></li>
-  <li><a href="#law-of-quadratic-reciprocity" id="toc-law-of-quadratic-reciprocity" class="nav-link" data-scroll-target="#law-of-quadratic-reciprocity"><span class="toc-section-number">7.5</span>  Law of Quadratic Reciprocity</a></li>
-  <li><a href="#tonellishanks-algorithm" id="toc-tonellishanks-algorithm" class="nav-link" data-scroll-target="#tonellishanks-algorithm"><span class="toc-section-number">7.6</span>  Tonelli–Shanks Algorithm</a>
+  <li><a href="#eulers-and-gausss-criterion" id="toc-eulers-and-gausss-criterion" class="nav-link" data-scroll-target="#eulers-and-gausss-criterion"><span class="toc-section-number">6.2</span>  Euler’s and Gauss’s Criterion</a></li>
+  <li><a href="#quadratic-characters" id="toc-quadratic-characters" class="nav-link" data-scroll-target="#quadratic-characters"><span class="toc-section-number">6.3</span>  Quadratic Characters</a></li>
+  <li><a href="#properties-of-the-legendre-symbol" id="toc-properties-of-the-legendre-symbol" class="nav-link" data-scroll-target="#properties-of-the-legendre-symbol"><span class="toc-section-number">6.4</span>  Properties of the Legendre Symbol</a></li>
+  <li><a href="#law-of-quadratic-reciprocity" id="toc-law-of-quadratic-reciprocity" class="nav-link" data-scroll-target="#law-of-quadratic-reciprocity"><span class="toc-section-number">6.5</span>  Law of Quadratic Reciprocity</a></li>
+  <li><a href="#tonellishanks-algorithm" id="toc-tonellishanks-algorithm" class="nav-link" data-scroll-target="#tonellishanks-algorithm"><span class="toc-section-number">6.6</span>  Tonelli–Shanks Algorithm</a>
   <ul class="collapse">
-  <li><a href="#examples-of-shanks-algorithm" id="toc-examples-of-shanks-algorithm" class="nav-link" data-scroll-target="#examples-of-shanks-algorithm"><span class="toc-section-number">7.6.1</span>  Examples of Shank’s Algorithm</a></li>
+  <li><a href="#examples-of-shanks-algorithm" id="toc-examples-of-shanks-algorithm" class="nav-link" data-scroll-target="#examples-of-shanks-algorithm"><span class="toc-section-number">6.6.1</span>  Examples of Shank’s Algorithm</a></li>
   </ul></li>
-  <li><a href="#solving-quadratic-congruences" id="toc-solving-quadratic-congruences" class="nav-link" data-scroll-target="#solving-quadratic-congruences"><span class="toc-section-number">7.7</span>  Solving Quadratic Congruences</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">7.8</span>  Exercises</a></li>
+  <li><a href="#solving-quadratic-congruences" id="toc-solving-quadratic-congruences" class="nav-link" data-scroll-target="#solving-quadratic-congruences"><span class="toc-section-number">6.7</span>  Solving Quadratic Congruences</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">6.8</span>  Exercises</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <header id="title-block-header">
-<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></h1>
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></h1>
 </header>
 <p>Math can be a difficult subject for some students, but with the right guide, anyone can understand it. Quadratic Congruence Equations is a comprehensive guide to the topic of quadratic congruence equations, written by an experienced math teacher. It provides clear explanations of all the basic concepts, as well as more advanced theories, and is perfect for students who want to learn more about the subject.</p>
 <p>Most number theory book I’ve seen points out that the general problem of solving&nbsp;<span class="math inline">\(x^2&nbsp;\equiv&nbsp;a&nbsp;\pmod{m}\)</span> can be reduced to solving the special case where m is a prime then spends most of the time studying this special case in detail. However, in this book, you’ll learn how to reduce the general problem to the problem of prime moduli, or how you can unwind the reduction to produce a solution to the original problem.</p>
@@ -296,8 +279,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The Tonelli-Shanks algorithm is significant because it provides an efficient way to solve quadratic congruences, which are equations that arise frequently in number theory and cryptography. In particular, the algorithm has applications for factoring integers and computing discrete logarithms. As such, it has been studied extensively by mathematicians and computer scientists alike.</p>
 <p>This book is a comprehensive guide to the topic of quadratic congruence equations, written by an experienced math teacher. It provides clear explanations of all the basic concepts, as well as more advanced theories, and is perfect for students who want to learn more about the subject.</p>
 <p>Anyone who wants to brush up on their skills will find this book helpful, whether they are struggling with math or not. My teaching style makes the material easy to understand, and the exercises at the end of each chapter help reinforce what has been learned. I highly recommend this book to anyone looking to improve their understanding of quadratic congruence equations.</p>
-<section id="general-quadratic-congruence" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="general-quadratic-congruence"><span class="header-section-number">7.1</span> General Quadratic Congruence</h2>
+<section id="general-quadratic-congruence" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="general-quadratic-congruence"><span class="header-section-number">6.1</span> General Quadratic Congruence</h2>
 <p>Consider the general quadratic congruence, <span class="math display">\[\begin{align}\label{gqc1}
 a x^2+b x+c\equiv 0 \pmod{p}
 \end{align}\]</span> where <span class="math inline">\(p\)</span> is an odd prime and <span class="math inline">\((a,p)=1.\)</span> Inspired by completing the square, we have<br>
@@ -312,22 +295,22 @@ a x^2+b x+c\equiv 0 \pmod{p}
 \label{qcimp}
 y^2\equiv d \pmod{p}.
 \end{equation}\]</span> Thus, solving <span class="math inline">\(\ref{qcimp}\)</span> becomes the impetus.</p>
-<section id="quadratic-residues" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="quadratic-residues"><span class="header-section-number">7.1.1</span> Quadratic Residues</h3>
+<section id="quadratic-residues" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="quadratic-residues"><span class="header-section-number">6.1.1</span> Quadratic Residues</h3>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7.1 </strong></span>Let <span class="math inline">\(m\)</span> be a positive integer with <span class="math inline">\((a,m)=1.\)</span> If <span class="math inline">\(x^2\equiv a \pmod{m}\)</span> has a solution then <span class="math inline">\(a\)</span> is a <strong>quadratic residue</strong> of <span class="math inline">\(m.\)</span> If <span class="math inline">\(x^2\equiv a \pmod{m}\)</span> does not have solution then <span class="math inline">\(a\)</span> is a <strong>quadratic nonresidue</strong> of <span class="math inline">\(m.\)</span></p>
+<p><span class="theorem-title"><strong>Definition 6.1 </strong></span>Let <span class="math inline">\(m\)</span> be a positive integer with <span class="math inline">\((a,m)=1.\)</span> If <span class="math inline">\(x^2\equiv a \pmod{m}\)</span> has a solution then <span class="math inline">\(a\)</span> is a <strong>quadratic residue</strong> of <span class="math inline">\(m.\)</span> If <span class="math inline">\(x^2\equiv a \pmod{m}\)</span> does not have solution then <span class="math inline">\(a\)</span> is a <strong>quadratic nonresidue</strong> of <span class="math inline">\(m.\)</span></p>
 </div>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7.1 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime. If <span class="math inline">\((a,p)=1,\)</span> then <span class="math inline">\(x^2\equiv a \pmod{p}\)</span> either has no solutions or exactly two incongruent solutions modulo <span class="math inline">\(p.\)</span></p>
+<p><span class="theorem-title"><strong>Theorem 6.1 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime. If <span class="math inline">\((a,p)=1,\)</span> then <span class="math inline">\(x^2\equiv a \pmod{p}\)</span> either has no solutions or exactly two incongruent solutions modulo <span class="math inline">\(p.\)</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(x_0\)</span> is a solution for <span class="math inline">\(x^2\equiv a \pmod{p}\)</span> then so is <span class="math inline">\(-x_0.\)</span> If <span class="math inline">\(x_0\equiv -x_0 \pmod{p}\)</span> then <span class="math inline">\(2x_0\equiv 0 \pmod{p}\)</span> and so <span class="math inline">\(x_0\equiv 0 \pmod{p}\)</span> since <span class="math inline">\(p\)</span> is odd. Clearly, this can not happen and so if there are any solutions there are at least two incongruent solutions. If <span class="math inline">\(x_0\)</span> and <span class="math inline">\(x_1\)</span> are both solutions then <span class="math inline">\(x_0{}^2-x_1{}^2\equiv \left(x_0-x_1\right)\left(x_0+x_1\right)\equiv 0 \pmod{p}\)</span> and so either <span class="math inline">\(x_0\equiv -x_1 \pmod{p}\)</span> or <span class="math inline">\(x_0\equiv x_1 \pmod{p}.\)</span></p>
 </div>
 </section>
-<section id="the-legendre-symbol" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="the-legendre-symbol"><span class="header-section-number">7.1.2</span> The Legendre Symbol</h3>
+<section id="the-legendre-symbol" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="the-legendre-symbol"><span class="header-section-number">6.1.2</span> The Legendre Symbol</h3>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7.2 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime with <span class="math inline">\((a,p)=1.\)</span> The <strong>Legendre symbol</strong> is defined as follows:<br>
+<p><span class="theorem-title"><strong>Definition 6.2 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime with <span class="math inline">\((a,p)=1.\)</span> The <strong>Legendre symbol</strong> is defined as follows:<br>
 <span class="math display">\[
 \left(\frac{a}{p}\right)=
 \begin{cases}
@@ -365,10 +348,10 @@ y^2\equiv d \pmod{p}.
 \]</span> So again for each of these <span class="math inline">\(a's\)</span> we have <span class="math inline">\(\left(\frac{a}{17}\right)\equiv a^{(17-1)/2} \pmod{17}.\)</span></p>
 </section>
 </section>
-<section id="eulers-and-gausss-criterion" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="eulers-and-gausss-criterion"><span class="header-section-number">7.2</span> Euler’s and Gauss’s Criterion</h2>
+<section id="eulers-and-gausss-criterion" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="eulers-and-gausss-criterion"><span class="header-section-number">6.2</span> Euler’s and Gauss’s Criterion</h2>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7.2 </strong></span>[Euler’s Criterion] Let <span class="math inline">\(p\)</span> be an odd prime and <span class="math inline">\((a,p)=1.\)</span> Then<br>
+<p><span class="theorem-title"><strong>Theorem 6.2 </strong></span>[Euler’s Criterion] Let <span class="math inline">\(p\)</span> be an odd prime and <span class="math inline">\((a,p)=1.\)</span> Then<br>
 <span class="math display">\[
 \left(\frac{a}{p}\right)\equiv a^{(p-1)/2} \pmod{p}.
 \]</span></p>
@@ -384,7 +367,7 @@ a^{(p-1)/2}\equiv (p-1)!\equiv -1=\left(\frac{a}{p}\right) \pmod{p}.
 \]</span> To see why we can do this, note that <span class="math inline">\((y,p)=1\)</span> means <span class="math inline">\(y x\equiv a \pmod{p}\)</span> has exactly one solution say <span class="math inline">\(x\)</span> and this must happen precisely when <span class="math inline">\(x\neq y.\)</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.1 </strong></span>Use Euler’s Criterion to determine <span class="math inline">\(\left(\frac{5}{23}\right)\)</span> and <span class="math inline">\(\left(\frac{9}{53}\right).\)</span></p>
+<p><span class="theorem-title"><strong>Example 6.1 </strong></span>Use Euler’s Criterion to determine <span class="math inline">\(\left(\frac{5}{23}\right)\)</span> and <span class="math inline">\(\left(\frac{9}{53}\right).\)</span></p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\((5,23)=1\)</span> we have, by Euler’s criterion,<br>
@@ -411,7 +394,7 @@ a^{(p-1)/2}\equiv (p-1)!\equiv -1=\left(\frac{a}{p}\right) \pmod{p}.
 \]</span> By Euler’s Criterion <span class="math inline">\(\left(\frac{a}{p}\right)\equiv a^{(p-1)/2}\equiv (-1)^n \pmod{p}\)</span> as desired.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.2 </strong></span>Find <span class="math inline">\(\left(\frac{7}{13}\right)\)</span> and <span class="math inline">\(\left(\frac{9}{53}\right)\)</span> using Gauss’s Lemma.</p>
+<p><span class="theorem-title"><strong>Example 6.2 </strong></span>Find <span class="math inline">\(\left(\frac{7}{13}\right)\)</span> and <span class="math inline">\(\left(\frac{9}{53}\right)\)</span> using Gauss’s Lemma.</p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\((13-1)/2=6\)</span> we look at the first 6 multiples of 7 namely: <span class="math inline">\(7, 14, 21, 28, 35, 42.\)</span> The least positive residues <span class="math inline">\(\pmod{13}\)</span> are <span class="math inline">\(7, 1, 8, 2, 9, 3 .\)</span> The number of them that exceed <span class="math inline">\(13/2\)</span> is 3 namely: <span class="math inline">\(7, 8, 9.\)</span> Therefore, <span class="math inline">\(\left(\frac{7}{13}\right)=(-1)^3=-1.\)</span> Since <span class="math inline">\((53-1)/2=26\)</span> we look at the first 26 multiples of 9 (mod 53) namely<br>
@@ -425,10 +408,10 @@ The number of them that exceeds <span class="math inline">\(53/2\)</span> is 12.
 \]</span></p>
 </div>
 </section>
-<section id="quadratic-characters" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="quadratic-characters"><span class="header-section-number">7.3</span> Quadratic Characters</h2>
+<section id="quadratic-characters" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="quadratic-characters"><span class="header-section-number">6.3</span> Quadratic Characters</h2>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.3 </strong></span><a href="#quadratic-characters">Quadratic Characters</a> Show that if <span class="math inline">\(p\)</span> is an odd prime, then<br>
+<p><span class="theorem-title"><strong>Example 6.3 </strong></span><a href="#quadratic-characters">Quadratic Characters</a> Show that if <span class="math inline">\(p\)</span> is an odd prime, then<br>
 <span class="math display">\[\begin{equation}
 \label{charm1}
 \left(\frac{-1}{p}\right)=
@@ -458,16 +441,16 @@ The number of them that exceeds <span class="math inline">\(53/2\)</span> is 12.
 The reader should verify the remaining formulas.</p>
 </div>
 </section>
-<section id="properties-of-the-legendre-symbol" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="properties-of-the-legendre-symbol"><span class="header-section-number">7.4</span> Properties of the Legendre Symbol</h2>
+<section id="properties-of-the-legendre-symbol" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="properties-of-the-legendre-symbol"><span class="header-section-number">6.4</span> Properties of the Legendre Symbol</h2>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 7.1 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime with <span class="math inline">\((a,p)=(b,p)=1.\)</span> If <span class="math inline">\(a\equiv b \pmod{p}\)</span> then <span class="math inline">\(\left(\frac{a}{p}\right)=\left(\frac{b}{p}\right)\)</span>.</p>
+<p><span class="theorem-title"><strong>Lemma 6.1 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime with <span class="math inline">\((a,p)=(b,p)=1.\)</span> If <span class="math inline">\(a\equiv b \pmod{p}\)</span> then <span class="math inline">\(\left(\frac{a}{p}\right)=\left(\frac{b}{p}\right)\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The congruence <span class="math inline">\(x^2\equiv a\)</span> has a solution if and only if <span class="math inline">\(x^2\equiv b \pmod{p}\)</span> does because <span class="math inline">\(a\equiv b \pmod{p}.\)</span></p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 7.2 </strong></span> If <span class="math inline">\(p\)</span> is an odd prime with <span class="math inline">\((a,p)=(b,p)=1\)</span>, then<br>
+<p><span class="theorem-title"><strong>Lemma 6.2 </strong></span> If <span class="math inline">\(p\)</span> is an odd prime with <span class="math inline">\((a,p)=(b,p)=1\)</span>, then<br>
 <span class="math display">\[\begin{equation}
 \label{mfunc}
 \left(\frac{a}{p}\right)\left(\frac{b}{p}\right)
@@ -491,13 +474,13 @@ b^{(p-1)/2}\equiv \left(\frac{b}{p}\right),
 \]</span> and because the only values possible are <span class="math inline">\(\pm 1\)</span>, <span class="math inline">\(\ref{mfunc}\)</span> follows immediately.</p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 7.3 </strong></span> If <span class="math inline">\(p\)</span> is an odd prime with <span class="math inline">\((a,p)=1\)</span>, then <span class="math inline">\(\left(\frac{a^2}{p}\right)=1\)</span>.</p>
+<p><span class="theorem-title"><strong>Lemma 6.3 </strong></span> If <span class="math inline">\(p\)</span> is an odd prime with <span class="math inline">\((a,p)=1\)</span>, then <span class="math inline">\(\left(\frac{a^2}{p}\right)=1\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\ref{abp1}\)</span> yields <span class="math inline">\(\left(\frac{a^2}{p}\right)=\left(\frac{a}{p}\right)\left(\frac{a}{p}\right)=1\)</span> as desired.</p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 7.4 </strong></span> If <span class="math inline">\(p\)</span> is an odd prime with <span class="math inline">\((a,p)=(b,p)=1\)</span>, then<br>
+<p><span class="theorem-title"><strong>Lemma 6.4 </strong></span> If <span class="math inline">\(p\)</span> is an odd prime with <span class="math inline">\((a,p)=(b,p)=1\)</span>, then<br>
 <span class="math display">\[
 \left(\frac{a b^2}{p}\right)=\left(\frac{a}{p}\right).
 \]</span></p>
@@ -509,7 +492,7 @@ b^{(p-1)/2}\equiv \left(\frac{b}{p}\right),
 \]</span> follows immediately.</p>
 </div>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7.3 </strong></span>If <span class="math inline">\(n\)</span> has prime factorization<br>
+<p><span class="theorem-title"><strong>Theorem 6.3 </strong></span>If <span class="math inline">\(n\)</span> has prime factorization<br>
 <span class="math display">\[
 n=p_1{}^{2t_1+1}\cdot \cdot \cdot p_k{}^{2t_k+1}p_{k+1}^{2t_{k+1}}\cdot \cdot \cdot p_m^{2t_m}
 \]</span><br>
@@ -523,10 +506,10 @@ and <span class="math inline">\(q\)</span> is a prime not dividing <span class="
 \]</span> By <span class="math inline">\(\ref{abp2}\)</span>, we see that <span class="math inline">\(\left(\frac{n}{q}\right)=\left(\frac{p_1}{q}\right)\left(\frac{p_2}{q}\right)\cdot \cdot \cdot \left(\frac{p_k}{q}\right)\)</span> as desired.</p>
 </div>
 </section>
-<section id="law-of-quadratic-reciprocity" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="law-of-quadratic-reciprocity"><span class="header-section-number">7.5</span> Law of Quadratic Reciprocity</h2>
+<section id="law-of-quadratic-reciprocity" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="law-of-quadratic-reciprocity"><span class="header-section-number">6.5</span> Law of Quadratic Reciprocity</h2>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7.4 </strong></span><a href="#law-of-quadratic-reciprocity">Law of Quadratic Reciprocity</a> Let <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> be distinct odd primes, then<br>
+<p><span class="theorem-title"><strong>Theorem 6.4 </strong></span><a href="#law-of-quadratic-reciprocity">Law of Quadratic Reciprocity</a> Let <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> be distinct odd primes, then<br>
 <span class="math display">\[
 \left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=(-1)^{(p-1)/2(q-1)/2}
 \]</span></p>
@@ -541,7 +524,7 @@ and <span class="math inline">\(q\)</span> is a prime not dividing <span class="
 \end{array}  \right.
 \]</span></p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.4 </strong></span>Evaluate <span class="math inline">\(\left(\frac{29}{53}\right)\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.4 </strong></span>Evaluate <span class="math inline">\(\left(\frac{29}{53}\right)\)</span>.</p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(29\equiv 1 \pmod{4}\)</span> we have <span class="math inline">\(\left(\frac{29}{53}\right)=\left(\frac{53}{29}\right).\)</span> Since <span class="math inline">\(53\equiv 24 \pmod{29}\)</span> and <span class="math inline">\(24=2^26\)</span>, <span class="math display">\[\begin{align*}
@@ -556,7 +539,7 @@ and <span class="math inline">\(q\)</span> is a prime not dividing <span class="
 \end{align*}\]</span> which shows <span class="math inline">\(x^2\equiv 29 \pmod{53}\)</span> is not solvable.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.5 </strong></span>Evaluate <span class="math inline">\(\left(\frac{30}{43}\right)\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.5 </strong></span>Evaluate <span class="math inline">\(\left(\frac{30}{43}\right)\)</span>.</p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>To evaluate <span class="math inline">\(\left(\frac{30}{43}\right)\)</span> we note that <span class="math inline">\(30=2\cdot 3\cdot 5.\)</span> So we have <span class="math display">\[
@@ -573,7 +556,7 @@ and <span class="math inline">\(q\)</span> is a prime not dividing <span class="
 \end{align*}\]</span> which shows <span class="math inline">\(x^2\equiv 30 \pmod{43}\)</span> is not solvable.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.6 </strong></span>Evaluate <span class="math inline">\(\left(\frac{713}{1009}\right)\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.6 </strong></span>Evaluate <span class="math inline">\(\left(\frac{713}{1009}\right)\)</span>.</p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(713=23\cdot 31\)</span> we have <span class="math inline">\(\left(\frac{713}{1009}\right)=\left(\frac{23}{1009}\right)\left(\frac{31}{1009}\right).\)</span> So we break these down into the two parts 23 and 31 as follows: <span class="math display">\[\begin{align*}
@@ -616,12 +599,12 @@ and <span class="math inline">\(q\)</span> is a prime not dividing <span class="
 \end{align*}\]</span> Therefore, <span class="math inline">\(\left(\frac{713}{1009}\right)=1.\)</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.7 </strong></span>Solve the quadratic congruence <span class="math inline">\(5x^2-3x+21\equiv 0 \pmod{53}.\)</span></p>
+<p><span class="theorem-title"><strong>Example 6.7 </strong></span>Solve the quadratic congruence <span class="math inline">\(5x^2-3x+21\equiv 0 \pmod{53}.\)</span></p>
 </div>
 <p>::: {.proof }[Solution] Let <span class="math inline">\(y=2a x+b=10x-3\)</span> and <span class="math inline">\(d=(-3)^2-4(5 (21)=-411\equiv 13 \pmod{53}.\)</span> So the congruence becomes <span class="math inline">\(y^2\equiv 13 \pmod{53}\)</span>. We find that <span class="math inline">\(y\equiv 15 \pmod{53}\)</span> and <span class="math inline">\(y\equiv 38 \pmod{53}\)</span>. Therefore we solve, <span class="math inline">\(10x-3\equiv 15 \pmod{53}\)</span> and <span class="math inline">\(10x-3\equiv 38 \pmod{53}\)</span>. We find <span class="math inline">\(x\equiv 23 \pmod{53}\)</span> and <span class="math inline">\(x\equiv 20 \pmod{53}.\)</span> :::</p>
 </section>
-<section id="tonellishanks-algorithm" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="tonellishanks-algorithm"><span class="header-section-number">7.6</span> Tonelli–Shanks Algorithm</h2>
+<section id="tonellishanks-algorithm" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="tonellishanks-algorithm"><span class="header-section-number">6.6</span> Tonelli–Shanks Algorithm</h2>
 <p>The Tonell–Shanks algorithm (sometimes called the RESSOL algorithm) is used within modular arithmetic to solve a quadratic congruence equation of the form <span class="math display">\[
 x^2 \equiv a \pmod p
 \]</span> where <span class="math inline">\(a\)</span> is a quadratic residue (mod <span class="math inline">\(p\)</span>), and <span class="math inline">\(p\)</span> is an odd prime. Tonelli–Shanks cannot be used for composite moduli. Note that, finding square roots modulo composite numbers is a computational problem equivalent to integer factorization .</p>
@@ -631,11 +614,11 @@ x^2 \equiv a \pmod p
 <li>If <span class="math inline">\(i=0\)</span> then the solutions are <span class="math inline">\(x\equiv \pm t \pmod{p}\)</span> else set <span class="math inline">\(u\equiv q^{k\left(2^{n-i-1}\right)} \pmod{p}\)</span> and goto (i) and replace <span class="math inline">\(t\)</span> by <span class="math inline">\(t u\)</span> and <span class="math inline">\(r\)</span> by <span class="math inline">\(r u^2.\)</span></li>
 </ul>
 <p>:::</p>
-<section id="examples-of-shanks-algorithm" class="level3" data-number="7.6.1">
-<h3 data-number="7.6.1" class="anchored" data-anchor-id="examples-of-shanks-algorithm"><span class="header-section-number">7.6.1</span> Examples of Shank’s Algorithm</h3>
+<section id="examples-of-shanks-algorithm" class="level3" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="examples-of-shanks-algorithm"><span class="header-section-number">6.6.1</span> Examples of Shank’s Algorithm</h3>
 <p>We solve three examples illustrating the use of <span class="math inline">\(\ref{shanks}\)</span>.</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.8 </strong></span>Solve the quadratic congruence <span class="math inline">\(x^2\equiv 29 \pmod{53}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.8 </strong></span>Solve the quadratic congruence <span class="math inline">\(x^2\equiv 29 \pmod{53}\)</span>.</p>
 </div>
 ::: {.proof }[Solution] First we find <span class="math inline">\(53-1=52=2^2(13)\)</span> and so we set <span class="math inline">\(n=2\)</span> and <span class="math inline">\(k=13\)</span>. Next we find the a quadratic nonresidue. Since <span class="math inline">\(\left(\frac{2}{53}\right)=-1,\)</span> we use <span class="math inline">\(q=2\)</span>. With <span class="math inline">\(a=29,\)</span> <span class="math inline">\(q=2,\)</span> <span class="math inline">\(n=2,\)</span> and <span class="math inline">\(k=13\)</span> we perform Shanks algorithm.
 Loop 1: We find <span class="math inline">\(t=29^7\equiv 17 \pmod{53}\)</span> and <span class="math inline">\(r=29^{13}\equiv 52 \pmod{53}\)</span>. Next we find <span class="math inline">\(i\)</span>: <span class="math display">\[
@@ -652,7 +635,7 @@ i &amp; 1^{2^i}  \\   \hline
 \end{array}  
 \]</span> Since <span class="math inline">\(i=0\)</span>, we find <span class="math inline">\(x=\pm 33 \pmod{53}\)</span>. Therefore the solutions are <span class="math inline">\(x\equiv 20, 33 \pmod{53}\)</span>. :::</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.9 </strong></span>Solve the quadratic congruence <span class="math inline">\(x^2\equiv 37 \pmod{137}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.9 </strong></span>Solve the quadratic congruence <span class="math inline">\(x^2\equiv 37 \pmod{137}\)</span>.</p>
 </div>
 ::: {.proof }[Solution] We let <span class="math inline">\(a=37.\)</span> Since <span class="math inline">\(137-1=2^317\)</span> we let <span class="math inline">\(n=3,\)</span> <span class="math inline">\(k=17.\)</span> Also, since <span class="math inline">\(\left(\frac{3}{137}\right)=-1\)</span> we let <span class="math inline">\(q=3\)</span> and perform Shanks algorithm.<br>
 Loop 1: We find <span class="math inline">\(t=37^9\equiv 37 \pmod{137}\)</span> and <span class="math inline">\(r=37^{17}\equiv 37 \pmod{137}\)</span>. Next we find <span class="math inline">\(i\)</span>: <span class="math display">\[
@@ -670,7 +653,7 @@ i &amp; 1^{2^i}  \\   \hline
 \end{array}  
 \]</span> Since <span class="math inline">\(i=0\)</span> we find <span class="math inline">\(x\equiv \pm 41 \pmod{137}\)</span>. Therefore the solutions are <span class="math inline">\(x\equiv 41, 96 \pmod{137}\)</span>. :::</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.10 </strong></span>Solve the quadratic congruence <span class="math inline">\(x^2\equiv 11 \pmod{257}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.10 </strong></span>Solve the quadratic congruence <span class="math inline">\(x^2\equiv 11 \pmod{257}\)</span>.</p>
 </div>
 ::: {.proof }[Solution] We let <span class="math inline">\(a=11.\)</span> Since <span class="math inline">\(257-1=256=2^8(1)\)</span> we let <span class="math inline">\(n=8,\)</span> <span class="math inline">\(k=1.\)</span> Also, since <span class="math inline">\(\left(\frac{5}{257}\right)=-1\)</span> we let <span class="math inline">\(q=5\)</span> and perform Shanks algorithm.
 Loop 1: We find <span class="math inline">\(t=11^1\equiv 11 \pmod{257}\)</span> and <span class="math inline">\(r=11^1\equiv 11 \pmod{257}\)</span>. Next we find <span class="math inline">\(i\)</span>: <span class="math display">\[
@@ -709,10 +692,10 @@ i &amp; 1^{2^i}  \\   \hline
 \]</span> Since <span class="math inline">\(i=0\)</span> we find <span class="math inline">\(x\equiv \pm 36 \pmod{257}\)</span>. Therefore the solutions are <span class="math inline">\(x\equiv 36, 221 \pmod{257}\)</span>. :::</p>
 </section>
 </section>
-<section id="solving-quadratic-congruences" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="solving-quadratic-congruences"><span class="header-section-number">7.7</span> Solving Quadratic Congruences</h2>
+<section id="solving-quadratic-congruences" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="solving-quadratic-congruences"><span class="header-section-number">6.7</span> Solving Quadratic Congruences</h2>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.11 </strong></span>Find all solutions to the quadratic congruence equation<br>
+<p><span class="theorem-title"><strong>Example 6.11 </strong></span>Find all solutions to the quadratic congruence equation<br>
 <span class="math display">\[\begin{equation}
 \label{quadcong}
 f(x)=2x^2+10x+1\equiv 0 \pmod{1429530274918301}.
@@ -891,16 +874,16 @@ x_4 &amp; = (965348) \left(193^4\right) (970433) + (576258011) \left(101^3\right
 \end{align*}\]</span></p>
 <p>Therefore, the four and only four solutions to <span class="math inline">\(\ref{quadcong}\)</span> are 1193121168121899, 1386887794953578, 42642479964718, and 236409106796397. :::</p>
 </section>
-<section id="exercises" class="level2" data-number="7.8">
-<h2 data-number="7.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">7.8</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">6.8</span> Exercises</h2>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.1 </strong></span>Find a congruence describing all primes for which 5 is a quadratic residue.</p>
+<p><span class="theorem-title"><strong>Exercise 6.1 </strong></span>Find a congruence describing all primes for which 5 is a quadratic residue.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.2 </strong></span>Find a congruence describing all primes for which 7 is a quadratic residue.</p>
+<p><span class="theorem-title"><strong>Exercise 6.2 </strong></span>Find a congruence describing all primes for which 7 is a quadratic residue.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.3 </strong></span>Evaluate the Legendre symbol.</p>
+<p><span class="theorem-title"><strong>Exercise 6.3 </strong></span>Evaluate the Legendre symbol.</p>
 <ul>
 <li><span class="math inline">\(\left(\frac{7}{79}\right)\)</span></li>
 <li><span class="math inline">\(\left(\frac{15}{101}\right)\)</span></li>
@@ -911,7 +894,7 @@ x_4 &amp; = (965348) \left(193^4\right) (970433) + (576258011) \left(101^3\right
 </ul>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.4 </strong></span>Solve the quadratic congruence.</p>
+<p><span class="theorem-title"><strong>Exercise 6.4 </strong></span>Solve the quadratic congruence.</p>
 <ul>
 <li><span class="math inline">\(x^2+x+1\equiv 0 \pmod{7}\)</span></li>
 <li><span class="math inline">\(x^2+5x+1\equiv 0 \pmod{7}\)</span></li>
@@ -922,33 +905,33 @@ x_4 &amp; = (965348) \left(193^4\right) (970433) + (576258011) \left(101^3\right
 </ul>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.5 </strong></span>Evaluate the Legendre symbols <span class="math inline">\(\left( \frac{221}{881} \right)\)</span> and <span class="math inline">\(\left( \frac{855}{1009} \right)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.5 </strong></span>Evaluate the Legendre symbols <span class="math inline">\(\left( \frac{221}{881} \right)\)</span> and <span class="math inline">\(\left( \frac{855}{1009} \right)\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.6 </strong></span>Determine which of the following quadratic congruences has solutions</p>
+<p><span class="theorem-title"><strong>Exercise 6.6 </strong></span>Determine which of the following quadratic congruences has solutions</p>
 <ul>
 <li><span class="math inline">\(16x^2+5x+1\equiv 0 \pmod{31}\)</span></li>
 <li><span class="math inline">\(16x^2-5x+1\equiv 0 \pmod{101}\)</span></li>
 </ul>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.7 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime. Show that the quadratic congruence equation <span class="math inline">\(a x^2+bx +c\equiv 0 \pmod{p}\)</span> has a solution if and only if <span class="math inline">\(\left(\frac{b^2-4ac}{p}\right)=1\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.7 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime. Show that the quadratic congruence equation <span class="math inline">\(a x^2+bx +c\equiv 0 \pmod{p}\)</span> has a solution if and only if <span class="math inline">\(\left(\frac{b^2-4ac}{p}\right)=1\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.8 </strong></span>Solve <span class="math inline">\(2 x^2 - 17 x + 1\equiv 0 \pmod{111400}\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.8 </strong></span>Solve <span class="math inline">\(2 x^2 - 17 x + 1\equiv 0 \pmod{111400}\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.9 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers not divisible by the prime <span class="math inline">\(p.\)</span> Show that either one or all three of the integers <span class="math inline">\(a, b,\)</span> and <span class="math inline">\(a b\)</span> are quadratic residues of <span class="math inline">\(p.\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.9 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers not divisible by the prime <span class="math inline">\(p.\)</span> Show that either one or all three of the integers <span class="math inline">\(a, b,\)</span> and <span class="math inline">\(a b\)</span> are quadratic residues of <span class="math inline">\(p.\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.10 </strong></span>Using the law of quadratic reciprocity to show each of the following is true.</p>
+<p><span class="theorem-title"><strong>Exercise 6.10 </strong></span>Using the law of quadratic reciprocity to show each of the following is true.</p>
 <ul>
 <li><span class="math inline">\(\left(\frac{3}{p}\right)= \begin{cases} 1 &amp; p\equiv \pm 1 \pmod{12} \\ -1 &amp; p\equiv \pm 5 \pmod{12} \end{cases}\)</span></li>
 <li><span class="math inline">\(\left(\frac{-3}{p}\right)= \begin{cases} 1 &amp; p\equiv 1 \pmod{6} \\ 1 &amp; p\equiv -1 \pmod{6} \end{cases}\)</span></li>
 </ul>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.11 </strong></span>Find all of the quadratic residues of the following integers.</p>
+<p><span class="theorem-title"><strong>Exercise 6.11 </strong></span>Find all of the quadratic residues of the following integers.</p>
 <ul>
 <li>7<br>
 </li>
@@ -960,19 +943,19 @@ x_4 &amp; = (965348) \left(193^4\right) (970433) + (576258011) \left(101^3\right
 </ul>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.12 </strong></span>Find the value of the Legendre symbol <span class="math inline">\(\left(\frac{j}{11}\right)\)</span> for <span class="math inline">\(j=1,2,3,4,5,\)</span> and 6.</p>
+<p><span class="theorem-title"><strong>Exercise 6.12 </strong></span>Find the value of the Legendre symbol <span class="math inline">\(\left(\frac{j}{11}\right)\)</span> for <span class="math inline">\(j=1,2,3,4,5,\)</span> and 6.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.13 </strong></span>Evaluate the Legendre symbol <span class="math inline">\(\left(\frac{7}{11}\right)\)</span> using Euler’s criterion.</p>
+<p><span class="theorem-title"><strong>Exercise 6.13 </strong></span>Evaluate the Legendre symbol <span class="math inline">\(\left(\frac{7}{11}\right)\)</span> using Euler’s criterion.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.14 </strong></span>Evaluate the Legendre symbol <span class="math inline">\(\left(\frac{7}{11}\right)\)</span> using Gauss’s lemma.</p>
+<p><span class="theorem-title"><strong>Exercise 6.14 </strong></span>Evaluate the Legendre symbol <span class="math inline">\(\left(\frac{7}{11}\right)\)</span> using Gauss’s lemma.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.15 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers not divisible by the prime <span class="math inline">\(p.\)</span> Show that either one or all three of the integers <span class="math inline">\(a, b,\)</span> and <span class="math inline">\(a b\)</span> are quadratic residues of <span class="math inline">\(p.\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.15 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers not divisible by the prime <span class="math inline">\(p.\)</span> Show that either one or all three of the integers <span class="math inline">\(a, b,\)</span> and <span class="math inline">\(a b\)</span> are quadratic residues of <span class="math inline">\(p.\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.16 </strong></span>&nbsp;</p>
+<p><span class="theorem-title"><strong>Exercise 6.16 </strong></span>&nbsp;</p>
 <ol type="a">
 <li>Find a congruence describing all primes for which 5 is a quadratic residue.<br>
 </li>
@@ -981,46 +964,46 @@ x_4 &amp; = (965348) \left(193^4\right) (970433) + (576258011) \left(101^3\right
 </ol>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.17 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime. Show that the quadratic congruence equation <span class="math inline">\(a x^2+bx +c\equiv 0 \pmod{p}\)</span> has a solution if and only if <span class="math inline">\(\left(\frac{b^2-4ac}{p}\right)=1\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.17 </strong></span>Let <span class="math inline">\(p\)</span> be an odd prime. Show that the quadratic congruence equation <span class="math inline">\(a x^2+bx +c\equiv 0 \pmod{p}\)</span> has a solution if and only if <span class="math inline">\(\left(\frac{b^2-4ac}{p}\right)=1\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.18 </strong></span>Find all the quadratic residues of <span class="math inline">\(13.\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.18 </strong></span>Find all the quadratic residues of <span class="math inline">\(13.\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.19 </strong></span>Determine if <span class="math inline">\(x^2\equiv 105 (\pmod{1009}\)</span> is solvable using Legendre symbols.</p>
+<p><span class="theorem-title"><strong>Exercise 6.19 </strong></span>Determine if <span class="math inline">\(x^2\equiv 105 (\pmod{1009}\)</span> is solvable using Legendre symbols.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.20 </strong></span>Use Hensel’s lifting theorem and the Chinese Remainder Theorem to solve the quadratic congruence equation <span class="math inline">\(3x^2+11x+2\equiv 0 (\text{mod} 72).\)</span></p>
+<p><span class="theorem-title"><strong>Exercise 6.20 </strong></span>Use Hensel’s lifting theorem and the Chinese Remainder Theorem to solve the quadratic congruence equation <span class="math inline">\(3x^2+11x+2\equiv 0 (\text{mod} 72).\)</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.21 </strong></span>Determine whether (or not) Shank’s Algorithm applies to <span class="math inline">\(x^2\equiv 6 \pmod{37}\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.21 </strong></span>Determine whether (or not) Shank’s Algorithm applies to <span class="math inline">\(x^2\equiv 6 \pmod{37}\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.22 </strong></span>Determine whether (or not) Shank’s Algorithm applies to <span class="math inline">\(x^2\equiv 21 \pmod{37}\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.22 </strong></span>Determine whether (or not) Shank’s Algorithm applies to <span class="math inline">\(x^2\equiv 21 \pmod{37}\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.23 </strong></span>Rewrite an equivalent quadratic congruence (in standard form) and test whether (or not) Shank’s Algorithm applies: <span class="math inline">\(3x^2-2x+7\equiv 0 \pmod{23}\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.23 </strong></span>Rewrite an equivalent quadratic congruence (in standard form) and test whether (or not) Shank’s Algorithm applies: <span class="math inline">\(3x^2-2x+7\equiv 0 \pmod{23}\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.24 </strong></span>Solve <span class="math inline">\(x^2\equiv 25 \pmod{127}\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.24 </strong></span>Solve <span class="math inline">\(x^2\equiv 25 \pmod{127}\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.25 </strong></span>Solve <span class="math inline">\(x^2\equiv 35 \pmod{127}\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.25 </strong></span>Solve <span class="math inline">\(x^2\equiv 35 \pmod{127}\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.26 </strong></span>Determine whether (or not) Shank’s Algorithm applies to <span class="math inline">\(x^2\equiv 6 \pmod{37}\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.26 </strong></span>Determine whether (or not) Shank’s Algorithm applies to <span class="math inline">\(x^2\equiv 6 \pmod{37}\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.27 </strong></span>Determine whether (or not) Shank’s Algorithm applies to <span class="math inline">\(x^2\equiv 21 \pmod{37}\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.27 </strong></span>Determine whether (or not) Shank’s Algorithm applies to <span class="math inline">\(x^2\equiv 21 \pmod{37}\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.28 </strong></span>Rewrite an equivalent quadratic congruence (in standard form) and test whether (or not) Shank’s Algorithm applies: <span class="math inline">\(3x^2-2x+7\equiv 0 \pmod{23}\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6.28 </strong></span>Rewrite an equivalent quadratic congruence (in standard form) and test whether (or not) Shank’s Algorithm applies: <span class="math inline">\(3x^2-2x+7\equiv 0 \pmod{23}\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.29 </strong></span>Solve <span class="math inline">\(x^2\equiv 25 \pmod{127}\)</span>. [Hint: You may use Shank’s Algorithm, but you do not need to.]</p>
+<p><span class="theorem-title"><strong>Exercise 6.29 </strong></span>Solve <span class="math inline">\(x^2\equiv 25 \pmod{127}\)</span>. [Hint: You may use Shank’s Algorithm, but you do not need to.]</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.30 </strong></span>Solve <span class="math inline">\(x^2\equiv 35 \pmod{127}\)</span> using Shank’s Algorithm.</p>
+<p><span class="theorem-title"><strong>Exercise 6.30 </strong></span>Solve <span class="math inline">\(x^2\equiv 35 \pmod{127}\)</span> using Shank’s Algorithm.</p>
 </div>
 </section>
 </main> <!-- /main -->
@@ -1344,12 +1327,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./eulers-theorem.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./polynomial-congruences.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Polynomial Congruences</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

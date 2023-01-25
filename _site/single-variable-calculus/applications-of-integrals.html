@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="single-variable-calculus">
+<title>Applications of Integrals - Single Variable Calculus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./techniques-of-integration.html" rel="next">
+<link href="./integration.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+</style>
+  
+<meta property="og:title" content="Applications of Integrals - Single Variable Calculus">
+<meta property="og:description" content="single-variable-calculus">
+<meta property="og:site-name" content="Single Variable Calculus">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Single Variable Calculus" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Applications of Integrals</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/single-variable-calculus/">Single Variable Calculus</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limits-and-continuity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Differentiation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Applications Of Derivatives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-integrals.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Applications of Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./techniques-of-integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Techniques of Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./infinite-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Infinite Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/single-variable-calculus/"><picture><source type="image/webp" srcset="../../assets/single-variable-calculus-cover.webp"><source type="image/webp" srcset="../../assets/single-variable-calculus-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/single-variable-calculus-cover.png" alt="Single Variable Calculus Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#area-between-curves" id="toc-area-between-curves" class="nav-link active" data-scroll-target="#area-between-curves"><span class="toc-section-number">5.1</span>  Area Between Curves</a></li>
+  <li><a href="#area-between-curves-using-vertical-strips" id="toc-area-between-curves-using-vertical-strips" class="nav-link" data-scroll-target="#area-between-curves-using-vertical-strips"><span class="toc-section-number">5.2</span>  Area Between Curves Using Vertical Strips</a></li>
+  <li><a href="#area-between-curves-using-horizontal-strips" id="toc-area-between-curves-using-horizontal-strips" class="nav-link" data-scroll-target="#area-between-curves-using-horizontal-strips"><span class="toc-section-number">5.3</span>  Area Between Curves Using Horizontal Strips</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">5.4</span>  Exercises</a></li>
+  <li><a href="#volumes-of-solids-of-revolution" id="toc-volumes-of-solids-of-revolution" class="nav-link" data-scroll-target="#volumes-of-solids-of-revolution"><span class="toc-section-number">5.5</span>  Volumes of Solids of Revolution</a></li>
+  <li><a href="#the-disk-method" id="toc-the-disk-method" class="nav-link" data-scroll-target="#the-disk-method"><span class="toc-section-number">5.6</span>  The Disk Method</a></li>
+  <li><a href="#the-washer-method" id="toc-the-washer-method" class="nav-link" data-scroll-target="#the-washer-method"><span class="toc-section-number">5.7</span>  The Washer Method</a></li>
+  <li><a href="#the-shell-method" id="toc-the-shell-method" class="nav-link" data-scroll-target="#the-shell-method"><span class="toc-section-number">5.8</span>  The Shell Method</a></li>
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1"><span class="toc-section-number">5.9</span>  Exercises</a></li>
+  <li><a href="#arc-length-and-surfaces-of-revolution" id="toc-arc-length-and-surfaces-of-revolution" class="nav-link" data-scroll-target="#arc-length-and-surfaces-of-revolution"><span class="toc-section-number">5.10</span>  Arc Length and Surfaces of Revolution</a></li>
+  <li><a href="#arc-length" id="toc-arc-length" class="nav-link" data-scroll-target="#arc-length"><span class="toc-section-number">5.11</span>  Arc Length</a></li>
+  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2"><span class="toc-section-number">5.12</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Applications of Integrals</span></h1>
+</header>
+<p>Integration is a mathematical process that allows us to find the area under a curve, or to solve other problems involving functions. In this book, we will explore the applications of integration in detail, and learn how to apply it in various situations.</p>
+<p>We will start with the basics of finding volumes, including the washer method and the shell method. From there, we will move on to more advanced applications. With practice, you will be able to apply these ideas and use integration to solve problems yet to be discovered.</p>
+<p>Integrals are one of the most important concepts in mathematics, with applications in calculus, physics, engineering, and more. Simply put, an integral is a way to calculate the area under a curve. This can be used to determine the velocity of an object, the volume of a three-dimensional object, or even the length of a curve. In essence, integrals allow us to determine things that would otherwise be impossible to calculate.</p>
+<p>Of course, integrals are just one part of calculus; there are also derivatives, limits, and so on. But without integrals, many of the things we take for granted would be impossible. So next time you see a complicated equation involving an integral, remember that it just represents someone’s attempt to calculate something important.</p>
+<p>The applications of integration are vast and include finding the volume or mass of an object, calculating work done or energy transferred, and solving many types of differential equations.</p>
+<p>In this book, we will explore the applications of integration and how to apply it in various situations. So if you’re ready to learn about the applications of integration, let’s get started!</p>
+<p>Calculus is all about finding the area between curves. And while that may sound like a rather esoteric focus, the applications of integration are actually quite practical.</p>
+<p>For example, consider a firm that wants to determine how much material to order for manufacturing a product. The company knows the length of the product and the amount of material required per unit length. To find out how much material to order, they need to integrate the function that represents the amount of material required over the length of the product.</p>
+<p>In other words, they need to find the area between the curve representing the amount of material required and an axis. Similarly, if a company wants to calculate how much money it will save by reducing its energy consumption, it needs to find the area between the two functions representing its current and proposed energy consumption rates.</p>
+<p>As these examples illustrate, integration is a powerful tool with numerous applications in the business world. So next time you see a calculus problem involving the area between curves, don’t be discouraged - remember that there’s a practical application for all that math!</p>
+<p>Have you ever wondered how engineers calculate the volume of irregularly shaped objects? The answer lies in a branch of mathematics called integral calculus. One of the applications of integration is calculating the volume of a solid object by revolving a two-dimensional shape around an axis. This technique is known as the method of volumes of solids of revolution. To use this method, you first need to identify a suitable axis of revolution. This is typically a line that passes through the center of the object.</p>
+<p>Once you have chosen an axis, you need to determine the equation that describes the shape. For example, if you were calculating the volume of a cylindrical container, you would use the equation for a circle. You then need to integrate this equation to find the area enclosed by the shape. Finally, you need to multiply this area by the length of the axis of revolution to find the volume. Although it may seem like a lot of work, the method of volumes of solids of revolution can be used to calculate the volumes of all sorts of objects, from coffee cups to oil tanks.</p>
+<p>The Disk Method is a simple way to find volumes, but it has its limitations. First, it only works for solids that are rotationally symmetric about one axis. Second, it only works for solids with flat or circular bases. However, despite these limitations, the disk method is still a useful tool for finding volumes and has applications in many different fields.</p>
+<p>The Washer Method is a volume of solids of revolution technique that can be applied to a wide variety of applications of integration. In essence, the washer method calculates the volume of an object that has been revolved around an axis by cleverly dividing the object into infinitely thin slices, and then calculating the volume of each slice.</p>
+<p>The key to understanding the washer method is to remember that each slice must have a constant cross-sectional area; otherwise, the volume calculation will be inaccurate. Once this concept is understood, the applications of the washer method are nearly endless. From calculating the volumes of simple objects like cylinders and spheres to more complex objects like cones and toruses, the Washer Method is a powerful tool.</p>
+<p>The Shell Method is also one of the applications of integration that can be used to calculate the volumes of certain solids. This method is most often used when calculating the volumes of solids of revolution, which are created when a curve is rotated about an axis. The shell method involves slicing the solid into thin shells and then calculating the volume of each individual shell. This method can be used to calculate the volumes of solids with a variety of shapes, including cylinders, spheres, and cones. While the shell method can be somewhat tricky to master, it is a powerful tool for calculating the volumes of solids of revolution.</p>
+<p>As every math student knows, integration is a powerful tool with a wide range of applications. One of the most common applications of integration is finding the arc length of a curve. By using a small angle approximation, you can break up the arc into a series of straight line segments. To do this, you need to first break up the arc into small segments. Then, you take the length of each segment and multiply it by the corresponding width. Finally, you add up all of the lengths to get the total length of the arc.</p>
+<p>It might sound complicated, but it’s actually quite simple. And once you know how to do it, you can apply this technique to all sorts of applications. So why not give it a try? Who knows, you might just find yourself getting addicted to integration!</p>
+<p>One of the most practical applications is in the calculation of surface area. When an object is rotated about an axis, the resulting shape is known as a surface of revolution. By using integration, it’s possible to calculate the surface area of this type of object without having to take measurements of the individual components. This can be a particularly useful tool in engineering applications, where accurate measurements are crucial.</p>
+<p>When calculating the surface area of an object, we are essentially finding the amount of material required to cover the object. This process can be applied to both regular and irregular objects. For example, when we calculate the surface area of a cylinder, we are finding the amount of material needed to cover the curved sides. In general, however, calculating the surface area of an arbitrary object can be a very difficult task.</p>
+<p>However, by breaking the object down into smaller pieces, we can use integration to more easily calculate its surface area. This technique is particularly helpful for surfaces of revolution, which can be difficult to visualize. By using integration, we can more easily calculate the amount of material needed to cover these complex shapes.</p>
+<p>These are just a few of the applications of integration. As you can see, this powerful tool can be used in a wide variety of situations. Whether you’re calculating the volume of an object or finding the arc length of a curve, integration is a powerful tool that every math student should master. So why not give it a try? You might just be surprised at how useful it can be!</p>
+<p>In this book, I will take the applications of integration one by one, explaining in detail how to use them with the help of examples. I will also provide tips on when and how to use each application. By the end of this book, you will have a solid understanding of the applications of integration and how to apply it in various situations. So let’s get started!</p>
+<section id="area-between-curves" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="area-between-curves"><span class="header-section-number">5.1</span> Area Between Curves</h2>
+<p>We explain, through several examples, how to find the area between curves (as a bounded region) using integration. We demonstrate both vertical and horizontal strips and provide several exercises.</p>
+<p>When applying the definition for <strong>the area between curves</strong> , finding the intersection points of the curves and sketching their graphs is crucial. These graphs often reveal whether we should use vertical or horizontal strips by determining which curve is the upper curve and which is the lower.</p>
+</section>
+<section id="area-between-curves-using-vertical-strips" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="area-between-curves-using-vertical-strips"><span class="header-section-number">5.2</span> Area Between Curves Using Vertical Strips</h2>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5.1 </strong></span>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous functions on <span class="math inline">\([a,b],\)</span> and suppose that <span class="math inline">\({f(x)\geq g(x)}\)</span> for all <span class="math inline">\(x\)</span> in <span class="math inline">\([a,b].\)</span> Then the area of the region between the graphs of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> and the vertical lines <span class="math inline">\(x=a\)</span> and <span class="math inline">\(x=b\)</span> is <span class="math display">\[\begin{equation}
+\label{vs}
+A=\int_a^b [f(x)-g(x)] \, dx.
+\end{equation}\]</span></p>
+</div>
+<p>In particular, if <span class="math inline">\(f(x)\geq g(x)=0,\)</span> then <span class="math inline">\(\eqref{vs}\)</span> yields the area of the region bounded by: the graph of <span class="math inline">\(f,\)</span> above the <span class="math inline">\(x\)</span>-axis, and between the lines <span class="math inline">\(x=a\)</span> and <span class="math inline">\(x=b\)</span> as <span class="math display">\[\begin{equation}
+\label{funda}
+A=\int_a^b f(x)\, dx.
+\end{equation}\]</span> The reader is expected to be familiar with <span class="math inline">\(\eqref{funda}\)</span> and also with the Fundamental Theorem of Calculus.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.1 </strong></span>Find the area of the region enclosed by the parabola <span class="math inline">\(y=2-x^2\)</span> and the line <span class="math inline">\(y=-x.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we find the intersection points <span class="math inline">\((-1,1)\)</span> and <span class="math inline">\((2,-2).\)</span> Then we see that we have <span class="math inline">\(f(x)=2-x^2 \geq g(x)=-x\)</span> for all <span class="math inline">\(x\in [-1,2]\)</span> as required.</p>
+<p>Therefore the area between the curves is <span class="math display">\[\begin{align*}
+\int_a^b [f(x)-g(x)] \, dx
+&amp; =\int_{-1}^2[(2-x^2)-(-x)]\, dx \\
+&amp; = \int_{-1}^2 (2+x-x^2)\, dx
+= \left[2x+\frac{x^2}{x}-\frac{x^3}{3}\right]_{-1}^2 \\
+&amp; =\left(4+\frac{4}{2}-\frac{8}{3}\right)-\left(-2+\frac{1}{2}+\frac{1}{3}\right)
+=\frac{9}{2}
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.2 </strong></span>Find the area of the region in the first quadrant that is bounded above by <span class="math inline">\(y=\sqrt{x}\)</span> and below by the <span class="math inline">\(x\)</span>-axis and the line <span class="math inline">\(y=x-2.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we find the intersection point <span class="math inline">\((4,2).\)</span> From a sketch of the graphs we see that we should consider the bounded region as two separate regions.</p>
+<p>We have <span class="math inline">\(f(x)=\sqrt{x}\geq g(x)=0\)</span> for all <span class="math inline">\(x\)</span> in <span class="math inline">\([0,2]\)</span> and in the other region we have <span class="math inline">\(f(x)=\sqrt{x}\geq g(x)=x-2\)</span> for all <span class="math inline">\(x\)</span> in <span class="math inline">\([2,4].\)</span> The total area is <span class="math display">\[\begin{align*}
+&amp; \int_0^2 \sqrt{x} \, dx +\int_2^4 (\sqrt{x}-x+2) \, dx \\
+&amp; \qquad =\left[\frac{2}{3}x^{2/3}\right]_0^2+\left[\frac{2}{3}x^{3/2}-\frac{x^2}{2}+2x\right]_2^4 \\
+&amp; \qquad =\left[\frac{2}{3}2^{2/3}\right]+\left[\frac{2}{3}4^{3/2}-\frac{4^2}{2}+2(4)\right] -\left[\frac{2}{3}2^{3/2}-\frac{2^2}{2}+2(2)\right]\\
+&amp; \qquad =\frac{10}{3}
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.3 </strong></span>Find the area of the shaded region between the curves <span class="math inline">\(y=2x^2\)</span> and <span class="math inline">\(y=x^4-2x^2.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we find the intersection points <span class="math inline">\((0,0)\)</span> and <span class="math inline">\((\pm 2, 8).\)</span> From a sketch of the graph we see that we can use symmetry about the <span class="math inline">\(y\)</span>-axis. We have <span class="math display">\[
+{f(x)=2x^2\geq g(x)=x^4-2x^2}
+\]</span> for all <span class="math inline">\(x\)</span> in <span class="math inline">\([0,2].\)</span></p>
+<p>The total area is <span class="math display">\[\begin{align*}
+&amp; 2 \int_{0}^2 [2x^2-(x^4-2x^2)]\, dx
+= 2 \int_{0}^2 (4 x^2 - x^4)\, dx \\
+&amp; \qquad = 2 \left(\left.\frac{4x^3}{3}-\frac{x^5}{5}\right|_0^2 \right)
+= 2 \left(\frac{4(2)^3}{3}-\frac{(2)^5}{5} \right)
+= \frac{96}{5}
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.4 </strong></span>Find the area of the shaded region between the curves <span class="math inline">\({y=2x^3-x^2-5x}\)</span> and <span class="math inline">\(y=-x^2+3x.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we find the intersection points <span class="math inline">\((-2,-10),\)</span> <span class="math inline">\((0,0),\)</span> and <span class="math inline">\((2,2).\)</span> From a sketch of the graphs wee see that we should break the bounded region into two regions.</p>
+<p>Notice that for all <span class="math inline">\(x\)</span> in <span class="math inline">\([-2,0]\)</span> we have <span class="math display">\[
+f(x)= 2x^3-x^2-5x\geq g(x) = -x^2+3x
+\]</span> and that for all <span class="math inline">\(x\)</span> in <span class="math inline">\([0,2]\)</span> we have <span class="math inline">\(f(x)= -x^2+3x\geq g(x) = 2x^3-x^2-5x.\)</span> The total area is <span class="math inline">\(16\)</span> given by <span class="math display">\[\begin{align*}
+&amp; \int_{-2}^0 [(2x^3-x^2-5x)-(-x^2+3x)] \, dx \\
+&amp; \qquad +
+\int_0^2 [(-x^2+3x)-(2x^3-x^2-5x)]\, dx \\
+&amp; \qquad = 8+8 =16
+\end{align*}\]</span> as desired.</p>
+</div>
+</section>
+<section id="area-between-curves-using-horizontal-strips" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="area-between-curves-using-horizontal-strips"><span class="header-section-number">5.3</span> Area Between Curves Using Horizontal Strips</h2>
+<p>If a region’s bounding curves are described by functions of <span class="math inline">\(y,\)</span> the approximating rectangles are horizontal instead of vertical and the basis formula has <span class="math inline">\(y\)</span> instead of <span class="math inline">\(x.\)</span></p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5.2 </strong></span>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous functions on <span class="math inline">\([c,d],\)</span> and suppose that <span class="math inline">\({f(y)\geq g(y)}\)</span> for all <span class="math inline">\(y\)</span> in <span class="math inline">\([c,d].\)</span> Then the area of the region between the graphs of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> and the horizontal lines <span class="math inline">\(y=c\)</span> and <span class="math inline">\(y=d\)</span> is <span class="math display">\[\begin{equation}
+A=\int_c^d [f(y)-g(y)] \, dy.
+\end{equation}\]</span></p>
+</div>
+<p>In this equation <span class="math inline">\(f\)</span> always denotes the right-hand curve and <span class="math inline">\(g\)</span> the left-hand curve, so that <span class="math inline">\(f(y)-g(y)\)</span> is nonnegative.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.5 </strong></span>Find the area of the region in the first quadrant that is bounded above by <span class="math inline">\(y=\sqrt{x}\)</span> and below by the <span class="math inline">\(x\)</span>-axis and the line <span class="math inline">\(y=x-2.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>In this example we consider horizontal strips. Here we have <span class="math display">\[
+f(y)=y+2\geq g(y)=y^2
+\]</span> for all <span class="math inline">\(y\)</span> in <span class="math inline">\([0,2]\)</span> as is seen in the sketch of the region.</p>
+<p>The total area is <span class="math display">\[\begin{align*}
+&amp; \int_0^2 [y+2-y^2] \, dy
+= \left[2y+\frac{y^2}{2}-\frac{y^3}{3}\right]_0^2
+= 4+\frac{4}{2}-\frac{8}{3}
+= \frac{10}{3}
+\end{align*}\]</span> as desired.</p>
+</div>
+</section>
+<section id="exercises" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.4</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.1 </strong></span>Find the areas of the regions enclosed by the lines and curves. - <span class="math inline">\(x=2y^2,\)</span> <span class="math inline">\(x=0,\)</span> and <span class="math inline">\(y=3\)</span> - <span class="math inline">\(y^2-4x=4,\)</span> <span class="math inline">\(4x-y=16\)</span> - <span class="math inline">\(y=\frac{x}{x^2+1},\)</span> <span class="math inline">\(y=-\frac{1}{2} x^2,\)</span> <span class="math inline">\(x=1\)</span> - <span class="math inline">\(x=y^3-y^2\)</span> and <span class="math inline">\(x=2y\)</span> - <span class="math inline">\(y=x\sqrt{4-x^2},\)</span> <span class="math inline">\(y=0\)</span> - <span class="math inline">\(y=\sqrt{x+3},\)</span> <span class="math inline">\(y=(x+3)/2\)</span> - <span class="math inline">\(x+y^2=3\)</span> and <span class="math inline">\(4x+y^2=0\)</span> - <span class="math inline">\(\sqrt{x}+\sqrt{y}=1,\)</span> <span class="math inline">\(x+y=1\)</span> - <span class="math inline">\(y=-x^3+x,\)</span> <span class="math inline">\(y=x^4-1\)</span> - <span class="math inline">\(y=\sin x,\)</span> <span class="math inline">\(y=x,\)</span> <span class="math inline">\(x=\pi/2,\)</span> <span class="math inline">\(x=\pi\)</span> - <span class="math inline">\(y=\cos x,\)</span> <span class="math inline">\(y=2-\cos x,\)</span> <span class="math inline">\(0\leq x \leq 2\pi\)</span> - <span class="math inline">\(x=1-y^2,\)</span> <span class="math inline">\(x=y^2-1\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.2 </strong></span>Find the are of the region in the first quadrant bounded on the left by the <span class="math inline">\(y\)</span>-axis and on the right by the curves <span class="math inline">\(y=\sin x\)</span> and <span class="math inline">\(y=\cos x.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.3 </strong></span>Find the area of the region enclosed by the curve <span class="math inline">\(y^2=x^2(1-x^2).\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.4 </strong></span>Find the area, integrating with respect to <span class="math inline">\(x\)</span> and then <span class="math inline">\(y,\)</span> of the region between the curve <span class="math inline">\(y=3-x^2\)</span> and the line <span class="math inline">\(y=-1.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.5 </strong></span>Use integration to find the area of the triangle with the given vertices <span class="math inline">\((-2,4),\)</span> <span class="math inline">\((0,-2),\)</span> and <span class="math inline">\((6,2).\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.6 </strong></span>Find the area of the region in the first quadrant bounded on the left by the <span class="math inline">\(y\)</span>-axis, below by the curve <span class="math inline">\(x = 2\sqrt{y},\)</span> above left by the curve <span class="math inline">\(x = (y-1)^2,\)</span> and above right by the line <span class="math inline">\(x = 3- y.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.7 </strong></span>Find the area of the region bounded by the graph of the curve <span class="math inline">\(y^2=x^3-x^2\)</span> and the line <span class="math inline">\(x=2.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.8 </strong></span>Find the value of <span class="math inline">\(c\)</span> such that the parabola <span class="math inline">\(y =c x^2\)</span> divides the region by the parabola <span class="math inline">\(y=\frac{1}{9} x^2,\)</span> and the lines <span class="math inline">\(y=2,\)</span> and <span class="math inline">\(x=0\)</span> into two subregions of equal area.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.9 </strong></span>Find the area of the region bounded by the parabola <span class="math inline">\(y=x^2,\)</span> the tangent line to this parabola at <span class="math inline">\((1,1)\)</span> and the <span class="math inline">\(x\)</span>-axis.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.10 </strong></span>Find the values of <span class="math inline">\(c\)</span> such that at the area of the region bounded by the parabolas $ y=x^2 - c^2$ and <span class="math inline">\(y= c^2 - x^2\)</span> is 576.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.11 </strong></span>Find <span class="math inline">\(a\)</span> such that the line <span class="math inline">\(x=a\)</span> divides the region bounded by the graphs of the equations into two regions of equal area given <span class="math inline">\(y=x,\)</span> <span class="math inline">\(y=4,\)</span> and <span class="math inline">\(x=0.\)</span></p>
+</div>
+</section>
+<section id="volumes-of-solids-of-revolution" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="volumes-of-solids-of-revolution"><span class="header-section-number">5.5</span> Volumes of Solids of Revolution</h2>
+<p>Finding the volume of the solid generated by rotating a bounded planar region about an axis of rotation is discussed. We cover the disk method, the washer method, and method of cylindrical shells. We provide several examples of solids generated by revolving around both vertical and horizontal lines.</p>
+<p>The solid generated by rotating a plane region about an axis in its plane is called a <strong>solid of revolution</strong> .</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5.3 </strong></span>The <strong>volume</strong> of a solid of known integrable cross-sectional area <span class="math inline">\(A(x)\)</span> from <span class="math inline">\(x=a\)</span> to <span class="math inline">\(x=b\)</span> is the integral of <span class="math inline">\(A\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>, <span class="math display">\[\begin{equation}
+\label{defvol}
+V=\int_a^b A(x) \, dx
+\end{equation}\]</span></p>
+</div>
+<p>Throughout our discussion we assume that <span class="math inline">\(A(x)\)</span> is integrable and in particular, we assume that the reader is familiar with the Fundamental Theorem of Calculus.</p>
+</section>
+<section id="the-disk-method" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="the-disk-method"><span class="header-section-number">5.6</span> The Disk Method</h2>
+<p>::: {#thm- } Let <span class="math inline">\(A(x)\)</span> be the cross-sectional area of a disk of radius <span class="math inline">\(R(x)\)</span>, the distance of the planar regions’s boundary from the axis of revolution. The volume of the solid of revolution about the <span class="math inline">\(x\)</span>-axis is <span class="math display">\[\begin{equation}
+V = \int_a^b A(x) \, dx = \int_a^b \pi [ R(x) ]^2 \, dx.
+\end{equation}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.6 </strong></span>Find the volume of the solid that results when the region enclosed by <span class="math inline">\(y=9-x^2\)</span> and <span class="math inline">\(y=0\)</span> is revolved about the <span class="math inline">\(x\)</span>-axis.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the region bounded by the given curves. We use <span class="math inline">\(R(x)=9-x^2\)</span> and find the volume <span class="math display">\[\begin{align*}
+V &amp; = \pi \int_{-3}^3 (9-x^2)^2 \, dx \\
+&amp; = \pi \int_{-3}^3 (81-18x^2+x^4) \, dx
+= \frac{1296\pi}{5}
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.7 </strong></span>Find the volume of the solid generated when the region bounded by the graph of <span class="math inline">\(f(x)=\sqrt{x}+1\)</span> and the line <span class="math inline">\(y=2\)</span> on the interval <span class="math inline">\([0,1]\)</span>, is revolved about the line <span class="math inline">\(y=2\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region. The radius is given by <span class="math display">\[\begin{equation}
+R(x)= 2-(\sqrt{x}+1) = 1-\sqrt{x}
+\end{equation}\]</span></p>
+<p>We find the volume using the Disk Method <span class="math display">\[\begin{align*}
+V = \pi \int_0^1(1-\sqrt{x})^2 \, dx = \pi \int_0^1 (1-2\sqrt{x}+x) \, dx = \frac{\pi}{6}
+\end{align*}\]</span> as desired.</p>
+</div>
+<p>::: {#thm- } Let <span class="math inline">\(A(y)\)</span> be the cross-sectional area of a disk of radius <span class="math inline">\(R(y)\)</span>, the distance of the planar regions’s boundary from the axis of revolution. The volume of the solid of revolution about the <span class="math inline">\(y\)</span>-axis is <span class="math display">\[\begin{equation}
+V = \int_a^b A(y) \, dy = \int_a^b \pi [ R(y) ]^2 \, dy.
+\end{equation}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.8 </strong></span>Find the volume of the solid that results when the region enclosed by the curves <span class="math inline">\(y=0\)</span>, <span class="math inline">\(y=\ln x\)</span>, <span class="math inline">\(y=2\)</span>, and <span class="math inline">\(x=0\)</span> is revolved about the <span class="math inline">\(y\)</span>-axis.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region. The radius is given by <span class="math inline">\(R(y)=e^y\)</span>.</p>
+<p>We find the volume using the Disk Method <span class="math display">\[\begin{equation}
+V= \pi \int_0^2 e^{2y} \, dy = \frac{\pi(e^4-1)}{2}
+\end{equation}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.9 </strong></span>Find the volume of the solid that results when the region enclosed by <span class="math inline">\(y=\sqrt{x}\)</span>, <span class="math inline">\(y=0\)</span>, and <span class="math inline">\(x=9\)</span> is revolved about the line <span class="math inline">\(x=9\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region. The radius is given by <span class="math inline">\({R(y)=9-y^2}\)</span>.</p>
+<p>We find the volume using the Disk Method <span class="math display">\[\begin{align*}
+V &amp; = \pi \int_0^3 (9-y^2)^2 \, dy \\
+&amp; = \pi \int_0^3 (81-18y^2+y^4)\, dy
+= \frac{648\pi}{5}
+\end{align*}\]</span> as desired.</p>
+</div>
+</section>
+<section id="the-washer-method" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="the-washer-method"><span class="header-section-number">5.7</span> The Washer Method</h2>
+<p>::: {#thm- } Let <span class="math inline">\(A(x)\)</span> be the cross-sectional area of a disk of outer radius <span class="math inline">\(R(x)\)</span> and inner radius r(x).<br>
+The volume of the solid of revolution about the <span class="math inline">\(x\)</span>-axis is <span class="math display">\[\begin{equation}
+V = \int_a^b A(x) \, dx =  \int_a^b \pi \left( [ R(x) ]^2 - [ r(x) ]^2 \right) \, dx.
+\end{equation}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.10 </strong></span>Use the washer method to find the volume of the solid generated when the region bounded by <span class="math inline">\(y=x\)</span> and <span class="math inline">\(y=2\sqrt{x}\)</span> is revolved about the <span class="math inline">\(x\)</span>-axis.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region. The outer radius is <span class="math inline">\(R(x)=2\sqrt{x}\)</span> and the inner radius is <span class="math inline">\(r(x)=x\)</span>.</p>
+<p>We find the volume using the Washer Method <span class="math display">\[\begin{align*}
+V &amp; = \pi \int_0^4 ( (2\sqrt{x})^2-x^2)\, dx \\
+&amp; = \pi \left.(2x^2-x^3/3)\right\vert_0^4 = \pi(32-64/3) = \frac{32\pi}{3}.
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.11 </strong></span>Find the volume for the region bounded by the graphs of <span class="math inline">\(y=2\sin x\)</span> and the <span class="math inline">\(x\)</span>-axis on <span class="math inline">\([0,\pi]\)</span> is revolved around the line <span class="math inline">\(y=-2\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region.</p>
+<p>The washer has outer radius <span class="math inline">\(R(x)=2+2\sin x\)</span> and inner radius <span class="math inline">\(2\)</span>, so using the Washer Method the volume is <span class="math display">\[\begin{align*}
+V &amp; = \pi \int_0^\pi ((2+2\sin x)^2 -2^2) \, dx = \pi \int_0^8 (8\sin x+4\sin^2 x)\, dx \\
+&amp; = \pi \int_0^8 (8\sin x+2(1-\cos 2x))\, dx = \pi \left.(-8\cos x+2x-sin 2x)\right\vert_0^\pi \\
+&amp; = \pi(8+2\pi+8) = 2\pi (\pi +8)
+\end{align*}\]</span> as desired.</p>
+</div>
+<p>::: {#thm- } Let <span class="math inline">\(A(y)\)</span> be the cross-sectional area of a disk of outer radius <span class="math inline">\(R(y)\)</span> and inner radius r(y).<br>
+The volume of the solid of revolution about the <span class="math inline">\(y\)</span>-axis is <span class="math display">\[\begin{equation}
+V = \int_c^d A(y) \, dy = \int_c^d \pi \left( [ R(y) ]^2 - [ r(y) ]^2 \right) \, dy.
+\end{equation}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.12 </strong></span>Find the volume of the solid that results when the region enclosed by the curves <span class="math inline">\(x=1-y^2\)</span>, <span class="math inline">\(x=2+y^2\)</span>, <span class="math inline">\(y=1\)</span>, <span class="math inline">\(y=-1\)</span> is revolved about the <span class="math inline">\(y\)</span>-axis.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region.</p>
+<p>The washer has outer radius <span class="math inline">\(R(y)=2+y^2\)</span> and inner radius <span class="math inline">\(r(y)=1-y^2\)</span>, so using the Washer Method the volume is <span class="math display">\[\begin{align*}
+V &amp; = \pi \int_{-1}^1 [(2+y^2)^2-(1-y^2)^2] \, dy \\
+&amp; = \pi \int_{-1}^1 (3+6y^2) \, dy
+= 10\pi
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.13 </strong></span>Find the volume of the solid generated by the region bounded by <span class="math inline">\(y=\ln x\)</span> and the <span class="math inline">\(y\)</span>-axis on the interval <span class="math inline">\(0\leq y \leq 1\)</span> and is revolved about the line <span class="math inline">\(x=-1\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region.</p>
+<p>The washer has outer radius <span class="math inline">\(R(y)=1+e^y\)</span> and inner radius <span class="math inline">\(r(y)=1\)</span>, so using the Washer Method the volume is <span class="math display">\[\begin{align*}
+V &amp; = \pi \int_0^1 ((e^y+1)^2-1^2) \, dy \\
+&amp; = \pi \int_0^1 (2 e^y +e^{2y}) \, dy
+= \pi \left.\left( 2e^y +\frac{1}{2} e^{2y}\right)\right\vert_0^1 \\
+&amp;  = \pi \left(2e+\frac{1}{2} e^2 -\frac{5}{2}\right) = \frac{\pi}{2} (e^2+4e-5).
+\end{align*}\]</span> as desired.</p>
+</div>
+</section>
+<section id="the-shell-method" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="the-shell-method"><span class="header-section-number">5.8</span> The Shell Method</h2>
+<p>::: {#thm- } Let <span class="math inline">\(f\)</span> be a continuous nonnegative function of <span class="math inline">\(x\)</span> on <span class="math inline">\([a,b]\)</span>, where <span class="math inline">\(0\leq a\leq b\)</span>, and let <span class="math inline">\(R\)</span> be the region under the graph of <span class="math inline">\(f\)</span> on the interval <span class="math inline">\([a,b]\)</span>. The volume <span class="math inline">\(V\)</span> of the solid of revolution generated by revolving <span class="math inline">\(R\)</span> about the <span class="math inline">\(y\)</span>-axis is <span class="math display">\[\begin{equation}
+\label{shellmethod}
+V = \lim_{n\to \infty} \sum_{k=1}^n 2\pi c_k f(c_k) \Delta x = \int_a^b 2\pi x f(x) \, dx.
+\end{equation}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.14 </strong></span>Find the volume of the solid obtained by rotating about the <span class="math inline">\(y\)</span>-axis the region bounded by <span class="math inline">\(y=2x^2-x^3\)</span> and <span class="math inline">\(y=0\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region.</p>
+<p>The circumference is <span class="math inline">\(2\pi x\)</span> and height is <span class="math inline">\(f(x)=2x^2-x^3\)</span> so by the Shell Method the volume is <span class="math display">\[\begin{align*}
+V &amp; = \int_0^2 (2\pi x)(2x^2-x^3) \, dx
+= 2\pi \int_0^2 (2x^3-x^4) \, dx = \frac{16}{5}\pi
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.15 </strong></span>Find the volume of the solid formed by revolving the region bounded by the graphs of <span class="math inline">\(y=x^3+x+1\)</span>, <span class="math inline">\(y=1\)</span>, and <span class="math inline">\(x=1\)</span> about the line <span class="math inline">\(x=2\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region.</p>
+<p>Notice the variable of integration should be <span class="math inline">\(x\)</span> and so we find the volume using the Shell Method, <span class="math display">\[\begin{align*}
+V &amp; = 2\pi \int_0^1 (2-x)(x^3+x+1-1)\, dx \\
+&amp; = 2\pi \int_0^1 (-x^4+2x^3-x^2+2x)\, dx
+= \frac{29\pi}{15}
+\end{align*}\]</span> as desired.</p>
+</div>
+<p>::: {#thm- } Let <span class="math inline">\(f\)</span> be a continuous nonnegative function of <span class="math inline">\(y\)</span> on <span class="math inline">\([c,d]\)</span>, where <span class="math inline">\(0\leq c\leq d\)</span>, and let <span class="math inline">\(R\)</span> be the region bounded by the graph of <span class="math inline">\(f\)</span> on the interval <span class="math inline">\([c,d]\)</span> and the <span class="math inline">\(y\)</span>-axis. The volume <span class="math inline">\(V\)</span> of the solid of revolution generated by revolving <span class="math inline">\(R\)</span> about the <span class="math inline">\(x\)</span>-axis is <span class="math display">\[\begin{equation}
+V = \lim_{n\to \infty} \sum_{k=1}^n 2\pi a_k f(a_k) \Delta y = \int_c^d 2\pi y f(y) \, dy.
+\end{equation}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.16 </strong></span>The region bounded by the curve <span class="math inline">\(y=\sqrt{x}\)</span>, the <span class="math inline">\(x\)</span>-axis, and the line <span class="math inline">\(x=4\)</span> is revolved about the <span class="math inline">\(x\)</span> axis to generate a solid. Find the volume of the solid.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region.</p>
+<p>We find the volume using the Shell Method <span class="math display">\[\begin{align*}
+V &amp; = \int_0^2 2\pi y (4-y^2)\, dy
+= \int_0^2 2\pi (4y-y^3)\, dy = 8 \pi
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.17 </strong></span>The region bounded by the curve <span class="math inline">\(y=x^2\)</span>, the <span class="math inline">\(x\)</span>-axis, and the line <span class="math inline">\(x=1\)</span> is revolved about the line <span class="math inline">\(y=2\)</span> to generate a solid. Find the volume of the solid.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we sketch the bounded region.</p>
+<p><span class="math display">\[\begin{align*}
+V &amp; = 2\pi \int_0^1 (2-y)(1-\sqrt{y}) \, dy  \\
+&amp; = 2\pi \int_0^1 (2-y-2y^{1/2}+y^{3/2})\, dy
+= \frac{17\pi}{15}
+\end{align*}\]</span> as desired.</p>
+</div>
+</section>
+<section id="exercises-1" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="exercises-1"><span class="header-section-number">5.9</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.12 </strong></span>Find the volumes of the solids generated by revolving the regions bounded by the lines and curves about the the given axis. - <span class="math inline">\(y=x^2+1\)</span>, <span class="math inline">\(y=x+3\)</span>, about the <span class="math inline">\(x\)</span>-axis - <span class="math inline">\(y=4-x^2\)</span>, <span class="math inline">\(y=2-x\)</span>, about the <span class="math inline">\(x\)</span>-axis - <span class="math inline">\(x=1/y\)</span>, <span class="math inline">\(x=0\)</span>, <span class="math inline">\(y=1\)</span>, <span class="math inline">\(y=2\)</span>, about the <span class="math inline">\(y\)</span>-axis - <span class="math inline">\(x=\sqrt{4-y^2}\)</span>, <span class="math inline">\(x=0\)</span>, <span class="math inline">\(y=0\)</span>, about the <span class="math inline">\(y\)</span>-axis</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.13 </strong></span>Use the disk method to verify that the volume of a sphere is <span class="math inline">\(\frac{4}{3} \pi r^2\)</span>, where <span class="math inline">\(r\)</span> is the radius.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.14 </strong></span>Use the disk method to verify that the volume of a cone is <span class="math inline">\(\frac{1}{3} \pi r^2 h\)</span>, where <span class="math inline">\(r\)</span> is the radius of the base and <span class="math inline">\(h\)</span> is the height.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.15 </strong></span>Find the volume of the solid generated by revolving the region bounded by <span class="math inline">\(y=\sqrt{x}\)</span> and the lines <span class="math inline">\(y=2\)</span> and <span class="math inline">\(x=0\)</span> about</p>
+<ul>
+<li>the <span class="math inline">\(x\)</span>-axis</li>
+<li>the line <span class="math inline">\(y=2\)</span></li>
+<li>the <span class="math inline">\(y\)</span>-axis</li>
+<li>the line <span class="math inline">\(x=4\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.16 </strong></span>Find the volume of the solid region. The solid lies between planes perpendicular to the <span class="math inline">\(x\)</span>-axis at <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=4\)</span>. The cross-sections perpendicular to the axis on the interval <span class="math inline">\(0\leq x \leq 4\)</span> are squares whose diagonals run form the parabola <span class="math inline">\(y-\sqrt{x}\)</span> to the parabola <span class="math inline">\(y=\sqrt{x}\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.17 </strong></span>Find the volume of the solid generated by revolving the region bounded by <span class="math inline">\(y=4+2x-x^2\)</span> and the line <span class="math inline">\(y=4-x\)</span>.</p>
+<ul>
+<li>the <span class="math inline">\(x\)</span>-axis</li>
+<li>the line <span class="math inline">\(y=1\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.18 </strong></span>Using integration, find the volume of the solid generated by revolving the triangular region with vertices <span class="math inline">\((0,0), (b,0), (0,h)\)</span> about</p>
+<ul>
+<li>the <span class="math inline">\(x\)</span>-axis</li>
+<li>the <span class="math inline">\(y\)</span>-axis</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.19 </strong></span>Find the volume of the solid generated by revolving the region bounded by the graphs of the equations about the indicated line. - <span class="math inline">\(y=x\)</span>, <span class="math inline">\(y=x^2\)</span>, the line <span class="math inline">\(y=2\)</span> - <span class="math inline">\(y=x^2\)</span>, <span class="math inline">\(y=\frac{1}{2} x^2+2\)</span>, about the line <span class="math inline">\(y=5\)</span> - <span class="math inline">\(x=\sqrt{9-y^2}\)</span>, <span class="math inline">\(x=0\)</span>, <span class="math inline">\(y=0\)</span>, about the <span class="math inline">\(x\)</span>-axis - <span class="math inline">\(y=\sqrt{x-1}\)</span>, <span class="math inline">\(y=x-1\)</span>, about the <span class="math inline">\(y\)</span>-axis - <span class="math inline">\(x=y-y^2\)</span>, <span class="math inline">\(x=0\)</span>; about the <span class="math inline">\(y\)</span>-axis - <span class="math inline">\(y=1/x\)</span>, <span class="math inline">\(y=0\)</span>, <span class="math inline">\(x=1\)</span>, <span class="math inline">\(x=3\)</span>, about the line <span class="math inline">\(y=-1\)</span> - <span class="math inline">\(y=x\)</span>, <span class="math inline">\(y=0\)</span>, <span class="math inline">\(x=2\)</span>, <span class="math inline">\(x=4\)</span>, about the line <span class="math inline">\(x=1\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.20 </strong></span>Use the shell method to find the volume of the solids generated by revolving the regions bounded by the curves and lines. - <span class="math inline">\(x=1+y^2\)</span>, <span class="math inline">\(x=0\)</span>, <span class="math inline">\(y=1\)</span>, <span class="math inline">\(y=2\)</span>, about the <span class="math inline">\(x\)</span>-axis - <span class="math inline">\(x=1+(y-2)^2\)</span>, <span class="math inline">\(x=2\)</span>, about the <span class="math inline">\(x\)</span>-axis - <span class="math inline">\(y=\sqrt{9-x^2}\)</span>, <span class="math inline">\(y=\frac{2}{3}\sqrt{9-x^2}\)</span>, <span class="math inline">\(x\geq 0\)</span>, about the <span class="math inline">\(y\)</span>-axis - <span class="math inline">\(y=x^2+1\)</span>, <span class="math inline">\(y=0\)</span>, <span class="math inline">\(x=0\)</span>, <span class="math inline">\(x=2\)</span>, about the line <span class="math inline">\(x=3\)</span> - <span class="math inline">\(y=\frac{1}{\sqrt{2\pi}} e^{-x^2/2}\)</span>, <span class="math inline">\(y=0\)</span>, <span class="math inline">\(x=0\)</span>, <span class="math inline">\(x=1\)</span>, about the <span class="math inline">\(y\)</span>-axis - <span class="math inline">\(y=\frac{1}{3} x^2\)</span>, <span class="math inline">\(y=6x-x^2\)</span>, about the line <span class="math inline">\(x=3\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.21 </strong></span>Let <span class="math inline">\(f\)</span> be the function defined by <span class="math display">\[\begin{equation}
+f(x) =\begin{cases}
+\sqrt{x} &amp; \text{ if $0\leq x \leq 1$} \\
+x^2-2x+2 &amp; \text{ if $1&lt; x \leq 2$.}
+\end{cases}
+\end{equation}\]</span> Find the volume of the solid generated by revolving the region under the graph of <span class="math inline">\(f\)</span> on <span class="math inline">\([0,2]\)</span> about the <span class="math inline">\(x\)</span>-axis.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.22 </strong></span>Compute the volume of the solid generated by revolving the region bounded by <span class="math inline">\(y=x\)</span> and <span class="math inline">\(y=x^2\)</span> about each coordinate axis using</p>
+<ul>
+<li>the shell method</li>
+<li>the washer method</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.23 </strong></span>Compute the volume of the solid generated by revolving the triangular region bounded by the lines <span class="math inline">\(2y=x+4\)</span>, <span class="math inline">\(y=x\)</span>, and <span class="math inline">\(x=0\)</span> about</p>
+<ul>
+<li>the <span class="math inline">\(x\)</span>-axis using the washer method</li>
+<li>the <span class="math inline">\(y\)</span>-axis using the shell method</li>
+<li>the line <span class="math inline">\(x=4\)</span> using the shell method</li>
+<li>the line <span class="math inline">\(y=8\)</span> using the washer method</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.24 </strong></span>Each integral represents the volume of a solid. Describe the solid. - <span class="math inline">\(2\pi \int_0^2 \frac{y}{1+y^2} \, dy\)</span> - <span class="math inline">\(\int_0^{\pi/4} 2\pi (\pi-x) (\cos x -\sin x) \, dx\)</span> - <span class="math inline">\(\pi \int_{-r}^r [(R+\sqrt{r^2-x^2})^2 -(R-\sqrt{r^2-x^2})^2 ] \, dx\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.25 </strong></span>Use the disk method or the shell method to find the volumes of the solid generated by revolving the region bounded by the graphs of <span class="math inline">\(y=10/x^2\)</span>, <span class="math inline">\(y=0\)</span>, <span class="math inline">\(x=1\)</span>, <span class="math inline">\(x=5\)</span>.</p>
+<ul>
+<li>the <span class="math inline">\(x\)</span>-axis</li>
+<li>the <span class="math inline">\(y\)</span>-axis</li>
+<li>the line <span class="math inline">\(y=10\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.26 </strong></span>Use the disk method or the shell method to find the volumes of the solid generated by revolving the region bounded by the graphs of <span class="math inline">\(x^{1/2}+y^{1/2}=a^{a^1/2}\)</span>, <span class="math inline">\(x=0\)</span>, <span class="math inline">\(y=0\)</span>.</p>
+<ul>
+<li>the <span class="math inline">\(x\)</span>-axis</li>
+<li>the <span class="math inline">\(y\)</span>-axis</li>
+<li>the line <span class="math inline">\(x=a\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.27 </strong></span>A solid has a circular base of radius 2, and its parallel cross-sections perpendicular to its base are isosceles right triangles oriented so that the endpoints of the hypotenuse of a triangle lie on the circle. Find the volume of the solid.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.28 </strong></span>The region in the first quadrant that is bounded above by the curve <span class="math inline">\(y=1/\sqrt{x}\)</span> on the left by the line <span class="math inline">\(x=1/4\)</span>, and below by the line <span class="math inline">\(y=1\)</span> is revolved about the <span class="math inline">\(y\)</span>-axis to generate a solid. Find the volume of the solid by</p>
+<ul>
+<li>the washer method</li>
+<li>the shell method</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.29 </strong></span>Use the method of cylindrical shells to find the volume of the ellipsoid obtained by revolving the elliptical region enclosed by the graph of <span class="math display">\[\begin{equation}
+\frac{x^2}{a^2}+ \frac{y^2}{b^2} =1, \quad x\geq 0
+\end{equation}\]</span> about the <span class="math inline">\(y\)</span>-axis.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.30 </strong></span>Set up an integral for the volume of a solid <strong>torus</strong> (doughnut) with radii <span class="math inline">\(r\)</span> and <span class="math inline">\(R\)</span>. By interpreting the integral as an area, find the volume of the torus.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.31 </strong></span>A bowl is shaped like a hemisphere with diameter 30 cm. A ball with diameter 10 cm is placed in the bowl and water is poured into the bowl to a depth of <span class="math inline">\(h\)</span> centimeters. Find the volume of water in the bowl.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.32 </strong></span>A hole of radius <span class="math inline">\(r\)</span> is bored through the center of a sphere of radius <span class="math inline">\(R&gt;r\)</span>. Find the volume of the remaining portion of the sphere.</p>
+</div>
+</section>
+<section id="arc-length-and-surfaces-of-revolution" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="arc-length-and-surfaces-of-revolution"><span class="header-section-number">5.10</span> Arc Length and Surfaces of Revolution</h2>
+<p>We motivate an integration formula for finding the arc length of a smooth curve in a plane. Similarly, we use a formula for finding the surface area of the solid obtained by revolving a curve about an axis. These formulas are demonstrated with several examples and exercises are provided at the end to develop integration skills.</p>
+</section>
+<section id="arc-length" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="arc-length"><span class="header-section-number">5.11</span> Arc Length</h2>
+<p>To find a nice usable formula for finding the we will work with .</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5.4 </strong></span>Let <span class="math inline">\(y=f(x)\)</span> be a plane curve over an interval <span class="math inline">\([a,b]\)</span>. We say that <span class="math inline">\(f\)</span> is <strong>smooth</strong> whenever <span class="math inline">\(f'\)</span> is continuous on <span class="math inline">\([a,b]\)</span>.</p>
+</div>
+<p>To find the arc length of a smooth curve we begin by dividing the curve into small segments, or <strong>subcurves</strong> .<br>
+Then we approximate the curve segments by line segments and sum the lengths of the line segments to form a Riemann sum. We then let the number of segments increase, the corresponding Riemann sums approach a definite integral (under our assumption of smooth curve) whose value we will take to be the <strong>arc length</strong> <span class="math inline">\(L\)</span> of the curve. Let’s see this in more detail.</p>
+<p>Consider the <span class="math inline">\(k\)</span>-th subinterval <span class="math inline">\([x_{k-1}, x_k]\)</span> and the line segment between the points <span class="math display">\[\begin{equation}
+(x_{k-1}, f(x_{k-1}))
+\qquad \text{and} \qquad
+(x_k, f(x_k)).
+\end{equation}\]</span> The change in the <span class="math inline">\(y\)</span>-coordinate is denoted by <span class="math display">\[
+\Delta y_k = f(x_k)-f(x_{k-1}).
+\]</span> Using the Pythagorean theorem, the length of each line segment is then <span class="math display">\[\begin{equation}
+\label{pthm}
+\sqrt{(\Delta x)^2+(\Delta y_k)^2}
+\qquad \text{ for $k=1,2, \ldots ,n$.}
+\end{equation}\]</span> Summing these lengths we obtain an approximation for the arc length <span class="math inline">\(L\)</span> as <span class="math display">\[\begin{equation}
+\label{approx}
+L\approx \sum_{k=1}^n \sqrt{(\Delta x)^2+(\Delta y_k)^2}.
+\end{equation}\]</span></p>
+<p>Manipulating the inside expression we obtain <span class="math display">\[\begin{equation}
+L \approx \sum_{k=1}^n \sqrt{(\Delta x)^2\left(1+\left(\frac{\Delta y_k}{\Delta x}\right)^2\right)}
+= \sum_{k=1}^n \sqrt{1+\left(\frac{\Delta y_k}{\Delta x}\right)^2} \Delta x.
+\end{equation}\]</span> Using the Mean Value Theorem we obtain <span class="math display">\[\begin{equation}
+L \approx \sum_{k=1}^n \sqrt{1+ [f'(x_k^*)]^2} \Delta x
+\end{equation}\]</span> where <span class="math inline">\(x_k^*\)</span> is in the <span class="math inline">\(k\)</span>-th subinterval <span class="math inline">\([x_{k-1}, x_k]\)</span>.</p>
+<p>::: {#thm- } If <span class="math inline">\(y=f(x)\)</span> is a smooth curve on the interval <span class="math inline">\([a,b]\)</span>, then the arc length <span class="math inline">\(L\)</span> of this curve over <span class="math inline">\([a,b]\)</span> is given as <span class="math display">\[\begin{equation}
+\label{arclength}
+L=\int_a^b \sqrt{1+[f'(x)]^2}\, dx.
+\end{equation}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.18 </strong></span>Find the exact arc length of the curve <span class="math inline">\(y=\frac{x^6+8}{16x^2}\)</span> over the interval <span class="math inline">\(x=2\)</span> to <span class="math inline">\(x=3\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Notice that <span class="math inline">\(f'(x)= \frac{1}{4} x^3-x^{-3}\)</span> and so <span class="math display">\[\begin{align*}
+L &amp; = \int_2^3 \sqrt{1+ \left(\frac{1}{16} x^6-\frac{1}{2}+x^{-6}\right)} \, dx \\
+&amp; = \int_2^3 \sqrt{\left(\frac{1}{4}x^3+x^{-3}\right)^2} \, dx
+= \int_2^3 \left(\frac{1}{4}x^3 + x^{-3}\right) \, dx = \frac{595}{144}.
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.19 </strong></span>Find the arc length of the graph of <span class="math inline">\(y=\ln \cos x\)</span> on <span class="math inline">\([0,\frac{\pi}{4}]\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First we find that <span class="math inline">\(y'=-\tan x\)</span>. Now we apply the Arc Length Formula to find <span class="math display">\[\begin{align*}
+L &amp; = \int_0^{\pi/4} \sqrt{1+(-\tan x)^2}\, dx
+= \int_0^{\pi/4} \sec x \, dx \\
+&amp; = \int_0^{\pi/4} \sec x \left(\frac{\sec x+\tan x}{\sec x+\tan x} \right) \, dx.
+\end{align*}\]</span> Now to continue we let <span class="math inline">\(u =\sec x+\tan x\)</span>. Then we find <span class="math inline">\(du = (\sec x \tan x+\sec^2 x)\, dx\)</span> and so we find the arc length as <span class="math display">\[\begin{align*}
+L &amp; = \int_1^{1+\sqrt{2}} \left(\frac{1}{u}\right) \, du = \ln (1+\sqrt{2})
+\end{align*}\]</span> as desired.</p>
+</div>
+<p>Switching the roles of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, we obtain the arc length for a smooth curve having the form <span class="math inline">\(x=g(y)\)</span>.</p>
+<p>::: {#thm- } If <span class="math inline">\(x=f(y)\)</span> is a smooth curve on the interval <span class="math inline">\([c,d]\)</span>, then the arc length <span class="math inline">\(L\)</span> of this curve over <span class="math inline">\([c,d]\)</span> is given as <span class="math display">\[\begin{equation}
+L=\int_c^d \sqrt{1+[g'(y)]^2}\, dy.
+\label{arclengtheq}
+\end{equation}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.20 </strong></span>Find the exact arc length of the curve <span class="math inline">\(x=\frac{1}{8}y^4+\frac{1}{4}y^{-2}\)</span> over the interval <span class="math inline">\(y=1\)</span> to <span class="math inline">\(y=4\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(x=g(y)=\frac{1}{8}y^4+\frac{1}{4}y^{-2}\)</span> and notice that <span class="math inline">\(g'(y)= \frac{1}{8} y^2-2y^{-2}\)</span> and so <span class="math display">\[\begin{align*}
+L &amp; = \int_1^4 \sqrt{1+\left(\frac{1}{4}y^6 -\frac{1}{2}+\frac{1}{4}y^{-6}\right)}\, dy \\
+&amp; = \int_1^4 \left(\frac{1}{2}y^3+\frac{1}{2} y^{-3}\right) \, dy
+= \frac{2055}{64}
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.21 </strong></span>Find the arc length of the curve given by <span class="math inline">\(y=\ln(x-\sqrt{x^2-1})\)</span>, for <span class="math inline">\(1\leq x \leq \sqrt{2}\)</span> by integrating wth respect to <span class="math inline">\(y\)</span>. :::</p>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Notice that <span class="math inline">\(e^y=x-\sqrt{x^2-1}\)</span>. Also notice that <span class="math display">\[\begin{equation}
+e^{-y} = \frac{1}{x-\sqrt{x^2-1}} = \frac{1}{x-\sqrt{x^2-1}} \left(\frac{x+\sqrt{x^2-1}}{x+\sqrt{x^2-1}}\right)
+\end{equation}\]</span> We obtain <span class="math inline">\(e^{-y} = x+\sqrt{x^2-1}\)</span>. Now by adding <span class="math inline">\(e^y\)</span> and <span class="math inline">\(e^{-y}\)</span>, we obtain <span class="math inline">\(x=\frac{1}{2}(e^y +e^{-y})\)</span>. Therefore, <span class="math inline">\(\frac{dx}{dy} = \frac{e^y-e^{-y}}{2}\)</span> and so the arc length is <span class="math display">\[\begin{align*}
+L &amp; = \int_{\ln(\sqrt{2}-1)}^0 \sqrt{1+\left(\frac{e^y-e^{-y}}{2}\right)^2}\, dy
+= \left.\left(\frac{e^y-e^{-y}}{2}\right)\right|^0_{\ln (\sqrt{2}-1)} = 1
+\end{align*}\]</span> as desired.</p>
+</div>
+<section id="surfaces-of-revolution" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="surfaces-of-revolution">Surfaces of Revolution</h2>
+<p>::: {#thm- } Let <span class="math inline">\(f\)</span> be a nonnegative smooth function on <span class="math inline">\([a,b]\)</span>. The <strong>surface area</strong> of the surface obtained by revolving the graph of <span class="math inline">\(f\)</span> about the <span class="math inline">\(x\)</span>-axis is <span class="math display">\[\begin{equation}
+S=2\pi \int_a^b f(x) \sqrt{1+[f'(x)]^2} \, dx.
+\end{equation}\]</span></p>
+</section>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.22 </strong></span>Find the surface area generated by revolving the curve <span class="math inline">\(y= \sqrt{2x-x^2}\)</span> on <span class="math inline">\(0.5\leq x \leq 1.5\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We have <span class="math inline">\(\frac{dy}{dx}=\frac{1-x}{\sqrt{2x-x^2}}\)</span> and so using the Surface Area Theorem we have <span class="math display">\[\begin{align*}
+S &amp; = \int_{0.5}^{1.5} 2\pi \sqrt{2x-x^2} \sqrt{1+\frac{(1-x)^2}{2x-x^2}}\, dx \\
+&amp; = 2\pi \int_{0.5}^{1.5}  \sqrt{2x-x^2} \left(\frac{\sqrt{2x-x^2+1-2x+x^2}}{\sqrt{2x-x^2}}\right) \, dx \\
+&amp; = 2\pi \int_{0.5}^{1.5} \, dx = 2\pi
+\end{align*}\]</span> as desired.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.23 </strong></span>Verify that the surface area of a spher of radius <span class="math inline">\(r\)</span> is <span class="math inline">\(S=4\pi r^2\)</span> by evaluating a definite integral.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(y=\sqrt{r^2-x^2}\)</span>. Then <span class="math inline">\(y'=-\frac{x}{\sqrt{r^2-x^2}}\)</span> and so <span class="math display">\[\begin{equation}
+1+(y')^2 = \frac{r}{r^2-x^2}.
+\end{equation}\]</span> Therefore we find that <span class="math display">\[\begin{equation}
+S = 2\pi \int_{-r}^r y \left(\frac{r}{\sqrt{r^2-x^2}}\right)\, dx = 2\pi r \int_{-r}^r \, dx = 4\pi r^2
+\end{equation}\]</span> as desired.</p>
+</div>
+<p>::: {#thm- } Let <span class="math inline">\(g\)</span> be a nonnegative smooth function on <span class="math inline">\([c,d]\)</span>. The <strong>surface area</strong> of the surface obtained by revolving the graph of <span class="math inline">\(g\)</span> about the <span class="math inline">\(y\)</span>-axis is <span class="math display">\[\begin{equation}
+S=2\pi \int_c^d f(y) \sqrt{1+[g'(y)]^2} \, dy.
+\end{equation}\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5.24 </strong></span>Find the area of the surface obtained by revolving the curve <span class="math display">\[\begin{equation}
+x=\frac{1}{6} y^3+\frac{1}{2y}
+\end{equation}\]</span> for <span class="math inline">\(1\leq y \leq 2\)</span> about the <span class="math inline">\(y\)</span>-axis.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Notice that <span class="math inline">\(x'=\frac{y^4-1}{2y^2}\)</span> and so <span class="math display">\[\begin{equation}
+1 +  (x')^2 = 1+\frac{(y^4-1)^2}{4y^4} = \frac{(y^4+1)^2}{4y^4}
+\end{equation}\]</span> Using the Surface Area Theorem we find the surface area to be <span class="math display">\[\begin{align*}
+S &amp; = \pi \int_1^2 \left(\frac{y^3}{6}+\frac{1}{2y}\right)\left(y^2+\frac{1}{y^2}\right) \, dy \\
+&amp; = \pi \int_1^2 \left(\frac{y^5}{6}+\frac{2y}{3}+\frac{1}{2y^3}\right) \, dy = \frac{47\pi}{16}
+\end{align*}\]</span> as desired.</p>
+</div>
+</section>
+<section id="exercises-2" class="level2" data-number="5.12">
+<h2 data-number="5.12" class="anchored" data-anchor-id="exercises-2"><span class="header-section-number">5.12</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.33 </strong></span>Find the length of the curves. - <span class="math inline">\(y=(1/3)(x^2+2)^{3/2}\)</span> from <span class="math inline">\(x=0\)</span> to <span class="math inline">\(x=3\)</span> - <span class="math inline">\(y=(x^3/3)+x^2+x+1/(4x+4)\)</span> from <span class="math inline">\(x=0\)</span> to <span class="math inline">\(x=2\)</span> - <span class="math inline">\(y=(2/3) (x^2+1)^{3/2}\)</span>, from <span class="math inline">\(x=1\)</span> to <span class="math inline">\(x=4\)</span> - <span class="math inline">\(y=x^2\cos x\)</span> from <span class="math inline">\(x=0\)</span> to <span class="math inline">\(x=\pi\)</span> - <span class="math inline">\(y=x^3-x^2\)</span> from <span class="math inline">\(x=-1\)</span> to <span class="math inline">\(x=1\)</span> - <span class="math inline">\(y=(1/2)(e^x + e^{-x})\)</span> from <span class="math inline">\(x=0\)</span> to <span class="math inline">\(x=\ln 2\)</span> - <span class="math inline">\(x=\sqrt{36-y^2}\)</span>, <span class="math inline">\(0\leq y \leq 3\)</span> - <span class="math inline">\(x=(1/3)\sqrt{y}(y-3)\)</span>, <span class="math inline">\(1\leq y \leq 4\)</span> - <span class="math inline">\(x=2e^{\sqrt{2}y} +(1/16) e^{-\sqrt{2}y}\)</span>, <span class="math inline">\(0\leq y \leq (\ln 2)/\sqrt{2}\)</span> - <span class="math inline">\(x=y^4/4+1/(8y^2)\)</span>, <span class="math inline">\(1\leq y \leq 2\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.34 </strong></span>Use integration to find the lateral surface area of the cone generated by revolving the line segment <span class="math inline">\(y=x/2\)</span>, <span class="math inline">\(0\leq x \leq 4\)</span> about the <span class="math inline">\(y\)</span>-axis.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.35 </strong></span>Find the areas of the surfaces generate by revolving the curves about the indicated axis. - <span class="math inline">\(y=x^3/9\)</span>, <span class="math inline">\(0\leq x \leq 2\)</span>, <span class="math inline">\(x\)</span>-axis - <span class="math inline">\(y=\sqrt{x}\)</span> on <span class="math inline">\([4,9]\)</span>, <span class="math inline">\(x\)</span>-axis - <span class="math inline">\(x=y^3/3\)</span>, <span class="math inline">\(0\leq y \leq 1\)</span>, <span class="math inline">\(y\)</span>-axis - <span class="math inline">\(y=\sqrt{4x+6}\)</span>, <span class="math inline">\(0\leq x \leq 5\)</span>, <span class="math inline">\(x\)</span>-axis - <span class="math inline">\(y=(1/3)\sqrt{y(3-y)^2}\)</span> on <span class="math inline">\(0\leq y \leq 3\)</span>, <span class="math inline">\(y\)</span>-axis - <span class="math inline">\(x=2\sqrt{4-y}\)</span>, <span class="math inline">\(0\leq y \leq 15/4\)</span>, <span class="math inline">\(y\)</span>-axis - <span class="math inline">\(y=x^2/4\)</span>, <span class="math inline">\(2\leq x \leq 4\)</span>, <span class="math inline">\(y\)</span>-axis</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.36 </strong></span>Find the area of the surface generated by revolving about the <span class="math inline">\(x\)</span>-axis the portion of the astroid <span class="math inline">\(x^{2/3}+y^{2/3}=1\)</span>, <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.37 </strong></span>Find the area of the surface obtained by revolving the graph of <span class="math inline">\(y=\sqrt{4-x^2}\)</span> on <span class="math inline">\([0,1]\)</span> about the <span class="math inline">\(x\)</span>-axis</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.38 </strong></span>Which curve has greater length on the interval <span class="math inline">\([-1,1]\)</span>, <span class="math inline">\(y=1-x^2\)</span> or <span class="math inline">\(y=\cos(\pi x/2)\)</span>?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5.39 </strong></span>Find the surface area of an ellipsoid. Use the equation <span class="math display">\[
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+\]</span> to represent the curve that is rotated about an axis to generate the solid, under a suitable restriction.</p>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/single-variable-calculus\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./integration.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Integration</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./techniques-of-integration.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Techniques of Integration</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

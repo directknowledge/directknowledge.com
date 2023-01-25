@@ -1,0 +1,1743 @@
+---
+pagetitle: "Applications of Derivatives - Exploring Calculus"
+---
+# Applications of Derivatives
+
+
+
+
+## Definition of Directional Derivative
+
+Partial derivatives find the rate of change of $z=f(x,y)$ in the directions of the $x$ and $y$ axis; that is in the direction of the unit vectors $\vec{i}$ and $\vec{j}$, respectively. 
+
+::: {#def- } 
+
+Let $f$ be a function of two variables, and let $\vec{u}=u_1\vec{i}+u_2\vec{j}$ be a unit vector. The \index{directional derivative} **directional derivative** of $f$ at $P(a,b)$ in the direction of  $\vec{u}$ is defined by
+$$
+D_{\vec{u}} f(a,b)=\lim _{h\to  0}\frac{f\left(a+h u_1, b+h u_2\right)-f(a,b)}{h}
+$$
+provided the limit exists.
+::: 
+
+::: {#thm- } [Directional Deriviative]
+\label{dirderivative}
+
+Let $f(x,y)$ be a function that is differentiable at $P(a,b).$ Then $f$ has a directional derivative in the direction of the unit vector 
+$\vec{u}=u_1\vec{i}+u_2\vec{j}$ which is given by 
+\begin{equation}
+\label{dirder}
+D_{\vec{u}}f(a,b)=f_x(a,b)u_1+f_y(a,b)u_2.
+\end{equation}
+::: 
+
+ ::: {.proof }
+We define a function $F$ of a single variable $h$ by $F(h)=f\left(a+h u_1,b+h u_2\right)$ so that
+$$
+D_{\vec{u}}f(a,b)=\lim _{h\to 0}\frac{f\left(a+h u_1,b+h u_2\right)-f(a,b)}{h}
+=\lim _{h\to 0}\frac{F(h)-F(0)}{h}
+=F'(0).
+$$  
+Applying the chain rule with $x=a+h u_1$ and $y=b+h u_2$
+$$
+F'(h)
+=\frac{d F}{d h}
+=\frac{\partial f}{\partial  x}\frac{d x}{d h}
++\frac{\partial f}{\partial  y}\frac{d y}{d h}
+=f_x(x,y) u_1+f_y(x,y)u_2.$$
+When $h=0,$ we have $x=a$ and $y=b$ so that
+$$
+D_{\vec{u}} f(a,b)=F'(0)=\frac{\partial f}{\partial  x}u_1
++\frac{\partial f}{\partial  y}u_2
+=f_x(a,b) u_1+f_y(a,b)u_2.
+$$
+::: 
+  
+
+::: {#exm- } 
+
+Find the directional derivative $D_{\vec{u}}f(x,y)$ where $f$ is the function defined by 
+$$
+f(x,y)=x^3-3x y+4y^2
+$$ 
+and $\vec{u}$ is the unit vector given by the angle $\theta =\pi /6.$ What is $D_{\vec{u}}f(1,2)?$
+::: 
+
+::: {.solution }
+We let 
+$\vec{u}=\cos \left(\frac{\pi }{6}\right)\vec{i}+\sin \left(\frac{\pi }{6}\right)\vec{j}$ and use \ref{dirderivative} to find 
+\begin{align*}
+D_{\vec{u}}f(x,y)
+& =f_x(x,y)\cos  \frac{\pi }{6}+f_y(x,y)\sin \frac{\pi }{6} \\
+& = \left(3x^2-3y\right)\frac{\sqrt{3}}{2}+(-3x+8y)\frac{1}{2} 
+=\frac{1}{2}\left[3\sqrt{3}x^2-3x+\left(8-3\sqrt{3}\right)y\right].\end{align*}
+Therefore, by \ref{dirderivative}, the directional derivative is 
+$$
+D_{\vec{u}}f(1,2)
+=\frac{1}{2}\left[3\sqrt{3}(1)^2-3(1)+8-3\sqrt{3}\right](2)
+=\frac{13-3\sqrt{3}}{2}.
+$$
+::: 
+
+::: {#exm- } 
+Find the directional derivative of the function $f$ defined by  
+$$
+f(x,y)=y^2+3y x^2
+$$ 
+at $P=(-1,-2)$ in the direction towards the origin. 
+::: 
+
+::: {.solution }
+A vector in the direction from $(-1,-2)$ to $(0,0)$ is $\vec{i}+2\vec{j},$ so a unit vector in this direction is therefore 
+$$
+\vec{u}=\frac{1}{\sqrt{5}}\vec{i}+\frac{2}{\sqrt{5}}\vec{j}.
+$$
+We find that 
+$$
+f_y(-1,-2)=\left.\left(2y+3x^2\right)\right|_{(-1,-2)}=-1
+\qquad  \text{and} \qquad
+f_x(-1,-2)=\left.6x y\right|_{(-1,-2)}=12.
+$$
+Therefore, by \ref{dirderivative}, the directional derivative is 
+$$
+D_{\vec{u}}f(-1,-2)=\frac{1}{\sqrt{5}}(12)+\frac{2}{\sqrt{5}}(-1)=2 \sqrt{5}.
+$$
+::: 
+
+::: {#exm- } 
+Find the directional derivative of the function $f$ defined by  
+$$
+f(x,y)=x^2+3x y^2
+$$ 
+at $P=(1,2)$ in the direction towards the origin. 
+::: 
+
+::: {.solution }
+A vector in the direction from $(1,2)$ to $(0,0)$ is $-\vec{i}-2\vec{j},$ so a unit vector in this direction is therefore 
+$$
+\vec{u}=\frac{-1}{\sqrt{5}}\vec{i}-\frac{2}{\sqrt{5}}\vec{j}.
+$$
+We find that 
+$$
+f_x(1,2)=\left.\left(2x+3y^2\right)\right|_{(1,2)}=14
+\qquad  \text{and} \qquad
+f_y(1,2)=\left.6x y\right|_{(1,2)}=12.
+$$
+Therefore, the directional derivative is given by 
+$$
+D_{\vec{u}}f(1,2)=\frac{-1}{\sqrt{5}}(14)-\frac{2}{\sqrt{5}}(12)=\frac{-38}{\sqrt{5}}.
+$$
+::: 
+
+
+ 
+## The Gradient of a Function
+
+::: {#def- } 
+
+Let $f$ be a differentiable function at $(a,b)$. 
+Then the \index{gradient} **gradient** of $f$ is denoted by $\nabla f(x,y)=f_x(x,y)\vec{i}+f_y(x,y)\vec{j}.$  
+The value of the gradient at the point $P(a,b)$ is denoted by 
+$$
+\nabla f_P=f_x(a,b)\vec{i}+f_y(a,b)\vec{j}.
+$$
+::: 
+
+::: {#exm- } 
+
+Find the gradient $\nabla f$ of the function $f$ defined by 
+$$
+f(x,y)=\sin  x+e^{x y}
+$$ 
+and evaluate the gradient at $(0,1)$.
+::: 
+
+::: {.solution }
+If $f(x,y)=\sin  x+e^{x y},$ then 
+$$
+\nabla f(x,y)=\langle \cos  x+y e^{x y},x e^{x y}\rangle
+$$ 
+and $\nabla f(0,1)=\langle 2,0 \rangle.$
+::: 
+
+::: {#thm- } [Directional Derivative and Gradient]
+\label{grader}
+If $f$ is a differentiable function of $x$ and $y$, then the directional derivative of $f$ at the point $P(a,b)$ in the direction of the unit vector $\vec{u}$ is 
+$$
+D_{\vec{u}}f(a,b)=\nabla f_P\cdot \vec{u}.
+$$ 
+::: 
+
+::: {.proof }
+Since 
+$\nabla f_P=f_x(a,b)\vec{i}+f_y(a,b)\vec{j}$ and $\vec{u}=u_1\vec{i}+u_2\vec{j},$ we have
+$$
+\nabla f_P\cdot \vec{u}=f_x(a,b)u_1+f_y(a,b)u_2=D_{\vec{u}}f(a,b).
+$$
+::: 
+
+::: {#exm- } 
+
+Find the directional derivative of the function $f$ 
+defined by 
+$$
+f(x,y)=x^2+x y+y^2
+$$ 
+at $P(1,-1)$ in the direction towards the origin.
+::: 
+
+::: {.solution }
+We use the unit vector  
+$$
+\vec{u}=\left(-\frac{1}{\sqrt{2}}\right)\vec{i}+\left(\frac{1}{\sqrt{2}}\right)\vec{j}$$
+and find  
+$\nabla  f=(2x+y)\vec{i}+(2y+x)\vec{j}$  
+to determine 
+$$
+D_{\vec{u}}f(1,-1)=\nabla f(1,-1)\cdot \vec{u}
+=(\vec{i}-\vec{j})\cdot \left(-\frac{1}{\sqrt{2}}\right)
+\vec{i}+\left(\frac{1}{\sqrt{2}}\right)\vec{j}=-\sqrt{2}.
+$$
+::: 
+
+
+::: {#exm- } 
+Find the directional derivative of the function $f$ defined by 
+$$
+f(x,y)=x^3y^4
+$$ 
+at the point $(6,-1)$ in the direction of the vector $\vec{v}=2\vec{i}+5\vec{j}.$
+::: 
+
+::: {.solution }
+We first compute the gradient vector at $(6,-1)$
+$$
+\nabla f(x,y)=3x^2y^4\vec{i}+4x^3y^3\vec{j} 
+\qquad \text{and} \qquad 
+\nabla f(6,-1)=108\vec{i}-864\vec{j}.
+$$
+Note that $\vec{v}$ is not a unit vector, but since 
+$|\vec{v}|=\sqrt{29}$, the unit vector in the direction of 
+$\vec{v}$ is 
+$$
+\vec{u}=\frac{\vec{v}}{|\vec{v}|}=\frac{2}{\sqrt{29}}\vec{i}+\frac{5}{\sqrt{29}}\vec{j}.
+$$
+Therefore, by \ref{grader}, we have 
+$$
+D_{\vec{u}}f(6,-1)
+=\nabla f(6,-1)\cdot \vec{u}
+=(108\vec{i}-864\vec{j})\cdot \left( \frac{2}{\sqrt{29}}\vec{i}+\frac{5}{\sqrt{29}}\vec{j}\right)
+=\frac{-4104}{\sqrt{29}}.
+$$
+::: 
+
+
+::: {#exm- } 
+Let $f(x,y,z)=x y z,$ and let $\vec{u}$ be a unit vector perpendicular to both $\vec{v}=\vec{i}-2\vec{j}+3\vec{k}$ and $\vec{w}=2 \vec{i}+\vec{j}-\vec{k}.$ Find the directional derivative of $f$ at $P(1,-1,2)$ in the direction $\vec{u}.$
+::: 
+
+::: {.solution }
+The gradient is 
+$$
+\nabla f=\nabla (x y z)=y z \vec{i}+x z\vec{j}+x y \vec{k} 
+$$ 
+and 
+$\nabla f_P=-2\vec{i}+2\vec{j}-\vec{k}.$ 
+Now since we are looking for a unit vector perpendicular to both $\vec{v}=\vec{i}-2\vec{j}+3\vec{k}$ and 
+$\vec{w}=2 \vec{i}+\vec{j}-\vec{k}$ 
+we find,  $\vec{v} \times \vec{w}=-\vec{i}+7\vec{j}+5\vec{k}$ and so 
+$\vec{u}=\frac{1}{\sqrt{75}}(-\vec{i}+7\vec{j}+5\vec{k}).$ 
+Therefore, by \ref{grader}, we have 
+$$
+D_{\vec{u}}f =(-2\vec{i}+2\vec{j}-\vec{k})\cdot \left(\frac{-1}{\sqrt{75}}\vec{i}+\frac{7}{\sqrt{75}}\vec{j}+\frac{5}{\sqrt{75}}\vec{k}\right)=\frac{11\sqrt{3}}{15}.
+$$
+::: 
+
+::: {#thm- } [Properties of the Gradient]
+Let $f$ and $g$ be differentiable functions. Then 
+ 
+- $\nabla c=0$ for any constant $c$ 
+- $\nabla (a f+b g)=a\nabla (f)+b\nabla (g)$ for any constants $a$ and $b$ 
+- $\nabla (f g)=f\cdot \nabla (g)+g\cdot \nabla (f)$ 
+- $\nabla \left(\frac{f}{g}\right)=\frac{g\cdot \nabla (f)-f\cdot \nabla (g)}{g^2}$ provided $g^2\neq 0$ 
+- $\nabla \left(f^n\right)=n f^{n-1}\cdot \nabla (f)$ 
+ 
+::: 
+
+::: {.proof }
+An outline of how each part can be proven in listed below. 
+ 
+- The (constant rule) is proved as follows by $\nabla c=(c)_x\vec{i}+(c)_y\vec{j}=0.$ 
+- The (linearity rule) is proved as follows
+$$
+\nabla (a f +b g)
+=\left(a f_x+ b g_x\right)\vec{i}+\left(a f_x+ b g_y\right)\vec{j} 
+=a\nabla (f)+b\nabla (g).
+$$
+- The (product rule) is proved as follows
+\begin{align*}
+\nabla (f g) & 
+=(f g)_x\vec{i}+(f g)_y\vec{j} 
+=\left(f_xg+g_xf\right) \vec{i}+\left(f_yg+g_yf\right) \vec{j} 
+\\ & 
+=\left[f\left(g_x\vec{i}+g_y\vec{j}\right)\right]+\left[g\left(f_x\vec{i}+f_y\vec{j}\right)\right] 
+=f\cdot \nabla (g)+g\cdot \nabla (f).
+\end{align*} 
+- The (quotient rule) is proved as follows
+\begin{align*}
+\nabla \left(\frac{f}{g}\right) &
+=\left(\frac{f}{g}\right)_x\vec{i}+\left(\frac{f}{g}\right)_y\vec{j} 
+=\left(\frac{f_xg-g_xf }{g^2}\right)\vec{i}+\left(\frac{f_yg-g_yf }{g^2}\right) \vec{j} 
+\\
+& =\frac{\left[g\left(f_x\vec{i}+f_y\vec{j}\right)\right]-\left[f\left(g_x\vec{i}+g_y\vec{j}\right)\right]}{g^2}
+=\frac{g\cdot \nabla (f)-f\cdot \nabla (g)}{g^2}.
+\end{align*}
+- The (power rule) is proved as follows
+$$
+\nabla f^n 
+=\left(f^n\right)_x\vec{i}+\left(f^n\right)_y\vec{j} 
+=\left(n f^{n-1}\right)f_xb \vec{i}+\left(n f^{n-1}\right)f_yb \vec{j}
+=n f^{n-1}\cdot \nabla (f).
+$$
+ 
+::: 
+
+::: {#thm- } [Orthogonality of Gradient]
+Suppose the function $f$ is differentiable at the point $P$ and that the gradient at $P$ satisfies $\nabla f_P\neq 0.$ Then $\nabla f_P$ is orthogonal to the level surface (or curve) of $f$ through $P$. 
+::: 
+ 
+::: {.proof }
+Let $C$ be any smooth curve on the level surface $f(x,y,z)=K$ that passes through $P(a,b,c),$ and describe the curve $C$ by the vector function $\vec{R}(t)=x(t)\vec{i}+y(t)\vec{j}+z(t)\vec{k}$ for all $t$ in some interval $I$. We will show that the gradient $\nabla f_P$ is orthogonal to the tangent vector $d R/d t$ at $P.$ Because $C$ lies on the level surface, any point $P(x(t),y(t),z(t))$ on $C$ must satisfy $f[x(t),y(t),z(t)]=K,$ and by applying the chain rule, we obtain
+$$\frac{d}{d t}[f(x(t),y(t),z(t))]
+=f_x(x,y,z)\frac{d x}{d t}
++f_y(x,y,z)\frac{d y}{d t}+f_z(x,y,z)\frac{d z}{d t}.
+$$ 
+Suppose $t=t_0$ at $P.$ Then
+\begin{align*}
+& \left. \frac{d}{d t}\{ f[x(t),y(t),z(t)] \}\right|_{t=t_0}  \\
+& \qquad = f_x\left(x\left(t_0\right),y\left(t_0\right),z\left(t_0\right)\right)\frac{d x}{d t} +   f_y\left(x\left(t_0\right),y\left(t_0\right),z\left(t_0\right)\right)\frac{d y}{d t}  + f_z\left(x\left(t_0\right),y\left(t_0\right),z\left(t_0\right)\right)\frac{d z}{d t} \\ 
+& \qquad = \nabla f_P\frac{d \vec{R}}{d t}
+\end{align*} 
+since 
+$$\frac{d \vec{R}}{d t}=\frac{d x}{d t}\vec{i}+\frac{d y}{d t}\vec{j}+\frac{d z}{d t}\vec{k}.$$ 
+We also know that $f(x(t),y(t),z(t))=K$ for all $t$ in $I.$ Thus, we have 
+$$\frac{d}{d t}\{f[x(t),y(t),z(t)] \}=\frac{d}{d t}(K)=0$$ 
+and it follows that $\nabla f_P\cdot \frac{d \vec{R}}{d t}=0.$ We are given that 
+$\nabla f_P\neq 0$ and $d \vec{R}/d t\neq 0$ because the curve $C$
+is smooth. Therefore, $\nabla f_P$ is orthogonal to $d \vec{R}/d t,$ as required.
+::: 
+
+
+## Steepest Ascent and Steepest Descent
+
+The direction of the greatest rate of increase (or decrease) of a given function at a specified point is called the direction of \index{steepest ascent} **steepest ascent** (or \index{steepest descent} **steepest descent**). 
+
+
+::: {#thm- } [Steepest Ascent/Descent]
+Suppose $f$ is differentiable at the point $P$ and that the gradient of $f$ at $P$ satisfies $\nabla f_P\neq 0.$ Then 
+ 
+- The largest value of the directional derivative $D_{\vec{u}}f$ at $P$ is 
+$\left\|\nabla f_P\right\|$ and occurs when the unit vector
+$\vec{u}$ points in the direction of $\nabla f_P.$ 
+- The smallest value of the directional derivative $D_{\vec{u}}f$ at $P$ is 
+$-\left\|\nabla f_P\right\|$ and occurs when the unit vector
+$\vec{u}$ points in the direction of $-\nabla f_P.$ 
+::: 
+
+::: {.proof }
+If $\vec{u}$ is any unit vector, then$D_{\vec{u}}f=\nabla f_P\cdot \vec{u}=\left\|\nabla f_P\right\|\|\vec{u}\| \cos  \theta =\left\|\nabla f_P\right\| \cos  \theta$  where $\theta$ is the angle between $\nabla f_P$ and $\vec{u}.$ But $\cos  \theta$ assumes its largest value of 1 at $\theta =0;$ that is,
+when $\vec{u}$ points in the direction $\nabla f_P.$ Thus, the largest possible value of $D_{\vec{u}}f$ is 
+$$D_{\vec{u}}f =\left\|\nabla f_P\right\|(1)=\left\|\nabla f_P\right\|.$$ 
+Also $\cos  \theta$ assumes its smallest value $-1$ when $\theta =\pi .$ This value occurs when $\vec{u}$ points toward $-\nabla f_P,$ and in this direction 
+$$D_{\vec{u}}f =\left\|\left|\left.\nabla f_P\right\|(-1)\right.\right. =\left\|\left|\left.\nabla f_P\right\|(-1)\right.\right. =-\left\|\nabla f_P\right\|. 
+$$
+::: 
+ 
+
+
+::: {#exm- } 
+Sketch the level curve corresponding to $C=1$ for the function 
+$$
+f(x,y)=x^2-y^2
+$$ 
+and find a normal vector at the point $P(2,\sqrt{3}).$ 
+::: 
+
+::: {.solution }
+The level curve for $C=1$ is a hyperbola given by $x^2-y^2=1$. The gradient vector is perpendicular to the level curve.
+We have 
+$$
+\nabla f=f_x\vec{i}+f_y\vec{j}=2x\vec{i}-2y\vec{j}
+$$ 
+so at the point $\left(2,\sqrt{3}\right),$ $\nabla f_P=4i-2\sqrt{3}j$ is the required normal.
+::: 
+
+::: {#exm- } 
+In what direction is the function defined by 
+$$
+f(x,y)=x e^{2y-x}
+$$ 
+increasing most rapidly at the point $P(2,1)$, and what is the maximum rate
+of increase? In what direction is $f$ decreasing most rapidly?
+::: 
+
+::: {.solution }
+We begin by finding the gradient of $f,$
+\begin{align*}
+\nabla f & =f_x\vec{i}+f_y\vec{j} \\
+& =\left[e^{2y-x}+x e^{2y-x}(-1)\right]\vec{i}+\left[x e^{2y-x}(2)\right]\vec{j} \\
+& =e^{2y-x}(1-x)\vec{i}+2 x\vec{j}\end{align*}
+At $P(2,1)$, 
+$$\nabla f_P=e^{2(1)-2}[(1-2)\vec{i}+2(2)\vec{j}]=-\vec{i}+4\vec{j}.$$  
+The most rapid rate of increase is $\left\|\nabla f_P\right\|=\sqrt{(-1)^2+4^2}=\sqrt{17}$ and occurs in the direction of $-\vec{i}+4\vec{j}.$ The most rapid rate of decrease occurs in the direction of $-\nabla f_P=\vec{i}-4\vec{j}$ and is $-\sqrt{17}.$ 
+::: 
+
+::: {#exm- } 
+Let $f(x,y,z)=y e^{x+z}+z e^{y-x}.$ At the point $P(2,2,-2),$ find the unit vector pointing in the direction of most rapid increase of $f.$
+::: 
+
+::: {.solution }
+The gradient is 
+$$
+\nabla f=\left(y e^{x+z}-z e^{y-x}\right)\vec{i}+\left(e^{x+z}+x e^{y-x}\right)\vec{j}+\left(y e^{x+z}+e^{y-z}\right)\vec{k}.
+$$ 
+Thus, $\nabla f(2,2,-2)=4\vec{i}-\vec{j}+3\vec{k}$ and so $\vec{u}=\frac{1}{\sqrt{26}}(4\vec{i}-\vec{j}+3\vec{k}).$ 
+::: 
+
+::: {#exm- } 
+Find the maximum rate of change of the function at the given point and the direction in which it occurs 
+$f(x,y)=\sqrt{x^2+2y}$, $(4,10)$ 
+::: 
+
+::: {.solution }
+We find
+$$
+\nabla f(4,10)=\left.\frac{x}{\sqrt{x^2+2 y}}\right|_{(4,10)}\vec{i}+\left.\frac{1}{\sqrt{x^2+2 y}}\right|_{(4,10)}\vec{j} =\frac{2}{3}\vec{i}+\frac{1}{6}\vec{j}.
+$$  
+Thus the maximum rate of change is 
+$\sqrt{(2/3)^2+(1/6)^2}=\frac{\sqrt{17}}{6}$ and occurs in the direction of 
+$\frac{2}{3}\vec{i}+\frac{1}{6}\vec{j}.$ 
+::: 
+
+
+::: {#exm- } 
+Find the maximum rate of change of the function at the given point and the direction in which it occurs 
+$f(x,y)=\sqrt{y^2+2x}$, $(-4,-10)$
+::: 
+
+::: {.solution }
+We find
+$$
+\nabla f(-4,-10)=\left.\frac{1}{\sqrt{2 x+y^2}}\right|_{(-4,-10)}\vec{i}+\left.\frac{y}{\sqrt{2 x+y^2}}\right|_{(-4,-10)}\vec{j}
+=\frac{1}{2 \sqrt{23}}\vec{i}-\frac{5}{\sqrt{23}}\vec{j}.
+$$  
+Thus the maximum rate of change is
+$$
+\sqrt{\left(\frac{1}{2 \sqrt{23}}\right)^2+\left(-\frac{5}{\sqrt{23}}\right)^2}=\frac{1}{2}\sqrt{\frac{101}{23}}
+$$  
+and occurs in the direction of $\frac{1}{2 \sqrt{23}}\vec{i}-\frac{5}{\sqrt{23}}j\vec{.}$
+::: 
+
+::: {#exm- } 
+Find the direction from $P(2,-1,2)$ in which the function  
+$f(x,y,z)=(x+y)^2+(y+z)^2+(x+z)^2$ 
+increases most rapidly and compute the magnitude of the greatest rate of increase.    
+::: 
+
+::: {.solution }
+We compute the gradient:  
+$$
+\nabla  f=(4 x+2y+2z)\vec{
+i}+(2x+4y+2z)\vec{
+j}+(2x+2y+4z)\vec{
+k}
+$$
+and at $(2,-1,2)$ we have,  
+$\nabla f(2,-1,2)=10\vec{
+i}+4\vec{
+j}+10\vec{
+k}$. 
+Therefore, $\|\nabla f\|=\sqrt{216}$ is the magnitude of the greatest rate of increase and occurs in the direction of $10\vec{
+i}+4\vec{
+j}+10\vec{
+k}.$   
+::: 
+
+
+
+
+
+## Tangent Planes
+
+Suppose $S$ is a surface with the equation $z=f(x,y)$ where $f$ has continuous first partial derivatives $f_x$ and $f_y$. 
+Let $P(a,b,c)$ be a point on $S$ and let $C_1$be the curve of intersection of $S$ with the plane $x=a$ and $C_2$ the intersection of $S$ with the plane $y=b$. 
+The tangent lines $T_1$ and $T_2$ to $C_1$ and $C_2$, respectively determine a unique plane and this plane actually contains the tangent to every smooth curve $C$ that passes through $P.$ 
+We call this plane the \index{tangent plane} **tangent plane**  to $S$ at $P$.
+
+
+::: {#thm- } [Equation of Tangent Plane]
+If $z=f(x,y)$ is differentiable at $(a,b)$ then an equation of the tangent plane to the graph of $f$ at $(a,b)$ is 
+$$
+z-f(a,b)=f_x(a,b)(x-a)+f_y(a,b)(y-b).
+$$
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+
+
+::: {#exm- } 
+Find an equation of the tangent plane to the surface 
+$$
+z=2x^2+y^2
+$$ 
+at the point $(1,1,3)$.
+::: 
+
+::: {.solution }
+Let $f(x,y)=2x^2+y^2.$ 
+Then 
+$$
+f_x(x,y)=4x, \quad 
+f_x(1,1)=4, \quad 
+f_y(x,y)=2y, \quad
+f_y(1,1)=2. 
+$$
+Then an equation of the tangent
+plane is $z-3=4(x-1)+2(y-1)$ or 
+\begin{equation}
+z=4x+2y-3.
+\tag*{}
+\end{equation}
+::: 
+
+
+::: {#exm- } 
+Find an equation of the tangent plane to the surface 
+$$
+z=4-x^2-y^2
+$$ 
+at the point $(1,1,2)$. 
+::: 
+
+::: {.solution }
+Let $f(x,y)=4-x^2-y^2.$ 
+Then 
+$$
+f_x(x,y)=-2x, \quad 
+f_x(1,1)=-2, \quad 
+f_y(x,y)=-2y, \quad
+f_y(1,1)=-2. 
+$$
+Then an equation of the tangent
+plane is $z-2=-2(x-1)-2(y-1)$ or 
+\begin{equation}
+z=-2x-2y+6
+\tag*{}
+\end{equation}
+::: 
+
+
+::: {#exm- } 
+Find an equation of the tangent plane to the surface 
+$$
+z=\sin x+\sin y
+$$ 
+at the point $\left(\frac{\pi}{2},\frac{\pi}{3},1+\frac{\sqrt{3}}{2}\right)$. 
+::: 
+
+::: {.solution }
+Let $f(x,y)=\sin x+\sin y$. 
+Then 
+$$
+f_x(x,y)=\cos x, \quad 
+f_x\left(\frac{\pi}{2},\frac{\pi}{3}\right)=0, \quad 
+f_y(x,y)=\cos y, \quad
+f_y\left(\frac{\pi}{2},\frac{\pi}{3}\right)=\frac{1}{2}.
+$$
+Then an equation of the tangent
+plane is 
+$$
+z-\left(1+\frac{\sqrt{3}}{2}\right)=0\left(x-\frac{\pi}{2}\right)+\frac{1}{2}\left(y-\frac{\pi}{3}\right)
+$$ 
+or 
+\begin{equation}
+z=\frac{1}{2}y-\frac{\pi}{6}+1+\frac{\sqrt{3}}{2}
+\tag*{}
+\end{equation}
+::: 
+
+
+::: {#thm- } [Tangent Plane To A Surface]
+Suppose $S$ is a surface with the equation $F(x,y,z)=C$ and let $P(a,b,c)$ be a point on $S$ where $F$ is differentiable with $\nabla F_P\neq 0.$ Then an equation of the tangent plane to $S$ at $P$ is
+$$
+F_x(a,b,c)(x-a)+F_y(a,b,c)(y-b)+F_z(a,b,c)(z-c)=0
+$$  
+and the normal line to $S$ at $P$ has parametric equations 
+$$
+x=a+F_x(a,b,c) t, \qquad 
+y=b+F_y(a,b,c) t, \qquad 
+z=c+F_z(a,b,c) t.$$
+::: 
+ 
+::: {.proof }
+Any plane that passes through $P(a,b,c)$ has an equation of the form 
+$$
+A(x-a)+B(y-b)+C(z-c)=0.
+$$ 
+By dividing this equation by $C$
+and letting $a_1=-A/C$ and $b_1=-B/C$, we can write it in the form 
+$$
+z-c=a_1(x-a)+b_1(y-b).
+$$ 
+If this equation represents the tangent plane at
+$P$, then its intersection with the plane $y=b$ must be the tangent line with slope $f_x(a,b)$. 
+Therefore, $a_1=f_x(a,b).$ 
+Similarly, putting
+$x=a$, we get $z-c=b_2(y-b),$ which must represent the tangent line with slope $f_y(a,b)$ and so $b_2=f_y(a,b).$ 
+Thus, the equation of
+the tangent plane is $z-c=f_x(a,b)(x-a)+f_y(a,b)(y-b).$ 
+::: 
+
+
+::: {#exm- } 
+Find an equation of the tangent plane to the surface 
+$$
+\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1
+$$
+at the point $(x_0,y_0,z_0)$.
+::: 
+
+::: {.solution }
+Since 
+$F_x=2x/a^2,$ 
+$F_y=2y/b^2,$ and 
+$F_z=2z/c^2,$ 
+the tangent plane at $P_0\left(x_0,y_0,z_0\right)$ has equation  
+$$
+\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)+\frac{2z_0}{c^2}\left(z-z_0\right)=0$$
+$$
+\frac{x_0 x}{a^2}-\frac{x_0{}^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0^2}{b^2}+\frac{z_0z}{c^2}-\frac{z_0{}^2}{c^2}=0$$
+$$
+\frac{x_0 x}{a^2}+\frac{y_0y}{b^2}+\frac{z_0z}{c^2}=1.
+$$
+::: 
+
+::: {#exm- } 
+Find an equation of the tangent plane to the surface 
+ $$
+\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1
+$$ 
+at the point $(x_0,y_0,z_0)$.
+::: 
+
+::: {.solution }
+Since 
+$F_x=2x/a^2,$ 
+$F_y=2y/b^2,$ and 
+$F_z=-2z/c^2,$ 
+the tangent plane at $P_0\left(x_0,y_0,z_0\right)$ has equation  
+$$
+\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)-\frac{2z_0}{c^2}\left(z-z_0\right)=0$$
+$$
+\frac{x_0 x}{a^2}-\frac{x_0^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0^2}{b^2}+\frac{z_0z}{c^2}+\frac{z_0^2}{c^2}=0$$
+$$
+\frac{x_0 x}{a^2}+\frac{y_0y}{b^2}-\frac{z_0z}{c^2}=1.
+$$
+::: 
+
+::: {#exm- } 
+Find an equation of the tangent plane to the surface 
+$$
+\frac{z}{c}=\frac{x^2}{a^2}+\frac{y^2}{b^2}
+$$
+at the point $(x_0,y_0,z_0)$.
+::: 
+
+::: {.solution }
+Since 
+$F_x=2x/a^2,$ 
+$F_y=2y/b^2,$ and 
+$F_z=-1/c,$ 
+the tangent plane at $P_0\left(x_0,y_0,z_0\right)$ has equation
+$$
+\frac{2x_0}{a^2}\left(x-x_0\right)+\frac{2y_0}{b^2}\left(y-y_0\right)-\frac{1}{c}\left(z-z_0\right)=0$$
+$$
+\frac{x_0 x}{a^2}-\frac{x_0^2}{a^2}+\frac{y_0y}{b^2}-\frac{y_0{}^2}{b^2}+\frac{z}{c}+\frac{z_0}{c}=0
+$$ 
+$$
+\frac{x_0 x}{a^2}+\frac{y_0y}{b^2}-\frac{z}{c}=\frac{z_0}{c}.
+$$
+::: 
+
+## Normal Lines
+
+
+::: {#exm- } 
+Find the equations for the tangent plane and the normal line to the cone 
+$$
+z^2=x^2+y^2
+$$ 
+at the point where $x=3, y=4,$ and $z>0.$
+::: 
+
+::: {.solution }
+If $P(a,b,c)$ is the point of tangency and $a=3, y=4,$ and $c>0,$ then $c=\sqrt{a^2+b^2}=5.$ 
+If we consider $F(x,y,z)=x^2+y^2-z^2,$
+then the cone can be regarded as the level surface $F(x,y,z)=0.$ 
+The partial derivatives of $F$ are $F_x=2x$, $F_y=2y$, and $F_z=-2z$
+so at $P(3,4,5)$ we find $F_x(3,4,5)=6$, $F_y(3,4,5)=8,$ and $F_z(3,4,5)=-10.$ Thus the tangent plane has an equation 
+$$6(x-3)+8(y-4)-10(z-5)=0$$
+or $3x+4y-5z=0$ and the normal line is given parametrically by the equations $x=3+6t ,$ $y=4+8t,$ and $z=5-10t.$ 
+::: 
+
+
+::: {#exm- } 
+Find the equations of the tangent plane and the normal line at the point $(-2,1,-3)$ to the ellipsoid 
+$$
+\frac{x^2}{4}+y^2+\frac{z^2}{9}=3.
+$$
+::: 
+
+::: {.solution }
+The ellipsoid is a level surface of the function 
+$$
+F(x,y,z)=\frac{x^2}{4}+y^2+\frac{z^2}{9}.
+$$ 
+Therefore we have  
+$$
+F_x(x,y,z)=\frac{x}{2}, \quad 
+F_y(x,y,z)=2y, \quad 
+F_z(x,y,z)=\frac{2z}{9}
+$$
+Thus, 
+$$
+F_x(-2,1,3)=-1, \quad 
+F_y(-2,1,3)=2, \quad F_z(-2,1,3)=-2/3.
+$$  
+Then the tangent plane at $(-2,1,-3)$ is 
+$$
+-1(x+2)+2(y-1)-(2/3)(z+3)=0
+$$ 
+which simplifies to 
+$$
+3x-6y+2z+18=0
+$$ 
+and parametric equations for the normal line are 
+$$
+x=-2- t, \quad 
+y=1+2t, \quad 
+z=-3-(2/3)t.
+$$
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Find the directional derivative of $f(x,y)=x^2y^2-x^2+2y$ at the point $(2,2)$ in the direction of the unit vector $\vec{u}=\frac{1}{2}\vec{i}-\frac{\sqrt{3}}{2}\vec{j}$.
+::: 
+
+::: {#exr- } 
+Find the gradient of the function $f(x,y)=y \tan  x+\sin xy$.
+::: 
+
+::: {#exr- } 
+Find the directional directive of $f(x,y)=\frac{e^{-x}}y$ at $P(0,-1)$ in the direction of $\mathbf{v}=-\mathbf{i}+\mathbf{j}$.
+::: 
+
+::: {#exr- } 
+Find the gradient of the function.
+ 
+- $f(x,y)=x^2-2 x y$
+- $f(x,y)=\ln \left(x^2+y^2\right)$
+- $f(x,y)=\sin (x+2y)$ 
+- $f(x,y,z)=\frac{x y-1}{z+x}$
+- $f(x,y,z)= x y z^2$
+- $g(x,y,z)=x e^{y+3z}$
+    
+::: 
+
+::: {#exr- } 
+Compute the directional derivative of the function $f(x,y)=\ln \left(x^2+3y\right)$ at the point $(1,1)$ in the direction of the vector $v=\vec{i}+\vec{j}.$
+::: 
+
+::: {#exr- } 
+Compute the directional derivative of the function $f(x,y)=\sin  x y$ at the point $\left(\sqrt{\pi },\sqrt{\pi }\right)$ in the direction of the vector $v=3\pi  \vec{i}-\pi  \vec{j} .$
+::: 
+
+::: {#exr- } 
+Find the directional derivative of the given function at the given point in the direction of the given vector.  
+ 
+- $f(x,y)=x^2+x y$, $(1,-2),$ and $\vec{i}+\vec{j}$ 
+- $f(x,y)=\frac{e^{-x}}{y},$ $(2,-1),$ and $-\vec{i}+\vec{j}$
+    
+::: 
+
+::: {#exr- } 
+Find the directional derivative of the given function at the given point in the direction of the given vector. 
+ 
+- $f(x,y)=\ln \left(3x+y^2\right)$, $(0,1),$ and $\vec{i}-\vec{j}$  
+- $f(x,y)=\sec \left(x y-y^3\right),$ $(2,0),$ and $-\vec{i}-3\vec{j}$
+ 
+::: 
+
+::: {#exr- } 
+Find the direction from $P_0$ in which the given function $f$ increases most rapidly and compute the magnitude of the greatest rate of increase. 
+ 
+- $f(x,y,z)=(x+y)^2+(y+z)^2+(x+z)^2$ at $P_0(2,-1,2)$  
+- $f(x,y,z)=z \ln \left(\frac{y}{z}\right)$ at $P_0(1,e,-1)$
+    
+::: 
+
+
+
+
+
+
+## Extreme Values of Two Variable Functions
+
+
+
+
+## Relative Extrema
+
+::: {#def- } 
+
+Let $f$ be a function of two variables $x$ and $y$.
+ 
+- The function $f$ has a \index{relative maximum} **relative maximum**  at 
+$\left(x_0,y_0\right)$ if $f(x,y)\leq f\left(x_0,y_0\right)$ for all $(x,y)$ in an open disk containing $\left(x_0,y_0\right)$. 
+- The function $f$ has a \index{relative minimum} **relative minimum**  at 
+$\left(x_0,y_0\right)$ if $f(x,y)\geq f\left(x_0,y_0\right)$ for all $(x,y)$ in an open disk containing 
+$\left(x_0,y_0\right).$ 
+ 
+Collectively, relative maxima and relative minima are called 
+\index{relative extrema} **relative extrema** .
+::: 
+
+::: {#lem- } [Critical Points]
+
+If $f$ has a relative extremum at $\left(x_0,y_0\right)$ and partial derivatives $f_x$ and $f_y$ both exist at $\left(x_0,y_0\right),$ then 
+$$
+f_x\left(x_0,y_0\right)=f_y\left(x_0,y_0\right)=0.
+$$ 
+::: 
+ 
+::: {.proof }
+Let $F(x)=f\left(x,y_0\right).$ Then $F(x)$ must have a relative extremum at $x=x_0,$ so $F'\left(x_0\right)=0,$ which means
+that $f_x\left(x_0,y_0\right)=0.$ Similarly, $G(y)=f\left(x_0,y\right)$ has a relative extremum at $y=y_0,$ so $G'\left(y_0\right)=0$ and
+$f_y\left(x_0,y_0\right)=0.$ Thus, we must have both $f_x\left(x_0,y_0\right)=0$ and $f_y\left(x_0,y_0\right)=0.$
+::: 
+
+::: {#def- } 
+A \index{critical point} **critical point**  of a function $f$ defined on an open set $D$ is a point $\left(x_0,y_0\right)$ in $D$ where either
+one of the following is true: 
+ 
+- $f_x\left(x_0,y_0\right)=f_y\left(x_0,y_0\right)=0$ or 
+- at least one of $f_x$ or $f_y$ does not exist at $\left(x_0,y_0\right).$ 
+ 
+::: 
+
+
+::: {#exm- } 
+Find the critical points for the function 
+$$
+f(x,y)=x^2+y^2-2x-6y+14.
+$$
+::: 
+
+::: {.solution }
+The first partial derivatives of $f$ are
+$$
+f_x(x,y)=2x-2 \qquad 
+\text{and} \qquad 
+f_y(x,y)=2y-6.
+$$ 
+These partial derivatives are equal to 0 when $x=1$ and $y=3$ so the only critical point is $(1,3).$ By completing the square we find that 
+$$
+f(x,y)=4+(x-1)^2+(y-3)^2.
+$$  
+Since $(x-1)^2\geq  0$ and $(y-3)^2\geq  0,$ we have $f(x,y)\geq 4$ for all values of $x$ and $y.$ Therefore, $f(1,3)=4$ is a local minimum, and in fact it is the absolute minimum of $f.$ This can be confirmed geometrically from the graph of $f$, which is the elliptic paraboloid with vertex $(1,3,4)$ as shown in \ref{fig:ext-func-1}.
+::: 
+
+::: {#def- } 
+A critical point $P_0\left(x_0,y_0\right)$ is called a \index{saddle point} **saddle point**  of $f$ if every open disk centered at $P_0$ contains points in the domain of $f$ that satisfy $f(x,y)>f\left(x_0,y_0\right)$ as well as points in the domain of $f$ that satisfy $f(x,y)<f\left(x_0,y_0\right).$
+::: 
+
+
+::: {#exm- } 
+Find the extreme values of 
+$$
+f(x,y)=y^2-x^2.
+$$
+::: 
+
+::: {.solution }
+Since $f_x=-2x$ and $f_y=2y,$ the only critical point is $(0,0).$ Notice that for points on the $x$-axis we have $y=0,$
+so $f(x,0)=-x^2<0$ (if $x\neq 0.$) 
+However for points on the $y$-axis we have $x=0,$ so $f(0,y)=y^2>0$ (if $y\neq 0$). 
+Thus every disk with center $(0,0)$ contains points where $f$ takes positive values as well as points where $f$ takes negative values. 
+Therefore $f(0,0)=0$ cannot be an extreme value for $f,$ so $f$ has no extreme values. 
+\par
+This example illustrates the fact that a function need not have a maximum or minimum value at a critical point. 
+The graph of $f$ is the hyperbolic paraboloid which has a horizontal tangent plane $(z=0)$ at the origin. 
+You can see that $f(0,0)=0$ is a maximum in the direction of the $x-\text{axis}$ but not in the direction of the $y$-axis. 
+Near the origin the graph has the shape of a saddle as shown in \ref{fig:ext-func-2}.
+::: 
+
+::: {#thm- } [Second Partials Test]
+\label{secondpartialstest}
+Assume $f$ has a critical point at $P_0(x_0,y_0)$ and assume that $f$ has continuous second order partial derivatives in a disk centered at $\left(x_0,y_0\right).$ 
+If $D:=(f_{x x}f_{y y}-\left(f_{x y}\right)^2)\left(x_0,y_0\right)>0$, then 
+ 
+- a relative maximum occurs at $P_0$ if $f_{x x}\left(x_0,y_0\right)<0$
+- a relative minimum occurs at $P_0$ if $f_{x x}\left(x_0,y_0\right)>0$. 
+ 
+If $D\left(x_0,y_0\right)<0$, then a saddle point occurs at $P_0$.
+::: 
+
+
+::: {#exm- } 
+Find the relative extrema of the function  
+$$
+f(x,y)=x^4+y^4-4x y+1.
+$$
+::: 
+
+::: {.solution }
+We first locate the critical points 
+$$
+f_x=4x^3-4y \qquad \text{and} \qquad f_y=4y^3-4x.
+$$  
+Setting these partial derivatives to 0, we obtain the equations$x^3-y=0$ and $y^3-x=0.$  
+To solve these equations we substitute $y=x^3$ from the first equation into the second one. 
+This gives 
+$$
+0
+=x^9-x
+=x\left(x^8-1\right) 
+=x\left(x^4-1\right)\left(x^4+1\right) 
+=x(x-1)(x+1)\left(x^2+1\right)\left(x^4+1\right)
+$$
+So there are three real roots: $x=0,1 ,-1.$ 
+The three critical points are $(0,0), (1,1),$ and $(-1,-1).$ 
+Next we calculate the second partial derivatives and $D(x,y)$: 
+$$
+f_{x x}=12x^2, \qquad f_{x y}=-4, \qquad f_{y y}=12y^2.
+$$ 
+Thus, 
+$$D(x,y)=f_{x x}f_{y y}-\left(f_{x y}\right)^2=144x^2y^2-16.
+$$ 
+Since $D(0,0)=-16<0,$ it follows that the origin is a saddle point; that is, $f$ has no local extremum at $(0,0).$ 
+Since $D(1,1)=128>0$ and $f_{x x}(1,1)=12>0,$ we see that $f(1,1)=-1$ is a local minimum. 
+Similarly, we have $D(-1,-1)=128>0$ and $f_{x x}(-1,1-1)=12>0,$ so $f(-1,-1)=-1$ is also a local minimum.  
+::: 
+
+
+
+
+## Absolute Extrema
+
+::: {#def- } 
+Let $f$ be a function of two variables $x$ and $y$.
+ 
+- The function $f$ has a \index{relative maximum} **relative maximum**  at 
+$\left(x_0,y_0\right)$ if $f(x,y)\leq f\left(x_0,y_0\right)$ for all $(x,y)$ in the domain $D$ of $f$. 
+- The function $f$ has a \index{relative minimum} **relative minimum**  at 
+$\left(x_0,y_0\right)$ if $f(x,y)\geq f\left(x_0,y_0\right)$ for all $(x,y)$ in the domain $D$ of $f$.
+ 
+Collectively, absolute maxima and absolute minima are called 
+\index{absolute extrema} **absolute extrema** .
+::: 
+
+::: {#thm- } [Extreme Value]
+A function $f$ attains both an absolute maximum and an absolute minimum on any closed bounded
+set $S$ where it is continuous. 
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+
+::: {#exm- } 
+Find the \index{shortest distance} **shortest distance**  from the point $(1,0,-2)$ to the plane 
+$$
+x+2y+z=4.
+$$
+::: 
+
+::: {.solution }
+The distance from any point $(x,y,z)$ to the point $(1,0,-2)$ is 
+$$d=\sqrt{(x-1)^2+y^2+(z+2)^2}$$ 
+but if $(x,y,z)$ lies on the plane, then $z=4-x-2y$ and so we have 
+$$d=\sqrt{(x-1)^2+y^2+(6-x-2y)^2}.$$
+We can minimize $d$ by minimizing the simpler expression 
+$$d^2=f(x,y)=(x-1)^2+y^2+(6-x-2y)^2.$$  
+By solving the equations 
+$$f_x=2(x-1)^2-2(6-x-2y)=4x+4y-14=0$$  
+$$f_y=2y-4(6-x-2y)=4x+10y-24=0$$ 
+we find that the only critical point is $(11/3,5/3).$ Since $f_{x x}=4,$ $f_{x y}=4,$ and $f_{y y}=10,$ we have 
+$$D(x,y)=f_{x x}f_{y y}-\left(f_{x y}\right){}^2=24>0$$ 
+and $f_{x x}>0$ so $f$ has a local minimum at $(11/6,5/3).$ Intuitively, we can see that this local minimum is actually
+an absolute minimum because there must be a point on the given plane that is closest to $(1,0,-2).$ If $x=11/6$ and $y=5/3,$ then 
+$$d=\sqrt{\left(\frac{5}{6}\right)^2+\left(\frac{5}{3}\right)^2+\left(\frac{5}{6}\right)^2}=\frac{5\sqrt{6}}{6}.$$ 
+which is the shortest distance.
+::: 
+
+
+::: {#exm- } 
+Find the absolute extrema of the function over the bounded region 
+$$
+f(x,y)=x^2-2x y+2y
+$$ 
+over the rectangle 
+$$
+D=\{(x,y) \mid 0\leq x\leq 3,0\leq y\leq 2\}.
+$$
+::: 
+
+::: {.solution }
+Since $f$ is a polynomial it is continuous on the closed bounded rectangle $D,$ therefore $f$ has both absolute maximum
+and minimum values. We first find the critical points by solving the system 
+$$f_x=2x-2y=0 \qquad \text{and} \qquad f_y=-2x+2=0$$ 
+The only critical point is $(1,1),$ and the value of $f$ there is $f(1,1)=1.$ We look at the values of $f$ on the boundary of $D$, which consists of four line segments $L_1, L_2, L_3$, and $L_4$ as follows.
+\par
+On $L_1$ we have $y=0$ and $f(x,0)=x^2$ for $0\leq x\leq 3.$ This is an increasing function of $x,$ so its minimum value is $f(0,0)=0$ and its maximum value is $f(3,0)=9.$ 
+\par
+On $L_2$ we have $x=3$ and $f(3,y)=9-4y$ on $0\leq y\leq 2.$ This is a decreasing function of $y,$ so its maximum value is $f(3,0)=9$ and its minimum value is $f(3,2)=1.$ 
+\par
+On $L_3$ we have $y=2$ and $f(x,2)=x^2-4x+4$ on $0\leq x\leq 3.$ By observing that $f(x,2)=(x-2)^2,$ we see that the minimum value of this function is $f(2,2)=0$ and the maximum value is $f(0,2)=4.$ 
+\par
+On $L_4$ we have $x=0$ and $f(0,y)=2y$ on $0\leq y\leq 2$ with maximum value $f(0,2)=4$ and minimum value $f(0,0)=0.$ 
+\par
+Thus on the boundary, the minimum value of $f$ is 0 and the maximum is 9. 
+We compare these values with the value $f(1,1)=1$ at the critical point and conclude that the absolute maximum value of $f$ on $D$ is $f(3,0)=9$ and the absolute minimum value is $f(0,0)=f(2,2)=0.$ 
+::: 
+
+
+::: {#exm- } 
+A rectangular box without a lid is to be made from 12 $m^2$ of cardboard. 
+Find the maximum volume of such a box.
+::: 
+
+::: {.solution }
+Let the length, width, and height of the box (in meters) be $x,$ $y,$ and $z.$ 
+Then the volume of the box is $V=x y z.$ We can express $V$ as a function of just two variables by using the fact that the surface area of the sides and the bottom of the box is $2x z+2 y z+x y=12.$ 
+Solving these equation for $z,$ we get 
+$$
+z=\frac{12-x y}{2(x+y)},
+$$ 
+so the expression for volume $V$ becomes 
+$$
+V=\frac{12 x y-x^2y^2}{2(x+y)}.
+$$ 
+We compute the partial derivatives
+$$
+V_x=\frac{y^2\left(12-2 x y-x^2\right)}{2(x+y)}
+\qquad \text{and}\qquad 
+V_y=\frac{x^2\left(12-2 x y -y^2\right)}{2(x+y)^2}.
+$$
+If $V$ is a maximum, then $V_x=V_y=0,$ but $x=0$ or $y=0$ gives $V=0,$ so we must solve the equations
+$$
+12-2x y-x^2=0\qquad \text{and} \qquad 
+12-2 x y-y^2=0.
+$$ 
+These imply that $x^2=y^2$ and so $x=y$. (Note that $x$ and $y$ must both be positive in this example.) 
+If we put $x=y$ in either equation we get $12-3x^2=0,$ which gives $x=2,$ $y=2,$ and $z=1.$ 
+From the physical nature of this example there must be an absolute maximum volume that has to occur at a critical point of $V,$ so it must be when $x=2,$ $y=2,$ and $z=1.$ 
+Then $V=2\cdot 2\cdot 1=4,$ so the maximum volume of the box is $4m^3.$
+::: 
+
+
+::: {#exm- } 
+Find the absolute extrema of the function 
+$$
+f(x,y)=x^2+3y^2-4x+2y-3
+$$ 
+over the rectangle 
+$$
+D=\{(x,y) \mid 0\leq x\leq 3,-3\leq y\leq 0\}.
+$$
+::: 
+
+::: {.solution }
+We compute $f_x=2x-4$ and $f_y=6y+2$ and set $f_x=f_y=0$ and find that $(2,-1/3)$ is the only critical point in the interior.
+On $x=t, y=0$ for $0\leq t\leq 3$, we have 
+$$
+F_1(t)=f(t,0)=t^2-4t-3=0
+$$ 
+and so $F_1'(t)=2t-4$ yielding the point $(2,0).$ 
+On $x=3, y=t$ for $-3\leq t\leq 0$, we have 
+$$
+F_2(t)=f(3,t)=3t^2+2t-6
+$$ 
+and so $F_2'(t)=6t+2=0$ yielding the point $(3,-1/3).$ 
+On $x=t, y=-3$ for $0\leq t\leq 3$, we have  
+$$
+F_3(t)=f(t,-3)=t^2-4t+18
+$$ 
+and so $F_3'(t)=2t-4=0$ yielding the point $(2,-3).$ 
+On $x=0, y=t$ for $-3\leq t\leq 0$, we have 
+$$
+F_4'(t)=f(0,t)=3t^2+2t-3
+$$
+and so $F_4'(t)=6t+2=0$ yielding the point $(0,-1/3).$ 
+\par
+Finally, we have $f(2,-1/3)=-22/3$ (the minimum), $f(3,-1/3)=-19/3,$ $f(2,-3)=14,$
+$f(0,-1/3)=-10/3,$ $f(2,0)=-7,$ $f(0,0)=-3,$ $f(3,0)=-6,$ $f(3,-3)=15,$ and $f(0,-3)=18$ (the maximum). 
+::: 
+
+
+::: {#exm- } 
+Find the hottest and coldest points on the metal plate 
+given as the region $R=[0,\pi ]\times [0,\pi ],$ whose temperature is given by $f(x,y)=\sin  x+\cos  2y.$
+::: 
+ 
+::: {.proof }[Solution] 
+ Since $f$ is continuous and $R$ is closed and bounded, we know that the absolute maximum and minimum exist. We find that
+ $$
+ \nabla f=\cos  x \vec{i}+(-2\sin  2y)\vec{j}
+ $$ 
+ and so the only critical point in the interior of $R$ is $(\pi /2,\pi /2).$
+ This is a saddle point because the discriminant of $f$ at $(\pi 2,\pi /2)$ is negative. 
+The boundary of $R$ consists of four line segments $L_1,$ $L_2,$ $L_3,$ and $L_4$ as follows. 
+\par
+On $L_1$ and $L_3,$ we have 
+$$
+f(x,0)=f(x,\pi) =\sin x+1
+\quad \text{ for } 0\leq x\leq  \pi
+$$ 
+which achieves a maximum at $\pi /2$ and a minimum at $0$ and $\pi .$ 
+Similarly, on $L_2$ and $L_4$ we have 
+$$
+f(0,y)=f(\pi ,y) =\cos 2y
+\quad \text{ for } 0\leq y\leq  \pi
+$$
+which achieves its maximum at $0$ and $\pi$ and its minimum at $\pi /2.$ 
+We see that the hottest points are $(\pi /2,0)$ and $(\pi /2,\pi )$ and the coldest points are $(0,\pi /2)$ and $(\pi ,\pi /2).$
+::: 
+  
+## Exercises
+
+::: {#exr- } 
+Find the absolute extrema for the function $f(x,y)=x y^2-2xy+3y$ in the triangular domain with vertices $(0,0)$, $(1,0)$, and $(1,1)$. 
+::: 
+
+::: {#exr- } 
+Find and classify the relative extrema and the saddle points of $f(x,y)=xy -2x-4y$.
+::: 
+
+::: {#exr- } 
+Find the critical points of the function 
+$f(x,y)=x^3+y^2-2xy+7x-8y+2$.
+::: 
+
+::: {#exr- } 
+Find and classify the relative extrema and the saddle points of $f(x,y)=xy -2x-4y$.
+::: 
+
+::: {#exr- } 
+Find the absolute extrema for the function $f(x,y)=x y^2-2xy+3y$ in the triangular domain with vertices $(0,0)$, $(1,0)$, and $(1,1)$. 
+::: 
+
+::: {#exr- } 
+Find the critical points and classify each as a relative maximum, a relative minimum, or a saddle point.
+ 
+- $f(x,y)=2x^2-4 x y+y^3+2$ 
+- $f(x,y)=e^{-x}\sin y$ 
+- $f(x,y)=(x-2)^2+(y-3)^4$ 
+- $f(x,y)=\left(x^2+2y^2\right)e^{1-x^2-y^2}$ 
+- $f(x,y)=x^2+y^2+\frac{32}{x y}$ 
+- $f(x,y)=(x-4)\ln (x y)$ 
+- $f(x,y)=2x^3+y^3+3x^2-18y^2+81y+5$ 
+- $f(x,y)=3x^2+12x+8y^3-12y^2+7$ 
+    
+::: 
+
+::: {#exr- } 
+Find the absolute maximum and minimum values for each of the following functions. 
+ 
+- $f(x,y)=e^{x^2+2x+y^2}$ on the disk $x^2+2x+y^2\leq 0.$ 
+- $f(x,y)=x^2+x y +y^2$ on the disk $x^2+y^2\leq 1.$ 
+- $f(x,y)=x y-2x-5y$ on the triangular region $S$ with vertices $(0,0),$ $(7,0),$ and $(7,7).$ 
+- $f(x,y)=x^2-4 x y+y^3+4y$ on the square $0\leq  x\leq 2,$ $0\leq y\leq 2.$ 
+- $f(x,y)=x^2+3y^2-4x+2y-3$ on the square region $S$ with vertices $(0,0),$ $(3,0),$ $(3,-3),$ and $(0,-3).$ 
+ 
+::: 
+
+::: {#exr- } 
+Find three positive numbers whose sum is 54 and whose product is as large as possible. 
+::: 
+
+::: {#exr- } 
+A wire of length $L$ is cut into three pieces that are bent to form a circle, a square, and a equilateral triangle. 
+How should the cuts be made to minimize the sum of the total area.? 
+::: 
+
+::: {#exr- } 
+A rectangular box with no top is to have a fixed volume. What should its dimensions be if we want to use the least amount of material in its
+construction? 
+::: 
+
+::: {#exr- } 
+Let $R$ be the triangular region in the $x y$-plane with vertices $(-1,-2),$ $(-1,2),$ and $(3,2).$ A plate in the shape of $R$
+is heated so that the temperature at $(x,y)$ is 
+$$
+T(x,y)=2x^2-x\text{  }y+y^2-2y+1
+$$ (in degrees Celsius). 
+At what point in $R$ or on its boundary is $T$ maximized? What are the temperatures? 
+::: 
+
+::: {#exr- } 
+Find the maximum and minimum values for the given function in the given closed region. 
+ 
+- $z=8x^2+4y^2+4y+5$, $x^2+y^2\leq 1$
+- $z=6x^2+y^3+6y^2$, $x^2+y^2\leq 25$
+- $z=8x^2-24xy+y^2$, $x^2+y^2\leq 25$
+ 
+::: 
+
+::: {#exr- } 
+Find the volume of the largest box that cane inscribed in the ellipsoid 
+$$
+\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1.
+$$
+::: 
+
+::: {#exr- } 
+Assuming that the function 
+$$
+F= 2x^2+6y^2+45z^2-4xy+6yz+12xz-6y+14
+$$
+has a minimum, find it.
+Prove that this function has no maximum value.  
+::: 
+
+
+
+
+
+
+
+## Lagrange Multipliers
+
+
+In many applied problems, the main focus is on optimizing a function subject to constraint; for example, finding extreme values of a function of several variables where the domain is restricted to a level
+curve (or surface) of another function of several variables. 
+\index{Lagrange multipliers} **Lagrange multipliers**  are a general method which can be used to solve such optimization problems. 
+
+## Lagrange's Theorem
+
+
+The $\lambda$ in \ref{lagthm} is called a \index{Lagrange multiplier.} **Lagrange multiplier.** 
+Thus, Lagrange's Theorem gives necessary conditions for the existence of a Lagrange multiplier. 
+
+::: {#thm- } [Lagrange]
+\label{lagthm}
+
+Assume that $f$ and $g$ have continuous first partial derivatives and that $f$ has an extremum at $P_0\left(x_0,y_0\right)$
+on the smooth constraint curve $g(x,y)=c.$ If $\nabla g\left(x_0,y_0\right)\neq \vec{0},$ there is a number $\lambda$ such that 
+\begin{equation}
+\label{lagmult}
+\nabla f\left(x_0,y_0\right)=\lambda \nabla g\left(x_0,y_0\right).
+\end{equation}
+::: 
+ 
+::: {.proof }
+Denote the constraint curve $g(x,y)=c$ by $C$ and note that $C$ is smooth. 
+We represent this curve by the vector function 
+$$
+\vec{R}(t)=x(t)\vec{i}+y(t)\vec{j}
+$$ 
+for all $t$ in an open interval $I,$ including $t_0$ corresponding to $P_0,$ where $x'(t)$ and $y'(t)$ exist and are continuous. 
+Let $F(t)=f(x(t),y(t))$ for all $t$ in $I,$ and apply the chain rule to obtain 
+$$
+F'(t)=f_x(x(t),y(t))\frac{d x}{d t}+f_y(x(t),y(t))\frac{d y}{d t}=\nabla f(x(t),y(t))\cdot \vec{R}'(t).
+$$
+Because $f(x,y)$ has an extremum at $P_0,$ we know that $F(t)$ has an extremum at $t_0.$ 
+Therefore, we have 
+$F'\left(t_0\right)=0$ and
+$$
+F'\left(t_0\right)=\nabla f\left(x\left(t_0\right),y\left(t_0\right)\right)\cdot \vec{R}'\left(t_0\right)=0.
+$$
+If $\nabla f\left(x\left(t_0\right),y\left(t_0\right)\right)=\vec{0},$ then $\lambda =0,$ and the condition $\nabla f=\lambda \nabla g$ is satisfied trivially. 
+If $\nabla f\left(x\left(t_0\right),y\left(t_0\right)\right)\neq \vec{0}$, then $\nabla f\left(x\left(t_0\right),y\left(t_0\right)\right)$ is orthogonal to $\vec{R}'\left(t_0\right).$ 
+Because $\vec{R}'\left(t_0\right)$ is tangent to the constraint curve $C$, it follows that $\nabla f\left(x_0,y_0\right)$ is normal to $C.$ 
+But $\nabla g\left(x\left(t_0\right),y\left(t_0\right)\right)$ is also normal to $C$ (because $C$ is a level curve of $g$), and we conclude that $\nabla f$ and $\nabla g$ must be parallel at $P_0.$ 
+Thus, there is a scalar $\lambda$ such that \ref{lagmult} holds.
+::: 
+
+
+::: {#exm- } 
+Find the extreme values of the function $f(x,y)=x^2+y$ constrained to the circle $x^2+y^2=1.$
+::: 
+
+::: {.solution }
+Using \ref{lagthm}, we solve the equations $\nabla f=\lambda \nabla g,$ $g(x,y)=1,$ which can be written as $f_x=\lambda g_x,$ $f_y=\lambda g_y$, and $g(x,y)=1$ or written as 
+$$
+ 2x=2x \lambda, \qquad 1=2y \lambda, \qquad \text{and}  \qquad x^2+y^2=1.
+ $$
+From the first equation we have $x=0$ or $\lambda =1.$ If $x=0,$ then by the third equation $y=\pm 1.$ If $\lambda =1,$ then $y=1/2$
+and we obtain $x=\left.\pm \sqrt{3}\right/2.$ Therefore, $f$ has possible extreme values at the points 
+$$
+(0,1),  \qquad (0,-1), \qquad \left(\left.\sqrt{3}\right/2,1/2\right),  \qquad
+\text{and} \qquad \left(\left.-\sqrt{3}\right/2,1/2\right).
+$$ 
+Evaluating $f$ at these four points, we find that 
+$$
+f(0,1)=1, \qquad f(0,-1)=-1, \qquad \text{and} \qquad f\left(\left.\pm \sqrt{3}\right/2,1/2\right)=5/4.$$
+Therefore the maximum value of $f$ constrained to the circle $x^2+y^2=1$ is $5/4$ and the minimum value is $-1.$ 
+::: 
+
+
+
+## The Method of Lagrange Multipliers
+
+::: {#thm- } [Lagrange Multipliers]
+
+Suppose $f$ and $g$ satisfy the hypotheses of Lagrange's theorem, and that $f$ has an extremum subject to the constraint $g(x,y)=c.$
+Then to find the extreme value, proceed as follows: 
+ 
+- Simultaneously solve the following three equations for $x,y$ and 
+$\lambda$: 
+$$
+f_x(x,y)=\lambda g_x(x,y), \quad f_y(x,y)=\lambda g_y(x,y),
+\quad  \text{and} \quad g(x,y)=c
+$$
+- Evaluate $f$ at all points found in step (i). 
+The extremum we seek must be among these values. 
+ 
+::: 
+
+%\begin{comment}
+We use the method of Lagrange multipliers to find the required constrained extrema. 
+Suppose $E$ is an extreme value of $f$ subject to the constraint $g(x,y)=c.$ Then the Lagrange multiplier $\lambda$ is the rate of change of $E$ with respect to $c$; that is $\lambda =d E/d c.$ Note that at the extreme value $(x,y)$ we have $f_x=\lambda g_x$, $f_y=\lambda g_y$,  and $g(x,y)=c.$  The coordinates of the optimal ordered pair $(x,y)$ depend on $c$ (because different constraint levels will generally lead to different optimal combinations of $x$ and $y$). Thus, $E=E(x,y)$ where $x$ and $y$ are functions of $c.$ By the chain rule for partial derivatives:   
+$$
+\frac{d E}{d c}=f_x\frac{d x}{d c}+f_y\frac{d y}{d c}=\text{$\lambda $g}_x\frac{d x}{d c}+\text{$\lambda $g}_y\frac{d y}{d c}=\lambda
+\left(\frac{d g}{d c}\right)=\lambda
+$$ 
+%\end{comment}
+
+
+::: {#exm- } 
+Maximize $f(x,y)=x y$ subject to $2x+2y=5.$
+::: 
+
+::: {.solution }
+Let $g(x,y)=2x+2y,$ then we have 
+$$
+f_x=y, 
+\qquad f_y=x, 
+\qquad g_x=2,
+\qquad \text{and} 
+\qquad g_y=2.
+$$ 
+We need to solve the system 
+$$
+y=2\lambda, 
+\qquad x=2\lambda, 
+\qquad \text{and} 
+\qquad 2x+2y=5.
+$$ 
+We find $x=y=\frac{5}{4}.$ 
+Therefore, $f\left(\frac{5}{4},\frac{5}{4}\right)=\frac{25}{16}$ is the constrained maximum. 
+::: 
+
+::: {#exm- } 
+Minimize $f(x,y,z)=x^2+y^2+z^2$ subject to $x-2y+3z=4.$
+::: 
+
+::: {.solution }
+ Let $g(x,y,z)=x-2y+3z,$ then we have 
+$$
+f_x=2x, 
+\quad f_y=2y, 
+\quad f_z=2z, 
+\quad g_x=1, 
+\quad g_y=-2,
+\quad  \text{and} 
+\quad g_z=3.
+$$ 
+We need to solve the system 
+$$
+2x=\lambda,
+\qquad 2y=-2\lambda,
+\qquad 2z=3\lambda,
+\qquad \text{and} 
+\qquad x-2y+3z=4.
+$$ 
+We find that $\lambda =\frac{4}{7}$ and then $x=\frac{2}{7},$ $y=-\frac{4}{7},$ and $z=\frac{6}{7}.$ Therefore, 
+$$
+f\left(\frac{2}{7}, -\frac{4}{7},\frac{6}{7}\right)=\frac{8}{7}
+$$ 
+is the constrained minimum.
+::: 
+
+
+::: {#exm- } 
+A rectangular box with no top is to be constructed from 96 $\text{ft}^2$ of material. 
+What should be the dimensions of the box if it is to
+enclose maximum volume?
+::: 
+ 
+::: {.solution }
+ Let $x,y,$ and $z$ be the length, width, and height of the rectangular box, respectively. We want to maximize the volume: 
+$$
+V=x y z \qquad \text{subject to} \qquad  S(x,y,z)=x y+2 x z+2 y z=96
+$$ 
+which is obtained from the surface area of the rectangular box (with no lid). We have 
+$$
+V_x=y z, 
+\quad V_y=x z, 
+\quad V_z=x y, 
+\quad S_x=y+2 z, 
+\quad S_y=x+2 z, 
+\quad S_z=2x+2y.
+$$
+Solve the system 
+$$
+y z=\lambda (y+2 z), 
+\quad x z=\lambda (x+2 z), 
+\quad x y=\lambda (2x+2 y), 
+\quad x y+2 x z+2 y z=96.
+$$ 
+We obtain $x=y=2 z,$ and then find $x=y=4\sqrt{2},$ $z=2\sqrt{2}.$ Therefore the maximum volume is 
+$$
+V\left(4\sqrt{2},4\sqrt{2},2\sqrt{2}\right)=64\sqrt{2} \text{ft}^3.
+$$ 
+::: 
+
+
+::: {#exm- } 
+
+A cylindrical can is to hold $4\pi  \text{in}.^3$ of orange juice. 
+The cost per square inch of constructing the metal top and bottom is
+twice the cost per square inch of constructing the cardboard side. What are the dimensions of the least expensive can?
+::: 
+
+::: {.solution }
+ Let $x$ and $y$ be the radius and height of the cylinder, respectively. We want to minimize the cost 
+$$
+f(x,y)=2\left(2\pi  x^2\right)+2\pi  x y 
+\quad \text{subject to the constraint} \quad g(x,y)=\pi  x^2 y=4\pi. 
+$$ 
+We have 
+$$
+f_x=8\pi  x+2\pi  y, 
+\qquad f_y=2\pi  x,
+\qquad g_x=2\pi  x y,
+\qquad \text{and} 
+\qquad g_y=\pi  x^2.
+$$ 
+Solving the system 
+$$
+8\pi  x+2\pi  y=2\lambda  \pi  x y, 
+\qquad 2\pi  x=\lambda  \pi  x^2, 
+\qquad \pi  x^2 y=4\pi.
+$$  
+we obtain $y=4x,$ and then find the radius $x=1$ in. and the height $y=4$ in.  
+::: 
+
+
+## Optimizing a Function Subject to Two Constraints
+
+The method of Lagrange multipliers can also be applied in situations with more than one constraint equation. Suppose we wish to locate an extremum of a function defined by $f(x,y,z)$ subject to constraints $g(x,y,z)=c_1$ and $h(x,y,z)=c_2,$ where $g$ and $h$ are also differentiable and $\nabla g$ and $\nabla h$ are not parallel. By generalizing Lagrange's theorem, it can be shown that if 
+$\left(x_0,y_0,z_0\right)$ is the desired extremum, then there are numbers $\lambda$ and $\mu$ such that 
+$g\left(x_0,y_0,z_0\right)=c_1, h\left(x_0,y_0,z_0\right)=c_2,$ 
+and
+$$
+\nabla f\left(x_0,y_0,z_0\right)=\lambda \nabla g\left(x_0,y_0,z_0\right)+\mu \nabla h\left(x_0,y_0,z_0\right).
+$$
+As in the case of one constraint, we proceed by first solving this system of equations simultaneously to find 
+$\lambda , \mu , x_0, y_0, \text{and} z_0$ 
+and then evaluating $f(x,y,z)$ at each solution and comparing to find the assumed extremum. 
+
+::: {#exm- } 
+Find the maximum value of the function
+$$
+f(x,y,z)=x+2y+3z
+$$ 
+on the curve of intersection of the plane $x-y+z=1$ and the cylinder $x^2+y^2=1.$
+::: 
+
+::: {.solution }
+We maximize the function$f(x,y,z)=x+2y+3z$ 
+subject to the constraints $g(x,y,z)=x-y+z=1$ and $h(x,y,z)=x^2+y^2=1.$ 
+The Lagrange condition is $\nabla f=\lambda \nabla g+\mu \nabla h,$ so we solve the equations 
+$$
+1=\lambda +2x \mu,
+\quad 2=-\lambda +2, 
+\quad  y \mu   3=\lambda, 
+\quad  x-y+z=1,  
+\quad \text{and} 
+\quad  x^2+y^2=1.$$
+Putting $\lambda =3,$ we get $2x \mu =-2,$ so $x=-1/\mu .$ Similarly, we have $y=5/(2\mu ).$ Substitution yields 
+$$\frac{1}{\mu ^2}+\frac{25}{4\mu^2}=1$$
+and so $u^2=\frac{29}{4}.$ Then
+$$
+\mu =\left.\pm \sqrt{29}\right/2, 
+\qquad  x=\mp 2\left/\sqrt{29}\right., 
+\qquad \text{and} 
+\qquad y=\pm 5\left/\sqrt{29}\right.$$
+and so we have $z=1-x+y$ $=1\pm 7\left/\sqrt{29}.\right.$ The corresponding values of $f$ are 
+$$
+\mp \frac{2}{\sqrt{29}}+2\left(\pm \frac{5}{\sqrt{29}}\right)+3\left(1\pm \frac{7}{\sqrt{29}}\right)=3\pm \sqrt{29}.$$
+Therefore the maximum of $f$ on the given curve is $3+\sqrt{29}.$ 
+::: 
+
+::: {#exm- } 
+Find the maximum of $f(x,y,z)=x y z$ subject to $x^2+y^2=3$ and $y=2 z.$
+::: 
+
+::: {.solution }
+We need to solve the system $\nabla f=\lambda \nabla g+\mu \nabla h$ where $g(x,y,z)=x^2+y^2$ and $h(x,y,z)=y-2z.$ Therefore 
+we need to solve the system 
+$$
+\begin{array}{lll}
+\left\{ \begin{array}{l}
+f_x-\lambda g_x-\mu  h_x=0  \\
+f_y-\lambda g_y-\mu  h_y=0 \\  
+f_z-\lambda g_z-\mu  h_z=0 \\ 
+x^2+y^2-3=0 \\
+y-2z=0 
+\end{array}
+\right.
+& \text{ which is written as } & 
+\left\{ \begin{array}{l}
+y z-2\lambda  x=0 \\
+x z-2\lambda  y+\mu =0 \\ 
+x y+2\mu =0  \\
+y-2z=0 \\
+x^2+y^2-3=0.
+\end{array}
+\right.
+\end{array}$$
+The solutions are $\left(0,0,\pm\sqrt{3}\right)$, and 
+$$
+\left(1,\sqrt{2},\frac{\sqrt{2}}{2}\right), \quad 
+\left(1,-\sqrt{2},-\frac{\sqrt{2}}{2}\right),  \quad
+\left(-1,\sqrt{2},\frac{\sqrt{2}}{2}\right), \quad
+\left(-1,-\sqrt{2},-\frac{\sqrt{2}}{2}\right).
+$$
+The maximum is 
+$f\left(1,\sqrt{2},\frac{\sqrt{2}}{2}\right)=f\left(1,-\sqrt{2},-\frac{\sqrt{2}}{2}\right)=1.$
+::: 
+
+::: {#exm- } 
+Find the minimum of 
+$$
+f(x,y,z)=x^2+y^2+z^2
+$$ 
+subject to $x+y=4$ and $y+z=6.$
+::: 
+
+::: {.solution }
+We want to minimize $x^2+y^2+z^2$ subject to the side conditions 
+$x+y-4=0$ and $y+z-6=0.$  We form
+$$
+L(x,y,z,\lambda ,\mu )=x^2+y^2+z^2-\lambda (x+y-4)-\mu (y+z-6).$$
+The conditions are $\frac{\partial L}{\partial x}=2x-\lambda =0$ and
+$$
+\begin{array}{lll}
+\frac{\partial L}{\partial y}=2y-\lambda -\mu =0 
+& \qquad \qquad & \frac{\partial L}{\partial z}=2z-\mu =0 \\
+\frac{\partial L}{\partial \lambda }=x+y-4=0 
+& & \frac{\partial L}{\partial \mu }= y+z-6=0. 
+\end{array}
+$$
+The first and third conditions give $\lambda =2x$  and $\mu =2z,$ so the second condition becomes $2y-2x-2z=0.$ We then have 
+$$
+\left\{\begin{array}{l}
+x+ y+z =  0  \\
+x+ y  =  4  \\
+y+z  =  6
+\end{array} \right.
+$$
+The solution to this system is $P=(2/3,10/3,8/3).$ Therefore the minimum is  $f(P)=56/3.$
+::: 
+
+::: {#exm- } 
+
+Use Lagrange multipliers to find the point on the line of intersection of the planes $x-y=2$ and $x-2z=4$ that is closest to the origin.
+::: 
+
+::: {.solution }
+We want to minimize $x^2+y^2+z^2$ subject to the side conditions $x-y-2=0$ and $x-2z-4=0.$  We form 
+$$
+L(x,y,z,\lambda ,\mu )=x^2+y^2+z^2-\lambda (x-y-2)-\mu (x-2z-4).
+$$ 
+The conditions are $\frac{\partial L}{\partial x}=2x-\lambda -\mu =0$ and
+$$
+\begin{array}{lll} 
+\frac{\partial L}{\partial y}=2y+\lambda =0 & \qquad \qquad & 
+\frac{\partial L}{\partial z}=2z+2\mu =0 \\
+\frac{\partial L}{\partial \lambda }=-x+y+2=0 & &
+\frac{\partial L}{\partial \mu }=-x+2z+4=0.
+\end{array}
+$$
+The second and third conditions give $\lambda =-2y$ and $\mu =-z,$ so the first condition becomes $2x+2y+z=0.$ We then have $2x+2y+z =0$, $-x+y=-2$, $-x+2z=-4.$  The last two equations may be written as $y=x-2$ and $z=(x-4)/2.$ Substitution of these values into the first equation gives $x=4/3.$ Consequently, $y=-2/3$ and $z=-4/3.$ 
+The desired point is therefore, $(4/3,-2/3,-4/3).$
+::: 
+
+::: {#exm- } 
+Find the maximum and minimum values of 
+$$
+f(x,y,z)=5x-y-6z
+$$ 
+on the surface $2x^2+4y^2+6z^2=200.$   
+::: 
+
+::: {.solution }
+We set $g(x,y,z)=2x^2+4y^2+6z^2$ and we use the Lagrange multiplier $\lambda$ and solve the system   
+$$
+\begin{array}{ccc} 
+\left\{
+\begin{array}{l}
+ f_x = \lambda  g_x  \\
+ f_y = \lambda  g_y  \\
+ f_z = \lambda  g_z  \\
+ g = 200
+\end{array}
+\right.
+& \text{which is written as } & 
+\left\{
+\begin{array}{l}
+ 5 = 4x \lambda   \\
+ -1 = 8y \lambda   \\
+ -6 = 12 z \lambda  \\ 
+ 2x^2+4y^2+6z^2 = 200
+\end{array}
+\right.
+\end{array}
+$$
+to find   
+$$
+P=\left(-10 \sqrt{\frac{2}{3}},\sqrt{\frac{2}{3}},4 \sqrt{\frac{2}{3}} \right)
+\qquad  \text{and} \qquad 
+Q=\left(10 \sqrt{\frac{2}{3}},-\sqrt{\frac{2}{3}},-4 \sqrt{\frac{2}{3}}\right)
+$$
+Therefore,  
+$f(P)=-25\sqrt{6}$  is the minimum and  $f(Q)=25\sqrt{6}$  
+is the maximum value.   
+::: 
+
+::: {#exm- } 
+Maximize 
+$$
+f(x,y)=\ln \left(x y^2\right)
+$$ 
+subject to the constraint $2x^2+3y^2=8$ for $x>0.$   
+::: 
+
+::: {.solution }
+Let $g(x,y)=2x^2+3y^2$ and we will use a Lagrange multiplier, say 
+$\lambda$. We setup the system of equations  
+$$
+\begin{array}{ccc}
+\left\{
+\begin{array}{l}
+\frac{ \partial f}{\partial x} = \lambda \frac{\partial g}{\partial x}  
+\\
+\frac{ \partial f}{\partial y} = \lambda \frac{\partial g}{\partial y}  
+\\ g(x) = 8
+\end{array}
+\right.
+& \text{which is written as } & 
+\left\{
+\begin{array}{l}
+\frac{y^2}{x y^2} = 4\lambda  x  \\
+\frac{2x y}{x y^2} = 6\lambda  y  \\
+2x^2+3y^2 = 8
+\end{array}
+\right.
+\end{array}
+$$
+Now to solve this we will try to eliminate $\lambda$ from the first two equations. So we solve both of them for $\lambda$ we have,  
+$$
+\lambda =\frac{1}{4 x^2}
+\qquad \text{and} \qquad
+\lambda =\frac{1}{3 x^2 y},
+$$
+(since $x>0$)  respectively. Thus, these two expressions must equal yielding 
+$$
+\frac{1}{4 x^2}=\frac{1}{3 x^2 y}
+$$ 
+we have $4x^2=3x^2y$ which we write as $x^2(4-3y)=0$ and so $y=4/3.$ So that 
+$$
+x^2=\frac{8-3(4/3)^2}{2}=\frac{4}{3}.$$
+However, since $x>0$ we only use $x=\frac{2}{\sqrt{3}}$ with $y=4/3;$ and therefore the maximum value of $f(x,y)=\ln \left(x y^2\right)$ subject to the constraint $g(x,y)=8$ is 
+$$
+f\left(\frac{2}{\sqrt{3}},\pm \frac{4}{3}\right)=\ln \left(\frac{2}{\sqrt{3}}\left(\frac{4}{3}\right)^2\right)=\frac{5}{2}\ln \left(\frac{4}{3}\right).
+$$
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Use Lagrange multipliers to find the point on the line of intersection of the planes $x-y=2$ and $x-2z=4$ that is closest to the origin.
+::: 
+
+::: {#exr- } 
+Use the method of Lagrange multipliers to maximize or minimize each of the functions. 
+ 
+- maximize $f(x,y)=x y$ subject to $2x+2y=5$
+- minimize $f(x,y)=x y z$ subject to $3x+2y+z=6$
+- maximize $f(x,y)=e^{x y}$ subject to $x^2+y^2=3$
+- maximize $f(x,y)=\cos  x+\cos  y$ subject to $y=x+\frac{\pi }{4}$
+- minimize $f(x,y)=x^2-x y+2y^2$ subject to $2x+y=22$
+- minimize $f(x,y)=x^2-y^2$ subject to $x^2+y^2=4$
+- minimize $f(x,y,z)=2x^2+3y^2+4z^2$ subject to $x+y+z=4$ and $x-2y+5z=3$
+- minimize $f(x,y,z)=x^2+y^2+z^2$ subject to $x+y=4$ and $y+z=6$ 
+- minimize $f(x,y,z)=x y z$ subject to $x^2+y^2=3$ and $y=2z$ 
+- maximize $f(x,y,z)=x y+x z$ subject to $2x+3z=5$ and $x y=4$
+    
+::: 
+
+::: {#exr- } 
+Find the point on the plane $2x-3y+6z=5$ that is closest to the origin.  
+::: 
+
+::: {#exr- } 
+Find the point on the plane $3x-2y+z=5$ that is closet to $(4,-8,5)$.
+::: 
+
+::: {#exr- } 
+A rectangular box has a square base and one top.
+Find the dimensions for minimum surface area  the volume is to be 108 in$^3$. 
+::: 
+
+::: {#exr- } 
+An open rectangular box has ends costing $\$6/\text{ft}^2$, sides costing $\$4/\text{ft}^2$, and a bottom costing $\$10/\text{ft}^2$.
+Find the dimensions for the minimum cost if the volume of the box is 120 ft$^3$.
+::: 
+
+::: {#exr- } 
+Find the maximum possible volume of a right circular cone inscribed in a sphere of radius $a$. 
+::: 
+
+::: {#exr- } 
+The sides of a closed cylindrical container cost twice as much per square food as the ends. 
+Find the ratio of the radius to the altitude of the cylinder for the cheapest such container having fixed volume. 
+::: 
+
+::: {#exr- } 
+A pentagon consists of a rectangle surmounted by an isosceles triangle.
+Find the dimensions of the pentagon having the maximum area if the perimeter is to be $P$. 
+::: 
+
+::: {#exr- } 
+Find the point on the curve of intersection of $x^2+z^2=4$ and $x-y=8$ that is farthest form the origin. 
+::: 
+
+::: {#exr- } 
+Find the point on the line of intersection of the planes $x-y=4$ and $y+3z=6$ that is closet to $(-1,3,2)$. 
+::: 
+
+
+
+
+
+
+

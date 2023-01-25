@@ -14,35 +14,20 @@ book:
     - index.qmd
     - peanos-axioms.qmd
     - divisibility.qmd
-    - euclidean-algorithm.qmd
     - unique-factorization.qmd
     - congruence-equations.qmd
     - eulers-theorem.qmd
     - quadratic-congruences.qmd
-    #- polynomial-congruences.qmd
+    - polynomial-congruences.qmd
     - references.qmd
   sidebar:
     title: "Learning Number Theory"
   site-url: https://directknowledge.com/learning-number-theory/
   description: "Learning Number Theory"
 
-format:
-  html:
-    include-in-header: 
-      - ../_html/head-lnt.html
-  pdf:
-    keep-tex: true
-    toc: false
-    documentclass: book
-    classoption: [10pt,reqno,twopage,openany]
-    include-in-header: 
-      - ../_control/packages-lnt.tex
-      - ../_control/commands.tex
-    include-before-body:
-      - ../_control/topmatter.tex
-    include-after-body: 
-      - ../_control/makeindex.tex
-
 metadata-files:
-  - ../_meta/book.yml
+  - ../_meta/book-html.yml
   - ../_meta/format.yml
+  #- _meta/_book-epub.yml
+  #- _meta/_book-hardcover.yml
+  - _meta/_book-paperback.yml

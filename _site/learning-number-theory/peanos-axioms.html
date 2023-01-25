@@ -66,37 +66,6 @@ div.csl-indent {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-.book-title {
-    font-weight:800;
-    text-transform: uppercase;
-    font-size: 150%;
-    margin:-20px -20px 20px -20px;
-    line-height:120%;
-    text-decoration: none!important;
-    display:block;
-}
-.book-title, #quarto-search svg {
-    color: #cb6d00!important;
-}
-@media screen and (max-width: 990px) {
-    .book-title {
-        padding-left: 20px!important;
-    }    
-}
-#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
-    font-weight: 500!important;
-    color:#cb6d00;
- }
- #quarto-sidebar .text-start {
-    font-variant: small-caps;
-    font-size: 120%;
- }
- #quarto-sidebar .active, .active .chapter-number {
-    color:#000000!important;
-    font-weight: 700!important;
- }
-</style>
-<style>
 @media screen and (max-width: 440px) {
     .navbar-brand-logo::after {
         content: 'DK'!important;
@@ -119,6 +88,20 @@ div.csl-indent {
 }
 .navbar-title:hover, .navbar a:hover {
     color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
 }
 </style>
   
@@ -155,11 +138,6 @@ div.csl-indent {
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
-</i> 
- <span class="dropdown-text">Exploring Calculus</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
@@ -168,6 +146,11 @@ div.csl-indent {
     <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
@@ -231,27 +214,27 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./euclidean-algorithm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Euclidean Algorithm</span></a>
+  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
+  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
+  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
+  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
+  <a href="./polynomial-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Polynomial Congruences</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -469,9 +452,9 @@ x\cdot y=x\cdot z, x\neq 0 \implies y=z.
 <p>If both of these things can be proven, then the statement is true for all natural numbers. Notice that the second statement is where the difficulty lies, mostly because it is an implication. More on this in a moment.</p>
 <p>Here are three examples where a proof by mathematical induction can be used.</p>
 <ol type="1">
-<li>Proof that <span class="math inline">\(1 + 2 + 3 + ... + n = n(n+1)/2\)</span> for all natural numbers <span class="math inline">\(n.\)</span> <span class="citation" data-cites="dasmith2021_2">(see <a href="references.html#ref-dasmith2021_2" role="doc-biblioref">Smith 2021</a>)</span></li>
+<li>Proof that <span class="math inline">\(1 + 2 + 3 + ... + n = n(n+1)/2\)</span> for all natural numbers <span class="math inline">\(n.\)</span> <span class="citation" data-cites="dasmith2021_2">(see <a href="references.html#ref-dasmith2021_2" role="doc-biblioref"><strong>dasmith2021_2?</strong></a>)</span></li>
 <li>Proof that every natural number greater than 1 is either a prime number or can be written as a product of prime numbers. <span class="citation" data-cites="rosen2005elementary">(see <a href="references.html#ref-rosen2005elementary" role="doc-biblioref">Rosen 2005, 108</a> – 110)</span></li>
-<li>Proof that the Fibonacci sequence <span class="math inline">\(F(n)\)</span> satisfies the formula <span class="math display">\[F(n+1) F(n-1) - F(n)^2 = (-1)^n\]</span> for all natural numbers <span class="math inline">\(n\)</span>. <span class="citation" data-cites="asmith2022Fib">(see <a href="references.html#ref-asmith2022Fib" role="doc-biblioref">Smith 2022</a>)</span></li>
+<li>Proof that the Fibonacci sequence <span class="math inline">\(F(n)\)</span> satisfies the formula <span class="math display">\[F(n+1) F(n-1) - F(n)^2 = (-1)^n\]</span> for all natural numbers <span class="math inline">\(n\)</span>. <span class="citation" data-cites="asmith2022Fib">(see <a href="references.html#ref-asmith2022Fib" role="doc-biblioref"><strong>asmith2022Fib?</strong></a>)</span></li>
 </ol>
 <p>We will begin proving statements using mathematical induction after mentioning a few applications, in the next lecture.</p>
 <p>One of the most important applications of mathematical induction is in combinatorics, where it is used to prove statements about counting objects (such as the number of ways to choose <span class="math inline">\(k\)</span> objects from a set of <span class="math inline">\(n\)</span>). To be clear though, mathematical induction is used throughout sciences, engineering, and humanities, i.e. <span class="citation" data-cites="williamcryptography">(see <a href="references.html#ref-williamcryptography" role="doc-biblioref">William 2016</a>)</span>.</p>
@@ -1387,12 +1370,6 @@ Davenport, H. 2008. <em>The Higher Arithmetic: An Introduction to the Theory of 
 </div>
 <div id="ref-rosen2005elementary" class="csl-entry" role="doc-biblioentry">
 Rosen, K. H. 2005. <em>Elementary Number Theory and Its Applications</em>. Alternative eText Formats Series. Pearson/Addison Wesley. <a href="https://books.google.com/books?id=jD0lAQAAIAAJ">https://books.google.com/books?id=jD0lAQAAIAAJ</a>.
-</div>
-<div id="ref-dasmith2021_2" class="csl-entry" role="doc-biblioentry">
-Smith, David A. 2021. <span>“First <span>Examples</span> <span>Using</span> <span>Mathematical</span> <span>Induction</span>.”</span> April 2, 2021. <a href="https://directknowledge.com/math/mathematical-induction/first-examples-using-mathematical-induction/">https://directknowledge.com/math/mathematical-induction/first-examples-using-mathematical-induction/</a>.
-</div>
-<div id="ref-asmith2022Fib" class="csl-entry" role="doc-biblioentry">
-———. 2022. <span>“Proving <span>Fibonacci</span> <span>Identities</span> <span>Using</span> <span>Mathematical</span> <span>Induction</span>.”</span> December 5, 2022. <a href="https://directknowledge.com/math/mathematical-induction/proving-fibonacci-identities-using-mathematical-induction">https://directknowledge.com/math/mathematical-induction/proving-fibonacci-identities-using-mathematical-induction</a>.
 </div>
 <div id="ref-williamcryptography" class="csl-entry" role="doc-biblioentry">
 William, S. 2016. <em>Cryptography and Network Security - Principles and Practice, 7th Edition</em>. Pearson Education India. <a href="https://books.google.com/books?id=AhDCDwAAQBAJ">https://books.google.com/books?id=AhDCDwAAQBAJ</a>.

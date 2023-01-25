@@ -20,7 +20,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 <meta name="quarto:offset" content="./">
 <link href="./congruence-equations.html" rel="next">
-<link href="./euclidean-algorithm.html" rel="prev">
+<link href="./divisibility.html" rel="prev">
 <link href="./../assets/favicon.ico" rel="icon">
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
@@ -47,37 +47,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-.book-title {
-    font-weight:800;
-    text-transform: uppercase;
-    font-size: 150%;
-    margin:-20px -20px 20px -20px;
-    line-height:120%;
-    text-decoration: none!important;
-    display:block;
-}
-.book-title, #quarto-search svg {
-    color: #cb6d00!important;
-}
-@media screen and (max-width: 990px) {
-    .book-title {
-        padding-left: 20px!important;
-    }    
-}
-#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
-    font-weight: 500!important;
-    color:#cb6d00;
- }
- #quarto-sidebar .text-start {
-    font-variant: small-caps;
-    font-size: 120%;
- }
- #quarto-sidebar .active, .active .chapter-number {
-    color:#000000!important;
-    font-weight: 700!important;
- }
-</style>
-<style>
 @media screen and (max-width: 440px) {
     .navbar-brand-logo::after {
         content: 'DK'!important;
@@ -100,6 +69,20 @@ ul.task-list li input[type="checkbox"] {
 }
 .navbar-title:hover, .navbar a:hover {
     color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
 }
 </style>
   
@@ -136,11 +119,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
-</i> 
- <span class="dropdown-text">Exploring Calculus</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
@@ -149,6 +127,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
@@ -177,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unique Factorization</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unique Factorization</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -212,27 +195,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./euclidean-algorithm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Euclidean Algorithm</span></a>
+  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./unique-factorization.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unique Factorization</span></a>
+  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./congruence-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Congruence Equations</span></a>
+  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eulers-theorem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Euler’s Theorem</span></a>
+  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quadratic-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quadratic Congruences</span></a>
+  <a href="./polynomial-congruences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Polynomial Congruences</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -245,12 +228,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/learning-number-theory/"><picture><source type="image/webp" srcset="../../assets/learning-number-theory-cover.webp"><source type="image/webp" srcset="../../assets/learning-number-theory-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/learning-number-theory-cover.png" alt="Learning Number Theory Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#prime-characterization" id="toc-prime-characterization" class="nav-link active" data-scroll-target="#prime-characterization"><span class="toc-section-number">3.1</span>  Prime Characterization</a></li>
+  <li><a href="#fundamental-theorem-of-arithmetic" id="toc-fundamental-theorem-of-arithmetic" class="nav-link" data-scroll-target="#fundamental-theorem-of-arithmetic"><span class="toc-section-number">3.2</span>  Fundamental Theorem of Arithmetic</a></li>
+  <li><a href="#gcd-and-lcm" id="toc-gcd-and-lcm" class="nav-link" data-scroll-target="#gcd-and-lcm"><span class="toc-section-number">3.3</span>  GCD and LCM</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <header id="title-block-header">
-<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unique Factorization</span></h1>
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unique Factorization</span></h1>
 </header>
 <p>The Fundamental Theorem of Arithmetic states that every natural number greater than 1 is either a prime or a product of a finite number of primes and this factorization is unique except for the rearrangement of the factors. Before we prove the fundamental fact, it is important to realize that not all sets of numbers have this property.</p>
 <p>For example, let us consider the set of even natural numbers, namely</p>
@@ -260,9 +251,11 @@ ul.task-list li input[type="checkbox"] {
 <p>So what are some primes in <span class="math inline">\(E\)</span>?</p>
 </blockquote>
 <p>For example, 2 is prime in <span class="math inline">\(E\)</span> because there does not exist <span class="math inline">\(n, m\)</span> in <span class="math inline">\(E\)</span> such that <span class="math inline">\(2=n m\)</span>. Similarly, 6 is prime in <span class="math inline">\(E\)</span> because there does not exist <span class="math inline">\(n, m\)</span> in <span class="math inline">\(E\)</span> such that <span class="math inline">\(6=n m\)</span>. Also, 10 and 30 are primes, and so <span class="math inline">\(60=2(30)\)</span> is not. However since <span class="math inline">\(60=10(6)\)</span> we conclude that factorization into primes in <span class="math inline">\(E\)</span> is not unique.</p>
+<section id="prime-characterization" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="prime-characterization"><span class="header-section-number">3.1</span> Prime Characterization</h2>
 <p>Before getting to the Fundamental Theorem of Arithmetic we need an important result.</p>
 <div id="lem-primechar" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 4.1 (Prime Characterization) </strong></span>A natural number <span class="math inline">\(p\)</span> is a prime if and only if <span class="math display">\[
+<p><span class="theorem-title"><strong>Lemma 3.1 (Prime Characterization) </strong></span>A natural number <span class="math inline">\(p\)</span> is a prime if and only if <span class="math display">\[
 p | b c \implies (p | b \text{ or } p | c)  
 \]</span> for any natural numbers <span class="math inline">\(b\)</span> and <span class="math inline">\(c.\)</span></p>
 </div>
@@ -278,23 +271,26 @@ Then <span class="math inline">\(p=d t\)</span> for some <span class="math inlin
 If <span class="math inline">\(d=p k\)</span> for some <span class="math inline">\(k,\)</span> then <span class="math inline">\(p=p t k\)</span> and so <span class="math inline">\(d=\pm p\)</span>. Therefore, the only divisors of <span class="math inline">\(p\)</span> are <span class="math inline">\(d=\pm 1, \pm p\)</span>, and so <span class="math inline">\(p\)</span> is prime.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4.1 </strong></span>Prove if <span class="math inline">\(p\)</span> is a prime number, <span class="math inline">\(a_1,\)</span> <span class="math inline">\(a_2, ... ,\)</span> <span class="math inline">\(a_n\)</span> are natural numbers, and <span class="math inline">\(p\left|a_1a_2\cdot \cdot \cdot a_n\right. ,\)</span> then <span class="math inline">\(p\left|a_i\right.\)</span> for some <span class="math inline">\(1\leq i\leq n.\)</span></p>
+<p><span class="theorem-title"><strong>Example 3.1 </strong></span>Prove if <span class="math inline">\(p\)</span> is a prime number, <span class="math inline">\(a_1,\)</span> <span class="math inline">\(a_2, ... ,\)</span> <span class="math inline">\(a_n\)</span> are natural numbers, and <span class="math inline">\(p\left|a_1a_2\cdot \cdot \cdot a_n\right. ,\)</span> then <span class="math inline">\(p\left|a_i\right.\)</span> for some <span class="math inline">\(1\leq i\leq n.\)</span></p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>The statement is clearly true when <span class="math inline">\(n=1\)</span> and <span class="math inline">\(n=2\)</span> follows from Theorem <span class="math inline">\(\ref{primechar}\)</span>. Assume the statement is true for <span class="math inline">\(n=k,\)</span> and suppose <span class="math inline">\(p\left|a_1a_2\cdot \cdot \cdot a_ka_{k+1}.\right.\)</span> Then by Theorem <span class="math inline">\(\ref{primechar}\)</span>, <span class="math inline">\(p\left|a_1a_2\cdot \cdot \cdot a_k\right.\)</span> or <span class="math inline">\(p\left|a_{k+1}.\right.\)</span> If <span class="math inline">\(p\left|a_{k+1}\right.\)</span>, the statement is proven. If not, then by the induction hypothesis there is some <span class="math inline">\(0\leq i\leq k\)</span> such that <span class="math inline">\(p | a_i\)</span>. Therefore, there is some <span class="math inline">\(0\leq i\leq k+1\)</span> such that <span class="math inline">\(p | a_i\)</span> as desired.</p>
 </div>
 <p>The most basic method of checking the primality of a given integer n is called <strong>trial division</strong> . This method consists of dividing <span class="math inline">\(n\)</span> by each integer <span class="math inline">\(m\)</span> that is greater than 1 and less than or equal to the square root of <span class="math inline">\(n\)</span>. If the result of any of these divisions is an integer, then <span class="math inline">\(n\)</span> is not a prime, otherwise it is a prime. For example, for <span class="math inline">\(n = 37\)</span>, the trial divisions are by <span class="math inline">\(m = 2, 3, 4, 5\)</span>, and 6. None of these numbers divides <span class="math inline">\(37\)</span>, so <span class="math inline">\(37\)</span> is prime.</p>
 <div id="lem-lemmaprime" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 4.2 </strong></span>Every natural number greater than 1 is a product of primes.</p>
+<p><span class="theorem-title"><strong>Lemma 3.2 </strong></span>Every natural number greater than 1 is a product of primes.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Consider the set <span class="math inline">\(S\)</span> consisting of all positive natural numbers greater than 1 that are not a product of primes. Assume for a contradiction that <span class="math inline">\(S\)</span> is not empty, then by the Well-Ordering Axiom there is a least element, say <span class="math inline">\(m\)</span>. Because <span class="math inline">\(m\)</span> has no prime divisors and <span class="math inline">\(m\)</span> divides <span class="math inline">\(m\)</span>, we see that <span class="math inline">\(m\)</span> is not prime.<br>
 Thus, <span class="math inline">\(m=a b\)</span> where <span class="math inline">\(1&lt;a&lt;m\)</span> and <span class="math inline">\(1&lt;b&lt;m\)</span>. Since <span class="math inline">\(m\)</span> is the least element in <span class="math inline">\(S\)</span>, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are products of primes; and thus so is <span class="math inline">\(m\)</span>.<br>
 This contradiction shows that <span class="math inline">\(S\)</span> is empty and so every natural number greater than <span class="math inline">\(1\)</span> is a product of primes.</p>
 </div>
+</section>
+<section id="fundamental-theorem-of-arithmetic" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="fundamental-theorem-of-arithmetic"><span class="header-section-number">3.2</span> Fundamental Theorem of Arithmetic</h2>
 <p>The <strong>Fundamental Theorem of Arithmetic</strong>, also called the <strong>unique factorization theorem</strong> or the unique-prime-factorization theorem, states that every integer greater than 1 is either is prime itself or is the product of prime numbers, and that, although the order of the primes in the second case is arbitrary, the primes themselves are not.</p>
 <div id="thm-fundamental-theorem-of-arithmetic" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4.1 (Fundamental Theorem of Arithmetic) </strong></span>Every natural number greater than 1 can be written uniquely in the form <span class="math display">\[\begin{equation}
+<p><span class="theorem-title"><strong>Theorem 3.1 (Fundamental Theorem of Arithmetic) </strong></span>Every natural number greater than 1 can be written uniquely in the form <span class="math display">\[\begin{equation}
 n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}
 \end{equation}\]</span> where <span class="math inline">\(p_1 &lt; p_2 &lt; \cdots &lt; p_k\)</span> are prime numbers and <span class="math inline">\(e_1, e_2, ... , e_k\)</span> are natural numbers.</p>
 </div>
@@ -318,7 +314,7 @@ u=\frac{m}{p_1}=\frac{m}{q_1}=p_1{}^{\alpha _1-1}p_2{}^{\alpha _2}\cdot \cdot \c
 \]</span> If <span class="math inline">\(u=1,\)</span> then <span class="math inline">\(m=p_1\)</span> has a unique factorization contrary to hypothesis. If <span class="math inline">\(u&gt;1,\)</span> then <span class="math inline">\(u&lt;m\)</span> and <span class="math inline">\(u\)</span> has two factorizations. Both cases reveal that <span class="math inline">\(m\)</span> can not exist as desired.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4.2 </strong></span>Show there are infinitely many primes of the form <span class="math inline">\(4n+3.\)</span></p>
+<p><span class="theorem-title"><strong>Example 3.2 </strong></span>Show there are infinitely many primes of the form <span class="math inline">\(4n+3.\)</span></p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>First notice that the product of any two natural numbers of the form <span class="math inline">\(4n+1\)</span> also has the form <span class="math inline">\(4n+1\)</span> which can be seen by letting <span class="math inline">\(a=4s+1\)</span> and <span class="math inline">\(b=4r+1\)</span> where <span class="math inline">\(s\)</span> and <span class="math inline">\(r\)</span> are natural numbers, then<br>
@@ -330,11 +326,11 @@ Q=4p_1p_2\cdot \cdot \cdot p_n+3.
 \]</span> Notice that the prime factorization of <span class="math inline">\(Q\)</span>, namely <span class="math inline">\(Q=q_1\cdots q_t\cdots q_m\)</span> must contain at least one prime of the form <span class="math inline">\(4k+3\)</span> because otherwise <span class="math inline">\(Q\)</span> would be of the form <span class="math inline">\(4k+1.\)</span> Thus, there is one prime in the prime factorization of <span class="math inline">\(Q\)</span> that is of the form <span class="math inline">\(4k+3\)</span> say <span class="math inline">\(q_t.\)</span> Either <span class="math inline">\(q_t=3\)</span> or <span class="math inline">\(q_t&gt;3.\)</span> If <span class="math inline">\(q_t=3,\)</span> then <span class="math inline">\(3|Q\)</span> which means <span class="math inline">\(3|(Q-3)\)</span> and so <span class="math inline">\(3\left|4p_1\cdot \cdot \cdot p_n\right.\)</span> which is absurd. If <span class="math inline">\(q_t&gt;3,\)</span> then <span class="math inline">\(q_t=p_j\)</span> for some <span class="math inline">\(1\leq j\leq n\)</span> and so <span class="math inline">\(\left.q_t\right|Q\)</span> implies <span class="math inline">\(q_t|Q-4p_1\cdot \cdot \cdot p_n=3,\)</span> which is also absurd. Therefore, there are infinitely many primes of the form <span class="math inline">\(4n+3.\)</span></p>
 </div>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4.1 </strong></span>The <strong>least common multiple</strong> of two nonzero natural numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the smallest positive natural number that is divisible by <span class="math inline">\(a\)</span> and <span class="math inline">\(b.\)</span></p>
+<p><span class="theorem-title"><strong>Definition 3.1 </strong></span>The <strong>least common multiple</strong> of two nonzero natural numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the smallest positive natural number that is divisible by <span class="math inline">\(a\)</span> and <span class="math inline">\(b.\)</span></p>
 </div>
 <p>The least common multiple of <span class="math inline">\(15\)</span> and 21 is <span class="math inline">\([15,21]=105.\)</span> The least common multiple of <span class="math inline">\(24\)</span> and 36 is <span class="math inline">\([24,36]=72.\)</span> The least common multiple of 2 and 20 is <span class="math inline">\([2,20]=20.\)</span> The least common multiple of 7 and 11 is <span class="math inline">\([7,11]=77.\)</span></p>
 <div id="cor-" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 4.1 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be natural numbers. Then <span class="math display">\[\begin{equation}
+<p><span class="theorem-title"><strong>Corollary 3.1 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be natural numbers. Then <span class="math display">\[\begin{equation}
 (a,b)=p_1^{\min \left(\alpha _1,\beta _1\right)} p_2^{\min \left(\alpha _2,\beta _2\right)} \cdots p_n^{\min \left(\alpha_1,\beta _1\right)}
 \end{equation}\]</span> <span class="math display">\[\begin{equation}
 [a,b]=p_1^{\max \left(\alpha _1,\beta _1\right)} p_2^{\max \left(\alpha _2,\beta _2\right)} \cdots p_n^{\max \left(\alpha_1,\beta _1\right)}.
@@ -348,7 +344,7 @@ b=p_1^{\beta _1}p_2^{\beta _2}\cdots p_m^{\beta _m}
 \]</span> then because for each prime <span class="math inline">\(p_i,\)</span> in <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have exactly <span class="math inline">\(\min \left(\alpha _i,\beta _i\right)\)</span> factors of <span class="math inline">\(p_i\)</span> in common; and</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4.3 </strong></span>Find the unique prime factorization of <span class="math inline">\(m=4463914455\)</span> and <span class="math inline">\(n=8125921375.\)</span> Then factor <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> into a product of primes with the same set of primes with (possibly zero) nonnegative exponents.</p>
+<p><span class="theorem-title"><strong>Example 3.3 </strong></span>Find the unique prime factorization of <span class="math inline">\(m=4463914455\)</span> and <span class="math inline">\(n=8125921375.\)</span> Then factor <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> into a product of primes with the same set of primes with (possibly zero) nonnegative exponents.</p>
 </div>
 <div class="solution proof">
 <p><span class="proof-title"><em>Solution</em>. </span>Notice <span class="math inline">\(4463914455=3^4\cdot 5\cdot 7^2\cdot 11^3\cdot 13^2\)</span> and <span class="math inline">\(8125921375=5^3\cdot 11^3\cdot 13^2\cdot 17^2.\)</span> Thus the set of primes in both natural numbers is <span class="math inline">\(\{3,5,7,11,13,17\}\)</span> and so we have <span class="math display">\[\begin{align*}
@@ -358,8 +354,11 @@ b=p_1^{\beta _1}p_2^{\beta _2}\cdots p_m^{\beta _m}
 \square
 \end{align*}\]</span></p>
 </div>
+</section>
+<section id="gcd-and-lcm" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="gcd-and-lcm"><span class="header-section-number">3.3</span> GCD and LCM</h2>
 <div id="cor-product-of-gcd-and-lcm" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 4.2 (Product of GCD and LCM) </strong></span>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers, then <span class="math display">\[\begin{equation}
+<p><span class="theorem-title"><strong>Corollary 3.2 (Product of GCD and LCM) </strong></span>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers, then <span class="math display">\[\begin{equation}
 (a,b) [a,b]=a b.
 \end{equation}\]</span></p>
 </div>
@@ -381,7 +380,7 @@ b=P_1^{\beta _1}P_2^{\beta_2}\cdot \cdot \cdot P_m^{\beta _m}
 \]</span> as desired.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4.4 </strong></span>Prove that, if <span class="math inline">\(a, b,\)</span> and <span class="math inline">\(c\)</span> are natural numbers, then <span class="math display">\[\begin{equation}
+<p><span class="theorem-title"><strong>Example 3.4 </strong></span>Prove that, if <span class="math inline">\(a, b,\)</span> and <span class="math inline">\(c\)</span> are natural numbers, then <span class="math display">\[\begin{equation}
 [a,b]|c  \text{ if and only if } a|c \text{ and } b|c.
 \end{equation}\]</span></p>
 </div>
@@ -395,7 +394,7 @@ c=p_1^{c_1}\cdot p_2^{c_2}\cdot \cdot \cdot p_n^{c_n}.
 </div>
 <p>Let <span class="math inline">\(p\)</span> be a prime and <span class="math inline">\(n\)</span> a positive integer. If <span class="math inline">\(\left.p^a\right|n\)</span> but <span class="math inline">\(p^{a+1}\nmid n,\)</span> we say that <span class="math inline">\(p^a\)</span> exactly divides <span class="math inline">\(n\)</span> and we write <span class="math inline">\(\left.p^a\right\|n.\)</span></p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4.5 </strong></span>Prove that, if <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are positive natural numbers, then</p>
+<p><span class="theorem-title"><strong>Example 3.5 </strong></span>Prove that, if <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are positive natural numbers, then</p>
 <p><span class="math display">\[\begin{equation}
 \label{prodgcdlcm}
 (a,b)=(a+b,[a,b]).
@@ -408,6 +407,7 @@ a+b=p^s\left(x+p^{t-s}\right),
 \left.p^{\min (s,t)}\right\|(a+b,[a,b]).
 \]</span> But <span class="math inline">\(\min (s,t)=s,\)</span> so the same power of <span class="math inline">\(p\)</span> divides both sides of <span class="math inline">\(\ref{prodgcdlcm}\)</span>. Therefore, the two sides of <span class="math inline">\(\ref{prodgcdlcm}\)</span> must be equal.</p>
 </div>
+</section>
 </main> <!-- /main -->
 <script type="application/ld+json">
     {
@@ -728,13 +728,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./euclidean-algorithm.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Euclidean Algorithm</span></span>
+      <a href="./divisibility.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Divisibility</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./congruence-equations.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Congruence Equations</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Congruence Equations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,2961 @@
+---
+pagetitle: Infinite Series - Single Variable Calculus
+---
+#  Infinite Series
+
+Inﬁnite series is one of the most fundamental concepts in calculus. This book will teach you everything you need to know about them, from their basic properties to more advanced concepts. With this knowledge, you'll be able to tackle any calculus problem that comes your way!
+
+In short, inﬁnite series are sums of inﬁnitely many terms. For example, the inﬁnite series $1 + 2 + 3 + 4 + ...$ describes the sum of all natural numbers. So why are inﬁnite series important? Well, they pop up in a lot of places in mathematics, physics, and computer science.
+
+In fact, inﬁnite series are so important that they have their own branch of mathematics devoted to them. So the next time you're stuck trying to solve an inﬁnite series, just remember that you're working on something that has puzzled mathematicians for centuries. And if that doesn't make you feel better, at least you're not alone.
+
+You might be wondering, why would anyone want to add up an inﬁnite number of things? Well, in some cases, the answer is that we don't actually have to add up all the terms in order to get a meaningful result.
+
+While inﬁnite series may seem like a theoretical concept, they actually have a wide range of applications in the real world. In fact, inﬁnite series are so important that they were once described as "one of the most useful and powerful tools ever invented by mathematicians." So what makes inﬁnite series so special? Let's take a closer look.
+
+In mathematics, a sequence is an ordered set of terms. Sequences can be inﬁnite, in which case they are inﬁnitely long, or they can be ﬁnite, in which case they end after a certain number of terms. All the terms in a sequence are connected to each other and in order; there is no “jumping around” allowed!
+
+You can think of a sequence as a list of numbers that might follow some kind of pattern. For example: 1, 2, 4, 8, 16 is a sequence where each term is double the previous term. Another example is 3, 6, 9, 12, ... , where each term is 3 more than the previous term.
+
+There are many other types of patterns that sequences can follow. Some patterns are very simple and some are very complicated. You can even have sequences that go inﬁnitely long without repeating (like the decimal representation of 1/3 = 0.3333…). And some sequences repeat over and over again in a cycle (like 0, 1, 1, 0, 0, 1, 1,...). As you can see, there’s a lot to explore with sequences!
+
+Sequences can be found in nature, in art, and in many other places. The most famous sequence is probably the Fibonacci sequence, in which each number is the sum of the previous two numbers in the series. However, there are many other interesting sequences out there.
+
+Sequences can be used to model real-world situations, such as population growth or the spread of disease. They can also be used to solve problems, such as ﬁnding the area of a circle. In short, sequences are a powerful tool for understanding and solving problems in mathematics.
+
+An inﬁnite series is a sum of an inﬁnite sequence of numbers. In calculus, when studying inﬁnite series, one must ﬁrst understand whether an inﬁnite series will converge or diverge. To determine whether an inﬁnite series converges or diverges, one can use several methods such as the ratio test, the root test, or various comparison tests.
+
+In general, if an inﬁnite series converges, then it is said to have a sum, whereas if an inﬁnite series diverges, then it is said to be unbound.
+
+For example, the inﬁnite series 1/2 + 1/4 + 1/8 + … converges because each term in the sequence approaches 0 as n approaches inﬁnity. However, the inﬁnite series 1 + 2 + 3 + … diverges because it does not have a sum. In conclusion, understanding inﬁnite series and their convergence is important in calculus and other mathematical fields.
+
+There are many different types of inﬁnite series, and the study of inﬁnite series is an active area of research in mathematics. In recent years, researchers have made significant progress in understanding the behavior of inﬁnite series and their applications to other areas of mathematics.
+
+The Integral Test is a way to determine if an inﬁnite series converges or diverges. If the inﬁnite series converges, then the corresponding inﬁnite integral must also converge; if the inﬁnite series diverges, then the corresponding inﬁnite integral must also diverge.
+
+The integral test is a test for inﬁnite series that uses integration to determine whether a given series converges or diverges. The test is based on the fact that if a function f is positive and increasing on the interval $[1, \infty)$, then the inﬁnite series $\sum f(n)$ converges if and only if the inﬁnite integral $\int f(x) dx$ converges.
+
+In other words, the integral test can be used to determine whether an inﬁnite series converges or diverges by first finding the corresponding integral and then checking to see if that integral converges or diverges.
+
+The Integral Test is especially useful for inﬁnite series with non-negative terms, such as the p-Series.
+
+In general, the p-Series is a series where each term is equal to $1/p^n$, where $p$ is a positive integer. The p-Series converges if $p > 1$ and diverges if $p < 1$. Thus, by the Integral Test, we can see that the p-Series will converge if and only if the corresponding inﬁnite integral converges.
+
+We all know the old saying, ``comparing apples and oranges." But what about comparing series? In mathematics, a series is an inﬁnite sequence of terms, often resulting from the repeated addition of ﬁnite sequences. And just like apples and oranges, not all series are created equal.
+
+In fact, there are an inﬁnite number of ways to compare two inﬁnite series. So which one is better? It all depends on your perspective. Here's a look at some of the most popular methods of comparing series:
+
+- The ratio test: This method compares the inﬁnite sequences term by term. If the limit of the ratio between two terms is less than 1, then the inﬁnite series will converge; if the limit is greater than 1, then the inﬁnite series will diverge.
+
+- The root test: This method looks at the inﬁnite sequence of square roots. If the limit of the square root of a term is less than 1, then the inﬁnite series will converge; if the limit is greater than 1, then the inﬁnite series will diverge.
+
+- The comparison test: This method compares an inﬁnite series with another inﬁnite series that we already know converges or diverges. If the inﬁnite series being compared converges or diverges using the same criteria, then we can say that it has the same behavior as the other inﬁnite series.
+
+So which method is best? That's up for debate. Each method has its own strengths and weaknesses, so it really depends on your particular needs. In any case, there's no need to worry about choosing the wrong method - with so many ways to compare inﬁnite series, you're sure to find a technique that works for you!
+
+A Taylor polynomial is an inﬁnite series that is used to approximate a function. The ﬁrst term in the series is the function itself, and each subsequent term is derived from the derivatives of the function at a certain point.
+
+The degree of the polynomial corresponds to the number of derivatives that are used. For example, a first-degree polynomial uses one derivative, a second-degree polynomial uses two derivatives, and so on.
+
+Taylor polynomials are extremely useful in mathematics and physics because they allow us to approximate complicated functions using only a few terms. However, they are only approximations, so they are not always 100\% accurate.
+
+In general, higher-degree polynomials will be more accurate than lower-degree polynomials, but they will also be more difficult to work with. Ultimately, it's up to you to decide which degree of approximation is appropriate for your needs.
+
+Who would have thought that inﬁnite series could be so interesting? Me! Especially, when I learned about power series, Taylor series, and Maclaurin series in my calculus class. These mathematical concepts are used to approximate functions that can be difficult to work with directly. And while they may seem like a mouthful, they're actually not that complicated.
+
+A power series is an inﬁnite series in which the terms are powers of a variable. For example, the series $x + x^2 + x^3 + · · ·$ is a power series in which the terms are successive powers of x. A Taylor series is a power series that is used to approximate a function around a point. The Maclaurin series is just a special case of the Taylor series in which the point is 0. These concepts may seem like a lot to take in at first, but once you get the hang of them they're actually quite simple. So if you ever ﬁnd yourself struggling with inﬁnite series, remember: there's always a power in numbers.
+
+Applications of inﬁnite series abound in both pure mathematics and applied mathematics. In pure mathematics, inﬁnite series appear in the study of asymptotic behavior, where they are used to describe the behavior of functions at inﬁnity.
+
+In applied mathematics, inﬁnite series are used extensively in physics and engineering, particularly in electrical circuits and wave propagation. They also appear in many other areas of applied mathematics, such as statistics and numerical analysis.
+
+In this book, I teach inﬁnite series in a way that is rigorous but still accessible to the average reader. First, I introduce the concept of a limit and explain how it can be used to calculate the sum of an inﬁnite series. Next, I discuss the different types of inﬁnite series, including convergent and divergent series. Finally, I provide worked examples to illustrate each point. By the end of the book, readers will have a solid understanding of inﬁnite series and how to apply them.
+
+
+
+
+
+
+## Sequences
+
+
+Sequences are introduced. The limit of a sequence and various limits rules are studied, including the squeeze theorem. The convergence of a bounded monotonic sequence is explained.
+
+## Introduction to Sequences
+
+Basically, a \emph{sequence} is a function whose domain is a set of integers.
+
+::: {#def- } 
+A \index{sequence} **sequence** is a function whose domain is the set of positive integers. 
+The functional values $a_1$, $a_2$, \ldots, $a_n$ are the \index{terms} **terms**  of the sequence, and the term $a_n$ is called the $n$th term of the sequence. 
+::: 
+
+::: {#exm- } 
+List the terms of the sequence.
+ 
+ - $a_n=1/n$
+- $a_n = n/(1+n)$
+ 
+::: 
+
+::: {.solution }
+The first 5 terms in the first sequence are $1, 1/2, 1/3, 1/4$ and $1/5$. 
+The first 5 terms in the second sequence are 
+$$
+\frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}.
+$$
+where the index in both examples is $n$ and $n=1, 2, 3, \ldots.$
+::: 
+
+::: {#exm- } 
+Find an expression for the $n$th term of the sequence. 
+ 
+ - $\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \ldots$
+- $\frac{1}{2}, -\frac{2}{3}, \frac{3}{4}, -\frac{4}{5}, \ldots$
+ 
+::: 
+
+::: {.solution }
+For the first sequence, the denominators of the four known terms have been expressed as powers of 2. 
+This suggests that the denominator of the $n$th term is $2^n$.
+Thus, the sequence can be expressed as 
+$$
+\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \ldots, \frac{1}{2^n}, \ldots
+$$
+Notice that the second sequence has alternating signs and that notice that the $n$th term in the sequence can be obtained by multiplying the $n$th term by $(-1)^{n+1}$.
+Thus, the sequence can be expressed as 
+$$
+\frac{1}{2}, -\frac{2}{3}, \frac{3}{4}, -\frac{4}{5}, \ldots, (-1)^{n+1}\frac{n}{n+1}, \ldots
+$$
+as desired.
+::: 
+
+::: {#exm- } 
+List the first five terms of the recursively defined sequence $a_1=1$, $a_2=1$, $a_{n+1}=a_n+a_{n-1}$ for $n > 2$. 
+::: 
+
+::: {.solution }
+The sequence is called the Fibonacci sequence. 
+The first 11 terms are $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89$. 
+::: 
+
+
+## The Limit of a Sequence
+
+A sequence $\{a_n\}$ has a \index{limit} **limit**, written 
+$$
+\lim_{n\to \infty} a_n = L
+\label{limconv}
+$$
+if $a_n$ can be made as close to $L$ as we please by taking $n$ sufficiently large. 
+If the limit in \eqref{limconv} exists the sequence is said to \index{converge} **converge**.
+Otherwise we say that the sequence \index{diverges} **diverges**. 
+
+::: {#def- } 
+A sequence $\{a_n\}$ \index{converges} **converges** to $L$, written
+$$
+\lim_{n\to \infty} a_n = L
+$$
+if for every $\epsilon >0$ there exists a positive integer $N$ such that $|a_n - L <\epsilon$ whenever $n>N$. 
+::: 
+
+::: {#thm- } 
+If $\lim_{x\to \infty} f(x) =L$ and $\{a_n\}$ is a sequence defined by $a_n=f(n)$ where $n$ is a positive integer, then $\lim_{n\to \infty} a_n =L$. 
+::: 
+
+::: {#thm- } 
+If $\{a_n\}$ and $\{b_n\}$ are convergent sequences and $c$ is a constant, then
+ - $\lim_{n\to \infty} (a_n + b_n) = \lim_{n\to \infty} a_n + \lim_{n\to \infty} b_n$
+- $\lim_{n\to \infty} (a_n - b_n) = \lim_{n\to \infty} a_n - \lim_{n\to \infty} b_n$
+- $\lim_{n\to \infty} c a_n = c \lim_{n\to \infty} a_n$
+- $\lim_{n\to \infty} (a_n b_n) = \lim_{n\to \infty} a_n \lim_{n\to \infty} b_n$
+- $\lim_{n\to \infty}\frac{a_n }{b_n} = \frac{\lim_{n\to \infty} a_n}{\lim_{n\to \infty} b_n}$ whenever $\lim_{n\to \infty} b_n \neq 0$
+- $\lim_{n\to \infty} a_n^p = \left[ \lim_{n\to \infty} a_n \right]^p$, if $p > 0$ and $a_n > 0$.
+::: 
+
+::: {#exm- } 
+Determine if the sequence $\left\{\frac{n}{2n+1}\right\}$ converges or diverges. 
+::: 
+
+::: {.solution }
+We find that 
+\begin{align*}
+\lim_{n\to \infty} \frac{n}{2n+1} 
+& = \lim_{n\to \infty} \frac{1}{2+1/n} \\
+& = \frac{\lim_{n\to \infty} 1}{\lim_{n\to \infty}(2+1/n)} \\
+& =  \frac{\lim_{n\to \infty} 1}{\lim_{n\to \infty} 2+ \lim_{n\to \infty} 1/n} \\
+& = \frac{1}{2+0} =\frac{1}{2}
+\end{align*}
+::: 
+
+::: {#exm- } 
+Determine if the sequence $\left\{(-1)^{n+1}\frac{n}{2n+1}\right\}$ converges or diverges. 
+::: 
+
+::: {.solution }
+The sequence diverges as it oscillates between $1/2$ and $-1/2$. 
+::: 
+
+::: {#exm- } 
+Determine if the sequence $\left\{(-1)^{n+1}\frac{1}{n}\right\}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Notice that $1/n\to -$ as $n\to \infty$. 
+Thus the product $(-1)^{n+1}(1/n)$ oscillates between positive and negative values. 
+Since the odd numbered terms are approaching 0 and the even numbered terms also approaching zero, thus 
+$$
+\lim_{n\to\infty}  (-1)^{n+1}\frac{1}{n} = 0
+$$
+so the sequence converges to 0. 
+::: 
+
+::: {#exm- } 
+Determine if the sequence $\left\{3-2n\right\}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Since $\lim_{n \to \infty} (3-2n) = -\infty$, the sequence diverges. 
+::: 
+
+
+::: {#exm- } 
+Find the limit of the sequence $\left\{\frac{n}{2^n}\right\}$.
+::: 
+
+::: {.solution }
+The expression 
+$$
+\lim_{n\to\infty} \frac{n}{2^n}
+$$
+is an indeterminate type of the form $\infty/\infty$, so l'Hopital's rule is applied by using the function $f(x)=x$ and $g(x)=2^x$. 
+We have
+$$
+\lim_{x\to \infty} \frac{x}{2^x} 
+= \lim_{x\to \infty} \frac{1}{2^x \ln 2} = 0
+$$
+from which we conclude that 
+$$
+\lim_{n\to\infty} \frac{n}{2^n} = 0
+$$
+as desired. 
+::: 
+
+
+## The Squeeze Theorem for Limits
+
+If we are able to compare a sequence with two other familiar convergent sequences, then we can apply the squeeze theorem.
+
+::: {#thm- } \label{Squeeze Theorem}
+If $a_n \leq b_n \leq c_n$, for $n\geq n_0$ and 
+$$
+\lim_{n\to \infty} a_n = \lim_{n\to \infty} c_n =L,
+$$ 
+then $\lim_{n\to \infty} b_n = L$.
+::: 
+
+::: {#exm- } 
+Find the limit of the sequence 
+$$
+b_n =\frac{\cos n}{n^2+1}.
+$$
+::: 
+
+::: {.solution }
+Notice that $-1\leq \cos n \leq 1$, for all $n$, and so 
+$$
+-\frac{1}{n^2+1} \leq \frac{\cos n}{n^2+1} \leq \frac{1}{n^2+1}.
+$$
+Letting 
+$$
+a_n =-\frac{1}{n^2+1}
+\qquad \text{and}\qquad 
+c_n=\frac{1}{n^2+1},
+$$ 
+we have $a_n \leq b_n \leq c_n$ for $n\geq 1$. 
+Therefore, by the Squeeze Theorem we have 
+$$
+\lim_{n\to \infty} b_n =0. 
+$$
+as desired.
+::: 
+
+
+::: {#exm- } 
+Show that if $\lim_{n\to \infty} |a_n|=0$, then $\lim_{n\to \infty} a_n =0$.
+::: 
+
+::: {.solution }
+Notice that $-|a_n| \leq a_n \leq |a_n|$. 
+However, since   
+$$
+\lim_{a_n \to \infty} -|a_n| = \lim_{a_n \to \infty} |a_n| =0
+$$
+by the squeeze theorem,  $\lim_{n\to \infty} a_n =0$ follows at once.
+::: 
+
+::: {#thm- } 
+If $\lim_{n\to \infty} a_n =L$ and the function $f$ is continuous at $L$, then
+$$
+\lim_{n\to \infty} f(a_n)= f(L).
+$$
+::: 
+
+::: {#exm- } 
+Show that if $\lim_{n\to \infty} a_n=0$, then $\lim_{n\to \infty} |a_n| =0$.
+::: 
+
+::: {.solution }
+Assume that $\lim_{n\to \infty} a_n=0$ and recall that $f(x)=|x|$ is continuous at $0$. 
+Therefore, 
+$$
+\lim_{n\to \infty} f(a_n)
+= \lim_{n\to \infty} |a_n|
+= |0| =0
+$$
+as desired.
+::: 
+
+
+
+
+
+
+## Monotonic Sequences and Bounded Sequences
+
+The sequence of natural numbers $1, 2, 3, 4, \ldots$ is strictly increasing sequence. 
+The sequence 
+$$
+\frac{1}{2}, \frac{3}{4}, \ldots, \frac{n}{n+1},\ldots
+$$ 
+is also a strictly increasing sequence. 
+The constant sequence $\{4\}$ is a nondecreasing sequence. 
+
+In general, a sequence $\{a_n\}$ is called \index{strictly increasing} **strictly increasing**  whenever 
+$$
+a_1 < a_2 < a_3 < \cdots < a_n < \cdots 
+$$
+and is called \index{increasing} **increasing**  whenever 
+$$
+a_1 \leq a_2 \leq a_3 \leq \cdots \leq a_n \leq \cdots  
+$$
+Similarly, a sequence $\{a_n\}$ is called \index{strictly decreasing} **strictly decreasing**  whenever 
+$$
+a_1 > a_2 > a_3 > \cdots > a_n > \cdots 
+$$
+and is called \index{decreasing} **decreasing**  whenever 
+$$
+a_1 \geq a_2 \geq a_3 \geq \cdots \geq a_n \geq \cdots  
+$$
+
+::: {#def- } 
+A sequence $\{a_n\}$ is \index{monotonic} **monotonic**  when its terms are nondecreasing 
+$$
+a_1 \leq a_2 \leq a_3 \leq \cdots \leq a_n \leq \cdots 
+$$
+or when its terms are nonincreasing
+$$
+a_1 \geq a_2 \geq a_3 \geq \cdots \geq a_n \geq \cdots.  
+$$
+::: 
+
+::: {#exm- } 
+Show that the sequence
+$$
+\frac{1}{2}, \frac{3}{4}, \ldots, \frac{n}{n+1},\ldots
+$$ 
+is a strictly increasing sequence. 
+::: 
+
+::: {.solution }
+Let $a_n =\frac{n}{n+1}$. 
+Then 
+$$
+a_{n+1} = \frac{n+1}{n+2}
+$$
+and so 
+$$
+a_{n+1}- a_n 
+= \frac{n+1}{n+2}
+= \frac{n}{n+1}
+= \frac{1}{(n+1)(n+2)} >0.
+$$
+Whence $a_{n+1} > a_n$ for all $n\geq 1$. 
+By definition, the given sequence is a strictly increasing sequence. 
+Another approach is to use the function $f(x)=x/(x+1)$ and the first derivative test. 
+::: 
+
+
+The sequence of natural numbers $1, 2, 3, 4, \ldots$ has no upper bound. 
+The sequence 
+$$
+\frac{1}{2}, \frac{3}{4}, \ldots, \frac{n}{n+1},\ldots
+$$ 
+is bounded above by $1$. 
+In fact, 1 is the least upper bound. 
+The constant sequence $\{4\}$ is bounded above and below. 
+
+::: {#def- } 
+Let $\{a_n\}$ be a sequence. 
+ - A sequence $\{a_n\}$ is \index{bounded above} **bounded above**  when there is a real number $M$ such that $a_n \leq M$ for all $n$. 
+The number $M$ is called an \index{upper bound} **upper bound**  of the sequence. 
+- A sequence $\{a_n\}$ is \index{bounded below} **bounded below**  when there is a real number $N$ such that $N \leq a_n$ for all $n$. 
+The number $N$ is called a lower bound of the sequence. 
+- A sequence $\{a_n\}$ is \index{bounded} **bounded**  when it is bounded above and bounded below. 
+::: 
+
+::: {#thm- } \label{Bounded Convergence Theorem}
+If a sequence $\{a_n\}$ is bounded and monotonic, then it converges. 
+::: 
+
+::: {#exm- } 
+Show that the sequence $\left\{\frac{e^n}{n!}\right\}$ converges and find its limit. 
+::: 
+
+::: {.solution }
+Fist we show that the sequence is strictly decreasing.
+Let $a_n =\frac{e^n}{n!}$. 
+We have 
+\begin{equation}
+\label{strdec}
+\frac{a_{n+1}}{a_n} 
+= \frac{\frac{e^{n+1}}{(n+1)!}}{\frac{e^n}{n!}} 
+= \frac{e^{n+1} n!}{e^n (n+1)!}
+= \frac{e}{n+1}.
+\end{equation}
+Whence $a_{n+1} < a_n$ for all $n\geq 1$. 
+Since every term in the sequence is positive, it is bounded below by $0$. 
+By the Bounded Convergence Theorem, we know that the sequence converges.
+By \eqref{strdec}, the sequence is given by the recursion formula
+$$
+a_{n+1} = \frac{e}{n+1} a_n.
+$$
+Passing the limit on both sides we obtain
+$$
+\lim_{n \to \infty} a_{n+1} 
+= \lim_{n \to \infty} \left(\frac{e}{n+1} a_n\right)
+= \lim_{n \to \infty} \left(\frac{e}{n+1}\right) \lim_{n \to \infty} \left(a_n\right)
+= 0.
+$$
+Therefore, the sequence converges to 0.
+::: 
+
+
+
+
+
+
+## Exercises
+
+
+::: {#exr- } 
+Write the first five terms of the sequence.
+ 
+- $a_n = \frac{ (-1)^{n+1} 2^n}{n+1}$
+- $a_n =\frac{n+1}{3n-1}$
+- $a_n = \sin \frac{n\pi}{2}$
+- $a_1=4, a_{n+1}= \frac{a_n}{a_n-1}$
+- $a_n = \frac{2^n}{(2n)!}$
+- $a_n = \frac{1\cdot 3 \cdot 5 \cdots (2n-1)}{n!}$
+- $a_1 =3$, $a_{n+1}= 2a_n -1$
+- $a_1=2, a_{n+1}=3a_n +1$ 
+::: 
+
+
+::: {#exr- } 
+Find an expression for the $n$th term of the sequence. 
+ 
+- $\left\{\frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \ldots \right\}$
+- $\left\{\frac{1}{1\cdot 2}, \frac{2}{2\cdot 3}, \frac{3}{3\cdot 4}, \frac{4}{4\cdot 5}, \ldots \right\}$
+- $\left\{-\frac{1}{4}, \frac{2}{9}, -\frac{3}{16}, \frac{4}{25}, \ldots\right\}$
+- $\left\{1, -\frac{2}{3}, \frac{4}{9}, -\frac{8}{27}, \ldots\right\}$ 
+::: 
+
+
+::: {#exr- } 
+Which of the sequences converge and which diverge? 
+Find the limit of each convergent sequence. 
+ 
+- $a_n = \frac{n+(-1)^n}{n}$
+- $a_n =\sqrt{n+1}$
+- $a_n = \frac{2n+1}{1-2\sqrt{n}}$
+- $a_n =\frac{n^2-1}{2n^2+1}$
+- $a_n= \frac{n+3}{n^2+5n+6}$
+- $a_n = (-1)^n\frac{n+2}{3n+1}$
+- $a_n = \left(1+\frac{2}{n}\right)^n$
+- $a_n = \frac{1-n^3}{70-4n^2}$
+- $a_n = 1+\left(\frac{-2}{e}\right)^n$
+- $a_n = \frac{3^n}{n^3}$
+- $a_n = \sqrt[n]{2^{1-3n}}$
+- $a_n =\frac{1\cdot 3\cdot 5 \cdots (2n-1)}{n!}$
+- $a_n =\sqrt[n]{n^2+n}$
+- $a_n = \frac{1}{n^2} +\frac{2}{n^2}+ \frac{3}{n^2}+\cdots + \frac{n}{n^2}$
+- $a_n = \frac{1}{n}\int_1^n \frac{1}{x}\, dx$
+- $a_n = \frac{1+2+3+\cdots + n}{n+2}-\frac{n}{2}$
+::: 
+
+::: {#exr- } 
+Determine if the sequence $a_n = \frac{\ln(n+2)}{n+2}$ is increasing, decreasing or bounded. 
+::: 
+
+::: {#exr- } 
+Which of the following properties are satisfied by the sequence $\left\{\frac{(-1)^n}{n}\right\}$? 
+::: 
+
+::: {#exr- } 
+Compute the limit of the convergent sequence $\left\{\sqrt[n]{n}\right\}$. 
+::: 
+
+::: {#exr- } 
+Find the 5th term of the recursively defined sequence $a_1=2$, $a_2=4$, and $a_{n+1}=2a_n-a_{n-1}$ for $n\geq 2$.
+::: 
+
+::: {#exr- } 
+Find $\lim_{n\to \infty} \frac{(-1)^n}{n}$. 
+::: 
+
+::: {#exr- } 
+Determine whether the sequence $\left\{\frac{2^n+1}{e^n}\right\}$ converges or diverges. 
+If it converges, find its limit.
+::: 
+
+::: {#exr- } 
+Identify the sequence below for which $\{|a_n|\}$ converges but $\{a_n\}$ does not.
+::: 
+
+::: {#exr- } 
+Which is the largest set of $r$ such that the sequence $\{r^n\}$ converge?
+::: 
+
+::: {#exr- } 
+Write the first five terms of the sequence $\{a_n \}$ where $a_1=1$ and ${a_{n+1}=3a_n-2}$.
+::: 
+
+::: {#exr- } 
+Determine if the sequence $\{a_n\}$ given by $a_n=\frac{2n^2+1}{n}$ converges or diverges.
+If it converges, find its limit. 
+::: 
+
+
+::: {#exr- } 
+Find the limit of the following sequences or state that they diverge. 
+
+- $a_n = \frac{\cos n}{n}$
+- $a_n = \frac{2\tan^{-1}n}{n^3+4}$
+- $a_n =\frac{n \sin^3(n\pi/2)}{n+1}$
+::: 
+
+
+::: {#exr- } 
+Determine whether the sequence is increasing, decreasing, or not monotonic. Is the sequence bounded? 
+
+- $a_n = \frac{1}{2n+3}$
+- $a_n =4-\frac{1}{n}$
+- $a_n = \frac{2n-3}{3n+4}$
+- $a_n=\left(\frac{2}{3}\right)^n$
+- $\sin \frac{n\pi}{6}$
+- $a_n = \frac{\ln(1/n)}{n}$
+::: 
+
+
+
+::: {#exr- } 
+Suppose that $f(x)$ is a differentiable for all $x$ in $[0,1]$ and that $f(0)=0$.
+Define the sequence $\{a_n\}$ by the rule $a_n=n f(1/n)$. 
+Show that $lim_{n\to \infty} a_n = f'(0)$. 
+
+- $a_n= n \tan^{-1}\left(\frac{1}{n}\right)$
+- $a_n =  n\left(e^{1/n}-1\right)$
+- $a_n = n \ln \left(1+\frac{2}{n}\right)$ 
+::: 
+
+
+
+
+
+
+## Infinite Series and Convergence
+
+We introduce infinite series and their basic properties such as the Divergence Test and elementary convergence rules. We also discuss the Harmonic Series and Geometric Series.
+
+
+## Infinite Series
+
+Infinite sums occur naturally, for example, when we consider decimal representations of real numbers. 
+Consider the representation of $1/7$: 
+$$
+\frac{1}{7} = 0.\overline{142857} 
+= 0.142857+ 0.000000142857 + 0.000000000000142857 +\cdots 
+$$
+this suggests that the decimal representation can be viewed as a sum of infinitely many real numbers.
+
+::: {#def- } 
+An expression of the form
+$$
+a_1+a_2+a_3+\cdots a_n + \cdots 
+$$
+is called an \index{infinite series} **infinite series** or, more simply, a \index{series} **series**. 
+The numbers $a_1$, $a_2$, $a_3$, are called the \index{terms} **terms** of the series; $a_n$ is called the $n$th term, or \index{general term} **general term**, of the series; and the series itself is denoted by the symbol
+$$
+\sum_{n=1}^\infty a_n
+$$
+or sometimes as $\sum a_n$.
+::: 
+
+::: {#def- } 
+Given an infinite series
+$$
+\sum_{n=1}^\infty a_n = a_1+a_2+a_3+\cdots +a_n +\cdots 
+$$
+the \index{$n$th partial} **$n$th partial**  sum of the series is
+$$
+S_n = \sum_{k=1}^n a_k = a_1+a_2+a_3+\cdots+ a_n 
+$$
+If the sequence of partial sums $\{S_n\}$ converges to the number $S$, that is, if ${\lim_{n\to\infty} S_n =S}$, then the series $\sum a_n$ \index{converges} **converges**  and has sum $S$, written 
+$$
+\sum_{n=1}^\infty a_n = a_1+a_2+a_3+\cdots +a_n +\cdots =S.
+$$
+If $\{S_n\}$ diverges, then the series $\sum a_n$ \index{diverges} **diverges** .
+::: 
+
+For example, the real number $1/7$ can be approximated using a sequence of partial sums 
+\begin{align*}
+s_1 & = 0.142857 = \frac{142857}{10^6} \\
+s_2 & = s_1 + 0.000000142857 = \frac{142857}{10^6} + \frac{142857}{10^{12}}\\
+s_3 & = s_1 + s_2 + 0.000000000000142857 = \frac{142857}{10^6} + \frac{142857}{10^{12}} + \frac{142857}{10^{18}} \\
+& \vdots 
+\end{align*}
+Notice that the $n$th partial sum is 
+\begin{equation}
+s_n =  \frac{142857}{10^6} + \frac{142857}{10^{12}} + \frac{142857}{10^{18}} + \cdots + \frac{142857}{10^{6n}}.
+\label{nparsum}
+\end{equation}
+Therefore we find 
+$$
+\lim_{n\to \infty} s_n 
+= \lim_{n\to \infty} \left(\frac{142857}{10^6} + \frac{142857}{10^{12}} + \frac{142857}{10^{18}} + \cdots + \frac{142857}{10^{6n}}\right).
+$$
+To calculate this limit we need a closed form, so we multiple by sides of \eqref{nparsum} by $1/10^6$ and obtain
+\begin{equation}
+\frac{1}{10^{6}} s_n = \frac{142857}{10^{12}} + \frac{142857}{10^{18}} + \frac{142857}{10^{24}} + \cdots + \frac{142857}{10^{6(n+1)}}.
+\label{nparsumtwo}
+\end{equation}
+Now we subtract \eqref{nparsumtwo} from \eqref{nparsum} and obtain
+\begin{equation}
+s_n = \frac{142857}{10^{6}} - \frac{142857}{10^{6(n+1)}}
+= \frac{142857}{10^{6}} \left(1- \frac{1}{10^{6n }}\right).
+\end{equation}
+Whence 
+$$
+\lim_{n\to \infty} s_n 
+= \lim_{n\to \infty}  \frac{142857}{10^{6}} \left(1- \frac{1}{10^{6n }}\right) 
+=
+\frac{1}{7}
+$$
+as desired.
+
+::: {#exm- } 
+Show that the series $\sum_{n=1}^\infty \frac{4}{4n^2-1}$ is convergent, and find its sum. 
+::: 
+
+::: {.solution }
+Use partial fractions to write the general term as
+$$
+a_n =\frac{2}{2n-1}-\frac{2}{2n+1}
+$$
+Then we write the $n$th partial sum of the series as 
+$$
+S_n = 2-\frac{2}{2n+1}
+$$
+Therefore the sum is $2$. 
+::: 
+
+
+
+## Geometric Series
+
+::: {#def- } 
+Let $a$ be a nonzero real number. 
+A series of the form 
+$$
+\sum_{n=0}^\infty a r^n 
+= a + a r + a r^2 + a r^3 + \cdots + a r^n + \cdots
+$$
+is called a \index{geometric series} **geometric series**  with common ratio $r$.
+::: 
+
+::: {#thm- } 
+If $|r|<1$, then the geometric series 
+$$
+\sum_{n=1}^\infty a r^{n-1}
+$$
+converges, and its sum is $\frac{a}{1-r}$.
+The seres diverges if $|r|\geq 1$.
+::: 
+
+::: {.proof }
+Multiply both sides of the $n$th partial sum of the series by $r$ and then subtract from the original partial sums equation to obtain 
+$$
+(1-r)S_n = a(1-r^n) 
+$$
+Now consider each case. 
+::: 
+
+::: {#exm- } 
+Evaluate the geometric series $\sum_{n=0}^\infty 1.1^n$ or state that the series diverges.
+::: 
+
+::: {.solution }
+Notice that $a=1$ and $r=1.1$, and since $|1.1|\geq 1$, the series diverges. 
+::: 
+
+::: {#exm- } 
+Evaluate the geometric series $\sum_{n=0}^\infty e^{-n}$ or state that the series diverges.
+::: 
+
+::: {.solution }
+Notice that $a=1$ and $r=1/e$, and since $|1/e| < 1$, the series converges with 
+$$
+\sum_{n=0}^\infty e^{-n} 
+= \sum_{n=0}^\infty \left(\frac{1}{e}\right)
+= \frac{1}{1-1/e} 
+= \frac{e}{e-1}
+$$
+as desired. 
+::: 
+
+
+
+## Harmonic Series
+
+
+::: {#def- } 
+The series
+$$
+\sum_{n=1}^\infty \frac{1}{n}
+$$
+is called the \index{harmonic series} **harmonic series** .
+::: 
+::: {#thm- } 
+The harmonic series is divergent.
+::: 
+::: {.proof }
+Write out the partial sums, for example,
+\begin{align*}
+S_8 & = 1+\frac{1}{2} +\left(\frac{1}{3}+\frac{1}{4}\right) +\left(\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}\right) \\
+& > 1+\frac{1}{2} +\left(\frac{1}{4}+\frac{1}{4}\right) +\left(\frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right) \\
+& = 1 +\frac{1}{2} +\frac{1}{2} +\frac{1}{2} = 1+3\left(\frac{1}{2}\right)
+\end{align*}
+In general $S_{2^n} > 1+n(1/2)$. 
+Therefore, $\lim_{n\to \infty} S_{2^n} = \infty$ and so $\{S_n\}$ is divergent. 
+::: 
+
+
+
+## The Divergence Test
+
+The Divergence Test is a convenient way to determine whether an infinite series diverges.
+For example the series $\sum \sin n$ diverges and which is easily seen from the Divergence Test.
+The following observation leads us to the Divergence Test. 
+
+::: {#lem- } \label{Divergence Lemma}
+If $\sum_{n=1}^\infty a_n$ converges, then $\lim_{n\to \infty} a_n =0$. 
+::: 
+::: {.proof }
+Notice that $a_n=S_n-S_{n-1}$. 
+Hence
+$$
+\lim_{n\to \infty} a_n = \lim_{n\to \infty} (S_n-S_{n-1}) =\lim_{n\to \infty} S_n - \lim_{n\to \infty} S_{n-1} =S-S=0
+$$
+where $S$ is the sum of the series. 
+::: 
+
+::: {#thm- } \label{Divergence Test}
+If $\lim_{n\to \infty} a_n$ does not exist or $\lim_{n\to \infty} a_n\neq 0$, then the series $\sum_{n=1}^\infty a_n$ diverges. 
+::: 
+
+::: {#exm- } 
+Explain why the series $\sum_{n=1}^\infty n^2$ diverges.
+::: 
+
+::: {.solution }
+If $\sum_{n=1}^\infty n^2$ converges, then we have $\lim_{n\to \infty} n^2=0$ by the Divergence Lemma. 
+Therefore, $\sum_{n=1}^\infty n^2$ must diverge. 
+::: 
+
+
+
+## Convergence Rules
+
+Often times it is easier to determine the convergence of a simpler series. 
+
+::: {#thm- } \label{Convergence Rules}
+If $\sum_{n=1}^\infty a_n=A$ and $\sum_{n=1}^\infty b_n=B$ are convergent and $c$ is any real number, then $\sum_{n=1}^\infty c a_n$ and $\sum_{n=1}^\infty c b_n$ are also convergent, and
+
+- $\sum_{n=1}^\infty c a_n = c \sum_{n=1}^\infty a_n = cA$ and
+- $\sum_{n=1}^\infty c (a_n\pm b_n) = \sum_{n=1}^\infty a_n \pm \sum_{n=1}^\infty b_n = A\pm B$. 
+::: 
+
+::: {#exm- } 
+Evaluate the geometric series 
+$$
+\sum_{n=2}^\infty 3(-0.75)^n
+$$ 
+or state that the series diverges.
+::: 
+
+::: {.solution }
+First we consider the geometric series, 
+$$
+\sum_{n=2}^\infty (-0.75)^n.
+$$
+Notice that $r=-0.75$ and $|r| < 1$ and so the series converges. 
+The first term is $a=(-0.75)^2$ and so the sum is 
+$$
+\sum_{n=2}^\infty (-0.75)^n = \frac{(-0.75)^2}{1-(-0.75)} =\frac{9}{28}.
+$$
+Therefore we find that
+$$
+\sum_{n=2}^\infty 3(-0.75)^n = 3\left(\frac{9}{28}\right) =\frac{27}{28}
+$$
+using the Convergence Rules. 
+::: 
+ 
+
+
+## Exercises
+
+::: {#exr- } 
+Determine whether the series converges. 
+If the series converges, find its sum. 
+
+- $\sum_{n=1}^\infty n$
+- $\sum_{n=1}^\infty \left(\frac{1}{2n+3}-\frac{1}{2n+1}\right)$
+- $\sum_{n=1}^\infty \frac{n+1}{2n-3}$
+- $\sum_{n=1}^\infty \left(\frac{1}{n}-\frac{1}{n+1}\right)$.
+- $\sum_{n=1}^\infty \frac{2}{\sqrt{n+1} +\sqrt{n}}$
+- $\sum_{n=1}^\infty \frac{n(n+2)}{(n+3)^2}$
+- $\sum_{n=1}^\infty \frac{4}{(2n+3)(2n+5)}$
+- $\sum_{n=0}^\infty \frac{1}{\sqrt{n+1}}$
+- $\sum_{n=1}^\infty \frac{1+3^n}{2^n}$
+::: 
+
+::: {#exr- } 
+Determine whether the series converges or diverges. 
+If it converges, find its sum. 
+ 
+- $\sum_{n=1}^\infty 3\left(-\frac{1}{2}\right)^{n-1}$
+- $\sum_{n=1}^\infty \frac{1}{n(n+2)}$
+- $\sum_{n=1}^\infty \frac{2n-1}{3n+1}$
+- $\sum_{n=1}^\infty 5\left(\frac{4}{3}\right)^{n-1}$
+- $\sum_{n=1}^\infty \frac{3^n-1}{3^{n+1}}$
+- $\sum_{n=1}^\infty \left[\cos\left(\frac{1}{n}\right)-\cos\left(\frac{1}{n+1}\right) \right]$
+::: 
+
+::: {#exr- } 
+Show that the following series are divergent.
+
+- $\sum_{n=1}^\infty (-1)^{n-1}$
+- $\sum_{n=1}^\infty \frac{n}{n+1}$
+- $\sum_{n=1}^\infty \frac{2n^2+1}{3n^2-1}$
+- $\sum_{n=1}^\infty \frac{n}{\sqrt{n^2+1}}$
+- $\sum_{n=1}^\infty \frac{n!}{2^n}$
+- $\sum_{n=1}^\infty \frac{2^n+1}{2^{n+1}}$
+::: 
+
+::: {#exr- } 
+Show that the series $\sum_{n=1}^\infty \left[\frac{2}{n(n+1)}-\frac{4}{3^n}\right]$ is convergent, and find its sum. 
+::: 
+
+::: {#exr- } 
+Find a formula for the $n$th partial sum of each series and use it to find the series sum of the series converges. 
+- $\frac{1}{2}+\frac{1}{5}+\frac{1}{10}+\frac{1}{17}+\frac{1}{26} + \cdots$ 
+- $\frac{1}{3}+\frac{1}{7}+\frac{1}{11}+\frac{1}{15}+\frac{1}{19} + \cdots$ 
+- $\frac{9}{100}+\frac{9}{100^2}+ \frac{9}{100^3} +\cdots +\frac{9}{100^n} + \cdots$
+- $\frac{5}{3}-\frac{5}{9} +\frac{5}{27} -\frac{5}{81} +\cdots$
+- $1-2+4-8+\cdots + (-1)^{n-1}2^{n-1}+ \cdots$
+- $1+\frac{4}{3}+\frac{16}{9}+\frac{64}{27}+\cdots$
+::: 
+
+::: {#exr- } 
+Write out the first few terms of each series to show how the series starts. 
+Then find the sum of the series.
+- $\sum_{k=0}^\infty \frac{(-1)^k}{4^k}$
+- $\sum_{k=1}^\infty \frac{1}{\sqrt{k}+4}$
+- $\sum_{k=0}^\infty \left(\frac{2^{k+1}}{5^k}\right)$
+- $\sum_{k=1}^\infty \frac{n}{2^k}$
+- $\sum_{k=1}^\infty \frac{1}{e^{-k} +1}$
+- $\sum_{n=1}^\infty \frac{1}{2n^2+7n+3}$
+::: 
+
+
+::: {#exr- } 
+Use partial fractions to find the sum of each series.
+ 
+- $\sum_{n=1}^\infty \frac{6}{(2n-1)(2n+1)}$
+- $\sum_{n=1}^\infty \frac{2n+1}{n^2(n+1)^2}$
+ 
+::: 
+
+::: {#exr- } 
+Which series converge, and which diverge?  
+Give reasons for your answers. 
+If a series converges, find its sum.
+ 
+- $\sum_{n=0}^\infty (\sqrt{2})^n$
+- $\sum_{k=0}^\infty \frac{1}{(3k+1)(3k+4)}$
+- $\sum_{n=0}^\infty (-1)^{n+1} n$
+- $\sum_{n=1}^\infty \arctan n$
+- $\sum_{n=1}^\infty (\sqrt{n+1} - \sqrt{n})$
+- $\sum_{n=1}^\infty \left(1-\frac{1}{n}\right)^n$
+- $\sum_{n=1}^\infty \ln \left(\frac{n}{2n+1}\right)$
+- $\sum_{n=0}^\infty \frac{3}{5^n}$
+ 
+::: 
+
+::: {#exr- } 
+Let $f_n$ denote the Fibonacci sequence.
+Show that each of the following statements is true. 
+ 
+- $\frac{1}{f_{n-1}f_{n+1}} = \frac{1}{f_{n-1}f_n} - \frac{1}{f_n f_{n+1}}$
+- $\sum_{n=2}^\infty \frac{1}{f_{n-1}f_{n+1}} =1$
+- $\sum_{n=2}^\infty \frac{1}{f_{n-1}f_{n+1}} =2$ 
+::: 
+
+
+
+
+
+
+## Integral Test and P-Series
+
+We motivate and discuss the Integral Test for convergence of an infinite series. We demonstrate how the convergence (or divergence) of a $p$-series can be determined using the Integral Test.
+
+
+## The Integral Test
+
+Recall that the Harmonic series 
+\begin{equation}
+\label{harmonicseries}
+\sum_{n=1}^\infty \frac{1}{n}
+= \frac{1}{1}+  \frac{1}{2}  + \frac{1}{3} + \frac{1}{4} + \cdots 
+\end{equation}
+diverges. 
+What about the following series? 
+\begin{equation}
+\label{ptwoseries}
+\sum_{n=1}^\infty \frac{1}{n^2}
+= \frac{1}{1^2}+  \frac{1}{2^2}  + \frac{1}{3^2} + \frac{1}{4^2} + \cdots 
+\end{equation}
+The Integral Test compares an infinite series to an improper integral in order to determine convergence or divergence.
+For example, to determine the convergence or divergence of 
+\eqref{ptwoseries} we will determine the convergence or divergence of 
+\begin{equation}
+\label{ptwoint}
+\int_{1}^\infty \frac{1}{x^2}\, dx.
+\end{equation}
+To do so, let $f(x)=1/x^2$ and consider that \eqref{ptwoint} represents the area under the graph of $f$ from $[1,+\infty)$. 
+Thus we find that 
+\begin{align*}
+\int_{1}^\infty \frac{1}{x^2}\, dx 
+= \lim_{b\to +\infty} \left. - \frac{1}{x}\right|_1^b 
+= \lim_{b\to +\infty} \left(-\frac{1}{b} + 1\right) 
+= 1.
+\end{align*}
+Consider the following figure.
+Notice that the sum of the areas of the rectangles under the graph of $f(x)=1/x^2$ is less than the area under the graph.
+Therefore, we have
+\begin{align*}
+s_n & = \frac{1}{1^2}+  \frac{1}{2^2}  + \frac{1}{3^2} + \frac{1}{4^2} + \cdots +\frac{1}{n^2} \\
+& = f(1) + f(2) + f(3) + f(4) + \cdots + f(n) \\
+& < f(1) + \int_1^\infty \frac{1}{x^2} \, dx \\
+& =1 + 1 = 2. 
+\end{align*}
+This show that the sequence of partial sums of $\sum_{n=1}^\infty \frac{1}{n^2}$ are bounded above and the series converges. 
+In fact it is well-known that 
+\begin{equation}
+\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}
+\end{equation}
+as was famously proven by Euler. 
+Our argument here, for the convergence of $\sum_{n=1}^\infty \frac{1}{n^2}$ relies heavily on the fact that $f(x)=1/x^2$ is a continuous, positive, and decreasing function on $[1,\infty)$.
+
+::: {#thm- } \label{Integral Test}
+Suppose that $f$ is a continuous, positive, and decreasing function on $[1,\infty)$. 
+If $f(n)=a_n$, for $n\geq 1$, then 
+$$
+\sum_{n=1}^\infty a_n 
+\qquad \text{and}\qquad
+\int_1^\infty f(x) \, dx
+$$
+either both converge or both diverge.
+::: 
+
+::: {#exm- } 
+Determine if the series $\displaystyle\sum_{n=1}^\infty\frac{8\tan^{-1}n}{1+n^2}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Let
+$$
+f(x)= \frac{8\tan^{-1}x}{1+x^2}
+$$ 
+and notice that $f$ is a continuous, positive, and decreasing function on $[1,\infty)$. 
+Using $u= tan^{-1} x$ we see that the improper integral converges 
+\begin{align*}
+\int_{1}^\infty \frac{8\tan^{-1}x}{1+x^2}\, dx 
+& = \int_{\pi/4}^{\pi/2} 8 u \, du 
+= 4\left(\frac{\pi^2}{4}-\frac{\pi^2}{16}\right)
+= \frac{3\pi^2}{4}.
+\end{align*}
+Therefore, the series converges by the Integral Test. 
+::: 
+
+::: {#exm- } 
+Determine if the series $\displaystyle\sum_{n=1}^\infty\frac{8 n}{1+n^2}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Let
+$$
+f(x)= \frac{8x}{1+x^2}
+$$ 
+and notice that $f$ is a continuous, positive, and decreasing function on $[1,\infty)$. 
+Using $u= 1+x^2$ we see that the improper integral diverges 
+\begin{align*}
+\int_{1}^\infty \frac{8 x}{1+x^2} \, dx 
+& = 4 \int_{2}^{+\infty} \frac{1}{u} \, du 
+= 4 \lim_{b \to \infty} \left.\ln u\right|_2^b
+= +\infty.
+\end{align*}
+Therefore, the series diverges by the Integral Test. 
+::: 
+
+
+
+
+## $p$-Series
+
+::: {#def- } 
+A \index{$p$-series} **$p$-series**  is an infinite series of the form
+$$
+\sum_{n=1}^\infty \frac{1}{n^p}
+$$
+where $p$ is a constant. 
+::: 
+
+What is the difference between a geometric series and a $p$-series?
+In a geometric series the exponent is a variable, i.e $\sum (1/2)^n$ is a geometric series. 
+In a $p$-series the variable is in the base, i.e $\sum (1/n)^2$ is a $p$-series.
+
+::: {#exm- } 
+Let $p>1$ be a real number. 
+Determine if the series $\displaystyle\sum_{n=1}^\infty\frac{1}{n^p}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Let $f(x)= 1/x^p$  and notice that $f$ is a continuous, positive, and decreasing function on $[1,\infty)$. 
+We see that the improper integral converges 
+\begin{align*}
+\int_{1}^\infty \frac{1}{x^p} \, dx 
+& = \lim_{b\to +\infty}\left. \frac{x^{1-p}}{1-p} \right|_{1}^b
+= \lim_{b\to +\infty}\left(\frac{1}{1-p}(b^{1-p}-1)\right)
+= \frac{1}{1-p}.
+\end{align*}
+Therefore, the series converges by the Integral Test. 
+::: 
+
+::: {#exm- } 
+Let $p\leq1$ be a real number. 
+Determine if the series $\displaystyle\sum_{n=1}^\infty\frac{1}{n^p}$ converges or diverges. 
+::: 
+
+::: {.solution }
+If $p=1$, we have the harmonic series which diverges, and in fact 
+$$
+\int_{1}^\infty \frac{1}{x} \, dx 
+$$ 
+diverges also. 
+Now assume that $p<1$. 
+Again we let $f(x)= 1/x^p$ and notice that $f$ is a continuous, positive, and decreasing function on $[1,\infty)$. 
+We see that the improper integral diverges 
+\begin{align*}
+\int_{1}^\infty \frac{1}{x^p} \, dx 
+& = \lim_{b\to +\infty}\left. \frac{x^{1-p}}{1-p} \right|_{1}^b
+= \lim_{b\to +\infty}\left(\frac{1}{1-p}(b^{1-p}-1)\right)
+= +\infty.
+\end{align*}
+Therefore, the series diverges by the Integral Test. 
+::: 
+
+Combining the two previous examples together we have the following theorem. 
+
+
+::: {#thm- } 
+The $p$-series $\displaystyle\sum_{n=1}^\infty \frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq 1$.
+::: 
+
+Unfortunately, there is no theorem to give us the sum of a $p$-series 
+
+
+
+## Exercises
+
+::: {#exr- } 
+Use the Integral Test to determine whether the series diverges or converges.  
+ 
+ - $\displaystyle\sum_{n=1}^\infty \frac{1}{n^2+1}$
+- $\displaystyle\sum_{n=1}^\infty \frac{\ln n}{n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n+2}{n+1}$
+ 
+::: 
+
+
+::: {#exr- } 
+Determine whether the series diverges or converges.  
+ 
+ - $\displaystyle\sum_{n=1}^\infty \frac{1}{n^2}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{10^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{3}{\sqrt{n}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{\sqrt{n}}$
+- $\displaystyle\sum_{n=1}^\infty n^{-1.001}$
+- $\displaystyle\sum_{n=1}^\infty \frac{3n+2}{n(n+1)}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n^2}{e^n}$
+- $\displaystyle\sum_{n=2}^\infty \frac{\ln n}{n}$
+- $\displaystyle\sum_{n=3}^\infty \frac{(1/n)}{(\ln n) \sqrt{\ln^2 n-1}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{n(1+\ln^2 n)}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n}{n^4+1}$
+- $\displaystyle\sum_{n=1}^\infty\frac{1}{n^3 +n}$
+ 
+::: 
+
+
+::: {#exr- } 
+Are there any values of $x$ for which $\displaystyle\sum_{n=1}^\infty (1/ (nx))$ converges? 
+::: 
+
+::: {#exr- } 
+Explain why the Integral Test does not apply to the series 
+$$
+\sum_{n=1} \frac{(-1)^n}{n}.
+$$
+::: 
+
+::: {#exr- } 
+Find the values of $p$ for which the series is convergent.
+ 
+ - $\displaystyle\sum_{n=2}^\infty \frac{1}{n (\ln n)^p}$
+- $\displaystyle\sum_{n=1}^\infty \frac{\ln n}{n^p}$
+- $\displaystyle\sum_{n=1}^\infty n (1+n^2)^p$
+ 
+::: 
+
+
+::: {#exr- } 
+Find the value(s) of $a$ for which the series converges. 
+Justify your answer. 
+ 
+ - $\displaystyle\sum_{n=1}^\infty \left(\frac{a}{n} -\frac{1}{n+1}\right)$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{a}{n+1} - \frac{1}{n+2}\right)$
+ 
+::: 
+
+
+::: {#exr- } 
+Use the Integral Test to determine the convergence or divergence of the $p$-series.
+ 
+ - $\displaystyle\sum_{n=1}^\infty \frac{1}{n^{1/2}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{n^5}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{\sqrt[5]{n}}$
+- $\displaystyle\sum_{n=3}^\infty \frac{1}{(n-2)^4}$
+- $\displaystyle\sum_{n=1}^\infty \frac{3}{n^{5/3}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{\sqrt[3]{27k^2}}$
+ 
+::: 
+
+
+
+
+
+
+## Comparisons of Series
+
+
+The Direct Comparison Test and the Limit Comparison Test are discussed. We work through several examples for each case and provide many exercises. Convergence tests for infinite series are only mastered through practice.
+
+
+## Direct Comparison Test
+
+The idea behind the comparison tests is to determine whether a series converges or diverges by comparing a given series to an already familiar series. 
+For example, the series 
+$$
+\sum_{n=0}^\infty \frac{1}{e^n}
+$$ 
+is known to converge. 
+Do you think the similar series
+$$
+\sum_{n=1}^\infty \frac{1}{e^n+1}
+$$
+also converges?
+The idea is compare each term, so that the sequence of partial sums can be compared also. 
+Notice that 
+$$
+\frac{1}{e^n+1} < \frac{1}{e^n}.
+$$
+This means that its partial sums must form a bounded increasing sequence, which as we know, is convergent. 
+
+
+
+::: {#thm- } \label{Direct Comparison Test}
+Suppose that $\sum a_n$ and $\sum b_n$ are series with positive terms. 
+ - If $\sum b_n$ is convergent and $a_n\leq b_n$ for all $n$, then $\sum a_n$ is also convergent.
+- If  $\sum b_n$ is divergent and $a_n \geq b_n$ for all $n$, then $a_n$ is also divergent. 
+::: 
+
+::: {.proof }
+For the first part, the partial sums of $\sum a_n$ are bounded above by 
+$$
+M =a_1+a_2+\cdots +a_N +\sum_{n=N+1}^\infty c_n.
+$$
+Therefore, the partial sums form a nondecreasing sequence with a limit $L$ with $L\leq M$.
+For the second part, the partial sums of $\sum a_n$ are not bounded from above.
+Consider that if the partial sums of $\sum a_n$ are bounded above then the partial sums for $\sum b_n$ would be bounded by 
+$$
+M^* = b_1 +b_2 +\cdots b_N +\sum_{n=N+1}^\infty a_n
+$$
+and $\sum b_n$ would have to converge instead of diverge. 
+::: 
+
+::: {#exm- } 
+Determine if the series $\sum_{n=2}^\infty \frac{1}{\sqrt{n}-1}$ is convergent or divergent.  
+::: 
+
+::: {.solution }
+Let $a_n= \frac{1}{\sqrt{n} -1}$ and $b_n =\frac{1}{\sqrt{n}}$. 
+Recall the series $\sum_{n=2}^\infty b_n$ is a divergent $p$-series. 
+So by the Direct Comparison Test, with 
+$$
+a_n =\frac{1}{\sqrt{n} -1} > \frac{1}{\sqrt{n}} = b_n
+$$
+we see that the given series is divergent. 
+::: 
+
+::: {#exm- } 
+Determine if the series $\sum_{n=1}^\infty \frac{5}{2n^2+4n+3}$ is convergent or divergent.  
+::: 
+
+::: {.solution }
+Notice that for large $n$ the term $2n^2$ is dominate in the denominator. Observe that
+$$
+\frac{5}{2n^2+4n+3} < \frac{5}{2n^2}
+$$
+for all $n\geq 1$. 
+Since we know that the series $\sum_{n=1}^\infty \frac{1}{n^2}$ is convergent, so is the series $\frac{5}{2}\sum_{n=1}^\infty \frac{1}{n^2}$.
+Therefore the given series is convergent. 
+::: 
+
+
+## Limit Comparison Test
+
+::: {#thm- } 
+Suppose that $a_n>0$ and $b_n>0$ for all $n\geq N$.
+ - If $\lim_{n\to \infty} \frac{a_n}{b_n} = c>0$, then $\sum a_n$ and $\sum b_n$ both converge of diverge. 
+- If $\lim_{n\to \infty} \frac{a_n}{b_n} = 0$ and $\sum b_n$ converges, them $\sum a_n$ converges. 
+- If $\lim_{n\to \infty} \frac{a_n}{b_n} = \infty$ and $\sum b_n$ diverges, then $\sum a_n$ diverges. 
+::: 
+
+
+::: {#exm- } 
+Determine if the series $\sum_{n=1}^\infty \frac{1}{2\sqrt{n}+\sqrt[3]{n}}$ converges or diverges. 
+::: 
+
+::: {.solution }
+By the Limit Comparison Test with
+$$
+\lim_{n\to\infty} \frac{\frac{1}{2\sqrt{n}+\sqrt[3]{n}}}{1/\sqrt{n}} = \lim_{n \to \infty} \frac{1}{2+n^{-1/6}} =\frac{1}{2},
+$$
+we see that the series diverges since the $p$-series $\sum_{n=1}^\infty \frac{1}{\sqrt{n}}$ diverges.
+::: 
+
+::: {#exm- } 
+Determine if the series $\sum_{n=1}^\infty \frac{n+1}{n^2\sqrt{n}}$ converges or diverges. 
+::: 
+
+::: {.solution }
+By the Limit Comparison Test with
+$$
+\lim_{n\to\infty} \frac{\frac{n+1}{n^2\sqrt{n}}}{\frac{1}{n^{3/2}}} = \lim_{n \to \infty} \frac{n+1}{n} = 1, 
+$$
+we see that the series converges since the $p$-series $\sum_{n=1}^\infty \frac{1}{n^{3/2}}$ converges.
+::: 
+
+::: {#exm- } 
+Determine if the series $\sum_{n=2}^\infty \frac{1}{(\ln n)^2}$ converges or diverges. 
+::: 
+
+::: {.solution }
+By the Limit Comparison Test with
+$$
+\lim_{n\to\infty} \frac{1/(\ln n)^2}{1/n} = \lim_{n \to \infty} \frac{n}{(\ln n)^2} = \lim_{n \to \infty} n =\infty, 
+$$
+we see that the series diverges since the $p$-series $\sum_{n=1}^\infty \frac{1}{n}$ diverges.
+::: 
+
+
+::: {#exm- } 
+Determine if the series $\sum_{n=1}^\infty \frac{\ln n}{n^2}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Recall that the series $\sum_{n=1}^\infty \frac{1}{n}$ diverges but that the series $\sum_{n=1}^\infty \frac{1}{n^2}$ converges. 
+However the Limit Comparison test with these two series, is inconclusive. 
+Consider instead the series $\sum_{n=1}^\infty \frac{1}{n^{3/2}}$.
+We find that 
+$$
+\lim_{n \to \infty} \frac{\ln n/n^2}{1/n^{3/2}} 
+= \lim_{n \to \infty} \frac{\ln n}{\sqrt{n}} 
+=0
+$$
+Therefore, by the Limit Comparison Test the given series converges. 
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+Determine whether the series converges or diverges. 
+ 
+ - $\sum_{n=1}^\infty \frac{1}{n^2+2}$
+- $\sum_{n=3}^\infty \frac{1}{n-2}$
+- $\sum_{n=1}^\infty \frac{1}{3+2^n}$
+- $\sum_{n=2}^\infty \frac{1}{n^{2/3}-1}$
+- $\sum_{n=1}^\infty \frac{1+4^n}{1+3^n}$
+- $\sum_{n=1}^\infty \frac{1}{3n^2+2}$
+- $\sum_{n=1}^\infty \frac{n+4^n}{n+6^n}$
+- $\sum_{n=1}^\infty \frac{1}{\sqrt{n}-1}$
+- $\sum_{n=1}^\infty \frac{1}{4\sqrt[3]{n}-1}$
+- $\sum_{n=3}^\infty \frac{3^n}{2^n-4}$
+- $\sum_{n=1}^\infty \frac{2+\sin n}{3^n}$
+- $\sum_{n=1}^\infty e^{-n^2}$
+ 
+::: 
+
+
+::: {#exr- } 
+Determine whether the series converges or diverges. 
+ 
+ - $\sum_{n=1}^\infty \frac{\sin^2 n}{2^n}$
+- $\sum_{n=1}^\infty \frac{1+\cos n}{n^2}$
+- $\sum_{n=1}^\infty \frac{1}{n!}$
+- $\sum_{n=1}^\infty \frac{2n}{3n-1}$
+- $\sum_{n=1}^\infty \frac{1}{\sqrt{n}+1}$
+- $\sum_{n=1}^\infty \frac{n^2}{n!}$
+- $\sum_{n=1}^\infty \frac{2n^2+n}{\sqrt{4n^7}+3}$
+- $\sum_{n=1}^\infty \frac{(\ln n)^2}{n^{3/2}}$
+- $\sum_{n=1}^\infty \frac{1}{(1+\ln n)^2}$
+- $\sum_{n=1}^\infty \frac{\sqrt{n}+\ln n}{n^2+1}$
+- $\sum_{n=1}^\infty \frac{\sqrt[n]{n}}{n^2}$
+- $\sum_{n=1}^\infty \frac{1}{n\sqrt[n]{n}}$
+ 
+::: 
+
+::: {#exr- } 
+Show that if $a_n > 0$  and $\lim_{n\to \infty} n a_n \neq 0$, then $\sum a_n$ is divergent. 
+::: 
+
+::: {#exr- } 
+If $\sum_{n=1}^\infty a_n$ is a convergent series of nonnegative numbers, can anything be said about $\sum_{n=1}^\infty (a_n/n)$? Justify your conclusion. 
+::: 
+
+::: {#exr- } 
+Show that if $\sum a_n$ is a convergent series of nonnegative terms, then $\sum a_n^2$ converges. 
+::: 
+
+::: {#exr- } 
+Show that if $a_n > 0$ and $\sum a_n$ is convergent, then$\sum \ln(1+a_n)$ is convergent. 
+::: 
+
+
+
+
+
+
+## Alternating Series
+
+Infinite series whose terms alternate in sign are called alternating series. We motivate and prove the Alternating Series Test and we also discuss absolute convergence and conditional convergence. Alternating p-series are detailed at the end.
+
+## Alternating Series Test
+
+Infinite series whose terms alternate in sign are called alternating series.
+
+::: {#def- } 
+An \index{alternating series} **alternating series**  has one of the following forms
+\begin{align*}
+\sum_{n=1}^\infty (-1)^{n} a_n
+\qquad \text{or} \qquad
+\sum_{n=1}^\infty (-1)^{n+1} a_n
+\end{align*}
+where the $a_n$'s are positive. 
+::: 
+
+For example, the two series 
+\begin{align*}
+\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n} & 
+= 1 -\frac{1}{2} +\frac{1}{3}-\frac{1}{4} + \frac{1}{5} - \cdots \\
+\sum_{n=1}^\infty (-1)^{n} \frac{1}{n} & 
+= -1 +\frac{1}{2} -\frac{1}{3}+\frac{1}{4} - \frac{1}{5} + \cdots 
+\end{align*}
+are alternating series. 
+
+The next theorem gives sufficient conditions under which an alternating series must converge. 
+The \index{Alternating Series Test} **Alternating Series Test** is sometimes called \index{Leibniz's Theorem} **Leibniz's Theorem**. 
+
+::: {#thm- } \label{Alternating Series Test}
+An alternating series converges whenever the following conditions are satisfied
+
+- $a_1 \geq a_2 \geq a_3 \geq a_4 \geq \cdots \geq a_n \geq \cdots$
+- $\lim_{n\to +\infty} a_n = 0$
+::: 
+
+::: {.proof }
+Consider the following diagram.
+First we plot $s_1 = a_1$.
+To find $s_2$ we subtract $a_2$, so $s_2$ is to the left of $s_1$.
+Then to find $s_3$ we add $a_3$, so $s_3$ is to the right of $s_2$.
+Since $a_3 < a_2$, $s_3$ is to the left of $s_1$. 
+Continuing in this pattern, we see that the partial sums oscillate back and forth. 
+However, by the assumption $\lim_{n\to +\infty} a_n = 0$, the successive steps are becoming smaller and smaller. 
+
+Notice that the odd partial sums $s_1, s_3, s_5, \ldots$ are decreasing and that the even partial sums $s_2, s_4, s_6, \ldots$ are increasing. 
+We now consider the two cases.
+ 
+If $n$ is even, say $n=2m$, then the sum of the first $n$ terms is 
+\begin{align*}
+s_{2m} & = (a_1-a_2) + (a_3-a_4) +\cdots + (a_{2m-1}-a_{2m}) \\
+& = a_1-(a_2-a_3) - (a_4-a_5) - \cdots  - (a_{2m-2}-a_{2m-1}) - a_{2m}
+\end{align*}
+Since each term in parentheses is positive or zero, we notice that $s_{2m}$ is the sum of $m$ nonnegative terms. 
+Thus $s_{2m+2}\geq s_{2m}$, and the sequence $\{s_{2m}\}$ is nondecreasing.
+Also notice that $s_{2m} \leq a_1$ and so the sequence $\{s_{2m}\}$ is nondecreasing and bounded from above. 
+Therefore, it has a limit, say 
+$$
+\lim_{m \to \infty} s_{2m} = L.
+$$
+Next we consider the subsequence of odd terms $\{s_{2m+1}\}$ of $\{s_n\}$.
+Since 
+$$
+s_{2m+1}= s_{2m}+a_{2m+1}
+$$  
+and $\lim_{m\to \infty} a_{2m+1} = 0$ by hypothesis, we have 
+\begin{align*}
+\lim_{m\to \infty} s_{2m+1} 
+& = \lim_{m\to \infty} s_{2m}+a_{2m+1} 
+= \lim_{m\to \infty} s_{2m} +  \lim_{m\to \infty} a_{2m+1}  = L
+\end{align*}
+Since the subsequence $\{s_{2m+1}\}$ and $\{s_{2m}\}$ of the sequence of partial sums $\{s_n\}$ both converge to $L$, we have $\lim_{n\to \infty} s_n =L$ as needed. 
+::: 
+
+::: {#exm- } 
+Show that the alternating harmonic series $\sum_{n=1}^\infty (-1)^{n+1}\frac{1}{n}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Notice that 
+$$
+a_n =\frac{1}{n} > \frac{1}{n+1} = a_{n+1}
+$$ 
+and that 
+$$
+\lim_{n\to\infty} \frac{1}{n}=0.
+$$
+By the Alternating Series Test, the series must converge.
+::: 
+
+::: {#exm- } 
+Show that the alternating harmonic series $\sum_{n=1}^\infty (-1)^{n+1}\frac{n+1}{n}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Notice that $a_{n+1}\leq a_n$, for all $n$.
+However, the Alternating Series Test does not apply because 
+$$
+\lim_{n\to\infty} \frac{\ln n}{n} \neq 0.
+$$
+In fact the series diverges. 
+::: 
+
+::: {#exm- } 
+Show that the series $\sum_{n=1}^\infty (-1)^{n}\frac{\ln n}{n}$ converges or diverges. 
+::: 
+
+::: {.solution }
+Let $f(x)=(\ln x)/x$. 
+By the Quotient Rule, we have $f'(x)=(1-\ln x)/x^2$.
+The fact that $f'(x)<0$, for $x>e$, implies the terms decrease, whenever $n\geq 3$. 
+Also notice that 
+$$
+\lim_{n\to \infty} \frac{\ln n}{n}= 0,
+$$
+and therefore, the condition of the Alternating Series Test are satisifed. 
+By the Alternating Series Test, the series must converge.
+::: 
+
+
+
+
+## Approximating Sums of Alternating Series
+
+
+::: {#thm- } 
+If an alternating series satisfies the hypothesis of the alternating series test, and if $S$ is the sum of the series, then
+ - either $s_n \leq S \leq s_{n+1}$ or $s_{n+1} \leq S \leq s_{n}$, and 
+- if $S$ is approximated by $s_n$, then the absolute error $|S-s_n|$ satisfies 
+$$
+|S-s_n| \leq a_{n+1}.
+$$
+Moreover, the sign of the error $S-s_n$ is the same as $a_{n+1}$. 
+::: 
+
+::: {.proof }
+From the proof of the Alternating Series Test we know that $S$ lies between any two consecutive partial sums $s_n$ and $s_{n+1}$.
+It follows that 
+$$
+|S-s_n| \leq | s_{n+1} - s_n | \leq a_{n+1}
+$$
+as desired. 
+::: 
+
+
+
+## Absolute and Conditional Convergence
+
+
+::: {#def- } 
+A series $\sum a_n$ is called \index{absolutely convergent} **absolutely convergent**  if the series $\sum |a_n|$ converges. 
+::: 
+
+::: {#thm- } \label{Absolute Convergence Test}
+If a series $\sum a_n$ is absolutely convergent, then it is convergent. 
+::: 
+
+::: {.proof }
+Notice that for each $n$, $-|a_n| \leq a_n \leq |a_n|$ and so $0\leq a_n +|a_n| \leq 2 a_n $.
+If the series $\sum |a_n|$ converges, then the series $\sum 2 |a_n|$ converges, and so the nonnegative series $\sum (a_n+ |a_n|)$ converges. 
+The equality $a_n = (a_n +|a_n|)-|a_n|$ now lets us express the series $\sum a_n$ as the difference of two convergent series:
+$$
+\sum a_n = \sum (a_n +|a_n|)-|a_n| = \sum (a_n +|a_n|) - \sum |a_n|.
+$$
+Therefore $\sum a_n$ converges. 
+::: 
+
+Notice that the alternating harmonic series converges but is not absolutely convergent. 
+
+::: {#def- } 
+A series $\sum a_n$ is \index{conditionally convergent} **conditionally convergent**  if it is convergent but not absolutely convergent. 
+::: 
+
+::: {#exm- } 
+Determine whether the series $\sum_{n=1}^\infty (-1)^{n+1}\frac{1}{\sqrt{n}}$ diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Consider the series 
+$$
+\sum_{n=1}^\infty \left|(-1)^{n+1}\frac{1}{\sqrt{n}}\right| 
+=  \sum_{n=1}^\infty \frac{1}{\sqrt{n}}.
+$$
+This is a divergent $p$-series with $p=1/2<1$. 
+Therefore the series is not absolutely convergent.  
+Now notice that 
+$$
+\lim_{n\to \infty}  \frac{1}{\sqrt{n}} =0
+$$ 
+and that the series is decreasing. 
+By the Alternating Series Test, the given series converges.
+Therefore the given series converges conditionally.
+::: 
+
+::: {#exm- } 
+Determine whether the series $\sum_{n=1}^\infty (-1)^{n+1}\frac{1}{\sqrt{n^3}}$ diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Consider the series 
+$$
+\sum_{n=1}^\infty \left|(-1)^{n+1}\frac{1}{\sqrt{n^3}}\right| 
+=  \sum_{n=1}^\infty \frac{1}{\sqrt{n^3}}.
+$$
+This is a convergent $p$-series with $p=3/2>1$. 
+Therefore the series is absolutely convergent.  
+::: 
+
+::: {#exm- } 
+Determine whether the series $\sum_{n=1}^\infty \frac{\sin n}{n^2}$ diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Notice that the Alternating Series Test does not apply.
+Consider the series 
+$$
+\sum_{n=1}^\infty \left|\frac{\sin n}{n^2}\right| 
+\leq  \sum_{n=1}^\infty \frac{1}{n^2}.
+$$
+Recall that the series $\sum_{n=1}^\infty \frac{1}{n^2}$ is a convergent $p$-series with $p=2>1$. 
+By the Direct Comparison Test, the series $\sum_{n=1}^\infty \left|\frac{\sin n}{n^2}\right|$ converges. 
+Therefore, the given series is absolutely convergent.  
+::: 
+
+::: {#exm- } 
+Determine whether the series $\sum_{n=1}^\infty (-1)^{n+1} \frac{n+3}{n(n+1)}$ diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Consider the series 
+\begin{equation}
+\label{exseven}
+\sum_{n=1}^\infty \left|(-1)^{n+1} \frac{n+3}{n(n+1)}\right| 
+=  \sum_{n=1}^\infty \frac{n+3}{n(n+1)}.
+\end{equation}
+We use the Limit Comparison Test with 
+$$
+a_n = \frac{n+3}{n(n+1)}
+\qquad \text{and}\qquad
+b_n = \frac{1}{n}.
+$$
+We have 
+$$
+\lim_{n\to\infty} \frac{a_n}{b_n} 
+= \lim_{n\to\infty} \frac{n+3}{n+1} 
+= 1.
+$$
+It follows from the Limit Comparison Test that the series in \eqref{exseven} diverges.  
+Therefore the given series converges conditionally. 
+::: 
+
+::: {#exm- } 
+Determine whether the \index{alternating $p$-series} **alternating $p$-series**  
+$$
+\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^p}
+$$ 
+diverges, converges absolutely, or converges conditionally.
+::: 
+
+::: {.solution }
+Consider the series 
+\begin{equation}
+\label{exeight}
+\sum_{n=1}^\infty \left|(-1)^{n+1}\frac{1}{n^p}\right| 
+=  \sum_{n=1}^\infty \frac{1}{n^p}.
+\end{equation}
+This is a convergent $p$-series whenever $p>1$. 
+Therefore the alternating $p$-series is absolutely convergent if $p>1$.
+Otherwise the series in \eqref{exeight} is divergent, and in this case, when $0 < p\leq 1$, the alternating $p$-series is conditionally convergent. 
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+Which of the alternating series converge, and which diverge? 
+Give reasons for your answers.
+ 
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^{3/2}}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{\sqrt{n}}{n+5}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{n}{3n-1}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{10^n}{n^{10}}$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{n^2}{2n^2-1}$
+- $\sum_{n=1}^\infty (-1)^{n} \sin\left(\frac{\pi}{n}\right)$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{\ln n}{n}$
+- $\sum_{n=1}^\infty (-1)^{n+1}\frac{n}{\sqrt{n^2+1}}$
+- $\sum_{n=1}^\infty (-1)^{n} \ln\left(1+\frac{1}{n}\right)$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{e^{1/n}}{n}$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{1}{\ln n}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{\sqrt{n}}{1+2\sqrt{n}}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{3\sqrt{n+1}}{\sqrt{n}+1}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{\ln(n+1)}{n+2}$
+ 
+::: 
+
+::: {#exr- } 
+Which of the series converge absolutely, which converge, and which diverge? 
+Give reasons for your answers.
+ 
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^2}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n+2}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{1}{n \ln n}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{n}{n^3-5}$
+- $\sum_{n=0}^\infty \frac{\cos n\pi}{n+1}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \arctan n$
+ 
+::: 
+
+
+::: {#exr- } 
+Estimate the magnitude of the error involved in using the sum of the first four terms to approximate the sum of the entire series. 
+ 
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{10^n}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^6}$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{1}{\sqrt{n}}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{(0.01)^n}{n}$
+- $\sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n^5}$
+- $\sum_{n=2}^\infty (-1)^{n-1}\frac{1}{n \ln n}$
+- $\sum_{n=1}^\infty (-1)^{n-1} \frac{n^2}{10^n}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{1}{n!}$
+- $\sum_{n=1}^\infty (-1)^{n} \frac{3^n}{n!}$
+ 
+::: 
+
+
+::: {#exr- } 
+Show that if $\sum_{n=1}^\infty a_n$ diverges, then $\sum_{n=1}^\infty |a_n|$ diverges.
+::: 
+
+::: {#exr- } 
+Show that if $\sum_{n=1}^\infty a_n$ converges absolutely, then 
+$$
+\left|\sum_{n=1}^\infty a_n \right| \leq \sum_{n=1}^\infty |a_n|.
+$$
+::: 
+
+
+::: {#exr- } 
+Give an example of an alternating $p$-series that converges, but whose corresponding $p$-series diverges.
+::: 
+
+::: {#exr- } 
+Find all values of $s$ for which the series $\sum_{n=1}^\infty (-1)^n \frac{1}{n^s}$ converges.
+::: 
+
+::: {#exr- } 
+For what values of $p$ is the series $\sum_{n=1}^\infty (-1)^{n-1} \frac{(\ln n)^p}{n}$ convergent?
+::: 
+
+::: {#exr- } 
+Show that if $\sum_{n=1}^\infty a_n$ and $\sum_{n=1}^\infty b_n$ both converge absolutely, then 
+so do ${\sum_{n=1}^\infty a_n+b_n}$, $\sum_{n=1}^\infty a_n-b_n$, and ${\sum_{n=1}^\infty k a_n}$ where $k$ is a real number. 
+::: 
+
+
+::: {#exr- } 
+Find all values of $x$ for which the infinite series 
+$$
+\sum_{n=1}^\infty \frac{x^n}{n}
+$$ 
+(a) converges absolutely and (b) converges conditionally.
+::: 
+
+
+
+
+
+## Ratio and Root Tests
+
+
+The Ratio Test and the Root Tests are criterions for the convergence of an infinite series. We provide several examples using these convergence tests and several exercises.
+
+## The Ratio Test
+
+The Ratio Test is a criterion for the convergence (a convergence test) of an infinite series $\sum a_n$. 
+It depends on the quantity 
+\begin{equation}
+\label{rt}
+\lim_{n\to+\infty} \frac{a_{n+1}}{a_n}.
+\end{equation}
+to determine convergence or diverges. 
+The Ratio Test fails if the limit in \eqref{rt} is 1. 
+
+::: {#thm- } 
+Let $\sum a_n$ be a series with positive terms and suppose that
+$$
+\label{ratiotest}
+\rho = \lim_{n\to+\infty} \frac{a_{n+1}}{a_n}.
+$$
+ - If $\rho<1$, the series converges. 
+- If $\rho >1$ or $\rho  =+\infty$, the series diverges. 
+- If $\rho=1$, the series may converge or diverge. 
+::: 
+
+::: {#exm- } 
+Use the Ratio Test to determine whether the series $\sum_{n=1}^\infty \frac{1}{n!}$ converges or diverges.
+::: 
+
+::: {.solution }
+We find 
+\begin{align*}
+\rho = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} 
+= \lim_{n\to \infty} \frac{1/(n+1)!}{1/n!} 
+= \lim_{n\to\infty}  \frac{1}{n+1} = 0.
+\end{align*}
+Since $\rho <1$ the series converges by the Ratio Test.  
+::: 
+
+::: {#exm- } 
+Use the Ratio Test to determine whether the series $\sum_{n=1}^\infty \frac{n}{2^n}$ converges or diverges.
+::: 
+
+::: {.solution }
+We find 
+\begin{align*}
+\rho = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} 
+= \lim_{n\to \infty} \frac{(n+1)/2^{n+1}}{n/2^n} 
+= \lim_{n\to\infty}  \frac{n+1}{2n} = \frac{1}{2}.
+\end{align*}
+Since $\rho <1$ the series converges by the Ratio Test.  
+::: 
+
+::: {#exm- } 
+Use the Ratio Test to determine whether the series $\sum_{n=1}^\infty \frac{n^n}{n!}$ converges or diverges.
+::: 
+
+::: {.solution }
+We find 
+\begin{align*}
+\rho = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} 
+= \lim_{n\to \infty} \frac{(n+1)^{n+1}/(n+1)!}{n^n/n!} 
+= \lim_{n\to\infty}  \left(1+\frac{1}{n}\right)^n = e.
+\end{align*}
+Since $\rho >1$ the series diverges by the Ratio Test.  
+::: 
+
+::: {#exm- } 
+Use the Ratio Test to determine whether the series $\sum_{n=1}^\infty \frac{1}{2n-1}$ converges or diverges.
+::: 
+
+::: {.solution }
+We find 
+\begin{align*}
+\rho = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} 
+= \lim_{n\to \infty} \frac{1/(2(n+1)-1)}{1/(2n-1)} 
+= \lim_{n\to\infty}  \frac{2n-1}{2n+1} = 1.
+\end{align*}
+Since $\rho =1$ the Ratio Test fails. 
+However, the Integral Test proves that the series  diverges since
+$$
+\int_1^{+\infty} \frac{1}{2x-1} \, dx 
+= \lim_{b\to +\infty} \int_1^b \frac{1}{2x-1} \, dx 
+=  \left. \lim_{b\to +\infty} \frac{1}{2}  \ln(2x-1)\right|_1^b
+=+ \infty
+$$
+as desired. 
+::: 
+
+
+
+## The Root Test
+
+The Root Test is a criterion for the convergence (a convergence test) of an infinite series $\sum a_n$. 
+It depends on the quantity 
+\begin{equation}
+\label{roott}
+\lim_{n\to+\infty} \sqrt[n]{a_n}.
+\end{equation}
+to determine convergence or diverges. 
+The Root Test fails if the limit in \eqref{roott} is 1. 
+
+::: {#thm- } 
+Let $\sum a_n$ be a series with positive terms and suppose that
+$$
+\label{roottest}
+\rho = \lim_{n\to+\infty} \sqrt[n]{a_n}.
+$$
+ - If $\rho<1$, the series converges. 
+- If $\rho >1$ or $\rho  =+\infty$, the series diverges. 
+- If $\rho=1$, the series may converge or diverge. 
+::: 
+
+::: {#exm- } 
+Use the root test to determine whether the series 
+$$
+\sum_{n=1}^\infty \left(\frac{4n^2-3}{7n^2+6}\right)^n
+$$ 
+converges or diverges.
+::: 
+
+::: {.solution }
+We find 
+\begin{align*}
+\rho = \lim_{n\to \infty}  \sqrt[n]{\left(\frac{4n^2-3}{7n^2+6}\right)^n} 
+= \lim_{n\to \infty}  \frac{4n^2-3}{7n^2+6} 
+= \frac{4}{7}
+\end{align*}
+Since $\rho <1$ the series converges. 
+::: 
+
+::: {#exm- } 
+Use the root test to determine whether the series $\sum_{n=1}^\infty \frac{2^n}{n^{10}}$  converges or diverges by the Root Test.  
+::: 
+
+::: {.solution }
+We find 
+\begin{align*}
+\rho = \lim_{n\to \infty}  \sqrt[n]{\frac{2^n}{n^{10}}} 
+= \lim_{n\to \infty}  \frac{2}{(n^{1/n})^{10}}
+= 2
+\end{align*}
+Since $\rho >1$ the series diverges by the Root Test.  
+::: 
+
+::: {#exm- } 
+Use the root test to determine whether the series $\sum_{n=1}^\infty \frac{e^{2n}}{n^n}$ converges or diverges.
+::: 
+
+::: {.solution }
+We find 
+\begin{align*}
+\rho = \lim_{n\to \infty}  \sqrt[n]{\frac{e^{2n}}{n^n}} 
+= \lim_{n\to \infty}  \frac{e^{2n/n}}{n^{n/n}}
+= \lim_{n\to \infty}  \frac{2^2}{n}
+= 0
+\end{align*}
+Since $\rho <1$ the series converges by the Root Test.  
+::: 
+
+::: {#exm- } 
+Determine whether the series 
+$$
+\sum_{n=1}^\infty (-1)^{n-1}\frac{2^{n+3}}{(n+1)^n}
+$$ 
+is absolutely convergent, conditionally convergent, or divergent. ::: 
+
+::: {.solution }
+We find
+\begin{align*}
+\rho = \lim_{n\to \infty}  \sqrt[n]{\left|(-1)^{n-1}\frac{2^{n+3}}{(n+1)^n}\right|} 
+= \lim_{n\to \infty}  \left|\frac{2^{n+3}}{(n+1)^n}\right|^{1/n}
+= \lim_{n\to \infty}  \frac{2^{1+3/n}}{n+1}
+= 0
+\end{align*}
+Since $\rho <1$ the series is absolutely convergent by the Root Test.  
+::: 
+
+
+
+
+## Exercises
+
+::: {#exr- } 
+Use the Ratio Test to determine the convergence or divergence of the series.
+ 
+ 
+- $\displaystyle\sum_{n=0}^\infty \frac{n!}{3^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{n!}$
+- $\displaystyle\sum_{n=1}^\infty \frac{5^n}{n^4}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n^2}{4^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n!}{n 3^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n^n}{2^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(n!)^2}{(3n)!}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n^6}{n!}$
+- $\displaystyle\sum_{n=1}^\infty n \left(\frac{1}{2}\right)^n$
+ 
+::: 
+
+::: {#exr- } 
+Use the Root Test to determine the convergence or divergence of the series.
+ 
+ 
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{4^n}$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{12n^3_n}{9n^2+n+1}\right)^n$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{n-2}{5n+1}\right)^n$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{n}{n+1}\right)^{2n^2}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n}{3^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n}{e^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(n!)^n}{(n^n)^2}$
+- $\displaystyle\sum_{n=1}^\infty \frac{2^n n!}{n^n}$
+- $\displaystyle\sum_{n=1}^\infty \left(\frac{n!}{n^3}\right)$
+ 
+::: 
+
+
+::: {#exr- } 
+Which of the series converge, and which diverge? 
+Give reasons for your answers.
+ 
+ - $\displaystyle\sum_{n=1}^\infty n^2 e^{-n}$
+- $\displaystyle\sum_{n=1}^\infty (1-e^{-n})^n$
+- $\displaystyle\sum_{n=1}^\infty \frac{100}{n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n!}{10^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{10}{2\sqrt{n^3}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-2)^n}{3^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{1}{4+2^{-n}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{2^n}{4n^2-1}$
+- $\displaystyle\sum_{n=1}^\infty \left(1- \frac{1}{3n}\right)^n$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^n 3^n}{n 2^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n \ln n}{2^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-3)^n}{3\cdot 5 \cdot 7 \cdots (2n+1)}$
+ 
+::: 
+
+::: {#exr- } 
+Determine whether the series is convergent, absolutely convergent, conditionally convergent, or divergent.
+ 
+ - $\displaystyle\sum_{n=3}^\infty \frac{(-1)^n}{n\sqrt{\ln n}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{10^n}{(n+1)4^{2n+1}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{\cos(n+1)}{n \sqrt{n}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^n}{n^4}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^{n-1}\tan^{-1} n}{n^2}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n!}{100^n}$
+- $\displaystyle\sum_{n=2}^\infty \frac{(-10^n}{(\ln n)^n}$
+- $\displaystyle\sum_{n=1}^\infty (-1)^n \frac{n}{\sqrt{n^3+2}}$
+- $\displaystyle\sum_{n=1}^\infty (-1)^n \tan\left(\frac{1}{n}\right)$
+- $\displaystyle\sum_{n=1}^\infty \frac{\sin 4n}{4^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-n)^n}{[(n+1)\tan^{-1} n]^n}$
+- $\displaystyle\sum_{n=1}^\infty (-1)^{n+1}\frac{n^22^n}{n!}$
+ 
+::: 
+
+::: {#exr- } 
+Show that the ratio and root tests fail on $p$-series.
+::: 
+
+::: {#exr- } 
+Show that the ratio and root tests fail on series $\displaystyle\sum_{n=1}^\infty \frac{1}{(\ln n)^p}$.
+::: 
+
+
+::: {#exr- } 
+The terms of a series are de?ned recursively by the equations $a_1=2$, 
+$$
+a_{n+1}= \frac{2+\cos n}{\sqrt{n}}a_n.
+$$
+Determine whether $\sum a_n$ converges or diverges. 
+::: 
+
+::: {#exr- } 
+Around 1910, the mathematician Srinivasa Ramanujan discovered the formula 
+$$
+\frac{1}{\pi} 
+= \frac{2\sqrt{2}}{9801} \sum_{n=0}^\infty \frac{(4n)!(1103+26390n)}{(n!) 396^{4n}}.
+$$
+Verify that the series is convergent. 
+::: 
+
+
+::: {#exr- } 
+Find the values of the parameter $p>0$ for which the series 
+$$
+\sum_{n=1}^\infty \left(1-\frac{p}{n}\right)^n
+$$ converges. 
+::: 
+
+
+
+
+
+## Taylor Polynomials and Approximations
+
+Recall a tangent line approximation of a function is used to obtain a local linear approximation of the function near the point of tangency. 
+We consider how to improve on the accuracy of tangent linear approximations by using higher-order polynomials as approximating functions. 
+We also discuss the error associated with such approximations. 
+
+
+## Polynomial Approximations
+
+The goal is to show how polynomial functions can be used to approximate other elementary functions. 
+First we investigate local approximations around $x=0$. 
+
+
+## Maclaurin Polynomials
+
+::: {#def- } 
+If $f$ can be differentiated $n$ times at 0, then the polynomial 
+\begin{equation}
+\label{mp}
+p_n(x) =f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \cdots +\frac{f^{(n)}(0)}{n!}x^n 
+\end{equation}
+is called the $n$th \index{Maclaurin polynomial} **Maclaurin polynomial**  for $f$. 
+::: 
+
+Note that a Maclaurin polynomial has the property that its value and the values of its first $n$ derivatives match the values of $f$ and its first $n$ derivatives at $x=0$. 
+
+::: {#exm- } 
+Determine the $n$th Maclaurin polynomial for each of the following functions: $\sin x$, $\cos x$, $\ln x$, and $e^x$. 
+::: 
+
+::: {.solution }
+Respectively we have,
+\begin{align*}
+\sin x \qquad & p_n(x) = x - \frac{x^3}{6}+\frac{x^5}{120} - \frac{x^7}{5040} + \cdots + \frac{(-1)^{(n-1)}}{(2n-1)!} x^{2n-1} \\
+\cos x \qquad & p_n(x) = 1 - \frac{x^2}{2}+\frac{x^4}{24} -\frac{x^6}{720}+\cdots  + \frac{(-1)^{(n-1)}}{(2n-2)!} x^{2n-2} \\
+e^x \qquad & p_n(x) = 1+x +\frac{1}{2!}x^2 +\frac{1}{3!} x^3+\cdots +\frac{1}{n!} x^n 
+\end{align*}
+using \eqref{mp} directly.
+::: 
+
+
+
+## Taylor Polynomials
+
+We want to find an $n$th-degree polynomial $p$ with the property that its value and the values of its first $n$ derivatives match the values of $f$ and its first $n$ derivatives at $x=x_0$. 
+However, rather than expressing $p(x)$ in powers of $x$, it will simplify the computations if we express it in powers of $x-x_0$; that is, we what a polynomial 
+\begin{equation}
+\label{tpdef}
+p(x) = c_0 +c_1(x-x_0)+ c_2 (x-x_0)^2  +\cdots + c_n (x-x_0)^n
+\end{equation}
+such that $f(x_0) = p(x_0)$ and 
+\begin{align}
+\label{cond}
+f'(x_0) = p'(x_0), 
+\quad f''(x_0) = p''(x_0), 
+\quad \ldots, 
+\quad f^{(n)}(x_0) = p^{(n)}(x_0)
+\end{align}
+However notice that
+\begin{align*}
+p(x) & = c_0 +c_1(x-x_0) + c_2 (x-x_0)^2 + c_3 (x-x_0)^3 +\cdots + c_n (x-x_0)^n \\
+p'(x) & = c_1+ 2c_2 (x-x_0) + 3 c_3 (x-x_0)^2  + \cdots + n c_n (x-x_0)^{n-1} \\
+p''(x) & = 2 c_2 + 3 c_3 (x-x_0) +\cdots + n (n-1) c_n (x-x_0)^{n-2} \\
+p'''(x) & = 3 c_3 +\cdots + n (n-1)(n-2) c_n (x-x_0)^{n-3} \\
+& \vdots \\
+p^{(n)}(x) & =  n(n-1)(n-2)\cdots (1) c_n \\
+\end{align*}
+Therefore to satisfy \eqref{cond} we must have 
+\begin{align*}
+f(x_0) & = p(x_0) = c_0 \\
+f'(x_0) & = p(x_0) = c_1 \\
+f''(x_0) & = p(x_0) = 2c_2 =2! \,  c_2 \\
+f'''(x_0) & = p(x_0) = 6 c_3 =3! \, c_3 \\
+& \vdots \\
+f^{(n)}(x_0) & = p^{(n)}(x_0) = n(n-1)(n-2)\cdots (1) c_n = n! c_n.
+\end{align*}
+Solving for the coefficients $c_i$ for \eqref{tpdef} yields $c_0 = f(x_0)$ and 
+\begin{align*}
+\quad c_1 = f'(x_0),
+\quad c_2 = \frac{f''(x_0)}{2!},
+\quad c_3 = \frac{f'''(x_0)}{3!},
+\quad \ldots, 
+\quad c_n = \frac{f^{(n)}(x_0)}{n!},
+\end{align*}
+In other words we have just proven the following theorem.
+
+::: {#thm- } 
+If a function $f$ has a power series expansion at $c$, that is, if 
+$$
+f(x) = \sum_{n=0}^\infty a_n (x-c)^n, \qquad |c-a|< R
+$$
+then its coefficients are given by $c_n = \frac{f^{(n)}(x_0)}{n!}$.
+::: 
+
+::: {#def- } 
+If $f$ can be differentiated $n$ times at $x_0$, then the polynomial 
+\begin{align*}
+p_n(x) = f(x_0) + & f'(x_0)(x-x_0)  + \frac{f''(x_0)}{2!}(x-x_0)^2 \\
+& + \frac{f'''(x_0)}{3!}(x-x_0)^3 + \cdots +\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n 
+\end{align*}
+is called the $n$th \index{Taylor polynomial} **Taylor polynomial**  for $f$. 
+::: 
+
+Note that a Taylor polynomial has the property that its value and the values of its first $n$ derivatives match the values of $f$ and its first $n$ derivatives at $x=x_0$. 
+
+Whenever $n=1$ we say that the Taylor Polynomial $p_1(x)$ for a function $f$ is a \index{local linear approximation} **local linear approximation**  for $f$ around $x=x_0$. 
+Similarly, whenever $n=2$ we say that the Taylor Polynomial $p_2(x)$ for a function $f$ is a \index{local quadratic approximation} **local quadratic approximation**  for $f$ around $x=x_0$. 
+
+::: {#exm- } 
+Find the linear and quadratic approximations to $f(x)=\ln x$ at $x=1$. 
+Use these approximations to estimate $\ln 1.05$. 
+::: 
+
+::: {.solution }
+Notice that $f'(x)=1/x$ and $f''(x)=-1/x^2$. 
+Thus $f'(1)=1$ and $f''(1)=-1$. 
+So the 1st degree Taylor polynomial is 
+$$
+p_1(x) = f(1)+f'(1)(x-1)=x-1.
+$$
+This is the linear (tangent line) approximation of $\ln x$ at $x=1$. 
+Further the 2nd degree Taylor polynomial is 
+$$
+p_2(x) = p_1(x) + \frac{1}{2}f''(1)(x-1)^2 = (x-1) -\frac{1}{2}(x-1)^2.
+$$
+This is the local quadratic approximation of $\ln x$ at $x=1$. 
+Using 
+\begin{align*}
+p_1(1.05) & =1.05-1=0.05 \\
+p_2(1.05) & = (1.05-1) -\frac{1}{2}(1.05-1)^2 = 0.04875. 
+\end{align*}
+The value of $\ln 1.05$ given by calculator is $0.04879$. 
+::: 
+
+
+
+## Exercises
+
+
+::: {#exr- } 
+For each of the following find the Taylor polynomial of orders $0, 1, 2,$ and 3 generated by $f$ at $c$.
+ 
+ - $f(x)=1/x$, $c=2$
+- $f(x)=1/(x+2)$, $c=0$
+- $f(x)=\sqrt{x}$, $c=4$
+- $f(x)=\sin x$, $c=\pi/6$
+ 
+::: 
+
+
+::: {#exr- } 
+For each of the following find the linearization and quadratic approximation of $f$ at $x=0$.
+ 
+ - $f(x)=\ln (\sin x)$
+- $f(x)=1/\sqrt{1-x^2}$
+- $f(x)=e^{\cos x}$
+ 
+::: 
+
+::: {#exr- } 
+Find the $n$th-order Taylor polynomial $p_n(x)$ at $c$ for the function $f$ and the values of $n$. 
+Plot the graphs of $f$ and the approximating polynomials on the same set of axes.
+ - $f(x)=\cos x$, $c=\pi/4$, $n=0,1,2,3,4$
+- $f(x)=e^x x$, $c=1$, $n=0,1,2,3,4$
+::: 
+
+::: {#exr- } 
+Use a Taylor polynomial to approximate the given number to within the indicated accuracy. 
+ 
+ - $e^{0.2}$, $0.0001$
+- $-\frac{1}{2.1}$, $0.0005$
+- $\sin 69^\circ$, $0.0001$
+ 
+::: 
+
+::: {#exr- } 
+Find the Taylor polynomial $p_n(x)$ and the Taylor remainder $r_n(x)$ for the function $f$ and the values of $c$ and $n$.
+ - $f(x)=x^4+3x^2+2x+3$, $c=-1$, $n=4$
+- $f(x) =\tan x$, $c=\pi/4$, $n=2$
+- $f(x)=\sqrt[3]{x}$, $c=-8$, $n=3$
+- $f(x)= x\sin x$, $n=2$, $c=\pi/4$
+- $f(x)=\frac{2}{x}$, $n=3$, $c=1$
+- $f(x)=x^2\cos x$, $n=2$, $c=\pi$
+::: 
+
+
+
+
+
+
+
+## Power Series
+
+
+We introduce power series and discuss convergence of power series. 
+Finding the interval of convergence and finding the radius of convergence is explained through several examples. 
+We also discuss term-by-term differentiation and integration power series.  
+
+## What are Power Series?
+
+We begin with the definition of power series. 
+
+::: {#def- } 
+Let $x$ be a variable. 
+An infinite series of the form 
+$$
+\sum_{n=0}^\infty a_n x^n = a_0 + a_1 x +a_2 x^2  +\cdots + a_n x^n + \cdots 
+$$
+is called a \index{power series} **power series** .
+More generally, an infinite series of the form 
+$$
+\sum_{n=0}^\infty a_n (x-c)^n =a_0 + a_1 (x-c) +a_2 (x-c)^2  +\cdots + a_n (x-c)^n + \cdots 
+$$
+is called a \index{power series centered at} **power series centered at**  $c.$
+::: 
+
+For example, 
+$$
+\sum_{n=0}^\infty \frac{(x-1)^n}{n+1} 
+= 1 + \frac{x-1}{2} + \frac{(x-1)^2}{3} + \frac{(x-1)^3}{4} + \cdots
+$$
+is a power series in $x-1.$ 
+The series 
+$$
+\sum_{n=0}^\infty \frac{(-1)^n(x+4)^n}{n!} 
+= 1-(x+4) + \frac{(x+4)^2}{2!} - \frac{(x+4)^3}{3!} + \cdots
+$$
+is a power series centered $-4.$
+More generally, the Taylor series 
+$$
+\sum_{n=0}^\infty \frac{f^{(n)}(x_0)}{n!} (x-x_0)^n
+$$
+is a power series in $x-x_0.$
+
+For each $x$, the power series is an infinite series of constants that we can test for convergence or divergence. 
+A power series may diverge for some values of $x$ and converge for other values. 
+We emphasize that a power series is a function
+$$
+f(x) = a_0 + a_1 x +a_2 x^2  +\cdots + a_n x^n + \cdots 
+$$
+whose domain is the set of all $x$ for which the power series converges. 
+
+
+## Convergence of Power Series
+
+The set of values of $x$ for which the series is convergent is always an interval, either a finite interval, the infinite interval $(-\infty, +\infty)$, or a collapsed interval such as $\{0\}.$ 
+The following theorem guarantees this is always the case. 
+
+::: {#thm- } 
+For any power series centered at $c$
+$$
+\sum_{n=0}^\infty a_n (x-c)^n
+$$ 
+there are only three possibilities:
+ 
+
+- The series converges only when $x=c.$
+
+
+-   The series converges for all $x.$
+- There is a positive real number $R$ such that the power series converges whenever ${|x-c|<R}$ and diverges whenever $|x-c|>R.$ 
+  
+The number $R$ is called the \index{radius of convergence} **radius of convergence** . 
+::: 
+
+In other words every power series has a radius of convergence, where in case 1 the radius of convergence is 0, in case 2 the radius of convergence is $\infty$, and in case 3 the radius of convergence is $R.$
+ 
+In case three, there are four possibilities that may occur for a given series to converge.
+The \index{interval of convergence} **interval of convergence**  of a series can be any of the possibilities:
+$$
+(c-R, c+R) \qquad
+(c-R, c+R] \qquad
+[c-R, c+R) \qquad
+[c-R, c+R] 
+$$
+In this case we have $|x-c|<R$ which means that 
+$$
+c-R < x < c+R.
+$$ 
+However, the endpoints of this interval must be check individually, that is, if $x=c\pm R$ the series might converge at one or both endpoints or it might diverge at both endpoints. 
+
+::: {#exm- } 
+For which values of $x$ is the power series 
+$$
+\sum_{n=0}^\infty n! \, x^n
+$$ 
+convergent?  
+::: 
+
+::: {.solution }
+Notice that the series converges when $x=0.$ 
+Assume $x\neq 0.$ Let $a_n =n!x^n$ and we use the Ratio Test. 
+We have 
+\begin{align*}
+\lim_{n\to \infty} \left\vert\frac{a_{n+1}}{a_n}\right\vert
+=\lim_{n\to \infty} \left\vert\frac{(n+1)! \, x^{n+1}}{n! \, x^n}\right\vert
+=\lim_{n\to \infty} (n+1) |x| =\infty.
+\end{align*}
+By the Ratio Test the series diverges whenever $x\neq 0.$ 
+::: 
+
+::: {#exm- } 
+Find the interval of convergence and radius of convergence for the power series 
+$$
+\sum_{n=0}^\infty\frac{x^n}{n!}.
+$$
+::: 
+
+::: {.solution }
+We apply the Ratio Test for absolute convergence.
+We have
+\begin{align*}
+\rho 
+& = \lim_{n\to +\infty} \left\vert\frac{a_{n+1}}{a_n}\right\vert
+= \lim_{n\to +\infty} \left\vert\frac{x^{n+1}}{(n+1)!}\frac{n!}{x^n}\right\vert \\
+& = \lim_{n\to +\infty} \left\vert\frac{x}{n+1}\right\vert
+= 0
+\end{align*}
+By the Ratio Test for absolute convergence, the series converges absolutely for all values of $x$ since $\rho<1.$
+The interval of convergence is $(-\infty, +\infty)$ and the radius of convergence is $R=+\infty.$ 
+::: 
+
+::: {#exm- } 
+Find the interval of convergence and radius of convergence for the power series 
+$$
+\sum_{n=0}^\infty \frac{(-1)^n x^n}{3^n (n+1)}.
+$$
+::: 
+
+::: {.solution }
+We apply the Ratio Test for absolute convergence.
+We have
+\begin{align*}
+\rho 
+& = \lim_{n\to +\infty} \left\vert\frac{a_{n+1}}{a_n}\right\vert
+= \lim_{n\to +\infty} \left\vert\frac{x^{n+1}}{3^{n+1}(n+2)}\frac{3^n(n+1)}{x^n}\right\vert \\
+& = \lim_{n\to +\infty} \frac{|x|}{3}\frac{k+1}{k+2}
+= \frac{|x|}{3}\lim_{n\to +\infty} \frac{k+1}{k+2}
+= \frac{|x|}{3}
+\end{align*}
+By the Ratio Test for absolute convergence, the series converges absolutely if $|x|<3$ and diverges if $|x|>3.$ The Ratio Test is inconclusive whenever $|x|=3.$ 
+These cases must be considering separately. 
+If $x=3$, then the series is a conditionally convergent harmonic series:
+$$
+\sum_{n=0}^\infty \frac{(-1)^n}{n+1}.
+$$
+If $x=-3$, then the series is a divergent harmonic series:
+$$
+\sum_{n=0}^\infty \frac{1}{n+1}.
+$$
+Thus, the interval of convergence for the given power series is $(-3, 3]$ and the radius of convergence is $R=3.$ 
+::: 
+
+::: {#exm- } 
+Find the interval of convergence and radius of convergence for the power series 
+$$
+\sum_{n=1}^\infty \frac{(x-2)^n}{\sqrt{n}}.
+$$
+::: 
+
+::: {.solution }
+We apply the Ratio Test for absolute convergence.
+We have
+\begin{align*}
+\rho 
+& = \lim_{n\to +\infty} \left\vert\frac{a_{n+1}}{a_n}\right\vert
+= \lim_{n\to +\infty} \left\vert\frac{(x-2)^{n+1}}{\sqrt{n+1}}\frac{\sqrt{n}}{(x-2)^n}\right\vert \\
+& = |x-2|\lim_{n\to +\infty} \sqrt{\frac{k}{k+1}}
+ = |x-2|
+\end{align*}
+By the Ratio Test for absolute convergence, the series converges absolutely if $|x-2|<1$ and diverges if $|x-2|>1.$ 
+The Ratio Test is inconclusive whenever $|x-2|=1.$ 
+These cases must be considering separately. 
+If $x=3$, then the series is a divergent $p$-series with $p=1/2$: 
+$$
+\sum_{n=1}^\infty \frac{1}{\sqrt{n}}.
+$$
+If $x=1$, then the series is a convergent alternating series:
+$$
+\sum_{n=1}^\infty \frac{(-1)^n}{\sqrt{n}}.
+$$
+Thus, the interval of convergence for the given power series is $[1, 3)$ and the radius of convergence is $R=1.$ 
+::: 
+
+
+## Differentiating and Integrating Power Series
+
+In advanced calculus it is proven that a power series can be differentiated (integrated) term by term at each interior point of its interval of convergence. 
+
+::: {#thm- } 
+Suppose that the power series $\sum a_n (x-c)^n$ converges for $|x-c|<R$ and defines a function $f$ on that interval. 
+\label{Differentiation and Integration of Power Series}
+ - Then $f$ is differentiable for $|x-c|<R$, and $f'$ is found by differentiating the power series for $f$ term by term; that is 
+$$
+f'(x) = \sum n a_n (x-c)^{n-1}. 
+$$
+for $|x-c|<R.$
+- The integral of $f$ is found by integrating the power series for $f$ term by term; that is 
+$$
+\int f(x)\, dx =  \sum a_n \frac{(x-c)^{n+1}}{n+1} +C. 
+$$
+for $|x-c|<R$, where $C$ is an arbitrary constant. 
+::: 
+
+This theorem makes no conclusion about convergence of the differentiated (integrated) series to at the endpoints.
+
+::: {#exm- } 
+Consider the power series 
+$$
+f(x) = \frac{1}{1-x} 
+= \sum_{n=0}^\infty x^n 
+= 1+x +x^2 +\cdots + x^n + \cdots, \quad 
+|x|<1.
+$$  
+ - Differentiate this power series term by term to find the power series for $f'$ and identify the function it represents.
+- Integrate this power series term by term and identify the function it represents.
+::: 
+
+::: {.solution }
+Differentiating this power series we find that
+\begin{align*}
+f'(x) 
+& = 1 + 2 x +\cdots + n x^{n-1} + \cdots \\
+& = \sum_{n=0}^\infty n x^n. 
+\end{align*}
+Therefore, whenever $|x|<1$ we have
+$$
+f'(x)  
+=\frac{1}{(1-x)^2} 
+= \sum_{n=0}^\infty (n+1) x^n.
+$$
+as desired. 
+In this case, substituting $x=\pm 1$ into the power series for $f'$ reveals that the series diverges at both endpoints. 
+ 
+Integrating this power series we find that
+\begin{align*}
+\int f(x) \, dx
+& = x + \frac{x^2}{2} + \cdots + \frac{x^{n}}{n} + \cdots \\
+& = \sum_{n=0}^\infty (n+1) x^n 
+\end{align*}
+Therefore, whenever $|x|<1$ we have
+$$
+\int f(x) \, dx
+=  - \ln |1-x| 
+= \sum_{n=0}^\infty \frac{x^n}{n}.
+$$
+as desired. 
+Multiplying both sides by 1 we obtain a power series representation for $\ln(1-x)$:
+$$
+\ln(1-x) = -\sum_{n=0}^\infty \frac{x^n}{n}.
+$$
+When $x=1$ the series is divergent by comparing to the divergent harmonic series.
+When $x=-1$ the series converges to $\ln 2.$ 
+::: 
+
+
+
+## Functions Represented by Power Series
+
+::: {#exm- } 
+Find a power series representation for $\tan^{-1}(x)$ by integrating a power series representation of $f(x)=1/(1+x^2).$ 
+::: 
+
+::: {.solution }
+The series 
+$$
+f(t) = \frac{1}{1+t^2}  = 1 - t^2 + t^4 - t^6 + \cdots 
+$$
+converges on the open interval $-1 < t < 1.$
+Therefore, 
+\begin{align*}
+\tan^{-1} x 
+& = \int_0^x \frac{1}{1+t^2} \, dt 
+= \left. t - \frac{t^3}{3} +\frac{t^5}{5} - \frac{t^7}{7} + \cdots \ \right|_0^x \\
+& = x - \frac{x^3}{3} +\frac{x^5}{5} - \frac{x^7}{7} + \cdots \\
+& = \sum_{n=0}^\infty  \frac{(-1)^n x^{2n+1}}{2n+1} 
+\end{align*}
+for $-1 < x < 1.$ 
+::: 
+
+::: {#exm- } 
+Find a power series representation for $\ln(1+x)$ by integrating a power series representation of $f(x)=1/(1+x).$ 
+::: 
+
+::: {.solution }
+The series 
+$$
+f(t) = \frac{1}{1+t}  = 1 - t + t^2 -t^3 + \cdots 
+$$
+converges on the open interval $-1 < t < 1.$
+Therefore, 
+\begin{align*}
+\ln(1+x) 
+& = \int_0^x \frac{1}{1+t} \, dt 
+= \left. t - \frac{t^2}{2} +\frac{t^3}{3} -\frac{t^4}{4} + \cdots \ \right|_0^x \\
+& = x - \frac{x^2}{2} +\frac{x^3}{3} -\frac{x^4}{4} + \cdots \\
+& = \sum_{n=0}^\infty  \frac{(-1)^{n-1} x^{n-1}}{n} 
+\end{align*}
+for $-1 < x < 1.$ 
+::: 
+
+
+## Combining Power Series
+
+A power series defines a function in its interval of convergence. 
+When power series are combined algebraically, new functions are defined. 
+
+::: {#thm- } \label{Combining Power Series}
+Suppose that $\sum a_n x^n$ and $\sum b_n x^n$ converge to $f(x)$ and $g(x)$, respectively, on an interval $I.$
+ - The power series $\sum (a_n \pm b_n) x^n$ converges to $f(x)\pm g(x)$ on $I.$ 
+- The power series $\sum a_n x^{n+m}$ converges to $f(x)x^m$ for all $x\neq 0$ in $I$ provided that $m$ is an integer such that $n+m\geq 0$ for all terms of the power series $\sum a_n x^{n+m}.$ If $x=0$, the series converges to $\lim_{x\to 0} x^m f(x).$ 
+- If $h(x) = b x^m$, where $m$ is a positive integer and $b$ is a nonzero real number, the power series $\sum a_n (h(x))^n$ converges to the composite function $f(h(x))$, for all $x$ such that $h(x)$ is in $I.$ 
+::: 
+
+::: {#exm- } 
+Consider the geometric series 
+$$
+\frac{1}{1-x} 
+= \sum_{n=0}^\infty x^n 
+= 1+x +x^2 +\cdots + x^n + \cdots, \quad 
+|x|<1
+$$  
+find the power series and interval of convergence for the functions
+$$
+f(x)= \frac{x^5}{1-x} \qquad \text{and} \qquad g(x)=\frac{1}{1-2x}.
+$$
+::: 
+
+::: {.solution }
+We notice that 
+$$
+f(x) = \frac{x^5}{1-x} = x^5 (1+x+x^2 +x^3 +\cdots ) = \sum_{n=0}^\infty x^{n+5}.
+$$
+This series has a ratio $r=x$ and converges when $|r|=|x|<1.$
+The interval of convergence is $|x| < 1.$ 
+For the function $g$, we use $2x$ for $x$ in the power series for $1/(1-x)$ and find that
+$$
+g(x)=\frac{1}{1-2x} = 1+(2x)+(2x)^2+ \cdots = \sum_{n=0}^\infty (2x)^{n}.
+$$
+This geometric series has a ratio $r=2x$ and converges if $|r|=|2x|<1.$ 
+In other words, the interval of convergence is $|x|<1/2.$ 
+::: 
+
+::: {#exm- } 
+Find a power series for $f(x)=\frac{3x-1}{x^2-1}.$
+::: 
+
+::: {.solution }
+Using partial fraction we have
+$$
+\frac{3x-1}{x^2-1} = \frac{2}{x+1} +\frac{1}{x-1}.
+$$
+By adding the two geometric power series 
+$$
+\frac{2}{x+1} = \frac{2}{1-(-x)} = \sum_{n=0}^\infty 2(-1)^n x^n, \quad |x|<1
+$$
+and
+$$
+\frac{1}{x-1} = \frac{-1}{1-x} = - \sum_{n=0}^\infty x^n, \quad |x|<1
+$$
+we obtain
+$$
+\frac{3x-1}{x^2-1} 
+= \sum_{n=0}^\infty 2(-1)^n x^n - \sum_{n=0}^\infty x^n
+= \sum_{n=0}^\infty (2(-1)^n-1)x^n
+$$
+with an interval of convergence of $(-1,1).$ 
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+Find the radius and interval of convergence for each power series. 
+For what values of $x$ does the series converge absolutely or conditionally?
+ 
+ - $\displaystyle\sum_{n=1}^\infty \frac{(3x-2)^n}{n}$
+- $\displaystyle\sum_{n=1}^\infty (-1)^{n-1} n x^n$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^n(x+2)^n}{n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n! x^n}{(2n)!}$
+- $\displaystyle\sum_{n=0}^\infty \frac{n x^n}{4^n (n^2+1)}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(3x-1)^n}{n^3+n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^{n+1}(x+2)^n}{n 2^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{x^n}{n (\ln n)^2}$
+- $\displaystyle\sum_{n=0}^\infty \frac{x^n}{\sqrt{n^2+3}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n^n(3x+5)^n}{(2n)!}$
+- $\displaystyle\sum_{n=0}^\infty (\ln n) x^n$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^{n-1}(x-2)^n}{n 3^n}$
+ 
+::: 
+
+::: {#exr- } 
+Show that the series 
+$$
+\sum_{n=1}^\infty \frac{\sin(n^3 x)}{n^2}
+$$ 
+converges for all values of $x$, but that
+$$
+\sum_{n=1}^\infty \frac{d}{dx}\left(\frac{\sin(n^3 x)}{n^2}\right)
+$$ 
+diverges for all values of $x.$
+Why does this not contradict \ref{Differentiation and Integration of Power Series}?
+::: 
+
+::: {#exr- } 
+Find the radius and interval of convergence for each power series. 
+For what values of $x$ does the series converge absolutely or conditionally?
+ 
+ 
+- $\displaystyle\sum_{n=1}^\infty \frac{x^{2n}}{(2n)!}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^nx^n}{n!}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(-1)^{n+1}(x-4)^n}{n 9^n}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(x-3)^{n-1}}{3^{n-1}}$
+- $\displaystyle\sum_{n=1}^\infty \frac{n! x^n}{(2n)!}$
+- $\displaystyle\sum_{n=1}^\infty \frac{(x-3)^{n+1}}{(n+1)4^{n=1}}$
+ 
+::: 
+
+::: {#exr- } 
+Find a power series representation for the function and determine the interval of convergence. 
+ 
+ - $\displaystyle f(x) = \frac{1}{1+x}$
+- $\displaystyle f(x) = \frac{1}{9+x^2}$
+- $\displaystyle f(x) = \frac{1+x}{1-x}$
+- $\displaystyle f(x) = \frac{3}{1-x^4}$
+- $\displaystyle f(x) = \frac{x^2}{(1-2x)^2}$
+- $\displaystyle f(x) = \arctan(x/3)$
+ 
+::: 
+
+::: {#exr- } 
+(a) Use differentiation to find a power series representation for 
+$$
+f(x)=\frac{1}{(1+x)^2}
+$$
+Find the radius of convergence. 
+Use part (a) to find a power series for 
+$$
+f(x)=\frac{1}{(1+x)^3}. 
+$$
+Use part (b) to find a power series for 
+$$
+f(x)=\frac{x^2}{(1+x)^3}. 
+$$
+::: 
+
+::: {#exr- } 
+Use the power series for $\tan^{-1}x$ to prove the following expression for as the sum of an in?nite series: 
+$$
+\pi = 2\sqrt{3}\sum_{n=0}^\infty \frac{(-1)^n}{(2n+1) 3^n}.
+$$
+::: 
+
+::: {#exr- } 
+Suppose that $f$ and $g$ are functions defined by 
+$$
+f(x)=\sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{(2n+1)!} 
+\qquad \text{and} \qquad 
+g(x)= \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{(2n)!}.
+$$
+ - Find the intervals of convergence of $f$ and $g.$
+- Show that $f'(x) = g(x)$ and $g'(x) = -f(x).$
+- Identify the functions $f$ and $g.$ 
+::: 
+
+::: {#exr- } 
+Find a power series representation for the function, centered at $c$, and determine the interval of convergence. 
+ 
+ - $\displaystyle f(x) = \frac{1}{3-x}$, $c=1$
+- $\displaystyle f(x) = \frac{5}{2x-3}$, $c=-3$
+- $\displaystyle f(x) = \frac{3}{3x+4}$, $c=0$
+- $\displaystyle f(x) = \frac{4x}{x^2+2x-3}$, $c=0$
+- $\displaystyle f(x) = \frac{5}{5+x^2}$, $c=\pi/4$
+- $\displaystyle f(x) = \frac{2}{6-x}$, $c=-2$
+ 
+::: 
+
+
+::: {#exr- } 
+Use the power series $\frac{1}{1+x} = \sum_{n=0}^\infty (-1)^n x^n$ to determine a power series, centered at $0$, for the function. 
+Identitfy the interval of convergence. 
+
+- $\displaystyle h(x)= \frac{x}{x^2-1} = \frac{1}{2(1+x)}-\frac{1}{2(1-x)}$
+- $\displaystyle h(x)= \frac{2}{(x+1)^3} \frac{d^2}{dx^2}\left(\frac{1}{x+1}\right)$
+- $\displaystyle h(x) = \ln(1-x^2) \int \frac{1}{1+x}\, dx  -\int \frac{1}{1-x}\, dx$
+::: 
+
+
+
+
+
+## Taylor and Maclaurin Series
+
+
+The Taylor series of a function is a representation as power series whose terms are calculated from the values of the function's derivatives at a single point (the center). 
+If the Taylor series is centered at zero, then that series is also called a Maclaurin series.
+We discuss the Maclaurin series of the sine and cosine functions and examine precisely when the Maclaurin series for thses functions converges. 
+
+
+## Taylor Series and Maclaurin Series
+
+It is not a big step to extend the notions of Maclaurin and Taylor polynomials to series by not stopping the summation index at $n$. 
+Thus, we have the following definition. 
+
+::: {#def- } 
+If $f$ is represented by a power series $f(x)=\sum a_n (x-c)^n$ for all $x$ in an open interval $I$ containing $c$, then
+\begin{equation}
+f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n 
+\end{equation}
+where $f^{(0)}$ denotes $f$. 
+::: 
+
+::: {#exm- } 
+Find the Maclaurin series for $f(x)=e^x$. 
+::: 
+
+::: {.solution }
+The $n$th Maclaurin polynomial for $e^x$ is 
+$$
+p_n(x) = \sum_{k=0}^n \frac{x^k}{k!}. 
+$$
+Thus the Maclaurin series for $e^x$ is
+$$
+\sum_{n=0}^\infty \frac{x^n}{n!}. 
+$$
+as needed.
+::: 
+
+::: {#exm- } 
+Find the Maclaurin series for $f(x)=\sin x$. 
+::: 
+
+::: {.solution }
+The $n$th Maclaurin polynomial for $\sin x$ is 
+$$
+p_n(x) = \sum_{k=0}^n (-1)^{k}\frac{x^{2k+1}}{(2k+1)!}.
+$$
+Thus the Maclaurin series for $\sin x$ is
+$$
+\sum_{n=0}^\infty (-1)^{n}\frac{x^{2n+1}}{(2n+1)!}
+$$
+as needed.
+::: 
+
+::: {#exm- } 
+Find the Maclaurin series for $f(x)=\cos x$. 
+::: 
+
+::: {.solution }
+The $n$th Maclaurin polynomial for $\cos x$ is 
+$$
+p_n(x) = \sum_{k=0}^n (-1)^{k}\frac{x^{2k}}{(2k)!},
+$$
+Thus the Maclaurin series for $\cos x$ is
+$$
+\sum_{n=0}^\infty (-1)^{n}\frac{x^{2n}}{(2n)!}
+$$
+as needed.
+::: 
+
+::: {#exm- } 
+Find the Maclaurin series for $f(x)=1/(1-x)$. 
+::: 
+
+::: {.solution }
+The $n$th Maclaurin polynomial for $1/(1-x)$ is 
+$$
+p_n(x) = \sum_{k=0}^n x^k.  
+$$
+Thus the Maclaurin series for $\cos x$ is
+$$
+\sum_{n=0}^\infty x^n 
+$$
+as needed.
+::: 
+
+
+
+## Convergence of Taylor Series
+
+Our next result is often called \index{Taylor's Theorem} **Taylor's Theorem** and the remainder given in the theorem is called the \index{Lagrange form of the remainder} **Lagrange form of the remainder**.
+
+::: {#thm- } 
+\label{tayloertheorem}
+Let $f$ have derivatives of order through $n+1$ in an open interval $I$ centered at $c$, then, for each $x$ in $I$, there exists $z$ between $x$ and $c$ such that 
+$$
+f(x) = \sum_{n=0}^n \frac{f^{(n)}(c)}{n!}(x-c)^n  + R_n(x)
+$$
+where
+$$
+R_n(x) = \frac{f^{n+1}(z)}{(n+1)!} (x-c)^{n+1}.
+$$
+::: 
+
+Given a function $f$, we know how to write its Taylor series centered at a point $c$, and we know how to find its interval of convergence. 
+How do we know that the series actually converges to $f$? 
+The remaining task is to determine when the Taylor series for $f$ actually converges to $f$ on its interval of convergence. 
+
+::: {#thm- } 
+\label{contay}
+If $\lim_{n\to\infty} R_n=0$ for all $x$ in the interval $I$, then the Taylor series for $f$ converges and equals to $f(x)$,
+$$
+f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n.
+$$
+::: 
+
+::: {#exm- } 
+Show that the Maclaurin series for $f(x)=e^x$ converges to $f(x)$ for all $x$. 
+::: 
+
+::: {.solution }
+The Maclaurin series for $e^x$ is
+$$
+\sum_{n=0}^\infty \frac{x^n}{n!}
+$$
+which converges for all real numbers.
+The Taylor remainder is
+$$
+R_n(x) = \frac{e^z}{(n+1)!} x^{n+1}
+$$ 
+for some $z$ between $x$ and $0$. 
+Thus 
+$$
+|R_n(x)| \leq \frac{e^{|x|}}{(n+1)!} |x|^{n+1}. 
+$$
+Therefore, for arbitrary $x$ fixed, we find that 
+\begin{align*}
+\lim_{n\to \infty} \left|R_n(x)\right|
+= \lim_{n\to \infty} \left|\frac{e^c}{(n+1)!} x^{n+1}\right|
+= 0
+\end{align*}
+By \ref{contay}, the Taylor series for $e^x$ converges to $e^x$. 
+::: 
+
+::: {#exm- } 
+Show that the Maclaurin series for $f(x)=\sin x$ converges to $f(x)$ for all $x$. 
+::: 
+
+::: {.solution }
+The Maclaurin series for $\sin x$ is
+$$
+\sum_{n=0}^\infty (-1)^{n}\frac{x^{2n+1}}{(2n+1)!}
+$$
+which converges for all real numbers.
+Notice that $f^{(n+1)}(z)=\pm \sin c$ or $f^{(n+1)}(z)=\pm \cos z$. 
+In any case we have that $|f^{n+1}(z)|\leq 1$ for all real numbers $z$. 
+Thus 
+$$
+|R_n(x)| = \frac{f^{(n+1)}(z)}{(n+1)!} |x|^{n+1} 
+\leq \frac{|x|^{n+1}}{(n+1)!}. 
+$$
+Therefore, for arbitrary $x$ fixed, we find that 
+\begin{align*}
+\lim_{n\to \infty} \left|R_n(x)\right|
+= \lim_{n\to \infty} \left|\frac{|x|^{n+1}}{(n+1)!}\right|
+= 0
+\end{align*}
+By \ref{contay}, the Taylor series for $\sin x$ converges to $\sin x$. 
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+Find the Taylor polynomial $p_n(x)$ and the Taylor remainder $R_n(x)$ for the function $f$ and the values of $c$ and $n$. 
+
+- $f(x)=x^4+3x^3+2x+3$, $c=-1$, $n=4$
+- $f(x)=\sqrt{x}$, $c=4$, $n=3$
+- $f(x)=\cos x$, $c=\pi/4$, $n=3$
+- $f(x)=\cos 2x$, $c=\pi/6$, $n=3$
+::: 
+
+
+::: {#exr- } 
+Use the definition of Taylor series to find the Taylor series, centered at $c$, for the function.
+ 
+- $f \displaystyle (x)=\frac{1}{x}$, $c=1$
+- $\displaystyle f(x)=x e^x$, $c=1$
+- $f(x)=\sin 3x$, $c=0$
+- $f(x)=e^x$, $c=1$
+- $f(x) = \tan x$, $c=\pi/4$
+- $\tan 2x$, $c=0$
+::: 
+
+::: {#exr- } 
+Prove that the Maclaurin series for the function converges to the function for all x.
+
+- $f(x)=\sin x$
+- $f(x)=e^{-x}$
+- $f(x)=e^{-2x}$
+- $f(x)=\sin + \cos x$ 
+::: 
+
+::: {#exr- } 
+Use the binomial series to find the Maclaurin series for the function.
+
+- $\displaystyle f(x)\frac{1}{\sqrt{1-x}}$
+- $\displaystyle f(x)=\frac{1}{4+x^2}$
+- $\displaystyle f(x)=\frac{1}{(1+x)^4}$
+- $\displaystyle f(x)= \sqrt[4]{1+x}$ 
+::: 
+
+::: {#exr- } 
+Find the Maclaurin series for the function.
+ 
+- $\displaystyle f(x)=e^{x^2/3}$
+- $\displaystyle f(x)=x^2 \sin x$
+- $\displaystyle g(x)=e^{-4x}$
+- $\displaystyle h(x)=\cos x^{3/2}$
+- $\displaystyle f(x)=\cos^2 x$
+- $\displaystyle h(x)=x^2 \cos x^2$ 
+::: 
+
+
+

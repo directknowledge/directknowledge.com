@@ -3,6 +3,7 @@ pagetitle: "Unique Factorization - Learning Number Theory"
 ---
 # Unique Factorization
 
+
 The Fundamental Theorem of Arithmetic states that every natural number greater than 1 is either a prime or a product of a finite number of primes and this factorization is unique except for the rearrangement of the factors. Before we prove the fundamental fact, it is important to realize that not all sets of numbers have this property.
 
 For example, let us consider the set of even natural numbers, namely 
@@ -19,6 +20,12 @@ For example, 2 is prime in $E$ because there does not exist $n, m$ in $E$ such t
 Similarly, 6 is prime in $E$ because there does not exist $n, m$ in $E$ such that $6=n m$. 
 Also, 10 and 30 are primes, and so $60=2(30)$ is not. 
 However since $60=10(6)$ we conclude that factorization into primes in $E$ is not unique. 
+
+
+
+
+
+## Prime Characterization
 
 Before getting to the Fundamental Theorem of Arithmetic we need an important result. 
 
@@ -85,6 +92,13 @@ Since $m$ is the least element in $S$,
 $a$ and $b$ are products of primes; and thus so is $m$.  
 This contradiction shows that $S$ is empty and so every natural number greater than $1$ is a product of primes. 
 ::: 
+
+
+
+
+
+## Fundamental Theorem of Arithmetic
+
 
 The \index{Fundamental Theorem of Arithmetic} **Fundamental Theorem of Arithmetic**, also called the \index{unique factorization theorem} **unique factorization theorem** or the unique-prime-factorization theorem, states that every integer greater than 1 is either is prime itself or is the product of prime numbers, and that, although the order of the primes in the second case is arbitrary, the primes themselves are not. 
 
@@ -196,6 +210,13 @@ Notice  $4463914455=3^4\cdot 5\cdot 7^2\cdot 11^3\cdot 13^2$ and  $8125921375=5^
 \square 
 \end{align*}
 ::: 
+
+
+
+
+
+
+## GCD and LCM
 
 
 

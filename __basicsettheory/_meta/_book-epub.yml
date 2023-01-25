@@ -1,0 +1,8 @@
+# Basic Set Theory epub
+
+book:
+  output-file: "Basic-Set-Theory-Epub"
+
+format:
+  epub:
+

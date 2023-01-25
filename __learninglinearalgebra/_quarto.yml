@@ -13,56 +13,22 @@ book:
   chapters:
     - index.qmd
     - systems-of-linear-equations.qmd
-    - matrices-and-vectors.qmd
-    - on-the-solutions-of-linear-systems.qmd
     - vector-spaces.qmd
-    - introduction-to-linear-transformations.qmd
-    - linear-transformations-in-geometry.qmd
-    - invertible-linear-transformations.qmd
-    - subspaces.qmd
-    - kernel-and-image-of-a-linear-transformation.qmd
-    - coordinates.qmd
-    - introduction-to-linear-spaces.qmd
-    - linear-independence-and-bases.qmd
-    - finite-dimensional-linear-spaces.qmd
-    - infinite-dimensional-linear-spaces.qmd
-    - introduction-to-linear-maps.qmd
-    - coordinates-and-the-matrix-of-a-linear-map.qmd
-    - orthonormal-bases-and-orthogonal-projections.qmd
-    - gram-schmidt-process-and-qr-factorization.qmd
-    - orthogonal-transformations-and-orthogonal-matrices.qmd
-    - inner-products.qmd
-    - determinants-and-trace.qmd
+    - linear-transformations.qmd
+    - inner-products-spaces.qmd
+    - determinants.qmd
     - eigenvalues-and-eigenvectors.qmd
-    - diagonalization.qmd
-    - invariant-subspaces.qmd
-    - jordan-canonical-form.qmd
+    - canonical-forms.qmd
     - references.qmd
   sidebar:
     title: "Learning Linear Algebra"
   site-url: https://directknowledge.com/learning-linear-algebra/
   description: "Learning Linear Algebra"
 
-format:
-  html:
-    include-in-header: 
-      - ../_html/head-lla.html
-    include-before-body: 
-      - ../_html/latex-macros.html
-  pdf:
-    keep-tex: true
-    toc: false
-    documentclass: book
-    classoption: [10pt,reqno,twopage,openany]
-    include-in-header: 
-      - ../_control/packages-lla.tex
-      - ../_control/commands.tex
-    include-before-body:
-      - ../_control/topmatter.tex
-    include-after-body: 
-      - ../_control/makeindex.tex
-
 metadata-files:
-  - ../_meta/book.yml
+  - ../_meta/book-html.yml
   - ../_meta/format.yml
+  #- _meta/_book-epub.yml
+  #- _meta/_book-hardcover.yml
+  - _meta/_book-paperback.yml
 

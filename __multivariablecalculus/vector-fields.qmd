@@ -5,19 +5,13 @@ pagetitle: "Vector Fields - Exploring Calculus"
 
 So you want to learn vector calculus? Well, you've come to the right place! In this book, we will provide a gentle introduction to vector calculus for beginners. We will start with the basics and work our way up to some of the more advanced topics. By the end of this book, you should have a basic understanding of vectors and vector operations, as well as how they are used in calculus. Let's get started!
 
-## Vector calculus is a powerful tool
-
 Vector calculus is a powerful tool for solving problems in physics and engineering. It allows us to model physical phenomena more accurately and to find solutions to problems that would be otherwise intractable. vector calculus is a vast and complex subject, but it is also incredibly versatile.
 
 In this book, we will explore some of the ways in which vector calculus can be used to solve problems in physics and engineering. We will see how vector calculus can be used to model physical phenomena, to find solutions to difficult problems, and simplify complex equations. vector calculus is a powerful tool that should be in the arsenal of every physics and engineering student.
 
-## Vector calculus is used to
-
 Just as calculus is used to calculate the rate of change of a function, vector calculus is used to calculate the rate of change of a vector. Vector calculus is a powerful tool that can be used to calculate the motion of objects in three-dimensional space. In particular, vector calculus can be used to find the velocity and acceleration of an object at any given point in time. Additionally, vector calculus can be used to find the force exerted on an object by another object.
 
 Vector calculus is also used to calculate the electric and magnetic fields of objects in three-dimensional space. Additionally, vector calculus can be used to calculate the electric and magnetic forces exerted on an object by another object. Finally, vector calculus can be used to solve problems in physics and engineering that involve differential equations.
-
-## Vector Fields
 
 Vector fields are a type of mathematical object that can be used to model various physical phenomena. In vector calculus, a vector field is simply a function that assigns a vector to every point in space. The vector at each point represents the direction and magnitude of the force at that point.
 
@@ -25,25 +19,17 @@ In vector calculus, vector fields are used to represent the flow of fluids, the 
 
 In addition, vector fields can be used to create models of complex systems, such as weather patterns or the motion of planets in space. Ultimately, vector fields are a crucial tool for studying the world around us. By understanding vector fields, we can gain a deeper insight into the behavior of these physical phenomena.
 
-## Divergence and Curl
-
 In vector calculus, divergence and curl are two important operations. They are used to measure how vector fields change in space. Divergence measures how a vector field diverges from a point, while curl measures how the vector field curls around a point. These operations are essential for understanding how vector fields behave in different situations. For example, they can be used to determine the flow of fluids in a given space. In addition, they can be used to study the behavior of electromagnetic fields. Without divergence and curl, our understanding of these phenomena would be greatly limited.
-
-## Line Integrals
 
 Line integrals may sound like something out of a math textbook, but they can actually be quite fun to calculate. In vector calculus, a line integral is an integral that uses a vector function to describe the path of a curve. To calculate a line integral, you need to first find a vector function that describes the curve. Then, you need to integrate that function along the curve. Sounds simple enough, right? But don't worry. Just make sure you keep your vector function pointing in the right direction, and you should be good to go.
 
 However, the real power of line integrals comes from the fact that they can be used to calculate some of the most important quantities in vector calculus, such as the flux of a vector field. In addition, line integrals can be used to solve differential equations, making them an essential tool for mathematical modeling. Despite their seeming complexity, line integrals are actually quite easy to understand and use in practice. With a little practice, anyone can master this powerful technique.
-
-## Independence of Path and Conservative Vector Fields
 
 In vector calculus, a vector field is a construction that associates a vector to every point in a vector space. The vector at each point is specified by giving its magnitude and direction. Vector fields are often used to model physical phenomena such as the flow of fluids or the distribution of electric charge. In this context, the vector can be thought of as representing the velocity or force at each point.
 
 A vector field is said to be independent of path if the vector at each point is unaffected by the choice of path taken to reach that point. In other words, the vector field represents a consistent flow or distribution throughout the vector space. A vector field is said to be conservative if it is independent of path and if there is a scalar function (known as a potential function) that defines the vector field throughout the space.
 
 Conservative vector fields are often used to model physical phenomena such as gravity or electromagnetism. In this context, the potential function can be thought of as representing the energy associated with each point in the vector space.
-
-## Green's Theorem
 
 Vector calculus is the mathematics of change. It's the study of how things move around in space, and how those motions can be described using mathematical equations. Green's Theorem is a vector calculus theorem that allows us to calculate the rate of change of a vector field.
 
@@ -53,15 +39,11 @@ For example, it can be used to calculate the electric field around a charge, or 
 
 In essence, it allows you to integrate a vector field over a closed curve. Sounds simple enough, right? But the implications of Green's Theorem are far-reaching. It can be used to solve problems in fluid dynamics, electromagnetism, and even general relativity. So next time you see something green, take a moment to appreciate the power of vector calculus. You might be surprised at what this humble color can do.
 
-## Surface Integrals
-
 Integrals are a fundamental part of vector calculus, and the surface integral is no exception. Put simply, a surface integral is used to calculate the amount of vector flow through a closed surface. This might sound like a daunting task, but it's actually relatively straightforward.
 
 To calculate a surface integral, you first need to choose a vector field that you want to integrate over. This vector field can be defined explicitly, or it can be derived from another field such as the gradient of a scalar field. Once you have your vector field, you need to choose a closed surface that bounds it. This surface could be something like a sphere or a cylinder.
 
 Finally, you need to evaluate the integral on this surface. The result of this calculation will give you the total amount of vector flow through the surface. Surface integrals may seem like a complicated concept, but once you understand the basics, they're actually quite simple. So go ahead and give them a try!
-
-## The Divergence Theorem
 
 In vector calculus, the divergence theorem states that the flux of a vector field through a closed surface is equal to the volume integral of the divergence of the vector field over the region enclosed by the surface. In other words, if you have a vector field and you want to know how much of it is flowing out of a given region, you can calculate it by taking the divergence of the vector field and integrating it over the region.
 
@@ -71,19 +53,13 @@ For example, it can be used to calculate the flow of electric charge or the move
 
 This makes it a very powerful tool for studying vector fields.
 
-## Stokes' Theorem
-
 In vector calculus, Stokes' theorem is a statement that relates the curl of a vector field to its divergence. In other words, it tells us that if we have a vector field with a lot of curl, then it must also have a lot of divergence. Similarly, if we have a vector field with very little curl, then it must also have very little divergence. The theorem is named after George Stokes, who first proved it in 1857.
 
 The theorem is actually pretty easy to understand intuitively. Think about a vector field as something like a flowing river. If the water is flowing in a straight line, then the river has very little curl. But if the water is flowing in a spiral, then the river has a lot of curl. Now think about what happens when the water reaches the end of the river. If it just keeps flowing straight, then the river has very little divergence. But if it starts spilling out in all directions, then the river has a lot of divergence.
 
 So, intuitively speaking, Stokes' theorem tells us that vector fields with lots of curl must also have lots of divergence.
 
-## Who is this book for?
-
 This book is aimed at anyone who wants to learn about vector calculus. It doesn't matter if you're a student, a physics enthusiast, or just someone who's curious about the world around them. If you're willing to put in the effort, then this book will help you learn everything you need to know about vector calculus.
-
-## How I teach in this book
 
 In this book, I take a step-by-step approach to teaching vector calculus. I start with the basics and gradually build up to more advanced topics. I also include plenty of example calculations to help you understand the material.
 
@@ -96,6 +72,8 @@ In this book, I take a step-by-step approach to teaching vector calculus. I star
  
 
 I believe that the best way to learn anything is by doing it yourself. So in each chapter, I include exercises for you to work on. These exercises will help you practice what you've learned and solidify your understanding of the material.
+
+
 
 
 ## Introduction to Vector Fields
@@ -269,5 +247,225 @@ f(x,y,z)=y \tan ^{-1}x+x \tan ^{-1}z
 $$
 as desired.
 ::: 
+
+
+
+
+
+
+
+## The Divergence and Curl of a Vector Field
+
+::: {#def- } 
+
+Let $\mathbf{V}$ be a given vector field. The \index{divergence} **divergence** of $\mathbf{V}$ is defined by div $\mathbf{V}=\nabla \cdot \mathbf{V}$ and the \index{curl} **curl** of $\mathbf{V}$ is defined by curl $\mathbf{V}=\nabla \times \mathbf{V}$ where 
+$$
+\nabla =\frac{\partial }{\partial x}\mathbf{i}+\frac{\partial }{\partial y}\mathbf{j}+\frac{\partial }{\partial z}k
+$$
+is the \index{del operator} **del operator**.
+::: 
+
+::: {#exm- } 
+
+Find the divergence and curl of a constant vector field.
+::: 
+
+::: {.solution }
+Let $\vec{V}=a  \vec{i}+b \vec{j}+c \vec{k}$ for constants $a,$ $b,$ and $c.$ Then 
+$$
+\text{div}  \vec{V}=\frac{\partial }{\partial x}(a)+\frac{\partial }{\partial y}(b)+\frac{\partial }{\partial z}(c)=\vec{0}$$
+and 
+$$
+\text{curl}  \vec{V}=\left|
+\begin{array}{cc}
+ \begin{array}{c}
+ \vec{i} \\
+\begin{array}{c}
+ \frac{\partial }{\partial x} \\
+ a
+\end{array}
+\end{array}
+ & 
+\begin{array}{cc}
+ \vec{j} & \vec{k} \\
+\begin{array}{c}
+ \frac{\partial }{\partial y} \\
+ b
+\end{array}
+ & 
+\begin{array}{c}
+ \frac{\partial }{\partial z} \\
+ c
+\end{array}
+\end{array}
+\end{array}
+\right|=0 \vec{i}-0 \vec{j}+0 \vec{k}=0.
+$$
+::: 
+
+::: {#exm- } 
+
+Find the divergence and curl of the vector field
+$$
+\vec{V}(x,y,z)=x z \vec{i}+x y z \vec{j}-y^2 \vec{k}.
+$$
+::: 
+
+::: {.solution }
+The divergence of $\mathbf{V}$ is 
+$$
+\text{div} \mathbf{V}=\nabla \cdot \mathbf{V}=\frac{\partial }{\partial x}(x z)+\frac{\partial }{\partial y}(x y z)+\frac{\partial }{\partial z}\left(-y^2\right)=z+x z.$$
+and the curl of $\mathbf{V}$ is
+\begin{align*}
+& \text{curl} \mathbf{V} =\left|
+\begin{array}{ccc}
+\vec{i} &  \vec{j} & \vec{k} \\
+\frac{\partial }{\partial x} & \frac{\partial }{\partial y}  & \frac{\partial }{\partial z} \\
+ x z &  x y z &  -y^2
+\end{array}
+\right|
+=\left[\frac{\partial }{\partial y}\left(-y^2\right)-\frac{\partial }{\partial z}(x y z)\right]\vec{i} 
+\\ & \qquad \quad  \qquad 
+-\left[\frac{\partial }{\partial x}\left(-y^2\right)-\frac{\partial }{\partial z}(x z)\right]\vec{j}+\left[\frac{\partial }{\partial x}(x y z)-\frac{\partial }{\partial y}(x z)\right]\vec{k} 
+\\ & \qquad 
+=(-2y-x y)\vec{i}-(0-x)\vec{j}+(y z-0)\vec{k} 
+=-y(2+x) \vec{i}+x \vec{j}+y z \vec{k}. 
+\end{align*}
+::: 
+
+::: {#thm- } [Properties of Divergence and Curl]
+Let $\vec{U}$ and $\vec{V}$ be vector fields with component functions that have continuous first and second partial derivatives.
+Then
+- $\mathrm{div} (c  \vec{U})= c \, \mathrm{div} \vec{U}$
+- $\mathrm{div} (\vec{U}+\vec{V})= \mathrm{div} \vec{U}+ \mathrm{div} \vec{V}$
+- $\mathrm{div} (f  \vec{U})= f \mathrm{div} \vec{U}+(\nabla f\cdot \vec{U})$
+- $\mathrm{div} (f\nabla g)=f \mathrm{div} \nabla g+\nabla  f \cdot  \nabla  g$
+- $\mathrm{curl} (c  \vec{U})= c \mathrm{curl} \vec{U}$
+- $\mathrm{curl} (\vec{U}+\vec{V})= \mathrm{curl} \vec{U}+ \mathrm{curl} \vec{V}$
+- $\mathrm{curl} (f  \vec{U})=f \mathrm{curl} \vec{U}+(\nabla f\times \vec{U})$
+- $\mathrm{curl} (\nabla f+ \mathrm{curl}  \vec{U})= \mathrm{curl}(\nabla  f)+ \mathrm{curl}(\mathrm{curl}  \vec{U})$
+- $\nabla \times (\nabla  f)=0$
+- $\mathrm{div} (\mathrm{curl}  \vec{U})=0$
+::: 
+
+::: {#exm- } 
+
+Show that the divergence of the curl of a vector field is $0.$ 
+::: 
+
+::: {.solution }
+Let $\vec{V}=u(x,y,z)\vec{i}+v(x,y,z)\vec{j}+w(x,y,z)\vec{k}$  be a vector field, then   
+$$
+\text{curl} \vec{V}=\left|
+\begin{array}{ccc}
+ \vec{i} & \vec{j} & \vec{k}  \\
+ \frac{ \partial }{\partial x} & \frac{ \partial }{\partial y} & \frac{ \partial }{\partial z}  \\
+ u & v & w
+\end{array}
+\right|=\left(w_y-v_z\right)\vec{i}-\left(w_x-u_z\right)\vec{j}+\left(v_x-u_y\right)\vec{k}$$
+Therefore
+$$
+\nabla \cdot \vec{V}=\partial _x \left(w_y-v_z\right)-\partial _y \left(w_x-u_z\right)+\partial _z \left(v_x-u_y\right)=0
+$$ 
+as desired.  
+::: 
+
+::: {#exm- } 
+Show that the curl of the gradient of a function is always $\vec{0}.$ 
+::: 
+
+::: {.solution }
+Let $\nabla f=f_x\vec{i}+f_y\vec{j}+f_z\vec{k}$ then   
+$$
+\text{curl} \nabla f=\left|
+\begin{array}{ccc}
+\vec{i} & \vec{j} & \vec{k}  \\
+ \frac{ \partial }{\partial x} & \frac{ \partial }{\partial y} & \frac{ \partial }{\partial z}  \\
+ f_x & f_y & f_z
+\end{array}
+\right| =\left(f_{z y}-f_{y z}\right)\vec{i}-\left(f_{x z}-f_{z x}\right)\vec{j}+\left(f_{y x}-f_{x y}\right)\vec{k}=\vec{0}.
+$$
+::: 
+
+::: {#exm- } 
+Let $\vec{F}=\langle x^2y,y z^2,z y^2\rangle.$ Either find a vector field $\vec{G}$ such that $\vec{F}=\text{curl} \vec{G}$ or show that no such $\vec{G}$ exists.
+::: 
+
+::: {.solution }
+If  a vector field $\vec{G}$ does exist then, then $\text{div} \vec{F}=\text{div} (\text{curl} \vec{G})$ but  
+$$
+\text{div} \vec{F}=\partial _x \left(x^2y\right)+\partial _y \left(y z^2\right)+\partial _y \left(z y^2\right)=2 x y+z^2+2 y z
+$$
+and since the div of the curl of a vector field is always zero we see there can be no vector $\vec{G}$ with $\vec{F}=\text{curl} \vec{G}$ for this vector field $F.$  
+::: 
+
+::: {#def- } 
+Let $f(x,y,z)$ define a function with continuous first and second partial derivatives. Then the \index{Laplacian} **Laplacian**  of $f$
+is 
+$$
+\nabla ^2f=\nabla \cdot \nabla  f=\frac{\text{  }\partial ^2f}{\partial x^2}+\frac{\text{  }\partial ^2f}{\partial y^2}+\frac{\text{  }\partial ^2f}{\partial z^2}.$$ 
+The equation $\nabla ^2f=0$ is called \index{Laplacian's equation} **Laplacian's equation** and a function that satisfies it in a region $D$ is said to be \index{harmonic} **harmonic** on $D.$
+::: 
+
+## Exercises
+
+::: {#exr- } 
+If $\vec{F}(x,y)=u(x,y)\vec{i}+v(x,y)\vec{j}$ where $u$ and $v$ are differentiable functions, show that $\text{curl} \, \vec{F}=0$ if and only if $\frac{\partial u}{\partial y}=\frac{\partial v}{\partial x}.$
+::: 
+
+::: {#exr- } 
+Show that $\text{div}(f\nabla g)=f \text{div} \nabla g+\nabla f \cdot \nabla  g.$
+::: 
+
+::: {#exr- } 
+Show that the curl of the gradient of a function is always $0.$
+::: 
+
+::: {#exr- } 
+Show that the divergence of the curl of a vector field is $0.$
+::: 
+
+::: {#exr- } 
+Let $\vec{F}=<x^2y,y z^2,z y^2>.$ Either find a vector field $\vec{G}$ such that $\vec{F}=\text{curl} \, \vec{G}$ or show that no such $\vec{G}$ exists.
+::: 
+
+::: {#exr- } 
+Find the divergence and the curl for the following vector field.
+\ 
+- $\vec{F}(x,y)=x^2 \vec{i}+ x y \vec{j}+ z^3 \vec{k}.$
+- $\vec{F}(x,y,z)= z \, \vec{i}-\vec{j}+2y\, \vec{k}.$
+- $\vec{F}(x,y,z)= x y z\, \vec{i}+y\, \vec{j}+ x \, \vec{k}.$
+- $\vec{F}(x,y,z)= e^{-x}\sin  y \, \vec{i}+ e^{-x}\cos y\, \vec{j}+\vec{k}.$
+- $\vec{F}(x,y)= x \, \vec{i}+y \, \vec{j}.$
+- $\vec{F}(x,y)= x^2 \, \vec{i}-y^2 \, \vec{j}.$
+- $\vec{F}(x,y,z)= x^2\, \vec{i}+ y^2 \, \vec{j}+ z^2 \, \vec{k}.$
+- $\vec{F}(x,y,z)= 2x z\, \vec{i}+ y z^2\, \vec{j}-\, \vec{k}.$
+- $\vec{F}(x,y,z)= z^2e^{-x}\, \vec{i}+ y^3\ln z\, \vec{j}+ x e^{-y} \, \vec{k}.$
+ 
+::: 
+
+::: {#exr- } 
+Find the divergence of $\vec{F}$ given that $\vec{F}=\nabla f$ where $f(x,y,z)=x y^3z^2.$
+::: 
+
+::: {#exr- } 
+If $\vec{F}(x,y,z)=x y \, \vec{i}+y z \, \vec{j}+z^2\, \vec{k}$ and $\vec{G}(x,y,z)=x \, \vec{i}+y \, \vec{j}-z \, \vec{k}$ find $\text{curl}(\vec{F}\times \vec{G}).$
+::: 
+
+::: {#exr- } 
+Determine whether or not the following vector fields are conservative.
+\ 
+- $\vec{F}(x,y)=y^2\, \vec{i}+2 x y\, \vec{j}$
+- $\vec{F}(x,y)=2x y^3\, \vec{i}+3y^2x^2\, \vec{j}$ 
+- $\vec{F}(x,y)=x e^{x y}\sin  y \, \vec{i}+ \left(e^{x y}\cos  x y+y\right) \vec{j}$ 
+- $\vec{F}(x,y)=\left(-y+e^x\sin  y\right)\vec{i}+\left((x+2)e^x\cos  y\right)\vec{j}$ 
+- $\vec{F}(x,y)=\left(y-x^2\right)\vec{i}+\left(2x+y^2\right)\vec{j}$
+- $\vec{F}(x,y)= e^{2x}\sin  y \, \vec{i}+ e^{2x}\cos  y \, \vec{j}$ 
+::: 
+
+
+
+
+
 
 

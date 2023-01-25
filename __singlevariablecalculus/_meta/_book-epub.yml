@@ -1,0 +1,8 @@
+# Single Variable Calculus epub
+
+book:
+  output-file: "Single-Variable-Calculus-Epub"
+
+format:
+  epub:
+

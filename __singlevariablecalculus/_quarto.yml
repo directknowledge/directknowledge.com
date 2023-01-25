@@ -1,0 +1,34 @@
+# Single Variable Calculus
+
+project:
+  type: book
+  resources: 
+    - assets
+    - images
+  post-render: 
+    - ../_webtools/html_revise_svc.py
+
+book:
+  title: "Single Variable Calculus"
+  chapters:
+    - index.qmd
+    - limits-and-continuity.qmd
+    - differentiation.qmd
+    - applications-of-derivatives.qmd
+    - integration.qmd
+    - applications-of-integrals.qmd
+    - techniques-of-integration.qmd
+    - infinite-series.qmd
+    - references.qmd
+  sidebar:
+    title: "Single Variable Calculus"
+  site-url: https://directknowledge.com/single-variable-calculus/
+  description: "single-variable-calculus"  
+
+metadata-files:
+  - ../_meta/book-html.yml
+  - ../_meta/format.yml
+  #- _meta/_book-epub.yml
+  #- _meta/_book-hardcover.yml
+  - _meta/_book-paperback.yml
+

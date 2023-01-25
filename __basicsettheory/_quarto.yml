@@ -26,23 +26,9 @@ book:
   site-url: https://directknowledge.com/basic-set-theory/
   description: "Basic Set Theory"
 
-format:
-  html:
-    include-in-header: 
-      - ../_html/head-bst.html
-  pdf:
-    keep-tex: true
-    toc: false
-    documentclass: book
-    classoption: [10pt,reqno,twopage,openany]
-    include-in-header: 
-      - ../_control/packages-bst.tex
-      - ../_control/commands.tex
-    include-before-body:
-      - ../_control/topmatter.tex
-    include-after-body: 
-      - ../_control/makeindex.tex
-
 metadata-files:
-  - ../_meta/book.yml
+  - ../_meta/book-html.yml
   - ../_meta/format.yml
+  #- _meta/_book-epub.yml
+  #- _meta/_book-hardcover.yml
+  - _meta/_book-paperback.yml

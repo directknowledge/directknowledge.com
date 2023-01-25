@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="single-variable-calculus">
+<title>Limits and Continuity - Single Variable Calculus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+<meta name="quarto:offset" content="./">
+<link href="./differentiation.html" rel="next">
+<link href="./index.html" rel="prev">
+<link href="./../assets/favicon.ico" rel="icon">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+</style>
+  
+<meta property="og:title" content="Limits and Continuity - Single Variable Calculus">
+<meta property="og:description" content="single-variable-calculus">
+<meta property="og:site-name" content="Single Variable Calculus">
+</head>
+<body class="nav-sidebar floating nav-fixed">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    </a>
+    <a aria-label="Single Variable Calculus" class="navbar-brand" href="https://directknowledge.com">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://directknowledge.com/about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <a class="book-title" href="https://directknowledge.com/single-variable-calculus/">Single Variable Calculus</a><div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limits-and-continuity.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./differentiation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Differentiation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Applications Of Derivatives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./applications-of-integrals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Applications of Integrals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./techniques-of-integration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Techniques of Integration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./infinite-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Infinite Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/single-variable-calculus/"><picture><source type="image/webp" srcset="../../assets/single-variable-calculus-cover.webp"><source type="image/webp" srcset="../../assets/single-variable-calculus-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/single-variable-calculus-cover.png" alt="Single Variable Calculus Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#an-intuitive-introduction-to-limits" id="toc-an-intuitive-introduction-to-limits" class="nav-link active" data-scroll-target="#an-intuitive-introduction-to-limits"><span class="toc-section-number">1.1</span>  An Intuitive Introduction to Limits</a></li>
+  <li><a href="#limits-using-tables" id="toc-limits-using-tables" class="nav-link" data-scroll-target="#limits-using-tables"><span class="toc-section-number">1.2</span>  Limits Using Tables</a></li>
+  <li><a href="#one-sided-and-two-sided-limits" id="toc-one-sided-and-two-sided-limits" class="nav-link" data-scroll-target="#one-sided-and-two-sided-limits"><span class="toc-section-number">1.3</span>  One-Sided and Two-Sided Limits</a></li>
+  <li><a href="#oscillating-behavior" id="toc-oscillating-behavior" class="nav-link" data-scroll-target="#oscillating-behavior"><span class="toc-section-number">1.4</span>  Oscillating Behavior</a></li>
+  <li><a href="#unbounded-behavior" id="toc-unbounded-behavior" class="nav-link" data-scroll-target="#unbounded-behavior"><span class="toc-section-number">1.5</span>  Unbounded Behavior</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">1.6</span>  Exercises</a></li>
+  <li><a href="#techniques-for-finding-limits" id="toc-techniques-for-finding-limits" class="nav-link" data-scroll-target="#techniques-for-finding-limits"><span class="toc-section-number">1.7</span>  Techniques for Finding Limits</a></li>
+  <li><a href="#calculating-limits-using-limit-theorems" id="toc-calculating-limits-using-limit-theorems" class="nav-link" data-scroll-target="#calculating-limits-using-limit-theorems"><span class="toc-section-number">1.8</span>  Calculating Limits Using Limit Theorems</a></li>
+  <li><a href="#special-trigonometric-limits" id="toc-special-trigonometric-limits" class="nav-link" data-scroll-target="#special-trigonometric-limits"><span class="toc-section-number">1.9</span>  Special Trigonometric Limits</a></li>
+  <li><a href="#using-rationalization" id="toc-using-rationalization" class="nav-link" data-scroll-target="#using-rationalization"><span class="toc-section-number">1.10</span>  Using Rationalization</a></li>
+  <li><a href="#limits-of-piecewise-functions" id="toc-limits-of-piecewise-functions" class="nav-link" data-scroll-target="#limits-of-piecewise-functions"><span class="toc-section-number">1.11</span>  Limits of Piecewise Functions</a></li>
+  <li><a href="#squeeze-theorem" id="toc-squeeze-theorem" class="nav-link" data-scroll-target="#squeeze-theorem"><span class="toc-section-number">1.12</span>  Squeeze Theorem</a></li>
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1"><span class="toc-section-number">1.13</span>  Exercises</a></li>
+  <li><a href="#continuous-functions" id="toc-continuous-functions" class="nav-link" data-scroll-target="#continuous-functions"><span class="toc-section-number">1.14</span>  Continuous Functions</a></li>
+  <li><a href="#continuity-at-a-point" id="toc-continuity-at-a-point" class="nav-link" data-scroll-target="#continuity-at-a-point"><span class="toc-section-number">1.15</span>  Continuity at a Point</a></li>
+  <li><a href="#discontinuity" id="toc-discontinuity" class="nav-link" data-scroll-target="#discontinuity"><span class="toc-section-number">1.16</span>  Discontinuity</a></li>
+  <li><a href="#continuous-functions-1" id="toc-continuous-functions-1" class="nav-link" data-scroll-target="#continuous-functions-1"><span class="toc-section-number">1.17</span>  Continuous Functions</a></li>
+  <li><a href="#one-sided-continuity" id="toc-one-sided-continuity" class="nav-link" data-scroll-target="#one-sided-continuity"><span class="toc-section-number">1.18</span>  One-Sided Continuity</a></li>
+  <li><a href="#determining-parameters-for-continuity" id="toc-determining-parameters-for-continuity" class="nav-link" data-scroll-target="#determining-parameters-for-continuity"><span class="toc-section-number">1.19</span>  Determining Parameters for Continuity</a></li>
+  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2"><span class="toc-section-number">1.20</span>  Exercises</a></li>
+  <li><a href="#tangent-lines-and-rates-of-change" id="toc-tangent-lines-and-rates-of-change" class="nav-link" data-scroll-target="#tangent-lines-and-rates-of-change"><span class="toc-section-number">1.21</span>  Tangent Lines and Rates of Change</a></li>
+  <li><a href="#average-rate-of-change" id="toc-average-rate-of-change" class="nav-link" data-scroll-target="#average-rate-of-change"><span class="toc-section-number">1.22</span>  Average Rate of Change</a></li>
+  <li><a href="#instantaneous-rate-of-change" id="toc-instantaneous-rate-of-change" class="nav-link" data-scroll-target="#instantaneous-rate-of-change"><span class="toc-section-number">1.23</span>  Instantaneous Rate of Change</a></li>
+  <li><a href="#what-is-a-tangent-line" id="toc-what-is-a-tangent-line" class="nav-link" data-scroll-target="#what-is-a-tangent-line"><span class="toc-section-number">1.24</span>  What is a Tangent Line?</a></li>
+  <li><a href="#equation-of-tangent-line" id="toc-equation-of-tangent-line" class="nav-link" data-scroll-target="#equation-of-tangent-line"><span class="toc-section-number">1.25</span>  Equation of Tangent Line</a></li>
+  <li><a href="#horizontal-tangent-lines" id="toc-horizontal-tangent-lines" class="nav-link" data-scroll-target="#horizontal-tangent-lines"><span class="toc-section-number">1.26</span>  Horizontal Tangent Lines</a></li>
+  <li><a href="#relative-rate-of-change" id="toc-relative-rate-of-change" class="nav-link" data-scroll-target="#relative-rate-of-change"><span class="toc-section-number">1.27</span>  Relative Rate of Change</a></li>
+  <li><a href="#exercises-3" id="toc-exercises-3" class="nav-link" data-scroll-target="#exercises-3"><span class="toc-section-number">1.28</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header id="title-block-header">
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Limits and Continuity</span></h1>
+</header>
+<p>In mathematics, both limits and continuity play a very important role in proofs and calculations. In this book, you will learn all about limits: what they are, how to find them, and how to use them in mathematical proofs. You will also learn about the different types of discontinuities and how to deal with them. With this knowledge, you will be able to perform complex calculations with ease and confidence.</p>
+<p>Limits are the bread and butter of calculus. Without limits, we wouldn’t be able to find derivatives or integrals. In short, limits are essential for understanding calculus. So what are limits? Put simply, limits are a way of describing what happens when a function gets closer and closer to a certain value.</p>
+<p>For example, if we have a function that is always increasing but never reaches a specific number, we say that the function approaches that number as its limit. This may not seem like a big deal, but limits are actually incredibly important. They allow us to define things like continuity and differentiability, which are essential concepts in calculus. So next time you’re struggling with a calculus problem, remember that it all comes down to limits!</p>
+<p>Intuitively, one can think of limits as boundaries. Just as there are physical limits to what a person can do, there are limits to what a function can do. By understanding these limits, we can better understand the nature of continuity and how to take advantage of it in our calculations.</p>
+<p>In short, limits are important in calculus because they allow us to understand how functions behave at specific points within their domains.</p>
+<p>Limits are important because they help us understand continuity, derivatives, and integrals. And continuity is important because, well, the world is continuous (so it seems)! So limits are pretty important.</p>
+<p>There are a few techniques that can be helpful for finding limits. One is to think about what the function is doing approaching the point in question. Is it getting closer and closer to a certain value? If so, that value is probably the limit. Another technique is to plug in values that are close to the point in question and see what happens. This can be helpful for getting an intuition for how the function behaves near the point in question. And finally, sometimes it can be helpful to use some algebraic manipulation to simplify the expression before taking the limit.</p>
+<p>As with all things mathematical, practice makes perfect, so don’t be discouraged if limits give you some trouble at first. Keep at it and you’ll get the hang of it in no time!</p>
+<p>Limits are important in calculus because they allow us to determine whether a function is continuous or not. Intuitively, a function is continuous if given any two points within its domain, there exists a smooth curve that connects those points. Limits enable us to test for continuity by seeing if the function’s value approaches the same number as we approach a specific point within the domain.</p>
+<p>If the function’s value does approach the same number, then we say that the function is continuous at that point. If the function’s value does not approach the same number, then we say that the function is discontinuous at that point. Continuity is important because it allows us to determine how a function will behave as we approach certain values within its domain.</p>
+<p>Continuity describes how a function behaves over a range of values. A function is continuous if it is smooth and uninterrupted over that range. In other words, there are no sudden jumps or discontinuities. Most functions you encounter in everyday life are continuous. For example, the position of a car on a road is continuous - there are no gaps or discontinuities in the car’s position. On the other hand, a function like 1/x is not continuous, because it has a discontinuity at x=0.</p>
+<p>Together, limits and continuity allow us to understand and predict the behavior of functions at both the micro and macro levels. At the micro level, limits allow us to understand what happens to a function as x approaches a certain value. And at the macro level, continuity allows us to understand how a function behaves over a range of values. These concepts are essential for understanding and manipulating functions in calculus.</p>
+<p>The existence of limits is one of the fundamental properties distinguishing calculus from ordinary algebra and geometry. Limits are basic to differential and integral calculus and play an important role in many other branches of mathematics. They also occur in physics and other sciences in connection with limiting cases and approximations. Informally, limits describe the behavior of a function as its arguments “approach” certain defined values; they provide a precise foundation for calculus, enabling earlier work with limits to be rigorously justified.</p>
+<p>In most cases limits can be found by algebraic manipulations; more sophisticated means may sometimes be required, but even in difficult cases it is almost always possible to find some numerical indication of the desired limit. Many functions have limits at infinity that can be expressed in simple algebraic form, while others grow so rapidly that no finite limit exists.</p>
+<p>Conversely, some functions have limits that do not exist when approached from either direction (the right or left), while others that have left and right limits may not have a limit as x approaches any real number other than these two specific values. The concept of a limit is thus seen to be closely related both to that of continuity (which deals with single-valued functions only) and to that of an infinite series, which enables discontinuities and multivalued functions also to be treated rigorously by means of limits.</p>
+<p>One might wonder, “Why do we need a precise definition of limits? Can’t we just say that a limit is when a function gets close to a certain value?” While this informal definition suffices in many cases, there are situations where a more precise definition is required. For example, consider the function f(x) = 1/x. As x approaches 0, this function gets closer and closer to infinity. However, it never actually reaches infinity.</p>
+<p>So if we were to use the informal definition of limits, we would say that the limit of f(x) as x approaches 0 is infinity. However, this is not very useful, since it doesn’t tell us anything about what happens to the function at x = 0. To get around this problem, mathematicians have devised a more precise definition of limits.</p>
+<p>This definition allows us to say that the limit of f(x) as x approaches 0 is actually undefined. While this might not seem like a very satisfying answer, it does give us important information about the behavior of the function at x = 0. So in some cases, a more precise definition of limits can be quite helpful.</p>
+<p>However, the definition of limits is actually quite technical, and it turns out to be very useful in calculus and other areas of mathematics. Without a precise definition of limits, many important theorems would be impossible to prove. So next time you’re feeling frustrated with your math homework, remember that your struggles could be helping to further the field of mathematics!</p>
+<p>Have you ever been driving down the highway and suddenly had to brake for a stop sign or red light? If so, then you’ve experienced limits firsthand. Whenever you’re driving, you’re constantly changing speeds, and your car’s speedometer is measuring the rate of change of your car’s velocity.</p>
+<p>But what happens when your car comes to a stop? The speedometer still measures a nonzero rate of change, but it’s obvious that your car’s velocity has changed dramatically. This is because the speedometer is measuring the instantaneous rate of change, or the limit of the average rate of change as the time interval approaches zero. This may seem like a lot of math jargon, but limits are actually quite intuitive.</p>
+<p>In essence, they tell us how things are changing at a given moment. And limits are not just useful for calculus; they’re also essential for understanding rates of change in everyday life. So next time you’re stuck in traffic, just think of it as an opportunity to learn about limits!</p>
+<p>One of the most important concepts in calculus is continuity. limits are a fundamental tool in calculus that allow us to determine whether a function is continuous at a point. Intuitively, continuity means that a function is “smooth” and doesn’t have any sharp jumps or abrupt changes.</p>
+<p>Continuity is important because many of the most useful functions in calculus, such as the derivative and integral, are only defined for continuous functions. As a result, being able to identify and understand limits is essential for anyone who wants to study calculus. Luckily, limits are not as difficult as they may seem at first. With a little practice, anyone can learn to find them. And once you’ve mastered limits, you’ll be well on your way to understanding one of the most important branches of mathematics.</p>
+<p>Limits and continuity may seem like dry, theoretical concepts, but they actually have a lot of real-world applications. For example, limits are used in calculus to determine the rate of change of a function, and they also play a role in physics when studying things like motion and acceleration. Similarly, continuity is important in many fields, including economics and computer programming. In fact, virtually any time you’re dealing with change or movement, limits and continuity are likely to be involved.</p>
+<p>For example, limits can be used to understand how a car accelerates or how a projectile moves through the air. Continuity can be used to determine whether a path is smooth or whether a financial market is stable. In each of these cases, limits and continuity provide valuable insight that can help us to make better decisions.</p>
+<p>So next time you’re stuck in traffic or trying to figure out why your computer keeps crashing, remember that you’re actually dealing with some pretty complex math!</p>
+<p>Limits, the cornerstone of calculus, are a measure of how close a function gets to a certain value as it approaches that value from either direction. In other words, limits tell us how a function behaves near a point, such as whether it approaches the point from above or below, or oscillates around the point.</p>
+<p>Continuity is a related concept: it deals with how well a function can be defined at a point, and whether it behaves predictably near that point. A function is continuous at a point if its limit exists at that point and if the function’s value at that point equals the limit. Intuitively, this means that a continuous function can be drawn without lifting one’s pencil from the paper. Many of the most important results in calculus depend on continuity; in fact, one could argue that calculus is really about continuity.</p>
+<p>The idea of limits is used to define all sorts of important geometric objects such as tangent lines and curves, and these in turn are used to study functions and their behavior. Continuity is also used extensively in physics: for example, when solving problems involving fluids or electricity, one often assumes that the underlying functions are continuous. In short, continuity is a fundamental concept in calculus with far-reaching implications.</p>
+<p>In the world of mathematics, limits are important because they help to define continuity. In other words, limits tell us when a function is “continuous” or “smooth.” Without limits, it would be difficult to calculate things like derivatives and integrals. So, in a sense, limits are the foundation of calculus. Without them, many of the important ideas in calculus would simply not be possible. Of course, limits can be a bit tricky to understand at first. But once you get the hang of it, you’ll see that they’re not so bad after all. And who knows? You might even come to enjoy working with them.</p>
+<section id="an-intuitive-introduction-to-limits" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="an-intuitive-introduction-to-limits"><span class="header-section-number">1.1</span> An Intuitive Introduction to Limits</h2>
+<p>This lecture illustrates when a limit does not exist by giving three case examples:</p>
+<ul>
+<li>A limit does not exist because the <strong>one-sided limits</strong> do not agree in value.</li>
+<li>A limit does not exist because of an oscillating behavior of a function, and</li>
+<li>a limit does not exist (no finite value) because of an unbounded behavior of a function.</li>
+</ul>
+</section>
+<section id="limits-using-tables" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="limits-using-tables"><span class="header-section-number">1.2</span> Limits Using Tables</h2>
+<p>A <strong>limit</strong> is used to describe the behavior of a function near a point but not at the point. The function need not even be defined at the point. If it is defined there, the value of the function at the point does not affect the limit. Intuitively, <span class="math display">\[\begin{equation}
+\lim _{x\to  c}f(x)=L
+\end{equation}\]</span> means we can make<span class="math inline">\(f(x)\)</span> as close to <span class="math inline">\(L\)</span> as we wish by taking any <span class="math inline">\(x\)</span> sufficiently close to, but different from <span class="math inline">\(c.\)</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.1 </strong></span>Find the limit of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> <strong>approaches</strong> <span class="math inline">\(c\)</span> using a table of functional values for <span class="math display">\[\begin{equation}
+f(x)=\frac{4x-9}{x^2-4}
+\end{equation}\]</span> and <span class="math inline">\(c=3.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We compute, <span class="math display">\[
+\begin{array}{l|l}
+x &amp; f(x)  \\ \hline
+2.997 &amp; 0.599758 \\
+2.998 &amp; 0.599839 \\
+2.999 &amp; 0.59992
+\end{array}
+\]</span> <span class="math display">\[
+\begin{array}{l|l}
+x &amp; f(x)  \\ \hline
+3.003 &amp; 0.600238 \\
+3.002 &amp; 0.600159 \\
+3.001 &amp; 0.600079
+\end{array}
+\]</span> Thus as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(3\)</span> from the left we estimate that <span class="math inline">\(f(x)\)</span> approaches <span class="math inline">\(3/5\)</span>; and as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(3\)</span> from the right we estimate that <span class="math inline">\(f(x)\)</span> approaches <span class="math inline">\(3/5.\)</span> Therefore, we estimate <span class="math display">\[\begin{equation}
+\lim _{x\to 3}\frac{4x-9}{x^2-4}=\frac{3}{5}.
+\end{equation}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.2 </strong></span>We will use a guessing method to show why the formal definition of a limit is a necessity.<br>
+Use a table to guess the values of <span class="math display">\[\begin{equation}
+L=\lim _{x\to 0}\frac{2\sqrt{x+1}-x-2}{x^2}.
+\end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>From the table <span class="math display">\[\begin{equation*}
+\begin{array}{cccccccc}
+x &amp; -0.5 &amp; -0.1 &amp; -0.01 &amp; -0.001 &amp; 0 &amp; 0.001 &amp; 0.005 \\
+f(x) &amp; -0.3431 &amp; -0.2633 &amp; -0.2513 &amp; -0.2501 &amp; \text{-} &amp; -0.2499 &amp; -0.2494
+\end{array}
+\end{equation*}\]</span> The number <span class="math inline">\(L\)</span> is suggested to be <span class="math inline">\(-0.25.\)</span> Interestingly, if you try <span class="math display">\[\begin{equation}
+x=0.0000001
+\end{equation}\]</span> just to make sure you have taken numbers close enough to 0, you may find that the calculator gives the value 0. Does this mean that the limit is 0? No, the calculator may give you a false answer because when <span class="math inline">\(x\)</span> is small enough (like <span class="math inline">\(0.0000001\)</span> ) then <span class="math inline">\(2\sqrt{x+1}-x-2\)</span> seems like 0. But in fact <span class="math inline">\(f(0.0000001)\)</span> is not equal to 0.</p>
+</div>
+<p>The point is, using technology to verify a computation can lead to misunderstanding; and in fact, a formal definition of a limit is needed. Using the formal definition of a limit, we can prove what the value of the limit is without any doubt. This type of proof is usually called an epsilon-delta proof since the formal definition is usually stated with the greek letters $$ (epsilon) and $$ (delta).</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.3 </strong></span>We will use a guessing method to show why the formal definition of a limit is a necessity.<br>
+Use tables of values to find the limit <span class="math display">\[\begin{equation}
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right).
+\end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We construct a table of values. <span class="math display">\[\begin{equation*}
+\begin{array}{cccccc}
+x &amp; 1 &amp; 0.5 &amp; 0.1 &amp; 0.05 &amp; 0.01 \\
+f(x) &amp; 1.000028 &amp; 0.124920 &amp; 0.001088 &amp; 0.000222 &amp; 0.000101
+\end{array}
+\end{equation*}\]</span> From the table it appears that <span class="math display">\[\begin{equation}
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right)=0.
+\end{equation}\]</span><br>
+However, if we persevere with smaller values of <span class="math inline">\(x,\)</span> the next table suggests <span class="math display">\[\begin{equation}
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right)
+=0.0001000=\frac{1}{10,0000}
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+\begin{array}{ccc}
+x &amp; 0.005 &amp; 0.001 \\
+f(x) &amp; 1.00010009 &amp; 0.00010000
+\end{array}
+\end{equation}\]</span> In fact, <span class="math display">\[\begin{equation}
+\lim _{x\to 0}\left(x^3+\frac{\cos  5x}{10,000}\right)=\frac{1}{10,0000}
+\end{equation}\]</span> which is easily proven once the formal limit definition is used to prove some interesting limit rules and continuity is discussed.</p>
+</div>
+<p>In summary, a three-pronged approach to solving limits is often:</p>
+<ul>
+<li>numerical approach by constructing tables of values,</li>
+<li>graphical approach by sketching a graph by hand or using technology,</li>
+<li>analytic approach by using algebra or calculus.</li>
+</ul>
+</section>
+<section id="one-sided-and-two-sided-limits" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="one-sided-and-two-sided-limits"><span class="header-section-number">1.3</span> One-Sided and Two-Sided Limits</h2>
+<p>Consider, for example, a piecewise function with a jump where the function is pieced together (defined or not). Even though the one-sided limits might exist, they must agree in value for the <strong>two-sided limit</strong> to exist. In short, if the one-sided limits do not agree then the two-sided limit does not exist.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.1 </strong></span>The two-sided limit <span class="math inline">\(\lim _{x\to c}f(x)\)</span> exists if and only if the one-sided limits <span class="math inline">\(\lim _{x\to c^+}f(x)\)</span> and <span class="math inline">\(\lim _{x\to c^-}f(x)\)</span> both exist and <span class="math inline">\(\lim _{x\to c^-}f(x)=\lim _{x\to c^+}f(x).\)</span> In which case, <span class="math inline">\(\lim _{x\to c}f(x)=\lim _{x\to c^+}f(x).\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.4 </strong></span>Sketch the graph of the <strong>piecewise function</strong> <span class="math inline">\(f\)</span> defined by <span class="math display">\[\begin{equation}
+f(x)=
+\begin{cases}
+2 x^2+1 &amp; x&lt;2 \\
+4 &amp; x=2 \\
+3 x &amp; x&gt;2.
+\end{cases}
+\end{equation}\]</span> Evaluate the following limits,</p>
+<ul>
+<li><span class="math inline">\(\lim_{x\to 2^-}f(x)\)</span>.</li>
+<li><span class="math inline">\(\lim_{x\to 2^+}f(x)\)</span>.</li>
+<li><span class="math inline">\(\lim_{x\to 2}f(x)\)</span>.</li>
+<li><span class="math inline">\(\lim_{x\to 1^-}f(x)\)</span>.</li>
+<li><span class="math inline">\(\lim_{x\to 1^+}f(x)\)</span>.</li>
+<li><span class="math inline">\(\lim_{x\to 1}f(x)\)</span>.</li>
+<li><span class="math inline">\(\lim_{x\to 4^-}f(x)\)</span>.</li>
+<li><span class="math inline">\(\lim_{x\to 4^+}f(x)\)</span>.</li>
+<li><span class="math inline">\(\lim_{x\to 4}f(x)\)</span>.</li>
+</ul>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.5 </strong></span>Sketch the graph of the piecewise function <span class="math inline">\(g(x)\)</span> where <span class="math inline">\(g\)</span> is defined by <span class="math display">\[\begin{equation}
+g(x)=
+\begin{cases}
+3x-2 &amp; x&lt;-1 \\
+4 &amp; x=-1 \\
+x+5 &amp; -1 &lt; x &lt; 3 \\
+4 &amp; x=3 \\
+2-x &amp; x&gt;3.
+\end{cases}
+\end{equation}\]</span> Evaluate the following limits,</p>
+<ul>
+<li><span class="math inline">\(\lim_{x\to -1^-}g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x\to -1^+}g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x\to -1}g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x\to 3^-}g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x\to 3^+}g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x\to 3}g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x\to 4}g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x\to 0}g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x\to 1}g(x)\)</span></li>
+</ul>
+</div>
+</section>
+<section id="oscillating-behavior" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="oscillating-behavior"><span class="header-section-number">1.4</span> Oscillating Behavior</h2>
+<p>Also, consider another case where a function has an <strong>oscillating behavior</strong> . On one hand, the trigonometric functions all have an oscillating ( <strong>periodic</strong> ) behavior. However, imagine a function where the oscillation becomes much more pronounced as the variable approaches a fixed point; this type of oscillating behavior is where the function may not have a limit.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.6 </strong></span>Find <span class="math inline">\(\displaystyle\lim_{x\rightarrow 0} \cos \left(\frac{1}{x}\right).\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The limit does not exist because <span class="math inline">\(\cos \frac{1}{x}=1\)</span> and <span class="math inline">\(\cos \frac{1}{x}=-1\)</span> for <span class="math display">\[\begin{equation*}
+x=\frac{1}{2\pi },\frac{1}{4\pi },\frac{1}{6\pi },\ldots
+\quad \text{and} \quad
+x=\frac{1}{\pi },\frac{1}{3\pi },\frac{1}{5\pi },\ldots
+\end{equation*}\]</span> respectively.</p>
+<p>The graph of <span class="math inline">\(y=\cos \left(\frac{1}{x}\right)\)</span> is oscillating around <span class="math inline">\(x=0,\)</span> so we infer that the limit does not exist because<span class="math inline">\(f(x)=\cos \frac{1}{x}\)</span> does not approach a number, but rather oscillates, as <span class="math inline">\(x\)</span> approaches 0.</p>
+</div>
+</section>
+<section id="unbounded-behavior" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="unbounded-behavior"><span class="header-section-number">1.5</span> Unbounded Behavior</h2>
+<p>Finally, we illustrate the case where a function becomes unbounded as the variable approaches a fixed point; for example, a function with a vertical asymptote. Without a finite number to assign the limit, we sometimes say that the limit does not exist.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.7 </strong></span>Determine <span class="math inline">\(\displaystyle \lim _{x\to 0}\frac{1}{x}.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(f\)</span> decreases without bound as <span class="math inline">\(x\to 0^-\)</span> and <span class="math inline">\(f\)</span> increases without bound as <span class="math inline">\(x\to 0^+,\)</span> we say that <span class="math inline">\(\lim _{x\to0}f(x)\)</span> does not exist.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.8 </strong></span>Determine <span class="math inline">\(\displaystyle\lim _{x\to 0}\frac{1}{x^2}.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(f\)</span> increases without bound as <span class="math inline">\(x\to 0^-\)</span> and <span class="math inline">\(f\)</span> increases without bound as <span class="math inline">\(x\to 0^+,\)</span> we say that <span class="math inline">\(\lim _{x\to0}f(x)=+\infty .\)</span></p>
+</div>
+</section>
+<section id="exercises" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">1.6</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.1 </strong></span>Estimate the limits, if they exist, by using a table of values to two decimal places.</p>
+<ul>
+<li><span class="math inline">\(\lim _{x\to 2^+ }\frac{x^2-4}{x-4}\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 4^+ }\frac{\frac{1}{\sqrt{x}}-\frac{1}{2}}{x-4}\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 0 }\frac{\sin 2x}{x}\)</span></li>
+<li><span class="math inline">\(\lim_{x\to 0}|x|\sin \frac{1}{x}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.2 </strong></span>Sketch the graph of <span class="math inline">\(f\)</span> and <span class="math inline">\(g.\)</span> Then identify the values of <span class="math inline">\(c\)</span> for which <span class="math inline">\(\lim _{x\to c}f(x)\)</span> and <span class="math inline">\(\lim _{x\to c}g(x)\)</span> exist given</p>
+<ul>
+<li><span class="math inline">\(f(x)=\begin{cases} x^2 &amp; x\leq 2 \\ 8-2x &amp; 2&lt;x&lt;4 \\ 4 &amp; x \geq 4 \end{cases}\)</span></li>
+<li><span class="math inline">\(g(x)= \begin{cases}\sin x &amp; x&lt;0 \\ 1-\cos x &amp; 0\leq x\leq \pi \\ \cos x &amp; x&gt;\pi \end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.3 </strong></span>Find <span class="math inline">\(a\)</span> so that the function <span class="math inline">\(f(x)=\begin{cases}a x+3 &amp; x\leq 2 \\ 3-x &amp; x&gt;2\end{cases}\)</span> satisfies <span class="math inline">\(\lim _{x\to 2}f(x)=1.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.4 </strong></span>Estimate the limits by using tables of values for</p>
+<ul>
+<li><span class="math inline">\(\lim _{x\to 13}\frac{x^3-9x^2-45x-91}{x-13}\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 13}\frac{x^3-9x^2-39x-86}{x-13}\)</span></li>
+</ul>
+<p>Then using long division (or if you know it) explain why one of the limits exists and the other does not.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.5 </strong></span>Consider the function <span class="math inline">\(f(x) =\frac{|x+1|-|x-1|}{x}.\)</span> Estimate <span class="math inline">\(\lim _{x\to 0}f(x)\)</span> by evaluating <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span>-values near 0. Sketch the graph of <span class="math inline">\(f.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.6 </strong></span>Explain why <span class="math inline">\(\lim _{x\to 2}\frac{|x-2|}{x-2}\)</span> does not exist.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.7 </strong></span>Evaluate the function <span class="math inline">\(f(x)=x^2-\frac{2^x}{1000}\)</span> for <span class="math inline">\(x=1,\)</span> <span class="math inline">\(0.8,\)</span> <span class="math inline">\(0.6,\)</span> <span class="math inline">\(0.4,\)</span> <span class="math inline">\(0.2,\)</span> <span class="math inline">\(0.1,\)</span> and <span class="math inline">\(0.05.\)</span> Guess the value of <span class="math inline">\(\lim _{x\to 0}f(x).\)</span> Evaluate the function <span class="math inline">\(f(x)=x^2-\frac{2^x}{1000}\)</span> for <span class="math inline">\(x=0.04,\)</span> <span class="math inline">\(0.02,\)</span> <span class="math inline">\(0.01,\)</span> <span class="math inline">\(0.005,\)</span> <span class="math inline">\(0.003,\)</span> and <span class="math inline">\(0.001.\)</span> Guess again.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.8 </strong></span>The tabular approach is a convenient device for discussing limits informally, but if it is not used carefully, it can be misleading. For example, for <span class="math inline">\(x&gt;0,\)</span> let <span class="math inline">\(f(x)=\sin \left(\frac{\pi }{\sqrt{x}}\right)\)</span></p>
+<ul>
+<li>Construct a table showing the value of <span class="math inline">\(x\)</span> and <span class="math inline">\(f(x)\)</span> for <span class="math inline">\(x=4,\)</span> <span class="math inline">\(4/25,\)</span> <span class="math inline">\(4/81,\)</span> <span class="math inline">\(4/169,\)</span> and <span class="math inline">\(4/289.\)</span> Based on this table what would you say about <span class="math inline">\(\lim _{x\to 0^+}f(x)?\)</span></li>
+<li>Construct a table showing the value of <span class="math inline">\(x\)</span> and <span class="math inline">\(f(x)\)</span> for <span class="math inline">\(x=4,\)</span> <span class="math inline">\(4/49,\)</span> <span class="math inline">\(4/121,\)</span> <span class="math inline">\(4/225,\)</span> <span class="math inline">\(4/361.\)</span> Based on this table what would you say about <span class="math inline">\(\lim _{x\to 0^+}f(x)?\)</span></li>
+<li>Based on your results in (a) and (b) what do you conclude about <span class="math inline">\(\lim _{x\to 0^+}f(x)?\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.9 </strong></span>Sketch the graph of the function <span class="math display">\[
+f(x)= \begin{cases}-(x+1)^2+1 &amp; -1\leq x\leq 0 \\  x^2 &amp; 0 &lt; x &lt; 1 \\ 1 &amp; 1 &lt; x &lt; 2 \\  2 &amp; x=2 \\  1 &amp; 2 &lt; x\leq  3. \end{cases}
+\]</span> and then use the graph to determine which the following statements about the function <span class="math inline">\(y=f(x)\)</span> are true and which are false?</p>
+<ul>
+<li><span class="math inline">\(\lim _{\to -1^+}f(x)=1\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 2}f(x)\)</span> does not exist</li>
+<li><span class="math inline">\(\lim _{x\to 2}f(x)=2\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 1^-}f(x)=2\)</span>(e) <span class="math inline">\(\lim _{x\to 1^+}f(x)=1\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 1}f(x)\)</span> does not exist</li>
+<li><span class="math inline">\(\lim _{x\to 0^+}f(x)=\lim _{x\to 0^-}f(x)\)</span></li>
+<li><span class="math inline">\(\lim _{x\to c}f(x)\)</span> exists at every <span class="math inline">\(c\)</span> in the open interval <span class="math inline">\((-1,1).\)</span></li>
+<li><span class="math inline">\(\lim _{x\to c}f(x)\)</span> exists at every <span class="math inline">\(c\)</span> in the open interval <span class="math inline">\((1,3).\)</span></li>
+<li><span class="math inline">\(\lim _{x\to -1^-}f(x)=0\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 3^+}f(x)\)</span> does not exist</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.10 </strong></span>Sketch the graph of the function <span class="math display">\[
+f(x)= \begin{cases} 3-x &amp; x&lt;2 \\  2 &amp; x=2 \\  \frac{x}{2} &amp; x&gt;2. \end{cases}
+\]</span> and then use the graph to determine the following?</p>
+<ul>
+<li>Find <span class="math inline">\(\lim _{x\to 2^+}f(x),\)</span> <span class="math inline">\(\lim _{x\to 2^-}f(x),\)</span> and <span class="math inline">\(f(2).\)</span></li>
+<li>Does <span class="math inline">\(\lim _{x\to 2}f(x)\)</span> exist? If so, what is it? If not, why not?</li>
+<li>Find <span class="math inline">\(\lim _{x\to -1^-}f(x)\)</span> and <span class="math inline">\(\lim _{x\to -1^+}f(x).\)</span></li>
+<li>Does <span class="math inline">\(\lim _{x\to -1}f(x)\)</span> exist? If so, what is it? If not, why not?</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.11 </strong></span>Let <span class="math inline">\(g(x)=\sqrt{x}\sin \left(\frac{1}{x}\right).\)</span> Use the graph of <span class="math inline">\(g\)</span> to determine the following.</p>
+<ul>
+<li>Does <span class="math inline">\(\lim _{x\to 0^+}g(x)\)</span> exist? If so, what is it? If not, why not?</li>
+<li>Does <span class="math inline">\(\lim _{x\to 0^-}g(x)\)</span> exist? If so, what is it? If not, why not?</li>
+<li>Does <span class="math inline">\(\lim _{x\to 0}g(x)\)</span> exist? If so, what is it? If not, why not?</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.12 </strong></span>Graph <span class="math inline">\(f(x)=\begin{cases} x^3 &amp; x\neq 1 \\ 0 &amp; x=1. \end{cases}\)</span> Find <span class="math inline">\(\lim _{x\to 1^-}f(x)\)</span> and <span class="math inline">\(\lim _{x\to 1^+}f(x).\)</span> Does <span class="math inline">\(\lim _{x\to 1}f(x)\)</span> exist? If so, what is it? If not, why not?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.13 </strong></span>Graph <span class="math inline">\(f(x)=\begin{cases} 1-x^2 &amp; x\neq 1 \\ 2 &amp; x=1. \end{cases}\)</span> Find <span class="math inline">\(\lim _{x\to 1^-}f(x)\)</span> and <span class="math inline">\(\lim _{x\to 1^+}f(x).\)</span> Does <span class="math inline">\(\lim _{x\to 1}f(x)\)</span> exist? If so, what is it? If not, why not?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.14 </strong></span>Graph <span class="math inline">\(f(x)=\begin{cases} x &amp; -1\leq x&lt;0 \quad \text{or} \quad 0&lt;x\leq 1 \\ 1 &amp; x=0 \\ 0 &amp; x&lt;-1 \quad \text{or} \quad x&gt;1.\end{cases}\)</span></p>
+<ul>
+<li>What is the domain and range of <span class="math inline">\(f?\)</span></li>
+<li>At what points <span class="math inline">\(c,\)</span> if any does <span class="math inline">\(\lim _{x\to c}f(x)\)</span> exist?</li>
+<li>At what points does only the left-hand limit exist?</li>
+<li>At what points does only the right-hand limit exist?</li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.15 </strong></span>Find the following limits.</p>
+<ul>
+<li><span class="math inline">\(\lim _{x\to -7}(2x+5).\)</span></li>
+<li><span class="math inline">\(\lim _{x\to -2}\left(x^3-2x^2+4x+8\right).\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 2}\left(\frac{x+3}{x+6}\right).\)</span></li>
+<li><span class="math inline">\(\lim _{y\to 2}\left(\frac{y+2}{y^2+5y+6}\right).\)</span></li>
+<li><span class="math inline">\(\lim _{y\to -3}(5-y)^{4/3}.\)</span></li>
+<li><span class="math inline">\(\lim _{h\to 0}\left(\frac{5}{\sqrt{5h+4}+2}\right).\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 5}\left(\frac{x-5}{x^2-25}\right).\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 2}\left(\frac{x^2-7x+10}{x-2}\right).\)</span></li>
+<li><span class="math inline">\(\lim _{x\to -2}\left(\frac{-2x-4}{x^3+2x^2}\right).\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 1}\left(\frac{x-1}{\sqrt{x+3}-2}\right).\)</span></li>
+<li><span class="math inline">\(\lim _{x\to -2}\left(\frac{x+2}{\sqrt{x^2+5}-3}\right).\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.16 </strong></span>Suppose <span class="math inline">\(\lim _{x\to 4}f(x)=0\)</span> and <span class="math inline">\(\lim _{x\to 4}g(x)=3.\)</span> Using limit laws find the limits <span class="math inline">\(\lim _{x\to 4}(g(x)+3),\)</span> <span class="math inline">\(\lim _{x\to 4}xf(x),\)</span> <span class="math inline">\(\lim _{x\to 4}(g(x))^2,\)</span> and <span class="math inline">\(\lim _{x\to 4}\frac{g(x)}{f(x)+1}.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.17 </strong></span>Suppose that <span class="math inline">\(\lim _{x\to -2}p(x)=4,\)</span> <span class="math inline">\(\lim _{x\to -2}r(x)=0,\)</span> and <span class="math inline">\(\lim _{x\to -2}s(x)=-3.\)</span> Using limit laws find the limits, <span class="math inline">\(\lim_{x\to -2}(p(x)+r(x)+s(x)),\)</span> <span class="math inline">\(\lim _{x\to -2}p(x)r(x)s(x),\)</span> and <span class="math inline">\(\lim _{x\to -2}\left(\frac{-4p(x)+5 r(x)}{s(x)}\right).\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.18 </strong></span>Using limit laws evaluate the limit, <span class="math inline">\(\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}\)</span> where <span class="math inline">\(f(x)=x^2\)</span> and <span class="math inline">\(x=1.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.19 </strong></span>Using limit laws evaluate the limit, <span class="math inline">\(\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}\)</span> where <span class="math inline">\(f(x)=3x-4\)</span> and <span class="math inline">\(x=2.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.20 </strong></span>If <span class="math inline">\(\lim _{x\to -2}\frac{f(x)}{x^2}=1,\)</span> find <span class="math inline">\(\lim _{x\to -2}f(x)\)</span> and <span class="math inline">\(\lim _{x\to -2}\frac{f(x)}{x}.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.21 </strong></span>If <span class="math inline">\(\lim _{x\to 2}\frac{f(x)-5}{x-2}=3,\)</span> find <span class="math inline">\(\lim _{x\to 2}f(x).\)</span> Also if <span class="math inline">\(\lim _{x\to 2}\frac{f(x)-5}{x-2}=4\)</span> find <span class="math inline">\(\lim _{x\to 2}f(x).\)</span></p>
+</div>
+</section>
+<section id="techniques-for-finding-limits" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="techniques-for-finding-limits"><span class="header-section-number">1.7</span> Techniques for Finding Limits</h2>
+</section>
+<section id="calculating-limits-using-limit-theorems" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="calculating-limits-using-limit-theorems"><span class="header-section-number">1.8</span> Calculating Limits Using Limit Theorems</h2>
+<p>In this topic we concentrate not on the formal definition of a limit of a function of one variable but rather give several examples which emphasis algebra and trigonometry techniques to evaluate limits of functions using basic limit theorems.</p>
+<p>::: {#thm- } [Limit Theorems] For any real number <span class="math inline">\(c,\)</span> suppose the functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> both have finite limits at <span class="math inline">\(x=c.\)</span> Then</p>
+<ul>
+<li>(Constant) <span class="math inline">\(\lim _{x\to c} k=k\)</span> for any constant <span class="math inline">\(k\)</span></li>
+<li>(Limit of <span class="math inline">\(x\)</span> ) <span class="math inline">\(\lim _{x\to c} x=c\)</span></li>
+<li>(Multiple) <span class="math inline">\(\lim _{x\to c}k f(x)=k \lim _{x\to c}f(x)\)</span></li>
+<li>(Sum) <span class="math inline">\(\lim _{x\to c}[f(x)+g(x)]=\lim _{x\to c}f(x)+\lim _{x\to c}g(x)\)</span></li>
+<li>(Difference) <span class="math inline">\(\lim _{x\to c}[f(x)-g(x)]=\lim _{x\to c}f(x)-\lim _{x\to c}g(x)\)</span></li>
+<li>(Product) <span class="math inline">\(\lim _{x\to c}[f(x)g(x)]=\left( \lim _{x\to c}f(x) \right)\left( \lim _{x\to c}g(x) \right)\)</span></li>
+<li>(Quotient) <span class="math inline">\(\lim _{x\to c}[f(x)/g(x)]=\left( \lim _{x\to c}f(x) \right)/\left( \lim _{x\to c}g(x) \right)\)</span></li>
+<li>(Power) <span class="math inline">\(\lim _{x\to c}[f(x)]^n=\left( \lim _{x\to c}f(x) \right){}^n\)</span> where <span class="math inline">\(n\)</span> is a rational number and whenever the limit on the right exists</li>
+<li>(Polynomial) <span class="math inline">\(\lim _{x\to c}P(x)=P(c)\)</span> for any polynomial <span class="math inline">\(P\)</span></li>
+<li>(Rational) <span class="math inline">\(\lim _{x\to c}R(x)=R(c)\)</span> for any rational function <span class="math inline">\(R\)</span> where <span class="math inline">\(c\)</span> is in the domain of <span class="math inline">\(R.\)</span> :::</li>
+</ul>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.9 </strong></span>Find the limit of <span class="math inline">\(f(x)=\frac{2x^3-5x+8}{x^2-3}\)</span> at <span class="math inline">\(x=3.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By using several limit rules, we have <span class="math display">\[\begin{align*}
+&amp; \lim _{x\to 3}\frac{2x^3-5x+8}{x^2-3}
+=\frac{\lim _{x\to 3}\left(2x^3-5x+8\right)}{\lim _{x\to 3}\left(x^2-3\right)} \\
+&amp; \qquad =\frac{\lim _{x\to 3}\left(2x^3\right)-\lim _{x\to 3}(5x)+\lim _{x\to 3}(8)}{\lim _{x\to 3}\left(x^2\right)-\lim _{x\to 3}(3)} \\
+&amp; \qquad =\frac{2 \lim _{x\to 3}\left(x^3\right)- 5\lim _{x\to 3}(x)+8}{\lim _{x\to 3}\left(x^2\right)-3} \\
+&amp; \qquad =\frac{2 \left(\lim _{x\to 3} x\right){}^3- 5(3)+8}{\left(\lim _{x\to 3}x\right){}^2-3}
+=\frac{2 (3)^3- 5(3)+8}{(3)^2-3}
+=\frac{47}{6}
+\end{align*}\]</span> Notice this is the same as evaluating the rational function <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=3\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.10 </strong></span>Compute the limit of <span class="math inline">\(f(x)=\frac{2x^3+x^2-16x+12}{x^2-4}\)</span> at <span class="math inline">\(x=2.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By using several limit rules, we have <span class="math display">\[\begin{align*}
+&amp; \lim _{x\to 2}\frac{2x^3+x^2-16x+12}{x^2-4}
+=\lim _{x\to 2}\frac{(x-2)\left(2x^2+5x-6\right)}{(x-2)(x+2)} \\
+&amp; \qquad  =\lim _{x\to 2}\frac{\left(2x^2+5x-6\right)}{(x+2)}  
+=\frac{\left(2(2)^2+5(2)-6\right)}{((2)+2)}
+=3.
+\end{align*}\]</span> In the previous example notice that we used <span class="math display">\[\begin{equation}\label{limeq}
+\lim _{x\to 2}\frac{(x-2)\left(2x^2+5x-6\right)}{(x-2)(x+2)}=\lim _{x\to 2}\frac{\left(2x^2+5x-6\right)}{(x+2)}.
+\end{equation}\]</span> Now it is not true that the functions <span class="math display">\[
+f(x)=\frac{\left(2x^2+5x-6\right)}{(x+2)} \qquad \text{and} \qquad g(x)=\frac{\left(2x^2+5x-6\right)}{(x+2)}
+\]</span> are the same function because they have different domains. But the above equality is true because <span class="math inline">\(x\)</span> is approaching 2, and not equal to 2. So the point is,because <span class="math inline">\(f(x)=g(x)\)</span> when <span class="math inline">\(x\neq 2\)</span> we can indeed say <span class="math inline">\(\eqref{limeq}\)</span> holds. This is an important part of understanding limits.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.11 </strong></span>Suppose <span class="math inline">\(\lim _{x\to -2^-}f(x)=2,\)</span> <span class="math inline">\(\lim _{x\to -2^+}f(x)=4,\)</span> <span class="math inline">\(\lim _{x\to -2^-}g(x)=0,\)</span> and <span class="math inline">\(\lim _{x\to -2^+}g(x)=0,\)</span> find <span class="math display">\[\begin{equation*}
+\lim _{x\to -2}[f(x)+g(x)]
+\quad
+\text{and}
+\quad
+\lim _{x\to -2}[f(x)g(x)].
+\end{equation*}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math display">\[\lim _{x\to -2^-}f(x)\neq \lim _{x\to -2^+}f(x)
+\]</span> we know <span class="math inline">\(\lim _{x\to -2}f(x)\)</span> does not exist, but this does not imply anything about <span class="math inline">\(\lim _{x\to -2}[f(x)+g(x)]\)</span> nor <span class="math inline">\(\lim _{x\to -2}[f(x)g(x)].\)</span><br>
+To find these limits we first find the two one-sided limits, <span class="math display">\[
+\lim _{x\to -2^-}[f(x)+g(x)]=\lim _{x\to -2^-}f(x)+\lim _{x\to -2^-}g(x)=2+0=2
+\]</span> <span class="math display">\[
+\lim _{x\to -2^+}[f(x)+g(x)]=\lim _{x\to -2^+}f(x)+\lim _{x\to -2^+}g(x)=4+0=4
+\]</span> and since <span class="math display">\[
+\lim _{x\to -2^-}[f(x)+g(x)]\neq \lim _{x\to -2^+}[f(x)+g(x)]
+\]</span> we can now say the two-sided limit <span class="math inline">\(\lim _{x\to -2}[f(x)+g(x)]\)</span> does not exist. Similarly, <span class="math display">\[
+\lim _{x\to -2^-}[f(x)g(x)]=\left( \lim _{x\to -2^-}f(x) \right)\left( \lim _{x\to -2^-}g(x)\right)=2(0)=0\]</span> <span class="math display">\[
+\lim _{x\to -2^+}[f(x)g(x)]=\left( \lim _{x\to -2^+}f(x) \right)\left( \lim _{x\to -2^+}g(x) \right)=4(0)=0
+\]</span> and therefore, <span class="math inline">\(\displaystyle\lim _{x\to -2}[f(x)g(x)]=0.\)</span></p>
+</div>
+</section>
+<section id="special-trigonometric-limits" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="special-trigonometric-limits"><span class="header-section-number">1.9</span> Special Trigonometric Limits</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.2 </strong></span>The following trigonometric limits hold: <span class="math display">\[
+\lim _{x\to 0}\frac{\sin  x}{x}=1\text\qquad \text{and} \qquad \lim _{x\to 0} \frac{\cos  x-1}{x}=0
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.12 </strong></span>Find <span class="math inline">\(\lim _{x\to 0} \frac{\sin ^2x}{2 x}.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We have <span class="math inline">\(\lim _{x\to 0}\frac{\sin ^2 x}{2x}=\lim _{x\to 0}\frac{\sin x}{2}\frac{\sin x}{x}=\frac{0}{2}(1)=0.\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.13 </strong></span>Find <span class="math inline">\(\lim _{x\to 0}\frac{\sin x(1-\cos x)}{2 x^2}.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We have <span class="math display">\[\begin{align*}
+&amp; \lim _{x\to 0}\frac{\sin  x(1-\cos  x)}{2 x^2}
+=\lim _{x\to 0} \frac{1}{2}\frac{\sin  x}{x}\frac{1-\cos  x}{x} \\
+&amp; \qquad =\frac{1}{2}\lim _{x\to 0} \left(\frac{\sin  x}{x}\right)\lim _{x\to 0}\left(\frac{1-\cos  x}{x}\right)
+=\frac{1}{2}(1)(0)
+=0.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.14 </strong></span>Find <span class="math inline">\(\lim _{x\to 0} \frac{\sin 5x}{\sin 4x}.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We have <span class="math display">\[\begin{align*}
+&amp; \lim _{x\to 0} \frac{\sin  5x}{\sin  4x}
+=\lim _{x\to 0} \left(\frac{\sin  5x}{x}\right)\left(\frac{x}{\sin  4x}\right) \\
+&amp; \qquad =\lim _{x\to 0} \left(\frac{ 5\sin  5x}{5x}\right)\left(\frac{4x}{4 \sin  4x}\right) \\
+&amp; \qquad =\lim _{x\to 0} \left(\frac{ 5\sin  5x}{5x}\right)\lim _{x\to 0}\left(\frac{4x}{4 \sin  4x}\right)
+=\frac{5}{4}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.15 </strong></span>Given <span class="math inline">\(g(x)=-27-9 x-6 x^2+x^3+x^4\)</span> and <span class="math inline">\(h(x)=21-16 x-3 x^2+2 x^3,\)</span> compute the limit <span class="math inline">\(g(x)/h(x)\)</span> at <span class="math inline">\(x=3.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Try a factor of <span class="math inline">\((x-3)\)</span> from <span class="math inline">\(g(x)\)</span> obtaining <span class="math display">\[
+g(x)=(x-3)\left(9+6 x+4 x^2+x^3\right)
+\]</span> and a graph of <span class="math inline">\(h\)</span> is which also inspires to try to factor of <span class="math inline">\((x-3)\)</span> from <span class="math inline">\(h(x)\)</span> obtaining <span class="math inline">\(h(x)=(x-3)\left(2x^2+3x-7\right).\)</span><br>
+Therefore, <span class="math display">\[\begin{align*}
+&amp; \lim _{x\to 3}\frac{-27-9 x-6 x^2+x^3+x^4}{21-16 x-3 x^2+2 x^3}
+=\lim _{x\to 3}\frac{(x-3)\left(9+6 x+4 x^2+x^3\right)}{(x-3)\left(2x^2+3x-7\right)} \\
+&amp; \qquad =\lim _{x\to 3}\frac{9+6 x+4 x^2+x^3}{2x^2+3x-7}
+=\frac{9+6 (3)+4 (3)^2+(3)^3}{2(3)^2+3(3)-7}
+=\frac{9}{2}.
+\end{align*}\]</span></p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.3 </strong></span>If <span class="math inline">\(c\)</span> is any real number in the domain of the given function, then <span class="math display">\[
+\begin{array}{ccccc}
+\lim _{x\to c} \cos  x=\cos  c &amp; &amp; \lim _{x\to c} \sin  x=\sin  c &amp; &amp; \lim _{x\to c} \tan  x=\tan  c \\  
+\lim _{x\to c} \sec  x=\sec  c  &amp; &amp; \lim _{x\to c} \csc  x=\csc  c &amp; &amp; \lim _{x\to c} \cot  x=\cot  c.
+\end{array}
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.16 </strong></span>Compute the limit of <span class="math inline">\(f(x)=\frac{x}{\sin x-2 \cos x}\)</span> at <span class="math inline">\(x=\pi .\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By using several limit rules, we have <span class="math display">\[
+\lim _{x\to \pi }\frac{x}{\sin  x-2 \cos  x}=\frac{\pi }{\sin  \pi -2\cos  \pi }=\frac{\pi }{0-2(-1)}=\frac{\pi }{2}.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.17 </strong></span>Compute <span class="math inline">\(\lim _{x\to \pi /4}\frac{1-\tan x}{\sin x- \cos x}.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We have <span class="math display">\[\begin{align*}
+&amp; \lim _{x\to \pi /4}\frac{1-\tan  x}{\sin  x- \cos  x}
+=\lim _{x\to \pi /4}\frac{1-\frac{\sin  x}{\cos  x}}{\sin  x- \cos  x} \\
+&amp; \qquad =\lim _{x\to \pi /4}\frac{\frac{\cos  x-\sin  x}{\cos  x}}{\sin  x- \cos  x}   
+=\lim _{x\to \pi /4}\frac{\cos  x-\sin  x}{\cos  x}\frac{1}{\sin  x- \cos  x} \\
+&amp; \qquad  =\lim _{x\to \pi /4}\frac{-1}{\cos  x}
+=\lim _{x\to \pi /4}\frac{-1}{\frac{1}{\sqrt{2}}}
+=-\sqrt{2}
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.18 </strong></span>Compute the limit of <span class="math inline">\(f(x)=\frac{\tan x}{\sin x}\)</span> as <span class="math inline">\(x\to0.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We have <span class="math inline">\(\lim _{x\to 0}\frac{\tan x}{\sin x}\)</span> <span class="math inline">\(=\lim _{x\to 0} \left(\frac{\sin x}{\cos x}\right)\left(\frac{1}{\sin x}\right)\)</span> <span class="math inline">\(=\lim _{x\to 0} \frac{1}{\cos x}\)</span> <span class="math inline">\(=1.\)</span></p>
+</div>
+</section>
+<section id="using-rationalization" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="using-rationalization"><span class="header-section-number">1.10</span> Using Rationalization</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.19 </strong></span>Compute: <span class="math inline">\(\lim _{x\to 1}\frac{\sqrt{x}-1}{x-1}.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We have <span class="math display">\[\begin{align*}
+\lim _{x\to 1}\frac{\sqrt{x}-1}{x-1}=\lim _{x\to 1}\frac{\sqrt{x}-1}{x-1}\frac{\sqrt{x}+1}{\sqrt{x}+1}=\lim _{x\to 1}\frac{1}{\sqrt{x}+1}=\frac{1}{\sqrt{1}+1}=\frac{1}{2}.
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.20 </strong></span>Compute the limit of <span class="math inline">\(f(x)=\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}\)</span> as <span class="math inline">\(x\to\pi .\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We have <span class="math display">\[\begin{align*}
+&amp; \lim _{x\to \pi }\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}
+=\lim _{x\to \pi }\left(\frac{x-\pi }{\sqrt{x}-\sqrt{\pi }}\right)\left(\frac{\sqrt{x}+\sqrt{\pi }}{\sqrt{x}+\sqrt{\pi }}\right) \\
+&amp; \qquad =\lim _{x\to \pi }\frac{(x-\pi )\left(\sqrt{x}+\sqrt{\pi }\right)}{x-\pi }
+=2\sqrt{\pi }
+\end{align*}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.21 </strong></span>Compute the limit of <span class="math inline">\(f(x)=\frac{x-1}{\sqrt[3]{x}-1}\)</span> as <span class="math inline">\(x\to 1.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We have <span class="math display">\[\begin{align*}
+&amp; \lim _{x\to 1}\frac{x-1}{\sqrt[3]{x}-1}
+=\lim _{x\to 1}\left(\frac{x-1}{\sqrt[3]{x}-1}\right)\left(\frac{\sqrt[3]{x^2}+\sqrt[3]{x}+1}{\sqrt[3]{x^2}+\sqrt[3]{x}+1}\right) \\
+&amp; \quad  =\lim _{x\to 1}\frac{(x-1)\left(\sqrt[3]{x^2}+\sqrt[3]{x}+1\right)}{x-1}
+=\lim _{x\to 1}\left(\sqrt[3]{x^2}+\sqrt[3]{x}+1\right)
+=3.
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="limits-of-piecewise-functions" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="limits-of-piecewise-functions"><span class="header-section-number">1.11</span> Limits of Piecewise Functions</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.22 </strong></span>Find <span class="math display">\[\begin{equation}
+\lim _{x\to 0}
+\begin{cases}
+2(x+1) &amp; x&lt;3 \\
+4 &amp; x=3 \\
+x^2-1 &amp; x&gt;3
+\end{cases}
+\end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(x\to 0\)</span> we know that <span class="math inline">\(x&lt;3\)</span> and so we use <span class="math inline">\(2(x+1)\)</span> to evaluate the limit of the piecewise function, as follows, <span class="math display">\[\begin{equation}
+\lim _{x\to 0}
+\begin{cases}
+2(x+1) &amp; x&lt;3 \\ 4 &amp; x=3 \\ x^2-1 &amp; x&gt;3.
+\end{cases}
+=\lim _{x\to 0} 2(x+1)=2
+\end{equation}\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.23 </strong></span>At <span class="math inline">\(x=7,\)</span> compute the limit of<br>
+<span class="math display">\[\begin{equation}
+f(x)=
+\begin{cases}
+2\left(x-x^2\right) &amp; x&lt;7 \\
+-83 &amp; x=7 \\
+(x-7)^2-84 &amp; x&gt;7
+\end{cases}
+\end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since the function is pieced together at <span class="math inline">\(x=7\)</span> we will evaluate two one sided limit. First the limit from the left, we have <span class="math display">\[
+\lim_{x\to 7^-}f(x)=-84
+\]</span> and for the limit from the right we have <span class="math display">\[
+\lim _{x\to 7^+}f(x)=-84.
+\]</span><br>
+Since <span class="math display">\[
+\lim _{x\to 7^-} f(x)=\lim _{x\to 7^+}f(x)
+\]</span> we know the two-sided limit must exist and we have <span class="math display">\[
+\lim _{x\to 7}f(x)=-84
+\]</span> even though <span class="math inline">\(f(7)=-83.\)</span></p>
+</div>
+</section>
+<section id="squeeze-theorem" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="squeeze-theorem"><span class="header-section-number">1.12</span> Squeeze Theorem</h2>
+<p>Next we state the squeeze theorem and through an example show how to use it. Basically, the idea is to bound a function on both sides by functions whose limits can be more easily computed; and thus in the process squeeze the value of the limit of the original function out.</p>
+<p>::: {#thm- } <a href="#squeeze-theorem">Squeeze Theorem</a> Let <span class="math inline">\(f, g\)</span> and <span class="math inline">\(h\)</span> be functions of <span class="math inline">\(x\)</span> . If both of the following conditions hold</p>
+<ul>
+<li><span class="math inline">\(g(x)\leq f(x)\leq h(x)\)</span> on an open interval containing <span class="math inline">\(c\)</span> and</li>
+<li><span class="math inline">\(\lim _{x\to c}g(x) =\lim _{x\to c}h(x) =L\)</span></li>
+</ul>
+<p>then <span class="math inline">\(\lim _{x\to c}f(x)=L.\)</span><br>
+:::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.24 </strong></span>Use the squeeze rule to find the limit of <span class="math inline">\(f(x)=x \cos \left(\frac{1}{x}\right)\)</span> as <span class="math inline">\(x\to 0^+.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We are interested in this function around <span class="math inline">\(x&gt;0\)</span> . Knowing that the cosine function is always less than or equal to one, we see that when <span class="math inline">\(-1\leq x\leq 1\)</span> we have <span class="math display">\[
+-x\leq f(x)=x \cos \left(\frac{1}{x}\right)\leq x.
+\]</span> Since <span class="math inline">\(\lim _{x\to 0} -x=\lim _{x\to 0} x=0\)</span> we have <span class="math inline">\(\lim _{x\to 0}x \cos \left(\frac{1}{x}\right)=0\)</span> by the squeeze theorem.</p>
+</div>
+</section>
+<section id="exercises-1" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="exercises-1"><span class="header-section-number">1.13</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.22 </strong></span>Find the following limits.</p>
+<ul>
+<li><span class="math inline">\(\lim _{x\to -7}(2x+5)\)</span></li>
+<li><span class="math inline">\(\lim _{x\to -2}\left(x^3-2x^2+4x+8\right)\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 2}\left(\frac{x+3}{x+6}\right)\)</span></li>
+<li><span class="math inline">\(\lim _{y\to 2}\left(\frac{y+2}{y^2+5y+6}\right)\)</span></li>
+<li><span class="math inline">\(\lim _{y\to -3}(5-y)^{4/3}\)</span></li>
+<li><span class="math inline">\(\lim _{h\to 0}\left(\frac{5}{\sqrt{5h+4}+2}\right)\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 5}\left(\frac{x-5}{x^2-25}\right)\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 2}\left(\frac{x^2-7x+10}{x-2}\right)\)</span></li>
+<li><span class="math inline">\(\lim _{x\to -2}\left(\frac{-2x-4}{x^3+2x^2}\right)\)</span></li>
+<li><span class="math inline">\(\lim _{x\to 1}\left(\frac{x-1}{\sqrt{x+3}-2}\right)\)</span></li>
+<li><span class="math inline">\(\lim _{x\to -2}\left(\frac{x+2}{\sqrt{x^2+5}-3}\right)\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.23 </strong></span>Suppose <span class="math inline">\(\lim _{x\to 4}f(x)=0\)</span> and <span class="math inline">\(\lim _{x\to 4}g(x)=3.\)</span> Using limit laws find the limits <span class="math inline">\(\lim _{x\to 4}(g(x)+3),\)</span> <span class="math inline">\(\lim _{x\to 4}xf(x),\)</span> <span class="math inline">\(\lim _{x\to 4}(g(x))^2,\)</span> and <span class="math inline">\(\lim _{x\to 4}\frac{g(x)}{f(x)+1}.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.24 </strong></span>Suppose that <span class="math inline">\(\lim _{x\to -2}p(x)=4,\)</span> <span class="math inline">\(\lim _{x\to -2}r(x)=0,\)</span> and <span class="math inline">\(\lim _{x\to -2}s(x)=-3.\)</span> Using limit laws find the limits, <span class="math inline">\(\lim_{x\to -2}(p(x)+r(x)+s(x)),\)</span> <span class="math inline">\(\lim _{x\to -2}p(x)r(x)s(x),\)</span> and <span class="math inline">\(\lim _{x\to -2}\left(\frac{-4p(x)+5 r(x)}{s(x)}\right).\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.25 </strong></span>Using limit laws evaluate the limit, <span class="math inline">\(\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}\)</span> where <span class="math inline">\(f(x)=x^2\)</span> and <span class="math inline">\(x=1.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.26 </strong></span>Using limit laws evaluate the limit, <span class="math inline">\(\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}\)</span> where <span class="math inline">\(f(x)=3x-4\)</span> and <span class="math inline">\(x=2.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.27 </strong></span>If <span class="math inline">\(\lim _{x\to -2}\frac{f(x)}{x^2}=1,\)</span> find <span class="math inline">\(\lim _{x\to -2}f(x)\)</span> and <span class="math inline">\(\lim _{x\to -2}\frac{f(x)}{x}.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.28 </strong></span>If <span class="math inline">\(\lim _{x\to 2}\frac{f(x)-5}{x-2}=3,\)</span> find <span class="math inline">\(\lim _{x\to 2}f(x).\)</span> Also if <span class="math inline">\(\lim _{x\to 2}\frac{f(x)-5}{x-2}=4\)</span> find <span class="math inline">\(\lim _{x\to 2}f(x).\)</span></p>
+</div>
+</section>
+<section id="continuous-functions" class="level2" data-number="1.14">
+<h2 data-number="1.14" class="anchored" data-anchor-id="continuous-functions"><span class="header-section-number">1.14</span> Continuous Functions</h2>
+</section>
+<section id="continuity-at-a-point" class="level2" data-number="1.15">
+<h2 data-number="1.15" class="anchored" data-anchor-id="continuity-at-a-point"><span class="header-section-number">1.15</span> Continuity at a Point</h2>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.1 </strong></span>A function is <strong>continuous</strong> at a point <span class="math inline">\(c\)</span> means</p>
+<ul>
+<li><span class="math inline">\(f(c)\)</span> is defined,</li>
+<li><span class="math inline">\(\lim _{x\to c}f(x)\)</span> exists, and</li>
+<li><span class="math inline">\(\lim _{x\to c}f(x)=f(c).\)</span></li>
+</ul>
+</div>
+</section>
+<section id="discontinuity" class="level2" data-number="1.16">
+<h2 data-number="1.16" class="anchored" data-anchor-id="discontinuity"><span class="header-section-number">1.16</span> Discontinuity</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.25 </strong></span>Find three examples of how a <strong>discontinuity</strong> might arise.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>First, the function <span class="math display">\[
+  \displaystyle f(x)=\frac{x^2-2x+1}{x-1}
+\]</span> is discontinuous at <span class="math inline">\(x=1\)</span> because <span class="math inline">\(f(1)\)</span> is not defined. So one type of discontinuity is a <strong>hole</strong> in the function.</p>
+<p>Secondly, the function <span class="math display">\[
+f(x)=
+\begin{cases}
+x^2+1 &amp; x\geq 0 \\ -x^2-2 &amp; x&lt;0
+\end{cases}
+\]</span> is discontinuous at <span class="math inline">\(x=0\)</span> because <span class="math inline">\(\lim _{x\to 0^-}f(x)=-2\)</span> and <span class="math inline">\(\lim _{x\to 0^+}f(x)=1;\)</span> thus <span class="math inline">\(\lim _{x\to 0}f(x)\)</span> does not exist and so <span class="math inline">\(f\)</span> has a discontinuity at <span class="math inline">\(x=0.\)</span> This type of discontinuity is called a <strong>jump</strong>.</p>
+<p>Thirdly, the function <span class="math display">\[
+f(x)=\frac{x-1}{x-2}
+\]</span> is discontinuous at <span class="math inline">\(x=2\)</span> because <span class="math inline">\(f(2)\)</span> is not defined and this type of discontinuity is called a <strong>pole</strong> because $f(x)+$ as <span class="math inline">\(x\to 2^+\)</span>.</p>
+</div>
+</section>
+<section id="continuous-functions-1" class="level2" data-number="1.17">
+<h2 data-number="1.17" class="anchored" data-anchor-id="continuous-functions-1"><span class="header-section-number">1.17</span> Continuous Functions</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.4 </strong></span>If <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are functions that are continuous at <span class="math inline">\(x=c\)</span> then <span class="math inline">\(f\pm g,\)</span> <span class="math inline">\(f g,\)</span> <span class="math inline">\(f/g,\)</span>and <span class="math inline">\(f\circ g\)</span> are continuous at <span class="math inline">\(x=c,\)</span> provided that <span class="math inline">\(c\)</span> is in the domain of the function.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.26 </strong></span>Give some examples of continuous functions.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For example, the functions <span class="math inline">\(2x^2-2x+5,\)</span> (polynomial), <span class="math inline">\(\displaystyle\frac{x-1}{x}\)</span> (rational), <span class="math inline">\(\csc x\)</span> (trigonometric), and <span class="math inline">\(\sec ^{-1}x\)</span> (inverse trigonometric) are continuous on their domains. Also the functions <span class="math display">\[
+\displaystyle 2x^2-2x+5+\frac{x-1}{x}(\csc  x),
+\]</span> <span class="math inline">\(\displaystyle\sec ^{-1}\left(\frac{x-1}{x}\right),\)</span> and <span class="math inline">\(\displaystyle\left(2x^2-2x+5\right)\left(\frac{x-1}{x}\right)\)</span> are continuous functions on their domains.</p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.5 </strong></span>If <span class="math inline">\(f\)</span> is a</p>
+<ul>
+<li>polynomial function,</li>
+<li>rational function,</li>
+<li>trigonometric function, or</li>
+<li>inverse trigonometric function,</li>
+</ul>
+<p>then <span class="math inline">\(f\)</span> is continuous where it is defined.</p>
+</div>
+<p>::: {#thm- } [Composition Limit Theorem] If <span class="math inline">\(\lim _{x\to c}g(x)=L\)</span> and <span class="math inline">\(f\)</span> is a continuous function at <span class="math inline">\(L,\)</span> then <span class="math display">\[
+\lim _{x\to c}(f\circ g)(x)=f(L).
+\]</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.27 </strong></span>Use the <strong>composition</strong> limit theorem to evaluate the following limits. <span class="math display">\[
+\lim _{x\to 3} \left(x^2+3\right)^2
+\quad\text{and}\quad
+\lim _{x\to \pi /4} \sin ^4 x.
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>By the composition limit theorem, we have <span class="math display">\[
+\lim _{x\to 3}\left(x^2+3\right)^2
+=\left(\lim _{x\to 3}\left(x^2+3\right)\right)^2
+=12^2
+=144.
+\]</span> By the composition limit theorem, we have<br>
+<span class="math display">\[
+\lim _{x\to \pi /4}\sin ^4x
+=\left(\lim _{x\to \pi /4}\sin  x\right){}^4
+=\left(\frac{\sqrt{2}}{2}\right)^4
+=\left(\frac{1}{4}\right).
+\]</span></p>
+</div>
+</section>
+<section id="one-sided-continuity" class="level2" data-number="1.18">
+<h2 data-number="1.18" class="anchored" data-anchor-id="one-sided-continuity"><span class="header-section-number">1.18</span> One-Sided Continuity</h2>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.2 </strong></span>The function <span class="math inline">\(f\)</span> is <strong>continuous from the right</strong> at <span class="math inline">\(c\)</span> if and only if <span class="math display">\[
+\lim _{x\to c^+}f(x)=f(c)
+\]</span> and it is <strong>continuous from the left</strong> at <span class="math inline">\(c\)</span> if and only if <span class="math display">\[
+\lim _{x\to c^-}f(x)=f(c).
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.28 </strong></span>Give an example of a function that is continuous from the right (or <strong>right continuous</strong> ) at <span class="math inline">\(x=0.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The function <span class="math inline">\(f(x)=\sqrt{x}\)</span> is continuous from the right at <span class="math inline">\(x=0\)</span> because <span class="math inline">\(\lim _{x\to 0^+}\sqrt{x}=0.\)</span></p>
+</div>
+</section>
+<section id="determining-parameters-for-continuity" class="level2" data-number="1.19">
+<h2 data-number="1.19" class="anchored" data-anchor-id="determining-parameters-for-continuity"><span class="header-section-number">1.19</span> Determining Parameters for Continuity</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.29 </strong></span>Find constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> so that <span class="math display">\[
+\begin{cases}
+a x^2+b &amp; x&gt;2 \\ 4 &amp; x=2 \\ x^2-a x+b &amp; x&lt;2
+\end{cases}
+\]</span> is continuous on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(f\)</span> is defined on <span class="math inline">\(\mathbb{R},\)</span> and <span class="math inline">\(f\)</span> is continuous for all <span class="math inline">\(x\neq 2\)</span> for any <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> that we choose, itis left to find an <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(\lim _{x\to 2^+}a x^2+b=4\)</span> and <span class="math inline">\(\lim _{x\to 2^-}\left(x^2-a x+b\right)=4.\)</span> Thus we have the system <span class="math inline">\(4 a+b=4\)</span> and <span class="math inline">\(4-2 a+b=4.\)</span> Solving this system we have, <span class="math inline">\(a=2/3\)</span> and <span class="math inline">\(b=4/3.\)</span> :::</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.30 </strong></span>Find constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x=1\)</span> where <span class="math display">\[
+\begin{cases}
+a x+b &amp; x&gt;1 \\ 3 &amp; x=1 \\ x^2-4x+b+3 &amp; x&lt;1
+\end{cases}
+\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>To have continuity at <span class="math inline">\(x=1\)</span> we must have <span class="math inline">\(\lim _{x\to 1^-}f(x)=3\)</span> and <span class="math inline">\(\lim _{x\to 1^+}f(x)=3,\)</span> thus <span class="math inline">\(a (1)+b=3\)</span> and <span class="math inline">\((1)^2-4(1)+b+3=3.\)</span> Therefore, <span class="math inline">\(a+b=3\)</span> and <span class="math inline">\(b=3.\)</span> So <span class="math inline">\(a+3=3\)</span> and <span class="math inline">\(a=0.\)</span></p>
+</div>
+<section id="removable-continuity" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="removable-continuity">Removable Continuity</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.31 </strong></span>Determine the value for which <span class="math inline">\(f(2)\)</span> should be assigned, if any, to have <span class="math display">\[
+\displaystyle f(x)=\sqrt{\frac{x^2-4}{x-2}}
+\]</span> continuous at <span class="math inline">\(x=2.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(\lim _{x\to 2^-}f(x)=2\)</span> and <span class="math inline">\(\lim _{x\to 2^+}f(x)=2\)</span> we have <span class="math inline">\(\lim _{x\to 2}f(x)=2.\)</span> Therefore, if we define <span class="math inline">\(f(2)=2\)</span> the function <span class="math inline">\(f\)</span> will be continuous at <span class="math inline">\(x=2.\)</span></p>
+</div>
+</section>
+<section id="intermediate-value-theorem" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="intermediate-value-theorem">Intermediate Value Theorem</h2>
+<p>::: {#thm- } <a href="#intermediate-value-theorem">Intermediate Value Theorem</a> If <span class="math inline">\(f\)</span> is a continuous function on the closed interval <span class="math inline">\([a,b]\)</span> and <span class="math inline">\(L\)</span> is some number strictly between<span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f(b)\)</span>, then there exists at least one number <span class="math inline">\(c\)</span> on the open interval <span class="math inline">\((a,b)\)</span> such that <span class="math inline">\(f(c)=L.\)</span></p>
+</section>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.32 </strong></span>The population (in thousands) of a colony of bacteria <span class="math inline">\(t\)</span> minutes after the application of a toxin is given by the function <span class="math display">\[
+P(t)=
+\begin{cases}
+t^2+1 &amp; \text{if } 0\leq t&lt;5 \\ -8t+66 &amp; \text{if } t\geq 5
+\end{cases}
+\]</span> &nbsp; - When does the colony die out? - Show that at some time between <span class="math inline">\(t=2\)</span> and <span class="math inline">\(t=7,\)</span> the population is <span class="math inline">\(9,000.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math display">\[
+\lim _{t\to 5^+}P(t)=\lim _{t\to 5^+}(-8t+66)=26
+\]</span> and <span class="math display">\[
+\lim _{t\to 5^-}P(t)=\lim _{t\to 5^-}\left(t^2+1\right)=26\]</span> we know that <span class="math inline">\(P\)</span> is continuous at <span class="math inline">\(t=5\)</span> and thus, also for all <span class="math inline">\(t\geq 0.\)</span> (a) The colony dies out when <span class="math inline">\(-8t+66=0\)</span> which means <span class="math inline">\(t=33/4\approx 8.25.\)</span> Therefore, the colony dies out in 8 minutes and 15 seconds.</p>
+<ol start="2" type="a">
+<li>Since <span class="math inline">\(P(2)=5,\)</span> <span class="math inline">\(P(7)=10,\)</span> and <span class="math inline">\(P\)</span> is continuous on <span class="math inline">\((2,7),\)</span> the intermediate value theorem yields at least one number <span class="math inline">\(c\)</span> between 2 and 7 such <span class="math inline">\(P(c)=9.\)</span> Therefore, there is some time <span class="math inline">\(t=c\)</span> between <span class="math inline">\(t=2\)</span> and <span class="math inline">\(t=7\)</span> such that the population is 9,000.</li>
+</ol>
+</div>
+</section>
+<section id="exercises-2" class="level2" data-number="1.20">
+<h2 data-number="1.20" class="anchored" data-anchor-id="exercises-2"><span class="header-section-number">1.20</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.29 </strong></span>Sketch the graph of the function <span class="math display">\[
+f(x)=
+\begin{cases}
+x^2-1 &amp; -1\leq  x&lt;0 \\ 2x &amp; 0&lt;x&lt;1 \\ 1 &amp; x=1 \\ -2x+4 &amp; 1&lt;x&lt;2 \\ 0 &amp; 2&lt;x&lt;3.
+\end{cases}
+\]</span> Use the graph of the function <span class="math inline">\(f\)</span> to answer the following. &nbsp; - Does <span class="math inline">\(f(-1)\)</span> exist? - Does the limit, <span class="math inline">\(\lim _{x\to -1^+}f(x)\)</span> exist? - Does the limit, <span class="math inline">\(\lim _{x\to -1^+}f(x)=f(-1)\)</span>? - Does <span class="math inline">\(f(1)\)</span> exist? - Does the limit, <span class="math inline">\(\lim _{x\to 1}f(x)\)</span> exist? - Does the limit, <span class="math inline">\(\lim _{x\to 1}f(x)=f(1)\)</span> exist? - Is <span class="math inline">\(f\)</span> defined at <span class="math inline">\(x=2?\)</span> - Is <span class="math inline">\(f\)</span> continuous at <span class="math inline">\(x=2?\)</span> - At what values is <span class="math inline">\(f\)</span> continuous? - What value should be assigned to <span class="math inline">\(f(2)\)</span> , to make the extended function continuous at <span class="math inline">\(x=2?\)</span> - To what new value should <span class="math inline">\(f(1)\)</span> be assigned to remove the discontinuity?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.30 </strong></span>For each of the following functions determine the largest set on which the function will be continuous.</p>
+<ul>
+<li><span class="math inline">\(g(x)=\frac{x+1}{x^2-4x+3}\)</span></li>
+<li><span class="math inline">\(g(x)=\frac{1}{|x|+1}-\frac{x^2}{2}\)</span></li>
+<li><span class="math inline">\(g(x)=\frac{\sqrt{x^4+1}}{1+\sin ^2x}\)</span></li>
+<li><span class="math inline">\(g(x)=\sqrt[4]{3x-1}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.31 </strong></span>For each of the following functions find constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> so that the function will be continuous for all <span class="math inline">\(x\)</span> in the domain.</p>
+<ul>
+<li><span class="math inline">\(f(x)=\begin{cases} \frac{\tan a x}{\tan b x} &amp; x&lt;0 \\ 4 &amp; x=0 \\ a x+b &amp; x&gt;0 \end{cases}\)</span></li>
+<li><span class="math inline">\(f(x)=\begin{cases}\frac{\sqrt{a x+b}-1}{x} &amp; x\neq 0 \\ 1 &amp; x=0\end{cases}\)</span><br>
+</li>
+<li><span class="math inline">\(f(x)=\begin{cases}a x+3 &amp; x&lt;1 \\ 5 &amp; x=1 \\ x^2+b &amp; x&gt;1\end{cases}\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.32 </strong></span>Let <span class="math inline">\(u(x)=x\)</span> and <span class="math inline">\(f(x)=\begin{cases}0 &amp; x\neq 0 \\ 1 &amp; x=0\end{cases}\)</span>. Show, for this given <span class="math inline">\(u\)</span> and <span class="math inline">\(f\)</span> , that <span class="math display">\[
+\lim _{x\to 0}f[u(x)]\neq f\left(\lim _{x\to 0}u(x)\right).
+\]</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.33 </strong></span>If a function <span class="math inline">\(f\)</span> is not continuous at <span class="math inline">\(x=c\)</span> , but can be made continuous at <span class="math inline">\(x=c\)</span> by being assigned a new value of that point, it is said to have a at <span class="math inline">\(x=c.\)</span> Which of the following functions have a removable discontinuity at <span class="math inline">\(x=c\)</span> ?</p>
+<ul>
+<li><span class="math inline">\(f(x)=\frac{2x^2+x-15}{x+3}\)</span> at <span class="math inline">\(c=-3\)</span></li>
+<li><span class="math inline">\(f(x)=\frac{x-2}{|x-2|}\)</span> at <span class="math inline">\(c=2\)</span></li>
+<li><span class="math inline">\(f(x)=\frac{2-\sqrt{x}}{4-x}\)</span> at <span class="math inline">\(c=4\)</span></li>
+<li><span class="math inline">\(f(x)=\frac{2-x}{4-\sqrt{x}}\)</span> at <span class="math inline">\(c=16\)</span></li>
+</ul>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.34 </strong></span>Prove that the function <span class="math inline">\(f(x)=x^3-x^2+x+1\)</span> must have at least one real root.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.35 </strong></span>Prove that the function <span class="math inline">\((x)=\sqrt{x+3}-e^x\)</span> must have at least one real root.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.36 </strong></span>Find a function(s) with the following properties. (a) Find functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> such that <span class="math inline">\(f\)</span> is discontinuous at <span class="math inline">\(x=1\)</span> but <span class="math inline">\(f g\)</span> is continuous there. (b) Give an example of a function defined for all real numbers that is continuous at only one point.</p>
+</div>
+</section>
+<section id="tangent-lines-and-rates-of-change" class="level2" data-number="1.21">
+<h2 data-number="1.21" class="anchored" data-anchor-id="tangent-lines-and-rates-of-change"><span class="header-section-number">1.21</span> Tangent Lines and Rates of Change</h2>
+</section>
+<section id="average-rate-of-change" class="level2" data-number="1.22">
+<h2 data-number="1.22" class="anchored" data-anchor-id="average-rate-of-change"><span class="header-section-number">1.22</span> Average Rate of Change</h2>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.3 </strong></span>Suppose <span class="math inline">\(y\)</span> is a function of <span class="math inline">\(x,\)</span> say <span class="math inline">\(y=f(x).\)</span><br>
+When a change in the variable is made from <span class="math inline">\(x\)</span> to <span class="math inline">\(x+\Delta x,\)</span> there is a corresponding change to the <span class="math inline">\(y,\)</span> namely <span class="math inline">\(\Delta y=f(x+\Delta x)-f(x)\)</span>. The <strong>average rate of change</strong> of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> is <span class="math display">\[
+\frac{\Delta  y}{\Delta  x}=\frac{f(x+\Delta x)-f(x)}{\Delta  x}
+\]</span> and is also known as the <strong>difference quotient</strong> .</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.33 </strong></span>Let <span class="math inline">\(f(x)=\sqrt{x^2-9}.\)</span> Find the average rate of change from <span class="math inline">\(x=3\)</span> to <span class="math inline">\(x=6.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The average rate of change of <span class="math inline">\(f\)</span> from <span class="math inline">\(x=3\)</span> to <span class="math inline">\(x=6\)</span> is given by, <span class="math display">\[
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}=\frac{f(6)-f(3)}{6-3}=\frac{\sqrt{6^2-9}-\sqrt{3^2-9}}{3}= \sqrt{3}
+\]</span> which is also the slope of the secant line through <span class="math inline">\((3,0)\)</span> and <span class="math inline">\(\left(6,3 \sqrt{3}\right).\)</span></p>
+</div>
+<p>In general, suppose an object moves along a straight line according to an equation of motion <span class="math inline">\(s=f(t),\)</span> where <span class="math inline">\(s\)</span> is the ( <strong>displacement} (\index{directed distance</strong> ) of the object from the origin at time <span class="math inline">\(t.\)</span><br>
+The function <span class="math inline">\(f\)</span> that describes the motion is called the <strong>position function</strong> of the object. In the time interval from <span class="math inline">\(t=a\)</span> to <span class="math inline">\(t=a+h\)</span> the change in position is <span class="math inline">\(f(a+h)-f(a)\)</span> and the <strong>average velocity</strong> over this time interval is <span class="math display">\[
+\frac{f(a+h)-f(a)}{h}
+\]</span> which is the same as the slope of the secant line through these two points.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.34 </strong></span>If a billiard is dropped from a height of 500 feet, its height <span class="math inline">\(s\)</span> at time <span class="math inline">\(t\)</span> is given by the position function <span class="math inline">\(s=-16t^2+500\)</span> where <span class="math inline">\(s\)</span> is measured in feet and <span class="math inline">\(t\)</span> is measured in seconds. Find the average velocity over the intervals <span class="math inline">\([2,2.5]\)</span> and <span class="math inline">\([2,2.6]\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>For the interval <span class="math inline">\([2,2.5],\)</span> the object falls from a height of <span class="math inline">\(s(2)=-16(2)^2+500=436\)</span> feet to a height of <span class="math inline">\(s(2.5)=-16(2.5)^2+500=400.\)</span><br>
+The average velocity is <span class="math display">\[
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.5)-s(2)}{2.5-2}=\frac{400-436}{2.5-2}=-72.
+\]</span> For the interval <span class="math inline">\([2,2.6],\)</span> the object falls from a height of <span class="math inline">\(s(2)=436\)</span> feet to a height of <span class="math inline">\(s(2.6)=391.84.\)</span><br>
+The average velocity is <span class="math display">\[
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.6)-s(2)}{2.6-2}=\frac{391.84-436}{2.6-2}=-73.6.
+\]</span> Note that the average velocities are negative indicating that the object is moving downward.</p>
+</div>
+</section>
+<section id="instantaneous-rate-of-change" class="level2" data-number="1.23">
+<h2 data-number="1.23" class="anchored" data-anchor-id="instantaneous-rate-of-change"><span class="header-section-number">1.23</span> Instantaneous Rate of Change</h2>
+<p>The difference quotient <span class="math display">\[
+\frac{\Delta  y}{\Delta  x}=\frac{f\left(x_2\right)-f\left(x_1\right)}{x_2-x_1}
+\]</span> is the average rate of change of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> over the interval <span class="math inline">\(\left[x_1,x_2\right]\)</span> and can be interpreted as the slope of the secant line. Its limit as <span class="math inline">\(\Delta x\to 0\)</span> is the derivative at <span class="math inline">\(x=x_1\)</span> and is denoted by <span class="math inline">\(f'\left(x_1\right).\)</span><br>
+We interpret the limit of the average rate of change as the interval becomes smaller and smaller to be the instantaneous rate of change. Often, different branches of science have specific interpretations of the derivative.</p>
+<p>As <span class="math inline">\(\Delta x\to 0\)</span> the average rate of change approaches the <strong>instantaneous rate for change</strong> ; that is, <span class="math display">\[
+\lim _{\Delta  x\to 0} \frac{\Delta  y}{\Delta  x} = f'(x)
+\]</span> and is also known as the <strong>derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(x.\)</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.35 </strong></span>Let <span class="math inline">\(\displaystyle f(x)=\frac{x^2-x+5}{3-x}.\)</span><br>
+Find the instantaneous rate of change at <span class="math inline">\(x=2.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math display">\[
+\displaystyle f'(x)=\frac{-x^2+6 x+2}{(x-3)^2},
+\]</span> the instantaneous rate for change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=2\)</span> is given by, <span class="math display">\[
+f'(2)=\frac{-2^2+6 (2)+2}{(2-3)^2}=10.
+\]</span></p>
+</div>
+</section>
+<section id="what-is-a-tangent-line" class="level2" data-number="1.24">
+<h2 data-number="1.24" class="anchored" data-anchor-id="what-is-a-tangent-line"><span class="header-section-number">1.24</span> What is a Tangent Line?</h2>
+<p>The tangent line problem is widely considered to be the instigating idea behind the derivative. Computing the slope of a tangent line was a problem that the French mathematician <strong>Pierre de Fermat</strong> developed. Picking up on these ideas were <strong>Isaac Newton</strong> and <strong>Gottfried Liebniz</strong> , who then developed differential calculus.</p>
+<p>For a general curve it is not easy to define what is meant by a tangent line; for example a tangent line might mean a line touches the curve only once, but this does not work in all cases. Figure <span class="math inline">\(\ref{fig:tangentlines}\)</span> shows examples of tangent lines.</p>
+<p>The important idea to remember is that a tangent line is a local concept, we say the <strong>tangent line</strong> at a point.</p>
+<p>In our first example we will calculate a series of functions whose graphs are <strong>secant lines</strong> to the graph of a given function <span class="math inline">\(f\)</span> and use them to infer an equation of the tangent line at a point.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.36 </strong></span>Let <span class="math inline">\(f(x)=2x^3-2x+2\)</span>. Find an equation of the line that passes through the points <span class="math inline">\((1/2,5/4)\)</span> and <span class="math inline">\((1,2)\)</span> and sketch the graph of both <span class="math inline">\(f\)</span> and the secant line. The equation of the secant line is <span class="math inline">\(y= \frac{3}{2} x+\frac{1}{2}\)</span>.</p>
+<p>Do the same for the points <span class="math inline">\((1/2,5/4)\)</span> and <span class="math inline">\((3/4,43/32)\)</span>. We find an equation of the secant line is <span class="math inline">\(y=\frac{3}{8}x+\frac{17}{16}\)</span>. We repeat this process several times and display the information in the following table. <span class="math display">\[
+\begin{array}{l|l|l|l} \small
+\Delta  x &amp; (x,f(x)) &amp; (x+\Delta  x,f(x+\Delta  x)) &amp; \text{Equation of secant line} \\ \hline
+0.5 &amp; (0.5,1.25) &amp; (1,2) &amp; y=1.5 x+0.5  \\
+0.25 &amp; (0.5,1.25) &amp; (0.75,1.34375)   &amp; y=0.375 x+1.0625 \\
+0.125 &amp; (0.5,1.25) &amp; (0.625,1.23828) &amp; y=-0.09375 x+1.29688  \\
+0.0625 &amp; (0.5,1.25) &amp; (0.5625,1.23096) &amp;  y=-0.304688 x+1.40234 \\
+0.03125 &amp; (0.5,1.25) &amp; (0.53125,1.23737) &amp; y=-0.404297 x+1.45215 \\
+0.015625 &amp; (0.5,1.25) &amp; (0.515625,1.24293) &amp; y=-0.452637 x+1.47632
+\end{array}
+\]</span></p>
+<p>From this table what would you say is the equation for the tangent line of the function <span class="math inline">\(f(x)=2x^3-2x+2\)</span> at <span class="math inline">\((1/2,1/4)\)</span>? Explain your conclusion. We infer the tangent line is <span class="math inline">\(y=-\frac{1}{2}x+\frac{1}{2}\)</span>.</p>
+</div>
+<p>The difference quotient <span class="math display">\[
+\frac{\Delta  y}{\Delta  x}=\frac{f\left(x_2\right)-f\left(x_1\right)}{x_2-x_1}
+\]</span> is the average rate of change of <span class="math inline">\(y\)</span> with respect to <span class="math inline">\(x\)</span> over the interval <span class="math inline">\(\left[x_1,x_2\right]\)</span> <span class="math inline">\(_{}\)</span> and can be interpreted as the slope of the secant line. Its limit as <span class="math inline">\(\Delta x\to 0\)</span> is the derivative at <span class="math inline">\(x=x_1\)</span> and is denoted by <span class="math inline">\(f'\left(x_1\right).\)</span><br>
+We interpret the limit of the average rate of change as the interval becomes smaller and smaller to be the instantaneous rate of change. Often,different branches of science have specific interpretations of the derivative.</p>
+<p>As <span class="math inline">\(\Delta x\to 0\)</span> the average rate of change approaches the <strong>instantaneous rate for change</strong>; that is, <span class="math display">\[
+\lim _{\Delta  x\to 0} \frac{\Delta  y}{\Delta  x} = f'(x)
+\]</span> and is also known as the <strong>derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(x.\)</span></p>
+</section>
+<section id="equation-of-tangent-line" class="level2" data-number="1.25">
+<h2 data-number="1.25" class="anchored" data-anchor-id="equation-of-tangent-line"><span class="header-section-number">1.25</span> Equation of Tangent Line</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.6 </strong></span>If <span class="math inline">\(f'(a)\)</span> exists then an <strong>equation of the tangent line</strong> to the curve <span class="math inline">\(y=f(x)\)</span> at the point <span class="math inline">\((a,f(a))\)</span> is <span class="math inline">\(y-f(a)=f'(a)(x-a).\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.37 </strong></span>Find equations of the tangent lines to the curve <span class="math inline">\(\displaystyle y=\frac{x-1}{x+1}\)</span> that are parallel to the line <span class="math inline">\(x-2y=1\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The line <span class="math inline">\(x-2y=1\)</span> has slope <span class="math inline">\(m=1/2\)</span> and we use this with the derivative of <span class="math inline">\(y=(x-1)/(x+1)\)</span> to find the <span class="math inline">\(x\)</span>. Since <span class="math inline">\(y'=2/(x+1)^2\)</span> we have <span class="math inline">\(1/2=(2/((x+1)^2))\)</span>. Solving <span class="math inline">\((x+1)^2=4\)</span> for <span class="math inline">\(x\)</span> we get <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=-3\)</span>. Therefore, the points of tangency are at <span class="math inline">\((1,0)\)</span> and <span class="math inline">\((-3,2)\)</span>.<br>
+The tangent lines are found by using <span class="math inline">\(y=1/2 x+b\)</span> where <span class="math inline">\(b=y-1/2 x\)</span> with <span class="math inline">\((1,0)\)</span> and <span class="math inline">\((-3,2)\)</span>. We find <span class="math inline">\(b=-1/2\)</span> and <span class="math inline">\(b=7/2\)</span> respectively. Therefore, equations of the tangent lines are <span class="math inline">\(y=\frac{1}{2}x-\frac{1}{2}\)</span> and <span class="math inline">\(y=\frac{1}{2} x+\frac{7}{2}\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.38 </strong></span>How many tangent lines to the curve <span class="math inline">\(y=x/(x+1)\)</span> pass through the point <span class="math inline">\((1,2)\)</span>? At which points do these tangent lines touch the curve?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>All tangent lines through <span class="math inline">\((1,2)\)</span> have the form <span class="math inline">\(y-2=m (x-1)\)</span> where <span class="math inline">\(m=y'(x)=\frac{1}{(x+1)^2}.\)</span><br>
+Since we our looking for the intersection (point of tangency) we eliminate <span class="math inline">\(y\)</span> as follows: <span class="math display">\[
+y=\frac{x}{x+1}=\frac{1}{(x+1)^2}(x-1)+2.
+\]</span> Solving for <span class="math inline">\(x\)</span> we obtain, <span class="math inline">\(x=-2\pm \sqrt{3}.\)</span> Thus there are two tangent lines and they are tangent at the point <span class="math display">\[
+\left(-2\pm \sqrt{3},\frac{-2\pm \sqrt{3}}{-2\pm \sqrt{3}+1}\right).
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.39 </strong></span>Find equations of both tangent lines through the point <span class="math inline">\((2,-3)\)</span> that are tangent to the parabola <span class="math inline">\(y=x^2+x.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>All tangent lines through <span class="math inline">\((2,-3)\)</span> have the form <span class="math inline">\(y+3=m (x-2)\)</span> where <span class="math inline">\(m=y'(x)=2x+1.\)</span><br>
+Since we our looking for the intersection (point of tangency) we eliminate <span class="math inline">\(y\)</span> as follows: <span class="math display">\[
+y=x^2+x=(2x+1)(x-2)-3.
+\]</span> Solving for <span class="math inline">\(x\)</span> we obtain, <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=5.\)</span><br>
+Thus there are two tangent lines and they are tangent at the points <span class="math inline">\((-1,0)\)</span> and <span class="math inline">\((5,30).\)</span><br>
+The tangent lines are <span class="math inline">\(y=-x-1\)</span> and <span class="math inline">\(y=11 x-25.\)</span></p>
+</div>
+</section>
+<section id="horizontal-tangent-lines" class="level2" data-number="1.26">
+<h2 data-number="1.26" class="anchored" data-anchor-id="horizontal-tangent-lines"><span class="header-section-number">1.26</span> Horizontal Tangent Lines</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.7 </strong></span>If <span class="math inline">\(f'(a)=0\)</span> then the equation of the tangent line to the curve <span class="math inline">\(y=f(x)\)</span> at the point <span class="math inline">\((a,0)\)</span> is <span class="math inline">\(y=f(a)\)</span> and <span class="math inline">\(f\)</span> is said to have <strong>a horizontal tangent line</strong> at <span class="math inline">\(x=a.\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.40 </strong></span>For what values of <span class="math inline">\(x\)</span> does the graph of <span class="math inline">\(f(x)=2x^3-3x^2-6x+87\)</span> have a horizontal tangent?</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>To find the horizontal tangent lines we find where the derivative is 0. We compute, <span class="math inline">\(y'(x)=6 x^2-6 x-6.\)</span><br>
+So we need to solve <span class="math inline">\(6 x^2-6 x-6=0.\)</span><br>
+We find, <span class="math inline">\(6 x^2-6 x-6=0\)</span> and so <span class="math inline">\(x^2-x-1=0\)</span>. And using the quadratic formula we have <span class="math inline">\(x=\frac{1}{2} \left(1\pm \sqrt{5}\right).\)</span><br>
+Thus, the values of <span class="math inline">\(x\)</span> where the tangent lines are horizontal are <span class="math inline">\(\frac{1}{2} \left(1\pm \sqrt{5}\right).\)</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.41 </strong></span>Find the points on the curve <span class="math inline">\(y=x^3-x^2-x+1\)</span> where the tangent line is horizontal.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>To find the horizontal tangent lines we find where the derivative is 0. We compute, <span class="math inline">\(y'(x)=3 x^2-2 x-1\)</span>. So we need to solve <span class="math inline">\(3 x^2-2 x-1=0.\)</span><br>
+Using the quadratic formula we have <span class="math inline">\(x=-\frac{1}{3}\)</span> and <span class="math inline">\(x=1.\)</span><br>
+Thus, the values of <span class="math inline">\(x\)</span> where the tangents lines are horizontal are <span class="math inline">\(1\)</span> and <span class="math inline">\(-1/3.\)</span></p>
+</div>
+</section>
+<section id="relative-rate-of-change" class="level2" data-number="1.27">
+<h2 data-number="1.27" class="anchored" data-anchor-id="relative-rate-of-change"><span class="header-section-number">1.27</span> Relative Rate of Change</h2>
+<p>Next we illustrate the importance of the relative rate of change, as compared to the difference between the absolute rate of change and the average rate of change. The absolute change is not the same as the average rate of change. Namely, the <strong>absolute change</strong> is just the differences in the values of <span class="math inline">\(f\)</span> at the boundary of the interval <span class="math inline">\([x,\Delta x],\)</span> namely <span class="math inline">\(f(x+\Delta x)-f(x);\)</span> whereas the average rate of change is the absolute change divided by the size of the interval: <span class="math display">\[
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}.
+\]</span> The average rate of change is sometimes more useful; for example, suppose you want to know how long it takes to make some money and not just the size of the money made (absolute change). Knowing the rate at which the money is being made, (the average rate of change over a given time interval) is often useful.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.42 </strong></span>Temperature readings <span class="math inline">\(T\)</span> (in degrees Celsius) were recorded every hour starting at midnight on a day in April. The time <span class="math inline">\(x\)</span> is measured in hours from midnight. <span class="math display">\[
+\begin{array}{c|ccccccccccccc}
+x (h) &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; 11 &amp; 12 \\ \hline
+T (C) &amp; 6.5 &amp; 6.1 &amp; 5.6 &amp; 4.9 &amp; 4.2 &amp; 4.0 &amp; 4.0 &amp; 4.8 &amp; 6.1 &amp; 8.3 &amp; 10.0 &amp; 12.1 &amp; 14.3
+\end{array}
+\]</span> <span class="math display">\[
+\begin{array}{c|cccccccccccc}
+x (h) &amp; 13 &amp; 14 &amp; 15 &amp; 16 &amp; 17 &amp; 18 &amp; 19 &amp; 20 &amp; 21 &amp; 22 &amp; 23 &amp; 24 \\ \hline
+T (C) &amp; 16.0 &amp; 17.3 &amp; 18.2 &amp; 18.8 &amp; 17.6 &amp; 16.0 &amp; 14.1 &amp; 11.5 &amp; 10.2 &amp; 9.0 &amp; 7.9 &amp; 7.0
+\end{array}
+\]</span> &nbsp; - Find the average rates of change of temperatures with respect to time from noon to 3:00 p.m., 2:00 p.m. and 1:00 p.m. - Estimate the instantaneous rate of change at noon.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The average rates of change are, respectively, <span class="math display">\[
+\frac{\Delta  T}{\Delta  x}=\frac{T(15)-T(12)}{3}=\frac{18.2-14.3}{3}=1.3 \, C/h
+\]</span> <span class="math display">\[
+\frac{\Delta  T}{\Delta  x}=\frac{T(14)-T(12)}{2}=\frac{17.3-14.3}{2}=1.5 \, C/H
+\]</span> <span class="math display">\[
+\frac{\Delta  T}{\Delta  x}=\frac{T(13)-T(12)}{1}=\frac{16.0-14.3}{1}=1.7 \, C/h
+\]</span> We plot the given data and use them to sketch a smooth curve that approximates the graph of the temperature function. Then we draw that tangent line at the point <span class="math inline">\(P\)</span> where <span class="math inline">\(x=12\)</span> and after measuring the sides of the triangle we estimate that the slope of the tangent line is <span class="math display">\[
+\frac{18.3-8}{14-8.5}=\frac{10.3}{5.5}\approx 1.9
+\]</span> and so the instantaneous rate of change of temperature with respect to time at noon is about <span class="math inline">\(1.9 C/h.\)</span></p>
+</div>
+<p>Sometimes we are not interested in the instantaneous rate of change and instead we may want a relative rate of change (percentage). For example suppose a student makes a 39 on a test, this would be a very good grade if the score is out of 40 points. However if the score was out of a total of 100 points then the grade is not so good.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.4 </strong></span>Let <span class="math inline">\(y=f(x),\)</span> then the <strong>relative rate of change</strong> at <span class="math inline">\(x=x_0\)</span> is the ratio <span class="math display">\[
+\frac{f'\left(x_0\right)}{f\left(x_0\right)}.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.43 </strong></span>Let <span class="math inline">\(f(x)=\sqrt{x}.\)</span><br>
+Find the relative rate of change at <span class="math inline">\(x=5\)</span> and <span class="math inline">\(x=75.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(f'(x)=\frac{1}{2 \sqrt{x}}.\)</span><br>
+The relative rate of change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=5\)</span> is <span class="math display">\[
+\frac{f'(5)}{f(5)}=\frac{\frac{1}{2 \sqrt{5}}}{\sqrt{5}}=\frac{1}{10} \approx 0.1 \text{ or } 10\%.
+\]</span> The relative rate of change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=75\)</span> is <span class="math display">\[
+\frac{f'(75)}{f(75)}=\frac{\frac{1}{2 \sqrt{75}}}{\sqrt{75}} =\frac{1}{150} \approx 0.00666667 \text{ or } 0.6\%.
+\]</span></p>
+</div>
+<p>Often we are more interested in the relative rate of change of a quantity instead of the instantaneous rate of change. If instance, if you are earning <span class="math inline">\(25,000/\text{yr}\)</span> and receive a 5,000 raise, you would probably be very please. However, if you were making <span class="math inline">\(100,000/\text{yr}\)</span> you may not be as please since the relative change is not as much. With the <span class="math inline">\(100,000/\text{yr}\)</span> pay you only have a <span class="math inline">\(5,000/100,000=0.05=5\%\)</span> increase whereas with the <span class="math inline">\(25,000/\text{yr}\)</span> pay you have a better percentage increase of <span class="math inline">\(5,000/25,000=0.20=20\%.\)</span></p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.44 </strong></span>Let <span class="math inline">\(f(x)=2x^2-3x+5.\)</span><br>
+&nbsp; - Find the average rate of change from <span class="math inline">\(x=2\)</span> to <span class="math inline">\(x=4.\)</span><br>
+- Find the instantaneous rate of change at <span class="math inline">\(x=2.\)</span><br>
+- Find the relative rate of change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=2\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>The average rate of change of <span class="math inline">\(f\)</span> from <span class="math inline">\(x=2\)</span> to <span class="math inline">\(x=4\)</span> is given by, <span class="math display">\[
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}
+=\frac{\left(2(4)^2-3(4)+5\right)-\left(2(2)^2-3(2)+5\right)}{2}
+=9
+\]</span> Since <span class="math inline">\(f'(x)=4x-3,\)</span> the instantaneous rate for change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=2\)</span> is given by, <span class="math inline">\(f'(2)=4(2)-3\)</span> <span class="math inline">\(=5.\)</span> The relative rate of change of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=2\)</span> is <span class="math display">\[
+\frac{f'(2)}{f(2)}=\frac{5}{2(2)^2-3(2)+5} =\frac{5}{7} \approx 0.714286  \text{ or } 71.
+\]</span></p>
+</div>
+</section>
+<section id="exercises-3" class="level2" data-number="1.28">
+<h2 data-number="1.28" class="anchored" data-anchor-id="exercises-3"><span class="header-section-number">1.28</span> Exercises</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.37 </strong></span>Find a function(s) with the following properties. (a) Find functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> such that <span class="math inline">\(f\)</span> is discontinuous at <span class="math inline">\(x=1\)</span> but <span class="math inline">\(f g\)</span> is continuous there. (b) Give an example of a function defined for all real numbers that is continuous at only one point.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.38 </strong></span>&nbsp;</p>
+<ol type="a">
+<li>Find an equation of the secant line to the graph of <span class="math inline">\(y=x^2-2x\)</span> through the points <span class="math inline">\((1,-1)\)</span> and <span class="math inline">\((-1,3)\)</span> .</li>
+<li>Find an equation of the tangent line to the graph of <span class="math inline">\(y=x^2-2x\)</span> at the point <span class="math inline">\((1,-1)\)</span> .</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.39 </strong></span>&nbsp;</p>
+<ol type="a">
+<li>Find the average rate of change of <span class="math inline">\(f(x)=x^2+3x\)</span> over the interval <span class="math inline">\([0,1]\)</span> .</li>
+<li>Find the instantaneous rate of change of <span class="math inline">\(f(x)=x^2+3x\)</span> at <span class="math inline">\(x=0\)</span> .</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.40 </strong></span>A ball is thrown straight down from the top of a 220-foot building with an initial velocity of 120 meters per second. What is the velocity after 5 seconds? After 10 seconds?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.41 </strong></span>To estimate the height of a building, a stone is dropped from the top of the building into a pool of water at ground level. How high is the building if the splash is seen <span class="math inline">\(6.8\)</span> seconds after the stone is dropped?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.42 </strong></span>Let <span class="math inline">\(s(t)=-t^3+3t^2-3t\)</span> be the position function of a body moving on a coordinate line, with <span class="math inline">\(s\)</span> in meters and <span class="math inline">\(t\)</span> in seconds. (a) Find the body’s displacement and average velocity for the time interval <span class="math inline">\(0\leq t\leq 3.\)</span> (b) Find the body’s speed and acceleration at the endpoints of the time interval <span class="math inline">\(0\leq t\leq 3.\)</span> (c) When, if ever, during the time interval <span class="math inline">\(0\leq t\leq 3\)</span> does the body change direction?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.43 </strong></span>&nbsp;</p>
+<ol type="a">
+<li>Let <span class="math inline">\(s(t)=\frac{25}{t^2}-\frac{5}{t}\)</span> be the position function of a body moving on a coordinate line, with <span class="math inline">\(s\)</span> in meters and <span class="math inline">\(t\)</span> in seconds. (b) Find the body’s displacement and average velocity for the time interval <span class="math inline">\(1\leq t\leq 5.\)</span> (c) Find the body’s speed and acceleration at the endpoints of the time interval <span class="math inline">\(1\leq t\leq 5.\)</span> When, if ever, during the time interval <span class="math inline">\(1\leq t\leq 5\)</span> does the body change direction?</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.44 </strong></span>&nbsp;</p>
+<ol type="a">
+<li>Let <span class="math inline">\(s(t)=\frac{25}{t+5}\)</span> be the position function of a body moving on a coordinate line, with <span class="math inline">\(s\)</span> in meters and <span class="math inline">\(t\)</span> in seconds. (b) Find the body’s displacement and average velocity for the time interval <span class="math inline">\(-4\leq t\leq 0.\)</span> (c) Find the body’s speed and acceleration at the endpoints of the time interval <span class="math inline">\(-4\leq t\leq 0.\)</span> When, if ever, during the time interval <span class="math inline">\(-4\leq t\leq 0\)</span> does the body change direction?</li>
+</ol>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.45 </strong></span>If an arrow is shot upward on the moon with a velocity of <span class="math inline">\(58 m/s,\)</span> its height in meters after <span class="math inline">\(t\)</span> seconds is given by <span class="math inline">\(h=58t-0.83t^2.\)</span> (a) Find the velocity of the arrow after <span class="math inline">\(1 s.\)</span> (b) Find the velocity of the arrow when <span class="math inline">\(t=a.\)</span> (c) When will the arrow hit the moon? (d) With what velocity will the arrow hit the moon?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.46 </strong></span>If a cylindrical tank holds <span class="math inline">\(100,000\)</span> gallons of water, which takes <span class="math inline">\(1 h\)</span> to drain from the bottom of the tank, then Torricelli’s Law given the volume <span class="math inline">\(V\)</span> of water remaining in the tank after <span class="math inline">\(t\)</span> minutes as <span class="math display">\[
+V(t)=100,000\left(1-\frac{t}{60}\right)^2, \qquad 0\leq t\leq 60.
+\]</span><br>
+Find the rate at which the water is flowing out of the tank after 20 minutes.</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.47 </strong></span>Verify that the average over the time interval <span class="math inline">\(\left[t_0-\Delta t,t_0+\Delta t\right]\)</span> is the same as the instantaneous velocity at <span class="math inline">\(t=t_0\)</span> for the position function <span class="math inline">\(s(t)=\frac{-1}{2}a t^2+c.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.48 </strong></span>Let <span class="math inline">\(s(t)=t^2-3t+2\)</span> be the position function of a body moving on a coordinate line, with <span class="math inline">\(s\)</span> in meters and <span class="math inline">\(t\)</span> in seconds. (a) Find the body’s displacement and average velocity for the time interval <span class="math inline">\(0\leq t\leq 2.\)</span> (b) Find the body’s speed and acceleration at the endpoints of the time interval <span class="math inline">\(0\leq t\leq 2.\)</span> (c) When, if ever, during the time interval <span class="math inline">\(0\leq t\leq 2\)</span> does the body change direction?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.49 </strong></span>At time <span class="math inline">\(t\)</span> the position of a body moving along the <span class="math inline">\(s\)</span> -axis is <span class="math inline">\(s=t^3-6t^2-9t m.\)</span> (a) Find the body’s acceleration each time the velocity is zero. (b) Find the body’s speed each time the acceleration is zero. (c) Find the total distance traveled by the body from <span class="math inline">\(t=0\)</span> to <span class="math inline">\(t=2.\)</span></p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.50 </strong></span>A rock is thrown vertically upward from the surface of the moon at a velocity of 24 m/se (about 86 km/h) reaches a height of <span class="math inline">\(s=24t-0.8t^2\)</span> meters in <span class="math inline">\(t\)</span> sec.&nbsp;(a) Find the rock’s velocity and acceleration at time <span class="math inline">\(t.\)</span> (b) How long does it take the rock to reach its highest point? (c) How high does the rock go? (d) How long does it take the rock to reach half its maximum height?</p>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1.51 </strong></span>Had Galileo dropped a cannonball from the Tower of Pisa, 179 ft above the ground, the ball’s height above the ground <span class="math inline">\(t\)</span> sec into the fall would have been <span class="math inline">\(s=179-16t^2.\)</span> (a) What would have been the ball’s velocity, speed, and acceleration at time <span class="math inline">\(t?\)</span> (b) About how long would it have taken the ball to hit the ground? (c) What would have been the balls velocity at the moment of impact?</p>
+</div>
+</section>
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "http://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .exercise {
+        background: linear-gradient(90deg,rgba(250, 235, 199, 0.5), rgba(250, 235, 199, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/single-variable-calculus\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./differentiation.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Differentiation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+</body></html>

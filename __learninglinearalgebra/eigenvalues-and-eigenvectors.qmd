@@ -472,3 +472,184 @@ for $T$.
 ::: 
 
 
+## Diagonalization
+
+
+An $n\times n$ matrix $A$ is called \index{diagonalizable} **diagonalizable** if $A$ is similar to some diagonal matrix $D$. 
+If the matrix of a linear transformation $T$ with respect to some basis is diagonal then we call $T$ \index{diagonalizable} **diagonalizable** . 
+
+::: {#thm- } 
+\label{dialineigvec}
+An $n\times n$ matrix $A$ is diagonalizable if and only if it has $n$ linearly independent eigenvectors. In that case, the diagonal matrix $D$ is similar to $A$ and is given by 
+\begin{equation}
+\label{diagmat}
+D=
+\begin{bmatrix}
+\lambda_1 & 0 & \cdots & 0 \\
+0 & \lambda_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots& \vdots \\
+0 & 0 & \cdots & \lambda_n 
+\end{bmatrix}
+\end{equation}
+where $\lambda_1, ..., \lambda_n$ are the eigenvalues of $A$. If $C$ is a matrix whose columns are linearly independent eigenvectors of $A$, then $D=C^{-1}A C$.
+::: 
+
+::: {.proof }
+The proof is left for the reader.
+::: 
+
+::: {#cor- } 
+\label{eigendmatrix}
+Let $T$ be a linear transformation given by $T(\vec x)=A\vec x$ where $A$ is a square matrix. If $\mathcal{D}=(\vec v_1, ....,\vec v_n)$ is an eigenbasis for $T$, with $A\vec v_i=\lambda_i \vec v_i$, then the $\mathcal{D}$-matrix $D$ of $T$ given in \ref{diagmat} is 
+$D=[\vec v_1, ...., \vec v_n]^{-1}A [\vec v_1, ...., \vec v_n]$.
+::: 
+
+::: {.proof }
+The proof follows from \ref{dialineigvec} and \ref{eigenveceigenvallemma}.
+::: 
+
+::: {#cor- } 
+\label{diagonalizablechar}
+A matrix $A$ is diagonalizable if andy only if there exists an eigenbasis for $A$. In particular, if an $n\times n$ matrix $A$ has $n$ distinct eigenvalues, then $A$ is diagonalizable.
+::: 
+
+::: {.proof }
+The proof follows from \ref{dialineigvec} and \ref{eigenveceigenvallemma}.
+::: 
+
+
+
+::: {#exm- } 
+Let $T: \mathcal{P}_2\to \mathcal{P}_2$ be the linear transformation defined by  
+$$
+T(a_0+a_1 x+a_2x^2)=(a_0+a_1+a_2)+(a_1+a_2)x+a_2x^2.
+$$
+Show that $T$ is not diagonalizable. 
+The matrix of $T$ with respect to the usual basis $(, x, x^2)$ for $\mathcal{P}_2$ is easily seen to be 
+$$
+A=
+\begin{bmatrix}
+1 & 1 & 1 \\
+0 & 1 & 1 \\
+0 & 0 & 1
+\end{bmatrix}.
+$$
+The characteristic polynomial is $f_A(x)=-(x-1)^3$ since $A$ is upper triangular. So $T$ has only one (repeated) eigenvalue $\lambda=1$. A nonzero polynomial $g$ with $g(x)=a_0+a_1 x+a_2 x^2$ is an eigenvector if and only if 
+$$
+\label{notdiageq}
+\begin{bmatrix}
+0 & 1 & 1 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{bmatrix}
+\vectorthree{a_0}{a_1}{a_2}=\vectorthree{0}{0}{0}.
+$$
+Thus $a_1=0$ and $a_2=0$, so there is only one linearly independent eigenvector for $\lambda=1$. Thus $T$ is not diagonalizable by \ref{diagonalizablechar}.
+::: 
+
+::: {#exm- } 
+Let $T:\mathcal{P}_2\to  \mathcal{P}_2$ be the linear transformation defined by  
+\begin{equation}
+T(f(x))=x^2f''(x)+(3x-2)f'(x)+5 f(x).
+\end{equation}
+Find a basis for $\mathcal{P}_2$ such that the matrix representation of $T$ with respect to $\mathcal{B}$ is diagonal. 
+Since $T(x^2)=13x^2-4x$, $T(x)=8x-2$, and $T(1)=5$ the matrix representation of $T$ with respect to the basis $\mathcal{B}=(x^2,x,1)$ is 
+$$
+A=\begin{bmatrix}13 & 0 & 0 \\ -4 & 8 & 0 \\ 0 & -2 & 5 \end{bmatrix}.
+$$ 
+Hence 
+\begin{equation}
+f_T(x)=f_A(x)=\begin{vmatrix} x-13  & 0 & 0 \\ 4 & x-8 & 0 \\ 0 & 2 & x-5 \end{vmatrix}=(x-13)(x-8)(x-5).
+\end{equation}
+The eigenvalues of $T$ are $\lambda_1=13$, $\lambda_2=8$ and $\lambda_3=5$. Solving each of the homogenous systems $(A-13I_3)\vec x=\vec 0$, $(A-8I_3)\vec x=\vec 0$, and $(A-5I_3)\vec x=\vec 0$ yields the eigenvectors $\vec v_1=5x^2-4x+1$, $\vec v_2=3x-2$, and $\vec v_3=1$, respectively. Notice $\vec v_1, \vec v_2, \vec v_3$ are 3 linearly independent vectors, so by \ref{dialineigvec}, $T$ is diagonalizable. We let $\mathcal{D}=(\vec v_1, \vec v_2, \vec v_3)$ and  since $T(\vec v_1)=13\vec v_1$,$T(\vec v_2)=8\vec v_2$, and $T(\vec v_3)=5\vec v_3$, the matrix representation of $T$ with respect to $\mathcal{D}$ is the diagonal matrix 
+$$
+\begin{bmatrix}13 & 0 & 0 \\ 0 & 8 & 0 \\ 0 & 0 & 5 \end{bmatrix}
+$$
+according to \ref{dialineigvec}.
+::: 
+
+::: {#exm- } 
+Let $T:\mathcal{P}_3\to  \mathcal{P}_3$ be the linear transformation defined by  
+\begin{equation}
+T(f(x))=xf'(x)+f(x+1).
+\end{equation}
+Find a basis for $\mathcal{P}_3$ such that the matrix representation of $T$ with respect to $\mathcal{B}$ is diagonal. 
+Since $T(x^3)=4x^3+3x^2+3x+1$, $T(x^2)=3x^2+2x+1$, $T(x)=2x+1$, and $T(1)=1$ the matrix representation of $T$ with respect to the basis $\mathcal{B}=(x^3,x^2,x,1)$ is 
+$$
+A=\begin{bmatrix} 4 & 0 & 0 & 0 \\ 3 & 3 & 0 & 0 \\ 3 & 2 & 2 & 0 \\ 1 & 1 & 1 & 1  \end{bmatrix}.
+$$ 
+Since $A$ is lower triangular, $f_T(x)=f_A(x)=(x-4)(x-3)(x-2)(x-1)$; and so the eigenvalues are $\lambda_1=4$, $\lambda_2=3$, $\lambda_3=2$, and $\lambda_4=1$. 
+Solving for a basis for each eigenspace of $A$ yields 
+$$
+E_{\lambda_1}=\left(\vectorfour{6}{18}{27}{17}\right), \quad
+E_{\lambda_2}=\left(\vectorfour{0}{2}{4}{3}\right), \quad
+E_{\lambda_3}=\left(\vectorfour{0}{0}{1}{1}\right),\quad
+E_{\lambda_4}=\left(\vectorfour{0}{0}{0}{1}\right).
+$$
+By taking the polynomial corresponding to the basis vectors, we let $\mathcal{D}=(\vec v_1, \vec v_2, \vec v_3, \vec v_4)$ where $\vec v_1=6x^3+18x^2+27x+17$, $\vec v_2=2x^2+4x+3$, $\vec v_3=x+1$, and $\vec v_4=1$. The diagonal matrix
+$$
+\begin{bmatrix}
+4 & 0 & 0 & 0 \\
+0 & 3 & 0 & 0 \\
+0 & 0 & 2 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+is the matrix representation of $T$ in $\mathcal{D}$-coordinates and has the eigenvalues of $T$ on its main diagonal. The transition matrix $P$ from $\mathcal{B}$-coordinates to $\mathcal{D}$-coordinates is 
+$$
+P=\begin{bmatrix}
+6 & 0 & 0 & 0 \\
+18 & 2 & 0 & 0 \\
+27 & 4 & 1 & 0 \\
+17 & 3 & 1 & 1
+\end{bmatrix}
+$$  
+and satisfies the required relation $D=P^{-1}AP$ as can be verified.
+::: 
+
+::: {#exm- } 
+If $A$ is similar to $B$, show that $A^n$ is similar to $B^n$, for any positive integer $n$.
+::: 
+
+::: {#exm- } 
+Suppose that $C^{-1}AC=D$. Show that for any integer $n$, $A^n=CD^nC^{-1}$.
+::: 
+
+::: {#exm- } 
+Let $a$ and $b$ be real numbers. By diagonalizing 
+$$
+M=
+\begin{bmatrix}
+a & b-a \\
+0 & b
+\end{bmatrix},
+$$
+prove that 
+$$
+M^n=
+\begin{bmatrix}
+a^n & b^n-a^n \\
+0 & b^n
+\end{bmatrix}
+$$
+for all positive integers $n$.
+We need a basis of $\mathbb{R}^2$ consisting of eigenvectors of $M$. One such basis is 
+$\vec v_1=\vec e_1$ and $\vec v_2=\vec e_1+\vec e_2$ 
+where $a$ and $b$ are eigenvalues for corresponding to these eigenvectors, respectively. 
+Let $P=\begin{bmatrix}\vec v_1 & \vec v_2\end{bmatrix},$ then by \ref{eigendmatrix}, the diagonalization is
+\begin{equation*}
+D=\begin{bmatrix}\vec v_1 & \vec v_2\end{bmatrix}^{-1}M\begin{bmatrix}\vec v_1 & \vec v_2\end{bmatrix}=\begin{bmatrix}a & 0 \\ 0 & b \end{bmatrix}.
+\end{equation*}
+Therefore 
+\begin{equation*}
+M^n=(PDP^{-1})^n=\underbrace{(PDP^{-1})\cdots (PDP^{-1})}_{n\text{-times}}=PD^n P^{-1}
+=\begin{bmatrix}
+a^n & b^n-a^n \\
+0 & b^n
+\end{bmatrix}.
+\end{equation*}
+::: 
+
+
+
+

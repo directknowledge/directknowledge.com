@@ -1,5 +1,7 @@
 ---
 pagetitle: "Divisibility - Learning Number Theory"
+aliases:
+  - euclidean-algorithm.html
 ---
 # Divisibility
 
@@ -683,6 +685,183 @@ $$
 $$
 which shows $(b,c)=1$.
 ::: 
+
+
+## Euclidean Algorithm
+
+
+Divide $a$ by $b,$ obtaining the quotient $q_1$ and the remainder $r_1$. Then, if $r_1$ is not zero, divide $b$ by $r_1$ obtaining the quotient $q_2$ and remainder $r_2$. Then if $r_2$ is not zero then we repeat this process and divide $r_1$ by $r_2$, obtaining the quotient $q_3$ and remainder $r_3$. This process, or *algorithm*, is repeated until we first obtain the remainder of zero. At the conclusion of the process we have the greatest common divisor which is the last nonzero remainder.
+
+The next lemma is used in the proof of the Euclidean Algorithm.
+
+::: {#lem-euallemm } 
+If $a$ and $b$ are positive integers.
+If $a=b q+r$ for some positive integers $q$ and $r$, then $(a,b)=(b,r)$.
+::: 
+
+For example, in the case that $288=40(7)+8$ we have 
+\begin{align*}
+S& =\{d\in \mathbb{Z} \mid d\mid 288 \text{ and } d\mid 40\} \\
+& =\{\pm1, \pm 2, \pm 4\pm, 8\pm\}
+\end{align*}
+\begin{align*}
+T& =\{d\in \mathbb{Z} \mid d\mid 40 \text{ and } d\mid 8\} \\
+& =\{\pm1, \pm 2, \pm 4\pm, 8\pm\}
+\end{align*}
+Clearly, $S=T$ and both sets are finite. 
+
+::: {.proof }
+Assume $a=bq+r$. 
+Let $S$ and $T$ be the set of common divisors of $a$ and $b$ and of $b$ and $r$, respectively; 
+that is, 
+$$
+S=\{d\in \mathbb{Z} : d\mid a \text{ and } d\mid b\}
+\quad \text{and}\quad
+T=\{d\in \mathbb{Z} : d\mid b \text{ and } d\mid r\}.
+$$
+Let $d\in S$. 
+So $d$ divides $a$ and $b$ and thus divides $b$ and $r=a-b q$. 
+Hence $d\in T$. 
+\par
+To show the reverse inclusion $T\supseteq S$, if $d\in T$ then $d$ divides $b$ and $r$. 
+Then $d$ divides $a=bq+r$ and $b$, and so $d\in S$. 
+\par
+We have shown $S\subseteq T$ and $T\subseteq S$; and therefore, $S=T$. 
+Since these are finite sets the greatest common divisor of $a$ and $b$ is the same as the greatest common divisor of $b$ and $r$.
+::: 
+
+::: {#exm- }
+Find $(345688, 245994)$. 
+::: 
+
+::: {.solution }
+By the Division Algorithm,
+\begin{align*}
+& 345688 =245994(1)+99694 \, \text{ with } \, 0\leq 99694 < 245994 \\
+& 245994 =99694(2)+46606 \, \text{ with } \, 0\leq 46606 < 99694 \\
+& 99694 =46606(2)+6482 \, \text{ with } \, 0\leq 6482 < 46606 \\
+& 46606 =6482(7)+1232 \, \text{ with } \, 0\leq 1232 < 6482 \\
+& 6482 =1232(5)+322 \, \text{ with } \, 0\leq 322 < 1232 \\
+& 1232 =322(3)+266 \, \text{ with } \, 0\leq 266 < 322 \\
+& 322 =266(1)+56 \, \text{ with } \, 0\leq 56 < 266 \\
+& 266 =56(4)+42 \, \text{ with } \, 0\leq 42 < 56 \\
+& 56 =42(1)+14 \, \text{ with } \, 0\leq 14 < 42 \\
+& 42  =14(3)+0 \, \text{ with } \, 0\leq 0 < 14 
+\end{align*}
+Therefore, $(345688, 245994)=14$.
+::: 
+
+::: {#exm- }
+Let $d=(328,288)$. 
+Find $d$ and write it as a linear combination of 328 and 288. 
+::: 
+
+::: {.solution }
+By the Division Algorithm,
+\begin{align*}
+328 & =288(1)+40 \, \text{ with } \, 0\leq 40<288 \\
+288 & =40(7)+8 \,  \text{with} \, 0\leq 8<40 \\
+40 & =8(5)+0 \,  \text{ with } \, 0\leq 8<40
+\end{align*}
+Now, $d=(328,288)=8$ follows from
+$$
+(328,288)=(288,40)=(40,8)=(8,0)=8
+$$
+by \ref{euallemm}. 
+We can use the above computation to write $8$ as a line recombination of 328 and 288 using back substitution: 
+\begin{align*}
+& 8=288-40(7) \\
+& 8=288-[328-288(1)](7) \\
+& 8= 8(288)-7(328)
+\square
+\end{align*} 
+::: 
+
+One way to view the \index{Euclidean algorithm} **Euclidean algorithm** is as the repeated application of the Division Algorithm and repeated application of \ref{euallemm}. 
+
+We can visualize the greatest common divisor.
+For example, a 24-by-60 rectangular area can be divided into a grid of: 
+1-by-1 squares, 2-by-2 squares, 3-by-3 squares, 4-by-4 squares, 6-by-6 squares or 12-by-12 squares. Therefore, 12 is the greatest common divisor of 24 and 60. 
+
+The greatest common divisor of two numbers $a$ and $b$ is the product of the prime factors shared by the two numbers, where a same prime factor can be used multiple times, but only as long as the product of these factors divides both $a$ and $b$.
+For example, since 1386 can be factored into $2 \times 3 \times 3 \times 7 \times 11$, and 3213 can be factored into $3 \times 3 \times 3 \times 7 \times 17$, the greatest common divisor of 1386 and 3213 equals $63 = 3 \times 3 \times 7$, the product of their shared prime factors. 
+In particular, if two numbers have no prime factors in common, they are relatively prime. 
+
+> A important feature of the Euclidean algorithm is that it can find the gcd efficiently without having to compute the prime factors. 
+
+Factorization of large integers is believed to be a computationally very difficult problem, and the security of many modern cryptography systems is based upon its infeasibility.
+
+Consider the question of finding the greatest common divisor of two numbers. 
+For example, let $a=288$ and $b=3266$, what is $(3266,288)$?
+We apply the Division Algorithm and \ref{euallemm} to obtain 
+$$
+3266=11(288)+98  \text{ with } 0\leq 98 <288 \text{ and } (3266,288)=(288,98).
+$$
+Again, we apply the Division Algorithm and \ref{euallemm} to obtain 
+$$
+288=2(98)+92 \text{ with } 0\leq 92 <98 \text{ and } (3266,288)=(288,98)=(98,92).
+$$
+Again, we apply the Division Algorithm and \ref{euallemm} to obtain 
+$$
+98=1(92)+6 
+\text{ with } 0\leq 6 <92
+\text{ and } (3266,288)
+%=(288,98)=(98,92)
+=(92,6)
+=2.
+$$
+We now write this process in a general format.
+
+
+
+::: {#thm-euclidean-algorithm }
+
+Let $a$ and $b$ be positive positive integers 
+with $a\geq b$.
+If $b\nmid a$, then apply the division algorithm repeatedly as follows: 
+
+ {2}
+& 
+\text{$a=b q_0+r_0$  with $0\leq  r_0<b$,}
+& \qquad & 
+\text{$b=r_0 q_1+r_1$  with $0\leq  r_1<r_0$,} 
+\\
+& 
+\text{$r_0=r_1 q_2+r_2$  with $0\leq  r_2<r_1$,} 
+& & 
+\text{$r_1=r_2 q_3+r_3$  with $0\leq  r_3<r_2$,} 
+\\ 
+&
+\text{$r_2=r_3 q_4+r_4$  with $0\leq  r_4<r_3$,}
+& & 
+\text{$r_3=r_4 q_5+r_5$  with $0\leq  r_5<r_4$, \, $\ldots$}
+ 
+
+This process ends after a finite number of steps; 
+that is, for some $k$: 
+$$
+r_{k-2}=r_{k-1} q_k+r_k
+\text{ with } 0\leq  r_k<r_{k-1}
+$$
+where
+$r_{k-1}=r_k q_{k+1}+0 $ and $r_k=(a,b)$.
+::: 
+
+::: {.proof }
+The proof follows from the property: if $a=b q+r,$ then $(a,b)=(b,r).$ 
+Thus, if $b|a,$ then $a=b q+0$ and so $(a,b)=(b,0)=b.$ Notice 
+$$
+(a,b) 
+=\left(b,r_0\right)
+=\left(r_0,r_1\right)
+=\cdot \cdot \cdot =\left(r_{k-2},r_{k-1}\right) 
+=\left(r_{k-1},r_k\right) =\left(r_k,0\right) =r_k.
+$$
+by \ref{euallemm} as desired.
+::: 
+
+In the 19th century, the Euclidean algorithm led to the development of new number systems, such as Gaussian integers and Eisenstein integers. 
+
 
 
 

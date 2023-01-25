@@ -19,8 +19,8 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <meta name="quarto:offset" content="./">
-<link href="./diagonalization.html" rel="next">
-<link href="./determinants-and-trace.html" rel="prev">
+<link href="./canonical-forms.html" rel="next">
+<link href="./determinants.html" rel="prev">
 <link href="./../assets/favicon.ico" rel="icon">
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
@@ -47,37 +47,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-.book-title {
-    font-weight:800;
-    text-transform: uppercase;
-    font-size: 150%;
-    margin:-20px -20px 20px -20px;
-    line-height:120%;
-    text-decoration: none!important;
-    display:block;
-}
-.book-title, #quarto-search svg {
-    color: #0047AB!important;
-}
-@media screen and (max-width: 990px) {
-    .book-title {
-        padding-left: 20px!important;
-    }    
-}
-#quarto-sidebar .sidebar-item-text, #quarto-sidebar .sidebar-link, #quarto-sidebar .chapter-number, #TOC a,  #TOC {
-    font-weight: 500!important;
-    color:#0047AB;
- }
- #quarto-sidebar .text-start {
-    font-variant: small-caps;
-    font-size: 120%;
- }
- #quarto-sidebar .active, .active .chapter-number {
-    color:#000000!important;
-    font-weight: 700!important;
- }
-</style>
-<style>
 @media screen and (max-width: 440px) {
     .navbar-brand-logo::after {
         content: 'DK'!important;
@@ -100,6 +69,20 @@ ul.task-list li input[type="checkbox"] {
 }
 .navbar-title:hover, .navbar a:hover {
     color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
 }
 </style>
   
@@ -136,11 +119,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://directknowledge.com/exploring-calculus/"><i class="bi bi-book" role="img" aria-label="Exploring Calculus Book">
-</i> 
- <span class="dropdown-text">Exploring Calculus</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="https://directknowledge.com/learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
@@ -149,6 +127,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="https://directknowledge.com/learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://directknowledge.com/single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://directknowledge.com/multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
@@ -177,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -207,122 +190,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matrices-and-vectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matrices and Vectors</span></a>
+  <a href="./vector-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Vector Spaces</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./on-the-solutions-of-linear-systems.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On the Solutions of Linear Systems</span></a>
+  <a href="./linear-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Linear Transformations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vector-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Vector Spaces</span></a>
+  <a href="./inner-products-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Inner Products Spaces</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction-to-linear-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to Linear Transformations</span></a>
+  <a href="./determinants.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Determinants</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linear-transformations-in-geometry.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Linear Transformations in Geometry</span></a>
+  <a href="./eigenvalues-and-eigenvectors.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./invertible-linear-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Invertible Linear Transformations</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./subspaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Subspaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./kernel-and-image-of-a-linear-transformation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kernel and Image of a Linear Transformation</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./coordinates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Coordinates</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./introduction-to-linear-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Linear Spaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./linear-independence-and-bases.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Linear Independence and Bases</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./finite-dimensional-linear-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Finite-dimensional Linear Spaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./infinite-dimensional-linear-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Infinite-dimensional Linear Spaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./introduction-to-linear-maps.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Introduction to Linear Maps</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./coordinates-and-the-matrix-of-a-linear-map.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Coordinates and the Matrix of a Linear Map</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./orthonormal-bases-and-orthogonal-projections.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Orthonormal Bases and Orthogonal Projections</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./gram-schmidt-process-and-qr-factorization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Gram-Schmidt Process and QR Factorization</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./orthogonal-transformations-and-orthogonal-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Orthogonal Transformations and Orthogonal Matrices</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./inner-products.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Inner Products</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./determinants-and-trace.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Determinants and Trace</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./eigenvalues-and-eigenvectors.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./diagonalization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Diagonalization</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./invariant-subspaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Invariant Subspaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./jordan-canonical-form.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Jordan Canonical Form</span></a>
+  <a href="./canonical-forms.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Canonical Forms</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -335,30 +228,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/learning-linear-algebra/"><picture><source type="image/webp" srcset="../../assets/learning-linear-algebra-cover.webp"><source type="image/webp" srcset="../../assets/learning-linear-algebra-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/learning-linear-algebra-cover.png" alt="Learning Linear Algebra Book Cover"></picture></a>
+    <h2 id="toc-title">Chapter Contents</h2>
+   
+  <ul>
+  <li><a href="#diagonalization" id="toc-diagonalization" class="nav-link active" data-scroll-target="#diagonalization"><span class="toc-section-number">6.1</span>  Diagonalization</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div style="display:none;">
-\(
-\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}
-\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}
-\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
-\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}
-\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}
-\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}
-\newcommand{\norm}[1]{\left|\left |#1\right|\right |}
-\newcommand{\ip}[1]{\left \langle #1\right \rangle}
-\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}
-\)
-</div>
 <header id="title-block-header">
-<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></h1>
+<h1 class="title d-none d-lg-block display-7"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></h1>
 </header>
 <p>Let <span class="math inline">\(\mathbb{F}\)</span> be either the real numbers or the complex numbers. A nonzero vector <span class="math inline">\(\vec v\)</span> in <span class="math inline">\(\mathbb{F}^n\)</span> is called an of an <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> if <span class="math inline">\(A \vec v\)</span> is a scalar multiple of <span class="math inline">\(\vec v\)</span>, that is <span class="math inline">\(A \vec v= \lambda \vec v\)</span> for some scalar <span class="math inline">\(\lambda\)</span>. Note that this scalar <span class="math inline">\(\lambda\)</span> may be zero. The scalar <span class="math inline">\(\lambda\)</span> is called the <strong>eigenvalue</strong> associated with the eigenvector <span class="math inline">\(\vec v\)</span>. Even though, <span class="math inline">\(A\vec 0=\lambda \vec 0\)</span> we do not call <span class="math inline">\(\vec 0\)</span> an eigenvector. Of course a matrix need not have any eigenvalues or eigenvectors, but notice if <span class="math inline">\(\vec v\)</span> is an eigenvector of matrix <span class="math inline">\(A\)</span>, then <span class="math inline">\(\vec v\)</span> is an eigenvector of matrices <span class="math inline">\(A^2\)</span>, <span class="math inline">\(A^3\)</span>, as well, with <span class="math inline">\(A^t\vec v=\lambda^t \vec v,\)</span> for all positive integers <span class="math inline">\(t\)</span>. If <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span>, then counting multiplicities, every <span class="math inline">\(n\times n\)</span> matrix has exactly <span class="math inline">\(n\)</span> eigenvalues.</p>
 <p>If <span class="math inline">\(\vec v\)</span> is an eigenvector of the <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> with associated eigenvalue <span class="math inline">\(\lambda\)</span>, what can you say about <span class="math inline">\(\ker(A-\lambda I_n)\)</span>? Is the matrix <span class="math inline">\(A-\lambda I_n\)</span> invertible? We know <span class="math inline">\(A \vec v=\lambda \vec v\)</span> so <span class="math inline">\((A-\lambda I_n)\vec v=A \vec v-\lambda I_n\vec v=\lambda\vec v-\lambda \vec v=0\)</span>. Thus a nonzero vector <span class="math inline">\(\vec v\)</span> is in the kernel of <span class="math inline">\((A-\lambda I_n)\)</span>. Therefore, <span class="math inline">\(\ker(A-\lambda I_n)\neq \{\vec 0\}\)</span> and so <span class="math inline">\(A-\lambda I_n\)</span> is not invertible.</p>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 22.1 </strong></span> Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> and <span class="math inline">\(\lambda\)</span> a scalar. Then <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(A\)</span> if and only if <span class="math inline">\(\det(A-\lambda I_n)=0\)</span>.</p>
+<p><span class="theorem-title"><strong>Lemma 6.1 </strong></span> Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> and <span class="math inline">\(\lambda\)</span> a scalar. Then <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(A\)</span> if and only if <span class="math inline">\(\det(A-\lambda I_n)=0\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The proof follows from the chain of equivalent statements:</p>
@@ -371,16 +257,16 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.1 </strong></span>Find all eigenvectors and eigenvalues of the identity matrix <span class="math inline">\(I_n\)</span>. Since <span class="math inline">\(I_n \vec v = \lambda \vec v= 1 \vec v\)</span> for all <span class="math inline">\(\vec v\in \mathbb{R}^n\)</span>, all nonzero vectors in <span class="math inline">\(\mathbb{R}^n\)</span> are eigenvectors of <span class="math inline">\(I_n\)</span>, with eigenvalues <span class="math inline">\(\lambda=1\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.1 </strong></span>Find all eigenvectors and eigenvalues of the identity matrix <span class="math inline">\(I_n\)</span>. Since <span class="math inline">\(I_n \vec v = \lambda \vec v= 1 \vec v\)</span> for all <span class="math inline">\(\vec v\in \mathbb{R}^n\)</span>, all nonzero vectors in <span class="math inline">\(\mathbb{R}^n\)</span> are eigenvectors of <span class="math inline">\(I_n\)</span>, with eigenvalues <span class="math inline">\(\lambda=1\)</span>.</p>
 </div>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 22.2 </strong></span> The eigenvalues of a triangular matrix are its diagonal entries.</p>
+<p><span class="theorem-title"><strong>Lemma 6.2 </strong></span> The eigenvalues of a triangular matrix are its diagonal entries.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(A\)</span> be a triangular matrix. Then <span class="math inline">\(A-\lambda I_n\)</span> is also a triangular matrix, and so <span class="math inline">\(\det(A-\lambda I_n)\)</span> is the product of its diagonal entries. Let <span class="math inline">\(a_{ii}\)</span> be any diagonal entry of <span class="math inline">\(A\)</span>. Then <span class="math inline">\(a_{ii}-\lambda\)</span> is the corresponding diagonal entry of <span class="math inline">\(A-\lambda I_n\)</span>. Thus <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(A\)</span> if and only if <span class="math inline">\(a_{ii}-\lambda=0\)</span> by <span class="math inline">\(\ref{eigenprop}\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.2 </strong></span>Find a basis of the linear space <span class="math inline">\(V\)</span> of all <span class="math inline">\(2\times 2\)</span> matrices for which <span class="math inline">\(\vec e_1\)</span> is an eigenvector. For an arbitrary <span class="math inline">\(2\times 2\)</span> matrix we want <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.2 </strong></span>Find a basis of the linear space <span class="math inline">\(V\)</span> of all <span class="math inline">\(2\times 2\)</span> matrices for which <span class="math inline">\(\vec e_1\)</span> is an eigenvector. For an arbitrary <span class="math inline">\(2\times 2\)</span> matrix we want <span class="math display">\[
 \begin{bmatrix} a &amp; b \\c &amp; d\end{bmatrix} \vectortwo{1}{0}=\vectortwo{a}{c}=\vectortwo{\lambda}{0}=\lambda \vectortwo{1}{0}
 \]</span> for any <span class="math inline">\(\lambda\)</span>. Hence <span class="math inline">\(a, b, d\)</span> are free and <span class="math inline">\(c=0\)</span>; thus a desired basis of <span class="math inline">\(V\)</span> is <span class="math display">\[
 \left(
@@ -391,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
 \]</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.3 </strong></span>Find a basis of the linear space <span class="math inline">\(V\)</span> of all <span class="math inline">\(4\times 4\)</span> matrices for which <span class="math inline">\(\vec e_2\)</span> is an eigenvector. We want to find all <span class="math inline">\(4 \times 4\)</span> matrices <span class="math inline">\(A\)</span> such that <span class="math inline">\(A \vec e_2=\lambda e_2\)</span>. Thus the second column of an arbitrary <span class="math inline">\(4 \times 4\)</span> matrix <span class="math inline">\(A\)</span> must be of the form <span class="math inline">\(\vectorfour{0}{\lambda}{0}{0}^T\)</span>, so <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.3 </strong></span>Find a basis of the linear space <span class="math inline">\(V\)</span> of all <span class="math inline">\(4\times 4\)</span> matrices for which <span class="math inline">\(\vec e_2\)</span> is an eigenvector. We want to find all <span class="math inline">\(4 \times 4\)</span> matrices <span class="math inline">\(A\)</span> such that <span class="math inline">\(A \vec e_2=\lambda e_2\)</span>. Thus the second column of an arbitrary <span class="math inline">\(4 \times 4\)</span> matrix <span class="math inline">\(A\)</span> must be of the form <span class="math inline">\(\vectorfour{0}{\lambda}{0}{0}^T\)</span>, so <span class="math display">\[
 A=\begin{bmatrix} a &amp; 0 &amp; c &amp; d \\ e &amp; \lambda &amp; f &amp; g \\ h &amp; 0 &amp; i &amp; j \\ k &amp; 0 &amp; l &amp; m\end{bmatrix}.
 \]</span> Let <span class="math inline">\(E_{ij}\)</span> denote the <span class="math inline">\(4\times 4\)</span> matrix with all entries zero except for a 1 in the <span class="math inline">\(i\)</span>-th row and <span class="math inline">\(j\)</span>-th column. Then a basis for <span class="math inline">\(V\)</span> is <span class="math display">\[
 \left(
@@ -400,10 +286,10 @@ E_{11}, E_{21}, E_{31}, E_{41}, E_{22}, E_{13}, E_{23}, E_{33}, E_{34}, E_{41}, 
 \]</span> and so the dimension of <span class="math inline">\(V\)</span> is 13.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.4 </strong></span>Find the eigenvalues and find a basis for each eigenspace given <span class="math inline">\(A=\begin{bmatrix}1 &amp; 0 &amp; 0 \\ -5 &amp; 0 &amp; 2 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\)</span>. Find an eigenbasis for <span class="math inline">\(A\)</span>. The eigenvalues are <span class="math inline">\(\lambda_1=0\)</span> and <span class="math inline">\(\lambda_2=\lambda_3=1\)</span>. A basis for <span class="math inline">\(E_{0}\)</span> is <span class="math inline">\(\left(\vectorthree{0}{1}{0}\right)\)</span>. A basis for <span class="math inline">\(E_{1}\)</span> is <span class="math inline">\(\left(\vectorthree{1}{-5}{0},\vectorthree{0}{2}{1}\right)\)</span>. An eigenbasis for <span class="math inline">\(A\)</span> is <span class="math inline">\(\left(\vectorthree{0}{1}{0},\vectorthree{1}{-5}{0},\vectorthree{0}{2}{1}\right)\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.4 </strong></span>Find the eigenvalues and find a basis for each eigenspace given <span class="math inline">\(A=\begin{bmatrix}1 &amp; 0 &amp; 0 \\ -5 &amp; 0 &amp; 2 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\)</span>. Find an eigenbasis for <span class="math inline">\(A\)</span>. The eigenvalues are <span class="math inline">\(\lambda_1=0\)</span> and <span class="math inline">\(\lambda_2=\lambda_3=1\)</span>. A basis for <span class="math inline">\(E_{0}\)</span> is <span class="math inline">\(\left(\vectorthree{0}{1}{0}\right)\)</span>. A basis for <span class="math inline">\(E_{1}\)</span> is <span class="math inline">\(\left(\vectorthree{1}{-5}{0},\vectorthree{0}{2}{1}\right)\)</span>. An eigenbasis for <span class="math inline">\(A\)</span> is <span class="math inline">\(\left(\vectorthree{0}{1}{0},\vectorthree{1}{-5}{0},\vectorthree{0}{2}{1}\right)\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.5 </strong></span>Find a basis of the linear space <span class="math inline">\(V\)</span> of all <span class="math inline">\(2\times 2\)</span> matrices <span class="math inline">\(A\)</span> for which <span class="math inline">\(\vectortwo{1}{-3}\)</span> is an eigenvector. For an arbitrary <span class="math inline">\(2\times 2\)</span> matrix we want <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.5 </strong></span>Find a basis of the linear space <span class="math inline">\(V\)</span> of all <span class="math inline">\(2\times 2\)</span> matrices <span class="math inline">\(A\)</span> for which <span class="math inline">\(\vectortwo{1}{-3}\)</span> is an eigenvector. For an arbitrary <span class="math inline">\(2\times 2\)</span> matrix we want <span class="math display">\[
 \begin{bmatrix} a &amp; b \\c &amp; d \end{bmatrix} \vectortwo{1}{-3}=\lambda\vectortwo{1}{-3}=\vectortwo{\lambda}{-3\lambda}.
 \]</span> Thus <span class="math inline">\(a-3b=\lambda\)</span>, <span class="math inline">\(c-3d=-3\lambda\)</span> and so <span class="math inline">\(c=-3a+9b+3d\)</span>. Thus <span class="math inline">\(A\)</span> must be of the form <span class="math display">\[
 \begin{bmatrix} a &amp; b \\ -3a+9b+3d &amp; d\end{bmatrix}=a\begin{bmatrix} 1 &amp; 0 \\-3 &amp; 0 \end{bmatrix}+b \begin{bmatrix} 0 &amp; 1 \\ 9 &amp; 0 \end{bmatrix}+ d\begin{bmatrix} 0 &amp; 0 \\ 3 &amp; 1\end{bmatrix}.
@@ -412,7 +298,7 @@ E_{11}, E_{21}, E_{31}, E_{41}, E_{22}, E_{13}, E_{23}, E_{33}, E_{34}, E_{41}, 
 \]</span> and so the dimension of <span class="math inline">\(V\)</span> is <span class="math inline">\(3\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.6 </strong></span>Find a basis of the linear space <span class="math inline">\(V\)</span> of all <span class="math inline">\(3\times 3\)</span> matrices <span class="math inline">\(A\)</span> for which both <span class="math inline">\(\vectorthree{1}{0}{0}^T\)</span> and <span class="math inline">\(\vectorthree{0}{0}{1}^T\)</span> are eigenvectors. Since <span class="math inline">\(A \vectorthree{1}{0}{0}^T\)</span> is simply the first column of <span class="math inline">\(A\)</span>, the first column must be a multiple of <span class="math inline">\(\vec e_1\)</span>. Similarly, the third column must be a multiple of <span class="math inline">\(\vec e_3\)</span>. There are no other restrictions on the form of <span class="math inline">\(A\)</span>, meaning it can be any matrix of the form <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.6 </strong></span>Find a basis of the linear space <span class="math inline">\(V\)</span> of all <span class="math inline">\(3\times 3\)</span> matrices <span class="math inline">\(A\)</span> for which both <span class="math inline">\(\vectorthree{1}{0}{0}^T\)</span> and <span class="math inline">\(\vectorthree{0}{0}{1}^T\)</span> are eigenvectors. Since <span class="math inline">\(A \vectorthree{1}{0}{0}^T\)</span> is simply the first column of <span class="math inline">\(A\)</span>, the first column must be a multiple of <span class="math inline">\(\vec e_1\)</span>. Similarly, the third column must be a multiple of <span class="math inline">\(\vec e_3\)</span>. There are no other restrictions on the form of <span class="math inline">\(A\)</span>, meaning it can be any matrix of the form <span class="math display">\[
 \begin{bmatrix} a &amp; b &amp; 0 \\ 0 &amp; c &amp; 0 \\ 0 &amp; d &amp; e \end{bmatrix}
 \]</span> Thus a basis of <span class="math inline">\(V\)</span> is <span class="math display">\[
 \left(
@@ -425,7 +311,7 @@ E_{11}, E_{21}, E_{31}, E_{41}, E_{22}, E_{13}, E_{23}, E_{33}, E_{34}, E_{41}, 
 \]</span> and so the dimension of <span class="math inline">\(V\)</span> is 5.</p>
 </div>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 22.1 </strong></span> If <span class="math inline">\(A\)</span> is an <span class="math inline">\(n\times n\)</span> matrix, then <span class="math inline">\(\det(A-\lambda I_n)\)</span> is a polynomial of degree <span class="math inline">\(n\)</span>, of the form <span class="math display">\[\begin{equation} \label{chpo}
+<p><span class="theorem-title"><strong>Theorem 6.1 </strong></span> If <span class="math inline">\(A\)</span> is an <span class="math inline">\(n\times n\)</span> matrix, then <span class="math inline">\(\det(A-\lambda I_n)\)</span> is a polynomial of degree <span class="math inline">\(n\)</span>, of the form <span class="math display">\[\begin{equation} \label{chpo}
 f_A(\lambda)=(-\lambda)^n+\text{trace} (A) (-\lambda)^{n-1}+\cdots +\det(A).
 \end{equation}\]</span></p>
 </div>
@@ -436,7 +322,7 @@ f_A(\lambda)=(-\lambda)^n+\text{trace} (A) (-\lambda)^{n-1}+\cdots +\det(A).
 f_A(\lambda)=(\lambda_0-\lambda)^k g(\lambda)
 \]</span> for some polynomial <span class="math inline">\(g(\lambda)\)</span> with <span class="math inline">\(g(\lambda_0)\neq 0\)</span>.</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.7 </strong></span>Find the characteristic equation for a $2 $ matrix <span class="math inline">\(A\)</span>. The characteristic equation of <span class="math inline">\(A=\begin{bmatrix} a&amp; b \\c &amp; d\end{bmatrix}\)</span> is <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.7 </strong></span>Find the characteristic equation for a $2 $ matrix <span class="math inline">\(A\)</span>. The characteristic equation of <span class="math inline">\(A=\begin{bmatrix} a&amp; b \\c &amp; d\end{bmatrix}\)</span> is <span class="math display">\[
 f_A(\lambda)
 =\det \begin{bmatrix} a-\lambda&amp; b \\c &amp; d-\lambda \end{bmatrix}
 %=(a-\lambda)(d-\lambda)-bc
@@ -444,20 +330,20 @@ f_A(\lambda)
 \]</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.8 </strong></span>Use the characteristic polynomial <span class="math inline">\(f_A(\lambda)\)</span> to determine the eigenvalues and their multiplicities of <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.8 </strong></span>Use the characteristic polynomial <span class="math inline">\(f_A(\lambda)\)</span> to determine the eigenvalues and their multiplicities of <span class="math display">\[
 A=\begin{bmatrix} -1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; -1 \end{bmatrix}.
 \]</span> The characteristic equation is <span class="math inline">\(f_A(\lambda)=-\lambda^2(\lambda+3)\)</span>. So <span class="math inline">\(\lambda_1=0\)</span> with algebraic multiplicity of 2 and <span class="math inline">\(\lambda_2=-3\)</span> with algebraic multiplicity of 1 are the eigenvalues of <span class="math inline">\(A\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.9 </strong></span>Consider the matrix <span class="math inline">\(A=\begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span>, where <span class="math inline">\(a, b, c\)</span> are nonzero constants. For which values of $a, b, c $ does <span class="math inline">\(A\)</span> have two distinct eigenvalues? The characteristic equation is <span class="math inline">\(f_A(\lambda)=\lambda^2-(a+c)\lambda+(a c-b^2)\)</span>. The discriminant of this quadratic equation is <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.9 </strong></span>Consider the matrix <span class="math inline">\(A=\begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span>, where <span class="math inline">\(a, b, c\)</span> are nonzero constants. For which values of $a, b, c $ does <span class="math inline">\(A\)</span> have two distinct eigenvalues? The characteristic equation is <span class="math inline">\(f_A(\lambda)=\lambda^2-(a+c)\lambda+(a c-b^2)\)</span>. The discriminant of this quadratic equation is <span class="math display">\[
 (a+c)^2-4(ac-b^2)=a^2+2ac+c^2-4ac+4b^2=(a-c)^2+4b^2.
 \]</span> The discriminant is always positive since <span class="math inline">\(b\neq 0\)</span>. Thus, the matrix <span class="math inline">\(A\)</span> there will always have two distinct real eigenvalues.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.10 </strong></span>In terms of eigenvalues of <span class="math inline">\(A\)</span>, which <span class="math inline">\(2\times 2\)</span> matrices <span class="math inline">\(A\)</span> does there exist an invertible matrix <span class="math inline">\(S\)</span> such that <span class="math inline">\(AS=SD\)</span>, where <span class="math inline">\(D=\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span>? If we let <span class="math inline">\(S=\begin{bmatrix} \vec v_1 &amp; \vec v_2\end{bmatrix}\)</span>, then <span class="math inline">\(AS=\begin{bmatrix} A \vec v_1 &amp; A \vec v_2\end{bmatrix}\)</span> and <span class="math inline">\(SD=\begin{bmatrix} 2 \vec v_1 &amp; 3\vec v_2\end{bmatrix}\)</span>. So that <span class="math inline">\(\vec v_1\)</span> must be an eigenvector of <span class="math inline">\(A\)</span> with eigenvalue 2, and <span class="math inline">\(\vec v_2\)</span> must be an eigenvector of <span class="math inline">\(A\)</span> with eigenvalue 3. Thus, the matrix <span class="math inline">\(S\)</span> will exist and will have first column has an eigenvector of <span class="math inline">\(A\)</span> with eigenvalue 2, and have second column is an eigenvector of <span class="math inline">\(A\)</span> with eigenvalue of 3. Therefore, <span class="math inline">\(A\)</span> can be any matrix satisfying these requirements.</p>
+<p><span class="theorem-title"><strong>Example 6.10 </strong></span>In terms of eigenvalues of <span class="math inline">\(A\)</span>, which <span class="math inline">\(2\times 2\)</span> matrices <span class="math inline">\(A\)</span> does there exist an invertible matrix <span class="math inline">\(S\)</span> such that <span class="math inline">\(AS=SD\)</span>, where <span class="math inline">\(D=\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span>? If we let <span class="math inline">\(S=\begin{bmatrix} \vec v_1 &amp; \vec v_2\end{bmatrix}\)</span>, then <span class="math inline">\(AS=\begin{bmatrix} A \vec v_1 &amp; A \vec v_2\end{bmatrix}\)</span> and <span class="math inline">\(SD=\begin{bmatrix} 2 \vec v_1 &amp; 3\vec v_2\end{bmatrix}\)</span>. So that <span class="math inline">\(\vec v_1\)</span> must be an eigenvector of <span class="math inline">\(A\)</span> with eigenvalue 2, and <span class="math inline">\(\vec v_2\)</span> must be an eigenvector of <span class="math inline">\(A\)</span> with eigenvalue 3. Thus, the matrix <span class="math inline">\(S\)</span> will exist and will have first column has an eigenvector of <span class="math inline">\(A\)</span> with eigenvalue 2, and have second column is an eigenvector of <span class="math inline">\(A\)</span> with eigenvalue of 3. Therefore, <span class="math inline">\(A\)</span> can be any matrix satisfying these requirements.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.11 </strong></span>Let <span class="math inline">\(A\)</span> be a matrix with eigenvalues <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.11 </strong></span>Let <span class="math inline">\(A\)</span> be a matrix with eigenvalues <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span>.</p>
 <ul>
 <li>Show the eigenvalues of <span class="math inline">\(A^T\)</span> are <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span>.</li>
 <li>Show the eigenvalues of <span class="math inline">\(\alpha A\)</span> are <span class="math inline">\(\alpha\lambda_1, \ldots, \alpha \lambda_k\)</span>.</li>
@@ -465,10 +351,10 @@ A=\begin{bmatrix} -1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &a
 <p>Show <span class="math inline">\(A^{-1}\)</span> exists if and only if <span class="math inline">\(\lambda_1 \cdots \lambda_k\neq 0\)</span>. - Also, show that if <span class="math inline">\(A^{-1}\)</span> exists then its eigenvalues are <span class="math inline">\(1/\lambda_1,\ldots,1/\lambda_k\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.12 </strong></span>Let <span class="math inline">\(A\)</span> be a matrix with eigenvalues <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span> and let <span class="math inline">\(m\)</span> be a positive integer. Show that the eigenvalues of <span class="math inline">\(A^m\)</span> are <span class="math inline">\(\lambda^m_1, \ldots, \lambda^m_k\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.12 </strong></span>Let <span class="math inline">\(A\)</span> be a matrix with eigenvalues <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span> and let <span class="math inline">\(m\)</span> be a positive integer. Show that the eigenvalues of <span class="math inline">\(A^m\)</span> are <span class="math inline">\(\lambda^m_1, \ldots, \lambda^m_k\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.13 </strong></span>By using the matrix <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.13 </strong></span>By using the matrix <span class="math display">\[
 \begin{bmatrix}
 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0\\
 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0\\
@@ -479,25 +365,25 @@ A=\begin{bmatrix} -1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &a
 \]</span> Show that any given polynomial <span class="math inline">\(a_o \lambda^n+a_1\lambda^{n-1}+\cdots +a_{n-1}\lambda +a_n\)</span> where <span class="math inline">\(a_0\neq 0\)</span>, of degree <span class="math inline">\(n\)</span> may be regarded as the characteristic polynomial of a matrix of order <span class="math inline">\(n\)</span>. This matrix is called the <strong>companion matrix</strong> of the given polynomial.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.14 </strong></span>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be <span class="math inline">\(n\times n\)</span> matrices. Show that <span class="math inline">\(AB\)</span> and <span class="math inline">\(BA\)</span> have the same eigenvalues.</p>
+<p><span class="theorem-title"><strong>Example 6.14 </strong></span>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be <span class="math inline">\(n\times n\)</span> matrices. Show that <span class="math inline">\(AB\)</span> and <span class="math inline">\(BA\)</span> have the same eigenvalues.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.15 </strong></span>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be real <span class="math inline">\(n\times n\)</span> matrices with distinct eigenvalues. Prove that <span class="math inline">\(AB=BA\)</span> if and only if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same eigenvectors.</p>
+<p><span class="theorem-title"><strong>Example 6.15 </strong></span>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be real <span class="math inline">\(n\times n\)</span> matrices with distinct eigenvalues. Prove that <span class="math inline">\(AB=BA\)</span> if and only if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same eigenvectors.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.16 </strong></span>Prove that the characteristic polynomial of the block-triangular matrix <span class="math inline">\(A=\begin{bmatrix} B &amp; C\\ 0 &amp; D\end{bmatrix}\)</span> is the product of the characteristic polynomials of <span class="math inline">\(B\)</span> and <span class="math inline">\(D\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 6.16 </strong></span>Prove that the characteristic polynomial of the block-triangular matrix <span class="math inline">\(A=\begin{bmatrix} B &amp; C\\ 0 &amp; D\end{bmatrix}\)</span> is the product of the characteristic polynomials of <span class="math inline">\(B\)</span> and <span class="math inline">\(D\)</span>.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.17 </strong></span>Suppose that <span class="math inline">\(A\)</span> is an invertible <span class="math inline">\(n\times n\)</span> matrix. Prove that <span class="math display">\[\begin{equation}
+<p><span class="theorem-title"><strong>Example 6.17 </strong></span>Suppose that <span class="math inline">\(A\)</span> is an invertible <span class="math inline">\(n\times n\)</span> matrix. Prove that <span class="math display">\[\begin{equation}
 f_{A^{-1}}(x)=(-x)^n\det(A^{-1})f_A\left(\frac{1}{x}\right).
 \end{equation}\]</span></p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.18 </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix. Prove that <span class="math inline">\(A\)</span> and <span class="math inline">\(A^T\)</span> have the same characteristic polynomial and hence the same eigenvalues.</p>
+<p><span class="theorem-title"><strong>Example 6.18 </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix. Prove that <span class="math inline">\(A\)</span> and <span class="math inline">\(A^T\)</span> have the same characteristic polynomial and hence the same eigenvalues.</p>
 </div>
 <p>If<span class="math inline">\(\lambda\)</span> is an eigenvalue of an <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span>, then the kernel of the matrix <span class="math inline">\(A-\lambda I_n\)</span> is called the <strong>eigenspace</strong> associated with <span class="math inline">\(\lambda\)</span> and is denoted by <span class="math inline">\(E_\lambda\)</span>. The dimension of the eigenspace is called the <strong>geometric multiplicity</strong> of eigenvalue <span class="math inline">\(\lambda\)</span>. In other words, the geometric multiplicity is the nullity of the matrix <span class="math inline">\(A-\lambda I_n\)</span>.</p>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 22.2 </strong></span> Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix. If <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span> are distinct eigenvalues of <span class="math inline">\(A\)</span>, and <span class="math inline">\(\vec v_1, \ldots, \vec v_k\)</span> are any nonzero eigenvectors associated with these eigenvalues respectively, then <span class="math inline">\(\vec v_1, \ldots, \vec v_k\)</span> are linearly independent.</p>
+<p><span class="theorem-title"><strong>Theorem 6.2 </strong></span> Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix. If <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span> are distinct eigenvalues of <span class="math inline">\(A\)</span>, and <span class="math inline">\(\vec v_1, \ldots, \vec v_k\)</span> are any nonzero eigenvectors associated with these eigenvalues respectively, then <span class="math inline">\(\vec v_1, \ldots, \vec v_k\)</span> are linearly independent.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Suppose there exists constants <span class="math inline">\(c_1, \ldots, c_k\)</span> such that <span class="math display">\[\begin{equation}
@@ -531,7 +417,7 @@ c_1 \vec v_1 &amp; \cdots &amp; c_k \vec v_k
 <p>A basis of <span class="math inline">\(\mathbb{F}^n\)</span> consisting of eigenvectors of <span class="math inline">\(A\)</span> is called an <strong>eigenbasis</strong> for <span class="math inline">\(A\)</span>.<br>
 In particular, if an <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> distinct eigenvalues, then there exists an eigenbasis for <span class="math inline">\(A\)</span>, namely, construct an eigenbasis by finding an eigenvector for each eigenvalue.</p>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.19 </strong></span>Find the characteristic equation, the eigenvalues, and a basis for the eigenspace. <span class="math display">\[A=\begin{bmatrix}
+<p><span class="theorem-title"><strong>Example 6.19 </strong></span>Find the characteristic equation, the eigenvalues, and a basis for the eigenspace. <span class="math display">\[A=\begin{bmatrix}
 3 &amp; 2 &amp; 4 \\
 2 &amp; 0 &amp; 2\\
 4 &amp; 2 &amp; 3
@@ -561,7 +447,7 @@ In particular, if an <span class="math inline">\(n\times n\)</span> matrix <span
 \]</span> and we obtain the eigenvectors <span class="math inline">\(\vec v_2=\vectorthree{1}{-2}{0}^T\)</span> and <span class="math inline">\(\vec v_3=\vectorthree{0}{-2}{1}^T\)</span> with <span class="math inline">\(E_{-1}=\text{span}(\vec v_2, \vec v_3)\)</span>. Therefore the geometric multiplicity of <span class="math inline">\(\lambda_2=-1\)</span> is 2.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.20 </strong></span>Show that for each of the following matrices, <span class="math inline">\(\lambda=3\)</span> is an eigenvalue of algebraic multiplicity 4. In each case, compute the geometric multiplicity of <span class="math inline">\(\lambda\)</span>. <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 6.20 </strong></span>Show that for each of the following matrices, <span class="math inline">\(\lambda=3\)</span> is an eigenvalue of algebraic multiplicity 4. In each case, compute the geometric multiplicity of <span class="math inline">\(\lambda\)</span>. <span class="math display">\[
 \begin{bmatrix}
 3 &amp; 0 &amp; 0 &amp; 0 \\
 0 &amp; 3 &amp; 0 &amp; 0 \\
@@ -592,7 +478,7 @@ In particular, if an <span class="math inline">\(n\times n\)</span> matrix <span
 \]</span></p>
 </div>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 22.3 </strong></span> Similar matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same determinant, trace, characteristic polynomial, rank, nullity, and the same eigenvalues with the same algebraic multiplicities.</p>
+<p><span class="theorem-title"><strong>Theorem 6.3 </strong></span> Similar matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same determinant, trace, characteristic polynomial, rank, nullity, and the same eigenvalues with the same algebraic multiplicities.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The case for the determinant and trace are proven in <span class="math inline">\(\ref{propdettrace}\)</span>. Since <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are similar, there exists an invertible matrix <span class="math inline">\(P\)</span> such that <span class="math inline">\(B=P^{-1}AP\)</span>. Using <span class="math inline">\(\ref{propdettrace}\)</span> we find <span class="math display">\[\begin{align*}
@@ -608,7 +494,7 @@ In particular, if an <span class="math inline">\(n\times n\)</span> matrix <span
 </div>
 <p>In light of <span class="math inline">\(\ref{invsimmatrix}\)</span>, if <span class="math inline">\(T\)</span> is a linear transformation from <span class="math inline">\(V\)</span> to <span class="math inline">\(V\)</span> then a scalar <span class="math inline">\(\lambda\)</span> is called an <strong>eigenvalue</strong> of <span class="math inline">\(T\)</span> if there exists a nonzero element <span class="math inline">\(\vec v\)</span> in <span class="math inline">\(V\)</span> such that <span class="math inline">\(T(\vec v)=\lambda \vec v\)</span>. Assuming <span class="math inline">\(V\)</span> is finite-dimensional then a basis <span class="math inline">\(\mathcal{D}\)</span> of <span class="math inline">\(V\)</span> consisting of eigenvectors of <span class="math inline">\(T\)</span> is called an <strong>eigenbasis</strong> for <span class="math inline">\(T\)</span>.</p>
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 22.4 </strong></span>Let <span class="math inline">\(T\)</span> be a linear transformation on a finite-dimensional vector space <span class="math inline">\(V\)</span>, and let <span class="math inline">\(\lambda\)</span> be an eigenvalue of <span class="math inline">\(T\)</span>. The geometric multiplicity of <span class="math inline">\(\lambda\)</span> is less than or equal to the algebraic multiplicity of <span class="math inline">\(\lambda\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 6.4 </strong></span>Let <span class="math inline">\(T\)</span> be a linear transformation on a finite-dimensional vector space <span class="math inline">\(V\)</span>, and let <span class="math inline">\(\lambda\)</span> be an eigenvalue of <span class="math inline">\(T\)</span>. The geometric multiplicity of <span class="math inline">\(\lambda\)</span> is less than or equal to the algebraic multiplicity of <span class="math inline">\(\lambda\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(k\)</span> represent the geometric multiplicity of <span class="math inline">\(\lambda\)</span> and assume <span class="math inline">\(\dim V=n\)</span>. First notice, by definition, the eigenspace <span class="math inline">\(E_{\lambda}\)</span> must contain at least one nonzero vector, and thus <span class="math inline">\(k=\dim E_{\lambda} \geq 1\)</span>. Choose a basis <span class="math inline">\(\vec v_1, \ldots,\vec v_k\)</span> for <span class="math inline">\(E_{\lambda}\)</span> and, by <span class="math inline">\(\ref{basisspacethm}\)</span>, extend it to a basis <span class="math inline">\(\mathcal{B}=(\vec v_1, \ldots, \vec v_k, \vec v_{k+1},\ldots,\vec v_n)\)</span> of <span class="math inline">\(V\)</span>. For <span class="math inline">\(1\leq i \leq k\)</span>, notice <span class="math display">\[
@@ -639,7 +525,7 @@ f_T(x)
 \]</span> It follows that <span class="math inline">\(f_T(x)=(x-\lambda)^{k+m} g(x)\)</span> where <span class="math inline">\(g(\lambda)\neq 0\)</span> and <span class="math inline">\(m\)</span> is the number of factors of <span class="math inline">\(x-\lambda\)</span> in <span class="math inline">\(f_D(x)\)</span>. Hence <span class="math inline">\(k\leq k+m\)</span> leading to the desired conclusion.</p>
 </div>
 <div id="exm-" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22.21 </strong></span>Let <span class="math inline">\(T(M)=M-M^T\)</span> be a linear transformation from <span class="math inline">\(\mathbb{R}^{2\times2}\)</span> to <span class="math inline">\(\mathbb{R}^{2\times2}\)</span>. For each eigenvalue find a basis for the eigenspace and state the geometric multiplicity. Since <span class="math inline">\(A=A^T\)</span> for every symmetric matrix, we notice <span class="math inline">\(T(M)=M-M^T=M-M=0\)</span> whenever <span class="math inline">\(M\)</span> is a symmetric matrix. Thus the nonzero symmetric matrices are eigenmatrices with eigenvalue <span class="math inline">\(0\)</span>.<br>
+<p><span class="theorem-title"><strong>Example 6.21 </strong></span>Let <span class="math inline">\(T(M)=M-M^T\)</span> be a linear transformation from <span class="math inline">\(\mathbb{R}^{2\times2}\)</span> to <span class="math inline">\(\mathbb{R}^{2\times2}\)</span>. For each eigenvalue find a basis for the eigenspace and state the geometric multiplicity. Since <span class="math inline">\(A=A^T\)</span> for every symmetric matrix, we notice <span class="math inline">\(T(M)=M-M^T=M-M=0\)</span> whenever <span class="math inline">\(M\)</span> is a symmetric matrix. Thus the nonzero symmetric matrices are eigenmatrices with eigenvalue <span class="math inline">\(0\)</span>.<br>
 Also notice the nonzero skew-symmetric matrices have eigenvalue <span class="math inline">\(2\)</span> since <span class="math inline">\(L(M)=M-M^T=M+M=2M\)</span>. For eigenvlaue <span class="math inline">\(\lambda=0\)</span> we have eigenspace <span class="math inline">\(E_0\)</span> with basis <span class="math display">\[
 \left(
 \begin{bmatrix}
@@ -675,6 +561,127 @@ Also notice the nonzero skew-symmetric matrices have eigenvalue <span class="mat
 \right).
 \]</span> for <span class="math inline">\(T\)</span>.</p>
 </div>
+<section id="diagonalization" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="diagonalization"><span class="header-section-number">6.1</span> Diagonalization</h2>
+<p>An <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> is called <strong>diagonalizable</strong> if <span class="math inline">\(A\)</span> is similar to some diagonal matrix <span class="math inline">\(D\)</span>. If the matrix of a linear transformation <span class="math inline">\(T\)</span> with respect to some basis is diagonal then we call <span class="math inline">\(T\)</span> <strong>diagonalizable</strong> .</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6.5 </strong></span> An <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> is diagonalizable if and only if it has <span class="math inline">\(n\)</span> linearly independent eigenvectors. In that case, the diagonal matrix <span class="math inline">\(D\)</span> is similar to <span class="math inline">\(A\)</span> and is given by <span class="math display">\[\begin{equation}
+\label{diagmat}
+D=
+\begin{bmatrix}
+\lambda_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda_2 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots&amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; \lambda_n
+\end{bmatrix}
+\end{equation}\]</span> where <span class="math inline">\(\lambda_1, ..., \lambda_n\)</span> are the eigenvalues of <span class="math inline">\(A\)</span>. If <span class="math inline">\(C\)</span> is a matrix whose columns are linearly independent eigenvectors of <span class="math inline">\(A\)</span>, then <span class="math inline">\(D=C^{-1}A C\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof is left for the reader.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 6.1 </strong></span> Let <span class="math inline">\(T\)</span> be a linear transformation given by <span class="math inline">\(T(\vec x)=A\vec x\)</span> where <span class="math inline">\(A\)</span> is a square matrix. If <span class="math inline">\(\mathcal{D}=(\vec v_1, ....,\vec v_n)\)</span> is an eigenbasis for <span class="math inline">\(T\)</span>, with <span class="math inline">\(A\vec v_i=\lambda_i \vec v_i\)</span>, then the <span class="math inline">\(\mathcal{D}\)</span>-matrix <span class="math inline">\(D\)</span> of <span class="math inline">\(T\)</span> given in <span class="math inline">\(\ref{diagmat}\)</span> is <span class="math inline">\(D=[\vec v_1, ...., \vec v_n]^{-1}A [\vec v_1, ...., \vec v_n]\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof follows from <span class="math inline">\(\ref{dialineigvec}\)</span> and <span class="math inline">\(\ref{eigenveceigenvallemma}\)</span>.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 6.2 </strong></span> A matrix <span class="math inline">\(A\)</span> is diagonalizable if andy only if there exists an eigenbasis for <span class="math inline">\(A\)</span>. In particular, if an <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> distinct eigenvalues, then <span class="math inline">\(A\)</span> is diagonalizable.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof follows from <span class="math inline">\(\ref{dialineigvec}\)</span> and <span class="math inline">\(\ref{eigenveceigenvallemma}\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.22 </strong></span>Let <span class="math inline">\(T: \mathcal{P}_2\to \mathcal{P}_2\)</span> be the linear transformation defined by<br>
+<span class="math display">\[
+T(a_0+a_1 x+a_2x^2)=(a_0+a_1+a_2)+(a_1+a_2)x+a_2x^2.
+\]</span> Show that <span class="math inline">\(T\)</span> is not diagonalizable. The matrix of <span class="math inline">\(T\)</span> with respect to the usual basis <span class="math inline">\((, x, x^2)\)</span> for <span class="math inline">\(\mathcal{P}_2\)</span> is easily seen to be <span class="math display">\[
+A=
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}.
+\]</span> The characteristic polynomial is <span class="math inline">\(f_A(x)=-(x-1)^3\)</span> since <span class="math inline">\(A\)</span> is upper triangular. So <span class="math inline">\(T\)</span> has only one (repeated) eigenvalue <span class="math inline">\(\lambda=1\)</span>. A nonzero polynomial <span class="math inline">\(g\)</span> with <span class="math inline">\(g(x)=a_0+a_1 x+a_2 x^2\)</span> is an eigenvector if and only if <span class="math display">\[
+\label{notdiageq}
+\begin{bmatrix}
+0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0
+\end{bmatrix}
+\vectorthree{a_0}{a_1}{a_2}=\vectorthree{0}{0}{0}.
+\]</span> Thus <span class="math inline">\(a_1=0\)</span> and <span class="math inline">\(a_2=0\)</span>, so there is only one linearly independent eigenvector for <span class="math inline">\(\lambda=1\)</span>. Thus <span class="math inline">\(T\)</span> is not diagonalizable by <span class="math inline">\(\ref{diagonalizablechar}\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.23 </strong></span>Let <span class="math inline">\(T:\mathcal{P}_2\to \mathcal{P}_2\)</span> be the linear transformation defined by<br>
+<span class="math display">\[\begin{equation}
+T(f(x))=x^2f''(x)+(3x-2)f'(x)+5 f(x).
+\end{equation}\]</span> Find a basis for <span class="math inline">\(\mathcal{P}_2\)</span> such that the matrix representation of <span class="math inline">\(T\)</span> with respect to <span class="math inline">\(\mathcal{B}\)</span> is diagonal. Since <span class="math inline">\(T(x^2)=13x^2-4x\)</span>, <span class="math inline">\(T(x)=8x-2\)</span>, and <span class="math inline">\(T(1)=5\)</span> the matrix representation of <span class="math inline">\(T\)</span> with respect to the basis <span class="math inline">\(\mathcal{B}=(x^2,x,1)\)</span> is <span class="math display">\[
+A=\begin{bmatrix}13 &amp; 0 &amp; 0 \\ -4 &amp; 8 &amp; 0 \\ 0 &amp; -2 &amp; 5 \end{bmatrix}.
+\]</span> Hence <span class="math display">\[\begin{equation}
+f_T(x)=f_A(x)=\begin{vmatrix} x-13  &amp; 0 &amp; 0 \\ 4 &amp; x-8 &amp; 0 \\ 0 &amp; 2 &amp; x-5 \end{vmatrix}=(x-13)(x-8)(x-5).
+\end{equation}\]</span> The eigenvalues of <span class="math inline">\(T\)</span> are <span class="math inline">\(\lambda_1=13\)</span>, <span class="math inline">\(\lambda_2=8\)</span> and <span class="math inline">\(\lambda_3=5\)</span>. Solving each of the homogenous systems <span class="math inline">\((A-13I_3)\vec x=\vec 0\)</span>, <span class="math inline">\((A-8I_3)\vec x=\vec 0\)</span>, and <span class="math inline">\((A-5I_3)\vec x=\vec 0\)</span> yields the eigenvectors <span class="math inline">\(\vec v_1=5x^2-4x+1\)</span>, <span class="math inline">\(\vec v_2=3x-2\)</span>, and <span class="math inline">\(\vec v_3=1\)</span>, respectively. Notice <span class="math inline">\(\vec v_1, \vec v_2, \vec v_3\)</span> are 3 linearly independent vectors, so by <span class="math inline">\(\ref{dialineigvec}\)</span>, <span class="math inline">\(T\)</span> is diagonalizable. We let <span class="math inline">\(\mathcal{D}=(\vec v_1, \vec v_2, \vec v_3)\)</span> and since <span class="math inline">\(T(\vec v_1)=13\vec v_1\)</span>,<span class="math inline">\(T(\vec v_2)=8\vec v_2\)</span>, and <span class="math inline">\(T(\vec v_3)=5\vec v_3\)</span>, the matrix representation of <span class="math inline">\(T\)</span> with respect to <span class="math inline">\(\mathcal{D}\)</span> is the diagonal matrix <span class="math display">\[
+\begin{bmatrix}13 &amp; 0 &amp; 0 \\ 0 &amp; 8 &amp; 0 \\ 0 &amp; 0 &amp; 5 \end{bmatrix}
+\]</span> according to <span class="math inline">\(\ref{dialineigvec}\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.24 </strong></span>Let <span class="math inline">\(T:\mathcal{P}_3\to \mathcal{P}_3\)</span> be the linear transformation defined by<br>
+<span class="math display">\[\begin{equation}
+T(f(x))=xf'(x)+f(x+1).
+\end{equation}\]</span> Find a basis for <span class="math inline">\(\mathcal{P}_3\)</span> such that the matrix representation of <span class="math inline">\(T\)</span> with respect to <span class="math inline">\(\mathcal{B}\)</span> is diagonal. Since <span class="math inline">\(T(x^3)=4x^3+3x^2+3x+1\)</span>, <span class="math inline">\(T(x^2)=3x^2+2x+1\)</span>, <span class="math inline">\(T(x)=2x+1\)</span>, and <span class="math inline">\(T(1)=1\)</span> the matrix representation of <span class="math inline">\(T\)</span> with respect to the basis <span class="math inline">\(\mathcal{B}=(x^3,x^2,x,1)\)</span> is <span class="math display">\[
+A=\begin{bmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\ 3 &amp; 3 &amp; 0 &amp; 0 \\ 3 &amp; 2 &amp; 2 &amp; 0 \\ 1 &amp; 1 &amp; 1 &amp; 1  \end{bmatrix}.
+\]</span> Since <span class="math inline">\(A\)</span> is lower triangular, <span class="math inline">\(f_T(x)=f_A(x)=(x-4)(x-3)(x-2)(x-1)\)</span>; and so the eigenvalues are <span class="math inline">\(\lambda_1=4\)</span>, <span class="math inline">\(\lambda_2=3\)</span>, <span class="math inline">\(\lambda_3=2\)</span>, and <span class="math inline">\(\lambda_4=1\)</span>. Solving for a basis for each eigenspace of <span class="math inline">\(A\)</span> yields <span class="math display">\[
+E_{\lambda_1}=\left(\vectorfour{6}{18}{27}{17}\right), \quad
+E_{\lambda_2}=\left(\vectorfour{0}{2}{4}{3}\right), \quad
+E_{\lambda_3}=\left(\vectorfour{0}{0}{1}{1}\right),\quad
+E_{\lambda_4}=\left(\vectorfour{0}{0}{0}{1}\right).
+\]</span> By taking the polynomial corresponding to the basis vectors, we let <span class="math inline">\(\mathcal{D}=(\vec v_1, \vec v_2, \vec v_3, \vec v_4)\)</span> where <span class="math inline">\(\vec v_1=6x^3+18x^2+27x+17\)</span>, <span class="math inline">\(\vec v_2=2x^2+4x+3\)</span>, <span class="math inline">\(\vec v_3=x+1\)</span>, and <span class="math inline">\(\vec v_4=1\)</span>. The diagonal matrix <span class="math display">\[
+\begin{bmatrix}
+4 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 3 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</span> is the matrix representation of <span class="math inline">\(T\)</span> in <span class="math inline">\(\mathcal{D}\)</span>-coordinates and has the eigenvalues of <span class="math inline">\(T\)</span> on its main diagonal. The transition matrix <span class="math inline">\(P\)</span> from <span class="math inline">\(\mathcal{B}\)</span>-coordinates to <span class="math inline">\(\mathcal{D}\)</span>-coordinates is <span class="math display">\[
+P=\begin{bmatrix}
+6 &amp; 0 &amp; 0 &amp; 0 \\
+18 &amp; 2 &amp; 0 &amp; 0 \\
+27 &amp; 4 &amp; 1 &amp; 0 \\
+17 &amp; 3 &amp; 1 &amp; 1
+\end{bmatrix}
+\]</span><br>
+and satisfies the required relation <span class="math inline">\(D=P^{-1}AP\)</span> as can be verified.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.25 </strong></span>If <span class="math inline">\(A\)</span> is similar to <span class="math inline">\(B\)</span>, show that <span class="math inline">\(A^n\)</span> is similar to <span class="math inline">\(B^n\)</span>, for any positive integer <span class="math inline">\(n\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.26 </strong></span>Suppose that <span class="math inline">\(C^{-1}AC=D\)</span>. Show that for any integer <span class="math inline">\(n\)</span>, <span class="math inline">\(A^n=CD^nC^{-1}\)</span>.</p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6.27 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be real numbers. By diagonalizing <span class="math display">\[
+M=
+\begin{bmatrix}
+a &amp; b-a \\
+0 &amp; b
+\end{bmatrix},
+\]</span> prove that <span class="math display">\[
+M^n=
+\begin{bmatrix}
+a^n &amp; b^n-a^n \\
+0 &amp; b^n
+\end{bmatrix}
+\]</span> for all positive integers <span class="math inline">\(n\)</span>. We need a basis of <span class="math inline">\(\mathbb{R}^2\)</span> consisting of eigenvectors of <span class="math inline">\(M\)</span>. One such basis is <span class="math inline">\(\vec v_1=\vec e_1\)</span> and <span class="math inline">\(\vec v_2=\vec e_1+\vec e_2\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are eigenvalues for corresponding to these eigenvectors, respectively. Let <span class="math inline">\(P=\begin{bmatrix}\vec v_1 &amp; \vec v_2\end{bmatrix},\)</span> then by <span class="math inline">\(\ref{eigendmatrix}\)</span>, the diagonalization is <span class="math display">\[\begin{equation*}
+D=\begin{bmatrix}\vec v_1 &amp; \vec v_2\end{bmatrix}^{-1}M\begin{bmatrix}\vec v_1 &amp; \vec v_2\end{bmatrix}=\begin{bmatrix}a &amp; 0 \\ 0 &amp; b \end{bmatrix}.
+\end{equation*}\]</span> Therefore <span class="math display">\[\begin{equation*}
+M^n=(PDP^{-1})^n=\underbrace{(PDP^{-1})\cdots (PDP^{-1})}_{n\text{-times}}=PD^n P^{-1}
+=\begin{bmatrix}
+a^n &amp; b^n-a^n \\
+0 &amp; b^n
+\end{bmatrix}.
+\end{equation*}\]</span></p>
+</div>
+</section>
 </main> <!-- /main -->
 <script type="application/ld+json">
     {
@@ -995,13 +1002,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./determinants-and-trace.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Determinants and Trace</span></span>
+      <a href="./determinants.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Determinants</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./diagonalization.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Diagonalization</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./canonical-forms.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Canonical Forms</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

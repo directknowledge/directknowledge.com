@@ -1,0 +1,2729 @@
+---
+pagetitle: Differentiation - Single Variable Calculus
+---
+# Differentiation
+
+
+In mathematics, differentiation is a process of finding the derivative of a function. The derivative measures the rate of change of a function at a given point, and it is one of the most important tools in calculus. In this section, we will discuss the basics of differentiation and how to differentiate a function. We will also explore derivatives of basic functions and their applications.
+
+The derivative of a function is a measure of how the function changes as one of its variables changes. In other words, it tells us how much the output of the function will change when we make a small change to one of its inputs. The derivative can be thought of as a ``function of a function."
+
+In calculus, we sometimes find it useful to take the derivative of a function in order to better understand how it behaves. For example, the derivative can tell us how fast a function is growing or shrinking at a particular point. It can also give us information about the maximum and minimum values that the function can take on. In short, the derivative is a powerful tool that can be used to analyze a wide variety of functions.
+
+Differentiation is the process of finding the rate of change of a function with respect to one of its variables. differentiation is a fundamental tool in calculus and has many applications in physics, engineering, economics, and other areas. There are three basic rules of differentiation: the power rule, the product rule, the quotient rule, and the chain rule. These rules can be used to find the derivative of many functions.
+
+Differentiation is a powerful tool that can be used to solve many problems. Differentiation can be used to find the maximum or minimum value of a function, to optimize a function, or to find the equation of a curve. Differentiation can also be used to find the rate of change of a quantity with respect to time. Differentiation is an essential tool in calculus and has many applications in physics, engineering, economics, and other areas. Thanks for the differentiation!
+
+The power rule is one of the most basic rules of differentiation. The rule states that if $y = x^n$, then $dy/dx = n x^(n-1)$. In other words, the derivative of a function raised to a power is equal to the power multiplied by the original function raised to one less than the power.
+
+This rule can be applied to any number of powers, including negative and fractional powers. The power rule is a simple way to find the derivative of many common functions, and it can be a helpful tool for solving differentiation problems.
+
+It's a simple concept, really. You take a function, and you find its rate of change. The quotient rule is just a handy tool to help with that. And the product rule?
+
+These differentiation rules are a set of rules that allow you to find the derivative of a function. There are two main differentiation rules: the product rule and the quotient rule. The product rule states that if you have two functions, $f(x)$ and $g(x)$, then the derivative of their product is equal to $f'(x)g(x) + f(x)g'(x)$.
+
+The quotient rule states that if you have two functions, $f(x)$ and $g(x)$, then the derivative of their quotient is equal to $(f'(x)g(x) - f(x)g'(x)) / g^2(x)$. These differentiation rules are essential for anyone who wants to find the derivative of a function.
+
+The derivative plays a vital role in mathematics, serving as a tool for differentiation. This process allows us to find the rate of change of a function at a given point, which is essential for understanding how functions change over time. The derivative also has important applications in physics, helping us to understand how objects move and how forces interact.
+
+In short, the derivative is an indispensable tool for anyone who wants to understand the world around them. So the next time you're differentiating, remember: you're playing a crucial role in the world of mathematics. Thanks, derivatives!
+
+Ah, the derivatives of trigonometric functions. Where would math class be without them? No doubt, differentiation is one of the most important concepts in calculus. And the derivatives of trigonometric functions are an essential part of that. After all, what would calculus be without sine, cosine, and tangent?
+
+Differentiation allows us to find rates of change, and the derivatives of trigonometric functions give us a way to find those rates of change for angles. In other words, they help us to figure out how fast something is moving when we only have angles to go on. So the next time you're trying to find the derivative of some function or other, don't forget the good old trigonometric functions. They just might be the key to success.
+
+The chain rule is a differentiation rule that allows you to find the derivative of a function that is composed of other functions. For example, let's say you have a function $f(x)$ that is equal to $g(h(x))$. To find the derivative of $f(x)$, you would first take the derivative of $g(h(x))$ with respect to $h(x)$, and then multiply that by the derivative of $h(x)$ with respect to $x$.
+
+In other words, the chain rule tells us that we can ``chain" together the derivatives of the individual functions to get the derivative of the overall function. The chain rule is a powerful tool that can be used to differentiate all kinds of complicated functions. So next time you're feeling differentiation, just remember: the chain rule is your friend!
+
+Implicit differentiation is a method of differentiation that can be used when a function is not explicitly defined in terms of a single variable. For example, consider the equation $x^2+y^2=5$. This equation cannot be solved for $y$ in terms of $x$, but we can differentiate implicitly and then find $dy/dx$. The derivative of this equation with respect to $x$ is $2x+2y(dy/dx)=0$. This derivative can be used to solve for $dy/dx$, which can then be used to find the slope of the tangent line at any point on the curve.
+
+While implicit differentiation may seem like a daunting task, it is a useful tool that can be used to solve problems that would otherwise be unsolvable. With a little practice, anyone can master the technique of implicit differentiation.
+
+In mathematics, differentiation is the process of finding the rate of change of a function with respect to one of its variables. In other words, it allows us to calculate how a function changes as we vary one of its inputs. One of the most useful applications of differentiation is inverse functions.
+
+Recall that an inverse function is a function that undoes another function; for example, the inverse of the function $f(x)=2x$ is the function $g(x)=(1/2)x$.
+
+Differentiating an inverse function is a relatively simple process; all we need to do is apply the chain rule. In general, if we have a function and its inverse, then the derivative of the inverse function is given by a simple formula. So differentiation can be a powerful tool for helping us understand inverse functions and their properties.
+
+In calculus, differentiation is used to find the rate of change of a function at a particular point. Related rates problems involve finding the rate of change of one quantity in relation to another. For example, consider a ball that is falling from a height. The rate of change of its height (in meters per second) will be related to the rate of change of its velocity (in meters per second). We can use differentiation to calculate the rate of change of the height in relation to the velocity.
+
+If we know the height and velocity at a particular instant, we can then use calculus to find out how these quantities change over time. This information can be used to predict the behavior of the system. Related rates problems can be challenging, but they are also interesting and enjoyable to solve. With a little practice, you will be able to master this essential technique.
+
+Suppose you're driving down a straight road at a constant speed. In this case, your speedometer is linear: it tells you exactly how fast you're going. But what if you're driving around a curve? To get an accurate reading of your actual speed, you need to linearize.
+
+This is where differentiation comes in. Differentiation allows us to take a nonlinear function and turn it into a linear function.
+
+In other words, it allows us to find the straight-line approximation of a curve. This is essential for many applications, such as navigation and control systems. Differentiation is also a vital tool in calculus, which is the mathematics of change. By understanding differentiation, we can begin to understand how things change over time.
+
+This book will help you, among other things, understand how to do calculus. It will teach you how to find the rate of change of a function and how to use differentiation to solve problems. You will also learn about inverse functions and related rates.
+
+Differentiation is one of the most fundamental concepts in calculus, and it can be challenging to wrap your head around it. However, there are a few tricks that can make differentiation a little easier to understand.
+
+First, make sure you have a strong foundation in algebra. Differentiation involves working with equations and solving for variables, so being comfortable with algebra is essential. Next, start with the basics of differentiation and work your way up to more complex concepts. And finally, don't be afraid to use visual aids. Drawing graphs and charts can be helpful when trying to understand how differentiation works. By following these tips, you'll be well on your way to becoming a calculus master!
+
+When it comes to teaching calculus, there's no one ``right" way. However, there are some differentiation techniques that are more effective than others. For example, using a graphing calculator (or even python) can help students visualize complicated concepts, and working with real-world data can make abstract calculations more relatable. With a little practice, you will be able to master these essential skills.
+
+
+
+
+## Derivative as a Function
+
+## The Definition of Derivative
+
+The first main idea of calculus is of course, the limit. A \index{limiting process} **limiting process**  can be used in the study of curves in general; but the derivative the main limiting  process that has lead to the development of calculus. 
+
+
+Given a function $f$ of  a real variable $x$ and a positive change in $x$, say $\Delta  x$, the  expression 
+$$
+\frac{f(x+\Delta  x)-f(x)}{\Delta  x}
+$$ 
+is called the \index{difference quotient} **difference quotient**  and is the formula for the slope of a secant line to the graph of $f$ through the points $(x,f(x))$ and $(x+\Delta  x,f(x+\Delta  x)).$ 
+
+The limiting process illustrated in the examples below was first developed by the French mathematician Pierre de Fermat. The following definition was realized by Newton and Leibniz.
+
+
+::: {#def- } 
+The \index{derivative of a function} **derivative of a function**  $y=f(x)$ for any $x$ is defined by
+$$
+f'(x)=\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}
+$$
+provided this limit exists. The derivative is also denoted by $\frac{d y}{d x};$ and other common notations are $y'$, $\frac{d f}{d x}$, and
+$D_x(y).$ Also the limit is sometimes denoted by
+$$
+\frac{d y}{d x}=\lim _{\Delta  x\to 0}\frac{\Delta  y}{\Delta  x}=\lim _{\Delta  x\to 0}\frac{f(x+\Delta  x)-f(x)}{\Delta  x}=f'(x).
+$$
+The process of finding the derivative is called \index{differentiation} **differentiation**. A function $f$ is called \index{differentiable} **differentiable** at $x$ when the defining limit exists; and we say that $f$ is \index{differentiable} on $(a,b)$ when $f$ is differentiable at every point in $(a,b).$
+::: 
+
+## Taking the Derivative Using the Definition
+
+In the following examples we illustrate how to find the derivative function using the definition of the derivative. 
+
+
+::: {#exm- } 
+Find the derivative of the function using the definition of the derivative given $f(x)=x^3$ at $(1,1).$
+::: 
+
+::: {.proof }[Solution]
+By definition we compute the limit, as follows,
+\begin{align*}
+f'(x) & =  \lim _{\Delta  x\to 0}\frac{f(x+\Delta  x)-f(x)}{\Delta  x}  \\
+& =  \lim _{\Delta  x\to 0}\frac{x^3+3 x^2 (\Delta  x)+3 x (\Delta  x)^2+(\Delta  x)^3-x^3}{\Delta  x} \\
+& =  \lim _{\Delta  x\to 0}\frac{3 x^2 (\Delta  x)+3 x (\Delta  x)^2+(\Delta  x)^3}{\Delta  x}  \\
+& =  \lim _{\Delta  x\to 0}\left( 3 x^2 +3 x (\Delta  x)+(\Delta  x)^2 \right) 
+=  3 x^2
+\end{align*}
+which is the derivative of $f$ for any $x.$ At $x=1,$ we have $f'(1)=1.$
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function using the definition of the derivative given $f(x)=\sqrt[3]{x}$ at $(8,2).$
+::: 
+
+::: {.proof }[Solution]
+By the definition of the derivative,  
+\begin{align*}
+f'(x) & = \lim _{\Delta  x\to 0}\frac{f(x+\Delta  x)-f(x)}{\Delta  x} 
+=\lim _{\Delta  x\to 0}\frac{\sqrt[3]{(x+\Delta  x)}-\sqrt[3]{x}}{\Delta  x} \\
+& =\lim _{\Delta  x\to 0}\left(\frac{\sqrt[3]{(x+\Delta  x)}-\sqrt[3]{x}}{\Delta  x}\right)\left(\frac{\sqrt[3]{(x+\Delta  x)^2}+\sqrt[3]{(x+\Delta  x)x}+\sqrt[3]{x^2}}{\sqrt[3]{(x+\Delta  x)^2}+\sqrt[3]{(x+\Delta  x)x}+\sqrt[3]{x^2}}\right) \\
+& =\lim _{\Delta  x\to 0}\left(\frac{x+\Delta  x-x}{\Delta  x\left(\sqrt[3]{(x+\Delta  x)^2}+\sqrt[3]{(x+\Delta  x)x}+\sqrt[3]{x^2}\right)}\right) \\
+& =\lim _{\Delta  x\to 0}\left(\frac{1}{\sqrt[3]{(x+\Delta  x)^2}+\sqrt[3]{(x+\Delta  x)x}+\sqrt[3]{x^2}}\right) 
+ =\lim _{\Delta  x\to 0}\frac{1}{3\sqrt[3]{x^2}}
+\end{align*}
+which is the derivative of $f$ for any $x.$ At $x=8,$ we have $f'(8)=\frac{1}{12}.$
+::: 
+
+ 
+## Finding an Equation of the Tangent Line
+
+
+::: {#thm- } 
+The slope of the tangent line to the function at $\left(x_0,f\left(x_0\right)\right)$ is $m=f'\left(x_0\right)$ and $y=f'\left(x_0\right)\left(x-x_0\right)+f\left(x_0\right)$ is an equation of the tangent line to the graph of $f$ at $x=x_0$.
+::: 
+
+::: {.proof }
+By definition, the \index{slope of the tangent line} **slope of the tangent line**  at $x_0$ is $f'(x_0)$, therefore an equation of the tangent line that passes through $\left(x_0,f\left(x_0\right)\right)$ is $y=f'\left(x_0\right)\left(x-x_0\right)+f\left(x_0\right).$
+::: 
+
+::: {#exm- } 
+Differentiate the function $\displaystyle f(x)=x+\frac{9}{x}$ and find the slope of the tangent line at the point where $x=-3.$
+::: 
+
+::: {.proof }[Solution]
+To find the slope of the tangent line we determine the derivative of the function,
+\begin{align*}
+f'(x) & =\lim _{\Delta  x\to 0}\frac{f(x+\Delta  x)-f(x)}{\Delta  x} \\ 
+& =\lim _{\Delta  x\to 0}\frac{3\sqrt{-(x+\Delta  x)}-3\sqrt{-x}}{\Delta  x} \\ 
+& =\lim _{\Delta  x\to 0}\left(3\frac{\sqrt{-(x+\Delta  x)}-\sqrt{-x}}{\Delta  x}\right)\left(\frac{\sqrt{-(x+\Delta  x)}+\sqrt{-x}}{\sqrt{-(x+\Delta  x)}+\sqrt{-x}}\right) \\ 
+& =\lim _{\Delta  x\to 0}\left(3\frac{-(x+\Delta  x)-(-x)}{\Delta  x\left(\sqrt{-(x+\Delta  x)}+\sqrt{-x}\right)}\right) \\ 
+& =\lim _{\Delta  x\to 0}\left(3\frac{-\Delta  x}{\Delta  x\left(\sqrt{-(x+\Delta  x)}+\sqrt{-x}\right)}\right) \\ 
+& =\lim _{\Delta  x\to 0}\left(\frac{-3}{\sqrt{-(x+\Delta  x)}+\sqrt{-x}}\right) \\ 
+& =-\frac{3}{2 \sqrt{-x}}
+\end{align*}
+which is the derivative of the function $f$ for any $x<0.$ At $x=-2,$ we have
+$$
+f'(-2)=-\frac{3}{2 \sqrt{-(-2)}}=-\frac{3\sqrt{2}}{4}.
+$$
+Therefore, an equation of the tangent line at $x=-2$ is
+\begin{align*}
+& y=f'\left(x_0\right)\left(x-x_0\right)+f\left(x_0\right) =-\frac{3\sqrt{2}}{4} (x+2)+3\sqrt{2}.
+\end{align*}
+::: 
+
+
+::: {#exm- } 
+Find an equation of the tangent line to the graph of 
+$$
+g(x)=\frac{1-x}{2+x}
+$$
+ at $x=-1.$
+::: 
+
+::: {.proof }[Solution]
+To find the slope of the tangent line we compute the derivative of the function,
+\begin{align*}
+g'(x) & =\lim _{\Delta  x\to 0}\frac{f(x+\Delta  x)-f(x)}{\Delta  x} \\ 
+& =\lim _{\Delta  x\to 0}\frac{\frac{1-(x+\Delta  x)}{2+(x+\Delta  x)}-\frac{1-x}{2+x}}{\Delta  x} \\ 
+& =\lim _{\Delta  x\to 0}\frac{\left(\frac{1-(x+\Delta  x)}{2+(x+\Delta  x)}\right)\left(\frac{2+x}{2+x}\right)-\left(\frac{1-x}{2+x}\right)\left(\frac{2+(x+\Delta x)}{2+(x+\Delta  x)}\right)}{\Delta  x} \\ 
+& =\lim _{\Delta  x\to 0}\frac{-3\Delta  x}{\Delta  x(2+(x+\Delta  x))(2+x)} \\ 
+& =\lim _{\Delta  x\to 0}\frac{-3}{(2+(x+\Delta  x))(2+x)} \\ 
+& =\frac{-3}{(2+x)^2}
+\end{align*}
+At $x=-1,$ we have
+$$
+g'(-1)=\frac{-3}{(2+(-1))^2}=-3.
+$$
+Therefore, an equation of the tangent line at $x=-1$ is
+$$
+y=f'\left(x_0\right)\left(x-x_0\right)+f\left(x_0\right) = -3 (x+1)+2.
+$$
+::: 
+
+## Examples of Non-differentiable Functions
+
+
+::: {#exm- } 
+Give three examples of functions $f$ where $f$ is not differentiable at $x=c$ but $f$ is continuous at
+$x=c.$
+::: 
+
+::: {.proof }[Solution]
+The function $f(x)=|x|$ is not differentiable at $x=0$ since
+$$
+\lim _{h\to 0^-}\frac{f(0+h)-f(0)}{h}=\lim _{h\to 0^-}\frac{|h|}{h}=-1
+$$
+$$
+\lim _{h\to 0^+}\frac{f(0+h)-f(0)}{h}=\lim _{h\to 0^+}\frac{|h|}{h}=1
+$$
+which proves the two-sided limit (the derivative) 
+$$
+\lim _{h\to 0}\frac{f(0+h)-f(0)}{h}
+$$
+does not exist. 
+This type of example where the function is not differentiable is called a \index{corner point} **corner point** . 
+ 
+Secondly, the function $f(x)=\sqrt[3]{x^2}$ is not differentiable at $x=0$ since
+$$
+\lim _{h\to 0^-}\frac{f(0+h)-f(0)}{h}=\lim _{h\to 0^-}\frac{\sqrt[3]{h^2}}{h}
+=\frac{1}{\sqrt[3]{h}}=-\infty
+$$
+$$
+\lim _{h\to 0^+}\frac{f(0+h)-f(0)}{h}=\lim _{h\to 0^+}\frac{\sqrt[3]{h^2}}{h}
+=\frac{1}{\sqrt[3]{h}}=+\infty
+$$
+which proves the two-sided limit (the derivative) 
+$$
+\lim _{h\to 0}\frac{f(0+h)-f(0)}{h}
+$$ 
+does not exist. 
+This type of example where the function is not differentiable is called a \index{vertical tangent} **vertical tangent** .  
+ 
+Thirdly, the function
+$$ 
+f(x)=
+\begin{cases}
+x-1 & \text{ if } x<0 \\   
+2x & \text{ if } x\geq  0
+\end{cases}
+$$
+is not differentiable at $x=0$ since
+$$
+\lim _{h\to 0^-}\frac{f(0+h)-f(0)}{h}=\lim _{h\to 0^-}\frac{h}{h}=1
+$$
+$$
+\lim _{h\to 0^+}\frac{f(0+h)-f(0)}{h}=\lim _{h\to 0^+}\frac{2h}{h}=2
+$$
+which proves the two-sided limit (the derivative) 
+$$
+\lim _{h\to 0}\frac{f(0+h)-f(0)}{h}
+$$
+does not exist. 
+In this third example, does $f$ have a corner point at $x=0$ or is it a vertical tangent at $x=0$?
+::: 
+
+::: {#exm- } 
+
+Compute the difference quotient for the function defined by
+$$
+f(x)=\left\{
+\begin{array}{cc}
+ \displaystyle \frac{\sin  x}{x} & \text{ if } x\neq 0 \\ 
+ 1 & \text{ if } x=0
+\end{array}
+\right .
+$$
+Do you think $f$ is differentiable at $x=0$? If so, what is the equation of the tangent line at $x=0$?
+::: 
+
+::: {.proof }[Solution]
+For $x\neq 0,$ we find,
+$$
+f'(x)=\lim _{h\to 0}\frac{f(x+h)-f(x)}{h}=\lim _{h\to 0 }\frac{\frac{\sin (x+h)}{x+h}-\frac{\sin  x}{x}}{h}.
+$$
+At $x=0$ we have,
+$$
+f'(0)=\lim _{h\to 0 }\frac{\frac{\sin (h)}{h}-1}{h}.
+$$
+Using a table of values to compute the limit we infer that $f'(0)=0$
+and so the equation of the tangent line is $y=1.$
+::: 
+
+## Differentiability Implies Contunuity
+
+
+::: {#thm- } 
+If a function $f$ is differentiable at $x=c,$ then it is also continuous at $x=c$.
+::: 
+
+::: {.proof }
+Assume that $f$ is a differentiable function, then by definition
+$$
+f'(c) =\lim _{\Delta  x\to 0}\frac{f(c+\Delta  x)-f(c)}{\Delta  x}
+$$
+exists, and therefore we can use the product rule for limits with
+\begin{align*}
+& \lim _{\Delta  x\to 0}f(c+\Delta  x)-f(c) \\ 
+& \qquad =\lim _{\Delta  x\to 0}\frac{f(c+\Delta  x)-f(c)}{\Delta  x}\Delta  x \\ 
+&\qquad =\left( \lim _{\Delta  x\to 0}\frac{f(c+\Delta  x)-f(c)}{\Delta  x} \right)\left( \lim _{\Delta  x\to 0}\Delta  x \right)\\ 
+&\qquad =f'(c)(0) \\ 
+& \qquad =0
+\end{align*}
+Whence, 
+$$
+\lim _{\Delta  x\to 0}f(c+\Delta  x)=f(c)
+$$
+and so $f$ is continuous at $x=c.$
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Using the definition of the derivative find the derivative for each of the following functions. 
+ 
+-   $f(x)=2\sqrt{x}-3$
+-   $g(x)=\frac{1}{2\sqrt{x}-3}$
+-   $f(x)=e^{2x+1}$
+::: 
+
+::: {#exr- } 
+Find an equation of the tangent line at the indicated point for each of the following: 
+ 
+-   $f(x)=3\sqrt{-x}$ at $x=-2$
+-   $f(z)=\frac{1-z}{2 z}$ at $z=-1$
+-   $f(x)=4-x^2$ at $x=1$
+-   $y=2x^3$ at $x=2$
+::: 
+
+::: {#exr- } 
+(a) If possible, give an example of a function that is continuous on $(-\infty ,+\infty )$ but does not have a derivative at $x=2.$ Sketch and
+explain. (b) If possible, give an example of a function that is continuous and increasing on $(-\infty ,2),$ continuous and decreasing on $(2,+\infty),$ discontinuous at $x=2,$ and does not have a derivative at $x=2.$ Sketch and explain.
+::: 
+
+::: {#exr- } 
+Using the definition find the derivative function given
+$$
+g(x)=\left\{
+\begin{array}{cc}
+ -2x+3 & \text{if}\text{   }x<\frac{3}{2} \\
+ -\left(x-\frac{3}{2}\right)^2 & \text{if}\text{  }x\geq  \frac{3}{2}
+\end{array}
+\! \right..
+$$
+::: 
+
+::: {#exr- } 
+Using the definition find the derivative for each of the following functions.
+ 
+-   $v(t)=t-\frac{1}{t}$
+-   $f(x)=(x+1)^3$
+-   $s(t)=1-3t^2$
+-   $w(z)=z+\sqrt{z}$
+::: 
+
+::: {#exr- } 
+Using the alternative definition for the derivative of a function: 
+$$
+  f'(x)=\lim _{z\to x}\frac{f(z)-f(x)}{z-x}
+$$
+find the derivative of each of the following functions. 
+ 
+-   $f(x)=\frac{x}{x-1}$ 
+-   $g(x)=\frac{x-1}{x+1}$
+-   $h(x)=(x+1)^3$
+-   $p(t)=2-3t^2$
+::: 
+
+::: {#exr- } 
+Using the definition of the derivative find the derivative for each of the following functions. 
+ 
+-   $f(x)=2\sqrt{x}-3$
+-   $g(x)=\frac{1}{2\sqrt{x}-3}$
+-   $f(x)=e^{2x+1}$
+::: 
+
+::: {#exr- } 
+Find an equation of the tangent line at the indicated point for each of the following: 
+ 
+-   $f(x)=3\sqrt{-x}$ at $x=-2$
+-   $f(z)=\frac{1-z}{2 z}$ at $z=-1$
+-   $f(x)=4-x^2$ at $x=1$
+-   $y=2x^3$ at $x=2$
+::: 
+
+::: {#exr- } 
+(a) If possible, give an example of a function that is continuous on $(-\infty ,+\infty )$ but does not have a derivative at $x=2.$ Sketch and
+explain. (b) If possible, give an example of a function that is continuous and increasing on $(-\infty ,2),$ continuous and decreasing on $(2,+\infty),$ discontinuous at $x=2,$ and does not have a derivative at $x=2.$ Sketch and explain.
+::: 
+
+::: {#exr- } 
+Using the definition find the derivative function given
+$$
+g(x)=\left\{
+\begin{array}{cc}
+ -2x+3 & \text{if}\text{   }x<\frac{3}{2} \\
+ -\left(x-\frac{3}{2}\right)^2 & \text{if}\text{  }x\geq  \frac{3}{2}
+\end{array}
+\! \right..
+$$
+::: 
+
+::: {#exr- } 
+Using the definition find the derivative for each of the following functions.
+ 
+-   $v(t)=t-\frac{1}{t}$
+-   $f(x)=(x+1)^3$
+-   $s(t)=1-3t^2$
+-   $w(z)=z+\sqrt{z}$
+::: 
+
+::: {#exr- } 
+Using the alternative definition for the derivative of a function: 
+$$
+ \displaystyle f'(x)=\lim _{z\to x}\frac{f(z)-f(x)}{z-x}
+$$
+find the derivative of each of the following functions. 
+ 
+-   $f(x)=\frac{x}{x-1}$ 
+-   $g(x)=\frac{x-1}{x+1}$
+-   $h(x)=(x+1)^3$
+-   $p(t)=2-3t^2$
+::: 
+
+
+
+
+
+
+## Basic Rules of Differentiation
+
+## Linearity
+
+Computing the limit of the difference quotient can be tedious and require ingenuity; fortunately for a large number of common functions there is a better way to compute the derivative. In this section, we detail the \index{power rule} **power rule**, \index{product rule} **product rule** and the \index{quotient rule} **quotient rule** for differentiation. These rules greatly simplify the task of differentiation. We also give examples on how to find the tangent line give some geometric information; and to find the horizontal tangent lines to the graph of a given function.
+
+The next theorem states the common procedural rules for taking derivatives. For example, the derivative of a sum of functions is the sum of the derivative functions. The same is not true for a product of functions. To convince yourself that the derivative of the product of two functions is not the product of the derivative functions try an example, say $f(x)=x^2$ and $g(x)=x^3.$
+
+::: {#thm- } [Differentiation Rules]
+Let $f$ and $g$ be functions. 
+ 
+- (Constant Rule) 
+If $f$ is a constant function, $f(x)=c$ for some real number $c,$ then $f'(x)=0.$
+- (Power Rule) 
+If $f$ is a power function, $f(x)=x^n$ for some real number $n$, then $f(x)=n x^{n-1}.$
+- (Sum Rule) 
+If $f=g+h$ for any differentiable functions $g$ and $h,$ then $f'=g'+h'.$
+- (Difference Rule) 
+If $f=g-h$ for any differentiable functions $g$ and $h,$ then $f'=g'-h'.$
+- (Linearity Rule) 
+If $f=a g+b h$ for any differentiable functions $g$ and $h$, and any two constants $a$ and $b$, then $f'=a g'+b h'.$
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function $f(x)=\frac{4}{3}\pi  r^3.$
+::: 
+
+::: {.solution }
+Since $\frac{4}{3}\pi  r^3$ is a constant with respect to $x$, we use the constant rule to find $f'(x)=0.$
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+f(x)=3x^4-7x^3+\sqrt[3]{x^2}-9.
+$$
+::: 
+
+::: {.solution }
+Using the power rule, linearity rule, and the sum rule, we find
+$$
+f'(x)=12x^3-12x^2+\frac{2}{3\sqrt[3]{x}}.
+$$
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+f(x)=\left(2x^3+3x\right)\left(x^2-3\right).
+$$
+::: 
+
+::: {.solution }
+Expand and use the linearity rule.
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+f(x)=x\sqrt{x}+\frac{1}{x^2\sqrt{x}}.
+$$
+::: 
+
+::: {.solution }
+We can rewrite $f$ as $f(x)=x^{3/2}+x^{-5/2}$ so as to use the power rule to find,
+$$
+f'(x)=\frac{3}{2}x^{1/2}-\frac{5}{2}x^{-7/2}=\frac{3\sqrt{x}}{2}-\frac{5}{2\sqrt[2]{x^7}}.
+$$
+::: 
+
+## Higher Order Derivatives
+
+
+If $f$ is a differentiable function, then its derivative $f'$ is also a function, so $f'$ may have a derivative of its own, denoted by $(f')'=f''.$ 
+This function $f''$ is called the \index{second derivative} **second derivative**  of $f.$  
+Moreover, the second derivative may be differentiable. 
+Further, the \index{third derivative} **third derivative** is defined as $(f'')'$ and is denoted by $f'''$; and the \index{fourth derivative} **fourth derivative** is defined as $(f''')'$ and is denoted by $f^{(4)}$, provided these functions exist. 
+In general, if $f^{(n)}$ is differentiable, then $\left(f^{(n)}\right)'=f^{(n+1)}$ is the $(n+1)^{th}$ derivative of $f.$  
+In Leibniz notation the first, second, third and $n$-th derivatives are
+\begin{align*}
+& y'=\frac{d y}{d x} \\
+& y''=\frac{d }{d x}\left(\frac{d y}{d x}\right)=\frac{d^2y}{d x^2} \\
+& y'''=\frac{d}{d x}\left(\frac{d^2y}{d x^2}\right)=\frac{d^3y}{d x^3} \\
+& \cdots \\
+&  y^{(n)}=\frac{d^ny}{d x^n}
+\end{align*}
+respectively.
+
+::: {#exm- } 
+
+Find the second order derivatives for the functions given above.
+::: 
+
+::: {#exm- } 
+
+Find the first, second, and third derivatives of
+$$
+y=\left(-3x^2+x+82\right)(2x-12)\left(x^3\right).
+$$
+::: 
+
+::: {.solution }
+We could use the product rule but since we want higher order derivatives it will be quicker to expand first. We find,
+$$
+\left(-3x^2+x+82\right)(2x-12)\left(x^3\right)=-6 x^6+38 x^5+152 x^4-984 x^3
+$$
+Thus,
+\begin{align*}
+y' & =-36 x^5+190 x^4+608 x^3-2952 x^2 \\
+y''& =-180 x^4+760 x^3+1824 x^2-5904 x \\
+y''' & =-720 x^3+2280 x^2+3648 x-5904
+\end{align*}
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Find the first derivative and the second derivative for each of the following.
+ 
+- $y=x^2+x+8.$
+- $y=\frac{4x^3}{3}-x+2 e^x.$
+- $s=-2t^{-1}+\frac{4}{t^2}.$
+- $r=\frac{1}{3s^2}-\frac{5}{2s}.$
+- $r=2\left(\frac{1}{\sqrt{\theta }}+\sqrt{\theta }\right).$
+::: 
+
+::: {#exr- } 
+Find the derivatives of all orders for each of the following.
+ 
+- $y=\frac{x^4}{2}-\frac{3}{2}x^2-x.$
+- $s=\frac{t^2+5t-1}{t^2}.$
+- $w=3z^2e^z.$
+::: 
+
+::: {#exr- } 
+(a) Find an equation for the line perpendicular to the tangent to the curve $y=x^3-4x+1$ at the point $(2,1).$ (b) What is the smallest slope on the curve? At what point on the curve does the curve have this slope? (c) Find equations for the tangents to the curve at the points where the slope of the curve is 8.
+::: 
+
+::: {#exr- } 
+(a) Find equations for the horizontal tangents to the curve $y=x^3-3x-2.$ Also find equations for the lines that are perpendicular to these tangents at the points of tangency. (b) What is the smallest slope on the curve? At what point on the curve does the curve have this slope? Find an equation for the line that is perpendicular to the curve's tangent at this point.
+::: 
+
+::: {#exr- } 
+The curve $y=a x^2+b x+c$ passes through the point $(1,2)$ and is tangent to the line $y=x$ at the origin. Find $a,$ $b,$ and $c.$
+::: 
+
+::: {#exr- } 
+The curves $y=x^2+a x+b$ and $y=c x-x^2$ have a common tangent line at the point $(1,0).$ Find $a,$ $b,$ and $c.$
+::: 
+
+::: {#exr- } 
+Show that the curve $y=6x^3+5x-3$ has no tangent lines with slope $4.$
+::: 
+
+::: {#exr- } 
+At what points on the curve $y=x\sqrt{x}$ is the tangent line parallel to the line $3x-y+6=0.$
+::: 
+
+::: {#exr- } 
+(a) Sketch the graph of the curve $y=\sin  x$ on the interval $-\frac{3\pi }{2}\leq x\leq 2\pi$ and their tangents at the $x$ values of $x=-\pi,$ $x=0,$ and $x=3\pi /2.$
+(b) Sketch the graph of the curve $y=1+\cos  x$ on the interval $-\frac{3\pi }{2}\leq x\leq 2\pi$ and their tangents at the $x$ values of
+$x=-\pi /3$ and $x=3\pi /2.$
+::: 
+
+
+
+## Product and Quotient Rules
+
+## Product Rule
+
+
+::: {#thm- } 
+If $f= g h$ for any differentiable functions $g$ and $h$, then 
+\begin{equation}
+f'=g'h+g h'.
+\end{equation}
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+f(x)=\left(2x^3+3x\right)\left(x^2-3\right).
+$$
+::: 
+
+::: {.solution }
+We use the product rule with $g(x)=2x^3+3x$, $h(x)=x^2-3$ and $f(x)=g(x) h(x).$ We find
+\begin{align*}
+f'(x) & =g'(x)h(x)+g(x)h'(x) 
+ =\left(2x^3+3x\right)'h(x)+g(x)\left(x^2-3\right)' \\
+& \qquad =\left(6x^2+3\right)\left(x^2-3\right)+\left(2x^3+3x\right)(2x) 
+=10 x^4-9 x^2-9
+\end{align*}
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+f(x)=\left(x^2+3x\right)(3-x)\left(x^4+5x-2\right).
+$$
+::: 
+
+::: {.solution }
+We use the product rule with $g(x)=\left(x^2+3x\right)(3-x)$, $h(x)=x^4+5x-2$ and $f(x)=g(x) h(x).$ We find
+\begin{align*}
+f'(x) & =g'(x)h(x)+g(x)h'(x) \\
+& =\left[\left(x^2+3x\right)(3-x)\right]'h(x)+\left(x^2+3x\right)(3-x)\left(x^4+5x-2\right)' \\
+& =\left[\left(x^2+3x\right)(3-x)\right]'\left(x^4+5x-2\right)+\left(x^2+3x\right)(3-x)\left(4x^3+5\right)
+\end{align*}
+Since
+\begin{align*}
+\left[\left(x^2+3x\right)(3-x)\right]' & =\left(x^2+3x\right)'(3-x)+\left(x^2+3x\right)(3-x)' \\
+& =(2x+3)(3-x)+\left(x^2+3x\right)(-1) 
+ =9-3 x^2
+\end{align*}
+Thus,
+$$
+f'(x) =\left(9-3 x^2\right)\left(x^4+5x-2\right)+\left(x^2+3x\right)(3-x)\left(4x^3+5\right)
+$$
+which simplifies to,
+$$
+f'(x)=-7 x^6+45 x^4-20 x^3+6 x^2+90 x-18.
+$$
+::: 
+
+## Quotient Rule
+
+
+::: {#thm- } 
+If $f= g /h$ for any differentiable functions $g$ and $h$, then 
+\begin{equation}
+f'=\frac{h g'-g h'}{h^2}.
+\end{equation}
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+f(x)=\frac{\left(x^3-3x\right)\left(x^2-3\right)}{(x-4)x^2}.
+$$
+::: 
+
+::: {.solution }
+We use the quotient rule with $g(x)=\left(x^3-3x\right)\left(x^2-3\right)$ and $h(x)=(x-4)x^2.$ But first we compute
+$g'(x)=5 x^4-18 x^2+9$   and    $h'(x)=3 x^2-8 x$.
+Thus,
+\begin{align*}
+f'(x)  & =\frac{\left((x-4)x^2\right)\left(5 x^4-18 x^2+9\right)-\left(x^3-3x\right)\left(x^2-3\right)\left(3 x^2-8 x\right)}{(x-4)^2x^4}
+\end{align*}
+which simplifies to
+\begin{equation*}
+f'(x)=\frac{9}{4 x^2}-\frac{169}{4 (x-4)^2}+4+2x=\frac{2 \left(18-9 x+12 x^2-6 x^4+x^5\right)}{(-4+x)^2 x^2}.
+ \end{equation*}
+::: 
+
+
+::: {#exm- } 
+Find the first and second derivatives of the function 
+$$
+f(x)=\frac{a x+b}{c x+d}.
+$$
+::: 
+
+::: {.solution }
+Using the product rule with $f(x)=(a x+b)(c x+d)^{-1}$ we find
+$$
+f'(x)=\frac{a}{d+c x}-\frac{c (b+a x)}{(d+c x)^2}.
+$$
+Using the quotient rule with $f(x)=g(x)/h(x)$, $g(x)=a x+b$, and $h(x)=c x+d$ we find
+$$
+f'(x)=\frac{a d-b c}{(d+c x)^2}.
+$$
+The second expression for $f'$ is easier to work with.
+::: 
+
+## Exercises
+
+::: {#exr- } 
+Determine $a$ so that $f'\left(\pm \sqrt{\frac{2}{3}}\right)=0$ given $f(x)=x^3-2a x+1.$ Determine $a$ so that $f'\left(1\pm \sqrt{2}\right)=0$ given $f(x)=\frac{x^2+1}{x-a}.$
+::: 
+
+::: {#exr- } 
+Find the first derivative and the second derivative for each of the following.
+ 
+- $y=(x-1)\left(x^2+x+1\right).$
+- $y=\frac{2x+5}{3x-2}.$
+- $f(t)=\frac{t^2-1}{t^2+t-2}.$
+::: 
+
+::: {#exr- } 
+Find the derivatives of all orders for each of the following.
+ 
+- $u=\frac{\left(x^2+x\right)\left(x^2-x+1\right)}{x^4}.$
+- $p=\frac{q^2+3}{(q-1)^3+(q+1)^3}.$
+- $w=\frac{3z^2e^z}{z+1}.$
+::: 
+
+::: {#exr- } 
+Suppose $u$ and $v$ are differentiable functions of $x$ and that $u(1)=2,$ $u'(1)=0,$ $v(1)=5,$ and $v'(1)=-1.$ Find the values of $\frac{d}{dx}( u v),$ $\frac{d}{dx}\left(\frac{u}{v}\right),$ $\frac{d}{dx}\left(\frac{v}{u}\right),$ and $\frac{d}{dx}(7v-2u)$ at $x=1.$
+::: 
+
+::: {#exr- } 
+The curves $y=x^2+a x+b$ and $y=c x-x^2$ have a common tangent line at the point $(1,0).$ Find $a,$ $b,$ and $c.$
+::: 
+
+::: {#exr- } 
+If gas in a cylinder is maintained at a constant temperature $T,$ the pressure $P$ is related to the volume $V$ by a formula of the form 
+$$
+P=\frac{n R T}{V-n b}-\frac{a n^2}{V^2},
+$$ 
+in which $a,$ $b,$ $n,$ and $R$ are constants. Find $\frac{dP}{dV}.$
+::: 
+
+::: {#exr- } 
+Find the first, second, and third derivatives of the following functions. 
+ 
+-   $y=\left(x^4+3x^2+17x+82\right)^3$ 
+-   $y=\frac{x^4+3x^2+17x+82}{\sqrt{x}}$
+::: 
+
+
+
+## Role of the Derivative
+
+## Average Rate of Change
+
+
+In general, suppose an object moves along a straight line according to an equation of motion $s=f(t),$ where $s$ is the \index{displacement} **displacement** (\index{directed distance} **directed distance**) of the object from the origin at time $t.$  
+The function $f$ that describes the motion is called the \index{position function} **position function**  of the object. 
+In the time interval from $t=a$ to $t=a+h$  the change in position is $f(a+h)-f(a)$ and the \index{average velocity} **average velocity**  over this time interval is 
+$$
+\frac{f(a+h)-f(a)}{h}
+$$ 
+which is the same as the slope of the secant line through these two points.
+
+
+::: {#exm- } 
+If a billiard is dropped from a height of 500 feet, its height $s$  at time $t$  is given by the position function $s=-16t^2+500$  where $s$  is measured in feet and $t$  is measured in seconds. 
+Find the average velocity over the intervals $[2,2.5]$ and $[2,2.6]$.  
+::: 
+
+::: {.solution }
+For the interval $[2,2.5],$ the object falls from a height of $s(2)=-16(2)^2+500=436$  feet to a height of $s(2.5)=-16(2.5)^2+500=400.$  
+The average velocity is 
+$$
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.5)-s(2)}{2.5-2}=\frac{400-436}{2.5-2}=-72.
+$$
+For the interval $[2,2.6],$ the object falls from a height of $s(2)=436$  feet to a height of $s(2.6)=391.84.$  
+The average velocity is 
+$$
+\frac{\Delta  s}{\Delta  t}=\frac{s(2.6)-s(2)}{2.6-2}=\frac{391.84-436}{2.6-2}=-73.6.
+$$
+Note that the average velocities are negative indicating that the object is moving downward.
+::: 
+
+## Instantaneous Rate of Change
+
+
+The difference quotient 
+$$
+\frac{\Delta  y}{\Delta  x}=\frac{f\left(x_2\right)-f\left(x_1\right)}{x_2-x_1}
+$$
+is the average rate of change of $y$  with respect to $x$  over the interval $\left[x_1,x_2\right]$ and can be interpreted as the slope of the secant line.
+Its limit as $\Delta x\to 0$  is the derivative at $x=x_1$ and is denoted by $f'\left(x_1\right).$  
+We interpret the limit of the average rate of change as the interval becomes smaller and smaller to be the instantaneous rate of change. 
+Often, different branches of science have specific interpretations of the derivative.
+
+
+As $\Delta  x\to 0$  the average rate of change approaches the \index{instantaneous rate for change} **instantaneous rate for change** ; that
+is, 
+$$
+\lim _{\Delta  x\to 0} \frac{\Delta  y}{\Delta  x} = f'(x)
+$$ 
+and is also known as the \index{derivative} **derivative**  of $f$  at $x.$ 
+
+
+## Free-Falling Body
+
+
+Basically, \index{rectilinear motion} **rectilinear motion** refers to the motion of an object that can be modeled along a straight line; and the so-called \index{falling body problems} **falling body problems**  are a special type of rectilinear motion where the motion of an object is falling (or propelled) in a vertical direction. 
+Another type of rectilinear motion is the \index{free-falling body problem} **free-falling body problem**.
+
+
+The position of a free-falling body (neglect air resistance) under the influence of gravity can be represented by the function  
+$$
+s(t)=\frac{1}{2}g t^2+v_0t+s_0
+$$
+where $g$  is the acceleration due to gravity (on earth $g\approx -32 \text{ft}\left/s^2\right.$) and $s_0$  and $v_0$  are the initial height and velocity of the object (when $t=0$).
+
+
+::: {#exm- } 
+A ball is thrown vertically upward from the ground with an initial velocity of $160 \text{ ft/s}$. 
+- When will it hit the ground?
+- With what velocity will the ball hit the ground?
+- When will the ball reach its maximum height and what is the maximum height?
+::: 
+
+::: {.solution }
+
+- We can determine when the ball will hit the ground by solving 
+$$
+s(t)=\frac{1}{2}g t^2+v_0t+s_0=0
+$$ 
+for $t$. 
+Using $g=-32$ , $v_0=160$ , and $s_0=0$. 
+We find 
+$$
+s(t)=-16t^2+160 t=16t (-t+10)=0
+$$ 
+when $t=0$  and $t=10$. 
+Thus the ball will hit the ground 10 seconds after it is thrown upwards.
+- The velocity of the ball at time $t$  is given by the first derivative of $s$, namely 
+$$
+v(t)=s'(t)=g t+v_0.
+$$ 
+When $t=10$ we find, $v(10)=-32 (10)+160=-160$ and so the velocity of the ball is $-160 \text{ ft}/s$ when it hits the ground.
+- The ball reaches it's maximum height when the velocity is zero, thus we solve 
+$$
+v(t)= g t+v_0=-32 t+160=0
+$$ 
+yielding $t=2$. 
+Its position at $t=2$ is the maximum height which is $s(2)=16(2)(-2+10)=256$. 
+Therefore, 2 seconds after the ball is thrown, the ball reaches it's maximum height of 256 ft.
+::: 
+
+
+::: {#def- } 
+An object that moves along a straight line with \index{position} **position** $s(t)$  has \index{velocity} **velocity** $v(t)=\frac{ds}{dt}$. 
+$$
+a(t)=\frac{dv}{dt}=\frac{d^2 s}{dt ^2}
+$$ 
+when these derivatives exist. 
+The \index{speed} **speed**  of an object at time $t$  is $|v(t)|.$ 
+::: 
+
+
+::: {#exm- } 
+A particle moving along the $x$-axis has position 
+$$
+x(t)=2t^3+3t^2-36t+40
+$$ 
+after an elapsed time of $t$ seconds.  
+\ 
+- Find the velocity of the particle at time $t.$ 
+- Find the acceleration at time $t.$
+- What is the \index{total distance travelled} **total distance travelled**  by the particle during the first 3 seconds?
+::: 
+
+::: {.solution }
+The velocity is given by  $v(t)=x'(t)=6t^2+6 t-36.$  
+The acceleration is given by $a(t)=v'(t)=x''(t)=12 t+6.$  
+Since $v(t)=0$  when  
+$$
+6t^2+6t-36=6(t-2)(t+3)=0
+$$ 
+so $t=2, -3$ but $-3$ is not on $[0,3]$. 
+Therefore, the distance covered is
+$$
+|x(2)-x(0)|+|x(3)-x(2)|=|-4-40|+|13-(-4)|=61.
+ $$
+::: 
+
+## Exercises
+
+::: {#exr- } 
+The number of gallons of water in a tank $t$  minutes after the tank has started to drain is $Q(t)=200(30-t)^2.$  How fast is the water running out at the end 19 min? What is the average rate at which the water flows out during the first 10 minutes?
+::: 
+
+::: {#exr- } 
+Suppose that the distance an aircraft travels along a runway before takeoff is given by $D=\frac{10}{9}t^2,$  where $D$  is measured in meters from the starting point an $t$  is measured in seconds from the time the brakes are released. The aircraft will become airborne when its speed reached 200 km/h. How long will it take to become airborne, and what distance will it travel to that time?
+::: 
+
+::: {#exr- } 
+Suppose that the dollar cost of producing $x$  washing machines is $c(x)=2000+100x-0.1x^2.$  (a) Find the average cost per machine of producing the first 100 washing machines. (b) Find the marginal cost when 100 washing machines are produced.  (c) Show that the marginal cost when 100 washing machines are produced is approximately the cost of producing one more washing machine after the first 100 have been made, by calculating the latter cost directly.
+::: 
+
+::: {#exr- } 
+Suppose the revenue from selling $x$  washing machines is  $$r(x)=20000\left(1-\frac{1}{x}\right)$$ dollars.  (a) Find the marginal revenue when 100 machines are produced. (b) Use the function $r'(x)$  to estimate the increase in revenue that will result from increasing production from 100 machines a week to 101 machines a week.  (c) Find the limit of $r'(x)$  a $x\to \infty .$  How would you interpret this number?
+::: 
+
+::: {#exr- } 
+How fast does the area of a circle change with respect to its diameter? Its circumference?
+::: 
+
+::: {#exr- } 
+Given a position function $s(t)$  where $t$  represents time, define the displacement, average velocity, instantaneous velocity, speed, and acceleration of an object whose motion along a line is modeled by $s(t)$ .
+::: 
+
+::: {#exr- } 
+A particle moving along the x-axis has position $x(t)=2t^3+3t^2-36t+40$  after an elapsed time of t seconds. (a) Find the velocity of the particle at time $t$ . (b) Find the acceleration at time $t$ . (c) What is the total distance traveled by the particle during the first 3 seconds?
+::: 
+
+::: {#exr- } 
+At time $t\geq 0$ , the velocity of a body moving along the $s$ -axis is $v=t^2-4t+3$. (a) Find the body's acceleration each time the velocity is zero. (b) When is the body moving forward? Backward? (c) When is the body's velocity increasing? Decreasing?
+::: 
+
+
+
+
+## Derivatives of Trigonometric Functions
+
+
+::: {#thm- } 
+The trigonometric functions sine, cosine, tangent, cotangent, cosecant, and secant are all differentiable functions on their domain and their derivative functions are:
+$$
+\begin{array}{lllll}
+ \displaystyle \frac{d}{dx}\sin  x =\cos  x 
+& \quad &  \displaystyle \frac{d}{dx}\cos  x =-\sin  x  
+& \quad &  \displaystyle \frac{d}{dx}\tan  x =\sec ^2x \\ 
+ \displaystyle \frac{d}{dx}\cot  x =-\csc ^2x 
+& &  \displaystyle \frac{d}{dx}\sec  x =\sec  x \tan  x
+& &  \displaystyle \frac{d}{dx}\csc  x =-\csc  x \cot  x 
+\end{array}
+$$ 
+::: 
+
+::: {.proof }
+
+For the derivative of the \index{cosine function} **cosine function** , we use the formula
+$$
+\cos (A+B)=\cos  A \cos  B-\sin  A \sin  B
+$$
+along with the definition of the derivative:
+\begin{align*}
+\frac{d}{dx}\cos  x & =\lim _{h\to 0}\frac{\cos  (x+h)-\cos  x}{h} \\ 
+& =\lim _{h\to 0}\frac{\cos  x \cos  h-\sin  x \sin  h-\cos  x}{h} \\ 
+& =\lim _{h\to 0}\frac{\cos  x(\cos  h-1) -\sin  x \sin  h}{h} \\ 
+& =\lim _{h\to 0}\frac{\cos  x(\cos  h-1)}{h}+\lim _{h\to 0}\frac{ -\sin  x \sin  h}{h} \\ 
+& =(\cos  x)\lim _{h\to 0}\frac{(\cos  h-1)}{h}-\sin  (x)\lim _{h\to 0}\frac{ \sin  h}{h} \\ 
+& =(\cos x)(0)-(\sin x)(1) \\ 
+& =-\sin x.
+\end{align*}
+
+For the derivative of the \index{sine function} **sine function** , we use the formula
+$$
+\sin (A+B)=\sin  A \cos  B+\cos  A \sin  B
+$$
+along with the definition of the derivative:
+\begin{align*}
+\frac{d}{dx}\sin  x & =\lim _{h\to 0}\frac{\sin  (x+h)-\sin  x}{h} \\ 
+& =\lim _{h\to 0}\frac{\sin  x \cos  h+\cos  x \sin  h-\sin  x}{h} \\ 
+&=\lim _{h\to 0}\frac{\sin  x(\cos  h-1) +\cos  x \sin  h}{h} \\ 
+& =\lim _{h\to 0}\frac{\sin  x(\cos  h-1)}{h}+\lim _{h\to 0}\frac{ \cos  x \sin  h}{h} \\ 
+&=(\sin  x)\lim _{h\to 0}\frac{(\cos  h-1)}{h}+\cos  (x)\lim _{h\to 0}\frac{ \sin  h}{h} \\ 
+&=(\sin x)(0)+\cos (x)(1)\\ 
+&=\cos x.
+\end{align*}
+
+For the derivative of the \index{tangent function} **tangent function** , we use the formula 
+$$
+\tan  x=\frac{\sin  x}{\cos  x}
+$$ 
+along with the quotient rule:
+\begin{align*}
+\frac{d}{dx}\tan  x =\frac{(\cos  x)(\cos  x)-\sin  x(-\sin  x)}{\cos  ^2x}  =\frac{\cos ^2 x+\sin ^2x}{\cos  ^2x}
+=\sec ^2x.
+\end{align*}
+
+For the derivative of the \index{cotangent function} **cotangent function** , we use the formula 
+$$
+\cot  x=\frac{\cos x}{\sin x}
+$$ 
+along with the quotient rule:
+$$
+\frac{d}{dx}\cot  x =\frac{\sin  x(-\sin  x)-(\cos  x)(\cos  x)}{\sin ^2 x} =-\csc ^2x.
+$$
+
+For the derivative of the \index{secant function} **secant function** , we use the formula 
+$$
+\sec  x=\frac{1}{\cos  x}
+$$ 
+along with the quotient rule:
+$$
+\frac{d}{dx}\sec  x=\frac{(\cos  x)(0)-1(-\sin  x)}{\cos ^2x}=\frac{\sin  x}{\cos ^2x}=\sec  x \tan  x.
+$$
+
+For the derivative of the \index{cosecant function} **cosecant function** , we use the formula 
+$$
+ \displaystyle \csc  x=\frac{1}{\sin  x}
+$$ 
+along with the quotient rule:
+$$
+\frac{d}{dx}\csc  x=\frac{(\sin  x)(0)-1(\cos  x)}{\sin ^2x}=-\csc  x \cot  x.
+$$
+::: 
+
+
+## Derivatives of Trigonometric Functions and Simplification
+
+Since the trigonometric functions are differentiable functions on their domains they are also continuous functions on their domain.
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+g(x)=\frac{x^2+\tan  x}{3x+2 \tan  x}.
+$$
+::: 
+
+::: {.solution }
+For the function $g$ we use the quotient rule and the derivative rules for sine and cosine, we determine,
+$$
+g'(x)=\frac{(3x+2 \tan  x)\left(2x+\sec ^2x\right)-\left(x^2+\tan  x\right)\left(3+2\sec ^2x\right)}{3x+2 \tan  x}.
+$$
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+f(x)=\frac{\sin  x+\cos  x}{\sin  x-\cos x}.
+$$
+::: 
+
+::: {.solution }
+For the function $f$ we use the quotient rule, derivative rules for sine and cosine, and a few trigonometric identities, we determine,
+$$
+f'(x)=\frac{(\sin  x-\cos  x)(\cos  x-\sin  x)-(\sin  x+\cos  x)(\cos  x+\sin  x)}{(\sin  x-\cos  x)^2}.
+$$
+After expanding and simplifying, 
+$$
+\displaystyle f'(x)=\frac{-2}{1-\sin  2x}.
+$$
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+Find all points on the curve $y=\cot  x,$ $0<x<\pi ,$ where the tangent line is parallel to the line $y=-x.$ Sketch the curve and tangent(s) together, labeling each with its equation.
+::: 
+
+::: {#exr- } 
+Find an equation for the tangent to the curve $y=1+\sqrt{2}\csc  x+\cot  x$ at the point $\left(\frac{\pi }{4},4\right)$ and find an equation for the horizontal tangent line.
+::: 
+
+::: {#exr- } 
+Suppose the function given by $s=\sin  t+\cos  t$ represents the position of a body moving on a coordinate line ($s$ in meters, $t$
+in seconds). Find the body's velocity, speed, and acceleration at time $t=\pi /4 \sec .$
+::: 
+
+::: {#exr- } 
+Is there a value of $b$ that will make 
+$g(x)=\left\{\begin{array}{cc} x+b & x<0 \\ \cos  x & x\geq 0 \end{array} \right .$ 
+continuous at $x=0?$ Differentiable at $x=0?$ Give reasons for your answer.
+::: 
+
+::: {#exr- } 
+Find an equation of the tangent line to $y = 3 \tan x - 2 \csc x$ at $x=\frac{\pi}{3}$.
+::: 
+
+::: {#exr- } 
+Show that the function
+$$
+ f(x) =
+ \left\{
+ \begin{array}{lr}
+    x^3\sin{\frac{1}{x}}&\text{if } x\neq 0 \\
+    0 & \text{if } x=0
+ \end{array}
+ \right.
+$$
+has a continuous first derivative.
+::: 
+
+::: {#exr- } 
+Find the derivative of each of the following.
+ 
+- $\displaystyle y=-10x+3 \cos  x$
+- $\displaystyle y=\csc  x-4\sqrt{x}+7$
+- $\displaystyle y=(\sin  x+\cos  x)\sec  x$
+- $\displaystyle y=\frac{4}{\cos  x}+\frac{1}{\tan  x}$
+- $\displaystyle y=x^2 \cos  x-2 x \sin  x-2 \cos  x$
+- $\displaystyle s=\frac{1+\csc  t}{1-\csc  t}$
+- $\displaystyle r=\theta  \sin  \theta +\cos  \theta$
+- $\displaystyle p=(1+\csc  q) \cos  q$
+::: 
+
+::: {#exr- } 
+(a) Sketch the graph of the curve $y=\sin  x$ on the interval $-\frac{3\pi }{2}\leq x\leq 2\pi$ and their tangents at the $x$ values of $x=-\pi,$ $x=0,$ and $x=3\pi /2.$
+(b) Sketch the graph of the curve $y=1+\cos  x$ on the interval $-\frac{3\pi }{2}\leq x\leq 2\pi$ and their tangents at the $x$ values of
+$x=-\pi /3$ and $x=3\pi /2.$
+::: 
+
+::: {#exr- } 
+Find all points on the curve $y=\cot  x,$ $0<x<\pi ,$ where the tangent line is parallel to the line $y=-x.$ Sketch the curve and tangent(s) together, labeling each with its equation.
+::: 
+
+::: {#exr- } 
+Find an equation for the tangent to the curve $y=1+\sqrt{2}\csc  x+\cot  x$ at the point $\left(\frac{\pi }{4},4\right)$ and find an equation for the horizontal tangent line.
+::: 
+
+::: {#exr- } 
+Suppose the function given by $s=\sin  t+\cos  t$ represents the position of a body moving on a coordinate line ($s$ in meters, $t$
+in seconds). Find the body's velocity, speed, and acceleration at time $t=\pi /4 \sec .$
+::: 
+
+::: {#exr- } 
+Is there a value of $b$ that will make 
+$g(x)=\left\{ \begin{array}{cc} x+b & x<0 \\ \cos  x & x\geq 0 \end{array}\right .$ continuous at $x=0?$ Differentiable at $x=0?$ Give reasons for your answer.
+::: 
+
+::: {#exr- } 
+Find an equation of the tangent line to $y = 3 \tan x - 2 \csc x$ at $x=\frac{\pi}{3}$.
+::: 
+
+::: {#exr- } 
+Show that the function
+$$
+ f(x) =
+\left\{
+ \begin{array}{lr}
+    x^3\sin{\frac{1}{x}}&\text{if } x\neq 0 \\
+    0 & \text{if } x=0
+ \end{array}
+ \right.
+$$
+has a continuous first derivative.
+::: 
+
+::: {#exr- } 
+Find the derivative of each of the following.
+ 
+- $y=-10x+3 \cos  x$
+- $y=\csc  x-4\sqrt{x}+7$
+- $y=(\sin  x+\cos  x)\sec  x$
+- $y=\frac{4}{\cos  x}+\frac{1}{\tan  x}$
+- $y=x^2 \cos  x-2 x \sin  x-2 \cos  x$
+- $s=\frac{1+\csc  t}{1-\csc  t}$
+- $r=\theta  \sin  \theta +\cos  \theta$
+- $p=(1+\csc  q) \cos  q$
+::: 
+
+
+
+
+
+## Chain Rule
+
+## The Chain Rule and Its Proof
+
+With a lot of work, we can sometimes find derivatives without using the chain rule either by expanding a polynomial, by using another differentiation rule, or maybe by using a trigonometric identity. The derivative would be the same in either approach; however, the chain rule allows us to find derivatives that would otherwise be very difficult to handle. This section gives plenty of examples of the use of the chain rule as well as an easily understandable proof of the chain rule.
+
+
+::: {#thm- } [Chain Rule]
+Suppose $f$ is a differentiable function of $u$ which is a differentiable function of $x.$ Then $f(u(x))$ is a differentiable function of $x$ and 
+$$
+\frac{d f}{d x}=\frac{df}{du}\frac{du}{dx}.
+$$
+::: 
+
+::: {.proof }
+We wish to show $\frac{d f}{d x}=\frac{df}{du}\frac{du}{dx}$ and will do so by using the definition of the derivative for the function $f$ with respect to $x,$ namely,  
+$$
+\frac{df}{dx}=\lim _{\Delta  x\to 0}\frac{f[u(x+\Delta  x)]-f[u(x)]}{\Delta  x}
+$$
+To better work with this limit let's define an auxiliary function:
+$$
+g(t)=\left\{
+\begin{array}{cc}
+  \frac{f[u(x)+t]-f[u(x)]}{t}-\frac{df}{du} & \text{ if } t\neq 0 \\
+ 0 & \text{ if } t=0
+\end{array}
+\right.
+$$
+Let $\Delta  u=u(x+\Delta  x)-u(x),$ then three properties of the function $g$ are 
+ 
+- $g(\Delta  u)=\frac{f[u(x)+\Delta  u]-f[u(x)]}{\Delta  u}-\frac{df}{du}$ provided $\Delta  u\neq 0$
+- $\left[g(\Delta  u)+\frac{df}{du}\right]\Delta  u=f[u(x)+\Delta  u]-f[u(x)]$
+- $g$ is continuous at $t=0$ since $\lim _{t\to 0}\left[\frac{f[u(x)+t]-f[u(x)]}{t}\right]=\frac{df}{du}$
+ 
+Now we can rewrite $\frac{df}{dx}$ as follows:
+\begin{align*}
+\frac{df}{dx} & =\lim _{\Delta  x\to 0}\frac{f[u(x+\Delta  x)]-f[u(x)]}{\Delta  x} 
+ =\lim _{\Delta  x\to 0}\frac{f[u(x)+\Delta  u]-f[u(x)]}{\Delta  x} \\
+& =\lim _{\Delta  x\to 0}\frac{\left(g(\Delta  u)+\frac{df}{du}\right)\Delta  u}{\Delta  x}
+ =\lim _{\Delta  x\to 0}\left(g(\Delta  u)+\frac{df}{du}\right)\lim _{\Delta  x\to 0}\frac{\Delta  u}{\Delta  x} \\
+& =\left[\lim _{\Delta  x\to 0}g(\Delta  u)+\lim _{\Delta  x\to 0}\frac{df}{du}\right]\text{   }\lim _{\Delta  x\to 0}\frac{\Delta
+ u}{\Delta  x} \\
+& =\left[g\left( \lim _{\Delta  x\to 0}\Delta  u \right)+\lim _{\Delta  x\to 0}\frac{df}{du}\right]\text{   }\lim _{\Delta  x\to
+0}\frac{\Delta  u}{\Delta  x} \\
+& =\left[g(0)+\lim _{\Delta  x\to 0}\frac{df}{du}\right]\text{   }\lim _{\Delta  x\to 0}\frac{\Delta  u}{\Delta  x} 
+=\left[0+\lim _{\Delta  x\to 0}\frac{df}{du}\right]\text{   }\lim _{\Delta  x\to 0}\frac{\Delta  u}{\Delta  x} 
+ =\frac{df}{du}\frac{du}{dx}.
+\end{align*}
+::: 
+ 
+## Examples Using The Chain Rule
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+y=\frac{x}{\sqrt{x^4+4}}.
+$$
+::: 
+
+::: {.solution }
+Using the chain rule and the quotient rule,
+$$
+\frac{dy}{dx}=\frac{\sqrt{x^4+4}(1)-x\frac{d}{dx}\left(\sqrt{x^4+4}\right)}{\left(\sqrt{x^4+4}\right)^2}=\frac{\sqrt{x^4+4}(1)-x\left(\frac{2
+x^3}{\sqrt{4+x^4}}\right)}{\left(\sqrt{x^4+4}\right)^2}
+$$
+which simplifies to
+$$
+\frac{dy}{dx}=\frac{4-x^4}{\left(4+x^4\right)^{3/2}}.
+$$
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+g(x)=\left(\frac{3x^2-2}{2x+3}\right)^3.
+$$
+::: 
+
+::: {.solution }
+Using the chain rule and the quotient rule, we determine,
+$$
+\frac{dg}{dx}
+%=3\left(\frac{3x^2-2}{2x+3}\right)^2\frac{d}{dx}\left(\frac{3x^2-2}{2x+3}\right)
+=3\left(\frac{3x^2-2}{2x+3}\right)^2\left(\frac{(2x+3)6x-\left(3x^2-2\right)2}{(2x+3)^2}\right)
+$$
+which simplifies to
+$$
+\frac{dg}{dx}=\frac{6 \left(2-3 x^2\right)^2 \left(2+9 x+3 x^2\right)}{(3+2 x)^4}.
+$$
+::: 
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+h(t)=2 \cot ^2(\pi  t+2).
+$$
+::: 
+
+::: {.solution }
+Using the chain rule and the formula $\frac{d}{dx}(\cot  u)=-u'\csc ^2u,$
+$$
+\frac{dh}{dt}=4\cot (\pi  t+2)\frac{d}{dx}[\cot (\pi  t+2)]=-4\pi  \cot (\pi  t+2)\csc ^2(\pi  t+2).
+$$
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+y=\sin  \sqrt[3]{x}+\sqrt[3]{\sin  x}
+$$
+::: 
+
+::: {.solution }
+Using the chain rule,
+\begin{align*}
+\frac{dy}{dx}&=\cos  \sqrt[3]{x}\frac{d}{dx}\left(\sqrt[3]{x}\right)+\frac{1}{3}(\sin  x)^{-2/3}\frac{d}{dx}(\sin  x) \\
+& =\frac{1}{3 x^{2/3}}\cos  \sqrt[3]{x}+\frac{\cos  x}{3(\sin  x)^{2/3}}.
+\end{align*}
+::: 
+
+::: {#exm- } 
+Show that 
+$$
+\frac{d}{d x}( \ln |\cos  x| )=-\tan  x 
+\qquad \text{and}\qquad 
+\frac{d}{d x}(\ln|\sec  x+\tan  x|)=\sec  x.
+$$
+::: 
+
+::: {.solution }
+Using the differentiation rule $\frac{d}{dx}[\ln  u]=\frac{u'}{u};$ we have,
+$$
+\frac{d}{d x}( \ln |\cos  x| ) 
+=\frac{1}{\cos  x}\frac{d}{dx}(\cos  x)
+=\frac{\sin  x}{\cos  x}
+=\tan  x
+$$
+and 
+\begin{align*}
+& \frac{d}{d x}( (\ln |\sec  x+\tan  x|) ) =\frac{1}{|\sec  x+\tan  x|}\frac{d}{dx}(|\sec  x+\tan  x|) \\
+& \qquad = \frac{1}{|\sec  x+\tan  x|}\frac{\sec  x+\tan  x}{|\sec  x+\tan  x|}\frac{d}{dx}(\sec  x+\tan  x) \\
+& \qquad  =\frac{1}{|\sec  x+\tan  x|}\frac{\sec  x+\tan  x}{|\sec  x+\tan  x|}(\sec  x \tan  x +\sec^2 x)\\
+&  \qquad =\frac{\sec  x \tan  x+\sec ^2x}{\sec  x+\tan  x} 
+ =\sec x
+\end{align*}
+using $\frac{d}{dx}[|u|]=\frac{u}{|u|}(u'), u\neq 0$.
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function 
+$$
+y=\sin ^4\left(x^2-3\right)-\tan ^2\left(x^2-3\right).
+$$
+::: 
+
+::: {.solution }
+Using the quotient rule with the chain rule,
+$$
+y'=4\sin ^3\left(x^2-3\right)\cos \left(x^2-3\right)(2x)-2\tan \left(x^2-3\right)\sec ^2\left(x^2-3\right)(2x)
+$$
+which simplifies to
+$$
+y'=4x \left[2 \sin ^3\left(x^2-3\right)\cos \left(x^2-3\right)-\tan \left(x^2-3\right)\sec^2\left(x^2-3\right)\right].
+$$
+::: 
+
+In the following examples we continue to illustrate the chain rule.
+
+
+::: {#exm- }  
+Let $f$ be a function for which $\displaystyle f'(x)=\frac{1}{x^2+1}.$ If $g(x)=f(3x-1),$ what is $g'(x)?$ 
+Also, if $\displaystyle h(x)=f\left(\frac{1}{x}\right),$ what is $h'(x)?$
+::: 
+
+::: {.solution }
+By the chain rule  
+$$
+g'(x)=f'(3x-1)\frac{d}{dx}(3x-1)=3f'(3x-1)=\frac{3}{(3x-1)^2+1}.
+$$ 
+Also, by the chain rule  
+$$
+h'(x)=f'\left(\frac{1}{x}\right)\frac{d}{dx}\left(\frac{1}{x}\right)=-f'\left(\frac{1}{x}\right)\left(\frac{1}{x^2}\right)=\frac{-1}{\left(\frac{1}{x}\right)^2+1}\left(\frac{1}{x^2}\right)=\frac{-1}{x^2+1}.
+$$
+::: 
+
+
+::: {#exm- }  
+Let $f$ be a function for which $f(2)=-3$ and $\displaystyle f'(x)=\sqrt{x^2+5}.$ 
+If $\displaystyle g(x)=x^2f\left(\frac{x}{x-1}\right),$ what is $g'(2)?$
+::: 
+
+::: {.solution }
+Using the chain rule and the product rule we determine,  
+$$
+g'(x)=2x f\left(\frac{x}{x-1}\right)+x^2f'\left(\frac{x}{x-1}\right)\frac{d}{dx}\left(\frac{x}{x-1}\right)
+$$
+$$
+= 2x f\left(\frac{x}{x-1}\right)+x^2f'\left(\frac{x}{x-1}\right)\left(\frac{-1}{(x-1)^2}\right).
+$$ 
+Therefore,  
+$$
+g'(2)=2(2) f\left(\frac{2}{2-1}\right)+2^2f'\left(\frac{2}{2-1}\right)\left(\frac{-1}{(2-1)^2}\right)=-24.
+$$
+::: 
+
+::: {#exm- }  
+Assuming that the following derivatives exists, find 
+$$
+\frac{d}{d x}f' [f(x)]
+\qquad \text{and}\qquad
+\frac{d}{d x}f [f'(x)].
+$$
+::: 
+
+::: {.solution }
+Using the chain rule,  
+$$
+\frac{d}{d x}f'[f(x)] =f'' [ f(x)] f'(x)
+$$ 
+which is the second derivative evaluated at the function multiplied by the first derivative; while,  
+$$
+\frac{d}{d x}f [f'(x)]=f'[f'(x)]f''(x)
+$$ 
+is the first derivative evaluated at the first derivative multiplied by the second derivative. When will these derivatives be the same? 
+::: 
+
+::: {#exm- }  
+Show that if a particle moves along a straight line with position $s(t)$ and velocity $v(t),$ then its acceleration satisfies $a(t)=v(t)\frac{dv}{ds}.$ Use this formula to find $\frac{dv}{d s}$ in the case where $s(t)=-2t^3+4t^2+t-3.$
+::: 
+
+::: {.solution }
+By the chain rule,  
+$$
+a(t)=\frac{dv}{dt}=\frac{dv}{d s}\frac{ds}{dt}=v(t)\frac{dv}{ds}
+$$ 
+In the case where $s(t)=-2t^3+4t^2+t-3;$ we determine, 
+$$
+\frac{ds}{dt}=v(t)=-6t^2+8t+1 \qquad \text{and } \qquad a(t)=-12t+8.
+$$ 
+Thus, 
+$$
+\frac{dv}{d s}=\frac{-12t+8}{-6t^2+8t+1}.
+$$
+What does this rate of change represent? 
+::: 
+
+::: {#exm- } 
+Find an equation of the tangent line to the graph of the function $f(x)=\left(9-x^2\right)^{2/3}$ at the point $(1,4).$
+::: 
+
+::: {.solution }
+By using the chain rule we determine,  
+$$
+f'(x)=\frac{2}{3}\left(9-x^2\right)^{-1/3}(-2x)=\frac{-4x}{3\sqrt[3]{9-x^2}}
+$$ 
+and so $f'(1)=\frac{-4}{3\sqrt[3]{9-1^2}}=\frac{-2}{3}.$ Therefore, an equation of the tangent line is $y-4=\left(\frac{-2}{3}\right)(x-1)$ which simplifies to $y=\frac{-2}{3}x+\frac{14}{3}.$ 
+::: 
+
+
+::: {#exm- } 
+Determine the point(s) at which the graph of 
+$$
+f(x)=\frac{x}{\sqrt{2x-1}}
+$$ 
+has a horizontal tangent.
+::: 
+
+::: {.solution }
+By using the chain rule we determine,  
+$$
+f'(x)=\frac{\sqrt{2x-1}(1)-x\frac{d}{dx}\left(\sqrt{2x-1}\right)}{\left(\sqrt{2x-1}\right)^2}=\frac{\sqrt{2x-1}(1)-x \left(\frac{1}{\sqrt{-1+2 x}}\right)}{\left(\sqrt{2x-1}\right)^2}
+$$
+which simplifies to $\displaystyle f'(x)=\frac{-1+x}{(-1+2 x)^{3/2}}.$ 
+Thus the only point where $f$ has a horizontal tangent line is $(1,1)$. See Figure \ref{fig:p7}.
+::: 
+
+
+## Exercises
+
+::: {#exr- } 
+Given $y=6u-9$ and find $\frac{dy}{dx}$ for (a) $u=(1/2)x^4$,  (b) $u=-x/3$, and (c) $u=10x-5$. 
+::: 
+
+::: {#exr- } 
+For each of the following functions, write the function $y=f(x)$ in the form $y=f(u)$ and $u=g(x)$, then find $\frac{dy}{dx}$.
+ 
+- $y=\left(\frac{x^2}{8}+x-\frac{1}{x}\right)^4$
+- $y=\sec  (\tan  x)$
+- $y=5 \cos ^{-4}x$
+- $y=e^{5-7x}$ 
+- $y=\sqrt{2x-x^2}$
+- $y=e^x \sqrt{2x-x^2}$
+::: 
+
+::: {#exr- } 
+Find the derivative of the following functions.
+ 
+- $r=-(\sec  \theta +\tan  \theta )^{-1}$
+- $y=\frac{1}{x}\sin ^{-5}x-\frac{x}{3}\cos ^3x$
+- $y=(4x+3)^4(x+1)^{-3}$
+- $y=(1+2x)e^{-2x}$
+- $h(x)=x \tan  \left(2 \sqrt{x}\right)+7$
+- $g(t)=\left(\frac{1+\cos  t}{\sin  t}\right)^{-1}$
+- $q=\sin \left(\frac{t}{\sqrt{t+1}}\right)$
+- $y=\theta ^3e^{-2\theta }\cos  5\theta$
+- $y=(1+\cos  2t)^{-4}$
+- $y=\left(e^{\sin (t/2)}\right)^3$
+- $y=\left(1+\tan ^4\left(\frac{t}{12}\right)\right)^3$
+- $y=4 \sin \left(\sqrt{1+\sqrt{t}}\right)$
+- $y=\frac{1}{9}\cot (3x-1)$
+- $y=\sin  \left(x^2e^x\right)$
+- $y=e^x \sin  \left(x^2e^x\right)$
+::: 
+
+::: {#exr- } 
+Suppose that the functions $f$, $g$, and their derivatives with respect to $x$ have the following values at $x=0$ and $x=1.$
+$$
+\begin{array}{c|cccc}
+ x & f(x) & g(x) & f'(x) & g'(x) \\ \hline
+ 0 & 1 & 1 & 5 & 1/3 \\
+ 1 & 3 & -4 & -1/3 & -8/3
+\end{array}
+$$
+Find the derivatives with respect to $x$ of the following combinations at a given value of $x,$ 
+ 
+- $5 f(x)-g(x), x=1$ 
+- $f(x)g^3(x), x=0$ 
+- $\frac{f(x)}{g(x)+1}, x=1$
+- $f(g(x)), x=0$ 
+- $g(f(x)), x=0$ 
+- $\left(x^{11}+f(x)\right)^{-2}, x=1$
+- $f(x+g(x)), x=0$
+- $f(x g(x)), x=0$
+- $f^3(x)g(x), x=0$ 
+::: 
+
+::: {#exr- } 
+Find $dy/dt$ when $x=1$ if $y=x^2+7x-5$ and $dx/dt=1/3.$
+::: 
+
+::: {#exr- } 
+(a) Find the tangent to the curve $y=2 \tan  (\pi  x/4)$ at $x=1.$ (b) What is the smallest value the slope of the curve can ever have on the interval $-2<x<2?$ Give reasons for you answer.
+::: 
+
+::: {#exr- } 
+Suppose that $u=g(x)$ is differentiable at $x=-5,$ $y=f(u)$ is differentiable at $u=g(-5),$ and $(f\circ g)'(-5)$ is negative. What,
+if anything, can be said about the values of $g'(-5)$ and $f'(g(-5))?$
+::: 
+
+::: {#exr- } 
+Differentiate the functions given by the following equations 
+ 
+- $y=\cos^2\left(\frac{1-\sqrt{x}}{1+\sqrt{x}}\right)$
+- $y=\sqrt{1+\tan \left(x+\frac{1}{x}\right)}$
+- $n=\left(y+\sqrt[3]{y+\sqrt{2y-9}}\right)^8$
+::: 
+
+::: {#exr- } 
+If $g(t)=[f(\sin  t)]^2,$ where $f$ is a differentiable function, find $g'(t).$
+::: 
+
+::: {#exr- } 
+Suppose $f$ is a differentiable function on $\mathbb{R}.$ Let $F(x)=f(\cos  x)$ and $G(x)=\cos (f(x)).$ Find expressions for $F'(x)$
+and $G'(x).$
+::: 
+
+::: {#exr- } 
+Determine if the following statement is true or false. Then justify your claim. If $y$ is a differentiable function of $u,$ $u$ is a differentiable function of $v,$ and $v$ is a differentiable function of $x,$ then $\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dv}\frac{dv}{dx}.$
+::: 
+
+::: {#exr- } 
+Let $u$ be a differentiable function of $x.$ Use $|u|=\sqrt{u^2}$ to prove that $\frac{d}{dx}(|u| )=\frac{u' u}{|u|}$  when $u\neq 0.$ Use the formula to find $h'$ given $h(x)=x|2x-1|.$
+::: 
+
+::: {#exr- } 
+Show that $\frac{d}{d\theta }(\sin  \theta {}^{\circ})=\frac{\pi }{180}\cos  \theta .$ What do you think is the importance of the exercise?
+::: 
+
+
+
+
+
+## Implicit Differentiation
+
+
+
+## Implicit Differentiation as a Procedure
+
+In this section the procedure of implicit differentiation is outlined and many examples are given. Proofs of the derivative formulas for the
+inverse trigonometric functions are provided and several examples of using them are given. Also detailed is the logarithmic differentiation procedure which can simplify the process of taking derivatives of equations involving products and quotients. Finding the slope of a tangent line is a local process; for example, a circle locally around a point, can have a tangent line even though it is not a function. In fact, every circle has a tangent line at every point. 
+
+The following process allows us to find derivatives of more general curves
+(not just functions); and in particular for an implicitly defined function. Notice that the process relies heavily on the chain rule.
+
+
+::: {#thm- }  [Implicit Differentiation]\index{implicit differentiation} **implicit differentiation** 
+Suppose that $f(x,y)=0$ is a given equation involving both $x$ and $y$; and that $\frac{dy}{d x}$
+exists at $\left(x_0,y_0\right).$ Then $\frac{dy}{d x}|_{\left(x_0,y_0\right)}$ can be found using the following procedure:
+ 
+-   Using the chain rule where appropriate, differentiate both sides of the equation with respect to $x.$ 
+-   If possible, solve the differentiated equation algebraically for $\frac{dy}{dx}$ and evaluate at $\left(x_0,y_0\right).$
+::: 
+
+
+::: {#exm- } 
+Use implicit differentiation to find $\frac{dy}{d x}$ given 
+$$
+\sin (x+y)=y^2 \cos  x.
+$$
+::: 
+
+::: {.solution }
+We will use implicit differentiation, and in doing so we use the chain rule on the right hand and the product rule together with the chain rule on the left hand side of the equation:
+\begin{align*}
+\cos (x+y)\frac{d}{dx}(x+y) & =2 y \cos  x \frac{dy}{dx}-y^2\sin  x \\
+\cos (x+y)\left(1+\frac{dy}{dx}\right)-2 y \cos  x \frac{dy}{dx}& =-y^2\sin  x\\
+\cos (x+y)+\frac{dy}{dx}\cos (x+y)-2 y \cos  x \frac{dy}{dx}& =-y^2\sin  x\\
+\frac{dy}{dx}(\cos (x+y)-2 y \cos  x)& =-y^2\sin  x-\cos (x+y)\\
+\frac{dy}{dx}& =-\frac{y^2\sin  x+\cos (x+y)}{\cos (x+y)-2 y \cos  x}
+\end{align*}
+::: 
+
+
+::: {#exm- } 
+Use implicit differentiation to find the tangent to the 
+folium of  Descartes $x^3+y^3=6x y$ at $(3,3)$.
+::: 
+
+::: {.solution }
+Using implicit differentiation we have,  
+$$
+3x^2+3y^2\frac{dy}{dx}=6y+6x\frac{dy}{dx}
+$$
+$$
+ \frac{dy}{dx}=\frac{6y-3x^2}{3y^2-6x}=\frac{x^2-2 y}{2 x-y^2}
+$$ 
+So an equation of the tangent line at $(3,3)$ is $\displaystyle y-3=\left.\frac{dy}{dx}\right|_{(3,3)}(x-3)$ which simplifies to $y=-x+6.$ 
+::: 
+
+
+::: {#exm- } 
+Use implicit differentiation to find the tangent to the 
+lemniscate of Bernoulli 
+$$
+2\left(x^2+y^2\right)^2=25\left(x^2-y^2\right).
+$$
+::: 
+
+::: {.solution }
+Using implicit differentiation we have,  
+$$
+4\left(x^2+y^2\right)\left(2x+2y\frac{dy}{dx}\right)=50x-50y\frac{dy}{dx}$$
+and so 
+$$
+\frac{dy}{dx}=\frac{25 x-4 x \left(x^2+y^2\right)}{25 y+4 y \left(x^2+y^2\right)}
+$$ 
+So an equation of the tangent line at $(3,1)$ is  $y-1=\frac{dy}{dx}|_{(3,1)}(x-3)$ which simplifies to $y=\frac{-9}{13}x+\frac{40}{13}.$ 
+::: 
+
+
+::: {#exm- } 
+Use implicit differentiation to find all points on the lemniscate of Bernoulli $\left(x^2+y^2\right)^2=4\left(x^2-y^2\right)$ where the tangent line is horizontal.
+::: 
+
+::: {.solution }
+Using implicit differentiation we have,  
+$$
+2\left(x^2+y^2\right)\left(2x+2y\frac{dy}{dx}\right)=8x-8y\frac{dy}{dx}$$
+and so
+$$
+\frac{dy}{dx}=-\frac{x \left(-2+x^2+y^2\right)}{y \left(2+x^2+y^2\right)}\
+$$
+we need to find all $(x,y)$ where $\frac{dy}{dx}=0.$ Clearly, the point $(0,0)$ is ruled out and so $-2+x^2+y^2=0$; that is $x^2+y^2=2.$ Using $x^2+y^2=2$ with the original we see $x^2-y^2=1$ also. Therefore, $2x^2=3$ and so $x=\pm \sqrt{\frac{3}{2}}$ and $y=\pm \sqrt{\frac{1}{2}}.$
+::: 
+
+
+::: {#exm- } 
+Use implicit differentiation to find two points on the curve whose equation is $x^2-3x y+2y^2=-2,$ where the tangent line is vertical.
+::: 
+
+::: {.solution }
+Using implicit differentiation we determine,  
+$$
+2x-3y-3x\frac{dy}{dx}+4y\frac{dy}{dx}=0
+$$
+and so,  $\frac{dy}{dx}=\frac{3y-2x}{4y-3x}$. Since we want vertical tangent lines we need $4y-3x=0;$ that is, $y=\frac{3}{4}x$ and with the original equation this means;  $x^2-3x \left(\frac{3}{4}x\right)+2\left(\frac{3}{4}x\right)^2=-2$ which is solved as $x=\pm 4.$ So the points where the tangent line is vertical are $(-4,-3)$ and $(4,3).$
+::: 
+
+
+## Logarithmic Differentiation
+
+Logarithmic differentiation is a procedure that uses the chain rule and implicit differentiation. Basically the idea is to apply an appropriate logarithmic function to both sides of the given equation and then use some properties of logarithms to simplify before using implicit differentiation. 
+
+
+::: {#thm- } [Logarithmic Differentiation]\index{logarithmic differentiation} **logarithmic differentiation** 
+Suppose that $f(x,y)=0$ is a given equation involving both $x$ and $y$; and that $\frac{dy}{d x}$ exists at $\left(x_0,y_0\right).$ Then $\frac{dy}{d x}|_{\left(x_0,y_0\right)}$ can be found using the following procedure:  
+ 
+-   Apply a logarithmic function with the appropriate base to both sides. 
+-   Use properties of logarithms to simplify.  
+-   Differentiate both sides of the equation with respect to $x.$ 
+-   If possible, solve the differentiated equation algebraically for $\frac{dy}{dx}.$
+::: 
+
+::: {#exm- } 
+Find the derivative of $y=\frac{1}{(x-1)^3-(x+1)^3}$ without using the quotient rule. 
+::: 
+
+
+::: {#exm- } 
+Use logarithmic differentiation to find 
+$\frac{dy}{dx}$ given 
+$$
+y=\frac{e^{2x}}{\left(x^2-3\right)^2\ln \sqrt{x}}.
+$$
+::: 
+
+::: {.solution }
+Using the natural logarithmic function, we have  $\ln  y=2x-2\ln \left(x^2-3\right)-\ln \left(\ln \left(\sqrt{x}\right)\right)$ and applying implicit differentiation we have,
+\begin{align*}
+\frac{1}{y}\frac{dy}{dx}= 
+& 2-\frac{4x}{x^2-3}-\frac{1}{\ln \left(\sqrt{x}\right)}\frac{1}{\sqrt{x}}\frac{1}{2\sqrt{x}} \frac{dy}{dx} \\
+& =\frac{e^{2x}}{\left(x^2-3\right)^2\ln \sqrt{x}}\left(2-\frac{4x}{x^2-3}-\frac{1}{\ln \left(\sqrt{x}\right)}\frac{1}{\sqrt{x}}\frac{1}{2\sqrt{x}}\right)
+\end{align*}
+as desired.
+::: 
+
+
+::: {#exm- } 
+Use logarithmic differentiation to find $\frac{dy}{dx}$ given $y=x^{\sin  x}.$
+::: 
+
+::: {.solution }
+Using the natural logarithmic function, we have  $\ln  y=(\sin  x)( \ln  x )$ and applying implicit differentiation we have, 
+$$
+\frac{1}{y}\frac{dy}{dx}=(\cos  x)(\ln  x)+\frac{\sin  x}{x} \frac{dy}{dx}=x^{\sin  x}(\cos  x)(\ln  x)+\frac{\sin  x}{x}
+$$
+as desired.
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+Find the derivative $\frac{dy}{dx}$ given each of the following.
+ 
+- $y=x^{-3/5}$
+- $y=7\sqrt{x+6}$
+- $y=(1-6x)^{2/3}$
+- $y=\sqrt[3]{x^2}$
+- $y=\cos  (1-6x)^{2/3}$
+- $y=\sqrt[3]{1+\cos  (2x)}$
+::: 
+
+::: {#exr- } 
+Use implicit differentiation to find $\frac{dy}{dx}$ given each of the following. 
+ 
+- $x^3+y^3=18x y$
+- $x^2(x-y)^2=x^2-y^2$
+- $x^2=\frac{x-y}{x+y}$
+- $e^{2x}=\sin (x+3y)$
+- $e^{x^2y}=2x+2y$
+- $\sin (x y)=\frac{1}{2}$
+::: 
+
+::: {#exr- } 
+Use implicit differentiation to find $\frac{dy}{dx}$ at $(1,1)$ for each of the following.
+ 
+- $(x+y)^3=x^3+y^3$
+- $y^2\left(x^2+y^2\right)=2x^2$
+- $x\sqrt{1+y}+y\sqrt{1+2x}=2x$
+- $x^2=\frac{y^2}{y^2-1}$
+::: 
+
+::: {#exr- } 
+Use implicit differentiation to find $\frac{dy}{dx}$ and then find $\frac{ d^2y}{dx^2}$ given each of the following. 
+ 
+- $x^{2/3}+y^{2/3}=1$
+- $2\sqrt{y}=x-y.$
+::: 
+
+::: {#exr- } 
+Verify that the given point is on the given curve and find equations for the lines that are tangent and normal to the curve at this point.
+ 
+- $x^2+x y-y^2=1$ at $(2,3)$
+- $y^2-2x-4y-1=0$  at $(-2,1)$ 
+- $2x y+\pi  \sin  y=2\pi$ at  $(1,\pi /2)$ 
+- $x^2\cos ^2y-\sin  y=0$  at  $(0,\pi )$
+::: 
+
+::: {#exr- } 
+Find points on the curve $x^2+ x y+y^2=7$ (a) where the tangent is parallel to the $x$-axis and (b) where the tangent is parallel to the $y$-axis. In the latter case, $\frac{dy}{dx}$ is not defined, but $\frac{dx}{dy}$ is? What value does $\frac{dx}{dy}$ have at these points?
+::: 
+
+::: {#exr- } 
+Find two points on the curve whose equation is $x^2-3x y+2y^2=-2,$ where the tangent line is vertical.
+::: 
+
+::: {#exr- } 
+Use logarithmic differentiation to find $\frac{dy}{dx}$ for each of the following. 
+ 
+- $y=x^{x^3-2x+7}$
+- $y=x^{\cos  x}$ 
+- $y=\frac{\sin x}{x^2-3x} e^{x^2}$
+- $y=(3x-1)^{3x-1}$ 
+- $y=\frac{e^{-3x}(x-2)}{\left(x^2+3\right)^2\sqrt{2x-1}}$
+- $y=x^{\tan  x}+x^{\cot  x}$ 
+::: 
+
+::: {#exr- } 
+Show that the sum of the $x$- and $y$-intercepts of any tangent line to the curve $\sqrt{x}+\sqrt{y}=\sqrt{c}$ is equal to $c.$
+::: 
+
+::: {#exr- } 
+(a) The equations $x^2-2 t x+2t^2=4$ and $2y^3-3t^2=4$ define $x$ and $y$ implicitly as differentiable functions $x=f(t)$ and $y=g(t),$ find the slope of the curve $x=f(t),$ $y=g(t)$ at $t=2.$
+(b) The equations $x \sin  t+2x=t$ and $t \sin  t-2t=y$ define $x$ and $y$ implicitly as differentiable functions $x=f(t)$ and $y=g(t),$
+find the slope of the curve $x=f(t),$ $y=g(t)$ at $t=\pi .$
+::: 
+
+::: {#exr- } 
+Which of the following could be true if $f''(x)=x^{-1/3}?$
+ 
+- $f(x)=\frac{3}{2}x^{2/3}-3$
+- $f(x)=\frac{9}{10}x^{5/3}-7$
+- $f'''(x)=\frac{-1}{3}x^{4/3}$
+- $f(x)=\frac{3}{2}x^{2/3}+6$
+::: 
+
+::: {#exr- } 
+Use implicit differentiation to show that tangent line at $\left(x_0,y_0\right)$ to any ellipse centered at the origin$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ has the form $\frac{x_0x}{a^2}+\frac{y_0y}{b^2}=1.$ Also use implicit differentiation to show that tangent line at $\left(x_0,y_0\right)$ to any hyperbola centered at the origin $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$ has the form $\frac{x_0x}{a^2}-\frac{y_0y}{b^2}=1.$
+::: 
+
+::: {#exr- } 
+Find the derivative $\frac{dy}{dx}$ for each of the following.  
+ 
+- $y=\cos^{-1}\left(x^2\right).$
+- $y=\sin^{-1}(1-t).$
+- $y=\csc^{-1}\left(x^2+1\right),$ $x>0.$
+- $y=\sin^{-1}\left(\frac{3}{t^2}\right).$
+- $y=\ln\left(\tan ^{-1}x\right).$
+- $y=\cos^{-1}\left(e^{-t}\right).$
+::: 
+
+
+
+## Derivatives of Inverse Functions
+
+## Inverse Functions
+
+In this section we state the derivative rules for the natural exponential function and the general exponential function. 
+We also go over several examples of the chain rule and the exponential derivative rules.
+
+
+::: {#thm- } 
+\index{derivative of inverse} **derivative of inverse** 
+If $f$ has an interval $I$ as domain and $f'(x)$ exists and is never zero on $I,$ then $f^{-1}$ is differentiable at every point in its domain. 
+The value of $\left(f^{-1}\right)'$ at a point $b$ in the domain of $f^{-1}$ is the reciprocal of the value of $f'$ at $a=f^{-1}(b)$ given by  
+$$
+\left(f^{-1}\right)'(b)=\frac{1}{f '\left(f^{-1}(b)\right)}.
+$$
+::: 
+
+
+::: {#exm- } 
+Let $\displaystyle f(x)=\frac{2x-3}{7-5x}.$ 
+Sketch the graph of $f$ and state whether or not the graph of $f$ passes the horizontal line test. 
+If so, find a rule for $f^{-1}$ and then use it to find $\left(f^{-1}\right) '(0)$. 
+Verify the formula
+$$
+ \displaystyle \left(f^{-1}\right)'(0)=\frac{1}{f'\left(f^{-1}(0)\right)}.
+$$
+::: 
+
+
+::: {.solution }
+Notice that the graph of $f$ passes the horizontal line test, which implies that $f$ is a one-to-one function and thus must have an inverse function. 
+To find the inverse function of $f$, set $y=f(x)$. 
+Then simply switch the variables $x$ and $y$ and solve for $y$. 
+The resulting equation will be a rule for the function $f^{-1}$. 
+To see this, let $y=\frac{2x-3}{7-5x}$ and then switching the variables $x$ and $y$: $x=\frac{2y-3}{7-5y}$. 
+Solving for $y$ yields: $y=\frac{3+7x}{2+5x}$. 
+Thus, $f^{-1}(x)=\frac{3+7x}{2+5x}$. 
+Of course since $f$ and $f^{-1}(x)$ are inverse function it must happen that $f^{-1}(f(x))=x$ and  $f(f^{-1}(x))=x$ for each $x$ in the domains. 
+Notice that 
+$$
+f'(x)=-\frac{1}{(7-5 x)^2}  \qquad \text{and} \qquad (f^{-1})'(x)=-\frac{1}{(2+5 x)^2}.
+$$
+Also notice that 
+$$
+(f^{-1})'(0)=-\frac{1}{(2+5 (0))^2}=-\frac{1}{4}=\frac{1}{f'\left(\frac{3}{2}\right)}=\frac{1}{f'\left(f^{-1}(0)\right)}.
+$$
+::: 
+
+
+::: {#exm- } 
+Let $\displaystyle f(x)=\frac{5 x}{1-2x}.$ 
+Without finding a rule for $f^{-1}(x)$ determine $\left(f^{-1}\right) '(1).$
+::: 
+
+::: {.solution }
+Since $\displaystyle f'(x)=\frac{5}{(1-2 x)^2}$ and $\displaystyle 1=\frac{5 x}{1-2x}$ when $x=\frac{1}{7}$
+$$
+\left(f^{-1}\right)'(1)=\frac{1}{f '\left(f^{-1}(1)\right)}=\frac{1}{f '(1/7)}=\frac{1}{\frac{49}{5}}=\frac{5}{49}.
+$$
+::: 
+
+
+
+
+
+
+## Derivatives of Exponential Functions
+
+
+::: {#thm- } 
+The derivative of the \index{exponential function} **exponential function**  $f(x)=b^x$ is $f'(x)=(\ln  b) b^x.$ 
+In the special case when $b=e$ we have $f(x)=e^x$ and $f'(x)=e^x.$ 
+Therefore, 
+$$
+\frac{d}{dx}\left(b^x\right)=(\ln  b)b^x \qquad \text{and} \qquad \frac{d}{dx}\left(e^x\right)=e^x.
+$$
+::: 
+
+::: {#exm- } 
+Find the derivative of the function given $y(x)=x^2-3e^x.$
+::: 
+
+::: {.solution }
+The derivative is $\frac{dy}{dx}=2x-3e^x.$
+::: 
+
+
+::: {#exm- }  
+Find the derivative of the function given $y(x)=1-2e^{-x^2}.$
+::: 
+
+::: {.solution }
+Using the chain rule the derivative is,  
+$$
+\frac{dy}{dx}=-2e^{-x^2}\frac{d}{dx}\left(-x^2\right)=-2e^{-x^2}(-2x)=4x e^{-x^2}.
+$$
+::: 
+
+::: {#exm- } 
+What is the slope of the tangent line to $\displaystyle y=\frac{e^{-x}}{1+e^{-x}}$ at $x=0?$
+::: 
+
+::: {.solution }
+Using the quotient rule,
+\begin{align*}
+\frac{dy}{dx}& =\frac{\left(1+e^{-x}\right)\left(-e^{-x}\right)-e^{-x}\left(-e^{-x}\right)}{\left(1+e^{-x}\right)^2} \\
+& =\frac{-e^{-x}\left(1+e^{-x}-e^{-x}\right)}{\left(1+e^{-x}\right)^2} 
+ =\frac{-e^{-x}}{\left(1+e^{-x}\right)^2}=-\frac{e^x}{\left(1+e^x\right)^2}
+\end{align*}
+Therefore, the slope of the tangent line to $y$ at $x=0$ is $\frac{-e^{-(0)}}{\left(1+e^{-(0)}\right)^2}=-\frac{1}{4}.$
+::: 
+
+
+
+
+## Derivatives of Logarithmic Functions
+
+::: {#thm- } 
+The derivative of the \index{logarithmic function} **logarithmic function**  $f(x)=\log _bx$ is $f'(x)=1/(\ln  b) x.$ 
+In the special case when $b=e$ we have $f(x)=\ln  x$ and $f'(x)=1/x.$ 
+Therefore, 
+$$
+\frac{d}{dx}\left(\log _bx\right)=\frac{1}{(\ln  b)x} \qquad \text{and} \qquad \frac{d}{dx}(\ln  x)=\frac{1}{x}.
+$$
+::: 
+
+
+::: {#exm- } 
+Find the equation of the tangent line to the curve $y=x^{2 }\ln  x$ at $x=e^2.$
+::: 
+
+::: {.solution }
+The derivative of $y$ is $y'=2x \ln  x+x$ and at $\left(e^2,2 e^4\right)$ we have the slope of the tangent line as $y'\left(e^2\right)=2\left(e^2\right) \ln  \left(e^2\right)+\left(e^2\right)=5 e^2.$ 
+Therefore, the equation of the tangent line is $y-2e^4=5e^2\left(x-e^2\right)$ which simplifies to $y=5 e^2 x-3 e^4.$
+::: 
+
+
+::: {#exm- } 
+For what values of $A$ and $B$ does $y=A x \ln  x+B e^x$ satisfy $y''-y=0?$
+::: 
+
+::: {.solution }
+We determine, $y'=A \ln  x+A+B e^x$ $y\text{''}=\frac{A}{x}+B e^x$. 
+Since $y''-y=\frac{A}{x}-A x \ln  x=0$ we find that $A=0$ and that $B$ can be any real number.
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function given by $y(x)=5^{2x^2}\ln (4x).$
+::: 
+
+::: {.solution }
+Using the product rule and the chain rule,  
+\begin{align*}
+\frac{dy}{dx} & =\frac{d}{dx}\left(5^{2x^2}\right)\ln (4x)+5^{2x^2}\frac{d}{dx}(\ln (4x)) \\
+& =\left(5^{2x^2}\ln (5)(4x)\right) \ln (4x)+5^{2x^2}\left(\frac{1}{4x}(4)\right)
+\end{align*}
+::: 
+
+::: {#exm- } 
+Find the derivative of the function given by $y(x)=\ln (4x+9).$
+::: 
+
+::: {.solution }
+Using the chain rule,  
+$$
+\frac{dy}{dx}=\frac{1}{4x+9}\frac{d}{dx}(4x+9)=\frac{4}{4x+9}.
+$$
+::: 
+
+::: {#exm- } 
+Find the derivative of the function given by 
+$$
+y(x)=\ln \left(\frac{x^3}{x+1}\right).
+$$
+::: 
+
+::: {.solution }
+Here we simplify first to have,  
+$$
+y(x)=\ln \left(\frac{x^3}{x+1}\right)=\ln \left(x^3\right)-\ln (x+1)=3 \ln (x)-\ln (x+1)
+$$
+and then using derivative rules,  
+$$
+\frac{dy}{dx}=\frac{3}{x}-\frac{1}{x+1}=\frac{2 x+3}{x (x+1)}.
+$$
+::: 
+
+::: {#exm- } 
+Find the derivative of the function given by 
+$$
+y(x)=\log _2\left(\frac{3x+2}{x^2-5}\right){}^{1/4}.
+$$
+::: 
+
+::: {.solution }
+Here we simplify first to have,  
+$$
+y(x)=\log _2\left(\frac{3x+2}{x^2-5}\right){}^{1/4}=\frac{1}{4}\log _2(3x+2)-\frac{1}{4}\log _2\left(x^2-5\right)
+$$
+and then using derivative rules,  
+$$
+\frac{dy}{dx}=\frac{1}{4(3x+2)\ln (2)}\frac{d}{dx}(3x+2)-\frac{1}{4\left(x^2-5\right)\ln (2)}\frac{d}{dx}\left(x^2-5\right)$$
+$$
+\qquad =\frac{3}{4(3x+2)\ln (2)}-\frac{2x}{4\left(x^2-5\right)\ln (2)} 
+=\frac{-3 x^2-4 x-15}{4 (3 x+2) \left(x^2-5\right) \ln (2)}
+$$
+::: 
+
+
+::: {#exm- }  
+Find the derivative of the function given 
+$$
+s(t)=\log _5\left(\frac{t^2+3}{\sqrt{1-t}}\right).
+$$
+::: 
+
+::: {.solution } Here we simplify first to have,  
+$$
+y(x)=\log _5\left(\frac{t^2+3}{\sqrt{1-t}}\right)=\log _5\left(t^2+3\right)-\frac{1}{2}\log _5(1-t)\
+$$
+and then using derivative rules,  
+$$
+\frac{dy}{dx}=\frac{2t}{\left(t^2+3\right)\ln (5)}-\frac{(-1)}{2\ln (5)(1-t)}=\frac{3 t^2-4 t-3}{2 (t-1) \left(t^2+3\right) \log (5)}
+$$
+::: 
+
+
+
+
+
+
+## Derivatives of Inverse Trigonometric Functions
+
+
+::: {#thm- } 
+The \index{inverse trigonometric functions} **inverse trigonometric functions** arcsine, arccosine, arctangent, arccotangent, arccosecant, and arcsecant are all differentiable functions on their domain and their derivative functions are:
+\begin{align*}
+& \frac{d}{d x}\sin^{-1} x=\frac{1}{\sqrt{1-x^2}} & &
+\frac{d}{d x}\cos^{-1} x=\, -\frac{1}{\sqrt{1-x^2}} \\
+& \frac{d}{d x}\tan^{-1}x=\frac{1}{1+x^2} & &
+\frac{d}{d x}\cot^{-1}x=\, -\frac{1}{1+x^2} \\
+& \frac{d}{d x}\sec^{-1}x=\frac{1}{|x|}\frac{1}{\sqrt{x^2-1}} & &
+\frac{d}{d x}\csc^{-1}x=\, -\frac{1}{|x|}\frac{1}{\sqrt{x^2-1}}
+\end{align*}
+::: 
+
+
+::: {#exm- } 
+Find the derivative of the function  $y=\sin^{-1}x \cos^{-1}x.$
+::: 
+
+::: {.solution }
+Using the product rule and the derivative formulas for arcsine and arccosine we determine:  
+$$
+y'=\left(\frac{1}{\sqrt{1-x^2}}\right)\left(\cos^{-1}x\right)-\left(\frac{1}{\sqrt{1-x^2}}\right)\left(\sin^{-1}x\right)=\frac{\cos^{-1}x-\sin^{-1}x}{\sqrt{1-x^2}}
+$$
+::: 
+
+::: {#exm- } 
+Find the derivative of the function $y=\tan^{-1}x \cot^{-1}x$
+::: 
+
+::: {.solution }
+Using the product rule and the derivative formulas for arctangent and arccotangent we determine:  
+$$
+y'=\left(\frac{1}{1+x^2}\right)\cot^{-1}x-\left(\frac{1}{1+x^2}\right)\tan^{-1}x=\frac{\cot^{-1}x-\tan^{-1}x}{1+x^2}
+$$
+::: 
+
+::: {#exm- } 
+Find the derivative of the function $y=\tan^{-1}x-x \sec^{-1}x$
+::: 
+
+::: {.solution }
+Using the product rule and the derivative formulas for arctangent and arcsecant we determine: 
+$$
+y'=\left(\frac{1}{1+x^2}\right)-\sec^{-1}x-x\left(\frac{1}{|x|}\frac{1}{\sqrt{x^2-1}}\right)
+$$
+::: 
+
+Recall, the \index{cofunction theorem} **cofunction theorem** from trigonometry: if $\alpha =\cos^{-1}x$ and $\beta =\sin^{-1}x$ then $\cos  \alpha =\sin  \beta$ if and only if $\alpha +\beta =\pi /2.$
+
+
+::: {#exm- } 
+Find the derivative of the function $\displaystyle y=\frac{\sin^{-1}x}{\cos^{-1}x}$.
+::: 
+
+::: {.solution } 
+Using the quotient rule, the derivative formulas for arcsine and arccosine and some trigonometric identities, 
+\begin{align*}
+y'&=\frac{\left(\cos^{-1}x\right)\left(\frac{1}{\sqrt{1-x^2}}\right)-\left(\sin^{-1}x\right)\left(\frac{-1}{\sqrt{1-x^2}}\right)}{\left(\cos^{-1}x\right)^2} \\
+& \qquad =\frac{\cos^{-1}x+\sin^{-1}x}{\left(\cos^{-1}x\right)^2\sqrt{1-x^2}} 
+=\frac{\pi }{2 \sqrt{1-x^2} \left(\cos^{-1}x\right)^2}
+\end{align*}
+::: 
+
+
+
+## Exercises
+
+::: {#exr- } 
+Let $f(x)=\frac{2x-3}{7-5x}.$ Sketch the graph of $f$ and state whether or not the graph of $f$ passes the \emph{horizontal line test}. If so, find a rule for $f^{-1}$ and then use it to find $\left(f^{-1}\right) '(0)$. Verify the formula $\left(f^{-1}\right)'(0)=\frac{1}{f '\left(f^{-1}(0)\right)}.$
+::: 
+
+::: {#exr- } 
+Let $f(x)=\frac{5 x}{1-2x}.$ Without finding a rule for $f^{-1}(x)$ determine
+ $\left(f^{-1}\right) '(1).$
+::: 
+
+::: {#exr- } 
+Find $\frac{dy}{dx}$ given $y=\frac{e^{2x}}{\left(x^2-3\right)^2\ln \sqrt{x}}.$
+::: 
+
+::: {#exr- } 
+Find $\frac{dy}{dx}$ given $y=x^{\sin  x}.$
+::: 
+
+::: {#exr- } 
+Determine whether the following functions are one-to-one. 
+ 
+- $f(x)=x^2+4$
+- $f(x)=2x^3-4$ 
+- $f(x)=-54+54 x-15 x^2+2 x^3$ \
+- $f(x)=\frac{2x-3}{x-7}$
+::: 
+
+::: {#exr- } 
+Determine whether or not the given functions are inverses of each other or not.  
+\ 
+- $f(x)=x^3-4$ and  $g(x)=\sqrt[3]{x+4}$
+- $f(x)=x^2+5, x\leq 0$  and  $g(x)=-\sqrt{x-5}, x\geq 5$
+::: 
+
+::: {#exr- } 
+Find the inverse of the given function, it if exists.
+ 
+- $f(x)=\frac{4x}{x-2}$
+- $f(x)=\left(x^3+1\right)^5$
+- $f(x)=x^2-6x, x\geq 3$
+- $f(x)=\frac{x}{x^2-2}$
+::: 
+
+::: {#exr- } 
+Solve the following equations for real $x$ and give the number of solutions you find for each one. Also clearly state any extraneous solutions that you find for each one.  
+ 
+- $\log _2x=\log _45+3 \log _23$
+- $\left(\sqrt[3]{5}\right)^{x+2}=5^{x^2}$ 
+- $\log _5|x+3|+\log _5|x-3|=1$ 
+- $\frac{1}{e^{x+3}+6e^{-x-3}}=\frac{1}{5}$
+::: 
+
+::: {#exr- } 
+Given $f(x)=5-4x$ and $a=1/2$ find $f^{-1}(x)$ and graph $f$ and $f^{-1}$ together. Then evaluate $\frac{ df}{dx}$ at $x=a$ and $\frac{ df^{-1}}{dx}$ at $x=f(a)$ to show that at these points $\frac{ d f^{-1}}{dx}=\frac{1}{\left(\frac{ df}{dx}\right)}.$
+::: 
+
+::: {#exr- } 
+Show that $h(x)=\left.x^3\right/4$ and $k(x)=(4x)^{1/3}$ are inverses of one another. Graph $h$ an $k$ over an $x$-interval large enough to show the graphs intersecting at $(2,2)$ and $(-2,-2).$ Find the slopes of the tangents to the graphs at $h$ and $k$ at $(2,2)$ and $(-2,-2).$ What lines are tangent to the graphs at $h$ and $k$ at $(2,2)$ and $(-2,-2).$
+::: 
+
+::: {#exr- } 
+Suppose that the differentiable function $y=f(x)$ has an inverse and that the graph of $f$ passes through the point $(2,4)$ and has a slope of $1/3$ there. Find the value of $\frac{ df^{-1}}{dx}$ at $x=4.$
+::: 
+
+
+ 
+
+
+
+## Related Rates
+
+In this topic we show how implicit differentiation and the chain rule can be used to calculate the rate of change of one variable in terms of the rate of change of another variable (which may be more easily measured). 
+
+
+The procedure of solving a \index{related rates} **related rates**  problem is to find an equation that relates two quantities and then use the chain rule to differentiate both sides with respect to time. 
+Then, from knowing the rate of change of one value at a point in time, we can calculate the rate of change of another quantity at that moment in time. 
+
+The equation which describes the application is often derived from a verbal description and is called a \index{mathematical model} **mathematical model**  of the problem. 
+For these equations we can relate different rates of change by using the chain rule and implicit differentiation.
+
+More precisely, given a function $y=f(x)$ where both $x$ and $y$ are functions of time $t,$ we have $x=x(t)$ and $y=y(t)$; and so we can use the chain rule and implicit differentiation to determine $\frac{d y}{d t}$ and $\frac{d x}{d t}.$ 
+Knowing one of these values we can calculate the other as demonstrated in the following examples.
+
+
+::: {#exm- }  
+Find $\frac{d y}{d t}$ when $x=7$ given $y=5\sqrt{x+9}$ and $\frac{d x}{d t}=2.$ 
+::: 
+
+::: {.solution } 
+Differentiating with respect to $t$ and using the chain rule, 
+$$
+\frac{d y}{d t}=\frac{5}{2\sqrt{x+9}}\frac{d x}{d t}
+$$ 
+and so when $x=7,$ 
+$$
+\left. \frac{d y}{d t} \right|_{x=7} =\frac{5}{2\sqrt{7+9}}(2) =\frac{5}{4}.
+$$
+::: 
+
+
+::: {#exm- }  
+Find $\frac{d y}{d t}$ when $x=1$ given $5 x y=10$ and $\frac{d x}{d t}=-2.$
+::: 
+
+::: {.solution } 
+Differentiating with respect to $t$ and using the chain rule, 
+$$
+x \frac{d y}{d t}+y \frac{d x}{d t}=0
+$$ 
+and so when $x=1,$ then $y=2$ and 
+$$
+(1)\frac{d y}{d t}+(2)(-2) =0.
+$$
+Therefore, 
+$$
+\left.\frac{d y}{d t}\right|_{x=1}=4.
+$$
+::: 
+
+
+
+## General vs Specific Situation
+
+
+Every \index{related rates} **related rates**  problem has a general situation (properties that hold true at every instant in time) and a specific situation (properties that hold true at a particular instant in time). 
+Distinguishing between these two situations is often the key to successfully solving a related-rates problem. 
+Here are a few guidelines for solving related rate problems: 
+ 
+- Read the problem carefully and identify all given quantities and unknown quantities to be determined. 
+- Introduce notation, make a sketch, and label the quantities.  
+- Write equations involving the variables whose rates of change either are given or are to be determined.  
+- Use implicit differentiation, by differentiating both sides with respect to he appropriate variable.  
+- Substitute known variables and known rates of change into the resulting equation to determine the missing rate of change.
+ 
+
+
+::: {#exm- } 
+Model a water tank by a cone 40 ft high with a circular base of radius 20 ft at the top. 
+Water is flowing into the tank at a constant rate of $80 \left.\text{ft}^3\right/\min .$ 
+How fast is the water level rising when the water is 12 feet deep?
+::: 
+
+::: {.solution }
+Let $x$ be the radius of the top circle of the body of water and $y$ its height. 
+The radius of the top circle is 20, the height of the cone is 40 ft. 
+By similar triangles, $20/40=x/y$ and so $x=\frac{1}{2}y.$ 
+The volume of the body of water is 
+$$
+V=\frac{1}{3}\pi  x^2y =\frac{1}{12}\pi  y^3.
+$$ 
+Then 
+$$
+\frac{d V}{d t}=\frac{1}{4}\pi  y^2 \frac{d y}{d t}.
+$$ 
+When $y=12,$ $x=6,$ and $\frac{d V}{d t}=80,$ we have $$80=\frac{1}{4}\pi (12)^2 \frac{d y}{d t}$$ and thus 
+$$
+\frac{d y}{d t}=\frac{80(4)}{\pi (144)} \text{ft.}/\min = \frac{20}{9 \pi } \text{ft.}/\min  \approx 0.71 \text{ft.}/\min .
+$$
+::: 
+
+::: {#exm- } 
+Air is being pumped into a spherical balloon at a rate of 4.5 cubic feet per minute. 
+Find the rate of change of the radius when the radius is 2 feet.
+::: 
+
+::: {.solution }
+Let $V$ be the volume of the balloon and let $r$ be the radius. 
+Because the volume is increasing at a rate of 4.5 cubic feet per minute, we know that at time $t$ the rate of change of the volume is $\frac{d V}{d t}=\frac{9}{2}.$ 
+The equation that relates the radius $r$ to the volume $V$ is $V=\frac{4}{3}\pi  r^3.$ 
+So we have 
+$$
+\frac{d V}{d t}=4\pi  r^2\frac{d r}{d t}
+$$ 
+and by solving for $\frac{d r}{dt}$ we have 
+$$
+\frac{d r}{d t}=\frac{1}{4\pi  r^2}\left(\frac{d V}{d t}\right).
+$$ 
+Finally, when $r=2,$ the rate of change of the radius is 
+$$
+\frac{d r}{d t}=\frac{1}{16 \pi }\left(\frac{9}{2}\right) \approx 0.09
+$$ 
+foot per minute.
+::: 
+
+
+::: {#exm- } 
+A pebble is dropped into a calm pond, causing ripples in the form of concentric circles. 
+The radius of the outer ripple is increasing at a constant rate of 1 foot per second. 
+When the radius is 4 feet, at what rate is the total area $A$ of the disturbed water changing?
+::: 
+
+::: {.solution }
+For the area of a circle we use $A=\pi  r^2$ and we differentiate implicitly with respect to time $t$ leading to 
+$$
+\frac{d A}{d t}=2\pi  r \frac{d r}{d t}
+$$ 
+by using the chain rule. 
+Since $\frac{d r}{d t}=1$ and when $r=4$ we have 
+$$
+\frac{d A}{d t}=2\pi (4)(1) =8 \pi.
+$$
+::: 
+
+
+::: {#exm- } 
+A ladder 10 ft long rests against a vertical wall. 
+If the bottom of the ladder slides away from the wall at a rate of 1 ft/s, how fast is the top of the ladder sliding down the wall when the bottom of the ladder is 6 ft from the wall?
+::: 
+
+::: {.solution }
+Let $x$ meters be the distance from the bottom of the ladder to the wall and $y$ meters the distance from the top of the ladder to the ground. 
+Since $x$ and $y$ are functions of time and $\frac{d x}{d t}$= 1 ft/s we are asked to find $\frac{d y}{d t}$ when $x=6$ ft. 
+The relationship between $x$ and $y$ is the Pythagorean Theorem, namely $x^2+y^2=100.$ 
+Using implicit differentiation and the chain rule we have 
+$$
+2 x \frac{d x}{d t}+2 y \frac{d y}{d t}=0.
+$$ 
+By solving for $\frac{d y}{d t}$ we have 
+$$
+\frac{d y}{d t}=-\frac{x}{y}\frac{d x}{d t}.
+$$ 
+When $x=6$ then $y=8 $,
+$$
+\frac{d y}{ d t}=\frac{-6}{8}(1) =\frac{-3}{4} \text{ ft/s.}
+$$
+::: 
+
+
+
+::: {#exm- } 
+Car A is going west at 50 mi/h and car B is going north at 60 mi/h. 
+Both are headed for the intersection of the two roads. 
+At what rate are the cars approaching each other when car A is $0.3$ mi and car B is $0.4$ mi from the intersection?
+::: 
+
+::: {.solution }
+At a given time $t,$ let $x$ be the distance from car $A$ to the point of intersection $P$ and let $y$ be the distance from car B to $P$ and let $z$ be the distance between the cars, where $x,$ $y,$ and $z$ are measured in miles. Since $x$ and $y$ are decreasing we take the derivatives to be negative and so we are given 
+$$
+\frac{d x}{d t}=-50 \text{ mi/h} 
+\qquad \text{and} \qquad 
+\frac{d y}{d t}=-60 \text{ mi/h}.
+$$ 
+To find $\frac{d z}{d t}$ we use the Pythagorean Theorem, namely $x^2+y^2=z^2$ and differentiate with respect to time $t$. 
+We have 
+$$
+2 z \frac{d z}{d t}=2 x\frac{d x}{d t}+2 y\frac{d y}{d t}
+$$
+and by solving for $\frac{d z}{d t}$ we have 
+$$
+\frac{d z}{d t}=\frac{1}{z}\left(x\frac{d x}{d t}+ y\frac{d y}{d t}\right).
+$$ 
+Now when $x=0.3$ mi and $y=0.4$ mi we have $z=0.5$ mi and so  
+$$
+\frac{d z}{d t}=\frac{1}{0.5}[0.3(-50)+0.4(-60)]=-78 \text{ mi/h}.
+$$ 
+Therefore, the cars are approaching each other at a rate of 78 mi/h.
+::: 
+
+
+::: {#exm- } 
+A person 6 ft tall walks away from a streetlight at the rate of 5 ft/s. 
+If the light is 18 ft above ground level, how fast is the person's shadow lengthening?
+::: 
+
+::: {.solution }
+Let $x$ be the length of the shadow and $y$ be the distance of the person from the street light. 
+Using similar triangles,  $x/6=(x+y)/18$ and by solving for $y$ we have $y=2x.$ 
+Thus, $d y/d t=2 (d x/ d t)$ and given that $d y/ d t=5 \text{ft}/s$ we find that $d x/ d t=2.5 \text{ft}/s$ is the rate the shadow is lengthening.
+::: 
+
+
+::: {#exm- } 
+At noon, a ship sails due north from a point $P$ at 8 knots. 
+Another ship, sailing at 12 knots, leaves the same point 1 h later on a course $60{}^{\circ}$ east of north. 
+How fast is the distance between the ships increasing at 5 P.M.?
+::: 
+
+::: {.solution }
+Let $A$ be the distance travelled by the first ship, and $B$ for the distance travelled by the second ship, $D$ for the distance between them, and $\theta$ the constant angle of $60{}^{\circ}.$ 
+We need to find $\frac{d D}{d t}$ at $t=5.$ 
+The equation that relates all the variables is the law of cosines and is  $D^2=A^2+B^2-2 A B \cos \text{  }60{}^{\circ}.$  
+Using the chain rule and implicit differentiation we have  
+$$
+2 D \frac{d D}{d t}=2 A \frac{d A}{d t}+ 2B \frac{d B}{d t}-2\left(A \frac{d B}{d t}+B \frac{d A}{d t}\right) \left(\frac{1}{2}\right)
+$$ 
+since $\cos  60{}^{\circ}=\frac{1}{2}$.
+Then at $t=5,$ $A=5(8)$ $=\text{40,}$ $B=12(4)$ $=\text{48,}$ $\frac{d A}{d t}=8,$ $\frac{d B}{ d t}=12,$ and 
+$$
+D=\sqrt{40^2+48^2-2(40)(48)\left(\frac{1}{2}\right)}=\sqrt{1984}.
+$$
+So we have,  
+\begin{align*}
+\frac{d D}{d t}
+& =\frac{2 (40) (8)+ 2(48) (12)-(40) (12)-(48)(8)}{2 \sqrt{1984}} \\ 
+& =\frac{58}{\sqrt{31}}  \text{ knots} \approx 10.4171 \text{ knots}.
+\end{align*}
+::: 
+
+
+
+
+## Exercises
+
+
+::: {#exr- } 
+Suppose that the radius $r$ and surface area $S=4\pi  r^2$ of a sphere are differentiable functions of $t.$ Write an equation that relates $\frac{dS}{dt}$ to $\frac{dr}{dt}.$
+::: 
+
+::: {#exr- } 
+If $x$, $y,$ and $z$ are lengths of the edges of a rectangular box, the common length of the box's diagonals is $s=\sqrt{x^2+y^2+z^2}.$ (a) Assuming that $x$, $y,$ and $z$ are differentiable functions of $t,$ how is $ds/dt$ related to $dx/dt,$ $dy/dt,$ and $dz/dt.$
+::: 
+
+::: {#exr- } 
+The length $l$ of a rectangle is decreasing at the rate of $\text{cm}/\sec$ while the width $w$ is increasing at the rate of $2 \text{cm}/\sec .$ When $l=12 \text{cm}$ and $w=5 \text{cm},$ find the rates of change of (a) the area, (b) the perimeter, (c) the lengths of the diagonals of the rectangle. Which of these quantities are decreasing and which are increasing?
+::: 
+
+::: {#exr- } 
+The coordinates of a particle in the metric $x y$-plane are differentiable functions of time $t$ with $dx/dt=-1 m/s$ and $dy/dt=-5 m/s.$ How fast is the particle's distance from the origin changing as it passes through the point $(5,12)?$
+::: 
+
+::: {#exr- } 
+A 13-ft ladder is leaning against a house when its base starts to slide away. By the time the base is 12 ft from the house, the base is moving at the rate of $5 \text{ft}/\sec .$ (a) How fast is the top of the ladder sliding down the wall then? (b) At what rate is the area of the triangle formed by the ladder, wall, and ground changing then? (c) At what rate is the angle $\theta$ between the ladder and the ground changing then?
+::: 
+
+::: {#exr- } 
+Sand falls from a conveyor belt at the rate of $10 \left.m^3\right/\min$ onto the top of a conical pile. The height of the pile is always three-eights of the base diameter. How fast are the (a) height and (b) radius changing when the pile is $4 m$ high?
+::: 
+
+::: {#exr- } 
+Suppose that a drop of mist is a perfect sphere and that, through condensation, the drop picks up moisture at a rate proportional to is surface area. Show that under thee circumstances the drop's radius increase at a constant rate.
+::: 
+
+::: {#exr- } 
+A balloon is rising vertically above a level straight road at a constant rate of $1 \text{ft}/\sec .$ Just when the balloon is $65 \text{ft}$ above the ground, a bicycle moving at a constant rate of $17 \text{ft}/\sec$ passes under it. How fast is the distance $s(t)$ between the bicycle and balloon increasing 3 sec later?
+::: 
+
+::: {#exr- } 
+A man 6 ft all walks at a rate of $5 \text{ft}/\sec$ toward a streetlight that is 16 ft above the ground. At what rates the tip of his shadow moving? At what rate is the length of his shadow changing when he is 10 ft from the base of the light?
+::: 
+
+::: {#exr- } 
+Two commercial airplanes are flying at $40,000$ ft along straight-line courses that intersect at right angles. Plane $A$ is approaching the intersection point at a speed of 442 knots. Plane $B$ is approaching the intersection at 481 knots. At what rate is the distance between the planes changing when $A$ is nautical miles from the intersection point and $B$ is 12 nautical miles from the intersection point?
+::: 
+
+::: {#exr- } 
+All edges of a cube are expanding at a rate of 3 centimeters per second. How fast is the volume changing when each side is (a) 1 centimeter and (b) 10 centimeters?
+::: 
+
+::: {#exr- } 
+A conical tank (with vertex down) is 10 feet across the top and 12 feet deep. If water is flowing into the tank at a rate of 10 cubic feet per
+minute, find the rate of change of the depth of the water when the water is 8 feet deep?
+::: 
+
+::: {#exr- } 
+A balloon rises at a rate of 3 meters per second from a point on the ground 30 meters from an observer. What is the rate of change of the angle
+of elevation of the balloon from the observer when the balloon is 30 meters above the ground?
+::: 
+
+::: {#exr- } 
+A trough is 10 feet long and its ends have the shape of an isosceles triangles that are 3 feet across at the top and have a height of 1 foot.
+If the trough is filled with water at a rate of $2 \left.\text{ft}^3\right/\min ,$ how fast does the water level rise when the water is 6 inches
+deep?
+::: 
+
+
+
+
+## Linearization and Differentials
+
+
+## Differentials
+
+In this section differentials are motivated, defined, and then used to approximate real numbers. 
+The linearization of a function around a point (via the
+tangent line) is illustrated.  
+
+
+Let $y=f(x)$ where $f$ is a differentiable function. 
+The \index{differential} **differential**  $d y$ represents the amount that the tangent line rises or falls, whereas $\Delta  y$ represents the amount that the curve $y=f(x)$ rises or falls when $x$ changes by an amount $d x.$ 
+Since 
+$$
+\frac{d y}{d x}=\lim _{\Delta  x\to 0}\frac{\Delta  y}{\Delta  x}
+$$ 
+we have 
+$$
+\frac{\Delta  y}{\Delta  x}\approx \frac{d y}{d x} \qquad \text{whenever} \qquad  
+\Delta  x \approx 0
+$$
+If we take $d x=\Delta  x,$ then we have $\Delta  y\approx d y$ which says that the actual change in $y$ is approximately equal to the differential $d y.$ 
+
+If $f\left(x_1\right)$ is a known number and it is desired to calculate an approximate value for $f\left(x_1+\Delta  x\right)$ where $\Delta  x$ is small, then 
+$$
+f\left(x_1+\Delta  x\right)\approx f\left(x_1\right)+d y.
+$$
+
+
+::: {#def- } 
+If $y=f(x)$ is a differentiable function then the \index{differential} **differential**  $d y$ is defined by the equation $d y=f'(x)d x$ where $d x$ is an independent variable.
+::: 
+
+
+::: {#exm- } 
+Find the differential for $y=\sqrt[4]{x}$.
+::: 
+
+::: {.solution }
+For $y=\sqrt[4]{x}$ the derivative is  $\frac{d y}{d x}=\frac{1}{4 x^{3/4}}$  and so the differential of  $y$ is 
+$$
+d y=\left(\frac{1}{4 x^{3/4}}\right)d x.
+$$
+::: 
+
+
+::: {#exm- } 
+Find the differential for $y=\left(x^2-2x-3\right)^{10}$.
+::: 
+
+::: {.solution }
+For $y=\left(x^2-2x-3\right)^{10}$ the derivative is  
+$$
+\frac{d y}{d x}=10 (-2+2 x) \left(-3-2 x+x^2\right)^9
+$$
+and so the differential of $y$ is  
+$$
+d y=\left(10 (-2+2 x) \left(-3-2 x+x^2\right)^9\right)d x.
+$$
+::: 
+
+::: {#exm- } 
+Find the differential for $y=\sqrt{x+\sqrt{2x-1}}.$
+::: 
+
+::: {.solution }
+For $y=\sqrt{x+\sqrt{2x-1}}$ the derivative is  
+$$
+\frac{d y}{d x}=\frac{1+\sqrt{-1+2 x}}{2 \sqrt{-1+2 x} \sqrt{x+\sqrt{-1+2 x}}}
+$$
+and so the differential of $y$ is  
+$$
+d y=\left(\frac{1+\sqrt{-1+2 x}}{2 \sqrt{-1+2 x} \sqrt{x+\sqrt{-1+2 x}}}\right)d x.
+$$
+::: 
+
+## Approximating Decimals
+
+
+::: {#exm- } 
+Use differentials to approximate the real number $\sqrt[3]{218}$.
+::: 
+
+::: {.solution }
+If $y=f(x)=\sqrt[3]{x},$ then $d y=\left(\frac{1}{3 x^{2/3}}\right)d x$ and using $d x=\Delta  x$ $=\text{218-216}$ $=2$ the linear approximation is,   
+$$
+\sqrt[3]{218}=f(216+2)\approx f(216)+d y=6+\left(\frac{1}{3 (216)^{2/3}}\right)(2)=\frac{325}{54}=6.01852.
+$$
+::: 
+
+
+::: {#exm- } 
+Use differentials to approximate the real number $\sqrt[3]{1.02}+\sqrt[4]{1.02}$.
+::: 
+
+::: {.solution }
+If $y=f(x)=x^{1/3}+x^{1/4},$ then $d y=\left(\frac{1}{4 x^{3/4}}+\frac{1}{3 x^{2/3}}\right) d x$ and using $d x=\Delta  x$ $=\text{1.02-1}$ $=0.02$ the linear approximation is,  
+$$
+\sqrt[3]{1.02}+\sqrt[4]{1.02}=f(1+0.02)\approx f(1)+d y =2+\left(\frac{1}{4}+\frac{1}{3}\right)(0.02)=\frac{1207}{600}=2.011\overline{6}
+$$
+::: 
+
+## Linearization
+
+
+::: {#def- } 
+The approximation  
+$$
+f(x)\approx f(a)+f'(a)(x-a)
+$$ 
+is called the \index{linear approximation} **linear approximation** (or sometimes the \index{tangent line approximation} **tangent line approximation**) of $f$ at $a$ and the function  
+$$
+L(x)=f(a)+f'(a)(x-a)
+$$ 
+is called the \index{linearization} **linearization**  of $f$ at $a.$ 
+::: 
+
+The equation of the tangent line to the curve $y=f(x)$ at $(a, f(a))$ is  $y=f(a)+f'(a)(x-a)$  which is $y=f(a)+f'(a)d x$ so that in fact we have $y=f(a)+d y.$ 
+Thus when using differentials to approximate, that is, when using $f(x+\Delta  x)\approx f(x)+d y$ to approximate we are using the tangent line at $(a, f(a))$ as an approximation to the curve $y=f(x)$ when $a$ is near $x.$
+
+Next we find the linearization for a given function at a given value. 
+
+
+::: {#exm- } 
+Find the linearization of $\displaystyle f(x)=\frac{1}{\sqrt{2+x}}$ at $x_1=0.$
+::: 
+
+::: {.solution }
+The linearization of the function $\displaystyle f(x)=\frac{1}{\sqrt{2+x}}$at $x_1=0$ is  
+\begin{align*}
+L(x) & =f\left(x_1\right)+f'\left(x_1\right)\left(x-x_1\right) \\
+L(x) & =f(0)+\left[-\frac{1}{2 (2+0)^{3/2}}\right](x-0) \\
+L(x) & =\frac{1}{\sqrt{2}}+\left(-\frac{1}{4 \sqrt{2}}\right)x 
+\end{align*}
+Therefore, we have the linear approximation 
+$$
+\frac{1}{\sqrt{2+x}}\approx \frac{\sqrt{2}}{2}+\left(-\frac{\sqrt{2}}{8}\right)x
+$$
+for when $x$ is near 0. 
+::: 
+
+
+::: {#exm- } 
+Find the linearization of $\displaystyle f(x)=\frac{1}{(1+2x)^4}$ at $x_1=0.$
+::: 
+
+::: {.solution }
+The linearization of the function $\displaystyle f(x)=\frac{1}{(1+2x)^4}$at $x_1=0$ is  
+\begin{align*}
+L(x) & =f\left(x_1\right)+f'\left(x_1\right)\left(x-x_1\right)
+=f(0)+\left[-\frac{8}{(1+2 (0))^5}\right](x-0) =1-8x. 
+\end{align*} 
+Therefore, we have the linear approximation 
+$$
+\frac{1}{(1+2x)^4}\approx 1-8x
+$$ 
+for when $x$ is near 0.
+::: 
+
+## Exercises
+
+
+::: {#exr- } 
+(a) Given $f(x)=x^2+2x,$ $x_0=1,$ and $\Delta  x=0.1,$ find the change $\Delta  f=f\left(x_0+\Delta  x\right)-f\left(x_0\right)$ and the
+value of the estimate $df=f'\left(x_0\right)dx.$
+(b) Given $f(x)=x^4,$ $x_0=1,$ and $\Delta  x=0.1,$ find the change $\Delta  f=f\left(x_0+\Delta  x\right)-f\left(x_0\right)$ and the value
+of the estimate $df=f'\left(x_0\right)dx.$
+(c) Given $f(x)=x^3-2x+3$ $x_0=2,$ and $\Delta  x=0.1,$ find the change $\Delta  f=f\left(x_0+\Delta  x\right)-f\left(x_0\right)$ and the
+value of the estimate $df=f'\left(x_0\right)dx.$
+::: 
+
+::: {#exr- } 
+Write a differential formula that estimates the change in the volume $V=\frac{4}{3}\pi r^3$ of a sphere when the radius changes from $r_0$ to $r_0+dr.$
+::: 
+
+::: {#exr- } 
+Write a differential formula that estimates the change in the lateral surface area $S=\pi  r\sqrt{r^2+h^2}$ of a right circular cone when the radius changes from $r_0$ to $r_0+dr.$
+::: 
+
+::: {#exr- } 
+Find the differential $dy$ of the functions 
+ 
+- $y=f(x)=\frac{1}{3}\cos \left(\frac{6\pi  x-1}{2}\right)$
+- $y=f(x)=\sqrt{\sqrt{x}+\frac{1}{\sqrt{x}}}.$
+::: 
+
+::: {#exr- } 
+Find the differential $dy$ of each of the following functions 
+ 
+- $y=f(x)=\frac{2x}{1+x^2}$
+- $x y^2-4x^{3/2}-y=0$
+- $y=f(x)=4 \tan \left(\frac{x^2}{3}\right)$
+- $y=f(x)=2 \cot \left(\frac{1}{\sqrt{x}}\right)$
+- $y=f(x)=x e^{-x}$
+- $y=f(x)=\ln \left(1+x^2\right)$
+::: 
+
+::: {#exr- } 
+Use differentials to find an approximate value for the following real numbers  
+- $\cos  31.5{}^{\circ}$
+- $\sqrt[4]{624}$
+- $(2.99)^3.$
+::: 
+
+::: {#exr- } 
+Find the linearization for each of the following functions at the given value of $x$. 
+ 
+- $f(x)=\frac{1}{\sqrt{2+x}}$ at $x_1=0$
+- $f(x)=\frac{1}{(1+2x)^4}$ at $x_1=0$
+- $f(x)=x+\frac{1}{x}$ at $x=a$
+- $f(x)=x^2$ at $x=a$
+- $f(x)=\cos x$ at $x=a$
+- $f(x)=\tan x$ at $x=a$
+- $f(x)=e^x$ at $x=a$
+- $f(x)=\ln (1+x)$ at $x=a$
+- $f(x)=x+\frac{1}{x}$ at $x=a$
+- $f(x)=2x^2+4x-3$ at $x_0=-0.9$
+- $f(x)=\frac{x}{x+1}$ at $x_0=1.3$
+::: 
+
+::: {#exr- } 
+Show that the linearization of $f(x)=(1+x)^k$ at $x=0$ is $L(x)=1+ k x$ for a constant $k.$
+::: 
+
+::: {#exr- } 
+Find the linearization of $f(x)=\sqrt{x+1}+\sin  x$ at $x=0.$ How is it related to the individual linearization of $\sqrt{x+1}$ and $\sin x$ at $x=0?$
+::: 
+
+
+

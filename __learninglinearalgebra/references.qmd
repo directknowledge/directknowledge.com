@@ -1,3 +1,6 @@
+---
+pagetitle: References - Learning Linear Algebra
+---
 # References {.unnumbered}
 
 ::: {#refs}

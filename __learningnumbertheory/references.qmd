@@ -1,3 +1,6 @@
+---
+pagetitle: References - Learning Number Theory
+---
 # References {.unnumbered}
 
 ::: {#refs}
