@@ -50,7 +50,7 @@ book:
     center: 
       - text: "&copy; Copyright 2023, All Rights Reserved. DirectKnowledge.com"
         href: "https://directknowledge.com"
-  repo-url: https://github.com/directknowledge
+  repo-url: https://github.com/directknowledge/directknowledge.com
   repo-actions: [issue]
 
 bibliography: references.bib
