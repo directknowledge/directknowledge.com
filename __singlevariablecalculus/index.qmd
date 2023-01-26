@@ -3,33 +3,39 @@ pagetitle: "Single Variable Calculus - With Python"
 ---
 # Preface {.unnumbered}
 
-
 ::: {.content-visible when-format="pdf"}
 \pagenumbering{roman}
 \pagestyle{preface} 
 :::
 
-
+::: {.content-visible when-format="html"}
+{{< meta welcome_svc >}}
+:::
 
 ::: {.content-visible when-format="html"}
+## Short Description
+{{< meta short_desc_svc >}} 
+:::
 
-## About this book 
+::: {.content-visible when-format="html"}
+## Other Resources 
+{{< meta resources_svc >}}  
+:::
 
-## Other resources 
+::: {.content-visible when-format="html"}
+## Update History
+Here is where I keep a log of the majors changes as I finish writing the book. 
 
-## Update history
-
+2. First draft of preface published on 1/27/2023. 
 1. First draft published on 1/18/2023. 
-
 :::
 
 
 
-## Acknowledgements {.unlisted }
+## Acknowledgements {.unnumbered .unlisted }
+{{< meta acknowledgements_svc >}} 
 
-
-
-
+David A. Smith \\ Fort Worth, Texas
 
 ::: {.content-visible when-format="pdf"}
 \setcounter{secnumdepth}{1}
@@ -41,4 +47,3 @@ pagetitle: "Single Variable Calculus - With Python"
 \pagenumbering{arabic}
 \pagestyle{fancy} 
 :::
-

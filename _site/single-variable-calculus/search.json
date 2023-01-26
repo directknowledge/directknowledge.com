@@ -7,32 +7,32 @@
     "text": "Preface"
   },
   {
-    "objectID": "index.html#about-this-book",
-    "href": "index.html#about-this-book",
+    "objectID": "index.html#short-description",
+    "href": "index.html#short-description",
     "title": "Single Variable Calculus",
-    "section": "About this book",
-    "text": "About this book"
+    "section": "Short Description",
+    "text": "Short Description\nIn this book, we cover the basics of a first and second-semester course in the calculus of a single variable. Topics include limits and continuous functions, derivatives and their applications, and integrals and their applications. Techniques of integration and then infinite sequences and series are detailed. While we’re learning calculus we’ll also be learning the python programming language. We’ll study calculus numerically, symbolically, and graphically. This three-prong approach allows us to engage in calculus, learn it faster, and explore it deeper."
   },
   {
     "objectID": "index.html#other-resources",
     "href": "index.html#other-resources",
     "title": "Single Variable Calculus",
-    "section": "Other resources",
-    "text": "Other resources"
+    "section": "Other Resources",
+    "text": "Other Resources\nWith this book, I’m giving readers a true multimedia experience. By pairing it with my YouTube channel discussing the main ideas from the book and placing video embeds here on this site, you don’t have to go anywhere else - your learning journey is all under one roof!"
   },
   {
     "objectID": "index.html#update-history",
     "href": "index.html#update-history",
     "title": "Single Variable Calculus",
-    "section": "Update history",
-    "text": "Update history\n\nFirst draft published on 1/18/2023."
+    "section": "Update History",
+    "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 1/27/2023.\nFirst draft published on 1/18/2023."
   },
   {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
     "title": "Single Variable Calculus",
     "section": "Acknowledgements",
-    "text": "Acknowledgements"
+    "text": "Acknowledgements\nBehind every printed word lies those who helped make it possible. So, I’m profoundly thankful to all the generous contributors whose efforts have enabled this book’s fruition and would like to earnestly express my gratitude for their invaluable role in its completion.\nDavid A. Smith \\ Fort Worth, Texas"
   },
   {
     "objectID": "limits-and-continuity.html#an-intuitive-introduction-to-limits",

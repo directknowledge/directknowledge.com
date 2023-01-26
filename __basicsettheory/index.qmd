@@ -3,58 +3,63 @@ pagetitle: "Basic Set Theory - That Anyone Can Learn"
 ---
 # Preface {.unnumbered}
 
-
 ::: {.content-visible when-format="pdf"}
 \pagenumbering{roman}
 \pagestyle{preface} 
 :::
 
-
+::: {.content-visible when-format="html"}
+{{< meta welcome_bst >}}
+:::
 
 ::: {.content-visible when-format="html"}
+## Short Description
+{{< meta short_desc_bst >}}
+:::
 
-Welcome. Currently, this site is the (working) first draft of the upcoming book **Basic Set Theory**, to be available on Amazon in the Spring of 2023. Both paperback and hardcover will be available soon. 
+::: {.content-visible when-format="html"}
+## Other Resources 
+{{< meta resources_bst >}} 
+:::
 
-## About this book 
-This book is intended for readers who are new to set theory, or who need a refresher on the basic concepts. It will be particularly useful for readers who are taking a course in mathematics or computer science that uses set theory.
+::: {.content-visible when-format="html"}
+## Update History
+Here is where I keep a log of the majors changes as I finish writing the book. 
 
-> Instead of ordinals and cardinality this book is concerned with connections and concepts. 
-
-Set theory is a fundamental tool in mathematics, and its concepts are essential for understanding courses in mathematics and computer science. in this book I provide a clear and concise introduction to set theory, making it an ideal resource for readers who are new to the subject.
-
-This book is designed as an invitation to beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory. The text is easy to follow and provides many examples that will help readers understand the concepts discussed. Topics include propositional logic, first-order logic, set theory, functions, and relations. Addtional we introduce connection theory and concept theory. The novel approach taken here, with this book as a guide, readers will soon be able to see the beauty and power of mathematical reasoning. 
-
-
-## Other resources 
-This book is paired with [my YouTube channel](https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/) where I work out most of the mathematics in this book. These videos can be found here on this site as video embeds, so you can read, write, and watch all in one place. 
-
-
-Logic books: 
-
-- @mendelson2015introduction
-- @hinman2018fundamentals
-- @rautenberg2010concise
-- @forster2003logic
-- @dalen2004logic
-- @enderton2001mathematical
-- @halmos2019logic
-- @smith2003introduction
-- @leary2015friendly
+2. First draft of preface published on 1/27/2023.
+1. First draft published on 1/14/2023.
+:::
 
 
 
-## Update history
+::: {.content-hidden }
 
-1. First draft published on 1/14/2023. 
+## Purpose {.unnumbered .unlisted }
+**The major themes of the text**.
+**Python**.
+**Proofs**.
+**Connections**.
+**Concepts**.
+
+## Audience {.unnumbered .unlisted }
+**How I wrote this book**.
+**Pedagogical features**.
+
+## Stucture {.unnumbered .unlisted }
+**References**.
+
+## Teaching {.unnumbered .unlisted }
+**Philosphy**.
+**Examples**.
 
 :::
 
 
 
-## Acknowledgements {.unlisted }
+## Acknowledgements {.unnumbered .unlisted }
+{{< meta acknowledgements_bst >}} 
 
-
-
+David A. Smith \\ Fort Worth, Texas
 
 
 ::: {.content-visible when-format="pdf"}
@@ -67,4 +72,3 @@ Logic books:
 \pagenumbering{arabic}
 \pagestyle{fancy} 
 :::
-

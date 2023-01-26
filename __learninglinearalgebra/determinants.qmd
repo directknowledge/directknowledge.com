@@ -3,6 +3,152 @@ pagetitle: "Determinants - Learning Linear Algebra"
 ---
 # Determinants
 
+::: {.content-visible when-format="html" .d-none }
+$\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}$
+$\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}$
+$\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}$
+$\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}$
+$\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}$
+$\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}$
+$\newcommand{\norm}[1]{\left|\left |#1\right|\right |}$
+$\newcommand{\ip}[1]{\left \langle #1\right \rangle}$
+$\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}$
+:::
+
+
+
+
+##  What are determinants and what do they do
+
+Determinants are mathematical objects that affect the size, shape, or position of something else. In other words, they determine how something looks or behaves. The most common type of determinant is a matrix, which is used to determine the size, shape, and position of a two-dimensional object.
+
+For example, a matrix can be used to determine the position of a point on a graph or the angle of a line. Determinants can also be used to solve problems in physics and engineering.
+
+For example, they can be used to calculate the forces acting on an object in order to determine its motion. Determinants are also used in economics to predict changes in prices and wages. In short, determinants are powerful tools that can be used to solve a wide variety of problems.
+
+A determinant is a value that can be computed from the elements of a square matrix. The determinant of a matrix A is denoted by det(A), det A, or $\vert A\vert$.
+
+Geometrically, it can be viewed as the volume of the n-dimensional parallelepiped that has the column vectors of A as its edges. If A is an invertible matrix, then the determinant is nonzero and A can be undone by multiplying it on either side by its inverse matrix. In particular, for a 2×2 matrix, the determinant is simply the product of the diagonal entries (top left times bottom right, minus top right times bottom left).
+
+##  How to find the determinant of a matrix
+
+A determinant is a scalar value that can be computed from the elements of a square matrix. It is a useful tool in linear algebra for solving systems of linear equations and for computing the inverse of a matrix. 
+
+The determinant of a 2×2 matrix is: $|A|=ad-bc$ where $ad-bc$ is the signed determinant (the "discriminant") because its value changes sign when two rows or columns are interchanged. 
+
+For matrices of larger size, the determinant can be computed using any of several methods, such as cofactor expansion or Laplace expansion. When computing the determinant, it is often convenient to change the order of the rows or columns in order to simplify the calculation. 
+
+Another method is to use Gauss-Jordan elimination. This method involves using row operations to transform the matrix into an upper triangular matrix. The determinant of the matrix can then be found by taking the product of the diagonal elements.
+
+##  Determinant Properties
+
+The determinant has several important properties: 
+
+1. If two rows (or columns) of a matrix are identical, then the determinant is zero. 
+
+2. If two rows (or columns) are interchanged, then the sign of the determinant changes. 
+
+3. If each element of a row (or column) is multiplied by a nonzero constant, then the determinant is multiplied by that constant. 
+
+##  Expansion by Cofactors
+
+The determinant of a matrix A is equal to the sum of the products of the elements in any one row or column, with each element being multiplied by a corresponding cofactor. Cofactors are special numbers that can be calculated from the minors of the matrix, which are the determinants of the matrices that result from removing one row and one column from A.
+
+The sign of each cofactor is determined by its position in the matrix: odd-numbered rows and columns have positive signs, while even-numbered rows and columns have negative signs. The determinant of a matrix can be used to solve systems of linear equations, and it also provides information about the nature of the matrix itself.
+
+For example, a matrix with a zero determinant is known as singular, meaning that it cannot be inverted. This makes it an important tool for solving mathematical problems. Determinants can be calculated by hand for small matrices, but larger matrices require the use of specialized software or an electronic calculator.
+
+##  Cramer's Rule
+
+Cramer's Rule is a method for solving systems of linear equations. In order to use Cramer's Rule, the system must be expressed in matrix form. The determinant of the matrix is then calculated. This determinant is used to calculate the value of each variable in the system. Cramer's Rule can be used to solve systems with any number of variables, but the matrices involved become increasingly complex as the number of variables increases.
+
+Despite this complexity, Cramer's Rule provides a convenient way to solve systems of linear equations.
+
+##  How I teach in this book
+
+How I teach in this book, is by showing examples that students can learn from and understand. I also offer an in-depth look into linear algebra. My approach in this book is to first provide a gentle introduction to the topic at hand. Next, I guide the reader through the necessary calculations required to fully grasp the concepts being presented. Finally, I show how these ideas can be applied in practical scenarios.
+
+Throughout the book, I include worked examples and exercises for readers to test their understanding as they progress. With this book as your companion, you will soon be confident in manipulating determinants and matrices.
+
+Determinants are a key concept in Linear Algebra, and understanding them is crucial for being able to do many matrix operations. This book will take you from the very basics of what determinants are, all the way up to using them in advanced topics like Cramer's Rule. By the end, you will be a pro at using determinants in all sorts of situations.
+
+
+
+The book will focus on the fundamentals of eigenvalues and eigenvectors, and how they can be applied in various settings. It is perfect for readers who want to learn more about these topics, or for those who need to brush up on their skills.
+
+The book begins with a review of linear algebra, before moving on to discuss eigenvalues and eigenvectors. This is followed by a discussion of applications of these concepts, including in physics and engineering. The book concludes with a set of exercises for readers to test their understanding.
+
+Eigenvalues and eigenvectors are fundamental concepts in linear algebra, with many applications in physics and engineering. In this section, we will discuss how to find eigenvalues and eigenvectors for a given matrix.
+
+Suppose we have a square matrix $A$. To find the eigenvalues of $A$, we need to solve the equation $Ax = \lambda x$ for $\lambda$ and $x$. Here, $\lambda$ is the eigenvalue and $x$ is the corresponding eigenvector.
+
+To solve this equation, we can use the characteristic polynomial of $A$. This is a polynomial equation whose roots are the eigenvalues of $A$. To find the characteristic polynomial, we need to take the determinant of $A - \lambda I$, where the matrix $I$ is the identity matrix.
+
+In other words, an eigenvector is a vector that does not change direction when multiplied by a matrix. Eigenvectors are often used to diagonalize matrices, which means that they can be used to simplify matrices that do not have a simple structure.
+
+To find the eigenvalues and eigenvectors of a matrix, one can use the characteristic polynomial of the matrix. The characteristic polynomial is a polynomial equation whose roots are the eigenvalues of the matrix. To find the eigenvectors of the matrix, one can use the inverse of the matrix.
+
+The inverse of the matrix is a matrix that satisfies the equation: $A*A-1 = I$. The inverse of a matrix exists if and only if the determinant of the matrix is not equal to zero. If the determinant of the matrix is equal to zero, then the matrix is singular and does not have an inverse. Once you have found the inverse of the matrix, you can multiply it by the original matrix to find the eigenvectors of the original matrix.
+
+Linear algebra is the study of mathematical objects that can be described by linear equations. These objects include vectors, matrices, and linear transformations. Linear algebra is a powerful tool that can be used to solve many problems in physics and engineering.
+
+One of the most important techniques in linear algebra is diagonalization. This technique can be used to simplify complicated systems of linear equations. It is also a powerful tool for solving eigenvalue problems. In general, diagonalization is an essential tool for anyone who needs to work with linear equations.
+
+Eigenvectors and eigenvalues are often introduced in the context of the diagonalization of matrices. In this context, an $n$-by-$n$ matrix $A$ is diagonalizable if and only if there exists $n$ linearly independent eigenvectors $v_i$ of $A$, $i=1,...,n$ such that $Av_i= \lambda_i v_i$ for some scalars $\lambda_i$ which are called eigenvalues. If these conditions hold, then we say that $A$ has $n$ distinct eigenvectors and $n$ distinct eigenvalues.
+
+Diagonalization is the process of diagonalizing a matrix, which means finding a matrix that is equivalent to the original matrix but with the eigenvalues on the diagonal. This can be done by solving for the eigenvectors and then putting them into a matrix.
+
+The eigenvectors are the vectors that stay the same when multiplied by the matrix. They are also called the characteristic vectors or natural modes. The eigenvalues are the scalars that you get when you multiply the eigenvector by the matrix. They tell you how much the vector changes.
+
+In order to find them, you need to set up an equation and solve for them. Once you have them, you can put them into a diagonal matrix and then diagonalize it. This is a very important tool in mathematics and physics.
+
+Diagonalization is not always possible. For example, if the null space of a matrix is not spanned by eigenvectors, then the matrix cannot be diagonalized. However, when diagonalization is possible, it is often very useful. Diagonalization can be used to find solutions to systems of linear equations, simplify calculations, and understand the structure of matrices.
+
+Eigenvalues and eigenvectors are important concepts in linear algebra. They can be used to diagonalize matrices, which is a powerful tool for solving problems. Eigenvalues and eigenvectors can also be used to understand the structure of matrices. In general, they are useful tools for anyone who needs to work with linear equations.
+
+This book includes eigenvectors and eigenvalues and diagonalization of matrices. The teaching in this book is clear and concise, with plenty of opportunity for practice. The finding eigenvectors and eigenvalues chapter is particularly well explained, and the examples are helpful.
+
+The diagonalization of matrices is also explained well, with plenty of opportunity for practice. The new exercises have been added to help reinforce the concepts learned in the book. Overall, this is an excellent resource for those who want to learn more about linear algebra.
+
+
+
+Write a content brief for a book review on canonical forms from linear algebra. In mathematical terms, canonical forms are a way of representing a matrix in a simplified way. This book provides an in-depth introduction to the topic, starting with the basics and progressing to more complex concepts.
+
+It is aimed at readers who have a basic understanding of linear algebra, and it covers topics such as invariant subspaces, the Jordan form, and the singular value decomposition. The book also includes worked examples and exercises to help readers develop their understanding of the material.
+
+Invariant subspaces are key to understanding canonical forms. In short, they are mathematical objects that do not change under certain transformations. This book starts with an introduction to invariant subspaces. It explains what they are and how they can be used to simplify calculations. Invariant subspaces are a powerful tool for understanding and manipulating linear transformations. With this book, you will learn how to use them to your advantage.
+
+In mathematics, an invariant subspace of a linear mapping $T: V \to V$, i.e. from some vector space $V$ to itself, is a subspace $W$ of $V$ that is preserved by $T$; that is, $T(W) \subseteq W$. In other words, an invariant subspace is a subspace that is in some sense ``left unchanged" by the transformation. Intuitively, this means that if we take any vector in the subspace and apply the transformation to it, the result will still be in the subspace.
+
+Invariant subspaces arise naturally in many areas of mathematics, and they can be used to great effect in studying linear transformations. For instance, the study of invariant subspaces can help us to understand the structure of a linear transformation and to decompose it into simpler parts.
+
+In addition, the existence of an invariant subspace can often be used to simplify computations involving the transformation. Consequently, the study of invariant subspaces is a fundamental tool in many areas of mathematics.
+
+The dimension of an invariant subspace is called the multiplicity of the eigenvalue associated with that subspace. If the multiplicity of an eigenvalue is equal to its algebraic multiplicity (i.e. if it has the same number of eigenvectors associated with it as there are linearly independent solutions to the equation), then the eigenvalue is said to be geometrically simple.
+
+In contrast, if the multiplicity of an eigenvalue is less than its algebraic multiplicity, then the eigenvalue is said to be geometrically multiple. Geometrically multiple eigenvalues may or may not have distinct eigenspaces; if they do, then each such eigenspace is called an invariant subspace of T.
+
+Geometrically simple eigenvalues always have distinct eigenspaces; in this case, each such eigenspace is also an invariant subspace of T. The study of invariant subspaces plays an important role in many areas of mathematics, including functional analysis, differential equations, and numerical linear algebra.
+
+
+Jordan normal form is a specific type of upper triangular matrix that is used to represent linear operators on a finite-dimensional vector space. This matrix is made up of Jordan blocks, which are submatrices with identical eigenvalues that have each non-zero off-diagonal entry equal to 1.
+
+Jordan normal form is useful because it allows for the efficient computation of matrix powers and roots. In addition, this form can be used to transform one matrix into another that is similar, meaning that they have the same eigenvalues. Jordan normal form is an important tool in linear algebra and has many applications in physics and engineering.
+
+Jordan Canonical Form, also called Jordan normal form, is a block diagonal matrix consisting of Jordan blocks. This is not entirely unique as the order of the Jordan blocks are not fixed. The Jordan blocks are grouped together by their eigenvalues, but there is no ordering imposed among the eigenvalues or Jordan blocks. Jordan normal form can be applied to any square matrix as long as the field of coefficients contains all the eigenvalues of the matrix. This normal form is named after mathematician Camille Jordan.
+
+Today, Jordan blocks are used in many different areas of mathematics and physics.
+
+In this book, I provide a comprehensive introduction to invariant subspaces and Jordan canonical forms. This will include a review of the necessary linear algebra, as well as numerous examples and applications. In addition, I will discuss how these concepts can be used to simplify computations involving linear transformations.
+
+My approach is to first introduce the necessary theory, followed by worked examples that illustrate how the theory can be applied in practice. I believe that this approach will provide readers with a strong understanding of the material covered in this book.
+
+My approach is based on two fundamental principles: first, that students should be given a firm foundation in the core material; and second, that they should be given ample opportunity to work with the material in order to develop their understanding.
+
+The study of invariant subspaces and Jordan canonical forms is a fundamental tool in many areas of mathematics. These concepts are important in understanding the structure of linear transformations and in simplifying computations. In addition, the existence of an invariant subspace can often be used to simplify computations involving the transformation. Consequently, the study of invariant subspaces and Jordan canonical forms is a fundamental tool in many areas of mathematics.
+
+
+
 
 The determinant function can be defined by essentially two different methods. 
 The advantage of the first definition, one which uses permutations, is that it provides an actual formula for $\det(A)$, a fact of theoretical importance. 

@@ -3,6 +3,17 @@ pagetitle: "Inner Products Spaces - Learning Linear Algebra"
 ---
 # Inner Products Spaces
 
+::: {.content-visible when-format="html" .d-none }
+$\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}$
+$\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}$
+$\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}$
+$\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}$
+$\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}$
+$\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}$
+$\newcommand{\norm}[1]{\left|\left |#1\right|\right |}$
+$\newcommand{\ip}[1]{\left \langle #1\right \rangle}$
+$\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}$
+:::
 
 
 Write a content brief for the book ``Orthogonality (A Lively Introduction with Proofs)." The book covers orthonormal bases, orthogonal projections, Gram-Schmidt process, QR factorization, orthogonal transformations, and orthogonal matrices. It also includes inner-products.

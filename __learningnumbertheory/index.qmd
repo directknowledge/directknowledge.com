@@ -1,35 +1,42 @@
 ---
-pagetitle: "Learning Number Theory - From Python to Proofs"
+pagetitle: "Learning Number Theory - With Python"
 ---
 # Preface {.unnumbered}
-
 
 ::: {.content-visible when-format="pdf"}
 \pagenumbering{roman}
 \pagestyle{preface} 
 :::
 
-
+::: {.content-visible when-format="html"}
+{{< meta welcome_lnt >}}
+:::
 
 ::: {.content-visible when-format="html"}
+## Short Description
+{{< meta short_desc_lnt >}}
+:::
 
-## About this book 
+::: {.content-visible when-format="html"}
+## Other Resources 
+{{< meta resources_lnt >}}  
+:::
 
-## Other resources 
+::: {.content-visible when-format="html"}
+## Update History
+Here is where I keep a log of the majors changes as I finish writing the book. 
 
-## Update history
-
+2. First draft of preface published on 1/27/2023. 
 1. First draft published on 1/18/2023. 
-
 :::
 
 
 
-## Acknowledgements {.unlisted }
 
+## Acknowledgements {.unnumbered .unlisted }
+{{< meta acknowledgements_lnt >}} 
 
-
-
+David A. Smith \\ Fort Worth, Texas
 
 ::: {.content-visible when-format="pdf"}
 \setcounter{secnumdepth}{1}
@@ -41,4 +48,3 @@ pagetitle: "Learning Number Theory - From Python to Proofs"
 \pagenumbering{arabic}
 \pagestyle{fancy} 
 :::
-

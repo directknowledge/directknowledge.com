@@ -3,6 +3,21 @@ pagetitle: "Eigenvalues and Eigenvectors - Learning Linear Algebra"
 ---
 # Eigenvalues and Eigenvectors
 
+::: {.content-visible when-format="html" .d-none }
+$\newcommand{\vlist}[2]{#1_1,#1_2,\ldots,#1_#2}$
+$\newcommand{\vectortwo}[2]{\begin{bmatrix} #1 \\ #2\end{bmatrix}}$
+$\newcommand{\vectorthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}$
+$\newcommand{\vectorfour}[4]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4\end{bmatrix}}$
+$\newcommand{\vectorfive}[5]{\begin{bmatrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{bmatrix}}$
+$\newcommand{\lincomb}[3]{#1_1 \vec{#2}_1+#1_2 \vec{#2}_2+\cdots + #1_m \vec{#2}_#3}$
+$\newcommand{\norm}[1]{\left|\left |#1\right|\right |}$
+$\newcommand{\ip}[1]{\left \langle #1\right \rangle}$
+$\newcommand{\plim}[2]{\lim_{\footnotesize\begin{array}{c} \\[-10pt] #1 \\[0pt] #2 \end{array}}}$
+:::
+
+
+
+
 Let $\mathbb{F}$ be either the real numbers or the complex numbers. A nonzero vector $\vec v$ in $\mathbb{F}^n$ is called an \index{eigenvector} of an $n\times n$ matrix $A$ if $A \vec v$ is a scalar multiple of $\vec v$, that is $A \vec v= \lambda \vec v$ for some scalar $\lambda$. Note that this scalar $\lambda$ may be zero. The scalar $\lambda$ is called the \index{eigenvalue} **eigenvalue** associated with the eigenvector $\vec v$.
 Even though, $A\vec 0=\lambda \vec 0$ we do not call $\vec 0$ an eigenvector. 
 Of course a matrix need not have any eigenvalues or eigenvectors, but notice if $\vec v$ is an eigenvector of matrix $A$, then $\vec v$ is an eigenvector of matrices $A^2$, $A^3$, \ldots as well, with $A^t\vec v=\lambda^t \vec v,$ for all positive integers $t$. If $\mathbb{F}=\mathbb{C}$, then counting multiplicities, every $n\times n$ matrix has exactly $n$ eigenvalues. 

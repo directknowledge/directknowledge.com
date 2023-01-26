@@ -7,32 +7,32 @@
     "text": "Preface"
   },
   {
-    "objectID": "index.html#about-this-book",
-    "href": "index.html#about-this-book",
+    "objectID": "index.html#short-description",
+    "href": "index.html#short-description",
     "title": "Multivariable Calculus",
-    "section": "About this book",
-    "text": "About this book"
+    "section": "Short Description",
+    "text": "Short Description\nIn this book, we’ll explore multivariable calculus using python. Topics include multivariable functions and their limits, partial derivatives, and their applications, and multiple integration and applications. We detail vector-valued functions and vector fields. Towards the end, vector calculus by examining vector fields, line integrals, surface integrals, and some marvelous theorems involving these integrals. In the finale, the theory of electromagnetism is revealed."
   },
   {
     "objectID": "index.html#other-resources",
     "href": "index.html#other-resources",
     "title": "Multivariable Calculus",
-    "section": "Other resources",
-    "text": "Other resources"
+    "section": "Other Resources",
+    "text": "Other Resources\nPairing this book with my YouTube channel allows readers to explore the main ideas in-depth. Engage your imagination and challenge yourself as you read, write, and watch videos all on one site - allowing a multifaceted understanding of each concept!"
   },
   {
     "objectID": "index.html#update-history",
     "href": "index.html#update-history",
     "title": "Multivariable Calculus",
-    "section": "Update history",
-    "text": "Update history\n\nFirst draft published on 1/18/2023."
+    "section": "Update History",
+    "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 1/27/2023.\nFirst draft published on 1/18/2023."
   },
   {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
     "title": "Multivariable Calculus",
     "section": "Acknowledgements",
-    "text": "Acknowledgements"
+    "text": "Acknowledgements\nWithout the invaluable support and knowledge of those who contributed to this book, its fruition would not have been possible. I am truly thankful for their generosity which enabled me to see it through completion - a heartfelt thank you from the bottom of my heart!\nDavid A. Smith \\ Fort Worth, Texas"
   },
   {
     "objectID": "vector-functions.html#space-curves",

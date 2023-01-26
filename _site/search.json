@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Direct Knowledge",
+    "section": "",
+    "text": "It is impossible to overstate the importance of those who helped bring this book into its completed form. I am deeply grateful for their generous contributions and would like to express my sincere appreciation here.\nMathJax. MathJax deserves a tremendous amount of gratitude for enabling mathematical equations and formulas to be written in HTML documents. I am truly thankful for the use of this incredible tool!\nPython. I’d like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in developing python. Your contributions are invaluable; without them this text would not have been possible!\nPyScript. PyScript revolutionizes the way users can create engaging, dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology, learners are granted unprecedented access to powerful tools previously inaccessible in browser environments. I am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier.\nQuarto. Quarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful!\nPandoc. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence. Pandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource!\nVisual Studio Code. Visual Studio Code has been key in helping us create, build, and refine our work - for that I am immensely grateful!\nGitHub. GitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence!\nRevealJS. I offer my sincere gratitude to the RevealJS community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way!\nNetlify. I am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together!\nYouTube. YouTube is an invaluable platform that we are proud to be part of. We would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube’s vast influence on culture to reach ever further.\nThese books, and the ideas presented within it, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Direct Knowledge",
@@ -11,35 +18,35 @@
     "href": "index.html#basic-set-theory",
     "title": "Direct Knowledge",
     "section": "Basic Set Theory",
-    "text": "Basic Set Theory\n That Anyone Can Learn. This book is designed as an invitation to beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory. The text is easy to follow and provides many examples that will help readers understand the concepts discussed. Topics include propositional logic, first-order logic, set theory, functions, and relations. Additionally we introduce connection theory and concept theory. With the novel approach taken here, with this book as a guide, readers will soon be able to see the beauty and power of mathematical reasoning. More Information"
+    "text": "Basic Set Theory\n That Anyone Can Learn. This book is for beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory. The text is easy to follow and provides many examples that help readers understand the concepts discussed. Topics include propositional logic first-order logic, set theory, functions, and relations. Additionally, we introduce connection theory and concept theory. With the novel approach taken here, with this book as a guide, readers will soon be able to see the beauty and power of mathematical reasoning. More Information"
   },
   {
     "objectID": "index.html#learning-number-theory",
     "href": "index.html#learning-number-theory",
     "title": "Direct Knowledge",
     "section": "Learning Number Theory",
-    "text": "Learning Number Theory\n With Python. In this book, we cover the basics of elementary number theory. Topics include the natural numbers, divisibility in the integers, unique prime factorization, and congruence equations discussing both quadratic and polynomial congruence equations. While we explore these basic topics we’ll also learn how to use python when doing number theory. In the second part of the book we introduce automating proofs in elementary number theory using python. We’ll do this by first studying Grobner Bases in polynomial rings and then we’ll make a connection between these rings and theorems involving integer divisibility.\nMore Information"
+    "text": "Learning Number Theory\n With Python. In this book, we cover the basics of elementary number theory. Topics begin with natural numbers, divisibility in the integers, and unique prime factorization. After that, we cover linear, quadratic, and polynomial congruence equations. While studying these topics we’ll also learn how to use python. In the second part, we introduce automating proofs in elementary number theory using python. We’ll do this by first studying Grobner Bases in polynomial rings and then making a connection between these rings and theorems involving integer divisibility. More Information"
   },
   {
     "objectID": "index.html#learning-linear-algebra",
     "href": "index.html#learning-linear-algebra",
     "title": "Direct Knowledge",
     "section": "Learning Linear Algebra",
-    "text": "Learning Linear Algebra\n With Python. In this book, we cover the basics of linear algebra. Topics include systems of linear equations, finite-dimensional vector spaces, linear transformations, and inner-product spaces. Determinants, eigenvalues, and eigenvectors are also covered. While we explore these basic topics we’ll also learn how to use python when doing linear algebra. In the second part of the book, we detail the structure of a linear operator by providing an algorithm for the Jordan canonical form of a linear transformation using python. More Information"
+    "text": "Learning Linear Algebra\n With Python. In this book, we cover the basics of linear algebra. Topics include systems of linear equations, finite-dimensional vector spaces, linear transformations, and inner-product spaces. Determinants, eigenvalues, and eigenvectors are also covered. While we explore these topics we’ll also learn how to use python when doing linear algebra. In the second part, we detail the structure of a linear operator by providing an algorithm for the Jordan canonical form of a linear transformation using python. More Information"
   },
   {
     "objectID": "index.html#single-variable-calculus",
     "href": "index.html#single-variable-calculus",
     "title": "Direct Knowledge",
     "section": "Single Variable Calculus",
-    "text": "Single Variable Calculus\n With Python. In this book, we cover the basics of a first and second-semester course in the calculus of a single variable. Topics include limits and continuous functions, derivatives and their applications, and integrals and their applications. Techniques of integration and then infinite sequences and series are detailed. While we’re learning calculus we’ll also be exploring using the python prgramming language. We’ll study calculus numerical, symbolically, and graphcially. This three prong approach allows us to engage calculus, learn it faster, and explore it deeper. More Information"
+    "text": "Single Variable Calculus\n With Python. In this book, we cover the basics of a first and second-semester course in the calculus of a single variable. Topics include limits and continuous functions, derivatives and their applications, and integrals and their applications. Techniques of integration and then infinite sequences and series are detailed. While we’re learning calculus we’ll also be learning the python programming language. We’ll study calculus numerically, symbolically, and graphically. This three-prong approach allows us to engage in calculus, learn it faster, and explore it deeper. More Information"
   },
   {
     "objectID": "index.html#multivariable-calculus",
     "href": "index.html#multivariable-calculus",
     "title": "Direct Knowledge",
     "section": "Multivariable Calculus",
-    "text": "Multivariable Calculus\n With Python. In this book, we’ll explore multivariable calculus using python. Topics include multivariable functions and their limits, partial derivatives and their applications, and multiple integration and applications. We detail vector-valued functions, and then towards the end, vector calculus by examining vector fields, line integrals, surface integrals, and some amazing theorems invoving these integerals. In the end, the theory electromagnetism is developed.\nMore Information\n\n\n\n    Learn. Progress. Explore deeper with Direct Knowledge.\n    About Us"
+    "text": "Multivariable Calculus\n With Python. In this book, we’ll explore multivariable calculus using python. Topics include multivariable functions and their limits, partial derivatives, and their applications, and multiple integration and applications. We detail vector-valued functions and vector fields. Towards the end, vector calculus by examining vector fields, line integrals, surface integrals, and some marvelous theorems involving these integrals. In the finale, the theory of electromagnetism is revealed. More Information\n\n\n\n    Learn. Progress. Explore deeper with Direct Knowledge.\n    About Us"
   },
   {
     "objectID": "about.html",

@@ -4,7 +4,7 @@
 <meta name="generator" content="quarto-1.2.280">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="description" content="Learning Linear Algebra">
-<title>Learning Linear Algebra - From Python to Proofs</title>
+<title>Learning Linear Algebra - With Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -16,25 +16,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
-}
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
 }
 </style>
 <meta name="quarto:offset" content="./">
@@ -103,7 +84,7 @@ div.csl-indent {
     }    
 }
 </style>
-<meta property="og:title" content="Learning Linear Algebra - From Python to Proofs">
+<meta property="og:title" content="Learning Linear Algebra - With Python">
 <meta property="og:description" content="Learning Linear Algebra">
 <meta property="og:site-name" content="Learning Linear Algebra">
 </head>
@@ -162,12 +143,17 @@ div.csl-indent {
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://youtube.com/@directknowledge"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/"><i class="bi bi-youtube" role="img" aria-label="YouTube">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="Source Code">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -249,9 +235,14 @@ div.csl-indent {
     <h2 id="toc-title">Chapter Contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <ul class="collapse">
+  <li><a href="#short-description" id="toc-short-description" class="nav-link" data-scroll-target="#short-description">Short Description</a></li>
+  <li><a href="#other-resources" id="toc-other-resources" class="nav-link" data-scroll-target="#other-resources">Other Resources</a></li>
+  <li><a href="#update-history" id="toc-update-history" class="nav-link" data-scroll-target="#update-history">Update History</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/directknowledge/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -260,58 +251,29 @@ div.csl-indent {
 </header>
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
-<ul>
-<li><span class="citation" data-cites="axler2016linear">Axler (<a href="references.html#ref-axler2016linear" role="doc-biblioref">2016</a>)</span></li>
-<li><span class="citation" data-cites="bretscher2009linear">Bretscher (<a href="references.html#ref-bretscher2009linear" role="doc-biblioref">2009</a>)</span></li>
-<li><span class="citation" data-cites="smith2012linear">Smith (<a href="references.html#ref-smith2012linear" role="doc-biblioref">2012</a>)</span></li>
-<li><span class="citation" data-cites="lay2012linear">Lay (<a href="references.html#ref-lay2012linear" role="doc-biblioref">2012</a>)</span></li>
-<li><span class="citation" data-cites="hefferon2020linear">Hefferon (<a href="references.html#ref-hefferon2020linear" role="doc-biblioref">2020</a>)</span></li>
-<li><span class="citation" data-cites="weintraub2009jordan">Weintraub (<a href="references.html#ref-weintraub2009jordan" role="doc-biblioref">2009</a>)</span></li>
-<li><span class="citation" data-cites="defranza2015introduction">DeFranza and Gagliardi (<a href="references.html#ref-defranza2015introduction" role="doc-biblioref">2015</a>)</span></li>
-<li><span class="citation" data-cites="hoffman1971linear">Hoffman and Kunze (<a href="references.html#ref-hoffman1971linear" role="doc-biblioref">1971</a>)</span></li>
-</ul>
 <div>
-<section id="about-this-book" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-book">About this book</h2>
+<p><strong>Welcome</strong>. Get ready – <em>Learning Linear Algebra: With Python</em> is coming soon! This groundbreaking book promises to provide readers with the ultimate combination of knowledge and skill — mastering linear algebra through an in-depth exploration of its principles by harnessing the power of Python. Get your copy next Summer when both paperback and hardcover versions become available on Amazon.</p>
+</div>
+<section id="short-description" class="level2">
+<h2 class="anchored" data-anchor-id="short-description">Short Description</h2>
+<p>In this book, we cover the basics of linear algebra. Topics include systems of linear equations, finite-dimensional vector spaces, linear transformations, and inner-product spaces. Determinants, eigenvalues, and eigenvectors are also covered. While we explore these topics we’ll also learn how to use python when doing linear algebra. In the second part, we detail the structure of a linear operator by providing an algorithm for the Jordan canonical form of a linear transformation using python.</p>
 </section>
 <section id="other-resources" class="level2">
-<h2 class="anchored" data-anchor-id="other-resources">Other resources</h2>
+<h2 class="anchored" data-anchor-id="other-resources">Other Resources</h2>
+<p><a href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/">My YouTube channel</a>, which contains videos discussing the main ideas of this book, is a great companion to accompany your reading experience. Read and write along as you easily access video embeds directly on this site!</p>
 </section>
 <section id="update-history" class="level2">
-<h2 class="anchored" data-anchor-id="update-history">Update history</h2>
-<ol type="1">
+<h2 class="anchored" data-anchor-id="update-history">Update History</h2>
+<p>Here is where I keep a log of the majors changes as I finish writing the book.</p>
+<ol start="2" type="1">
+<li>First draft of preface published on 1/27/2023.</li>
 <li>First draft published on 1/18/2023.</li>
 </ol>
 </section>
-</div>
-<section id="acknowledgements" class="level2 unlisted">
-<h2 class="unlisted anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-axler2016linear" class="csl-entry" role="doc-biblioentry">
-Axler, S. 2016. <em>Linear Algebra Done Right</em>. Third. Undergraduate Texts in Mathematics. Springer International Publishing. <a href="https://books.google.com/books?id=h3cnvgAACAAJ">https://books.google.com/books?id=h3cnvgAACAAJ</a>.
-</div>
-<div id="ref-bretscher2009linear" class="csl-entry" role="doc-biblioentry">
-Bretscher, O. 2009. <em>Linear Algebra with Applications</em>. Fourth. Pearson Prentice Hall. <a href="https://books.google.com/books?id=11iuPwAACAAJ">https://books.google.com/books?id=11iuPwAACAAJ</a>.
-</div>
-<div id="ref-defranza2015introduction" class="csl-entry" role="doc-biblioentry">
-DeFranza, J., and D. Gagliardi. 2015. <em>Introduction to Linear Algebra with Applications</em>. Waveland Press. <a href="https://books.google.com/books?id=LZi3BgAAQBAJ">https://books.google.com/books?id=LZi3BgAAQBAJ</a>.
-</div>
-<div id="ref-hefferon2020linear" class="csl-entry" role="doc-biblioentry">
-Hefferon, J. 2020. <em>Linear Algebra</em>. Fourth. Orthogonal Publishing L3C. <a href="https://books.google.com/books?id=fvCUzQEACAAJ">https://books.google.com/books?id=fvCUzQEACAAJ</a>.
-</div>
-<div id="ref-hoffman1971linear" class="csl-entry" role="doc-biblioentry">
-Hoffman, K., and R. A. Kunze. 1971. <em>Linear Algebra</em>. Second. Featured Titles for Linear Algebra (Advanced) Series. Prentice-Hall. <a href="https://books.google.com/books?id=Jk7MtwEACAAJ">https://books.google.com/books?id=Jk7MtwEACAAJ</a>.
-</div>
-<div id="ref-lay2012linear" class="csl-entry" role="doc-biblioentry">
-Lay, D. C. 2012. <em>Linear Algebra and Its Applications</em>. Fourth. Addison-Wesley. <a href="https://books.google.com/books?id=\_4bjtgAACAAJ">https://books.google.com/books?id=\_4bjtgAACAAJ</a>.
-</div>
-<div id="ref-smith2012linear" class="csl-entry" role="doc-biblioentry">
-Smith, L. 2012. <em>Linear Algebra</em>. Second. Undergraduate Texts in Mathematics. Springer New York. <a href="https://books.google.com/books?id=hmXlBwAAQBAJ">https://books.google.com/books?id=hmXlBwAAQBAJ</a>.
-</div>
-<div id="ref-weintraub2009jordan" class="csl-entry" role="doc-biblioentry">
-Weintraub, S. H. 2009. <em>Jordan Canonical Form: Theory and Practice</em>. Synthesis Lectures on Mathematics and Statistics. Morgan &amp; Claypool Publishers. <a href="https://books.google.com/books?id=qDPMLisVSCIC">https://books.google.com/books?id=qDPMLisVSCIC</a>.
-</div>
-</div>
+<section id="acknowledgements" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>A hearty debt of gratitude is owed to those who worked tirelessly and selflessly to see this book through its final version. Their contributions were immense, making the <a href="../acknowledgements.html">publication process</a> a true success - I am extremely thankful for their efforts!</p>
+<p>David A. Smith \ Fort Worth, Texas</p>
 </section>
 </section>
 </main> <!-- /main -->

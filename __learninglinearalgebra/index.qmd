@@ -1,43 +1,43 @@
 ---
-pagetitle: "Learning Linear Algebra - From Python to Proofs"
+pagetitle: "Learning Linear Algebra - With Python"
 ---
 # Preface {.unnumbered}
-
-- @axler2016linear
-- @bretscher2009linear
-- @smith2012linear
-- @lay2012linear
-- @hefferon2020linear
-- @weintraub2009jordan
-- @defranza2015introduction
-- @hoffman1971linear
 
 ::: {.content-visible when-format="pdf"}
 \pagenumbering{roman}
 \pagestyle{preface} 
 :::
 
-
+::: {.content-visible when-format="html"}
+{{< meta welcome_lla >}}
+:::
 
 ::: {.content-visible when-format="html"}
+## Short Description
+{{< meta short_desc_lla >}}
+:::
 
-## About this book 
+::: {.content-visible when-format="html"}
+## Other Resources 
+{{< meta resources_lla >}} 
+:::
 
-## Other resources 
+::: {.content-visible when-format="html"}
+## Update History
+Here is where I keep a log of the majors changes as I finish writing the book. 
 
-## Update history
-
+2. First draft of preface published on 1/27/2023. 
 1. First draft published on 1/18/2023. 
-
 :::
 
 
 
-## Acknowledgements {.unlisted }
 
 
+## Acknowledgements {.unnumbered .unlisted }
+{{< meta acknowledgements_lla >}} 
 
-
+David A. Smith \\ Fort Worth, Texas
 
 ::: {.content-visible when-format="pdf"}
 \setcounter{secnumdepth}{1}
@@ -49,4 +49,3 @@ pagetitle: "Learning Linear Algebra - From Python to Proofs"
 \pagenumbering{arabic}
 \pagestyle{fancy} 
 :::
-

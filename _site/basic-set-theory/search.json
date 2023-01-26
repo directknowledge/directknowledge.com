@@ -7,32 +7,32 @@
     "text": "Preface"
   },
   {
-    "objectID": "index.html#about-this-book",
-    "href": "index.html#about-this-book",
+    "objectID": "index.html#short-description",
+    "href": "index.html#short-description",
     "title": "Basic Set Theory",
-    "section": "About this book",
-    "text": "About this book\nThis book is intended for readers who are new to set theory, or who need a refresher on the basic concepts. It will be particularly useful for readers who are taking a course in mathematics or computer science that uses set theory.\n\nInstead of ordinals and cardinality this book is concerned with connections and concepts.\n\nSet theory is a fundamental tool in mathematics, and its concepts are essential for understanding courses in mathematics and computer science. in this book I provide a clear and concise introduction to set theory, making it an ideal resource for readers who are new to the subject.\nThis book is designed as an invitation to beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory. The text is easy to follow and provides many examples that will help readers understand the concepts discussed. Topics include propositional logic, first-order logic, set theory, functions, and relations. Addtional we introduce connection theory and concept theory. The novel approach taken here, with this book as a guide, readers will soon be able to see the beauty and power of mathematical reasoning."
+    "section": "Short Description",
+    "text": "Short Description\nThis book is for beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory. The text is easy to follow and provides many examples that help readers understand the concepts discussed. Topics include propositional logic first-order logic, set theory, functions, and relations. Additionally, we introduce connection theory and concept theory. With the novel approach taken here, with this book as a guide, readers will soon be able to see the beauty and power of mathematical reasoning."
   },
   {
     "objectID": "index.html#other-resources",
     "href": "index.html#other-resources",
     "title": "Basic Set Theory",
-    "section": "Other resources",
-    "text": "Other resources\nThis book is paired with my YouTube channel where I work out most of the mathematics in this book. These videos can be found here on this site as video embeds, so you can read, write, and watch all in one place.\nLogic books:\n\nMendelson (2015)\nHinman (2018)\nRautenberg (2010)\nForster (2003)\nDalen (2004)\nEnderton (2001)\nHalmos and Givant (2019)\nSmith (2003)\nLeary and Kristiansen (2015)"
+    "section": "Other Resources",
+    "text": "Other Resources\nThis book is paired with my YouTube channel where I discuss the main ideas in this book. These videos can be found here on this site as video embeds, so you can read, write, and watch all in one place."
   },
   {
     "objectID": "index.html#update-history",
     "href": "index.html#update-history",
     "title": "Basic Set Theory",
-    "section": "Update history",
-    "text": "Update history\n\nFirst draft published on 1/14/2023."
+    "section": "Update History",
+    "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 1/27/2023.\nFirst draft published on 1/14/2023."
   },
   {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
     "title": "Basic Set Theory",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\n\n\n\n\nDalen, D. 2004. Logic and Structure. Universitext (1979). Springer. https://books.google.com/books?id=4u9gQ6pctuIC.\n\n\nEnderton, H. B. 2001. A Mathematical Introduction to Logic. Elsevier Science. https://books.google.com/books?id=dVncCl\\_EtUkC.\n\n\nForster, T. 2003. Logic, Induction and Sets. Logic, Induction and Sets. Cambridge University Press. https://books.google.com/books?id=mVeTuaRwWssC.\n\n\nHalmos, P., and S. Givant. 2019. Logic as Algebra. Dolciani Mathematical Expositions. American Mathematical Society. https://books.google.com/books?id=ml\\_0DwAAQBAJ.\n\n\nHinman, P. G. 2018. Fundamentals of Mathematical Logic. CRC Press. https://books.google.com/books?id=6UBZDwAAQBAJ.\n\n\nLeary, C. C., and L. Kristiansen. 2015. A Friendly Introduction to Mathematical Logic. Online Access: State University of New York (SUNY) Open SUNY Textbooks. Milne Library, SUNY Geneseo. https://books.google.com/books?id=3BVjCgAAQBAJ.\n\n\nMendelson, E. 2015. Introduction to Mathematical Logic, Sixth Edition. Discrete Mathematics and Its Applications. Taylor & Francis. https://books.google.com/books?id=5GTpngEACAAJ.\n\n\nRautenberg, W. 2010. A Concise Introduction to Mathematical Logic. Universitext. Springer New York. https://books.google.com/books?id=vMwixYpQTocC.\n\n\nSmith, P. 2003. An Introduction to Formal Logic. Cambridge University Press. https://books.google.com/books?id=bX91C6GOBkcC."
+    "text": "Acknowledgements\nIt is impossible to overstate the importance of those who helped bring this book into its completed form. I am deeply grateful for their generous contributions and would like to express my sincere appreciation.\nDavid A. Smith \\ Fort Worth, Texas"
   },
   {
     "objectID": "propositional-logic.html#logical-connectives",
@@ -410,6 +410,6 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Cantor, Georg. 1883. “Ueber Unendliche, Lineare\nPunktmannichfaltigkeiten.” Math. Ann. 21\n(4): 545–91. https://doi.org/10.1007/BF01446819.\n\n\nDalen, D. 2004. Logic and Structure. Universitext (1979).\nSpringer. https://books.google.com/books?id=4u9gQ6pctuIC.\n\n\nEnderton, H. B. 2001. A Mathematical Introduction to Logic.\nElsevier Science. https://books.google.com/books?id=dVncCl\\_EtUkC.\n\n\nForster, T. 2003. Logic, Induction and Sets. Logic, Induction\nand Sets. Cambridge University Press. https://books.google.com/books?id=mVeTuaRwWssC.\n\n\nGarcía-Pardo, F., I. P. Cabrera, P. Cordero, and Manuel Ojeda-Aciego.\n2013. “On Galois Connections and Soft Computing.” In\nAdvances in Computational Intelligence, edited by Ignacio\nRojas, Gonzalo Joya, and Joan Cabestany, 7903:224–35. Lecture Notes in\nComputer Science. Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-642-38682-4_26.\n\n\nHalmos, Paul R. 1974. Naive Set Theory. Springer-Verlag, New\nYork-Heidelberg.\n\n\nHalmos, P., and S. Givant. 2019. Logic as Algebra. Dolciani\nMathematical Expositions. American Mathematical Society. https://books.google.com/books?id=ml\\_0DwAAQBAJ.\n\n\nHinman, P. G. 2018. Fundamentals of Mathematical Logic. CRC\nPress. https://books.google.com/books?id=6UBZDwAAQBAJ.\n\n\nLeary, C. C., and L. Kristiansen. 2015. A Friendly Introduction to\nMathematical Logic. Online Access: State University of New York\n(SUNY) Open SUNY Textbooks. Milne Library, SUNY Geneseo. https://books.google.com/books?id=3BVjCgAAQBAJ.\n\n\nMendelson, E. 2015. Introduction to Mathematical Logic, Sixth\nEdition. Discrete Mathematics and Its Applications. Taylor &\nFrancis. https://books.google.com/books?id=5GTpngEACAAJ.\n\n\nMoore, Gregory H. 2012. Zermelo’s Axiom of Choice: Its Origins,\nDevelopment, and Influence. Courier Corporation.\n\n\nRautenberg, W. 2010. A Concise Introduction to Mathematical\nLogic. Universitext. Springer New York. https://books.google.com/books?id=vMwixYpQTocC.\n\n\nSmith, P. 2003. An Introduction to Formal Logic. Cambridge\nUniversity Press. https://books.google.com/books?id=bX91C6GOBkcC.\n\n\nSzpilrajn, Edward. 1930. “Sur l’extension de l’ordre\nPartiel.” Fundamenta Mathematicae 16 (1): 386–89.\n\n\nTourlakis, George. 2003. Lectures in Logic and Set Theory: Volume 2,\nSet Theory. Vol. 83. Cambridge University Press."
+    "text": "Cantor, Georg. 1883. “Ueber Unendliche, Lineare\nPunktmannichfaltigkeiten.” Math. Ann. 21\n(4): 545–91. https://doi.org/10.1007/BF01446819.\n\n\nGarcía-Pardo, F., I. P. Cabrera, P. Cordero, and Manuel Ojeda-Aciego.\n2013. “On Galois Connections and Soft Computing.” In\nAdvances in Computational Intelligence, edited by Ignacio\nRojas, Gonzalo Joya, and Joan Cabestany, 7903:224–35. Lecture Notes in\nComputer Science. Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-642-38682-4_26.\n\n\nHalmos, Paul R. 1974. Naive Set Theory. Springer-Verlag, New\nYork-Heidelberg.\n\n\nMoore, Gregory H. 2012. Zermelo’s Axiom of Choice: Its Origins,\nDevelopment, and Influence. Courier Corporation.\n\n\nSzpilrajn, Edward. 1930. “Sur l’extension de l’ordre\nPartiel.” Fundamenta Mathematicae 16 (1): 386–89.\n\n\nTourlakis, George. 2003. Lectures in Logic and Set Theory: Volume 2,\nSet Theory. Vol. 83. Cambridge University Press."
   }
 ]

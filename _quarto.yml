@@ -46,7 +46,7 @@ website:
             aria-label: Multivariable Calculus Book
       - href: http://directknowledge.com/about.html
         text: "About"
-      - href: https://youtube.com/@directknowledge
+      - href: https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/
         icon: youtube
         aria-label: YouTube
       - href: https://github.com/directknowledge

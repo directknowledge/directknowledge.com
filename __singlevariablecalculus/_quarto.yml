@@ -26,6 +26,7 @@ book:
   description: "single-variable-calculus"  
 
 metadata-files:
+  - ../_variables.yml
   - ../_meta/book-html.yml
   - ../_meta/format.yml
   #- _meta/_book-epub.yml

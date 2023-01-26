@@ -7,32 +7,32 @@
     "text": "Preface"
   },
   {
-    "objectID": "index.html#about-this-book",
-    "href": "index.html#about-this-book",
+    "objectID": "index.html#short-description",
+    "href": "index.html#short-description",
     "title": "Learning Number Theory",
-    "section": "About this book",
-    "text": "About this book"
+    "section": "Short Description",
+    "text": "Short Description\nIn this book, we cover the basics of elementary number theory. Topics begin with natural numbers, divisibility in the integers, and unique prime factorization. After that, we cover linear, quadratic, and polynomial congruence equations. While studying these topics we’ll also learn how to use python. In the second part, we introduce automating proofs in elementary number theory using python. We’ll do this by first studying Grobner Bases in polynomial rings and then making a connection between these rings and theorems involving integer divisibility."
   },
   {
     "objectID": "index.html#other-resources",
     "href": "index.html#other-resources",
     "title": "Learning Number Theory",
-    "section": "Other resources",
-    "text": "Other resources"
+    "section": "Other Resources",
+    "text": "Other Resources\nDive deep into this book with me by exploring not just the words, but also accompanying videos! My YouTube channel is an ideal companion to expand on its content - embedded right here for your convenience. Now you can read, watch and write like never before – all in one place."
   },
   {
     "objectID": "index.html#update-history",
     "href": "index.html#update-history",
     "title": "Learning Number Theory",
-    "section": "Update history",
-    "text": "Update history\n\nFirst draft published on 1/18/2023."
+    "section": "Update History",
+    "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 1/27/2023.\nFirst draft published on 1/18/2023."
   },
   {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
     "title": "Learning Number Theory",
     "section": "Acknowledgements",
-    "text": "Acknowledgements"
+    "text": "Acknowledgements\nI cannot adequately express my gratitude for all of those who dedicated their efforts to bring this book into its finished state. Their generous aid is greatly admired, and I extend them many thanks.\nDavid A. Smith \\ Fort Worth, Texas"
   },
   {
     "objectID": "peanos-axioms.html#addition",

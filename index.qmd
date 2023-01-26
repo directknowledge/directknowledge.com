@@ -9,7 +9,6 @@ format:
 
 ::: {.column-screen }
 ```{=html}
-<!-- Hero -->
 <div class="p-5 text-center bg-image img-fluid" style="margin-top:-40pt;background-size: cover; background-image: url('assets/directknowledge.png'); height: 600px;background-attachment: fixed;background-repeat: no-repeat;">
   <div class="h-100">
     <div class="d-flex justify-content-center align-items-center h-100">
@@ -25,7 +24,6 @@ format:
     </div>
   </div>
 </div>
-<!-- Hero -->
 ```
 :::
 
@@ -40,45 +38,25 @@ format:
 ```
 :::
 
-
 ## Basic Set Theory
 [![Basic Set Theory](/assets/basic-set-theory-cover.png){.float-end width="150" .shadow .ms-4 .mb-4 fig-alt="Basic Set Theory Book"}](/basic-set-theory/)
-**That Anyone Can Learn**. This book is designed as an invitation to beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory. The text is easy to follow and provides many examples that will help readers understand the concepts discussed. Topics include propositional logic, first-order logic, set theory, functions, and relations. Additionally we introduce connection theory and concept theory. With the novel approach taken here, with this book as a guide, readers will soon be able to see the beauty and power of mathematical reasoning. 
-[More Information](/basic-set-theory/)
-
-
+**That Anyone Can Learn**. {{< var short_desc_bst >}} [More Information](/basic-set-theory/)
 
 ## Learning Number Theory {.mt-5 }
 [![Learning Number Theory](/assets/learning-number-theory-cover.png){.float-start width="150" .shadow .me-4 .mb-4 fig-alt="Learning Number Theory Book"}](/learning-number-theory/)
-**With Python**. In this book, we cover the basics of elementary number theory. Topics include the natural numbers, divisibility in the integers, unique prime factorization, and congruence equations discussing both quadratic and polynomial congruence equations. While we explore these basic topics we'll also learn how to use python when doing number theory. In the second part of the book we introduce automating proofs in elementary number theory using python.  We'll do this by first studying Grobner Bases in polynomial rings and then we'll make a connection between these rings and theorems involving integer divisibility.     
-[More Information](/learning-number-theory/)
-
-
-
+**With Python**. {{< var short_desc_lnt >}} [More Information](/learning-number-theory/)
 
 ## Learning Linear Algebra {.mt-5 }
 [![Learning Linear Algebra](/assets/learning-linear-algebra-cover.png){.float-start width="150" .shadow .me-4 .mb-4 fig-alt="Learning Linear Algebra Book"}](/learning-linear-algebra/)
-**With Python**. In this book, we cover the basics of linear algebra. Topics include systems of linear equations, finite-dimensional vector spaces, linear transformations, and inner-product spaces. Determinants, eigenvalues, and eigenvectors are also covered. While we explore these basic topics we'll also learn how to use python when doing linear algebra. In the second part of the book, we detail the structure of a linear operator by providing an algorithm for the Jordan canonical form of a linear transformation using python.
-[More Information](/learning-number-theory/)
-
-
-
+**With Python**. {{< var short_desc_lla >}} [More Information](/learning-number-theory/)
 
 ## Single Variable Calculus {.mt-5 }
 [![Single Variable Calculus](/assets/single-variable-calculus-cover.png){.float-end width="150" .shadow .ms-4 .mb-4 fig-alt="Single Variable Calculus Book"}](/single-variable-calculus/)
-**With Python**. In this book, we cover the basics of a first and second-semester course in the calculus of a single variable. Topics include limits and continuous functions, derivatives and their applications, and integrals and their applications. Techniques of integration and then infinite sequences and series are detailed. While we're learning calculus we'll also be exploring using the python prgramming language. We'll study calculus numerical, symbolically, and graphcially. This three prong approach allows us to engage calculus, learn it faster, and explore it deeper. 
-[More Information](/single-variable-calculus/)
-
-
-
+**With Python**. {{< var short_desc_svc >}} [More Information](/single-variable-calculus/)
 
 ## Multivariable Calculus {.mt-5 }
 [![Multivariable Calculus](/assets/multivariable-calculus-cover.png){.float-end width="150" .shadow .ms-4 .mb-4 fig-alt="Multivariable Calculus Book"}](/multivariable-calculus/)
-**With Python**. In this book, we'll explore multivariable calculus using python. Topics include multivariable functions and their limits, partial derivatives and their applications, and multiple integration and applications. We detail vector-valued functions, and then towards the end, vector calculus by examining vector fields, line integrals, surface integrals, and some amazing theorems invoving these integerals. In the end, the theory electromagnetism is developed.  
-[More Information](/multivariable-calculus/)
-
-
-
+**With Python**. {{< var short_desc_mvc >}} [More Information](/multivariable-calculus/)
 
 ::: {.column-screen}
 ```{=html}
