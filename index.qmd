@@ -15,11 +15,11 @@ format:
       <div class="text-white">
         <h1 class="mb-3 display-3 fw-bold">DIRECT KNOWLEDGE</h1>
         <h4 class="mb-3 display-6">Learn faster, explore deeper</h4>
-        <a class="btn btn-outline-light btn-lg m-1" href="/basic-set-theory/" role="button">Sets</a>
-        <a class="btn btn-outline-light btn-lg m-1" href="/learning-number-theory/" role="button">Numbers</a>
-        <a class="btn btn-outline-light btn-lg m-1" href="/learning-linear-algebra/" role="button">Linear</a>
-        <a class="btn btn-outline-light btn-lg m-1" href="/single-variable-calculus/" role="button">Calculus</a>
-        <a class="btn btn-outline-light btn-lg m-1" href="/multivariable-calculus/" role="button">Calculus 3D</a>
+        <a style="width:150px;" class="btn btn-outline-light btn-lg m-1" href="/basic-set-theory/" role="button">Sets</a>
+        <a style="width:150px;" class="btn btn-outline-light btn-lg m-1" href="/learning-number-theory/" role="button">Numbers</a>
+        <a style="width:150px;" class="btn btn-outline-light btn-lg m-1" href="/learning-linear-algebra/" role="button">Linear</a>
+        <a style="width:150px;" class="btn btn-outline-light btn-lg m-1" href="/single-variable-calculus/" role="button">Calculus</a>
+        <a style="width:150px;" class="btn btn-outline-light btn-lg m-1" href="/multivariable-calculus/" role="button">Calculus 3D</a>
       </div>
     </div>
   </div>

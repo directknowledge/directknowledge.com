@@ -33,26 +33,31 @@ Here is where I keep a log of the majors changes as I finish writing the book.
 
 
 ::: {.content-hidden }
-
 ## Purpose {.unnumbered .unlisted }
 **The major themes of the text**.
 **Python**.
 **Proofs**.
 **Connections**.
 **Concepts**.
+:::
 
+::: {.content-hidden }
 ## Audience {.unnumbered .unlisted }
 **How I wrote this book**.
 **Pedagogical features**.
+:::
 
+::: {.content-hidden }
 ## Stucture {.unnumbered .unlisted }
 **References**.
+:::
 
+::: {.content-hidden }
 ## Teaching {.unnumbered .unlisted }
 **Philosphy**.
 **Examples**.
-
 :::
+
 
 
 
