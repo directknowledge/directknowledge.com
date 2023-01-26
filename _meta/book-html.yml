@@ -41,9 +41,6 @@ book:
       - href: https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/
         icon: youtube
         aria-label: YouTube
-      - href: https://github.com/directknowledge
-        icon: github
-        aria-label: GitHub
   favicon: "../assets/favicon.ico"
   open-graph: true
   page-footer:

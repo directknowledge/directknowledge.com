@@ -49,9 +49,6 @@ website:
       - href: https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/
         icon: youtube
         aria-label: YouTube
-      - href: https://github.com/directknowledge
-        icon: github
-        aria-label: GitHub
   description: "Learn mathematics, computer science, and how to code with interactive, programmable tutorials."
   favicon: assets/favicon.ico
   open-graph: true
