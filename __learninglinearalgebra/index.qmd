@@ -34,8 +34,26 @@ Here is where I keep a log of the majors changes as I finish writing the book.
 
 
 
+::: {.content-visible when-format="pdf"}
+## Writing Philosophy {.unnumbered .unlisted }
+{{< meta writing_lla >}} 
+:::
+
+::: {.content-visible when-format="html"}
+## Writing Philosophy 
+{{< meta writing_lla >}} 
+:::
+
+::: {.content-visible when-format="pdf"}
 ## Acknowledgements {.unnumbered .unlisted }
 {{< meta acknowledgements_lla >}} 
+:::
+
+::: {.content-visible when-format="html"}
+## Acknowledgements
+{{< meta acknowledgements_lla >}} 
+:::
+
 
 David A. Smith \\ Fort Worth, Texas
 

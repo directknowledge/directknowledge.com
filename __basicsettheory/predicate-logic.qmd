@@ -1,7 +1,7 @@
 ---
 pagetitle: "Predicate Logic - Basic Set Theory"
+title: Predicate Logic
 ---
-# Predicate Logic
 
 Predicate logic is a more powerful system of reasoning that can be used to express more complicated ideas. In predicate logic, we can make statements about things that have certain properties. For example, consider the following argument:
 

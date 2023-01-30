@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://directknowledge.com/acknowledgements.html</loc>
-    <lastmod>2023-01-26T20:47:21.651Z</lastmod>
+    <loc>https://directknowledge.com/index.html</loc>
+    <lastmod>2023-01-30T14:13:02.865Z</lastmod>
   </url>
   <url>
-    <loc>https://directknowledge.com/index.html</loc>
-    <lastmod>2023-01-26T20:47:22.060Z</lastmod>
+    <loc>https://directknowledge.com/blog/mathematics-on-the-web/index.html</loc>
+    <lastmod>2023-01-30T14:13:03.552Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directknowledge.com/blog/preface-mathematics-book/index.html</loc>
+    <lastmod>2023-01-30T14:13:04.138Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directknowledge.com/blog/index.html</loc>
+    <lastmod>2023-01-30T14:13:04.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directknowledge.com/blog/writing-mathematics/index.html</loc>
+    <lastmod>2023-01-30T14:13:05.216Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/about.html</loc>
-    <lastmod>2023-01-26T20:47:22.439Z</lastmod>
+    <lastmod>2023-01-30T14:13:05.597Z</lastmod>
   </url>
 </urlset>

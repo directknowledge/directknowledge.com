@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Basic Set Theory",
     "section": "",
-    "text": "Preface"
+    "text": "Preface\nDavid A. Smith \\ Fort Worth, Texas"
   },
   {
     "objectID": "index.html#short-description",
@@ -28,11 +28,18 @@
     "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 1/27/2023.\nFirst draft published on 1/14/2023."
   },
   {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
+    "objectID": "index.html#writing-philosophy-1",
+    "href": "index.html#writing-philosophy-1",
+    "title": "Basic Set Theory",
+    "section": "Writing Philosophy",
+    "text": "Writing Philosophy\nTo be a successful writer, you must possess an inherent confidence and have something to say. You also need the capacity to think critically (and creatively) in order to create powerful arguments when conveying ideas; these are key elements necessary for writing mathematics clearly and effectively. Additionally, there are technical standards that I practice to ensure quality. I’ve specified my writing practices in detail; and you can find them online at https://directknowledge.com/writing"
+  },
+  {
+    "objectID": "index.html#acknowledgements-1",
+    "href": "index.html#acknowledgements-1",
     "title": "Basic Set Theory",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\nIt is impossible to overstate the importance of those who helped bring this book into its completed form. I am deeply grateful for their generous contributions and would like to express my sincere appreciation.\nDavid A. Smith \\ Fort Worth, Texas"
+    "text": "Acknowledgements\nIt is impossible to overstate the importance of those who helped bring this book into its completed form. I am deeply grateful for their generous contributions and would like to express my sincere appreciation."
   },
   {
     "objectID": "propositional-logic.html#logical-connectives",

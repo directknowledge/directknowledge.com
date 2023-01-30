@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "acknowledgements.html",
-    "href": "acknowledgements.html",
-    "title": "Direct Knowledge",
-    "section": "",
-    "text": "It is impossible to overstate the importance of those who helped bring this book into its completed form. I am deeply grateful for their generous contributions and would like to express my sincere appreciation here.\nMathJax. MathJax deserves a tremendous amount of gratitude for enabling mathematical equations and formulas to be written in HTML documents. I am truly thankful for the use of this incredible tool!\nPython. I’d like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in developing python. Your contributions are invaluable; without them this text would not have been possible!\nPyScript. PyScript revolutionizes the way users can create engaging, dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology, learners are granted unprecedented access to powerful tools previously inaccessible in browser environments. I am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier.\nQuarto. Quarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful!\nPandoc. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence. Pandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource!\nVisual Studio Code. Visual Studio Code has been key in helping us create, build, and refine our work - for that I am immensely grateful!\nGitHub. GitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence!\nRevealJS. I offer my sincere gratitude to the RevealJS community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way!\nNetlify. I am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together!\nYouTube. YouTube is an invaluable platform that we are proud to be part of. We would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube’s vast influence on culture to reach ever further.\nThese books, and the ideas presented within it, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Direct Knowledge",
@@ -47,6 +40,160 @@
     "title": "Direct Knowledge",
     "section": "Multivariable Calculus",
     "text": "Multivariable Calculus\n With Python. In this book, we’ll explore multivariable calculus using python. Topics include multivariable functions and their limits, partial derivatives, and their applications, and multiple integration and applications. We detail vector-valued functions and vector fields. Towards the end, vector calculus by examining vector fields, line integrals, surface integrals, and some marvelous theorems involving these integrals. In the finale, the theory of electromagnetism is revealed. More Information\n\n\n\n    Learn. Progress. Explore deeper with Direct Knowledge.\n    About Us"
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html",
+    "href": "blog/mathematics-on-the-web/index.html",
+    "title": "Mathematics on the Web",
+    "section": "",
+    "text": "Mathematics on the Web: Acknowledgements\nIt is impossible to overstate the importance of those who helped bring these books into their completed form. I am deeply grateful for their generous contributions and would like to express my sincere appreciation here."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#mathjax",
+    "href": "blog/mathematics-on-the-web/index.html#mathjax",
+    "title": "Mathematics on the Web",
+    "section": "MathJax",
+    "text": "MathJax\nMathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for enabling mathematical equations and formulas to be written in HTML documents.\n\nI am truly thankful for the use of this incredible tool."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#python",
+    "href": "blog/mathematics-on-the-web/index.html#python",
+    "title": "Mathematics on the Web",
+    "section": "Python",
+    "text": "Python\nThe Python programming language has become increasingly sought-after for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth, making it one of the most popular languages on the market today.\n\nI’d like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in developing python. Your contributions are invaluable; without them these books would not have been possible."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#pyscript",
+    "href": "blog/mathematics-on-the-web/index.html#pyscript",
+    "title": "Mathematics on the Web",
+    "section": "PyScript",
+    "text": "PyScript\nPyScript enables users of all backgrounds to create powerful Python-based web applications with ease. PyScript revolutionizes the way users can create engaging, dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology, learners are granted unprecedented access to powerful tools previously inaccessible in browser environments.\n\nI am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#quarto",
+    "href": "blog/mathematics-on-the-web/index.html#quarto",
+    "title": "Mathematics on the Web",
+    "section": "Quarto",
+    "text": "Quarto\nQuarto is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations websites blogs and books in html, pdf, and epub formats. With the help of scientific markdown you’ll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options for all your authoring needs.\n\nQuarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#pandoc",
+    "href": "blog/mathematics-on-the-web/index.html#pandoc",
+    "title": "Mathematics on the Web",
+    "section": "Pandoc",
+    "text": "Pandoc\nPandoc is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It’s free-software too, forming an essential part in many publishing workflows due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence.\n\nPandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#visual-studio-code",
+    "href": "blog/mathematics-on-the-web/index.html#visual-studio-code",
+    "title": "Mathematics on the Web",
+    "section": "Visual Studio Code",
+    "text": "Visual Studio Code\nVisual Studio Code is a powerful, cross-platform source-code editor created by Microsoft. It boasts intuitive features like debugging support, syntax highlighting and code refactoring - not to mention embedded Git - that make coding faster and easier than ever before.\n\nVS Code has been key in helping us create, build, and refine our work - for that I am immensely grateful."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#github",
+    "href": "blog/mathematics-on-the-web/index.html#github",
+    "title": "Mathematics on the Web",
+    "section": "GitHub",
+    "text": "GitHub\nGitHub offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code through tools such as access control, bug tracking & feature requests which enable attempts to create more efficient projects.\n\nGitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#netlify",
+    "href": "blog/mathematics-on-the-web/index.html#netlify",
+    "title": "Mathematics on the Web",
+    "section": "Netlify",
+    "text": "Netlify\nNetlify empowers developers to create, launch, and manage web applications with innovative cloud computing services. Their platform streamlines the process of building robust sites that can quickly scale or deploy serverless backends for dynamic experiences.\n\nI am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#revealjs",
+    "href": "blog/mathematics-on-the-web/index.html#revealjs",
+    "title": "Mathematics on the Web",
+    "section": "RevealJS",
+    "text": "RevealJS\nRevealJS is an open source HTML presentation framework that allows you to create captivating presentations without cost or hassle.\n\nI offer my sincere gratitude to the Reveal.js community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#youtube",
+    "href": "blog/mathematics-on-the-web/index.html#youtube",
+    "title": "Mathematics on the Web",
+    "section": "YouTube",
+    "text": "YouTube\nYouTube is an invaluable platform that we are proud to be part of.\n\nI would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube’s vast influence on culture to reach ever further."
+  },
+  {
+    "objectID": "blog/mathematics-on-the-web/index.html#direct-knowledge",
+    "href": "blog/mathematics-on-the-web/index.html#direct-knowledge",
+    "title": "Mathematics on the Web",
+    "section": "Direct Knowledge",
+    "text": "Direct Knowledge\nThese books, and the ideas presented within it, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work."
+  },
+  {
+    "objectID": "blog/preface-mathematics-book/index.html",
+    "href": "blog/preface-mathematics-book/index.html",
+    "title": "Writing The Preface",
+    "section": "",
+    "text": "Writing The Preface: of a Mathematics Book\n\n\n\n\n\n\n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n\n\n\nCitationBibTeX citation:@online{a.smith2023,\n  author = {David A. Smith},\n  publisher = {Direct Knowledge},\n  title = {Writing {The} {Preface}},\n  date = {2023-01-31},\n  url = {https://directknowledge.com/blog/preface-mathematics-book},\n  langid = {en},\n  abstract = {Crafting the preface of a mathematics book can be\n    daunting, but it is an essential step in creating an engaging and\n    effective publication. Here we will discuss best practices for\n    writing a preface, which includes establishing tone, introducing\n    yourself as an author, outlining any goals you have for the work and\n    highlighting key topics that are discussed.}\n}\nFor attribution, please cite this work as:\nDavid A. Smith. 2023. “Writing The Preface.” Direct\nKnowledge. January 31, 2023. https://directknowledge.com/blog/preface-mathematics-book."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nWriting The Preface\n\n\nof a Mathematics Book\n\n\n\n\nWriting\n\n\n\n\nCrafting the preface of a mathematics book can be daunting, but it is an essential step in creating an engaging and effective publication. Here we will discuss best practices for writing a preface, which includes establishing tone, introducing yourself as an author, outlining any goals you have for the work and highlighting key topics that are discussed.\n\n\n\n\n\n\n1/31/23\n\n\nDavid A. Smith\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\nWriting Mathematics\n\n\nHow I Write Mathematics\n\n\n\n\nWriting\n\n\n\n\nWriting mathematics is a meaningful skill for people of all ages to learn and understand. It requires considerable focus, such as understanding concepts with specialized language and notation. Writing mathematics can be difficult, but it is worth pursuing because it helps people comprehend complex ideas and prepares them for advancing their own.\n\n\n\n\n\n\n1/28/23\n\n\nDavid A. Smith\n\n\n6 min\n\n\n\n\n\n\n  \n\n\n\n\nMathematics on the Web\n\n\nAcknowledgements\n\n\n\n\nWriting\n\n\n\n\nHow do I do it? How do I publish mathematics books on the web? How do I publish interactive, programmable, and full-media mathematical experiences on the web? Find out by reading the acknowledgements listed below.\n\n\n\n\n\n\n1/27/23\n\n\nDavid A. Smith\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/writing-mathematics/index.html",
+    "href": "blog/writing-mathematics/index.html",
+    "title": "Writing Mathematics",
+    "section": "",
+    "text": "Writing Mathematics: How I Write Mathematics"
+  },
+  {
+    "objectID": "blog/writing-mathematics/index.html#what-makes-writing-mathematics-different",
+    "href": "blog/writing-mathematics/index.html#what-makes-writing-mathematics-different",
+    "title": "Writing Mathematics",
+    "section": "What Makes Writing Mathematics Different?",
+    "text": "What Makes Writing Mathematics Different?\nWriting mathematics is an artful combination of two distinct languages, natural and mathematics. Natural language offers the writer numerous expression possibilities but can be ambiguous. Whereas writing with mathematical symbols requires clarity yet allows succinctness when conveying complex concepts. Accurate language is a necessity when it comes to mathematics. To properly communicate your thoughts and opinions, ensure that each word carries the correct connotation you intend for them to have.\n\nThe precision of words is essential in math-based conversations.\n\nTo comprehend mathematically expressed ideas, readers must take their time and read content several times while allowing themselves ample pauses for contemplation along the way. Further, mathematics writing often serves as reference material, which necessitates that its contents should ideally be accessed piece by piece upon demand rather than require deep immersion into text volumes at once.\nWriting mathematics has rules - some narrow, others broad. Small conventions relate to sentence structure (including punctuation) and are easily verifiable. Broader ones involve general style and strategies that depend on the author’s discretion.\nCrafting an effective document takes more than just following a few simple rules; it requires mastering composition. This skillfulness is where the art of writing comes in, with broad and deep strategies for your entire work. It’s all about connection: linking individual sentences together for clarity and flow while adhering to specific sentence structure regulations like commas or mathematical terminologies. At its most complex level, these interrelated requirements can create intricate webs that are both precise yet engaging - but will result in a masterpiece.\nNow it’s time to dive into each of the five levels for writing mathematics: sentence, paragraph, section, chapter, and book."
+  },
+  {
+    "objectID": "blog/writing-mathematics/index.html#sentence-level",
+    "href": "blog/writing-mathematics/index.html#sentence-level",
+    "title": "Writing Mathematics",
+    "section": "Sentence Level",
+    "text": "Sentence Level\nBreaking complex mathematical ideas into more accessible parts is essential for effective communication. Using the right voice and symbols in your writing is crucial for success.\n\nThese small details can make comprehension natural or quite tricky - but mastering them is fundamental when creating potent written works.\n\n@mendelson2015introduction"
+  },
+  {
+    "objectID": "blog/writing-mathematics/index.html#paragraph-level",
+    "href": "blog/writing-mathematics/index.html#paragraph-level",
+    "title": "Writing Mathematics",
+    "section": "Paragraph Level",
+    "text": "Paragraph Level\nCrafting a clear and concise document requires deliberate structure, consistent information, and reader-minded readability. Divide your work into linear segments to be presented in a hierarchical development for ease of comprehension. Retain an even flow by keeping notation terms familiar while avoiding lengthy explanations or eloquent phrasing that could confuse readers. Furthermore, provide previews of upcoming topics before delving deeper into the content so they can prepare themselves mentally as you write! Adding visuals where appropriate will also aid understanding - use examples and counterexamples along with suggestive references when necessary to maximize clarity without sacrificing creativity.\nMathematics writing requires you to effectively communicate your thought process and convince the reader that your solution is valid. A great mathematical paper should provide precise explanations while also being persuasive enough to satisfy a skeptical audience."
+  },
+  {
+    "objectID": "blog/writing-mathematics/index.html#section-level",
+    "href": "blog/writing-mathematics/index.html#section-level",
+    "title": "Writing Mathematics",
+    "section": "Section Level",
+    "text": "Section Level\nMastering the art of example and counterexample can be a powerful tool in understanding complex analysis. As Ullman so eloquently stated, even something as simple as an illustration may help to fully convey your ideas; however, it is important not to underestimate its power - examples should have some “spark” or element that will engage readers with thought-provoking insight they might otherwise miss. Additionally, don’t forget the importance of providing context by using both examples and counterexamples which illustrate definitions/results while simultaneously clarifying any underlying assumptions essential for proper analysis.\nWhenever possible, facilitate understanding by utilizing visual elements that have the power to communicate complex ideas quickly and accurately. Design figures simply with comprehensive captions as reinforcement for concepts discussed in textual form; this will help bring key points of proof or argumentation into clear focus without being bogged down in minutiae. Don’t be afraid to utilize graphs over tables when illustrating main topics – an illustration can often paint a far more detailed picture than words alone.\nWhen tackling a complex proof, take the time to strategize. Start by outlining how you plan to approach it and give periodic updates on your progress during the process. Demonstrate why particular steps are necessary and look for interesting similarities between results in order avoid reiterating similar arguments multiple times throughout. Exploring potential common generalizations of different elements can offer valuable insights too.\nWhen writing proofs, strive for efficiency by taking advantage of earlier results and avoiding unnecessary repetition. If a current proof seems to be significantly similar to one already constructed in the past, think beyond simple alterations; try finding an interesting overarching generalization that ties both together! When crafting especially intricate arguments, provide strategic comments throughout your construction - noting the purpose behind each step taken as well as providing overviews at appropriate sections can make lengthy demonstrations considerably easier to follow."
+  },
+  {
+    "objectID": "blog/writing-mathematics/index.html#chapter-level",
+    "href": "blog/writing-mathematics/index.html#chapter-level",
+    "title": "Writing Mathematics",
+    "section": "Chapter Level",
+    "text": "Chapter Level\nTo effectively communicate your math, it’s essential to take into account the background knowledge of your intended audience. Don’t let unfamiliar terminology confuse them; provide additional explanation as needed for clarity and comprehension. Consider adding appendixes when discussing more complex or specialized topics that may require deeper context in order to be fully understood by less experienced readers.\nA clearly structured and properly ordered mathematics essay is far more accessible than a disorganized one. Establishing an introduction that introduces the important theorems, provides insight into why it matters, and previews what’s to come can “hook” readers in for further exploration of your work. Making sure your chapter has these components will help ensure its readability - so put some thought into how you want to order yours!\nWhen creating math content, it is essential to keep the background and expertise of your target audience in mind. Presenting too much detail can be overwhelming for those without an expert’s understanding; however, avoiding explanations altogether risks leaving readers feeling lost or confused. Consider breaking up complex material into separate sections for a better grasp by all audiences as well as providing additional helpful resources such as appendixes when applicable.\nA well-crafted document requires a sound strategy. To achieve this, start by outlining the expected sections in your paper or chapter so you know exactly what to include in each step of its development. Establish necessary definitions that will inform and structure every result and proof before testing them for accuracy with lemmas; dabbling examples along the way allows readers to apply concepts practically. Repeat these steps until there is an obvious logical flow from beginning to end, then add interstitial comments as needed – which may provide further context on certain arguments, compare opposing points within literature topics or simply warn against any potential missteps throughout your work."
+  },
+  {
+    "objectID": "blog/writing-mathematics/index.html#book-level",
+    "href": "blog/writing-mathematics/index.html#book-level",
+    "title": "Writing Mathematics",
+    "section": "Book Level",
+    "text": "Book Level\nMake sure to keep your reader informed throughout; start each segment with a brief introduction and perhaps an outline of what’s ahead. Avoid lengthy stretches without any clear direction, revealing key conclusions only at the end. Instead, provide hints as you progress by stating outcomes such as “It follows that …”. Finally, be sure to reiterate essential points in conclusion for easy recall later on.\nWhen composing equations and propositions, don’t make it difficult for readers to find the references; clearly number each item along with providing a content/name descriptor. To ensure concentration isn’t broken by excessive page flipping, repeat any simple math expressions used in addition to reminding the reader of earlier analysis or unusual notations they may have encountered. Don’t be afraid to reiterate information if necessary – however remain mindful that too much repetition can become exhausting."
+  },
+  {
+    "objectID": "blog/writing-mathematics/index.html#and-beyond",
+    "href": "blog/writing-mathematics/index.html#and-beyond",
+    "title": "Writing Mathematics",
+    "section": "And Beyond",
+    "text": "And Beyond\nMathematics is truly a language of the mind, and at its heart lies mathemas - an ancient Greek word encapsulating knowledge, cognition, understanding and perception. In college-level math courses this universal tongue grows in complexity; equations alone are no longer sufficient to describe it as ideas become so intricate they must be expressed through sentences and paragraphs. Thus one can see that mathematics moves beyond mere numbers or calculations: It is about uncovering new ways of interpreting the universe around us.\n\nDo not give up - mastering mathematics can open a world of opportunities.\n\nWhile it might be hard to get started, writing mathematics is an invaluable skill that requires patience and dedication. Developing this capability takes practice and experience, but if you put in the work your mastery of mathematical exposition will stay with you for life."
   },
   {
     "objectID": "about.html",

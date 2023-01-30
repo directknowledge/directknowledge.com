@@ -31,7 +31,7 @@ format:
 ::: {.column-screen .bg-light}
 ```{=html}
 <div class="my-5 px-2" style="text-align:center;margin:40px auto;">
-<h2 class="fs-1 border-0 text-capitalize">Education sure has come along ways</h2>
+<h2 class="fs-1 border-0 text-capitalize">Education sure has come a long ways</h2>
 <h3 class="fs-3">Direct Knowledge brings technology together so you can learn faster.</h3>
 <img style="margin:40px auto;width:100%;max-width:1080px;" src="assets/vendor-logos.png" alt="Direct Knowledge brings technology together so you can learn faster.">
 </div>

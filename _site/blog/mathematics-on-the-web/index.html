@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="David A. Smith">
+<meta name="keywords" content="mathematics, web, publishing, acknowledgements">
+
+<title>Mathematics on the Web - Direct Knowledge</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: #FFFFFF;
+background: #303030;
+    }
+    </style>
+
+
+<meta property="og:title" content="Mathematics on the Web - Direct Knowledge">
+<meta property="og:description" content="How do I do it? How do I publish mathematics books on the web? How do I publish interactive, programmable, and full-media mathematical experiences on the web?">
+<meta property="og:image" content="https://directknowledge.com/blog/../assets/basic-set-theory-cover.png">
+<meta property="og:site-name" content="Blog">
+<meta property="og:image:height" content="780">
+<meta property="og:image:width" content="488">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="../../basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Mathematics on the Web</h1>
+            <p class="subtitle lead">Acknowledgements</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Writing</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>David A. Smith </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Friday, January 27, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  <div>
+    <div class="abstract">
+      <div class="abstract-title">Abstract</div>
+      How do I do it? How do I publish mathematics books on the web? How do I publish interactive, programmable, and full-media mathematical experiences on the web? Find out by reading the acknowledgements listed below.
+    </div>
+  </div>
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#mathjax" id="toc-mathjax" class="nav-link active" data-scroll-target="#mathjax"><span class="toc-section-number">1</span>  MathJax</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="toc-section-number">2</span>  Python</a></li>
+  <li><a href="#pyscript" id="toc-pyscript" class="nav-link" data-scroll-target="#pyscript"><span class="toc-section-number">3</span>  PyScript</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto"><span class="toc-section-number">4</span>  Quarto</a></li>
+  <li><a href="#pandoc" id="toc-pandoc" class="nav-link" data-scroll-target="#pandoc"><span class="toc-section-number">5</span>  Pandoc</a></li>
+  <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code"><span class="toc-section-number">6</span>  Visual Studio Code</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github"><span class="toc-section-number">7</span>  GitHub</a></li>
+  <li><a href="#netlify" id="toc-netlify" class="nav-link" data-scroll-target="#netlify"><span class="toc-section-number">8</span>  Netlify</a></li>
+  <li><a href="#revealjs" id="toc-revealjs" class="nav-link" data-scroll-target="#revealjs"><span class="toc-section-number">9</span>  RevealJS</a></li>
+  <li><a href="#youtube" id="toc-youtube" class="nav-link" data-scroll-target="#youtube"><span class="toc-section-number">10</span>  YouTube</a></li>
+  <li><a href="#direct-knowledge" id="toc-direct-knowledge" class="nav-link" data-scroll-target="#direct-knowledge"><span class="toc-section-number">11</span>  Direct Knowledge</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="d-print-none">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="mathematics-on-the-web-1024.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Mathematics on the Web: Acknowledgements</figcaption><p></p>
+</figure>
+</div>
+</div>
+<ul>
+<li><span class="citation" data-cites="knuth1989mathematical">Knuth et al. (<a href="#ref-knuth1989mathematical" role="doc-biblioref">1989</a>)</span></li>
+<li><span class="citation" data-cites="steenrod1973write">Steenrod (<a href="#ref-steenrod1973write" role="doc-biblioref">1973</a>)</span></li>
+<li><span class="citation" data-cites="krantz2017primer">Krantz (<a href="#ref-krantz2017primer" role="doc-biblioref">2017</a>)</span></li>
+</ul>
+<p>It is impossible to overstate the importance of those who helped bring <a href="#mathematics-books-on-the-web">these books into their completed form</a>. I am deeply grateful for their generous contributions and would like to express my sincere appreciation here.</p>
+<section id="mathjax" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="mathjax"><span class="header-section-number">1</span> MathJax</h2>
+<p>MathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for <a href="https://www.mathjax.org">enabling mathematical equations and formulas to be written in HTML documents</a>.</p>
+<blockquote class="blockquote">
+<p>I am truly thankful for the use of this incredible tool.</p>
+</blockquote>
+</section>
+<section id="python" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="python"><span class="header-section-number">2</span> Python</h2>
+<p>The Python programming language has become increasingly sought-after for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth, making it one of the most popular languages on the market today.</p>
+<blockquote class="blockquote">
+<p>I’d like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in <a href="https://www.python.org">developing python</a>. Your contributions are invaluable; without them these books would not have been possible.</p>
+</blockquote>
+</section>
+<section id="pyscript" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="pyscript"><span class="header-section-number">3</span> PyScript</h2>
+<p>PyScript enables users of all backgrounds to create powerful Python-based web applications with ease. <a href="https://pyscript.net">PyScript revolutionizes the way users can create engaging</a>, dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology, learners are granted unprecedented access to powerful tools previously inaccessible in browser environments.</p>
+<blockquote class="blockquote">
+<p>I am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier.</p>
+</blockquote>
+</section>
+<section id="quarto" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="quarto"><span class="header-section-number">4</span> Quarto</h2>
+<p><a href="https://quarto.org">Quarto</a> is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations, websites, blogs, and books in html, pdf, and epub formats. With the help of scientific markdown you’ll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options.</p>
+<blockquote class="blockquote">
+<p>Quarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful.</p>
+</blockquote>
+</section>
+<section id="pandoc" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="pandoc"><span class="header-section-number">5</span> Pandoc</h2>
+<p><a href="https://pandoc.org">Pandoc</a> is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It’s free-software too, forming an essential part in many publishing workflows due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence.</p>
+<blockquote class="blockquote">
+<p>Pandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource.</p>
+</blockquote>
+</section>
+<section id="visual-studio-code" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="visual-studio-code"><span class="header-section-number">6</span> Visual Studio Code</h2>
+<p><a href="https://code.visualstudio.com">Visual Studio Code</a> is a powerful, cross-platform source-code editor created by Microsoft. It boasts intuitive features like debugging support, syntax highlighting and code refactoring - not to mention embedded Git - that make coding faster and easier than ever before.</p>
+<blockquote class="blockquote">
+<p>VS Code has been key in helping us create, build, and refine our work - for that I am immensely grateful.</p>
+</blockquote>
+</section>
+<section id="github" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="github"><span class="header-section-number">7</span> GitHub</h2>
+<p><a href="https://github.com/about">GitHub</a> offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code through tools such as access control, bug tracking &amp; feature requests which enable attempts to create more efficient projects.</p>
+<blockquote class="blockquote">
+<p>GitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence.</p>
+</blockquote>
+</section>
+<section id="netlify" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="netlify"><span class="header-section-number">8</span> Netlify</h2>
+<p><a href="https://www.netlify.com">Netlify</a> empowers developers to create, launch, and manage web applications with innovative cloud computing services. Their platform streamlines the process of building robust sites that can quickly scale or deploy serverless backends for dynamic experiences.</p>
+<blockquote class="blockquote">
+<p>I am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together.</p>
+</blockquote>
+</section>
+<section id="revealjs" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="revealjs"><span class="header-section-number">9</span> RevealJS</h2>
+<p><a href="https://revealjs.com">RevealJS</a> is an open source HTML presentation framework that allows you to create captivating presentations without cost or hassle.</p>
+<blockquote class="blockquote">
+<p>I offer my sincere gratitude to the Reveal.js community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way.</p>
+</blockquote>
+</section>
+<section id="youtube" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="youtube"><span class="header-section-number">10</span> YouTube</h2>
+<p><a href="https://about.youtube">YouTube is an invaluable platform</a> that we are proud to be part of.</p>
+<blockquote class="blockquote">
+<p>I would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube’s vast influence on culture to reach ever further.</p>
+</blockquote>
+</section>
+<section id="direct-knowledge" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="direct-knowledge"><span class="header-section-number">11</span> Direct Knowledge</h2>
+<p>So if you’re new to any of the technologies listed above, you might question how I bring all this together. In case so, here’s a brief explanation.</p>
+<p>I use Visual Studio Code to write in Html, Css, Js, Markdown, Quarto Markdown, Python, and TeX. After setting up a few configuration files (one-time only), I issue the command “quarto render” to build the static files. The website, books, blog(s), and slides are outputs from this building process. Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc. These files are uploaded to a Github repository and then published using Netlify. I then use the ReavalJS slideshows to make YouTube videos. I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost.</p>
+<blockquote class="blockquote">
+<p>These books, and their presentations, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work.</p>
+</blockquote>
+<div>
+<div class="mt-5 d-print-none">
+<div class="card-group" id="mathematics-books-on-the-web">
+  <div class="card mx-2">
+    <a href="../../basic-set-theory/">
+        <img width="150" height="225" src="../../assets/basic-set-theory-cover.png" class="card-img-top" alt="Basic Set Theory">
+    </a>
+  </div>
+  <div class="card mx-2">
+    <a href="../../learning-number-theory/">
+        <img width="150" height="225" src="../../assets/learning-number-theory-cover.png" class="card-img-top" alt="Learning Number Theory">
+    </a>
+  </div>
+  <div class="card mx-2">
+    <a href="../../learning-linear-algebra/">
+        <img width="150" height="225" src="../../assets/learning-linear-algebra-cover.png" class="card-img-top" alt="Learning Linear Algebra">
+    </a>
+  </div>
+  <div class="card mx-2">
+    <a href="../../single-variable-calculus/">
+        <img width="150" height="225" src="../../assets/single-variable-calculus-cover.png" class="card-img-top" alt="Single Variable Calculus">
+    </a>
+  </div>
+  <div class="card mx-2">
+    <a href="../../multivariable-calculus/">
+        <img width="150" height="225" src="../../assets/multivariable-calculus-cover.png" class="card-img-top" alt="Multivariable Calculus">
+    </a>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section id="additonal-information" class="level2 unlisted unnumbered appendix"><h2 class="quarto-appendix-heading">Additonal Information</h2><div class="quarto-appendix-contents">
+
+<ul>
+<li>Last updated on 2023-01-30</li>
+<li>Print (PDF) <a href="mathematics-on-the-web.pdf" target="_blank">Mathematics on the Web</a></li>
+<li>Source code (LaTeX) <a href="mathematics-on-the-web.tex" target="_blank">Mathematics on the Web</a></li>
+<li>Slideshow (RevealJS) <a href="mathematics-on-the-web.html" target="_blank">Mathematics on the Web</a></li>
+</ul>
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-knuth1989mathematical" class="csl-entry" role="doc-biblioentry">
+Knuth, D. E., T. Larrabee, P. M. Roberts, P. M. Roberts, and Mathematical Association of America. 1989. <em>Mathematical Writing</em>. MAA Notes. Mathematical Association of America. <a href="https://books.google.bs/books?id=dDOehHMbUMcC">https://books.google.bs/books?id=dDOehHMbUMcC</a>.
+</div>
+<div id="ref-krantz2017primer" class="csl-entry" role="doc-biblioentry">
+Krantz, S. G. 2017. <em>A Primer of Mathematical Writing</em>. Miscellaneous Books. American Mathematical Society. <a href="https://books.google.com/books?id=eaw-DwAAQBAJ">https://books.google.com/books?id=eaw-DwAAQBAJ</a>.
+</div>
+<div id="ref-steenrod1973write" class="csl-entry" role="doc-biblioentry">
+Steenrod, N. E. 1973. <em>How to Write Mathematics</em>. American Mathematical Soc. <a href="https://books.google.com/books?id=6UypbkweqiwC">https://books.google.com/books?id=6UypbkweqiwC</a>.
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{a.smith2023,
+  author = {David A. Smith},
+  publisher = {Direct Knowledge},
+  title = {Mathematics on the {Web}},
+  date = {2023-01-27},
+  url = {https://directknowledge.com/blog/mathematics-on-the-web/},
+  langid = {en},
+  abstract = {How do I do it? How do I publish mathematics books on the
+    web? How do I publish interactive, programmable, and full-media
+    mathematical experiences on the web? Find out by reading the
+    acknowledgements listed below.}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-a.smith2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+David A. Smith. 2023. <span>“Mathematics on the Web.”</span> Direct
+Knowledge. January 27, 2023. <a href="https://directknowledge.com/blog/mathematics-on-the-web/">https://directknowledge.com/blog/mathematics-on-the-web/</a>.
+</div></div></section></div></main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "https://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/blog/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

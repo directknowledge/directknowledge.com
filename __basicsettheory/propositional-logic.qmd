@@ -1,7 +1,7 @@
 ---
 pagetitle: Propositional Logic - Basic Set Theory
+title: Propositional Logic
 ---
-# Propositional Logic
 
 Logic is the study of correct reasoning. It can be used to figure out whether an argument is valid, to find flaws in arguments, and to construct new arguments. In mathematics, logic is used to develop proofs – short, convincing arguments that something is true. A proof is like a puzzle: each piece (or step) fits together until the whole picture is complete.
 

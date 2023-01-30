@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Multivariable Calculus",
     "section": "",
-    "text": "Preface"
+    "text": "Preface\nDavid A. Smith \\ Fort Worth, Texas"
   },
   {
     "objectID": "index.html#short-description",
@@ -28,11 +28,18 @@
     "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 1/27/2023.\nFirst draft published on 1/18/2023."
   },
   {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
+    "objectID": "index.html#writing-philosophy-1",
+    "href": "index.html#writing-philosophy-1",
+    "title": "Multivariable Calculus",
+    "section": "Writing Philosophy",
+    "text": "Writing Philosophy\nI recognize the importance of writing confidently, crafting original ideas, and thoughtfully-argued positions. I take my proficiency in language seriously, seeking to hone good grammar usage and proper punctuation for captivating mathematical exposition. To learn more about how I approach writing mathematics please visit https://directknowledge.com/writing https://directknowledge.com/writing"
+  },
+  {
+    "objectID": "index.html#acknowledgements-1",
+    "href": "index.html#acknowledgements-1",
     "title": "Multivariable Calculus",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\nWithout the invaluable support and knowledge of those who contributed to this book, its fruition would not have been possible. I am truly thankful for their generosity which enabled me to see it through completion - a heartfelt thank you from the bottom of my heart!\nDavid A. Smith \\ Fort Worth, Texas"
+    "text": "Acknowledgements\nWithout the invaluable support and knowledge of those who contributed to this book, its fruition would not have been possible. I am truly thankful for their generosity which enabled me to see it through completion - a heartfelt thank you from the bottom of my heart!"
   },
   {
     "objectID": "vector-functions.html#space-curves",

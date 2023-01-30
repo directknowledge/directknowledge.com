@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="David A. Smith">
+<meta name="keywords" content="mathematics, writing">
+
+<title>Writing Mathematics - Direct Knowledge</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: #FFFFFF;
+background: #303030;
+    }
+    </style>
+
+
+<meta property="og:title" content="Writing Mathematics - Direct Knowledge">
+<meta property="og:description" content="Writing mathematics is a meaningful skill for people of all ages to learn and understand. It requires considerable focus, such as understanding concepts with specialized language and notation.">
+<meta property="og:image" content="https://directknowledge.com/blog/../assets/basic-set-theory-cover.png">
+<meta property="og:site-name" content="Blog">
+<meta property="og:image:height" content="780">
+<meta property="og:image:width" content="488">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="../../basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Writing Mathematics</h1>
+            <p class="subtitle lead">How I Write Mathematics</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Writing</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>David A. Smith </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Saturday, January 28, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  <div>
+    <div class="abstract">
+      <div class="abstract-title">Abstract</div>
+      Writing mathematics is a meaningful skill for people of all ages to learn and understand. It requires considerable focus, such as understanding concepts with specialized language and notation. Writing mathematics can be difficult, but it is worth pursuing because it helps people comprehend complex ideas and prepares them for advancing their own.
+    </div>
+  </div>
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-makes-writing-mathematics-different" id="toc-what-makes-writing-mathematics-different" class="nav-link active" data-scroll-target="#what-makes-writing-mathematics-different"><span class="toc-section-number">1</span>  What Makes Writing Mathematics Different?</a></li>
+  <li><a href="#sentence-level" id="toc-sentence-level" class="nav-link" data-scroll-target="#sentence-level"><span class="toc-section-number">2</span>  Sentence Level</a></li>
+  <li><a href="#paragraph-level" id="toc-paragraph-level" class="nav-link" data-scroll-target="#paragraph-level"><span class="toc-section-number">3</span>  Paragraph Level</a></li>
+  <li><a href="#section-level" id="toc-section-level" class="nav-link" data-scroll-target="#section-level"><span class="toc-section-number">4</span>  Section Level</a></li>
+  <li><a href="#chapter-level" id="toc-chapter-level" class="nav-link" data-scroll-target="#chapter-level"><span class="toc-section-number">5</span>  Chapter Level</a></li>
+  <li><a href="#book-level" id="toc-book-level" class="nav-link" data-scroll-target="#book-level"><span class="toc-section-number">6</span>  Book Level</a></li>
+  <li><a href="#and-beyond" id="toc-and-beyond" class="nav-link" data-scroll-target="#and-beyond"><span class="toc-section-number">7</span>  And Beyond</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="d-print-none">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="writing-mathematics-1024.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Writing Mathematics: How I Write Mathematics</figcaption><p></p>
+</figure>
+</div>
+</div>
+<section id="what-makes-writing-mathematics-different" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="what-makes-writing-mathematics-different"><span class="header-section-number">1</span> What Makes Writing Mathematics Different?</h2>
+<p>Writing mathematics is an artful combination of two distinct languages, natural and mathematics. Natural language offers the writer numerous expression possibilities but can be ambiguous. Whereas writing with mathematical symbols requires clarity yet allows succinctness when conveying complex concepts. Accurate language is a necessity when it comes to mathematics. To properly communicate your thoughts and opinions, ensure that each word carries the correct connotation you intend for them to have.</p>
+<blockquote class="blockquote">
+<p>The precision of words is essential in math-based conversations.</p>
+</blockquote>
+<p>To comprehend mathematically expressed ideas, readers must take their time and read content several times while allowing themselves ample pauses for contemplation along the way. Further, mathematics writing often serves as reference material, which necessitates that its contents should ideally be accessed piece by piece upon demand rather than require deep immersion into text volumes at once.</p>
+<p>Writing mathematics has rules - some narrow, others broad. Small conventions relate to sentence structure (including punctuation) and are easily verifiable. Broader ones involve general style and strategies that depend on the author’s discretion.</p>
+<p>Crafting an effective document takes more than just following a few simple rules; it requires mastering composition. This skillfulness is where the art of writing comes in, with broad and deep strategies for your entire work. It’s all about connection: linking individual sentences together for clarity and flow while adhering to specific sentence structure regulations like commas or mathematical terminologies. At its most complex level, these interrelated requirements can create intricate webs that are both precise yet engaging - but will result in a masterpiece.</p>
+<p>Now it’s time to dive into each of <strong>the five levels for writing mathematics</strong>: sentence, paragraph, section, chapter, and book.</p>
+</section>
+<section id="sentence-level" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sentence-level"><span class="header-section-number">2</span> Sentence Level</h2>
+<p>Breaking complex mathematical ideas into more accessible parts is essential for effective communication. Using the right voice and symbols in your writing is crucial for success.</p>
+<blockquote class="blockquote">
+<p>These small details can make comprehension natural or quite tricky - but mastering them is fundamental when creating potent written works.</p>
+</blockquote>
+</section>
+<section id="paragraph-level" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="paragraph-level"><span class="header-section-number">3</span> Paragraph Level</h2>
+<p>Crafting a clear and concise document requires deliberate structure, consistent information, and reader-minded readability. Divide your work into linear segments to be presented in a hierarchical development for ease of comprehension. Retain an even flow by keeping notation terms familiar while avoiding lengthy explanations or eloquent phrasing that could confuse readers. Furthermore, provide previews of upcoming topics before delving deeper into the content so they can prepare themselves mentally as you write! Adding visuals where appropriate will also aid understanding - use examples and counterexamples along with suggestive references when necessary to maximize clarity without sacrificing creativity.</p>
+<p>Mathematics writing requires you to effectively communicate your thought process and convince the reader that your solution is valid. A great mathematical paper should provide precise explanations while also being persuasive enough to satisfy a skeptical audience.</p>
+</section>
+<section id="section-level" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="section-level"><span class="header-section-number">4</span> Section Level</h2>
+<p>Mastering the art of example and counterexample can be a powerful tool in understanding complex analysis. As Ullman so eloquently stated, even something as simple as an illustration may help to fully convey your ideas; however, it is important not to underestimate its power - examples should have some “spark” or element that will engage readers with thought-provoking insight they might otherwise miss. Additionally, don’t forget the importance of providing context by using both examples and counterexamples which illustrate definitions/results while simultaneously clarifying any underlying assumptions essential for proper analysis.</p>
+<p>Whenever possible, facilitate understanding by utilizing visual elements that have the power to communicate complex ideas quickly and accurately. Design figures simply with comprehensive captions as reinforcement for concepts discussed in textual form; this will help bring key points of proof or argumentation into clear focus without being bogged down in minutiae. Don’t be afraid to utilize graphs over tables when illustrating main topics – an illustration can often paint a far more detailed picture than words alone.</p>
+<p>When tackling a complex proof, take the time to strategize. Start by outlining how you plan to approach it and give periodic updates on your progress during the process. Demonstrate why particular steps are necessary and look for interesting similarities between results in order avoid reiterating similar arguments multiple times throughout. Exploring potential common generalizations of different elements can offer valuable insights too.</p>
+<p>When writing proofs, strive for efficiency by taking advantage of earlier results and avoiding unnecessary repetition. If a current proof seems to be significantly similar to one already constructed in the past, think beyond simple alterations; try finding an interesting overarching generalization that ties both together! When crafting especially intricate arguments, provide strategic comments throughout your construction - noting the purpose behind each step taken as well as providing overviews at appropriate sections can make lengthy demonstrations considerably easier to follow.</p>
+</section>
+<section id="chapter-level" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="chapter-level"><span class="header-section-number">5</span> Chapter Level</h2>
+<p>To effectively communicate your math, it’s essential to take into account the background knowledge of your intended audience. Don’t let unfamiliar terminology confuse them; provide additional explanation as needed for clarity and comprehension. Consider adding appendixes when discussing more complex or specialized topics that may require deeper context in order to be fully understood by less experienced readers.</p>
+<p>A clearly structured and properly ordered mathematics essay is far more accessible than a disorganized one. Establishing an introduction that introduces the important theorems, provides insight into why it matters, and previews what’s to come can “hook” readers in for further exploration of your work. Making sure your chapter has these components will help ensure its readability - so put some thought into how you want to order yours!</p>
+<p>When creating math content, it is essential to keep the background and expertise of your target audience in mind. Presenting too much detail can be overwhelming for those without an expert’s understanding; however, avoiding explanations altogether risks leaving readers feeling lost or confused. Consider breaking up complex material into separate sections for a better grasp by all audiences as well as providing additional helpful resources such as appendixes when applicable.</p>
+<p>A well-crafted document requires a sound strategy. To achieve this, start by outlining the expected sections in your paper or chapter so you know exactly what to include in each step of its development. Establish necessary definitions that will inform and structure every result and proof before testing them for accuracy with lemmas; dabbling examples along the way allows readers to apply concepts practically. Repeat these steps until there is an obvious logical flow from beginning to end, then add interstitial comments as needed – which may provide further context on certain arguments, compare opposing points within literature topics or simply warn against any potential missteps throughout your work.</p>
+</section>
+<section id="book-level" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="book-level"><span class="header-section-number">6</span> Book Level</h2>
+<p>Make sure to keep your reader informed throughout; start each segment with a brief introduction and perhaps an outline of what’s ahead. Avoid lengthy stretches without any clear direction, revealing key conclusions only at the end. Instead, provide hints as you progress by stating outcomes such as “It follows that …”. Finally, be sure to reiterate essential points in conclusion for easy recall later on.</p>
+<p>When composing equations and propositions, don’t make it difficult for readers to find the references; clearly number each item along with providing a content/name descriptor. To ensure concentration isn’t broken by excessive page flipping, repeat any simple math expressions used in addition to reminding the reader of earlier analysis or unusual notations they may have encountered. Don’t be afraid to reiterate information if necessary – however remain mindful that too much repetition can become exhausting.</p>
+</section>
+<section id="and-beyond" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="and-beyond"><span class="header-section-number">7</span> And Beyond</h2>
+<p>Mathematics is truly a language of the mind, and at its heart lies <strong>mathemas</strong> - an ancient Greek word encapsulating knowledge, cognition, understanding and perception. In college-level math courses this universal tongue grows in complexity; equations alone are no longer sufficient to describe it as ideas become so intricate they must be expressed through sentences and paragraphs. Thus one can see that mathematics moves beyond mere numbers or calculations: It is about uncovering new ways of interpreting the universe around us.</p>
+<blockquote class="blockquote">
+<p>Do not give up - mastering mathematics can open a world of opportunities.</p>
+</blockquote>
+<p>While it might be hard to get started, writing mathematics is an invaluable skill that requires patience and dedication. Developing this capability takes practice and experience, but if you put in the work your mastery of mathematical exposition will stay with you for life.</p>
+<div>
+<div class="mt-5 d-print-none">
+<div class="card-group" id="mathematics-books-on-the-web">
+  <div class="card mx-2">
+    <a href="../../basic-set-theory/">
+        <img width="150" height="225" src="../../assets/basic-set-theory-cover.png" class="card-img-top" alt="Basic Set Theory">
+    </a>
+  </div>
+  <div class="card mx-2">
+    <a href="../../learning-number-theory/">
+        <img width="150" height="225" src="../../assets/learning-number-theory-cover.png" class="card-img-top" alt="Learning Number Theory">
+    </a>
+  </div>
+  <div class="card mx-2">
+    <a href="../../learning-linear-algebra/">
+        <img width="150" height="225" src="../../assets/learning-linear-algebra-cover.png" class="card-img-top" alt="Learning Linear Algebra">
+    </a>
+  </div>
+  <div class="card mx-2">
+    <a href="../../single-variable-calculus/">
+        <img width="150" height="225" src="../../assets/single-variable-calculus-cover.png" class="card-img-top" alt="Single Variable Calculus">
+    </a>
+  </div>
+  <div class="card mx-2">
+    <a href="../../multivariable-calculus/">
+        <img width="150" height="225" src="../../assets/multivariable-calculus-cover.png" class="card-img-top" alt="Multivariable Calculus">
+    </a>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section id="additonal-information" class="level2 unlisted unnumbered appendix"><h2 class="quarto-appendix-heading">Additonal Information</h2><div class="quarto-appendix-contents">
+
+<ul>
+<li>Last updated on 2023-01-30</li>
+<li>Print (PDF) <a href="writing-mathematics.pdf" target="_blank">Writing Mathematics</a></li>
+<li>Source code (LaTeX) <a href="writing-mathematics.tex" target="_blank">Writing Mathematics</a></li>
+<li>Slideshow (RevealJS) <a href="writing-mathematics.html" target="_blank">Writing Mathematics</a></li>
+</ul>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{a.smith2023,
+  author = {David A. Smith},
+  publisher = {Direct Knowledge},
+  title = {Writing {Mathematics}},
+  date = {2023-01-28},
+  url = {https://directknowledge.com/blog/writing-mathematics/},
+  langid = {en},
+  abstract = {Writing mathematics is a meaningful skill for people of
+    all ages to learn and understand. It requires considerable focus,
+    such as understanding concepts with specialized language and
+    notation. Writing mathematics can be difficult, but it is worth
+    pursuing because it helps people comprehend complex ideas and
+    prepares them for advancing their own.}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-a.smith2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+David A. Smith. 2023. <span>“Writing Mathematics.”</span> Direct
+Knowledge. January 28, 2023. <a href="https://directknowledge.com/blog/writing-mathematics/">https://directknowledge.com/blog/writing-mathematics/</a>.
+</div></div></section></div></main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "https://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+      macros: {
+        N: "{\\mathbb{N}}",
+        Z: "{\\mathbb{Z}}",
+        qed: "{\\square}"
+      }
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/blog/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

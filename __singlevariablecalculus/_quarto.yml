@@ -24,6 +24,7 @@ book:
     title: "Single Variable Calculus"
   site-url: https://directknowledge.com/single-variable-calculus/
   description: "single-variable-calculus"  
+  isbn: "978-1-951290-14-6"
 
 metadata-files:
   - ../_variables.yml

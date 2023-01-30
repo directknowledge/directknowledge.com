@@ -1,0 +1,67 @@
+---
+pagetitle: "Writing The Preface - Direct Knowledge"
+slug: writing-the-preface
+title: Writing The Preface
+subtitle: of a Mathematics Book
+author: David A. Smith
+date: 2023-01-31
+updated: 2023-01-30
+categories: Writing
+abstract: "Crafting the preface of a mathematics book can be daunting, but it is an essential step in creating an engaging and effective publication. Here we will discuss best practices for writing a preface, which includes establishing tone, introducing yourself as an author, outlining any goals you have for the work and highlighting key topics that are discussed."
+citation:
+  url: https://directknowledge.com/blog/writing-the-preface/
+  publisher: "Direct Knowledge"
+keywords: ["mathematics", "writing"]
+format:
+  html:
+    toc: true
+    number-sections: true
+    number-depth: 2
+    #include-in-header: 
+      #- ../../../_schema/breadcrumbs.html
+      #- ../../../_schema/article.html
+    output-file: index.html
+  pdf:
+    cite-method: biblatex
+    pdf-engine: pdflatex
+    toc: false
+    number-sections: true
+    colorlinks: false
+    output-file: writing-the-preface.pdf
+    #include-in-header:
+      #- ../../../_tex/packages.tex
+    #include-after-body: 
+      #- ../../../_tex/bib.qmd
+  latex:
+    toc: true
+    number-sections: true
+    output-file: writing-the-preface.tex
+  revealjs:
+    incremental: true
+    scrollable: true
+    smaller: true
+    keyboard: true
+    output-file: writing-the-preface.html
+bibliography: ../references.bib
+---
+::: {.content-visible when-format="html" .d-print-none }
+![Writing The Preface: of a Mathematics Book](writing-the-preface-1024.jpeg)
+:::
+
+
+
+
+
+
+
+:::{.content-hidden unless-format="html"}
+
+{{< include ../footer.html >}}
+
+## Additonal Information {.unlisted .unnumbered .appendix}
+
+- Last updated on {{< meta updated >}}
+- Print (PDF) [{{< meta title >}}]({{< meta slug >}}.pdf){target="_blank"}
+- Source code (LaTeX) [{{< meta title >}}]({{< meta slug >}}.tex){target="_blank"}
+- Slideshow (RevealJS) [{{< meta title >}}]({{< meta slug >}}.html){target="_blank"}
+:::

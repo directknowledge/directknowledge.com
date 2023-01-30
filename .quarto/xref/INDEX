@@ -106,5 +106,41 @@
   },
   "acknowledgements.qmd": {
     "acknowledgements.html": "78153886"
+  },
+  "teaching-philosophy.qmd": {
+    "teaching-philosophy.html": "9d3b15c5"
+  },
+  "writing-mathematics.qmd": {
+    "writing-mathematics.html": "be291268"
+  },
+  "mathematics-on-the-web.qmd": {
+    "mathematics-on-the-web.html": "eef58ac2"
+  },
+  "blog/posts/post-with-code/index.qmd": {
+    "index.html": "f67b0c57"
+  },
+  "blog/posts/welcome/index.qmd": {
+    "index.html": "3f4e503f"
+  },
+  "blog/index.qmd": {
+    "index.html": "e82c9cc5"
+  },
+  "blog/about.qmd": {
+    "about.html": "41f1dfe5"
+  },
+  "blog/writing-mathematics.qmd": {
+    "writing-mathematics.html": "f634bc48"
+  },
+  "blog/mathematics-on-the-web.qmd": {
+    "mathematics-on-the-web.html": "150d4d21"
+  },
+  "blog/mathematics-on-the-web/index.qmd": {
+    "index.html": "dc587a3e"
+  },
+  "blog/writing-mathematics/index.qmd": {
+    "index.html": "d837c766"
+  },
+  "blog/preface-mathematics-book/index.qmd": {
+    "index.html": "753d1c25"
   }
 }

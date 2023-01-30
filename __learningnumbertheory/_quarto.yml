@@ -24,6 +24,7 @@ book:
     title: "Learning Number Theory"
   site-url: https://directknowledge.com/learning-number-theory/
   description: "Learning Number Theory"
+  isbn: "978-1-951290-12-2"
 
 metadata-files:
   - ../_variables.yml

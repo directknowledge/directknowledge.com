@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Learning Linear Algebra",
     "section": "",
-    "text": "Preface"
+    "text": "Preface\nDavid A. Smith \\ Fort Worth, Texas"
   },
   {
     "objectID": "index.html#short-description",
@@ -28,11 +28,18 @@
     "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 1/27/2023.\nFirst draft published on 1/18/2023."
   },
   {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
+    "objectID": "index.html#writing-philosophy-1",
+    "href": "index.html#writing-philosophy-1",
+    "title": "Learning Linear Algebra",
+    "section": "Writing Philosophy",
+    "text": "Writing Philosophy\nWriting mathematics with confidence and eloquence requires more than creativity; strong critical thinking skills are essential for constructing persuasive arguments to communicate ideas effectively. There must also be a mastery of the technical elements that give your writing its quality. To read about my exacting standards, please check out https://directknowledge.com/writing"
+  },
+  {
+    "objectID": "index.html#acknowledgements-1",
+    "href": "index.html#acknowledgements-1",
     "title": "Learning Linear Algebra",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\nA hearty debt of gratitude is owed to those who worked tirelessly and selflessly to see this book through its final version. Their contributions were immense, making the publication process a true success - I am extremely thankful for their efforts!\nDavid A. Smith \\ Fort Worth, Texas"
+    "text": "Acknowledgements\nA hearty debt of gratitude is owed to those who worked tirelessly and selflessly to see this book through its final version. Their contributions were immense, making the publication process a true success - I am extremely thankful for their efforts!"
   },
   {
     "objectID": "systems-of-linear-equations.html#the-elimination-method",

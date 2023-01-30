@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Learning Number Theory",
     "section": "",
-    "text": "Preface"
+    "text": "Preface\nDavid A. Smith \\ Fort Worth, Texas"
   },
   {
     "objectID": "index.html#short-description",
@@ -28,11 +28,18 @@
     "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 1/27/2023.\nFirst draft published on 1/18/2023."
   },
   {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
+    "objectID": "index.html#writing-philosophy-1",
+    "href": "index.html#writing-philosophy-1",
+    "title": "Learning Number Theory",
+    "section": "Writing Philosophy",
+    "text": "Writing Philosophy\nWriting effectively and with intention requires more than just a penchant for words; it necessitates an innate assurance that allows one to express unique ideas, reasoned perspectives, and engaging arguments. Establishing technical proficiency in syntax, grammar rules, and punctuation is also essential – standards I practice diligently. To learn the specifics of my writing practices visit https://directknowledge.com/writing"
+  },
+  {
+    "objectID": "index.html#acknowledgements-1",
+    "href": "index.html#acknowledgements-1",
     "title": "Learning Number Theory",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\nI cannot adequately express my gratitude for all of those who dedicated their efforts to bring this book into its finished state. Their generous aid is greatly admired, and I extend them many thanks.\nDavid A. Smith \\ Fort Worth, Texas"
+    "text": "Acknowledgements\nI cannot adequately express my gratitude for all of those who dedicated their efforts to bring this book into its finished state. Their generous aid is greatly admired, and I extend them many thanks."
   },
   {
     "objectID": "peanos-axioms.html#addition",

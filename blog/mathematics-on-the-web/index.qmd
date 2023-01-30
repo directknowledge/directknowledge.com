@@ -1,0 +1,131 @@
+---
+pagetitle: "Mathematics on the Web - Direct Knowledge"
+slug: mathematics-on-the-web
+title: Mathematics on the Web
+subtitle: Acknowledgements 
+author: David A. Smith
+date: 2023-01-27
+updated: 2023-01-30
+categories: Writing
+abstract: How do I do it? How do I publish mathematics books on the web? How do I publish interactive, programmable, and full-media mathematical experiences on the web? Find out by reading the acknowledgements listed below. 
+citation:
+  url: https://directknowledge.com/blog/mathematics-on-the-web/
+  publisher: "Direct Knowledge"
+keywords: ["mathematics", "web", "publishing", "acknowledgements"]
+format:
+  html:
+    toc: true
+    number-sections: true
+    number-depth: 2
+    #include-in-header: 
+      #- ../../../_html/breadcrumbs.html
+      #- ../../../_html/article.html
+    output-file: index.html
+  pdf:
+    documentclass: article
+    papersize: letter
+    cite-method: biblatex
+    pdf-engine: pdflatex
+    toc: false
+    number-sections: false
+    colorlinks: false
+    output-file: mathematics-on-the-web.pdf
+    include-in-header:
+      - ../_tex/packages.tex
+    include-after-body: 
+      - ../_tex/footer.tex
+  latex:
+    toc: true
+    number-sections: true
+    output-file: mathematics-on-the-web.tex
+  revealjs:
+    incremental: true
+    scrollable: true
+    smaller: true
+    keyboard: true
+    output-file: mathematics-on-the-web.html
+bibliography: ../references.bib
+---
+::: {.content-visible when-format="html" .d-print-none }
+![Mathematics on the Web: Acknowledgements](mathematics-on-the-web-1024.jpeg)
+:::
+
+
+
+- @knuth1989mathematical
+- @steenrod1973write
+- @krantz2017primer
+
+
+It is impossible to overstate the importance of those who helped bring [these books into their completed form](#mathematics-books-on-the-web). I am deeply grateful for their generous contributions and would like to express my sincere appreciation here. 
+
+## MathJax 
+MathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for [enabling mathematical equations and formulas to be written in HTML documents](https://www.mathjax.org). 
+
+> I am truly thankful for the use of this incredible tool.
+
+## Python
+The Python programming language has become increasingly sought-after for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth, making it one of the most popular languages on the market today. 
+
+> I'd like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in [developing python](https://www.python.org). Your contributions are invaluable; without them these books would not have been possible.
+
+## PyScript
+PyScript enables users of all backgrounds to create powerful Python-based web applications with ease. [PyScript revolutionizes the way users can create engaging](https://pyscript.net), dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology, learners are granted unprecedented access to powerful tools previously inaccessible in browser environments. 
+
+> I am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier. 
+
+## Quarto
+[Quarto](https://quarto.org) is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations, websites, blogs, and books in html, pdf, and epub formats. With the help of scientific markdown you'll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options. 
+
+> Quarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful.
+
+## Pandoc
+[Pandoc](https://pandoc.org) is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It's free-software too, forming an essential part in many publishing workflows due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence. 
+
+> Pandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource.
+
+## Visual Studio Code
+[Visual Studio Code](https://code.visualstudio.com) is a powerful, cross-platform source-code editor created by Microsoft. It boasts intuitive features like debugging support, syntax highlighting and code refactoring - not to mention embedded Git - that make coding faster and easier than ever before.  
+
+> VS Code has been key in helping us create, build, and refine our work - for that I am immensely grateful.
+
+## GitHub
+[GitHub](https://github.com/about) offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code through tools such as access control, bug tracking & feature requests which enable attempts to create more efficient projects. 
+
+ > GitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence.
+
+## Netlify
+[Netlify](https://www.netlify.com) empowers developers to create, launch, and manage web applications with innovative cloud computing services. Their platform streamlines the process of building robust sites that can quickly scale or deploy serverless backends for dynamic experiences. 
+
+> I am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together. 
+
+## RevealJS
+[RevealJS](https://revealjs.com) is an open source HTML presentation framework that allows you to create captivating presentations without cost or hassle. 
+
+> I offer my sincere gratitude to the Reveal.js community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way.
+
+## YouTube
+[YouTube is an invaluable platform](https://about.youtube) that we are proud to be part of. 
+
+> I would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube's vast influence on culture to reach ever further.
+
+## Direct Knowledge
+So if you're new to any of the technologies listed above, you might question how I bring all this together. In case so, here's a brief explanation. 
+
+I use Visual Studio Code to write in Html, Css, Js,  Markdown, Quarto Markdown, Python, and TeX. After setting up a few configuration files (one-time only), I issue the command  "quarto render" to build the static files. The website, books, blog(s), and slides are outputs from this building process. Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc. These files are uploaded to a Github repository and then published using Netlify. I then use the ReavalJS slideshows to make YouTube videos. I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost. 
+
+> These books, and their presentations, wouldn't have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work.
+
+
+
+:::{.content-hidden unless-format="html"}
+
+{{< include ../footer.html >}}
+
+## Additonal Information {.unlisted .unnumbered .appendix}
+
+- Last updated on {{< meta updated >}}
+- Print (PDF) [{{< meta title >}}]({{< meta slug >}}.pdf){target="_blank"}
+- Source code (LaTeX) [{{< meta title >}}]({{< meta slug >}}.tex){target="_blank"}
+- Slideshow (RevealJS) [{{< meta title >}}]({{< meta slug >}}.html){target="_blank"}
+:::

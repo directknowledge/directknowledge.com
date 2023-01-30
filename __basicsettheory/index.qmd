@@ -34,35 +34,42 @@ Here is where I keep a log of the majors changes as I finish writing the book.
 
 ::: {.content-hidden }
 ## Purpose {.unnumbered .unlisted }
-**The major themes of the text**.
-**Python**.
-**Proofs**.
-**Connections**.
-**Concepts**.
 :::
 
 ::: {.content-hidden }
 ## Audience {.unnumbered .unlisted }
-**How I wrote this book**.
-**Pedagogical features**.
 :::
 
 ::: {.content-hidden }
 ## Stucture {.unnumbered .unlisted }
-**References**.
 :::
 
 ::: {.content-hidden }
-## Teaching {.unnumbered .unlisted }
-**Philosphy**.
-**Examples**.
+## Accuracy {.unnumbered .unlisted }
 :::
 
 
 
+::: {.content-visible when-format="pdf"}
+## Writing Philosophy {.unnumbered .unlisted }
+{{< meta writing_bst >}} 
+:::
 
+::: {.content-visible when-format="html"}
+## Writing Philosophy 
+{{< meta writing_bst >}} 
+:::
+
+::: {.content-visible when-format="pdf"}
 ## Acknowledgements {.unnumbered .unlisted }
 {{< meta acknowledgements_bst >}} 
+:::
+
+::: {.content-visible when-format="html"}
+## Acknowledgements
+{{< meta acknowledgements_bst >}} 
+:::
+
 
 David A. Smith \\ Fort Worth, Texas
 

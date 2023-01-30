@@ -24,6 +24,7 @@ book:
     title: "Learning Linear Algebra"
   site-url: https://directknowledge.com/learning-linear-algebra/
   description: "Learning Linear Algebra"
+  isbn: "978-1-951290-04-7"
 
 metadata-files:
   - ../_variables.yml

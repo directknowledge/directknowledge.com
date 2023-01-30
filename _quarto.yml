@@ -8,7 +8,7 @@ project:
     - assets
     - images
   post-render: 
-    - _webtools/render-books.py
+    - _webtools/render.py
 
 
 website:
@@ -25,27 +25,29 @@ website:
       - text: "Books"
         menu: 
           - text: "Basic Set Theory"
-            href: https://directknowledge.com/basic-set-theory/
+            href: /basic-set-theory/
             icon: book
             aria-label: Basic Set Theory Book
           - text: "Learning Number Theory"
-            href: https://directknowledge.com/learning-number-theory/
+            href: /learning-number-theory/
             icon: book
             aria-label: Learning Linear Algebra Book
           - text: "Learning Linear Algebra"
-            href: https://directknowledge.com/learning-linear-algebra/
+            href: /learning-linear-algebra/
             icon: book
             aria-label: Learning Linear Algebra Book
           - text: "Single Variable Calculus"
-            href: https://directknowledge.com/single-variable-calculus/
+            href: /single-variable-calculus/
             icon: book
             aria-label: Single Variable Calculus Book
           - text: "Multivariable Calculus"
-            href: https://directknowledge.com/multivariable-calculus/
+            href: /multivariable-calculus/
             icon: book
             aria-label: Multivariable Calculus Book
-      - href: http://directknowledge.com/about.html
+      - href: /about.html
         text: "About"
+      - href: /blog/ 
+        text: "Blog"
       - href: https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/
         icon: youtube
         aria-label: YouTube
@@ -77,5 +79,3 @@ format:
       - _html/website.html
       - _html/mathjax.html
       - _html/analytics.html
-
-

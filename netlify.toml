@@ -45,3 +45,12 @@
   to = "https://directknowledge.com/multivariable-calculcus/"
   status = 301
 
+[[redirects]]
+  from = "https://directknowledge.com/polynomial-congruences/"
+  to = "https://directknowledge.com/learning-number-theory/polynomial-congruences.html"
+  status = 301
+
+[[redirects]]
+  from = "https://directknowledge.com/writing"
+  to = "localhost:8000/blog/writing-mathematics/"
+  status = 301

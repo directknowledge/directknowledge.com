@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Single Variable Calculus",
     "section": "",
-    "text": "Preface"
+    "text": "Preface\nDavid A. Smith \\ Fort Worth, Texas"
   },
   {
     "objectID": "index.html#short-description",
@@ -28,11 +28,18 @@
     "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 1/27/2023.\nFirst draft published on 1/18/2023."
   },
   {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
+    "objectID": "index.html#writing-philosophy-1",
+    "href": "index.html#writing-philosophy-1",
+    "title": "Single Variable Calculus",
+    "section": "Writing Philosophy",
+    "text": "Writing Philosophy\nWriting mathematics well requires more than just a knack for creativity: critical thinking is necessary to construct convincing arguments and effectively communicate ideas. Additionally, the technical aspects of writing must be mastered to ensure quality work that adheres to my high standards - learn more at https://directknowledge.com/writing"
+  },
+  {
+    "objectID": "index.html#acknowledgements-1",
+    "href": "index.html#acknowledgements-1",
     "title": "Single Variable Calculus",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\nBehind every printed word lies those who helped make it possible. So, I’m profoundly thankful to all the generous contributors whose efforts have enabled this book’s fruition and would like to earnestly express my gratitude for their invaluable role in its completion.\nDavid A. Smith \\ Fort Worth, Texas"
+    "text": "Acknowledgements\nBehind every printed word lies those who helped make it possible. So, I’m profoundly thankful to all the generous contributors whose efforts have enabled this book’s fruition and would like to earnestly express my gratitude for their invaluable role in its completion."
   },
   {
     "objectID": "limits-and-continuity.html#an-intuitive-introduction-to-limits",

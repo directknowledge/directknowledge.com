@@ -1,0 +1,10 @@
+# Blog Posts
+
+freeze: true
+#title-block-banner: true
+title-block-banner: "#303030"
+title-block-banner-color: "#FFFFFF"
+toc: true
+citation: true
+date-format: full
+

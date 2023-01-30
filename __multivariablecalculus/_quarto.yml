@@ -27,6 +27,7 @@ book:
     title: "Multivariable Calculus"
   site-url: https://directknowledge.com/multivariable-calculus/
   description: "Multivariable Calculus"  
+  isbn: "978-1-951290-67-2"
 
 metadata-files:
   - ../_variables.yml

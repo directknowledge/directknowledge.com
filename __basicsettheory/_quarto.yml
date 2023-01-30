@@ -10,6 +10,15 @@ project:
 
 book:
   title: "Basic Set Theory"
+  subtitle: "That Anyone Can Learn"
+  site-url: https://directknowledge.com/basic-set-theory/
+  description: "This book is for beginners who want to explore the fascinating world of logical reasoning, mathematical proofs, and set theory."
+  isbn: "978-1-951290-10-8"
+  language: "en"
+  medium: "digital online"
+  public-url: "https://directknowledge.com"
+  publisher: "Direct Knowledge"
+  url: https://directknowledge.com/basic-set-theory/
   chapters:
     - index.qmd
     - propositional-logic.qmd
@@ -23,8 +32,6 @@ book:
     - references.qmd
   sidebar:
     title: "Basic Set Theory"
-  site-url: https://directknowledge.com/basic-set-theory/
-  description: "Basic Set Theory"
 
 metadata-files:
   - ../_variables.yml
