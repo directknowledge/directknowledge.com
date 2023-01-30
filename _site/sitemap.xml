@@ -2,26 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://directknowledge.com/index.html</loc>
-    <lastmod>2023-01-30T14:13:02.865Z</lastmod>
+    <lastmod>2023-01-30T21:29:21.353Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/blog/mathematics-on-the-web/index.html</loc>
-    <lastmod>2023-01-30T14:13:03.552Z</lastmod>
+    <lastmod>2023-01-30T21:29:22.302Z</lastmod>
   </url>
   <url>
-    <loc>https://directknowledge.com/blog/preface-mathematics-book/index.html</loc>
-    <lastmod>2023-01-30T14:13:04.138Z</lastmod>
+    <loc>https://directknowledge.com/blog/mathematics-on-the-web/mathematics-on-the-web.html</loc>
+    <lastmod>2023-01-30T21:29:31.286Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/blog/index.html</loc>
-    <lastmod>2023-01-30T14:13:04.591Z</lastmod>
+    <lastmod>2023-01-30T21:29:32.218Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directknowledge.com/blog/writing-the-preface/index.html</loc>
+    <lastmod>2023-01-30T21:29:32.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directknowledge.com/blog/writing-the-preface/writing-the-preface.html</loc>
+    <lastmod>2023-01-30T21:29:39.945Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/blog/writing-mathematics/index.html</loc>
-    <lastmod>2023-01-30T14:13:05.216Z</lastmod>
+    <lastmod>2023-01-30T21:29:40.651Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directknowledge.com/blog/writing-mathematics/writing-mathematics.html</loc>
+    <lastmod>2023-01-30T21:29:49.384Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/about.html</loc>
-    <lastmod>2023-01-30T14:13:05.597Z</lastmod>
+    <lastmod>2023-01-30T21:29:49.841Z</lastmod>
   </url>
 </urlset>

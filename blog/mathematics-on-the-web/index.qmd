@@ -7,23 +7,28 @@ author: David A. Smith
 date: 2023-01-27
 updated: 2023-01-30
 categories: Writing
+image: mathematics-on-the-web-1024.jpeg
+image-alt: "Mathematics on the Web Acknowledgements"
+description: "Mathematics on the Web: Acknowledgements"
 abstract: How do I do it? How do I publish mathematics books on the web? How do I publish interactive, programmable, and full-media mathematical experiences on the web? Find out by reading the acknowledgements listed below. 
 citation:
   url: https://directknowledge.com/blog/mathematics-on-the-web/
   publisher: "Direct Knowledge"
 keywords: ["mathematics", "web", "publishing", "acknowledgements"]
+keyword: mathematics web publishing acknowledgements
 format:
   html:
     toc: true
     number-sections: true
     number-depth: 2
-    #include-in-header: 
-      #- ../../../_html/breadcrumbs.html
-      #- ../../../_html/article.html
+    include-in-header: 
+      - ../_html/breadcrumbs.html
+      - ../_html/article.html
     output-file: index.html
   pdf:
     documentclass: article
     papersize: letter
+    fontsize: 12pt
     cite-method: biblatex
     pdf-engine: pdflatex
     toc: false
@@ -47,7 +52,7 @@ format:
 bibliography: ../references.bib
 ---
 ::: {.content-visible when-format="html" .d-print-none }
-![Mathematics on the Web: Acknowledgements](mathematics-on-the-web-1024.jpeg)
+![](mathematics-on-the-web-1024.jpeg){fig-alt="Mathematics on the Web: Acknowledgements"}
 :::
 
 

@@ -135,12 +135,24 @@
     "mathematics-on-the-web.html": "150d4d21"
   },
   "blog/mathematics-on-the-web/index.qmd": {
-    "index.html": "dc587a3e"
+    "index.html": "dc587a3e",
+    "index.tex": "e7586714",
+    "mathematics-on-the-web.tex": "a262b5bd",
+    "mathematics-on-the-web.html": "1e2e34eb"
   },
   "blog/writing-mathematics/index.qmd": {
-    "index.html": "d837c766"
+    "index.html": "d837c766",
+    "index.tex": "b5d41419",
+    "writing-mathematics.tex": "f5889851",
+    "writing-mathematics.html": "0eeb82c4"
   },
   "blog/preface-mathematics-book/index.qmd": {
     "index.html": "753d1c25"
+  },
+  "blog/writing-the-preface/index.qmd": {
+    "index.html": "3242c780",
+    "index.tex": "5ed006c8",
+    "writing-the-preface.tex": "e4fd4936",
+    "writing-the-preface.html": "81f0d023"
   }
 }

@@ -1,0 +1,32 @@
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://directknowledge.com/",
+                "name": "Home",
+                "image": "https://directknowledge.com/assets/directknowledge-logo.svg"
+            }
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://directknowledge.com/blog/",
+                "name": "Blog",
+                "image": "https://directknowledge.com/assets/lets-math-mug.png"
+            }
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@id": "https://directknowledge.com/blog/{{< meta slug >}}/",
+                "name": "{{< meta title >}}",
+                "image": "https://directknowledge.com/blog/slug/{{< meta slug >}}.png"
+            }
+        }]
+    }
+</script>

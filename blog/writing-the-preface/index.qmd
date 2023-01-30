@@ -7,31 +7,38 @@ author: David A. Smith
 date: 2023-01-31
 updated: 2023-01-30
 categories: Writing
+image: writing-the-preface-1024.jpeg
+image-alt: "Writing The Preface of a Mathematics Book"
+description: "Writing The Preface of a Mathematics Book"
 abstract: "Crafting the preface of a mathematics book can be daunting, but it is an essential step in creating an engaging and effective publication. Here we will discuss best practices for writing a preface, which includes establishing tone, introducing yourself as an author, outlining any goals you have for the work and highlighting key topics that are discussed."
 citation:
   url: https://directknowledge.com/blog/writing-the-preface/
   publisher: "Direct Knowledge"
 keywords: ["mathematics", "writing"]
+keyword: mathematics writing
 format:
   html:
     toc: true
     number-sections: true
     number-depth: 2
-    #include-in-header: 
-      #- ../../../_schema/breadcrumbs.html
-      #- ../../../_schema/article.html
+    include-in-header: 
+      - ../_html/breadcrumbs.html
+      - ../_html/article.html
     output-file: index.html
   pdf:
+    documentclass: article
+    papersize: letter
+    fontsize: 12pt
     cite-method: biblatex
     pdf-engine: pdflatex
     toc: false
-    number-sections: true
+    number-sections: false
     colorlinks: false
     output-file: writing-the-preface.pdf
-    #include-in-header:
-      #- ../../../_tex/packages.tex
-    #include-after-body: 
-      #- ../../../_tex/bib.qmd
+    include-in-header:
+      - ../_tex/packages.tex
+    include-after-body: 
+      - ../_tex/footer.tex
   latex:
     toc: true
     number-sections: true
@@ -45,7 +52,7 @@ format:
 bibliography: ../references.bib
 ---
 ::: {.content-visible when-format="html" .d-print-none }
-![Writing The Preface: of a Mathematics Book](writing-the-preface-1024.jpeg)
+![](writing-the-preface-1024.jpeg){fig-alt="Writing The Preface: of a Mathematics Book"}
 :::
 
 
