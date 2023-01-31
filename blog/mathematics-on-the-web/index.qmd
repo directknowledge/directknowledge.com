@@ -27,9 +27,10 @@ format:
     output-file: index.html
   pdf:
     documentclass: article
-    papersize: letter
-    fontsize: 12pt
+    classoption: [twoside, 12pt, letterpaper, fleqn]
     cite-method: biblatex
+    biblatexoptions:
+      - citestyle = authoryear
     pdf-engine: pdflatex
     toc: false
     number-sections: false
@@ -39,10 +40,22 @@ format:
       - ../_tex/packages.tex
     include-after-body: 
       - ../_tex/footer.tex
+    keep-tex: true
   latex:
-    toc: true
-    number-sections: true
+    documentclass: article
+    classoption: [twoside, 12pt, letterpaper, fleqn]
+    cite-method: biblatex
+    biblatexoptions:
+      - citestyle = authoryear
+    pdf-engine: pdflatex
+    toc: false
+    number-sections: false
+    colorlinks: false
     output-file: mathematics-on-the-web.tex
+    include-in-header:
+      - ../_tex/packages.tex
+    include-after-body: 
+      - ../_tex/footer.tex
   revealjs:
     incremental: true
     scrollable: true
@@ -65,22 +78,22 @@ MathJax is a powerful open source typesetting platform that enables users to gen
 > I am truly thankful for the use of this incredible tool.
 
 ## Python
-The Python programming language has become increasingly sought-after for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth, making it one of the most popular languages on the market today. 
+The Python programming language has become [increasingly sought-after](https://pypl.github.io/PYPL.html) for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth (see @Millman2011), making it one of the most popular languages on the market today. 
 
 > I'd like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in [developing python](https://www.python.org). Your contributions are invaluable; without them these books would not have been possible.
 
 ## PyScript
-PyScript enables users of all backgrounds to create powerful Python-based web applications with ease. [PyScript revolutionizes the way users can create engaging](https://pyscript.net), dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology, learners are granted unprecedented access to powerful tools previously inaccessible in browser environments. 
+PyScript enables users of all backgrounds to create powerful Python-based web applications with ease. [PyScript revolutionizes the way users can create engaging](https://pyscript.net), dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology (see @Arepalli2022), learners are granted unprecedented access to powerful tools previously inaccessible in browser environments. 
 
 > I am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier. 
 
 ## Quarto
-[Quarto](https://quarto.org) is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations, websites, blogs, and books in html, pdf, and epub formats. With the help of scientific markdown you'll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options. 
+[Quarto](https://quarto.org) is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations, websites, blogs, and books in html, pdf, and epub formats. With the help of scientific markdown you'll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options (e.g. see @aust). 
 
 > Quarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful.
 
 ## Pandoc
-[Pandoc](https://pandoc.org) is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It's free-software too, forming an essential part in many publishing workflows due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence. 
+[Pandoc](https://pandoc.org) is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It's free-software too, forming an essential part in many publishing workflows (see @krewinkel2017formatting) due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence (see @mailund2019introducing). 
 
 > Pandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource.
 
@@ -90,7 +103,7 @@ PyScript enables users of all backgrounds to create powerful Python-based web ap
 > VS Code has been key in helping us create, build, and refine our work - for that I am immensely grateful.
 
 ## GitHub
-[GitHub](https://github.com/about) offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code through tools such as access control, bug tracking & feature requests which enable attempts to create more efficient projects. 
+[GitHub](https://github.com/about) offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code through tools such as access control, bug tracking, feature requests, and discussions (@hata2022github) which enable attempts to create more efficient projects. 
 
  > GitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence.
 
@@ -116,7 +129,9 @@ I use Visual Studio Code to write in Html, Css, Js,  Markdown, Quarto Markdown, 
 
 > These books, and their presentations, wouldn't have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work.
 
-
+:::{.content-hidden unless-format="html"}
+If you would like any help with understanding this, please contact me at [david@directknowledge.com](mailto:david@directknowledge.com).
+:::
 
 :::{.content-hidden unless-format="html"}
 

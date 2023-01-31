@@ -27,9 +27,10 @@ format:
     output-file: index.html
   pdf:
     documentclass: article
-    papersize: letter
-    fontsize: 12pt
+    classoption: [twoside, 12pt, letterpaper, fleqn]
     cite-method: biblatex
+    biblatexoptions:
+      - citestyle = authoryear
     pdf-engine: pdflatex
     toc: false
     number-sections: false
@@ -39,10 +40,22 @@ format:
       - ../_tex/packages.tex
     include-after-body: 
       - ../_tex/footer.tex
+    keep-tex: true
   latex:
-    toc: true
-    number-sections: true
+    documentclass: article
+    classoption: [twoside, 12pt, letterpaper, fleqn]
+    cite-method: biblatex
+    biblatexoptions:
+      - citestyle = authoryear
+    pdf-engine: pdflatex
+    toc: false
+    number-sections: false
+    colorlinks: false
     output-file: writing-the-preface.tex
+    include-in-header:
+      - ../_tex/packages.tex
+    include-after-body: 
+      - ../_tex/footer.tex
   revealjs:
     incremental: true
     scrollable: true
