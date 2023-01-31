@@ -17,34 +17,34 @@ def html_revise_blog():
     #pass
 
     ## find all js on page
-    js_1 = '<script src="site_libs/quarto-nav/quarto-nav.js"></script>'
+    js_1 = '<script src="../site_libs/quarto-nav/quarto-nav.js"></script>'
     js = js_1 + '\n'
-    js_2 = '<script src="site_libs/quarto-nav/headroom.min.js"></script>'
+    js_2 = '<script src="../site_libs/quarto-nav/headroom.min.js"></script>'
     js = js + js_2 + '\n'
-    js_3 = '<script src="site_libs/clipboard/clipboard.min.js"></script>'
+    js_3 = '<script src="../site_libs/clipboard/clipboard.min.js"></script>'
     js = js + js_3 + '\n'
-    js_4 = '<script src="site_libs/quarto-search/autocomplete.umd.js"></script>'
+    js_4 = '<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>'
     js = js + js_4 + '\n'
-    js_5 = '<script src="site_libs/quarto-search/fuse.min.js"></script>'
+    js_5 = '<script src="../site_libs/quarto-search/fuse.min.js"></script>'
     js = js + js_5 + '\n'
-    js_6 = '<script src="site_libs/quarto-search/quarto-search.js"></script>'
+    js_6 = '<script src="../site_libs/quarto-search/quarto-search.js"></script>'
     js = js + js_6 + '\n'
-    js_7 = '<script src="site_libs/quarto-html/quarto.js"></script>'
+    js_7 = '<script src="../site_libs/quarto-html/quarto.js"></script>'
     js = js + js_7 + '\n'
-    js_8 = '<script src="site_libs/quarto-html/popper.min.js"></script>'
+    js_8 = '<script src="../site_libs/quarto-html/popper.min.js"></script>'
     js = js + js_8 + '\n'
-    js_9 = '<script src="site_libs/quarto-html/tippy.umd.min.js"></script>'
+    js_9 = '<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>'
     js = js + js_9 + '\n'
-    js_10 = '<script src="site_libs/quarto-html/anchor.min.js"></script>'
+    js_10 = '<script src="../site_libs/quarto-html/anchor.min.js"></script>'
     js = js + js_10 + '\n'
-    js_11 = '<script src="site_libs/bootstrap/bootstrap.min.js"></script>'
+    js_11 = '<script src="../site_libs/bootstrap/bootstrap.min.js"></script>'
     js = js + js_11 + '\n' 
     js = js + '</body>' 
 
 
-    #list of all images files in the courses-thumbnails directory 
-    html_files = glob.glob("*.html", recursive=True)
-    #print(html_files)
+    #list of all files
+    html_files = glob.glob("**/*.html", recursive=True)
+    print(html_files)
     
     for html_file in html_files:
         # which file is working
@@ -55,6 +55,7 @@ def html_revise_blog():
             newText = f.read()
             # navbar 
             newText = newText.replace('class="navbar-brand" href="./index.html"', 'aria-label="Blog" class="navbar-brand" href="https://directknowledge.com"')
+            newText = newText.replace('class="navbar-brand" href="../index.html"', 'aria-label="Blog" class="navbar-brand" href="https://directknowledge.com"')
             newText = newText.replace('-logo.svg" alt="Direct Knowledge Logo"', '-logo.svg" alt="Direct Knowledge Logo" width="28" height="24" ')
             # removes
             remove_1 = '<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>'

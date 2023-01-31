@@ -4,84 +4,84 @@
     "href": "mathematics-on-the-web/index.html",
     "title": "Mathematics on the Web",
     "section": "",
-    "text": "It is impossible to overstate the importance of those who helped bring these books into their completed form. I am deeply grateful for their generous contributions and would like to express my sincere appreciation here."
+    "text": "This article does not explain why it is arduous to publish mathematics on the web, but rather briefly outlines the solution to the problem that I have implemented.1\nIt is impossible to overstate the importance of those who helped bring these books into their completed form. I am deeply grateful for their generous contributions and would like to express my sincere appreciation here."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#mathjax",
     "href": "mathematics-on-the-web/index.html#mathjax",
     "title": "Mathematics on the Web",
-    "section": "1 MathJax",
-    "text": "1 MathJax\nMathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for enabling mathematical equations and formulas to be written in HTML documents.\n\nI am truly thankful for the use of this incredible tool."
+    "section": "MathJax",
+    "text": "MathJax\nMathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication (see Cervone (2012), Cervone, Krautzberger, and Sorge (2016)) - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for enabling mathematical equations and formulas to be written in HTML documents.\n\nI am truly thankful for the use of this incredible tool."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#python",
     "href": "mathematics-on-the-web/index.html#python",
     "title": "Mathematics on the Web",
-    "section": "2 Python",
-    "text": "2 Python\nThe Python programming language has become increasingly sought-after for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth, making it one of the most popular languages on the market today.\n\nI’d like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in developing python. Your contributions are invaluable; without them these books would not have been possible."
+    "section": "Python",
+    "text": "Python\nThe Python programming language has become increasingly sought-after for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth, making it one of the most popular languages on the market today.\n\nI’d like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in developing python. Your contributions are invaluable; without them these books would not have been possible."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#pyscript",
     "href": "mathematics-on-the-web/index.html#pyscript",
     "title": "Mathematics on the Web",
-    "section": "3 PyScript",
-    "text": "3 PyScript\nPyScript enables users of all backgrounds to create powerful Python-based web applications with ease. PyScript revolutionizes the way users can create engaging, dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology, learners are granted unprecedented access to powerful tools previously inaccessible in browser environments.\n\nI am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier."
+    "section": "PyScript",
+    "text": "PyScript\nPyScript enables users of all backgrounds to create powerful Python-based web applications with ease. PyScript revolutionizes the way users can create engaging, dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology, learners are granted unprecedented access to powerful tools previously inaccessible in browser environments.\n\nI am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#quarto",
     "href": "mathematics-on-the-web/index.html#quarto",
     "title": "Mathematics on the Web",
-    "section": "4 Quarto",
-    "text": "4 Quarto\nQuarto is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations, websites, blogs, and books in html, pdf, and epub formats. With the help of scientific markdown you’ll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options.\n\nQuarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful."
+    "section": "Quarto",
+    "text": "Quarto\nQuarto is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations, websites, blogs, and books in html, pdf, and epub formats. With the help of scientific markdown you’ll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options.\n\nQuarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#pandoc",
     "href": "mathematics-on-the-web/index.html#pandoc",
     "title": "Mathematics on the Web",
-    "section": "5 Pandoc",
-    "text": "5 Pandoc\nPandoc is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It’s free-software too, forming an essential part in many publishing workflows due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence.\n\nPandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource."
+    "section": "Pandoc",
+    "text": "Pandoc\nPandoc is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It’s free-software too, forming an essential part in many publishing workflows due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence.\n\nPandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#visual-studio-code",
     "href": "mathematics-on-the-web/index.html#visual-studio-code",
     "title": "Mathematics on the Web",
-    "section": "6 Visual Studio Code",
-    "text": "6 Visual Studio Code\nVisual Studio Code is a powerful, cross-platform source-code editor created by Microsoft. It boasts intuitive features like debugging support, syntax highlighting and code refactoring - not to mention embedded Git - that make coding faster and easier than ever before.\n\nVS Code has been key in helping us create, build, and refine our work - for that I am immensely grateful."
+    "section": "Visual Studio Code",
+    "text": "Visual Studio Code\nVisual Studio Code is a powerful, cross-platform source-code editor created by Microsoft. It boasts intuitive features like debugging support, syntax highlighting and code refactoring - not to mention embedded Git - that make coding faster and easier than ever before.\n\nVS Code has been key in helping us create, build, and refine our work - for that I am immensely grateful."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#github",
     "href": "mathematics-on-the-web/index.html#github",
     "title": "Mathematics on the Web",
-    "section": "7 GitHub",
-    "text": "7 GitHub\nGitHub offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code through tools such as access control, bug tracking & feature requests which enable attempts to create more efficient projects.\n\nGitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence."
+    "section": "GitHub",
+    "text": "GitHub\nGitHub offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code through tools such as access control, bug tracking & feature requests which enable attempts to create more efficient projects.\n\nGitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#netlify",
     "href": "mathematics-on-the-web/index.html#netlify",
     "title": "Mathematics on the Web",
-    "section": "8 Netlify",
-    "text": "8 Netlify\nNetlify empowers developers to create, launch, and manage web applications with innovative cloud computing services. Their platform streamlines the process of building robust sites that can quickly scale or deploy serverless backends for dynamic experiences.\n\nI am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together."
+    "section": "Netlify",
+    "text": "Netlify\nNetlify empowers developers to create, launch, and manage web applications with innovative cloud computing services. Their platform streamlines the process of building robust sites that can quickly scale or deploy serverless backends for dynamic experiences.\n\nI am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#revealjs",
     "href": "mathematics-on-the-web/index.html#revealjs",
     "title": "Mathematics on the Web",
-    "section": "9 RevealJS",
-    "text": "9 RevealJS\nRevealJS is an open source HTML presentation framework that allows you to create captivating presentations without cost or hassle.\n\nI offer my sincere gratitude to the Reveal.js community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way."
+    "section": "RevealJS",
+    "text": "RevealJS\nRevealJS is an open source HTML presentation framework that allows you to create captivating presentations without cost or hassle.\n\nI offer my sincere gratitude to the Reveal.js community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#youtube",
     "href": "mathematics-on-the-web/index.html#youtube",
     "title": "Mathematics on the Web",
-    "section": "10 YouTube",
-    "text": "10 YouTube\nYouTube is an invaluable platform that we are proud to be part of.\n\nI would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube’s vast influence on culture to reach ever further."
+    "section": "YouTube",
+    "text": "YouTube\nYouTube is an invaluable platform that we are proud to be part of.\n\nI would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube’s vast influence on culture to reach ever further."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#direct-knowledge",
     "href": "mathematics-on-the-web/index.html#direct-knowledge",
     "title": "Mathematics on the Web",
-    "section": "11 Direct Knowledge",
-    "text": "11 Direct Knowledge\nSo if you’re new to any of the technologies listed above, you might question how I bring all this together. In case so, here’s a brief explanation.\nI use Visual Studio Code to write in Html, Css, Js, Markdown, Quarto Markdown, Python, and TeX. After setting up a few configuration files (one-time only), I issue the command “quarto render” to build the static files. The website, books, blog(s), and slides are outputs from this building process. Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc. These files are uploaded to a Github repository and then published using Netlify. I then use the ReavalJS slideshows to make YouTube videos. I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost.\n\nThese books, and their presentations, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work."
+    "section": "Direct Knowledge",
+    "text": "Direct Knowledge\nSo if you’re new to any of the technologies listed above, you might question how I bring all this together. In case so, here’s a brief explanation.\nI use Visual Studio Code to write in Html, Css, Js, Markdown, Quarto Markdown, Python, and TeX. After setting up a few configuration files (one-time only), I issue the command “quarto render” to build the static files. The website, books, blog(s), and slides are outputs from this building process. Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc. These files are uploaded to a Github repository and then published using Netlify. I then use the ReavalJS slideshows to make YouTube videos. I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost.\n\nThese books, and their presentations, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work."
   },
   {
     "objectID": "mathematics-on-the-web/index.html#additonal-information",
@@ -95,7 +95,7 @@
     "href": "mathematics-on-the-web/mathematics-on-the-web.html#mathjax",
     "title": "Mathematics on the Web",
     "section": "MathJax",
-    "text": "MathJax\nMathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for enabling mathematical equations and formulas to be written in HTML documents.\n\nI am truly thankful for the use of this incredible tool."
+    "text": "MathJax\nMathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication (see Cervone (2012), Cervone, Krautzberger, and Sorge (2016)) - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for enabling mathematical equations and formulas to be written in HTML documents.\n\nI am truly thankful for the use of this incredible tool."
   },
   {
     "objectID": "mathematics-on-the-web/mathematics-on-the-web.html#python",
@@ -165,7 +165,7 @@
     "href": "mathematics-on-the-web/mathematics-on-the-web.html#direct-knowledge",
     "title": "Mathematics on the Web",
     "section": "Direct Knowledge",
-    "text": "Direct Knowledge\nSo if you’re new to any of the technologies listed above, you might question how I bring all this together. In case so, here’s a brief explanation.\nI use Visual Studio Code to write in Html, Css, Js, Markdown, Quarto Markdown, Python, and TeX. After setting up a few configuration files (one-time only), I issue the command “quarto render” to build the static files. The website, books, blog(s), and slides are outputs from this building process. Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc. These files are uploaded to a Github repository and then published using Netlify. I then use the ReavalJS slideshows to make YouTube videos. I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost.\n\nThese books, and their presentations, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work.\n\n\n\n\n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n\n\n\nAdditonal Information\n\nLast updated on 2023-01-30\nPrint (PDF) Mathematics on the Web\nSource code (LaTeX) Mathematics on the Web\nSlideshow (RevealJS) Mathematics on the Web\n\n\n\n\n\n\n\n\n\nKnuth, D. E., T. Larrabee, P. M. Roberts, P. M. Roberts, and Mathematical Association of America. 1989. Mathematical Writing. MAA Notes. Mathematical Association of America. https://books.google.bs/books?id=dDOehHMbUMcC.\n\n\nKrantz, S. G. 2017. A Primer of Mathematical Writing. Miscellaneous Books. American Mathematical Society. https://books.google.com/books?id=eaw-DwAAQBAJ.\n\n\nSteenrod, N. E. 1973. How to Write Mathematics. American Mathematical Soc. https://books.google.com/books?id=6UypbkweqiwC."
+    "text": "Direct Knowledge\nSo if you’re new to any of the technologies listed above, you might question how I bring all this together. In case so, here’s a brief explanation.\nI use Visual Studio Code to write in Html, Css, Js, Markdown, Quarto Markdown, Python, and TeX. After setting up a few configuration files (one-time only), I issue the command “quarto render” to build the static files. The website, books, blog(s), and slides are outputs from this building process. Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc. These files are uploaded to a Github repository and then published using Netlify. I then use the ReavalJS slideshows to make YouTube videos. I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost.\n\nThese books, and their presentations, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work.\n\n\n\n\n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n  \n    \n        \n    \n  \n\n\n\nAdditonal Information\n\nLast updated on 2023-01-30\nPrint (PDF) Mathematics on the Web\nSource code (LaTeX) Mathematics on the Web\nSlideshow (RevealJS) Mathematics on the Web\n\n\n\n\n\n\n\n\n\nCervone, Davide. 2012. “MathJax: A Platform for Mathematics on the Web.” Notices of the AMS 59 (2): 312–16.\n\n\nCervone, Davide, Peter Krautzberger, and Volker Sorge. 2016. “Towards Universal Rendering in MathJax.” In Proceedings of the 13th International Web for All Conference. W4A ’16. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/2899475.2899494.\n\n\nHayes, Brian. 2017. “Writing Math on the Web.” https://www.americanscientist.org/article/writing-math-on-the-web; Amercian Scientist."
   },
   {
     "objectID": "mathematics-on-the-web/mathematics-on-the-web.html#additonal-information",
@@ -179,7 +179,7 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nWriting The Preface\n\n\nof a Mathematics Book\n\n\n\n\nWriting\n\n\n\n\nWriting The Preface of a Mathematics Book\n\n\n\n\n\n\nTuesday, January 31, 2023\n\n\nDavid A. Smith\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\nWriting Mathematics\n\n\nHow I Write Mathematics\n\n\n\n\nWriting\n\n\n\n\nWriting Mathematics: How I Write Mathematics\n\n\n\n\n\n\nSaturday, January 28, 2023\n\n\nDavid A. Smith\n\n\n7 min\n\n\n\n\n\n\n  \n\n\n\n\nMathematics on the Web\n\n\nAcknowledgements\n\n\n\n\nWriting\n\n\n\n\nMathematics on the Web: Acknowledgements\n\n\n\n\n\n\nFriday, January 27, 2023\n\n\nDavid A. Smith\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nWriting The Preface\n\n\nof a Mathematics Book\n\n\n\n\nWriting\n\n\n\n\nWriting The Preface of a Mathematics Book\n\n\n\n\n\n\nTuesday, January 31, 2023\n\n\nDavid A. Smith\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\nWriting Mathematics\n\n\nHow I Write Mathematics\n\n\n\n\nWriting\n\n\n\n\nWriting Mathematics: How I Write Mathematics\n\n\n\n\n\n\nSaturday, January 28, 2023\n\n\nDavid A. Smith\n\n\n7 min\n\n\n\n\n\n\n  \n\n\n\n\nMathematics on the Web\n\n\nAcknowledgements\n\n\n\n\nWriting\n\n\n\n\nMathematics on the Web: Acknowledgements\n\n\n\n\n\n\nFriday, January 27, 2023\n\n\nDavid A. Smith\n\n\n5 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "writing-the-preface/index.html#additonal-information",

@@ -19,7 +19,7 @@ keyword: mathematics web publishing acknowledgements
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     number-depth: 2
     include-in-header: 
       - ../_html/breadcrumbs.html
@@ -55,17 +55,12 @@ bibliography: ../references.bib
 ![](mathematics-on-the-web-1024.jpeg){fig-alt="Mathematics on the Web: Acknowledgements"}
 :::
 
-
-
-- @knuth1989mathematical
-- @steenrod1973write
-- @krantz2017primer
-
+This article does not explain why it is arduous to publish mathematics on the web, but rather briefly outlines the solution to the problem that I have implemented.^[If you are interested in the reasons why it's so difficult, we'll that has already been written by Brian Hayes: [Writing Math on the Web](https://www.americanscientist.org/article/writing-math-on-the-web) (see @brainhayes).] 
 
 It is impossible to overstate the importance of those who helped bring [these books into their completed form](#mathematics-books-on-the-web). I am deeply grateful for their generous contributions and would like to express my sincere appreciation here. 
 
 ## MathJax 
-MathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for [enabling mathematical equations and formulas to be written in HTML documents](https://www.mathjax.org). 
+MathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication (see @cervone2012mathjax, @Davide) - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for [enabling mathematical equations and formulas to be written in HTML documents](https://www.mathjax.org). 
 
 > I am truly thankful for the use of this incredible tool.
 
