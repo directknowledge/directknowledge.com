@@ -1,7 +1,0 @@
----
-pagetitle: References - Single Variable Calculus
----
-# References {.unnumbered}
-
-::: {#refs}
-:::

@@ -1,8 +1,0 @@
-# Learning Number Theory epub
-
-book:
-  output-file: "Learning-Number-Theory-Epub"
-
-format:
-  epub:
-

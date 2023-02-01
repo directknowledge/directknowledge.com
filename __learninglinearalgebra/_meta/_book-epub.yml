@@ -1,8 +1,0 @@
-# Learning Linear Algebra epub
-
-book:
-  output-file: "Learning-Linear-Algebra-Epub"
-
-format:
-  epub:
-

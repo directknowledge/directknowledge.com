@@ -1,7 +1,0 @@
----
-pagetitle: References - Basic Set Theory
----
-# References {.unnumbered}
-
-::: {#refs}
-:::
