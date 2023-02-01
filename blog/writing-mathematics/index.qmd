@@ -10,7 +10,7 @@ categories: Writing
 image: writing-mathematics-1024.jpeg
 image-alt: "Writing Mathematics How I Write Mathematics"
 description: "Writing Mathematics: How I Write Mathematics"
-abstract: Writing mathematics is a meaningful skill for people of all ages to learn and understand. It requires considerable focus, such as understanding concepts with specialized language and notation. Writing mathematics can be difficult, but it is worth pursuing because it helps people comprehend complex ideas and prepares them for advancing their own.
+abstract: "Writing mathematics is a meaningful skill for people of all ages to learn and understand. It requires considerable focus, such as understanding concepts with specialized language and notation. Writing mathematics can be difficult, but it is worth pursuing because it helps people comprehend complex ideas and prepares them for advancing their own."
 citation:
   url: https://directknowledge.com/blog/writing-mathematics/
   publisher: "Direct Knowledge"

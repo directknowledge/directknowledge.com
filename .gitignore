@@ -1,6 +1,14 @@
 /.quarto/
 .DS_Store
-*.tex
-*.pdf
-
 /.luarc.json
+__basicsettheory
+__learninglinearalgebra
+__learningnumbertheory
+__multivariablecalculus
+__singlevariablecalculus
+_webtools
+_meta
+_html
+_quarto.yml
+_variables.yml
+
