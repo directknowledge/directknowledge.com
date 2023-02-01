@@ -1,4 +1,4 @@
-/.quarto/
+.quarto
 .DS_Store
 /.luarc.json
 __basicsettheory
