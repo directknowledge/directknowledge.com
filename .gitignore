@@ -11,6 +11,9 @@ _meta
 _html
 _quarto.yml
 _variables.yml
+index.qmd
+about.qmd
+404.qmd
 assets
 blog
 research
