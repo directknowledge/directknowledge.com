@@ -277,8 +277,55 @@
       margin-right: 0; 
     }
   </style>
+  <style>
+      .theorem {
+          background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+          padding:6px 6px 2px 6px;
+          border-left:1px solid rgba(0, 0, 255, 0.22);
+          margin:12px 0px;
+      }
+      .theorem-title strong::after {
+          content:'. ';
+          margin-left:-4px;
+          padding-right:5px;
+      }
+      .lemma {
+          background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+      }
+      .corollary {
+          background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+      }
+      .proposition {
+          background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+      }
+      .definition {
+          background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+      }
+      .example {
+          background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+      }
+      .proof-title {
+          font-weight:600;
+      }
+      ol li::marker {
+          content: "(" counter(list-item, lower-arabic) ") ";
+       }
+       .solution:after, .proof:after {
+          margin-top:-44px;
+          margin-bottom:64px;
+          float:right;
+          content: '\25A0';
+       }
+       .blockquote {
+          font-weight: 500!important;
+          color:#000000!important;
+       }
+       .reveal-viewport #refs, .reveal-full-page #footnotes {
+          display:none!important;
+       }
+  </style>
 <meta property="og:title" content="Writing Mathematics - Direct Knowledge">
-<meta property="og:description" content="Writing Mathematics: How I Write Mathematics">
+<meta property="og:description" content="One of the greatest challenges for students is learning to express mathematics fluently and accurately.">
 <meta property="og:image" content="https://directknowledge.com/blog/writing-mathematics/writing-mathematics-1024.jpeg">
 <meta property="og:site-name" content="Blog">
 <meta property="og:image:alt" content="Writing Mathematics How I Write Mathematics">
@@ -286,36 +333,38 @@
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-image="writing-mathematics-1024.jpeg" data-background-opacity="0.2" data-background-position="top" data-background-size="100% 100%" class="quarto-title-block center">
   <h1 class="title">Writing Mathematics</h1>
   <p class="subtitle">How I Write Mathematics</p>
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-David A. Smith 
+<a href="https://directknowledge.com/about.html">David A. Smith</a> 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            <a href="https://directknowledge.com">
+            Direct Knowledge
+            </a>
+          </p>
+    </div>
 </div>
   <p class="date">Saturday, January 28, 2023</p>
-</section><section id="TOC">
-<nav role="doc-toc"> 
-<h2 id="toc-title">Table of contents</h2>
-<ul>
-<li class="fragment"></li>
-<li class="fragment"><a href="#/what-makes-writing-mathematics-different" id="/toc-what-makes-writing-mathematics-different">What Makes Writing Mathematics Different?</a></li>
-<li class="fragment"><a href="#/sentence-level" id="/toc-sentence-level">Sentence Level</a></li>
-<li class="fragment"><a href="#/paragraph-level" id="/toc-paragraph-level">Paragraph Level</a></li>
-<li class="fragment"><a href="#/section-level" id="/toc-section-level">Section Level</a></li>
-<li class="fragment"><a href="#/chapter-level" id="/toc-chapter-level">Chapter Level</a></li>
-<li class="fragment"><a href="#/book-level" id="/toc-book-level">Book Level</a></li>
-<li class="fragment"><a href="#/and-beyond" id="/toc-and-beyond">And Beyond</a></li>
-</ul>
-</nav>
 </section>
 <section class="slide level2">
-<div class="d-print-none">
+<aside class="d-print-none notes">
 <p><img data-src="writing-mathematics-1024.jpeg" alt="Writing Mathematics: How I Write Mathematics"></p>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>One of the greatest challenges for students is learning to express mathematics fluently and accurately. Trying to decipher complex formulas or explaining mathematical ideas in writing can be a daunting task, even for those with an advanced understanding of mathematics. However, mastering this skill can result in tremendous rewards. Expressing mathematical ideas effectively through written language provides us with a greater understanding and appreciation of the subject, not only from an academic perspective but from its relevance to our daily lives as well. It’s important to understand that although making sense of mathematics on paper may seem difficult at first, it’s worth pursuing because developing this proficiency can help tremendously in class discussions and exams while also providing insights into real-world problems we might face on a regular basis.</p>
 </section>
 <section id="what-makes-writing-mathematics-different" class="slide level2">
 <h2>What Makes Writing Mathematics Different?</h2>
@@ -325,14 +374,14 @@ David A. Smith
 </blockquote>
 <p>To comprehend mathematically expressed ideas, readers must take their time and read content several times while allowing themselves ample pauses for contemplation along the way. Further, mathematics writing often serves as reference material, which necessitates that its contents should ideally be accessed piece by piece upon demand rather than require deep immersion into text volumes at once.</p>
 <p>Writing mathematics has rules - some narrow, others broad. Small conventions relate to sentence structure (including punctuation) and are easily verifiable. Broader ones involve general style and strategies that depend on the author’s discretion.</p>
-<p>Crafting an effective document takes more than just following a few simple rules; it requires mastering composition. This skillfulness is where the art of writing comes in, with broad and deep strategies for your entire work. It’s all about connection: linking individual sentences together for clarity and flow while adhering to specific sentence structure regulations like commas or mathematical terminologies. At its most complex level, these interrelated requirements can create intricate webs that are both precise yet engaging - but will result in a masterpiece.</p>
-<p>Now it’s time to dive into each of <strong>the five levels for writing mathematics</strong>: sentence, paragraph, section, chapter, and book.</p>
-</section>
+<p>Crafting an effective document takes more than just following a few simple rules; it requires mastering composition. This skillfulness is where the art of writing comes in, with broad and deep strategies for your entire work. It’s all about connection: linking individual sentences together for clarity and flow while adhering to specific sentence structure regulations like commas or mathematical terminologies. At its most complex level, these interrelated requirements can create intricate webs that are both precise yet engaging – but will result in a masterpiece.</p>
+<p>Now it’s time to dive into each of <strong>the five levels for writing mathematics</strong>: sentence, paragraph, section, chapter, and book<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>.</p>
+<aside></aside></section>
 <section id="sentence-level" class="slide level2">
 <h2>Sentence Level</h2>
 <p>Breaking complex mathematical ideas into more accessible parts is essential for effective communication. Using the right voice and symbols in your writing is crucial for success.</p>
 <blockquote>
-<p>These small details can make comprehension natural or quite tricky - but mastering them is fundamental when creating potent written works.</p>
+<p>These small details can make comprehension natural – but mastering them is fundamental when creating potent written works.</p>
 </blockquote>
 </section>
 <section id="paragraph-level" class="slide level2">
@@ -367,6 +416,7 @@ David A. Smith
 </blockquote>
 <p>While it might be hard to get started, writing mathematics is an invaluable skill that requires patience and dedication. Developing this capability takes practice and experience, but if you put in the work your mastery of mathematical exposition will stay with you for life.</p>
 <div>
+<section data-visibility="hidden">
 <div class="mt-5 d-print-none">
 <div class="card-group" id="mathematics-books-on-the-web">
   <div class="card mx-2">
@@ -396,18 +446,15 @@ David A. Smith
   </div>
 </div>
 </div>
-<section id="additonal-information" class="slide level2 unlisted unnumbered appendix">
-<h2>Additonal Information</h2>
-<ul>
-<li class="fragment">Last updated on 2023-01-30</li>
-<li class="fragment">Print (PDF) <a href="writing-mathematics.pdf" target="_blank">Writing Mathematics</a></li>
-<li class="fragment">Source code (LaTeX) <a href="writing-mathematics.tex" target="_blank">Writing Mathematics</a></li>
-<li class="fragment">Slideshow (RevealJS) <a href="writing-mathematics.html" target="_blank">Writing Mathematics</a></li>
-</ul>
 </section>
 </div>
 <div class="footer footer-default">
 </div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
+<ol>
+<li id="fn1"><p>or the last two could be article, research program</p></li>
+</ol>
 </section>
     </div>
   </div>

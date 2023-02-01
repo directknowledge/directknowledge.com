@@ -277,6 +277,53 @@
       margin-right: 0; 
     }
   </style>
+  <style>
+      .theorem {
+          background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+          padding:6px 6px 2px 6px;
+          border-left:1px solid rgba(0, 0, 255, 0.22);
+          margin:12px 0px;
+      }
+      .theorem-title strong::after {
+          content:'. ';
+          margin-left:-4px;
+          padding-right:5px;
+      }
+      .lemma {
+          background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+      }
+      .corollary {
+          background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+      }
+      .proposition {
+          background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+      }
+      .definition {
+          background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+      }
+      .example {
+          background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+      }
+      .proof-title {
+          font-weight:600;
+      }
+      ol li::marker {
+          content: "(" counter(list-item, lower-arabic) ") ";
+       }
+       .solution:after, .proof:after {
+          margin-top:-44px;
+          margin-bottom:64px;
+          float:right;
+          content: '\25A0';
+       }
+       .blockquote {
+          font-weight: 500!important;
+          color:#000000!important;
+       }
+       .reveal-viewport #refs, .reveal-full-page #footnotes {
+          display:none!important;
+       }
+  </style>
 <meta property="og:title" content="Writing The Preface - Direct Knowledge">
 <meta property="og:description" content="Writing The Preface of a Mathematics Book">
 <meta property="og:image" content="https://directknowledge.com/blog/writing-the-preface/writing-the-preface-1024.jpeg">
@@ -286,30 +333,42 @@
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-image="writing-the-preface-1024.jpeg" data-background-opacity="0.2" data-background-position="top" data-background-size="100% 100%" class="quarto-title-block center">
   <h1 class="title">Writing The Preface</h1>
   <p class="subtitle">of a Mathematics Book</p>
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-David A. Smith 
+<a href="https://directknowledge.com/about.html">David A. Smith</a> 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            <a href="https://directknowledge.com">
+            Direct Knowledge
+            </a>
+          </p>
+        <p class="quarto-title-affiliation">
+            Direct Knowledge
+          </p>
+    </div>
 </div>
   <p class="date">Tuesday, January 31, 2023</p>
-</section><section id="TOC">
-<nav role="doc-toc"> 
-<h2 id="toc-title">Table of contents</h2>
-<ul>
-<li class="fragment"></li>
-</ul>
-</nav>
 </section>
 <section class="slide level2">
-<div class="d-print-none">
+<aside class="d-print-none notes">
 <p><img data-src="writing-the-preface-1024.jpeg" alt="Writing The Preface: of a Mathematics Book"></p>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div>
+<section data-visibility="hidden">
 <div class="mt-5 d-print-none">
 <div class="card-group" id="mathematics-books-on-the-web">
   <div class="card mx-2">
@@ -339,14 +398,6 @@ David A. Smith
   </div>
 </div>
 </div>
-<section id="additonal-information" class="slide level2 unlisted unnumbered appendix">
-<h2>Additonal Information</h2>
-<ul>
-<li class="fragment">Last updated on 2023-01-30</li>
-<li class="fragment">Print (PDF) <a href="writing-the-preface.pdf" target="_blank">Writing The Preface</a></li>
-<li class="fragment">Source code (LaTeX) <a href="writing-the-preface.tex" target="_blank">Writing The Preface</a></li>
-<li class="fragment">Slideshow (RevealJS) <a href="writing-the-preface.html" target="_blank">Writing The Preface</a></li>
-</ul>
 </section>
 </div>
 <div class="footer footer-default">
