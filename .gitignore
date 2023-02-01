@@ -1,22 +1,52 @@
+# Built Ins
+/.quarto/
 .quarto
 .DS_Store
 /.luarc.json
+
+# Book Directories
 __basicsettheory
 __learninglinearalgebra
 __learningnumbertheory
 __multivariablecalculus
 __singlevariablecalculus
+
+# Supporting Directories
 _webtools
 _meta
 _html
+
+# Configuration Files
 _quarto.yml
 _variables.yml
+ads.txt
+
+# Pages
 index.qmd
 about.qmd
 404.qmd
+
+# Directories
 assets
 blog
 research
 tutorials
-ads.txt
+
+# Book Files
+Basic-Set-Theory-Paperback.pdf
+Basic-Set-Theory-Hardcover.pdf
+Basic-Set-Theory-Epub.pdf
+Learning-Linear-Algebra-Paperback.pdf
+Learning-Linear-Algebra-Hardcover.pdf
+Learning-Linear-Algebra-Epub.pdf
+Learning-Number-Theory-Paperback.pdf
+Learning-Number-Theory-Hardcover.pdf
+Learning-Number-Theory-Epub.pdf
+Single-Variable-Calculus-Paperback.pdf
+Single-Variable-Calculus-Hardcover.pdf
+Single-Variable-Calculus-Epub.pdf
+Multivariable-Calculus-Paperback.pdf
+Multivariable-Calculus-Hardcover.pdf
+Multivariable-Calculus-Epub.pdf
+
 
