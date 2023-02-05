@@ -6,7 +6,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.280">
   <meta name="author" content="David A. Smith">
-  <meta name="keywords" content="mathematics, writing">
+  <meta name="keywords" content="mathematics, writing, publishing">
   <title>Writing The Preface - Direct Knowledge</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -323,7 +323,45 @@
        .reveal-viewport #refs, .reveal-full-page #footnotes {
           display:none!important;
        }
+       .quarto-title-banner {
+          background-repeat: no-repeat!important;
+          background-position: center center;
+          background-size: cover!important;
+          background-attachment: fixed;
+       }
   </style>
+  <script>
+      window.addEventListener('keydown', event => {
+      switch (event.keyCode) {
+          case 49: // 1
+            setBackgroundColor('#04F404');
+            break;
+          case 50: // 2
+            setBackgroundColor('white');
+            break;
+          case 51: // 3
+            setBackgroundColor('black');
+            break;
+      }
+    });
+    
+    function setBackgroundColor(color) {
+        document
+          .querySelector('body')
+          .style
+          .backgroundColor = color;
+    }
+  </script>
+  <style>
+    #title-slide, #title-slide .title {
+      color:#FFFFFF!important;
+    }
+    .slide-menu-button {
+      display: none !important;
+    }
+  }
+  </style>
+    
 <meta property="og:title" content="Writing The Preface - Direct Knowledge">
 <meta property="og:description" content="Writing The Preface of a Mathematics Book">
 <meta property="og:image" content="https://directknowledge.com/blog/writing-the-preface/writing-the-preface-1024.jpeg">
@@ -333,7 +371,7 @@
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
-<section id="title-slide" data-background-image="writing-the-preface-1024.jpeg" data-background-opacity="0.2" data-background-position="top" data-background-size="100% 100%" class="quarto-title-block center">
+<section id="title-slide" data-background-color="black" data-background-image="writing-the-preface-1024.jpeg" data-background-opacity=".4" data-background-position="top" data-background-size="100% 100%" class="quarto-title-block center">
   <h1 class="title">Writing The Preface</h1>
   <p class="subtitle">of a Mathematics Book</p>
 <div class="quarto-title-authors">
@@ -346,63 +384,27 @@
             Direct Knowledge
             </a>
           </p>
-        <p class="quarto-title-affiliation">
-            Direct Knowledge
-          </p>
     </div>
 </div>
   <p class="date">Tuesday, January 31, 2023</p>
 </section>
 <section class="slide level2">
-<aside class="d-print-none notes">
-<p><img data-src="writing-the-preface-1024.jpeg" alt="Writing The Preface: of a Mathematics Book"></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<section class="slide d-none" data-background-video="../intro.mp4"></section>
+</section>
+<section id="thanks-for-watching" class="slide level2">
+<h2>Thanks For Watching</h2>
 <div>
-<section data-visibility="hidden">
-<div class="mt-5 d-print-none">
-<div class="card-group" id="mathematics-books-on-the-web">
-  <div class="card mx-2">
-    <a href="../../basic-set-theory/">
-        <img width="150" height="225" src="../../assets/basic-set-theory-cover.png" class="card-img-top" alt="Basic Set Theory">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../learning-number-theory/">
-        <img width="150" height="225" src="../../assets/learning-number-theory-cover.png" class="card-img-top" alt="Learning Number Theory">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../learning-linear-algebra/">
-        <img width="150" height="225" src="../../assets/learning-linear-algebra-cover.png" class="card-img-top" alt="Learning Linear Algebra">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../single-variable-calculus/">
-        <img width="150" height="225" src="../../assets/single-variable-calculus-cover.png" class="card-img-top" alt="Single Variable Calculus">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../multivariable-calculus/">
-        <img width="150" height="225" src="../../assets/multivariable-calculus-cover.png" class="card-img-top" alt="Multivariable Calculus">
-    </a>
-  </div>
-</div>
+<ul>
+<li><a href="index.html">Article</a> (with bibliography)</li>
+<li><a href="writing-the-preface.pdf">PDF</a> (for downloading)</li>
+<li><a href="writing-the-preface.tex">LaTeX</a> (source code)</li>
+<li><a href="writing-the-preface.html">RevealJS</a> (slideshow)</li>
+<li><a href="mailto:david@directknowledge.com">david@directknowledge.com</a></li>
+</ul>
 </div>
 </section>
-</div>
 <div class="footer footer-default">
 </div>
-</section>
     </div>
   </div>
   <script>window.backupDefine = window.define; window.define = undefined;</script>

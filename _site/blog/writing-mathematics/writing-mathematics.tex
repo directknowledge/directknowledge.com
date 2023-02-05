@@ -152,8 +152,8 @@
 \postdate{\end{flushleft}}
 
 \renewenvironment{abstract}
-{\par\noindent\textbf{\abstractname.}\ \ignorespaces}
-{\par\medskip }
+{\par\noindent\textbf{\abstractname.}\ \ignorespaces \itshape}
+{\par\medskip}
 
 
 \makeatletter
@@ -218,7 +218,7 @@
 \hypersetup{
   pdftitle={Writing Mathematics},
   pdfauthor={David A. Smith},
-  pdfkeywords={mathematics, writing},
+  pdfkeywords={mathematics, writing, publishing},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
@@ -236,14 +236,14 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Writing mathematics meticulously is a meaningful skill for people of all
-ages to learn and understand. It requires considerable focus, such as
-understanding concepts with specialized language and notation. Writing
-mathematics can be difficult, but it is worth pursuing because it helps
-people comprehend complex ideas and prepares them for advancing their
-own.
+Writing mathematics clearly, carefully, and accurately is a meaningful
+skill for people of all ages to learn and understand. It requires
+considerable focus, such as understanding concepts with specialized
+language and notation. Writing mathematics can be difficult, but it is
+worth pursuing because it helps people comprehend complex ideas and
+prepares them for advancing their own.
 \end{abstract}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 One of the greatest challenges for students is learning to express
 mathematics fluently and accurately. Trying to decipher complex formulas
@@ -283,10 +283,11 @@ often serves as reference material, which necessitates that its contents
 should ideally be accessed piece by piece upon demand rather than
 require deep immersion into text volumes at once.
 
-Writing mathematics has rules - some narrow, others broad. Small
+Writing mathematics has rules -- some narrow, others broad. Small
 conventions relate to sentence structure (including punctuation) and are
 easily verifiable. Broader ones involve general style and strategies
-that depend on the author's discretion.
+that depend on the author's discretion. For a full primer on
+mathematical writing see (\textcite{krantz2017primer}).
 
 Crafting an effective document takes more than just following a few
 simple rules; it requires mastering composition. This skillfulness is
@@ -299,8 +300,7 @@ requirements can create intricate webs that are both precise yet
 engaging -- but will result in a masterpiece.
 
 Now it's time to dive into each of \textbf{the five levels for writing
-mathematics}: sentence, paragraph, section, chapter, and
-book\footnote{or the last two could be article, research program}.
+mathematics}: sentence, paragraph, section, chapter, and book.
 
 \hypertarget{sentence-level}{%
 \subsection{Sentence Level}\label{sentence-level}}
@@ -314,66 +314,163 @@ These small details can make comprehension natural -- but mastering them
 is fundamental when creating potent written works.
 \end{quote}
 
+Here are the ten rules that I use when writing mathematics.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Do not start a sentence with a mathematical symbol.
+\item
+  Do not end a sentence with a mathematical symbol, instead use the
+  correct punctuation.
+\item
+  Replace logical symbols with words, unless you are writting on logic.
+\item
+  Do not use a colon at the end of a sentence. Do not use sentence
+  fragments, just use complete statements only.
+\item
+  Do spell out small numbers, when they are not being used
+  mathematically.
+\item
+  Use ``we'' (``you'' and ``me'' together) for formal exposition, use
+  ``I'' (``you'' and ``I'') for informal discussions.
+\item
+  Use ``that'' to indicate a specific object (a restrictive, essential
+  clause) and not for making a point of inference.
+\item
+  Use ``which'' to add information to objects (a nonrestrictive,
+  nonessential clause) and not as a conjunction.
+\item
+  Separate formulas with words. Do not list formulas, but rather
+  communicate with a reader.
+\item
+  Write a sentence that flows logically from left to right to eliminate
+  confusion.
+\end{enumerate}
+
+For more on these rules see (\textcite{knuth1989mathematical}).
+
 \hypertarget{paragraph-level}{%
 \subsection{Paragraph Level}\label{paragraph-level}}
 
-Crafting a clear and concise document requires deliberate structure,
-consistent information, and reader-minded readability. Divide your work
-into linear segments to be presented in a hierarchical development for
-ease of comprehension. Retain an even flow by keeping notation terms
-familiar while avoiding lengthy explanations or eloquent phrasing that
-could confuse readers. Furthermore, provide previews of upcoming topics
-before delving deeper into the content so they can prepare themselves
-mentally as you write! Adding visuals where appropriate will also aid
-understanding - use examples and counterexamples along with suggestive
-references when necessary to maximize clarity without sacrificing
-creativity.
+Crafting the perfect opening paragraph is essential to grabbing a
+reader's attention and inviting them on an engaging journey through your
+prose. To do so, divide your work into linear segments to be presented
+in a hierarchical development for ease of comprehension. Retain an even
+flow by keeping notation terms familiar while avoiding lengthy
+explanations or eloquent phrasing that could confuse readers.
+Furthermore, provide previews of upcoming topics before delving deeper
+into the content so they can prepare themselves mentally as you write.
+Adding visuals where appropriate will also aid understanding -- use
+examples and counterexamples along with suggestive references when
+necessary to maximize clarity without sacrificing creativity.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Begin a paragraph with your best sentence, you ensure that readers
+  stay hooked.
+\item
+  Ensure that each sentence has its own distinct beat. Peruse your
+  writing and fine-tune it until everything flows smoothly.
+\item
+  A theorem (definition, lemma, corollary, etc.) should stand firmly on
+  its own two feet and not rely upon what came before.
+\item
+  Pay particular attention to terms like ``therefore'', as they are
+  essential for achieving the right cadence and has many variations such
+  as ``whence'',``hence'', ``and so'', etc.
+\item
+  Break up paragraphs by displaying \textbf{important formulas} on a
+  line by themselves.
+\item
+  Don't over complicate things with unnecessary subscripts,
+  superscripts, or other vertically spaced symbols.7. Break up long
+  sentences into simple ones, and break up mathematics (but not
+  important formulas) into readable text.
+\item
+  Don't be tempted to resort to the use of technical jargon without good
+  reason.
+\item
+  Every paragraph should have a (mathematical) point, make it clear.
+\item
+  Write a paragraph that flows logically from sentence to sentence to
+  eliminate confusion.
+\end{enumerate}
 
 Mathematics writing requires you to effectively communicate your thought
-process and convince the reader that your solution is valid. A great
-mathematical paper should provide precise explanations while also being
-persuasive enough to satisfy a skeptical audience.
+process and convince the reader that your solution is valid. A
+first-rate mathematical exposition should provide precise explanations
+while also being persuasive enough to satisfy a skeptical audience.
 
 \hypertarget{section-level}{%
 \subsection{Section Level}\label{section-level}}
 
-Mastering the art of example and counterexample can be a powerful tool
-in understanding complex analysis. As Ullman so eloquently stated, even
-something as simple as an illustration may help to fully convey your
-ideas; however, it is important not to underestimate its power -
-examples should have some ``spark'' or element that will engage readers
-with thought-provoking insight they might otherwise miss. Additionally,
-don't forget the importance of providing context by using both examples
-and counterexamples which illustrate definitions/results while
-simultaneously clarifying any underlying assumptions essential for
-proper analysis.
+Crafting a clear and concise section requires deliberate structure,
+consistent information, and reader-minded readability.
 
-Whenever possible, facilitate understanding by utilizing visual elements
-that have the power to communicate complex ideas quickly and accurately.
-Design figures simply with comprehensive captions as reinforcement for
-concepts discussed in textual form; this will help bring key points of
-proof or argumentation into clear focus without being bogged down in
-minutiae. Don't be afraid to utilize graphs over tables when
-illustrating main topics -- an illustration can often paint a far more
-detailed picture than words alone.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Commmunicate}. While writing, the writer must envision what
+  areas of confusion could arise for their reader and strive to ensure
+  that these are addressed. This foresight is crucial in order to
+  effectively communicate with readers; otherwise it risks creating
+  misunderstandings instead of a meaningful exchange. To ensure accuracy
+  and clarity, having an audience in mind while writing is not simply
+  beneficial but necessary.
+\item
+  \textbf{Examples}. Mastering the art of example and counterexample can
+  be a powerful tool. However, it is important not to underestimate its
+  power -- examples should have some ``spark'' or element that will
+  engage readers with thought-provoking insight they might otherwise
+  miss. Additionally, don't forget the importance of providing context
+  by using both examples and counterexamples which illustrate
+  definitions/results while simultaneously clarifying any underlying
+  essential assumptions.
+\item
+  \textbf{Figures}. Whenever possible, facilitate understanding by
+  utilizing visual elements that have the power to communicate complex
+  ideas quickly and accurately. Design figures simply with comprehensive
+  captions as reinforcement for concepts discussed in textual form; this
+  will help bring key points of proof or argumentation into clear focus
+  without being bogged down in minutiae. Don't be afraid to utilize
+  graphs over tables when illustrating main topics -- an illustration
+  can often paint a far more detailed picture than words alone.
+\item
+  \textbf{Efficiency}. When writing proofs, strive for efficiency by
+  taking advantage of earlier results and avoiding unnecessary
+  repetition. If a current proof seems to be significantly similar to
+  one already constructed in the past, think beyond simple alterations;
+  try finding an interesting overarching generalization that ties both
+  together. When crafting especially intricate arguments, provide
+  strategic comments throughout your construction -- noting the purpose
+  behind each step taken as well as providing overviews at appropriate
+  sections can make lengthy demonstrations considerably easier to
+  follow.
+\item
+  \textbf{Strategize}. When tackling a complex proof, take the time to
+  strategize. Start by outlining how you plan to approach it and give
+  periodic updates on your progress during the process. Demonstrate why
+  particular steps are necessary and look for interesting similarities
+  between results in order avoid reiterating similar arguments multiple
+  times throughout. Exploring potential common generalizations of
+  different elements can offer valuable insights too.
+\end{enumerate}
 
-When tackling a complex proof, take the time to strategize. Start by
-outlining how you plan to approach it and give periodic updates on your
-progress during the process. Demonstrate why particular steps are
-necessary and look for interesting similarities between results in order
-avoid reiterating similar arguments multiple times throughout. Exploring
-potential common generalizations of different elements can offer
-valuable insights too.
+Simply put, \textbf{be strategically efficient}.
 
-When writing proofs, strive for efficiency by taking advantage of
-earlier results and avoiding unnecessary repetition. If a current proof
-seems to be significantly similar to one already constructed in the
-past, think beyond simple alterations; try finding an interesting
-overarching generalization that ties both together! When crafting
-especially intricate arguments, provide strategic comments throughout
-your construction - noting the purpose behind each step taken as well as
-providing overviews at appropriate sections can make lengthy
-demonstrations considerably easier to follow.
+Crafting a perfect section for your chapter is no easy feat. It requires
+the careful placement of each element -- from preliminary discussions to
+lemmas, proofs and more -- into an order that both makes sense logically
+while also being effectively digested by readers. The ideal outcome
+presents every detail in such away so as to capture attention and
+surprise them with unexpected connections between elements they didn't
+previously foresee; all parts fit together like pieces of a puzzle,
+forming an explanation or argument far greater than its individual
+components could ever were it not organized in this way.
 
 \hypertarget{chapter-level}{%
 \subsection{Chapter Level}\label{chapter-level}}
@@ -390,8 +487,8 @@ accessible than a disorganized one. Establishing an introduction that
 introduces the important theorems, provides insight into why it matters,
 and previews what's to come can ``hook'' readers in for further
 exploration of your work. Making sure your chapter has these components
-will help ensure its readability - so put some thought into how you want
-to order yours!
+will help ensure its readability -- so put some thought into how you
+want to order yours!
 
 When creating math content, it is essential to keep the background and
 expertise of your target audience in mind. Presenting too much detail
@@ -435,7 +532,7 @@ repetition can become exhausting.
 \subsection{And Beyond}\label{and-beyond}}
 
 Mathematics is truly a language of the mind, and at its heart lies
-\textbf{mathemas} - an ancient Greek word encapsulating knowledge,
+\textbf{mathemas} -- an ancient Greek word encapsulating knowledge,
 cognition, understanding and perception. In college-level math courses
 this universal tongue grows in complexity; equations alone are no longer
 sufficient to describe it as ideas become so intricate they must be
@@ -444,7 +541,7 @@ mathematics moves beyond mere numbers or calculations: It is about
 uncovering new ways of interpreting the universe around us.
 
 \begin{quote}
-Do not give up - mastering mathematics can open a world of
+Do not give up -- mastering mathematics can open a world of
 opportunities.
 \end{quote}
 

@@ -152,8 +152,8 @@
 \postdate{\end{flushleft}}
 
 \renewenvironment{abstract}
-{\par\noindent\textbf{\abstractname.}\ \ignorespaces}
-{\par\medskip }
+{\par\noindent\textbf{\abstractname.}\ \ignorespaces \itshape}
+{\par\medskip}
 
 
 \makeatletter
@@ -218,7 +218,7 @@
 \hypersetup{
   pdftitle={Writing The Preface},
   pdfauthor={David A. Smith},
-  pdfkeywords={mathematics, writing},
+  pdfkeywords={mathematics, writing, publishing},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
@@ -243,7 +243,7 @@ establishing tone, introducing yourself as an author, outlining any
 goals you have for the work and highlighting key topics that are
 discussed.
 \end{abstract}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, enhanced, frame hidden]}{\end{tcolorbox}}\fi
 
 
 

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="./assets/favicon.ico" rel="icon">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.280">
-  <meta name="author" content="David A. Smith">
-  <meta name="keywords" content="mathematics, writing, publishing">
-  <title>Writing Mathematics - Direct Knowledge</title>
+
+  <title>Direct Knowledge - Example</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -25,37 +28,20 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
+
   .callout {
     margin-top: 1em;
     margin-bottom: 1em;  
     border-radius: .25rem;
   }
+
   .callout.callout-style-simple { 
     padding: 0em 0.5em;
     border-left: solid #acacac .3rem;
@@ -64,36 +50,45 @@
     border-bottom: solid 1px silver;
     display: flex;
   }
+
   .callout.callout-style-default {
     border-left: solid #acacac .3rem;
     border-right: solid 1px silver;
     border-top: solid 1px silver;
     border-bottom: solid 1px silver;
   }
+
   .callout .callout-body-container {
     flex-grow: 1;
   }
+
   .callout.callout-style-simple .callout-body {
     font-size: 1rem;
     font-weight: 400;
   }
+
   .callout.callout-style-default .callout-body {
     font-size: 0.9rem;
     font-weight: 400;
   }
+
   .callout.callout-captioned.callout-style-simple .callout-body {
     margin-top: 0.2em;
   }
+
   .callout:not(.callout-captioned) .callout-body {
       display: flex;
   }
+
   .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
     padding-left: 1.6em;
   }
+
   .callout.callout-captioned .callout-header {
     padding-top: 0.2em;
     margin-bottom: -0.2em;
   }
+
   .callout.callout-captioned .callout-caption  p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -102,15 +97,18 @@
   .callout.callout-captioned.callout-style-simple .callout-content  p {
     margin-top: 0;
   }
+
   .callout.callout-captioned.callout-style-default .callout-content  p {
     margin-top: 0.7em;
   }
+
   .callout.callout-style-simple div.callout-caption {
     border-bottom: none;
     font-size: .9rem;
     font-weight: 600;
     opacity: 75%;
   }
+
   .callout.callout-style-default  div.callout-caption {
     border-bottom: none;
     font-weight: 600;
@@ -119,10 +117,12 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
+
   .callout.callout-style-default div.callout-content {
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
+
   .callout.callout-style-simple .callout-icon::before {
     height: 1rem;
     width: 1rem;
@@ -131,6 +131,7 @@
     background-repeat: no-repeat;
     background-size: 1rem 1rem;
   }
+
   .callout.callout-style-default .callout-icon::before {
     height: 0.9rem;
     width: 0.9rem;
@@ -139,6 +140,7 @@
     background-repeat: no-repeat;
     background-size: 0.9rem 0.9rem;
   }
+
   .callout-caption {
     display: flex
   }
@@ -147,66 +149,87 @@
     margin-top: 1rem;
     padding-right: .5rem;
   }
+
   .callout.no-icon::before {
     display: none !important;
   }
+
   .callout.callout-captioned .callout-body > .callout-content > :last-child {
     margin-bottom: 0.5rem;
   }
+
   .callout.callout-captioned .callout-icon::before {
     margin-top: .5rem;
     padding-right: .5rem;
   }
+
   .callout:not(.callout-captioned) .callout-icon::before {
     margin-top: 1rem;
     padding-right: .5rem;
   }
+
   /* Callout Types */
+
   div.callout-note {
     border-left-color: #4582ec !important;
   }
+
   div.callout-note .callout-icon::before {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
   }
+
   div.callout-note.callout-style-default .callout-caption {
     background-color: #dae6fb
   }
+
   div.callout-important {
     border-left-color: #d9534f !important;
   }
+
   div.callout-important .callout-icon::before {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
   }
+
   div.callout-important.callout-style-default .callout-caption {
     background-color: #f7dddc
   }
+
   div.callout-warning {
     border-left-color: #f0ad4e !important;
   }
+
   div.callout-warning .callout-icon::before {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
   }
+
   div.callout-warning.callout-style-default .callout-caption {
     background-color: #fcefdc
   }
+
   div.callout-tip {
     border-left-color: #02b875 !important;
   }
+
   div.callout-tip .callout-icon::before {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
   }
+
   div.callout-tip.callout-style-default .callout-caption {
     background-color: #ccf1e3
   }
+
   div.callout-caution {
     border-left-color: #fd7e14 !important;
   }
+
   div.callout-caution .callout-icon::before {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
   }
+
   div.callout-caution.callout-style-default .callout-caption {
     background-color: #ffe5d0
   }
+
   </style>
   <style type="text/css">
     .reveal div.sourceCode {
@@ -219,7 +242,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -296,359 +318,214 @@
       margin-right: 0; 
     }
   </style>
-  <style>
-      .theorem {
-          background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
-          padding:6px 6px 2px 6px;
-          border-left:1px solid rgba(0, 0, 255, 0.22);
-          margin:12px 0px;
-      }
-      .theorem-title strong::after {
-          content:'. ';
-          margin-left:-4px;
-          padding-right:5px;
-      }
-      .lemma {
-          background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
-      }
-      .corollary {
-          background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
-      }
-      .proposition {
-          background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
-      }
-      .definition {
-          background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
-      }
-      .example {
-          background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
-      }
-      .proof-title {
-          font-weight:600;
-      }
-      ol li::marker {
-          content: "(" counter(list-item, lower-arabic) ") ";
-       }
-       .solution:after, .proof:after {
-          margin-top:-44px;
-          margin-bottom:64px;
-          float:right;
-          content: '\25A0';
-       }
-       .blockquote {
-          font-weight: 500!important;
-          color:#000000!important;
-       }
-       .reveal-viewport #refs, .reveal-full-page #footnotes {
-          display:none!important;
-       }
-       .quarto-title-banner {
-          background-repeat: no-repeat!important;
-          background-position: center center;
-          background-size: cover!important;
-          background-attachment: fixed;
-       }
-  </style>
-  <script>
-      window.addEventListener('keydown', event => {
-      switch (event.keyCode) {
-          case 49: // 1
-            setBackgroundColor('#04F404');
-            break;
-          case 50: // 2
-            setBackgroundColor('white');
-            break;
-          case 51: // 3
-            setBackgroundColor('black');
-            break;
-      }
-    });
-    
-    function setBackgroundColor(color) {
-        document
-          .querySelector('body')
-          .style
-          .backgroundColor = color;
-    }
-  </script>
-  <style>
-    #title-slide, #title-slide .title {
-      color:#FFFFFF!important;
-    }
-    .slide-menu-button {
-      display: none !important;
-    }
-  }
-  </style>
-    
-<meta property="og:title" content="Writing Mathematics - Direct Knowledge">
-<meta property="og:description" content="One of the greatest challenges for students is learning to express mathematics fluently and accurately.">
-<meta property="og:image" content="https://directknowledge.com/blog/writing-mathematics/writing-mathematics-1024.jpeg">
-<meta property="og:site-name" content="Blog">
-<meta property="og:image:alt" content="Writing Mathematics How I Write Mathematics">
+<meta property="og:title" content="Direct Knowledge - Example">
+<meta property="og:site-name" content="Direct Knowledge">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
-<section id="title-slide" data-background-color="black" data-background-image="writing-mathematics-1024.jpeg" data-background-opacity=".4" data-background-position="top" data-background-size="100% 100%" class="quarto-title-block center">
-  <h1 class="title">Writing Mathematics</h1>
-  <p class="subtitle">How I Write Mathematics</p>
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Example</h1>
+
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-<a href="https://directknowledge.com/about.html">David A. Smith</a> 
 </div>
-        <p class="quarto-title-affiliation">
-            <a href="https://directknowledge.com">
-            Direct Knowledge
-            </a>
-          </p>
-    </div>
-</div>
-  <p class="date">Saturday, January 28, 2023</p>
+
 </section>
 <section class="slide level2">
-<section class="slide d-none" data-background-video="../intro.mp4"></section>
-<p>One of the greatest challenges for students is learning to express mathematics fluently and accurately. Trying to decipher complex formulas or explaining mathematical ideas in writing can be a daunting task, even for those with an advanced understanding of mathematics. However, mastering this skill can result in tremendous rewards. Expressing mathematical ideas effectively through written language provides us with a greater understanding and appreciation of the subject, not only from an academic perspective but from its relevance to our daily lives as well. It’s important to understand that although making sense of mathematics on paper may seem difficult at first, it’s worth pursuing because developing this proficiency can help tremendously in class discussions and exams while also providing insights into real-world problems we might face on a regular basis.</p>
-</section>
-<section id="what-makes-writing-mathematics-different" class="slide level2">
-<h2>What Makes Writing Mathematics Different?</h2>
-<p>Writing mathematics is an artful combination of two distinct languages, natural and mathematics. Natural language offers the writer numerous expression possibilities but can be ambiguous. Whereas writing with mathematical symbols requires clarity yet allows succinctness when conveying complex concepts. Accurate language is a necessity when it comes to mathematics. To properly communicate your thoughts and opinions, ensure that each word carries the correct connotation you intend for them to have.</p>
-<blockquote>
-<p>The precision of words is essential in math-based conversations.</p>
-</blockquote>
-<p>To comprehend mathematically expressed ideas, readers must take their time and read content several times while allowing themselves ample pauses for contemplation along the way. Further, mathematics writing often serves as reference material, which necessitates that its contents should ideally be accessed piece by piece upon demand rather than require deep immersion into text volumes at once.</p>
-<p>Writing mathematics has rules – some narrow, others broad. Small conventions relate to sentence structure (including punctuation) and are easily verifiable. Broader ones involve general style and strategies that depend on the author’s discretion. For a full primer on mathematical writing see (<span class="citation" data-cites="krantz2017primer">Krantz (<a href="" role="doc-biblioref" onclick="return false;">2017</a>)</span>).</p>
-<p>Crafting an effective document takes more than just following a few simple rules; it requires mastering composition. This skillfulness is where the art of writing comes in, with broad and deep strategies for your entire work. It’s all about connection: linking individual sentences together for clarity and flow while adhering to specific sentence structure regulations like commas or mathematical terminologies. At its most complex level, these interrelated requirements can create intricate webs that are both precise yet engaging – but will result in a masterpiece.</p>
-<p>Now it’s time to dive into each of <strong>the five levels for writing mathematics</strong>: sentence, paragraph, section, chapter, and book.</p>
-</section>
-<section id="sentence-level" class="slide level2">
-<h2>Sentence Level</h2>
-<p>Breaking complex mathematical ideas into more accessible parts is essential for effective communication. Using the right voice and symbols in your writing is crucial for success.</p>
-<blockquote>
-<p>These small details can make comprehension natural – but mastering them is fundamental when creating potent written works.</p>
-</blockquote>
-<p>Here are the ten rules that I use when writing mathematics.</p>
-<ol type="1">
-<li class="fragment">Do not start a sentence with a mathematical symbol.</li>
-<li class="fragment">Do not end a sentence with a mathematical symbol, instead use the correct punctuation.</li>
-<li class="fragment">Replace logical symbols with words, unless you are writting on logic.</li>
-<li class="fragment">Do not use a colon at the end of a sentence. Do not use sentence fragments, just use complete statements only.</li>
-<li class="fragment">Do spell out small numbers, when they are not being used mathematically.</li>
-<li class="fragment">Use “we” (“you” and “me” together) for formal exposition, use “I” (“you” and “I”) for informal discussions.</li>
-<li class="fragment">Use “that” to indicate a specific object (a restrictive, essential clause) and not for making a point of inference.</li>
-<li class="fragment">Use “which” to add information to objects (a nonrestrictive, nonessential clause) and not as a conjunction.</li>
-<li class="fragment">Separate formulas with words. Do not list formulas, but rather communicate with a reader.</li>
-<li class="fragment">Write a sentence that flows logically from left to right to eliminate confusion.</li>
-</ol>
-<p>For more on these rules see (<span class="citation" data-cites="knuth1989mathematical">Knuth et al. (<a href="" role="doc-biblioref" onclick="return false;">1989</a>)</span>).</p>
-</section>
-<section id="paragraph-level" class="slide level2">
-<h2>Paragraph Level</h2>
-<p>Crafting the perfect opening paragraph is essential to grabbing a reader’s attention and inviting them on an engaging journey through your prose. To do so, divide your work into linear segments to be presented in a hierarchical development for ease of comprehension. Retain an even flow by keeping notation terms familiar while avoiding lengthy explanations or eloquent phrasing that could confuse readers. Furthermore, provide previews of upcoming topics before delving deeper into the content so they can prepare themselves mentally as you write. Adding visuals where appropriate will also aid understanding – use examples and counterexamples along with suggestive references when necessary to maximize clarity without sacrificing creativity.</p>
-<ol type="1">
-<li class="fragment">Begin a paragraph with your best sentence, you ensure that readers stay hooked.</li>
-<li class="fragment">Ensure that each sentence has its own distinct beat. Peruse your writing and fine-tune it until everything flows smoothly.</li>
-<li class="fragment">A theorem (definition, lemma, corollary, etc.) should stand firmly on its own two feet and not rely upon what came before.</li>
-<li class="fragment">Pay particular attention to terms like “therefore”, as they are essential for achieving the right cadence and has many variations such as “whence”,“hence”, “and so”, etc.</li>
-<li class="fragment">Break up paragraphs by displaying <strong>important formulas</strong> on a line by themselves.</li>
-<li class="fragment">Don’t over complicate things with unnecessary subscripts, superscripts, or other vertically spaced symbols.7. Break up long sentences into simple ones, and break up mathematics (but not important formulas) into readable text.</li>
-<li class="fragment">Don’t be tempted to resort to the use of technical jargon without good reason.</li>
-<li class="fragment">Every paragraph should have a (mathematical) point, make it clear.</li>
-<li class="fragment">Write a paragraph that flows logically from sentence to sentence to eliminate confusion.</li>
-</ol>
-<p>Mathematics writing requires you to effectively communicate your thought process and convince the reader that your solution is valid. A first-rate mathematical exposition should provide precise explanations while also being persuasive enough to satisfy a skeptical audience.</p>
-</section>
-<section id="section-level" class="slide level2">
-<h2>Section Level</h2>
-<p>Crafting a clear and concise section requires deliberate structure, consistent information, and reader-minded readability.</p>
-<ol type="1">
-<li class="fragment"><p><strong>Commmunicate</strong>. While writing, the writer must envision what areas of confusion could arise for their reader and strive to ensure that these are addressed. This foresight is crucial in order to effectively communicate with readers; otherwise it risks creating misunderstandings instead of a meaningful exchange. To ensure accuracy and clarity, having an audience in mind while writing is not simply beneficial but necessary.</p></li>
-<li class="fragment"><p><strong>Examples</strong>. Mastering the art of example and counterexample can be a powerful tool. However, it is important not to underestimate its power – examples should have some “spark” or element that will engage readers with thought-provoking insight they might otherwise miss. Additionally, don’t forget the importance of providing context by using both examples and counterexamples which illustrate definitions/results while simultaneously clarifying any underlying essential assumptions.</p></li>
-<li class="fragment"><p><strong>Figures</strong>. Whenever possible, facilitate understanding by utilizing visual elements that have the power to communicate complex ideas quickly and accurately. Design figures simply with comprehensive captions as reinforcement for concepts discussed in textual form; this will help bring key points of proof or argumentation into clear focus without being bogged down in minutiae. Don’t be afraid to utilize graphs over tables when illustrating main topics – an illustration can often paint a far more detailed picture than words alone.</p></li>
-<li class="fragment"><p><strong>Efficiency</strong>. When writing proofs, strive for efficiency by taking advantage of earlier results and avoiding unnecessary repetition. If a current proof seems to be significantly similar to one already constructed in the past, think beyond simple alterations; try finding an interesting overarching generalization that ties both together. When crafting especially intricate arguments, provide strategic comments throughout your construction – noting the purpose behind each step taken as well as providing overviews at appropriate sections can make lengthy demonstrations considerably easier to follow.</p></li>
-<li class="fragment"><p><strong>Strategize</strong>. When tackling a complex proof, take the time to strategize. Start by outlining how you plan to approach it and give periodic updates on your progress during the process. Demonstrate why particular steps are necessary and look for interesting similarities between results in order avoid reiterating similar arguments multiple times throughout. Exploring potential common generalizations of different elements can offer valuable insights too.</p></li>
-</ol>
-<p>Simply put, <strong>be strategically efficient</strong>.</p>
-<p>Crafting a perfect section for your chapter is no easy feat. It requires the careful placement of each element – from preliminary discussions to lemmas, proofs and more – into an order that both makes sense logically while also being effectively digested by readers. The ideal outcome presents every detail in such away so as to capture attention and surprise them with unexpected connections between elements they didn’t previously foresee; all parts fit together like pieces of a puzzle, forming an explanation or argument far greater than its individual components could ever were it not organized in this way.</p>
-</section>
-<section id="chapter-level" class="slide level2">
-<h2>Chapter Level</h2>
-<p>To effectively communicate your math, it’s essential to take into account the background knowledge of your intended audience. Don’t let unfamiliar terminology confuse them; provide additional explanation as needed for clarity and comprehension. Consider adding appendixes when discussing more complex or specialized topics that may require deeper context in order to be fully understood by less experienced readers.</p>
-<p>A clearly structured and properly ordered mathematics essay is far more accessible than a disorganized one. Establishing an introduction that introduces the important theorems, provides insight into why it matters, and previews what’s to come can “hook” readers in for further exploration of your work. Making sure your chapter has these components will help ensure its readability – so put some thought into how you want to order yours!</p>
-<p>When creating math content, it is essential to keep the background and expertise of your target audience in mind. Presenting too much detail can be overwhelming for those without an expert’s understanding; however, avoiding explanations altogether risks leaving readers feeling lost or confused. Consider breaking up complex material into separate sections for a better grasp by all audiences as well as providing additional helpful resources such as appendixes when applicable.</p>
-<p>A well-crafted document requires a sound strategy. To achieve this, start by outlining the expected sections in your paper or chapter so you know exactly what to include in each step of its development. Establish necessary definitions that will inform and structure every result and proof before testing them for accuracy with lemmas; dabbling examples along the way allows readers to apply concepts practically. Repeat these steps until there is an obvious logical flow from beginning to end, then add interstitial comments as needed – which may provide further context on certain arguments, compare opposing points within literature topics or simply warn against any potential missteps throughout your work.</p>
-</section>
-<section id="book-level" class="slide level2">
-<h2>Book Level</h2>
-<p>Make sure to keep your reader informed throughout; start each segment with a brief introduction and perhaps an outline of what’s ahead. Avoid lengthy stretches without any clear direction, revealing key conclusions only at the end. Instead, provide hints as you progress by stating outcomes such as “It follows that …”. Finally, be sure to reiterate essential points in conclusion for easy recall later on.</p>
-<p>When composing equations and propositions, don’t make it difficult for readers to find the references; clearly number each item along with providing a content/name descriptor. To ensure concentration isn’t broken by excessive page flipping, repeat any simple math expressions used in addition to reminding the reader of earlier analysis or unusual notations they may have encountered. Don’t be afraid to reiterate information if necessary – however remain mindful that too much repetition can become exhausting.</p>
-</section>
-<section id="and-beyond" class="slide level2">
-<h2>And Beyond</h2>
-<p>Mathematics is truly a language of the mind, and at its heart lies <strong>mathemas</strong> – an ancient Greek word encapsulating knowledge, cognition, understanding and perception. In college-level math courses this universal tongue grows in complexity; equations alone are no longer sufficient to describe it as ideas become so intricate they must be expressed through sentences and paragraphs. Thus one can see that mathematics moves beyond mere numbers or calculations: It is about uncovering new ways of interpreting the universe around us.</p>
-<blockquote>
-<p>Do not give up – mastering mathematics can open a world of opportunities.</p>
-</blockquote>
-<p>While it might be hard to get started, writing mathematics is an invaluable skill that requires patience and dedication. Developing this capability takes practice and experience, but if you put in the work your mastery of mathematical exposition will stay with you for life.</p>
-</section>
-<section id="thanks-for-watching" class="slide level2">
-<h2>Thanks For Watching</h2>
+
 <div>
-<ul>
-<li><a href="index.html">Article</a> (with bibliography)</li>
-<li><a href="writing-mathematics.pdf">PDF</a> (for downloading)</li>
-<li><a href="writing-mathematics.tex">LaTeX</a> (source code)</li>
-<li><a href="writing-mathematics.html">RevealJS</a> (slideshow)</li>
-<li><a href="mailto:david@directknowledge.com">david@directknowledge.com</a></li>
-</ul>
+<p>Will only appear in Reveal.js!</p>
+</div>
+
+<div class="footer footer-default">
+
 </div>
 </section>
-<div class="footer footer-default">
-</div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-knuth1989mathematical" class="csl-entry" role="doc-biblioentry">
-Knuth, D. E., T. Larrabee, P. M. Roberts, P. M. Roberts, and Mathematical Association of America. 1989. <em>Mathematical Writing</em>. MAA Notes. Mathematical Association of America. <a href="https://books.google.bs/books?id=dDOehHMbUMcC">https://books.google.bs/books?id=dDOehHMbUMcC</a>.
-</div>
-<div id="ref-krantz2017primer" class="csl-entry" role="doc-biblioentry">
-Krantz, S. G. 2017. <em>A Primer of Mathematical Writing</em>. Miscellaneous Books. American Mathematical Society. <a href="https://books.google.com/books?id=eaw-DwAAQBAJ">https://books.google.com/books?id=eaw-DwAAQBAJ</a>.
-</div>
-</div>
     </div>
   </div>
+
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
   <script>
+
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': true,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: false,
+
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
         controlsTutorial: false,
+
         // Determines where controls appear, "edges" or "bottom-right"
         controlsLayout: 'edges',
+
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
         controlsBackArrows: 'faded',
+
         // Display a presentation progress bar
         progress: true,
+
         // Display the page number of the current slide
         slideNumber: false,
+
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
+
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
         hash: true,
+
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,
+
         // Flags if we should monitor the hash and change slides accordingly
         respondToHashChanges: true,
+
         // Push each slide change to the browser history
         history: true,
+
         // Enable keyboard shortcuts for navigation
         keyboard: true,
+
         // Enable the slide overview mode
         overview: true,
+
         // Disables the default reveal.js slide layout (scaling and centering)
         // so that you can use custom CSS layout
         disableLayout: false,
+
         // Vertical centering of slides
         center: false,
+
         // Enables touch navigation on devices with touch input
         touch: true,
+
         // Loop the presentation
         loop: false,
+
         // Change the presentation direction to be RTL
         rtl: false,
+
         // see https://revealjs.com/vertical-slides/#navigation-mode
         navigationMode: 'linear',
+
         // Randomizes the order of slides each time the presentation loads
         shuffle: false,
+
         // Turns fragments on and off globally
         fragments: true,
+
         // Flags whether to include the current fragment in the URL,
         // so that reloading brings you to the same fragment position
         fragmentInURL: false,
+
         // Flags if the presentation is running in an embedded mode,
         // i.e. contained within a limited portion of the screen
         embedded: false,
+
         // Flags if we should show a help overlay when the questionmark
         // key is pressed
         help: true,
+
         // Flags if it should be possible to pause the presentation (blackout)
         pause: true,
+
         // Flags if speaker notes should be visible to all viewers
         showNotes: false,
+
         // Global override for autoplaying embedded media (null/true/false)
         autoPlayMedia: null,
+
         // Global override for preloading lazy-loaded iframes (null/true/false)
         preloadIframes: null,
+
         // Number of milliseconds between automatically proceeding to the
         // next slide, disabled when set to 0, this value can be overwritten
         // by using a data-autoslide attribute on your slides
         autoSlide: 0,
+
         // Stop auto-sliding after user input
         autoSlideStoppable: true,
+
         // Use this method for navigation when auto-sliding
         autoSlideMethod: null,
+
         // Specify the average time in seconds that you think you will spend
         // presenting each slide. This is used to show a pacing timer in the
         // speaker view
         defaultTiming: null,
+
         // Enable slide navigation via mouse wheel
         mouseWheel: false,
+
         // The display mode that will be used to show slides
         display: 'block',
+
         // Hide cursor if inactive
         hideInactiveCursor: true,
+
         // Time before the cursor is hidden (in ms)
         hideCursorTime: 5000,
+
         // Opens links in an iframe preview overlay
         previewLinks: false,
+
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'none',
+
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
+
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
         backgroundTransition: 'none',
+
         // Number of slides away from the current that are visible
         viewDistance: 3,
+
         // Number of slides away from the current that are visible on mobile
         // devices. It is advisable to set this to a lower number than
         // viewDistance in order to save resources.
         mobileViewDistance: 2,
+
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
         width: 1050,
+
         height: 700,
+
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
+
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
           config: 'TeX-AMS_HTML-full',
@@ -665,8 +542,10 @@ Krantz, S. G. 2017. <em>A Primer of Mathematical Writing</em>. Miscellaneous Boo
             processClass: 'tex2jax_process'
           },
         },
+
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
           RevealMath,
           RevealNotes,
           RevealSearch,
@@ -807,15 +686,5 @@ Krantz, S. G. 2017. <em>A Primer of Mathematical Writing</em>. Miscellaneous Boo
     });
     </script>
     
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+
 </body></html>

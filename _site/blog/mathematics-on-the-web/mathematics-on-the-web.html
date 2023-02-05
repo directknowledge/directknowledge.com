@@ -342,7 +342,45 @@
        .reveal-viewport #refs, .reveal-full-page #footnotes {
           display:none!important;
        }
+       .quarto-title-banner {
+          background-repeat: no-repeat!important;
+          background-position: center center;
+          background-size: cover!important;
+          background-attachment: fixed;
+       }
   </style>
+  <script>
+      window.addEventListener('keydown', event => {
+      switch (event.keyCode) {
+          case 49: // 1
+            setBackgroundColor('#04F404');
+            break;
+          case 50: // 2
+            setBackgroundColor('white');
+            break;
+          case 51: // 3
+            setBackgroundColor('black');
+            break;
+      }
+    });
+    
+    function setBackgroundColor(color) {
+        document
+          .querySelector('body')
+          .style
+          .backgroundColor = color;
+    }
+  </script>
+  <style>
+    #title-slide, #title-slide .title {
+      color:#FFFFFF!important;
+    }
+    .slide-menu-button {
+      display: none !important;
+    }
+  }
+  </style>
+    
 <meta property="og:title" content="Mathematics on the Web - Direct Knowledge">
 <meta property="og:description" content="Publishing an immersive mathematical experience is no small feat — but it's entirely achievable with the right tools.">
 <meta property="og:image" content="https://directknowledge.com/blog/mathematics-on-the-web/mathematics-on-the-web-1024.jpeg">
@@ -352,7 +390,7 @@
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
-<section id="title-slide" data-background-image="mathematics-on-the-web-1024.jpeg" data-background-opacity="0.2" data-background-position="top" data-background-size="100% 100%" class="quarto-title-block center">
+<section id="title-slide" data-background-color="black" data-background-image="mathematics-on-the-web-1024.jpeg" data-background-opacity=".4" data-background-position="top" data-background-size="100% 100%" class="quarto-title-block center">
   <h1 class="title">Mathematics on the Web</h1>
   <p class="subtitle">Acknowledgements</p>
 <div class="quarto-title-authors">
@@ -365,27 +403,15 @@
             Direct Knowledge
             </a>
           </p>
-        <p class="quarto-title-affiliation">
-            Direct Knowledge
-          </p>
     </div>
 </div>
   <p class="date">Friday, January 27, 2023</p>
 </section>
 <section class="slide level2">
-<aside class="d-print-none notes">
-<p><img data-src="mathematics-on-the-web-1024.jpeg" alt="Mathematics on the Web: Acknowledgements"></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<section class="slide d-none" data-background-video="../intro.mp4"></section>
+</section>
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
 <aside class="notes">
 <p>This article does not explain why it is arduous to publish mathematics on the web, but rather briefly outlines the solution to the problem that I have implemented.<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></p>
 <p>It is impossible to overstate the importance of those who helped bring <a href="#/mathematics-books-on-the-web">these books into their completed form</a>. I am deeply grateful for their generous contributions and would like to express my sincere appreciation here.</p>
@@ -400,101 +426,20 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<div>
+<ul>
+<li class="fragment">This video does not explain why it is arduous to publish mathematics on the web, but rather briefly outlines the solution to the problem that I have implemented.</li>
+<li class="fragment">If you are interested in the reasons why it’s so difficult, we’ll that has already been written by Brian Hayes.</li>
+</ul>
+</div>
 <aside></aside></section>
 <section id="mathjax" class="slide level2">
 <h2>MathJax</h2>
-<p>MathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication (see <span class="citation" data-cites="cervone2012mathjax">Cervone (<a href="#/direct-knowledge" role="doc-biblioref" onclick="">2012</a>)</span>, <span class="citation" data-cites="Davide">Cervone, Krautzberger, and Sorge (<a href="#/direct-knowledge" role="doc-biblioref" onclick="">2016</a>)</span>) - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for <a href="https://www.mathjax.org">enabling mathematical equations and formulas to be written in HTML documents</a>.</p>
-<div class="fragment">
+<aside class="notes">
+<p>MathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication (see <span class="citation" data-cites="cervone2012mathjax">Cervone (<a href="" role="doc-biblioref" onclick="return false;">2012</a>)</span>, <span class="citation" data-cites="Davide">Cervone, Krautzberger, and Sorge (<a href="" role="doc-biblioref" onclick="return false;">2016</a>)</span>) - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for <a href="https://www.mathjax.org">enabling mathematical equations and formulas to be written in HTML documents</a>.</p>
 <blockquote>
 <p>I am truly thankful for the use of this incredible tool.</p>
 </blockquote>
-</div>
-</section>
-<section id="python" class="slide level2">
-<h2>Python</h2>
-<p>The Python programming language has become <a href="https://pypl.github.io/PYPL.html">increasingly sought-after</a> for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth (see <span class="citation" data-cites="Millman2011">Millman and Aivazis (<a href="#/direct-knowledge" role="doc-biblioref" onclick="">2011</a>)</span>), making it one of the most popular languages on the market today.</p>
-<div class="fragment">
-<blockquote>
-<p>I’d like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in <a href="https://www.python.org">developing python</a>. Your contributions are invaluable; without them these books would not have been possible.</p>
-</blockquote>
-</div>
-</section>
-<section id="pyscript" class="slide level2">
-<h2>PyScript</h2>
-<p>PyScript enables users of all backgrounds to create powerful Python-based web applications with ease. <a href="https://pyscript.net">PyScript revolutionizes the way users can create engaging</a>, dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology (see <span class="citation" data-cites="Arepalli2022">Arepalli and Sekharan (<a href="#/direct-knowledge" role="doc-biblioref" onclick="">2022</a>)</span>), learners are granted unprecedented access to powerful tools previously inaccessible in browser environments.</p>
-<div class="fragment">
-<blockquote>
-<p>I am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier.</p>
-</blockquote>
-</div>
-</section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p><a href="https://quarto.org">Quarto</a> is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations, websites, blogs, and books in html, pdf, and epub formats. With the help of scientific markdown you’ll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options (e.g.&nbsp;see <span class="citation" data-cites="aust">Aust (<a href="#/direct-knowledge" role="doc-biblioref" onclick="">2022</a>)</span>).</p>
-<div class="fragment">
-<blockquote>
-<p>Quarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful.</p>
-</blockquote>
-</div>
-</section>
-<section id="pandoc" class="slide level2">
-<h2>Pandoc</h2>
-<p><a href="https://pandoc.org">Pandoc</a> is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It’s free-software too, forming an essential part in many publishing workflows (see <span class="citation" data-cites="krewinkel2017formatting">Krewinkel and Winkler (<a href="#/direct-knowledge" role="doc-biblioref" onclick="">2017</a>)</span>) due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence (see <span class="citation" data-cites="mailund2019introducing">Mailund (<a href="#/direct-knowledge" role="doc-biblioref" onclick="">2019</a>)</span>).</p>
-<div class="fragment">
-<blockquote>
-<p>Pandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource.</p>
-</blockquote>
-</div>
-</section>
-<section id="visual-studio-code" class="slide level2">
-<h2>Visual Studio Code</h2>
-<p><a href="https://code.visualstudio.com">Visual Studio Code</a> is a powerful, cross-platform source-code editor created by Microsoft. It boasts intuitive features like debugging support, syntax highlighting and code refactoring - not to mention embedded Git - that make coding faster and easier than ever before.</p>
-<div class="fragment">
-<blockquote>
-<p>VS Code has been key in helping us create, build, and refine our work - for that I am immensely grateful.</p>
-</blockquote>
-</div>
-</section>
-<section id="github" class="slide level2">
-<h2>GitHub</h2>
-<p><a href="https://github.com/about">GitHub</a> offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code through tools such as access control, bug tracking, feature requests, and discussions (<span class="citation" data-cites="hata2022github">Hata et al. (<a href="#/direct-knowledge" role="doc-biblioref" onclick="">2022</a>)</span>) which enable attempts to create more efficient projects.</p>
-<div class="fragment">
-<blockquote>
-<p>GitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence.</p>
-</blockquote>
-</div>
-</section>
-<section id="netlify" class="slide level2">
-<h2>Netlify</h2>
-<p><a href="https://www.netlify.com">Netlify</a> empowers developers to create, launch, and manage web applications with innovative cloud computing services. Their platform streamlines the process of building robust sites that can quickly scale or deploy serverless backends for dynamic experiences.</p>
-<div class="fragment">
-<blockquote>
-<p>I am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together.</p>
-</blockquote>
-</div>
-</section>
-<section id="revealjs" class="slide level2">
-<h2>RevealJS</h2>
-<p><a href="https://revealjs.com">RevealJS</a> is an open source HTML presentation framework that allows you to create captivating presentations without cost or hassle.</p>
-<div class="fragment">
-<blockquote>
-<p>I offer my sincere gratitude to the Reveal.js community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way.</p>
-</blockquote>
-</div>
-</section>
-<section id="youtube" class="slide level2">
-<h2>YouTube</h2>
-<p><a href="https://about.youtube">YouTube is an invaluable platform</a> that we are proud to be part of.</p>
-<div class="fragment">
-<blockquote>
-<p>I would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube’s vast influence on culture to reach ever further.</p>
-</blockquote>
-</div>
-</section>
-<section id="direct-knowledge" class="slide level2 smaller scrollable">
-<h2>Direct Knowledge</h2>
-<aside class="notes">
-<p>So if you’re new to any of the technologies listed above, you might question how I bring all this together. In case so, here’s a brief explanation.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -506,52 +451,297 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<div class="fragment">
-<p>I use Visual Studio Code to write in Html, Css, Js, Markdown, Quarto Markdown, Python, and TeX. After setting up a few configuration files (one-time only), I issue the command “quarto render” to build the static files. The website, books, blog(s), and slides are outputs from this building process. Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc. These files are uploaded to a Github repository and then published using Netlify. I then use the ReavalJS slideshows to make YouTube videos. I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost.</p>
+<div>
+<ul>
+<li class="fragment">MathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web.</li>
+<li class="fragment">With MathJax, complex equations are no longer an obstacle in educational or professional communication.</li>
+<li class="fragment">MathJax deserves a tremendous amount of gratitude for <a href="https://www.mathjax.org">enabling mathematical equations and formulas to be written in HTML documents</a>.</li>
+</ul>
 </div>
-<div class="fragment">
+</section>
+<section id="python" class="slide level2">
+<h2>Python</h2>
+<aside class="notes">
+<p>The Python programming language has become <a href="https://pypl.github.io/PYPL.html">increasingly sought-after</a> for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth (see <span class="citation" data-cites="Millman2011">Millman and Aivazis (<a href="" role="doc-biblioref" onclick="return false;">2011</a>)</span>), making it one of the most popular languages on the market today.</p>
+<blockquote>
+<p>I’d like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in <a href="https://www.python.org">developing python</a>. Your contributions are invaluable; without them these books would not have been possible.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment">The Python programming language has become <a href="https://pypl.github.io/PYPL.html">increasingly sought-after</a> for its versatile capabilities and ease of use.</li>
+<li class="fragment">Its prominence in a wide range of industries has seen continued growth, making it one of the most popular languages on the market today.</li>
+</ul>
+</div>
+</section>
+<section id="pyscript" class="slide level2">
+<h2>PyScript</h2>
+<aside class="notes">
+<p>PyScript enables users of all backgrounds to create powerful Python-based web applications with ease. <a href="https://pyscript.net">PyScript revolutionizes the way users can create engaging</a>, dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology (see <span class="citation" data-cites="Arepalli2022">Arepalli and Sekharan (<a href="" role="doc-biblioref" onclick="return false;">2022</a>)</span>), learners are granted unprecedented access to powerful tools previously inaccessible in browser environments.</p>
+<blockquote>
+<p>I am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment">PyScript enables users of all backgrounds to create powerful Python-based web applications with ease.</li>
+<li class="fragment"><a href="https://pyscript.net">PyScript revolutionizes the way users can create engaging</a>, dynamic Python apps with a hybrid of HTML and its versatile language.</li>
+<li class="fragment">By harnessing this cutting-edge technology, learners are granted unprecedented access to powerful tools previously inaccessible in browser environments.</li>
+</ul>
+</div>
+</section>
+<section id="quarto" class="slide level2">
+<h2>Quarto</h2>
+<aside class="notes">
+<p><a href="https://quarto.org">Quarto</a> is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations, websites, blogs, and books in html, pdf, and epub formats. With the help of scientific markdown you’ll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options (e.g.&nbsp;see <span class="citation" data-cites="aust">Aust (<a href="" role="doc-biblioref" onclick="return false;">2022</a>)</span>).</p>
+<blockquote>
+<p>Quarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><a href="https://quarto.org">Quarto</a> is an open-source system designed to revolutionize scientific and technical publishing.</li>
+<li class="fragment">The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality
+<ul>
+<li class="fragment">articles, reports, presentations, websites, blogs, and books</li>
+<li class="fragment">in html, pdf, and epub formats.</li>
+</ul></li>
+<li class="fragment">With the help of scientific markdown you’ll have access to
+<ul>
+<li class="fragment">equations, citations,</li>
+<li class="fragment">crossrefs, figure, panels,</li>
+<li class="fragment">callouts, plus advanced layout options.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="pandoc" class="slide level2">
+<h2>Pandoc</h2>
+<aside class="notes">
+<p><a href="https://pandoc.org">Pandoc</a> is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It’s free-software too, forming an essential part in many publishing workflows (see <span class="citation" data-cites="krewinkel2017formatting">Krewinkel and Winkler (<a href="" role="doc-biblioref" onclick="return false;">2017</a>)</span>) due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence (see <span class="citation" data-cites="mailund2019introducing">Mailund (<a href="" role="doc-biblioref" onclick="return false;">2019</a>)</span>).</p>
+<blockquote>
+<p>Pandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><a href="https://pandoc.org">Pandoc</a> is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease.</li>
+<li class="fragment">It’s free-software too, forming an essential part in many publishing workflows due to its breadth and simplicity.</li>
+<li class="fragment">In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence.</li>
+</ul>
+</div>
+</section>
+<section id="visual-studio-code" class="slide level2">
+<h2>Visual Studio Code</h2>
+<aside class="notes">
+<p><a href="https://code.visualstudio.com">Visual Studio Code</a> is a powerful, cross-platform source-code editor created by Microsoft. It boasts intuitive features like debugging support, syntax highlighting and code refactoring - not to mention embedded Git - that make coding faster and easier than ever before.</p>
+<blockquote>
+<p>VS Code has been key in helping us create, build, and refine our work - for that I am immensely grateful.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><a href="https://code.visualstudio.com">Visual Studio Code</a> is a powerful, cross-platform source-code editor created by Microsoft.</li>
+<li class="fragment">It boasts intuitive features like debugging support, syntax highlighting and code refactoring - not to mention embedded Git - that make coding faster and easier than ever before.</li>
+</ul>
+</div>
+</section>
+<section id="github" class="slide level2">
+<h2>GitHub</h2>
+<aside class="notes">
+<p><a href="https://github.com/about">GitHub</a> offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code. Through tools such as access control, bug tracking, feature requests, and discussions (<span class="citation" data-cites="hata2022github">Hata et al. (<a href="" role="doc-biblioref" onclick="return false;">2022</a>)</span>) developers are able to efficiently create new projects.</p>
+<blockquote>
+<p>GitHub is a revolutionary resource that has profoundly impacted the world. I express my deep gratitude for its existence.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><a href="https://github.com/about">GitHub</a> offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code.</li>
+<li class="fragment">Through tools such as
+<ul>
+<li class="fragment">access control, bug tracking,</li>
+<li class="fragment">feature requests, and discussions</li>
+<li class="fragment">developers are able to efficiently create new projects.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="netlify" class="slide level2">
+<h2>Netlify</h2>
+<aside class="notes">
+<p><a href="https://www.netlify.com">Netlify</a> empowers developers to create, launch, and manage web applications with innovative cloud computing services. Their platform streamlines the process of building robust sites that can quickly scale or deploy serverless backends for dynamic experiences.</p>
+<blockquote>
+<p>I am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><a href="https://www.netlify.com">Netlify</a> empowers developers to create, launch, and manage web applications with innovative cloud computing services</li>
+<li class="fragment">Their platform streamlines the process of building robust sites that can quickly scale or deploy serverless backends for dynamic experiences.</li>
+</ul>
+</div>
+</section>
+<section id="revealjs" class="slide level2">
+<h2>RevealJS</h2>
+<aside class="notes">
+<p><a href="https://revealjs.com">RevealJS</a> is an open source HTML presentation framework that allows you to create captivating presentations without cost or hassle.</p>
+<blockquote>
+<p>I offer my sincere gratitude to the Reveal.js community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><a href="https://revealjs.com">RevealJS</a> is an open source HTML presentation framework that allows you to create captivating presentations without cost or hassle.</li>
+</ul>
+</div>
+</section>
+<section id="youtube" class="slide level2">
+<h2>YouTube</h2>
+<aside class="notes">
+<p><a href="https://about.youtube">YouTube is an invaluable platform</a> that we are proud to be part of.</p>
+<blockquote>
+<p>I would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube’s vast influence on culture to reach ever further.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><a href="https://about.youtube">YouTube is an invaluable platform</a> that we are proud to be part of.</li>
+</ul>
+</div>
+</section>
+<section id="direct-knowledge" class="slide level2">
+<h2>Direct Knowledge</h2>
+<aside class="notes">
+<p>So if you’re new to any of the technologies listed above, you might question how I bring all this together. In case so, here’s a brief explanation.</p>
+<p>I use Visual Studio Code to write in Html, Css, Js, Markdown, Quarto Markdown, Python, and TeX. After setting up a few configuration files (one-time only), I issue the command “quarto render” to build the static files. The website, books, blog(s), and slides are outputs from this building process. Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc. These files are uploaded to a Github repository and then published using Netlify. I then use the ReavalJS slideshows to make YouTube videos. I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost.</p>
 <blockquote>
 <p>These books, and their presentations, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work.</p>
 </blockquote>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div>
-<div class="fragment">
-<p>If you would like any help with understanding this, please contact me at <a href="mailto:david@directknowledge.com">david@directknowledge.com</a>.</p>
-</div>
-</div>
-<div>
-<section data-visibility="hidden">
-<div class="mt-5 d-print-none">
-<div class="card-group" id="mathematics-books-on-the-web">
-  <div class="card mx-2">
-    <a href="../../basic-set-theory/">
-        <img width="150" height="225" src="../../assets/basic-set-theory-cover.png" class="card-img-top" alt="Basic Set Theory">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../learning-number-theory/">
-        <img width="150" height="225" src="../../assets/learning-number-theory-cover.png" class="card-img-top" alt="Learning Number Theory">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../learning-linear-algebra/">
-        <img width="150" height="225" src="../../assets/learning-linear-algebra-cover.png" class="card-img-top" alt="Learning Linear Algebra">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../single-variable-calculus/">
-        <img width="150" height="225" src="../../assets/single-variable-calculus-cover.png" class="card-img-top" alt="Single Variable Calculus">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../multivariable-calculus/">
-        <img width="150" height="225" src="../../assets/multivariable-calculus-cover.png" class="card-img-top" alt="Multivariable Calculus">
-    </a>
-  </div>
-</div>
+<ul>
+<li class="fragment">I use Visual Studio Code to write in Html, Css, Js, Markdown, Quarto Markdown, Python, and TeX.</li>
+<li class="fragment">After setting up a few configuration files (one-time only), I issue the command “quarto render” to build the static files.</li>
+<li class="fragment">The website, books, blog(s), and slides are outputs from this building process.</li>
+<li class="fragment">Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc.</li>
+<li class="fragment">These files are uploaded to a Github repository and then published using Netlify.</li>
+<li class="fragment">I then use the ReavalJS slideshows to make YouTube videos.</li>
+<li class="fragment">I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost.</li>
+</ul>
 </div>
 </section>
+<section id="thanks-for-watching" class="slide level2">
+<h2>Thanks For Watching</h2>
+<div>
+<ul>
+<li><a href="index.html">Article</a> (with bibliography)</li>
+<li><a href="mathematics-on-the-web.pdf">PDF</a> (for downloading)</li>
+<li><a href="mathematics-on-the-web.tex">LaTeX</a> (source code)</li>
+<li><a href="mathematics-on-the-web.html">RevealJS</a> (slideshow)</li>
+<li><a href="mailto:david@directknowledge.com">david@directknowledge.com</a></li>
+</ul>
 </div>
+</section>
 <div class="footer footer-default">
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
@@ -583,10 +773,9 @@ Mailund, Thomas. 2019. <span>“Introducing Markdown and Pandoc.”</span> <em>B
 Millman, K. Jarrod, and Michael Aivazis. 2011. <span>“Python for Scientists and Engineers.”</span> <em>Computing in Science &amp; Engineering</em> 13 (2): 9–12. <a href="https://doi.org/10.1109/MCSE.2011.36">https://doi.org/10.1109/MCSE.2011.36</a>.
 </div>
 </div>
-</section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 <ol>
-<li id="fn1"><p>If you are interested in the reasons why it’s so difficult, we’ll that has already been written by Brian Hayes: <a href="https://www.americanscientist.org/article/writing-math-on-the-web">Writing Math on the Web</a> (see <span class="citation" data-cites="brainhayes">Hayes (<a href="#/direct-knowledge" role="doc-biblioref" onclick="">2017</a>)</span>).</p></li>
+<li id="fn1"><p>If you are interested in the reasons why it’s so difficult, we’ll that has already been written by Brian Hayes: <a href="https://www.americanscientist.org/article/writing-math-on-the-web">Writing Math on the Web</a> (see <span class="citation" data-cites="brainhayes">Hayes (<a href="" role="doc-biblioref" onclick="return false;">2017</a>)</span>).</p></li>
 </ol>
 </section>
     </div>

@@ -1,0 +1,26 @@
+---
+draft: true
+title: Example
+format:
+  html:
+      output-file: example.html
+  pdf:
+      output-file: example.pdf
+  revealjs:
+      output-file: example-slideshow.html
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+Will only appear in HTML and not in Reveal.js!
+
+:::
+
+
+
+
+::: {.content-visible when-format="revealjs"}
+
+Will only appear in Reveal.js!
+
+:::

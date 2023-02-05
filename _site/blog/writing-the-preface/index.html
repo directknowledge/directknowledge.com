@@ -4,7 +4,7 @@
 <meta name="generator" content="quarto-1.2.280">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="David A. Smith">
-<meta name="keywords" content="mathematics, writing">
+<meta name="keywords" content="mathematics, writing, publishing">
 <meta name="description" content="Writing The Preface of a Mathematics Book">
 <title>Writing The Preface - Direct Knowledge</title>
 <style>
@@ -48,9 +48,101 @@ ul.task-list li input[type="checkbox"] {
 <style>
     .quarto-title-block .quarto-title-banner {
       color: #FFFFFF;
-background: #303030;
+background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-the-preface-1024.jpeg");;
     }
     </style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+</style>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+     .reveal-viewport #refs, .reveal-full-page #footnotes {
+        display:none!important;
+     }
+     .quarto-title-banner {
+        background-repeat: no-repeat!important;
+        background-position: center center;
+        background-size: cover!important;
+        background-attachment: fixed;
+     }
+</style>
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -90,7 +182,7 @@ background: #303030;
       "headline":"Writing The Preface of a Mathematics Book",
       "description": "Crafting the preface of a mathematics book can be daunting, but it is an essential step in creating an engaging and effective publication. Here we will discuss best practices for writing a preface, which includes establishing tone, introducing yourself as an author, outlining any goals you have for the work and highlighting key topics that are discussed.",
       "url":"https://directknowledge.com",
-      "keywords":"mathematics writing",
+      "keywords":"mathematics publishing writing",
       "image":{
           "@type":"ImageObject",
           "url":"https://directknowledge.com/blog/writing-the-preface/writing-the-preface-1024.png",
@@ -212,7 +304,7 @@ background: #303030;
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Writing</div>
+                <div class="quarto-category">Publishing</div>
               </div>
                   </div>
   </div>
@@ -265,43 +357,14 @@ background: #303030;
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
-<div class="d-print-none notes">
-<p><img src="writing-the-preface-1024.jpeg" class="img-fluid" alt="Writing The Preface: of a Mathematics Book"></p>
-</div>
-<div>
-<section data-visibility="hidden">
-<div class="mt-5 d-print-none">
-<div class="card-group" id="mathematics-books-on-the-web">
-  <div class="card mx-2">
-    <a href="../../basic-set-theory/">
-        <img width="150" height="225" src="../../assets/basic-set-theory-cover.png" class="card-img-top" alt="Basic Set Theory">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../learning-number-theory/">
-        <img width="150" height="225" src="../../assets/learning-number-theory-cover.png" class="card-img-top" alt="Learning Number Theory">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../learning-linear-algebra/">
-        <img width="150" height="225" src="../../assets/learning-linear-algebra-cover.png" class="card-img-top" alt="Learning Linear Algebra">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../single-variable-calculus/">
-        <img width="150" height="225" src="../../assets/single-variable-calculus-cover.png" class="card-img-top" alt="Single Variable Calculus">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../multivariable-calculus/">
-        <img width="150" height="225" src="../../assets/multivariable-calculus-cover.png" class="card-img-top" alt="Multivariable Calculus">
-    </a>
-  </div>
-</div>
-</div>
+<section data-visibility="hidden" class="slide d-print-none">
+<p><img src="writing-the-preface-1024.jpeg" class="img-fluid" alt="Writing The Preface of a Mathematics Book"></p>
 </section>
+<section class="slide d-none" data-background-video="../intro.mp4"></section>
+<div>
+<p>If you would like any help with understanding this, please contact me at <a href="mailto:david@directknowledge.com">david@directknowledge.com</a>.</p>
 </div>
-<div id="quarto-appendix" class="default"><section id="additional-formats" class="level2 unlisted unnumbered appendix" data-visibility="hidden"><h2 class="quarto-appendix-heading">Additional Formats</h2><div class="quarto-appendix-contents">
+<div id="quarto-appendix" class="default"><section id="additional-formats" class="level2 unlisted unnumbered appendix"><h2 class="quarto-appendix-heading">Additional Formats</h2><div class="quarto-appendix-contents">
 <ul>
 <li>Print (PDF) <a href="writing-the-preface.pdf" target="_blank">Writing The Preface</a></li>
 <li>Source code (LaTeX) <a href="writing-the-preface.tex" target="_blank">Writing The Preface</a></li>

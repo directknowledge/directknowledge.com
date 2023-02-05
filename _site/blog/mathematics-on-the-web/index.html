@@ -67,9 +67,101 @@ div.csl-indent {
 <style>
     .quarto-title-block .quarto-title-banner {
       color: #FFFFFF;
-background: #303030;
+background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("mathematics-on-the-web-1024.jpeg");;
     }
     </style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+</style>
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+     .reveal-viewport #refs, .reveal-full-page #footnotes {
+        display:none!important;
+     }
+     .quarto-title-banner {
+        background-repeat: no-repeat!important;
+        background-position: center center;
+        background-size: cover!important;
+        background-attachment: fixed;
+     }
+</style>
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -231,7 +323,7 @@ background: #303030;
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Writing</div>
+                <div class="quarto-category">Publishing</div>
               </div>
                   </div>
   </div>
@@ -284,7 +376,8 @@ background: #303030;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mathjax" id="toc-mathjax" class="nav-link active" data-scroll-target="#mathjax">MathJax</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#mathjax" id="toc-mathjax" class="nav-link" data-scroll-target="#mathjax">MathJax</a></li>
   <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
   <li><a href="#pyscript" id="toc-pyscript" class="nav-link" data-scroll-target="#pyscript">PyScript</a></li>
   <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
@@ -300,17 +393,24 @@ background: #303030;
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
-<div class="d-print-none notes">
-<p><img src="mathematics-on-the-web-1024.jpeg" class="img-fluid" alt="Mathematics on the Web: Acknowledgements"></p>
-</div>
+<section data-visibility="hidden" class="slide d-print-none">
+<p><img src="mathematics-on-the-web-1024.jpeg" class="img-fluid" alt="Mathematics on the Web Acknowledgements"></p>
+</section>
+<section class="slide d-none" data-background-video="../intro.mp4"></section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <div class="notes">
 <p>This article does not explain why it is arduous to publish mathematics on the web, but rather briefly outlines the solution to the problem that I have implemented.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>It is impossible to overstate the importance of those who helped bring <a href="#mathematics-books-on-the-web">these books into their completed form</a>. I am deeply grateful for their generous contributions and would like to express my sincere appreciation here.</p>
 </div>
+<div>
+<div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/RV2zej9Fzvo" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</section>
 <section id="mathjax" class="level2">
 <h2 class="anchored" data-anchor-id="mathjax">MathJax</h2>
+<div class="notes">
 <p>MathJax is a powerful open source typesetting platform that enables users to generate beautiful, high-quality mathematical and scientific content on the web. With MathJax, complex equations are no longer an obstacle in educational or professional communication (see <span class="citation" data-cites="cervone2012mathjax">Cervone (<a href="#ref-cervone2012mathjax" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="Davide">Cervone, Krautzberger, and Sorge (<a href="#ref-Davide" role="doc-biblioref">2016</a>)</span>) - they can be displayed accurately with ease. MathJax deserves a tremendous amount of gratitude for <a href="https://www.mathjax.org">enabling mathematical equations and formulas to be written in HTML documents</a>.</p>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>I am truly thankful for the use of this incredible tool.</p>
 </blockquote>
@@ -318,8 +418,8 @@ background: #303030;
 </section>
 <section id="python" class="level2">
 <h2 class="anchored" data-anchor-id="python">Python</h2>
+<div class="notes">
 <p>The Python programming language has become <a href="https://pypl.github.io/PYPL.html">increasingly sought-after</a> for its versatile capabilities and ease of use. Its prominence in a wide range of industries has seen continued growth (see <span class="citation" data-cites="Millman2011">Millman and Aivazis (<a href="#ref-Millman2011" role="doc-biblioref">2011</a>)</span>), making it one of the most popular languages on the market today.</p>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>I’d like to offer a hearty salute and our sincerest gratitude to all those who have contributed their time, effort, expertise, and knowledge in <a href="https://www.python.org">developing python</a>. Your contributions are invaluable; without them these books would not have been possible.</p>
 </blockquote>
@@ -327,8 +427,8 @@ background: #303030;
 </section>
 <section id="pyscript" class="level2">
 <h2 class="anchored" data-anchor-id="pyscript">PyScript</h2>
+<div class="notes">
 <p>PyScript enables users of all backgrounds to create powerful Python-based web applications with ease. <a href="https://pyscript.net">PyScript revolutionizes the way users can create engaging</a>, dynamic Python apps with a hybrid of HTML and its versatile language. By harnessing this cutting-edge technology (see <span class="citation" data-cites="Arepalli2022">Arepalli and Sekharan (<a href="#ref-Arepalli2022" role="doc-biblioref">2022</a>)</span>), learners are granted unprecedented access to powerful tools previously inaccessible in browser environments.</p>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>I am deeply grateful to the many pioneering minds that have advanced pyscript into a powerful tool for making learning easier.</p>
 </blockquote>
@@ -336,8 +436,8 @@ background: #303030;
 </section>
 <section id="quarto" class="level2">
 <h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<div class="notes">
 <p><a href="https://quarto.org">Quarto</a> is an open-source system designed to revolutionize scientific and technical publishing. The platform allows authors to expertly craft dynamic content with Python, R, Julia or Observable - in plain text markdown or Jupyter notebooks that can be published as high quality articles, reports, presentations, websites, blogs, and books in html, pdf, and epub formats. With the help of scientific markdown you’ll have access to equations, citations, crossrefs, figure, panels, callouts, plus advanced layout options (e.g.&nbsp;see <span class="citation" data-cites="aust">Aust (<a href="#ref-aust" role="doc-biblioref">2022</a>)</span>).</p>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>Quarto has been instrumental in enabling me to realize my ambitions and stretch my creative ideas beyond what I ever imagined was possible. Their service created a platform for success, fuelling creativity until there were no boundaries left standing - I am immensely thankful.</p>
 </blockquote>
@@ -345,8 +445,8 @@ background: #303030;
 </section>
 <section id="pandoc" class="level2">
 <h2 class="anchored" data-anchor-id="pandoc">Pandoc</h2>
+<div class="notes">
 <p><a href="https://pandoc.org">Pandoc</a> is a powerful tool for the modern writer, transforming documents into all sorts of formats with ease. It’s free-software too, forming an essential part in many publishing workflows (see <span class="citation" data-cites="krewinkel2017formatting">Krewinkel and Winkler (<a href="#ref-krewinkel2017formatting" role="doc-biblioref">2017</a>)</span>) due to its breadth and simplicity. In an age of digital transformation, open source technology has presented innovative yet powerful tools to create beautiful documents with ease and confidence (see <span class="citation" data-cites="mailund2019introducing">Mailund (<a href="#ref-mailund2019introducing" role="doc-biblioref">2019</a>)</span>).</p>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>Pandoc stands out as a shining example – expressing our sincere appreciation for this must-have resource.</p>
 </blockquote>
@@ -354,8 +454,8 @@ background: #303030;
 </section>
 <section id="visual-studio-code" class="level2">
 <h2 class="anchored" data-anchor-id="visual-studio-code">Visual Studio Code</h2>
+<div class="notes">
 <p><a href="https://code.visualstudio.com">Visual Studio Code</a> is a powerful, cross-platform source-code editor created by Microsoft. It boasts intuitive features like debugging support, syntax highlighting and code refactoring - not to mention embedded Git - that make coding faster and easier than ever before.</p>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>VS Code has been key in helping us create, build, and refine our work - for that I am immensely grateful.</p>
 </blockquote>
@@ -363,17 +463,17 @@ background: #303030;
 </section>
 <section id="github" class="level2">
 <h2 class="anchored" data-anchor-id="github">GitHub</h2>
-<p><a href="https://github.com/about">GitHub</a> offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code through tools such as access control, bug tracking, feature requests, and discussions (<span class="citation" data-cites="hata2022github">Hata et al. (<a href="#ref-hata2022github" role="doc-biblioref">2022</a>)</span>) which enable attempts to create more efficient projects.</p>
-<div class="fragment">
+<div class="notes">
+<p><a href="https://github.com/about">GitHub</a> offers a comprehensive platform for software development and version control using Git, transforming the process of crafting quality code. Through tools such as access control, bug tracking, feature requests, and discussions (<span class="citation" data-cites="hata2022github">Hata et al. (<a href="#ref-hata2022github" role="doc-biblioref">2022</a>)</span>) developers are able to efficiently create new projects.</p>
 <blockquote class="blockquote">
-<p>GitHub is a revolutionary resource that has profoundly impacted the development world and remains an invaluable asset. I express my deep gratitude for its existence.</p>
+<p>GitHub is a revolutionary resource that has profoundly impacted the world. I express my deep gratitude for its existence.</p>
 </blockquote>
 </div>
 </section>
 <section id="netlify" class="level2">
 <h2 class="anchored" data-anchor-id="netlify">Netlify</h2>
+<div class="notes">
 <p><a href="https://www.netlify.com">Netlify</a> empowers developers to create, launch, and manage web applications with innovative cloud computing services. Their platform streamlines the process of building robust sites that can quickly scale or deploy serverless backends for dynamic experiences.</p>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>I am incredibly thankful for using Netlify - a powerful platform that helps streamline website development and deployment. I look forward to a successful journey together.</p>
 </blockquote>
@@ -381,8 +481,8 @@ background: #303030;
 </section>
 <section id="revealjs" class="level2">
 <h2 class="anchored" data-anchor-id="revealjs">RevealJS</h2>
+<div class="notes">
 <p><a href="https://revealjs.com">RevealJS</a> is an open source HTML presentation framework that allows you to create captivating presentations without cost or hassle.</p>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>I offer my sincere gratitude to the Reveal.js community for providing us with a great platform that allows us to craft engaging and interactive stories. Their library has enabled us to bring forth innovative ideas in an impactful way.</p>
 </blockquote>
@@ -390,8 +490,8 @@ background: #303030;
 </section>
 <section id="youtube" class="level2">
 <h2 class="anchored" data-anchor-id="youtube">YouTube</h2>
+<div class="notes">
 <p><a href="https://about.youtube">YouTube is an invaluable platform</a> that we are proud to be part of.</p>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>I would like to express our admiration and appreciation for all the viewers who support us with their viewership, allowing YouTube’s vast influence on culture to reach ever further.</p>
 </blockquote>
@@ -401,55 +501,16 @@ background: #303030;
 <h2 class="anchored" data-anchor-id="direct-knowledge">Direct Knowledge</h2>
 <div class="notes">
 <p>So if you’re new to any of the technologies listed above, you might question how I bring all this together. In case so, here’s a brief explanation.</p>
-</div>
-<div class="fragment">
 <p>I use Visual Studio Code to write in Html, Css, Js, Markdown, Quarto Markdown, Python, and TeX. After setting up a few configuration files (one-time only), I issue the command “quarto render” to build the static files. The website, books, blog(s), and slides are outputs from this building process. Math is displayed on the webpages using MathJax, Python runs in the browser using PyScript, and the pdfs are created using an installation of LaTeX in the background via Pandoc. These files are uploaded to a Github repository and then published using Netlify. I then use the ReavalJS slideshows to make YouTube videos. I have found that by using Visual Studio Code and Quarto together, this whole process takes place very quickly and is without cost.</p>
-</div>
-<div class="fragment">
 <blockquote class="blockquote">
 <p>These books, and their presentations, wouldn’t have been possible without those special individuals who offered their insight and guidance. I am profoundly grateful to them for supporting my work.</p>
 </blockquote>
 </div>
 <div>
-<div class="fragment">
 <p>If you would like any help with understanding this, please contact me at <a href="mailto:david@directknowledge.com">david@directknowledge.com</a>.</p>
 </div>
-</div>
-<div>
-<section data-visibility="hidden">
-<div class="mt-5 d-print-none">
-<div class="card-group" id="mathematics-books-on-the-web">
-  <div class="card mx-2">
-    <a href="../../basic-set-theory/">
-        <img width="150" height="225" src="../../assets/basic-set-theory-cover.png" class="card-img-top" alt="Basic Set Theory">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../learning-number-theory/">
-        <img width="150" height="225" src="../../assets/learning-number-theory-cover.png" class="card-img-top" alt="Learning Number Theory">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../learning-linear-algebra/">
-        <img width="150" height="225" src="../../assets/learning-linear-algebra-cover.png" class="card-img-top" alt="Learning Linear Algebra">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../single-variable-calculus/">
-        <img width="150" height="225" src="../../assets/single-variable-calculus-cover.png" class="card-img-top" alt="Single Variable Calculus">
-    </a>
-  </div>
-  <div class="card mx-2">
-    <a href="../../multivariable-calculus/">
-        <img width="150" height="225" src="../../assets/multivariable-calculus-cover.png" class="card-img-top" alt="Multivariable Calculus">
-    </a>
-  </div>
-</div>
-</div>
 </section>
-</div>
-</section>
-<div id="quarto-appendix" class="default"><section id="additional-formats" class="level2 unlisted unnumbered appendix" data-visibility="hidden"><h2 class="quarto-appendix-heading">Additional Formats</h2><div class="quarto-appendix-contents">
+<div id="quarto-appendix" class="default"><section id="additional-formats" class="level2 unlisted unnumbered appendix"><h2 class="quarto-appendix-heading">Additional Formats</h2><div class="quarto-appendix-contents">
 <ul>
 <li>Print (PDF) <a href="mathematics-on-the-web.pdf" target="_blank">Mathematics on the Web</a></li>
 <li>Source code (LaTeX) <a href="mathematics-on-the-web.tex" target="_blank">Mathematics on the Web</a></li>

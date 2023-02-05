@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.280">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="description" content="Learning Linear Algebra">
-<title>Learning Linear Algebra - With Python</title>
+
+
+<title>Direct Knowledge - Example</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,20 +21,22 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-<meta name="quarto:offset" content="./">
-<link href="./systems-of-linear-equations.html" rel="next">
-<link href="./../assets/favicon.ico" rel="icon">
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href="./assets/favicon.ico" rel="icon">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -84,20 +89,23 @@ ul.task-list li input[type="checkbox"] {
     }    
 }
 </style>
-<meta property="og:title" content="Learning Linear Algebra - With Python">
-<meta property="og:description" content="Learning Linear Algebra">
-<meta property="og:site-name" content="Learning Linear Algebra">
+
+
+<meta property="og:title" content="Direct Knowledge - Example">
+<meta property="og:site-name" content="Direct Knowledge">
 </head>
-<body class="nav-sidebar floating nav-fixed">
+
+<body class="nav-fixed fullcontent">
+
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" width="28" height="24"  class="navbar-logo">
+    <img src="./assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" class="navbar-logo">
     </a>
-    <a aria-label="Learning Linear Algebra" class="navbar-brand" href="https://directknowledge.com">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Direct Knowledge</span>
     </a>
   </div>
@@ -112,38 +120,38 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
         <li>
-    <a class="dropdown-item" href="./../basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+    <a class="dropdown-item" href="./basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
 </i> 
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./../learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+    <a class="dropdown-item" href="./learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./../learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+    <a class="dropdown-item" href="./learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./../single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+    <a class="dropdown-item" href="./single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
 </i> 
  <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./../multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+    <a class="dropdown-item" href="./multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
 </i> 
  <span class="dropdown-text">Multivariable Calculus</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./../about.html">
+    <a class="nav-link" href="./about.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../blog/">
+    <a class="nav-link" href="./blog/">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item compact">
@@ -152,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/directknowledge/directknowledge.com"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -160,127 +168,38 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Learning Linear Algebra</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
-        <a class="book-title" href="https://directknowledge.com/learning-linear-algebra/">Learning Linear Algebra</a><div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Preface</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./systems-of-linear-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Systems of Linear Equations</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./vector-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Vector Spaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./linear-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Linear Transformations</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./inner-products-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Inner Products Spaces</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./determinants.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Determinants</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./eigenvalues-and-eigenvectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenvalues and Eigenvectors</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./canonical-forms.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Canonical Forms</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><a href="https://directknowledge.com/learning-linear-algebra/"><picture><source type="image/webp" srcset="../../assets/learning-linear-algebra-cover.webp"><source type="image/webp" srcset="../../assets/learning-linear-algebra-cover-thumbnail.png"><img class="shadow border" style="margin-bottom:12px;" width="192" height="288" src="../../assets/learning-linear-algebra-cover.png" alt="Learning Linear Algebra Book Cover"></picture></a>
-    <h2 id="toc-title">Chapter Contents</h2>
-   
-  <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#short-description" id="toc-short-description" class="nav-link" data-scroll-target="#short-description">Short Description</a></li>
-  <li><a href="#other-resources" id="toc-other-resources" class="nav-link" data-scroll-target="#other-resources">Other Resources</a></li>
-  <li><a href="#update-history" id="toc-update-history" class="nav-link" data-scroll-target="#update-history">Update History</a></li>
-  <li><a href="#writing-philosophy-1" id="toc-writing-philosophy-1" class="nav-link" data-scroll-target="#writing-philosophy-1">Writing Philosophy</a></li>
-  <li><a href="#acknowledgements-1" id="toc-acknowledgements-1" class="nav-link" data-scroll-target="#acknowledgements-1">Acknowledgements</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/directknowledge/directknowledge.com/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<header id="title-block-header">
-<h1 class="title d-none d-lg-block display-7">Learning Linear Algebra</h1>
-</header>
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<div>
-<p><strong>Welcome</strong>. Get ready – <em>Learning Linear Algebra: With Python</em> is coming soon! This groundbreaking book promises to provide readers with the ultimate combination of knowledge and skill — mastering linear algebra through an in-depth exploration of its principles by harnessing the power of Python. Get your copy next Summer when both paperback and hardcover versions become available on Amazon.</p>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Example</h1>
 </div>
-<section id="short-description" class="level2">
-<h2 class="anchored" data-anchor-id="short-description">Short Description</h2>
-<p>In this book, we cover the basics of linear algebra. Topics include systems of linear equations, finite-dimensional vector spaces, linear transformations, and inner-product spaces. Determinants, eigenvalues, and eigenvectors are also covered. While we explore these topics we’ll also learn how to use python when doing linear algebra. In the second part, we detail the structure of a linear operator by providing an algorithm for the Jordan canonical form of a linear transformation using python.</p>
-</section>
-<section id="other-resources" class="level2">
-<h2 class="anchored" data-anchor-id="other-resources">Other Resources</h2>
-<p><a href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/">My YouTube channel</a>, which contains videos discussing the main ideas of this book, is a great companion to accompany your reading experience. Read and write along as you easily access video embeds directly on this site!</p>
-</section>
-<section id="update-history" class="level2">
-<h2 class="anchored" data-anchor-id="update-history">Update History</h2>
-<p>Here is where I keep a log of the majors changes as I finish writing the book.</p>
-<ol start="2" type="1">
-<li>First draft of preface published on 1/27/2023.</li>
-<li>First draft published on 1/18/2023.</li>
-</ol>
-</section>
-<section id="writing-philosophy-1" class="level2">
-<h2 class="anchored" data-anchor-id="writing-philosophy-1">Writing Philosophy</h2>
-<p>Writing mathematics with confidence and eloquence requires more than creativity; strong critical thinking skills are essential for constructing persuasive arguments to communicate ideas effectively. There must also be a mastery of the technical elements that give your writing its quality. To read about my exacting standards, please check out <a href="../blog/writing-mathematics/">https://directknowledge.com/writing</a></p>
-</section>
-<section id="acknowledgements-1" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements-1">Acknowledgements</h2>
-<p>A hearty debt of gratitude is owed to those who worked tirelessly and selflessly to see this book through its final version. Their contributions were immense, making the <a href="../mathematics-on-the-web/">publication process</a> a true success - I am extremely thankful for their efforts!</p>
-</section>
-<p>David A. Smith \ Fort Worth, Texas</p>
-</section>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div>
+<p>Will only appear in HTML and not in Reveal.js!</p>
+</div>
+
+
+
 </main> <!-- /main -->
 <script type="application/ld+json">
     {
@@ -316,6 +235,7 @@ ul.task-list li input[type="checkbox"] {
     ]
     }
 </script>
+
 <script type="application/ld+json">
     {
     "@context": "https://schema.org",
@@ -349,6 +269,7 @@ console.log("MaxJax Initalizing");
 <script>
 var xtimes = 1;
 console.log(xtimes);
+
 ActiveMaxJax = function() {
   if( xtimes == 1 ) {
     var script = document.createElement('script');
@@ -359,6 +280,7 @@ ActiveMaxJax = function() {
     console.log(xtimes);
   } 
 };
+
 window.addEventListener("scroll", function() { ActiveMaxJax(); });
 window.addEventListener("click", function() { ActiveMaxJax(); });
 window.addEventListener("mousemove", function() { ActiveMaxJax(); });
@@ -366,25 +288,30 @@ window.addEventListener("keydown", function() { ActiveMaxJax(); });
 window.addEventListener("touchstart", function() { ActiveMaxJax(); });
 window.addEventListener("keydown", function() { ActiveMaxJax(); });
 console.log("MaxJax Initialization Complete");
+
 </script>
 <script>
 // Load the script after the user scrolls, moves the mouse, or touches the screen
 document.addEventListener('scroll', initGTMOnEvent);
 document.addEventListener('mousemove', initGTMOnEvent);
 document.addEventListener('touchstart', initGTMOnEvent);
+
 // Or, load the script after 2 seconds
 document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+
 // Initializes Google Tag Manager in response to an event
 function initGTMOnEvent (event) {
 	initGTM();
 	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
 }
+
 // Initializes Google Tag Manager
 function initGTM () {
 	if (window.gtmDidInit) {
 	  // Don't load again
 	  return false;
 	}
+
 	window.gtmDidInit = true;
 	
 	// Create the script
@@ -405,59 +332,7 @@ function initGTM () {
 	document.getElementsByTagName('body')[0].appendChild(script);
 }
 </script>
-<style>
-    .theorem {
-        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
-        padding:6px 6px 2px 6px;
-        border-left:1px solid rgba(0, 0, 255, 0.22);
-        margin:12px 0px;
-    }
-    .theorem-title strong::after {
-        content:'. ';
-        margin-left:-4px;
-        padding-right:5px;
-    }
-    .lemma {
-        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
-    }
-    .corollary {
-        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
-    }
-    .proposition {
-        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
-    }
-    .definition {
-        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
-    }
-    .example {
-        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
-    }
-    .proof-title {
-        font-weight:600;
-    }
-    ol li::marker {
-        content: "(" counter(list-item, lower-arabic) ") ";
-     }
-     .solution:after, .proof:after {
-        margin-top:-44px;
-        margin-bottom:64px;
-        float:right;
-        content: '\25A0';
-     }
-     .blockquote {
-        font-weight: 500!important;
-        color:#000000!important;
-     }
-     .reveal-viewport #refs, .reveal-full-page #footnotes {
-        display:none!important;
-     }
-     .quarto-title-banner {
-        background-repeat: no-repeat!important;
-        background-position: center center;
-        background-size: cover!important;
-        background-attachment: fixed;
-     }
-</style>
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -590,7 +465,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/learning-linear-algebra\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -605,37 +480,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./systems-of-linear-equations.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Systems of Linear Equations</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
+    <a class="nav-link" href="./index.html">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</a>
   </li>  
 </ul>
       </div>
   </div>
 </footer>
+
+
+
 <script src="site_libs/quarto-html/zenscroll-min.js"></script>
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
 </body></html>
