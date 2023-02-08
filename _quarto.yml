@@ -1,0 +1,88 @@
+# Direct Knowledge (2023 version
+# python -m http.server 8000
+# 
+
+project:
+  type: website
+  resources: 
+    - assets
+    - images
+  post-render: 
+    - _webtools/render.py
+  render:
+    - "*.qmd"
+    - "!blog/"
+    - "!__basicsettheory/"
+    - "!__basicsettheory"
+    - "!__learningnumbertheory"
+    - "!__multivariablecalculus"
+    - "!__singlevariablecalculus"
+
+website:
+  title: "Direct Knowledge"
+  site-url: https://directknowledge.com
+  search: false
+  navbar:
+    title: "Direct Knowledge"
+    background: light
+    foreground: dark
+    logo: assets/directknowledge-logo.svg
+    logo-alt: Direct Knowledge Logo
+    right: 
+      - text: "Books"
+        menu: 
+          - text: "Basic Set Theory"
+            href: /basic-set-theory/
+            icon: book
+            aria-label: Basic Set Theory Book
+          - text: "Learning Number Theory"
+            href: /learning-number-theory/
+            icon: book
+            aria-label: Learning Linear Algebra Book
+          - text: "Learning Linear Algebra"
+            href: /learning-linear-algebra/
+            icon: book
+            aria-label: Learning Linear Algebra Book
+          - text: "Single Variable Calculus"
+            href: /single-variable-calculus/
+            icon: book
+            aria-label: Single Variable Calculus Book
+          - text: "Multivariable Calculus"
+            href: /multivariable-calculus/
+            icon: book
+            aria-label: Multivariable Calculus Book
+      - href: /about.html
+        text: "About"
+      - href: /blog/ 
+        text: "Blog"
+      - href: https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/
+        icon: youtube
+        aria-label: YouTube
+      - href: https://github.com/directknowledge
+        icon: github
+        aria-label: GitHub
+  description: "Learn mathematics, computer science, and how to code with interactive, programmable tutorials."
+  favicon: assets/favicon.ico
+  open-graph: true
+  page-footer:
+    center: 
+      - text: "&copy; Copyright 2023, All Rights Reserved. DirectKnowledge.com"
+        href: index.qmd
+
+
+
+
+format:
+  html:
+    theme: cosmo
+    anchor-sections: true
+    link-external-icon: false
+    link-external-newwindow: true
+    smooth-scroll: true
+    include-in-header: 
+      - _html/head.html
+    include-after-body: 
+      - _html/organization.html
+      - _html/website.html
+      - _html/mathjax.html
+      - _html/analytics.html

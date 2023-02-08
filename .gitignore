@@ -16,10 +16,6 @@ _webtools
 _meta
 _html
 
-# Configuration Files
-_quarto.yml
-_variables.yml
-ads.txt
 intro.mp4
 
 # Pages
