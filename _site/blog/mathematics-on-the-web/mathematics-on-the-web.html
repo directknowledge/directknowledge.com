@@ -326,7 +326,7 @@
       .proof-title {
           font-weight:600;
       }
-      ol li::marker {
+      #quarto-content ol li::marker {
           content: "(" counter(list-item, lower-arabic) ") ";
        }
        .solution:after, .proof:after {
@@ -338,15 +338,6 @@
        .blockquote {
           font-weight: 500!important;
           color:#000000!important;
-       }
-       .reveal-viewport #refs, .reveal-full-page #footnotes {
-          display:none!important;
-       }
-       .quarto-title-banner {
-          background-repeat: no-repeat!important;
-          background-position: center center;
-          background-size: cover!important;
-          background-attachment: fixed;
        }
   </style>
   <script>
@@ -372,13 +363,24 @@
     }
   </script>
   <style>
-    #title-slide, #title-slide .title {
-      color:#FFFFFF!important;
+    .reveal-viewport #refs, .reveal-full-page #footnotes {
+      display:none!important;
     }
-    .slide-menu-button {
+   .quarto-title-banner {
+      background-repeat: no-repeat!important;
+      background-position: center center;
+      background-size: cover!important;
+      background-attachment: fixed;
+    }
+    .title, .subtitle, .slide-menu-button, .quarto-title-authors, .date {
       display: none !important;
     }
-  }
+    .speaker-controls-time { 
+      margin-top:-500px !important;
+    }
+    h4 .label {
+      display: none !important;
+    }
   </style>
     
 <meta property="og:title" content="Mathematics on the Web - Direct Knowledge">
@@ -390,7 +392,7 @@
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
-<section id="title-slide" data-background-color="black" data-background-image="mathematics-on-the-web-1024.jpeg" data-background-opacity=".4" data-background-position="top" data-background-size="100% 100%" class="quarto-title-block center">
+<section id="title-slide" data-background-image="mathematics-on-the-web-thumbnail.png" data-background-opacity="1" data-background-position="top" data-background-size="100% 100%" class="quarto-title-block center">
   <h1 class="title">Mathematics on the Web</h1>
   <p class="subtitle">Acknowledgements</p>
 <div class="quarto-title-authors">

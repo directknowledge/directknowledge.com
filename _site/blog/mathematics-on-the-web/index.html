@@ -139,7 +139,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("mathemat
     .proof-title {
         font-weight:600;
     }
-    ol li::marker {
+    #quarto-content ol li::marker {
         content: "(" counter(list-item, lower-arabic) ") ";
      }
      .solution:after, .proof:after {
@@ -151,15 +151,6 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("mathemat
      .blockquote {
         font-weight: 500!important;
         color:#000000!important;
-     }
-     .reveal-viewport #refs, .reveal-full-page #footnotes {
-        display:none!important;
-     }
-     .quarto-title-banner {
-        background-repeat: no-repeat!important;
-        background-position: center center;
-        background-size: cover!important;
-        background-attachment: fixed;
      }
 </style>
 <script type="application/ld+json">
@@ -393,9 +384,11 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("mathemat
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
-<section data-visibility="hidden" class="slide d-print-none">
-<p><img src="mathematics-on-the-web-1024.jpeg" class="img-fluid" alt="Mathematics on the Web Acknowledgements"></p>
-</section>
+<div class="d-print-none">
+<p>
+<img src="mathematics-on-the-web-1024.jpeg" class="img-fluid" alt="Mathematics on the Web Acknowledgements">
+</p>
+</div>
 <section class="slide d-none" data-background-video="../intro.mp4"></section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>

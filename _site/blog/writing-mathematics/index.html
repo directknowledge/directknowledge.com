@@ -139,7 +139,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
     .proof-title {
         font-weight:600;
     }
-    ol li::marker {
+    #quarto-content ol li::marker {
         content: "(" counter(list-item, lower-arabic) ") ";
      }
      .solution:after, .proof:after {
@@ -151,15 +151,6 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
      .blockquote {
         font-weight: 500!important;
         color:#000000!important;
-     }
-     .reveal-viewport #refs, .reveal-full-page #footnotes {
-        display:none!important;
-     }
-     .quarto-title-banner {
-        background-repeat: no-repeat!important;
-        background-position: center center;
-        background-size: cover!important;
-        background-attachment: fixed;
      }
 </style>
 <script type="application/ld+json">
@@ -231,6 +222,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
       "articleSection":"blog"
     }
     </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 <meta property="og:title" content="Writing Mathematics - Direct Knowledge">
 <meta property="og:description" content="One of the greatest challenges for students is learning to express mathematics fluently and accurately.">
 <meta property="og:image" content="https://directknowledge.com/blog/writing-mathematics/writing-mathematics-1024.jpeg">
@@ -376,41 +368,51 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-makes-writing-mathematics-different" id="toc-what-makes-writing-mathematics-different" class="nav-link active" data-scroll-target="#what-makes-writing-mathematics-different">What Makes Writing Mathematics Different?</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-makes-writing-mathematics-different" id="toc-what-makes-writing-mathematics-different" class="nav-link" data-scroll-target="#what-makes-writing-mathematics-different">What Makes Writing Mathematics Different?</a></li>
   <li><a href="#sentence-level" id="toc-sentence-level" class="nav-link" data-scroll-target="#sentence-level">Sentence Level</a></li>
   <li><a href="#paragraph-level" id="toc-paragraph-level" class="nav-link" data-scroll-target="#paragraph-level">Paragraph Level</a></li>
   <li><a href="#section-level" id="toc-section-level" class="nav-link" data-scroll-target="#section-level">Section Level</a></li>
-  <li><a href="#chapter-level" id="toc-chapter-level" class="nav-link" data-scroll-target="#chapter-level">Chapter Level</a></li>
-  <li><a href="#book-level" id="toc-book-level" class="nav-link" data-scroll-target="#book-level">Book Level</a></li>
+  <li><a href="#document-level" id="toc-document-level" class="nav-link" data-scroll-target="#document-level">Document Level</a></li>
   <li><a href="#and-beyond" id="toc-and-beyond" class="nav-link" data-scroll-target="#and-beyond">And Beyond</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/directknowledge/directknowledge.com/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
-<section data-visibility="hidden" class="slide d-print-none">
-<p><img src="writing-mathematics-1024.jpeg" class="img-fluid" alt="Writing Mathematics How I Write Mathematics"></p>
-</section>
+<div class="d-print-none">
+<p>
+<img src="writing-mathematics-1024.jpeg" class="img-fluid" alt="Writing Mathematics How I Write Mathematics">
+</p>
+</div>
 <section class="slide d-none" data-background-video="../intro.mp4"></section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<div>
 <p>One of the greatest challenges for students is learning to express mathematics fluently and accurately. Trying to decipher complex formulas or explaining mathematical ideas in writing can be a daunting task, even for those with an advanced understanding of mathematics. However, mastering this skill can result in tremendous rewards. Expressing mathematical ideas effectively through written language provides us with a greater understanding and appreciation of the subject, not only from an academic perspective but from its relevance to our daily lives as well. It’s important to understand that although making sense of mathematics on paper may seem difficult at first, it’s worth pursuing because developing this proficiency can help tremendously in class discussions and exams while also providing insights into real-world problems we might face on a regular basis.</p>
+</div>
+</section>
 <section id="what-makes-writing-mathematics-different" class="level2">
 <h2 class="anchored" data-anchor-id="what-makes-writing-mathematics-different">What Makes Writing Mathematics Different?</h2>
-<p>Writing mathematics is an artful combination of two distinct languages, natural and mathematics. Natural language offers the writer numerous expression possibilities but can be ambiguous. Whereas writing with mathematical symbols requires clarity yet allows succinctness when conveying complex concepts. Accurate language is a necessity when it comes to mathematics. To properly communicate your thoughts and opinions, ensure that each word carries the correct connotation you intend for them to have.</p>
+<div>
+<p>Writing mathematics is an artful combination of two distinct languages, natural and mathematics. Natural language offers the writer numerous expression possibilities but can be ambiguous. In contrast, writing with mathematical symbols requires clarity yet allows succinctness when conveying complex concepts. Accurate language is a necessity when it comes to mathematics. To properly communicate your thoughts and opinions, ensure that each word carries the correct connotation you intend for them to have.</p>
 <blockquote class="blockquote">
 <p>The precision of words is essential in math-based conversations.</p>
 </blockquote>
 <p>To comprehend mathematically expressed ideas, readers must take their time and read content several times while allowing themselves ample pauses for contemplation along the way. Further, mathematics writing often serves as reference material, which necessitates that its contents should ideally be accessed piece by piece upon demand rather than require deep immersion into text volumes at once.</p>
-<p>Writing mathematics has rules – some narrow, others broad. Small conventions relate to sentence structure (including punctuation) and are easily verifiable. Broader ones involve general style and strategies that depend on the author’s discretion. For a full primer on mathematical writing see (<span class="citation" data-cites="krantz2017primer">Krantz (<a href="#ref-krantz2017primer" role="doc-biblioref">2017</a>)</span>).</p>
-<p>Crafting an effective document takes more than just following a few simple rules; it requires mastering composition. This skillfulness is where the art of writing comes in, with broad and deep strategies for your entire work. It’s all about connection: linking individual sentences together for clarity and flow while adhering to specific sentence structure regulations like commas or mathematical terminologies. At its most complex level, these interrelated requirements can create intricate webs that are both precise yet engaging – but will result in a masterpiece.</p>
-<p>Now it’s time to dive into each of <strong>the five levels for writing mathematics</strong>: sentence, paragraph, section, chapter, and book.</p>
+<p>Writing mathematics has rules – some narrow, others broad. Small conventions relate to sentence structure (including punctuation) and are easily verifiable. Broader ones involve general style and strategies that depend on the author’s discretion. For a full primer on mathematical writing see <span class="citation" data-cites="krantz2017primer">Krantz (<a href="#ref-krantz2017primer" role="doc-biblioref">2017</a>)</span>.</p>
+<p>Crafting an effective document takes more than just following a few simple rules; it requires mastering composition. This skillfulness is where the art of writing comes in, with broad and deep strategies for your entire work. It’s all about connection: linking individual sentences together for clarity and flow while adhering to specific sentence structure regulations like commas or mathematical terminologies. At its most complex level, these interrelated requirements can create intricate webs that are both precise yet engaging – and (if followed) can result in a masterpiece.</p>
+<p>Now it’s time to dive into each of <strong>the five levels for writing mathematics</strong>: sentence, paragraph, section, document, and beyond.</p>
+</div>
 </section>
 <section id="sentence-level" class="level2">
 <h2 class="anchored" data-anchor-id="sentence-level">Sentence Level</h2>
+<div>
 <p>Breaking complex mathematical ideas into more accessible parts is essential for effective communication. Using the right voice and symbols in your writing is crucial for success.</p>
 <blockquote class="blockquote">
 <p>These small details can make comprehension natural – but mastering them is fundamental when creating potent written works.</p>
 </blockquote>
-<p>Here are the ten rules that I use when writing mathematics.</p>
+<p>Here are ten rules that I use when writing mathematics.</p>
 <ol type="1">
 <li>Do not start a sentence with a mathematical symbol.</li>
 <li>Do not end a sentence with a mathematical symbol, instead use the correct punctuation.</li>
@@ -423,56 +425,93 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 <li>Separate formulas with words. Do not list formulas, but rather communicate with a reader.</li>
 <li>Write a sentence that flows logically from left to right to eliminate confusion.</li>
 </ol>
-<p>For more on these rules see (<span class="citation" data-cites="knuth1989mathematical">Knuth et al. (<a href="#ref-knuth1989mathematical" role="doc-biblioref">1989</a>)</span>).</p>
+<p>There are two obvious observations to make about these rules. First, it is impossible to delineate a complete list of rules for natural language. So think of these rules given here not as a complete list, but only as a guide that you should (strongly) consider following when writing mathematics.</p>
+<p>The second observation is that these rules do not take into account mathematical accuracy. Of course, your mathematics should be accurate. This is not up for debate because mathematics that is not accurate is simply not mathematics. Even a slight exchange of words can lead to impotence or even nonsense. For example, consider the following variation of mathematical induction.</p>
+<blockquote class="blockquote">
+<p>If <span class="math inline">\(A\)</span> is a subset of the natural numbers <span class="math inline">\(\mathbb{N}\)</span> with the following two properties: <span class="math inline">\(i\)</span>) 0 is in <span class="math inline">\(A\)</span> and <span class="math inline">\(ii\)</span>) for all <span class="math inline">\(k\)</span> in <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(k\in A\)</span> implies <span class="math inline">\(k+1\in A\)</span>, then <span class="math inline">\(A\)</span> is the set of natural numbers.</p>
+</blockquote>
+<p>Now let’s switch two words and see what you think.</p>
+<blockquote class="blockquote">
+<p>If <span class="math inline">\(A\)</span> is <strong>the</strong> subset of the natural numbers <span class="math inline">\(\mathbb{N}\)</span> with the following two properties: <span class="math inline">\(i\)</span>) 0 is in <span class="math inline">\(A\)</span> and <span class="math inline">\(ii\)</span>) for all <span class="math inline">\(k\)</span> in <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(k\in A\)</span> implies <span class="math inline">\(k+1\in A\)</span>, then <span class="math inline">\(A\)</span> is <strong>a</strong> set of natural numbers.</p>
+</blockquote>
+<p>In mathematics, precision is everything. For more on these rules see <span class="citation" data-cites="knuth1989mathematical">Knuth et al. (<a href="#ref-knuth1989mathematical" role="doc-biblioref">1989</a>)</span>.</p>
+</div>
 </section>
 <section id="paragraph-level" class="level2">
 <h2 class="anchored" data-anchor-id="paragraph-level">Paragraph Level</h2>
-<p>Crafting the perfect opening paragraph is essential to grabbing a reader’s attention and inviting them on an engaging journey through your prose. To do so, divide your work into linear segments to be presented in a hierarchical development for ease of comprehension. Retain an even flow by keeping notation terms familiar while avoiding lengthy explanations or eloquent phrasing that could confuse readers. Furthermore, provide previews of upcoming topics before delving deeper into the content so they can prepare themselves mentally as you write. Adding visuals where appropriate will also aid understanding – use examples and counterexamples along with suggestive references when necessary to maximize clarity without sacrificing creativity.</p>
+<div>
+<p>Crafting the perfect opening paragraph is essential to grabbing a reader’s attention and inviting them on an engaging journey through your prose. To do so, divide your work into linear segments to be presented in a hierarchical development for ease of comprehension. Retain an even flow by keeping notation and terms familiar while avoiding lengthy explanations or eloquent phrasing that could confuse readers. Furthermore, provide previews of upcoming topics before diving deeper into the content so they can prepare themselves mentally as you write. Adding visuals where appropriate will also aid understanding – use examples and counterexamples along with suggestive references when necessary to maximize clarity without sacrificing creativity.</p>
 <ol type="1">
-<li>Begin a paragraph with your best sentence, you ensure that readers stay hooked.</li>
-<li>Ensure that each sentence has its own distinct beat. Peruse your writing and fine-tune it until everything flows smoothly.</li>
+<li>Begin a paragraph with your best sentence to ensure that readers stay hooked.</li>
+<li>Each sentence needs its own distinct beat. Peruse your writing and fine-tune it until everything flows smoothly.</li>
 <li>A theorem (definition, lemma, corollary, etc.) should stand firmly on its own two feet and not rely upon what came before.</li>
 <li>Pay particular attention to terms like “therefore”, as they are essential for achieving the right cadence and has many variations such as “whence”,“hence”, “and so”, etc.</li>
-<li>Break up paragraphs by displaying <strong>important formulas</strong> on a line by themselves.</li>
-<li>Don’t over complicate things with unnecessary subscripts, superscripts, or other vertically spaced symbols.7. Break up long sentences into simple ones, and break up mathematics (but not important formulas) into readable text.</li>
+<li>Break up paragraphs by displaying important formulas on a line by themselves.</li>
+<li>Don’t over complicate things with unnecessary subscripts, superscripts, or other vertically spaced symbols.</li>
+<li>Break up consecutive long sentences into simpler ones, and break up mathematics (but not important formulas) into readable text.</li>
 <li>Don’t be tempted to resort to the use of technical jargon without good reason.</li>
 <li>Every paragraph should have a (mathematical) point, make it clear.</li>
 <li>Write a paragraph that flows logically from sentence to sentence to eliminate confusion.</li>
 </ol>
-<p>Mathematics writing requires you to effectively communicate your thought process and convince the reader that your solution is valid. A first-rate mathematical exposition should provide precise explanations while also being persuasive enough to satisfy a skeptical audience.</p>
+<p>Mathematics writing requires you to effectively communicate your thought process and convince the reader that your conclusions are valid. A first-rate mathematical exposition should provide precise explanations while also being persuasive enough to satisfy a skeptical audience.</p>
+</div>
 </section>
 <section id="section-level" class="level2">
 <h2 class="anchored" data-anchor-id="section-level">Section Level</h2>
-<p>Crafting a clear and concise section requires deliberate structure, consistent information, and reader-minded readability.</p>
+<div>
+<p>Crafting a clear and concise section requires consistent information, deliberate structure, and reader-minded readability.</p>
 <ol type="1">
 <li><p><strong>Commmunicate</strong>. While writing, the writer must envision what areas of confusion could arise for their reader and strive to ensure that these are addressed. This foresight is crucial in order to effectively communicate with readers; otherwise it risks creating misunderstandings instead of a meaningful exchange. To ensure accuracy and clarity, having an audience in mind while writing is not simply beneficial but necessary.</p></li>
-<li><p><strong>Examples</strong>. Mastering the art of example and counterexample can be a powerful tool. However, it is important not to underestimate its power – examples should have some “spark” or element that will engage readers with thought-provoking insight they might otherwise miss. Additionally, don’t forget the importance of providing context by using both examples and counterexamples which illustrate definitions/results while simultaneously clarifying any underlying essential assumptions.</p></li>
-<li><p><strong>Figures</strong>. Whenever possible, facilitate understanding by utilizing visual elements that have the power to communicate complex ideas quickly and accurately. Design figures simply with comprehensive captions as reinforcement for concepts discussed in textual form; this will help bring key points of proof or argumentation into clear focus without being bogged down in minutiae. Don’t be afraid to utilize graphs over tables when illustrating main topics – an illustration can often paint a far more detailed picture than words alone.</p></li>
-<li><p><strong>Efficiency</strong>. When writing proofs, strive for efficiency by taking advantage of earlier results and avoiding unnecessary repetition. If a current proof seems to be significantly similar to one already constructed in the past, think beyond simple alterations; try finding an interesting overarching generalization that ties both together. When crafting especially intricate arguments, provide strategic comments throughout your construction – noting the purpose behind each step taken as well as providing overviews at appropriate sections can make lengthy demonstrations considerably easier to follow.</p></li>
-<li><p><strong>Strategize</strong>. When tackling a complex proof, take the time to strategize. Start by outlining how you plan to approach it and give periodic updates on your progress during the process. Demonstrate why particular steps are necessary and look for interesting similarities between results in order avoid reiterating similar arguments multiple times throughout. Exploring potential common generalizations of different elements can offer valuable insights too.</p></li>
+<li><p><strong>Examples</strong>. Mastering the art of example and counterexample can be a powerful tool. However, it is important to not overuse this power – examples should have some “spark” or element that will engage readers with thought-provoking insight. Additionally, don’t forget the importance of providing context by using both examples and counterexamples which illustrate definitions/results while simultaneously clarifying any underlying essential assumptions.</p></li>
+<li><p><strong>Figures</strong>. Whenever possible, facilitate understanding by utilizing visual elements that have the power to communicate complex ideas quickly and accurately. Design figures with captions as reinforcement for concepts discussed in textual form; this will help bring key points into clear focus without being bogged down in minutiae. Work diligently to utilize graphs over tables when illustrating main topics.</p></li>
+<li><p><strong>Efficiency</strong>. When writing proofs, strive for efficiency by taking advantage of earlier results and avoiding unnecessary repetition. If a current proof seems to be significantly similar to one already constructed in the past, think beyond simple alterations; try finding an interesting overarching generalization that ties both together.</p></li>
+<li><p><strong>Strategize</strong>. When crafting especially intricate arguments, provide strategic comments throughout your construction – noting the purpose behind each step taken as well as providing overviews can make lengthy demonstrations easier to follow. When tackling a complex proof, take the time to strategize before you write. Start by outlining how you plan to approach it and give periodic updates on your progress. At the appropiate time and place, demonstrate why particular steps are necessary and look for similarities between results in order to avoid reiterating similar arguments.</p></li>
 </ol>
-<p>Simply put, <strong>be strategically efficient</strong>.</p>
-<p>Crafting a perfect section for your chapter is no easy feat. It requires the careful placement of each element – from preliminary discussions to lemmas, proofs and more – into an order that both makes sense logically while also being effectively digested by readers. The ideal outcome presents every detail in such away so as to capture attention and surprise them with unexpected connections between elements they didn’t previously foresee; all parts fit together like pieces of a puzzle, forming an explanation or argument far greater than its individual components could ever were it not organized in this way.</p>
+<blockquote class="blockquote">
+<p>Be strategically efficient.</p>
+</blockquote>
+<p>Crafting a perfect section for your chapter is no easy feat. It requires the careful placement of each element – from preliminary discussions to lemmas, proofs and more – into an order that both makes sense logically while also being effectively digested by readers. The ideal outcome presents detail in such a way so as to capture attention, yet surprise them with unexpected connections between elements. All parts fit together like pieces of a puzzle, forming an explanation or argument far greater than its individual components.</p>
+</div>
+<div class="notes">
+<ol type="1">
+<li>While writing, the writer must envision what areas of confusion could arise for their reader and strive to ensure that these are addressed. This foresight is crucial in order to effectively communicate with readers; otherwise it risks creating misunderstandings instead of a meaningful exchange. To ensure accuracy and clarity, having an audience in mind while writing is not simply beneficial but necessary.</li>
+<li>Mastering the art of example and counterexample can be a powerful tool. However, it is important to not overuse this power – examples should have some “spark” or element that will engage readers with thought-provoking insight. Additionally, don’t forget the importance of providing context by using both examples and counterexamples which illustrate definitions/results while simultaneously clarifying any underlying essential assumptions.</li>
+<li>Whenever possible, facilitate understanding by utilizing visual elements that have the power to communicate complex ideas quickly and accurately. Design figures with captions as reinforcement for concepts discussed in textual form; this will help bring key points into clear focus without being bogged down in minutiae. Work diligently to utilize graphs over tables when illustrating main topics.</li>
+<li>When writing proofs, strive for efficiency by taking advantage of earlier results and avoiding unnecessary repetition. If a current proof seems to be significantly similar to one already constructed in the past, think beyond simple alterations; try finding an interesting overarching generalization that ties both together.</li>
+<li>When crafting especially intricate arguments, provide strategic comments throughout your construction – noting the purpose behind each step taken as well as providing overviews can make lengthy demonstrations easier to follow. When tackling a complex proof, take the time to strategize before you write. Start by outlining how you plan to approach it and give periodic updates on your progress. At the appropiate time and place, demonstrate why particular steps are necessary and look for similarities between results in order to avoid reiterating similar arguments.</li>
+</ol>
+</div>
 </section>
-<section id="chapter-level" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-level">Chapter Level</h2>
-<p>To effectively communicate your math, it’s essential to take into account the background knowledge of your intended audience. Don’t let unfamiliar terminology confuse them; provide additional explanation as needed for clarity and comprehension. Consider adding appendixes when discussing more complex or specialized topics that may require deeper context in order to be fully understood by less experienced readers.</p>
-<p>A clearly structured and properly ordered mathematics essay is far more accessible than a disorganized one. Establishing an introduction that introduces the important theorems, provides insight into why it matters, and previews what’s to come can “hook” readers in for further exploration of your work. Making sure your chapter has these components will help ensure its readability – so put some thought into how you want to order yours!</p>
-<p>When creating math content, it is essential to keep the background and expertise of your target audience in mind. Presenting too much detail can be overwhelming for those without an expert’s understanding; however, avoiding explanations altogether risks leaving readers feeling lost or confused. Consider breaking up complex material into separate sections for a better grasp by all audiences as well as providing additional helpful resources such as appendixes when applicable.</p>
-<p>A well-crafted document requires a sound strategy. To achieve this, start by outlining the expected sections in your paper or chapter so you know exactly what to include in each step of its development. Establish necessary definitions that will inform and structure every result and proof before testing them for accuracy with lemmas; dabbling examples along the way allows readers to apply concepts practically. Repeat these steps until there is an obvious logical flow from beginning to end, then add interstitial comments as needed – which may provide further context on certain arguments, compare opposing points within literature topics or simply warn against any potential missteps throughout your work.</p>
-</section>
-<section id="book-level" class="level2">
-<h2 class="anchored" data-anchor-id="book-level">Book Level</h2>
-<p>Make sure to keep your reader informed throughout; start each segment with a brief introduction and perhaps an outline of what’s ahead. Avoid lengthy stretches without any clear direction, revealing key conclusions only at the end. Instead, provide hints as you progress by stating outcomes such as “It follows that …”. Finally, be sure to reiterate essential points in conclusion for easy recall later on.</p>
+<section id="document-level" class="level2">
+<h2 class="anchored" data-anchor-id="document-level">Document Level</h2>
+<div>
+<p>Establishing an introduction that introduces the important theorems, provides insight into what matters, and previews what’s to come can “hook” readers in for further exploration. Make sure your document has these components.</p>
+<p><strong>Research</strong>. To effectively communicate your mathematics, it’s essential to take into account the background knowledge of your intended audience. Do the research necessary to know your audience. This may mean teaching classes, going to workshops, collaborating on documents, refereeing journals, or even reading education journals that specialize in learning about your audience. While you are accomplishing this research, keep in mind the following three points.</p>
+<p>Firstly, don’t let unfamiliar terminology confuse them; provide additional explanation as needed for clarity and comprehension. Secondly, consider adding appendices when discussing more complex or specialized topics that may require deeper context in order to be fully understood by less experienced readers. Thirdly, presenting too much detail can be overwhelming for those without an expert’s understanding; however, avoiding explanations altogether risks leaving readers feeling lost or confused.</p>
+<blockquote class="blockquote">
+<p>Speak to someone and know that someone as well as you can.</p>
+</blockquote>
+<p><strong>Organize</strong>. A well-crafted document requires a sound strategy. To achieve this, start by outlining the expected sections in your paper or chapter so you know exactly what to include in each step of its development. Establish necessary definitions that will inform and structure every result and proof before testing them for accuracy with lemmas. Next, dabbling in some examples along the way allows readers to apply concepts practically. Repeat these steps until there is an obvious logical flow from beginning to end, then add interstitial comments as needed. To a reader, these comments are often the linchpin needed. They should provide further context on certain arguments, compare opposing points within the literature or simply warn against any potential missteps.</p>
+<p>Make sure to keep your reader informed throughout; start each segment with a brief introduction and perhaps an outline of what’s ahead. Avoid stretches without any clear direction. Instead, provide hints as you progress by stating outcomes such as “It follows that <span class="math inline">\(\ldots\)</span>”. Finally, be sure to reiterate essential points in conclusion for easy recall later on.</p>
 <p>When composing equations and propositions, don’t make it difficult for readers to find the references; clearly number each item along with providing a content/name descriptor. To ensure concentration isn’t broken by excessive page flipping, repeat any simple math expressions used in addition to reminding the reader of earlier analysis or unusual notations they may have encountered. Don’t be afraid to reiterate information if necessary – however remain mindful that too much repetition can become exhausting.</p>
+<blockquote class="blockquote">
+<p>Say something in the right place, at the right time, in the right manner.</p>
+</blockquote>
+<p>Of course, the researching of your audience and the organizing of your document go hand-in-hand. Or as I like to say:</p>
+<blockquote class="blockquote">
+<p>Research your audience and organize for them.</p>
+</blockquote>
+</div>
 </section>
 <section id="and-beyond" class="level2">
 <h2 class="anchored" data-anchor-id="and-beyond">And Beyond</h2>
-<p>Mathematics is truly a language of the mind, and at its heart lies <strong>mathemas</strong> – an ancient Greek word encapsulating knowledge, cognition, understanding and perception. In college-level math courses this universal tongue grows in complexity; equations alone are no longer sufficient to describe it as ideas become so intricate they must be expressed through sentences and paragraphs. Thus one can see that mathematics moves beyond mere numbers or calculations: It is about uncovering new ways of interpreting the universe around us.</p>
+<div>
+<p>By reflecting my own personal tastes, this article offers unique insights into the art of mathematical writing. Although some may not agree or share similar opinions, I believe many people will find it valuable and meaningful. While it may not satisfy all readers looking to learn more about this topic, I trust that many have come here seeking a connection between their passions and mine. If you are looking for more on this topic see <span class="citation" data-cites="halmos1970write">Halmos (<a href="#ref-halmos1970write" role="doc-biblioref">1970</a>)</span>, <span class="citation" data-cites="steenrod1973write">Steenrod (<a href="#ref-steenrod1973write" role="doc-biblioref">1973</a>)</span>, and <span class="citation" data-cites="higham1998handbook">Higham (<a href="#ref-higham1998handbook" role="doc-biblioref">1998</a>)</span>.</p>
 <blockquote class="blockquote">
-<p>Do not give up – mastering mathematics can open a world of opportunities.</p>
+<p>While it might be hard to get started, writing mathematics is an invaluable skill that requires patience and dedication. <strong>But if you put in the work your mastery of mathematical exposition can be a force of change that improves lives</strong>.</p>
 </blockquote>
-<p>While it might be hard to get started, writing mathematics is an invaluable skill that requires patience and dedication. Developing this capability takes practice and experience, but if you put in the work your mastery of mathematical exposition will stay with you for life.</p>
+<p>Finally, I’d like to mention that this is where many beginners believe math ends – with books and articles (documents). But writing your research program, (turning your suspicions, conjectures, unproven ideas, and theories into written words) should be started as soon as possible. Turning your ideas into written mathematics can enable you to harness this force of change.</p>
+</div>
 <div>
 <p>If you would like any help with understanding this, please contact me at <a href="mailto:david@directknowledge.com">david@directknowledge.com</a>.</p>
 </div>
@@ -484,11 +523,20 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 <li>Slideshow (RevealJS) <a href="writing-mathematics.html" target="_blank">Writing Mathematics</a></li>
 </ul>
 </div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-halmos1970write" class="csl-entry" role="doc-biblioentry">
+Halmos, Paul R. 1970. <span>“How to Write Mathematics.”</span> <em>L’enseignement Math<span>é</span>matique</em> 16 (2): 123–52.
+</div>
+<div id="ref-higham1998handbook" class="csl-entry" role="doc-biblioentry">
+Higham, N. J. 1998. <em>Handbook of Writing for the Mathematical Sciences</em>. Other Titles in Applied Mathematics. Society for Industrial; Applied Mathematics. <a href="https://books.google.com/books?id=Z4oQMi5eNBQC">https://books.google.com/books?id=Z4oQMi5eNBQC</a>.
+</div>
 <div id="ref-knuth1989mathematical" class="csl-entry" role="doc-biblioentry">
 Knuth, D. E., T. Larrabee, P. M. Roberts, P. M. Roberts, and Mathematical Association of America. 1989. <em>Mathematical Writing</em>. MAA Notes. Mathematical Association of America. <a href="https://books.google.bs/books?id=dDOehHMbUMcC">https://books.google.bs/books?id=dDOehHMbUMcC</a>.
 </div>
 <div id="ref-krantz2017primer" class="csl-entry" role="doc-biblioentry">
 Krantz, S. G. 2017. <em>A Primer of Mathematical Writing</em>. Miscellaneous Books. American Mathematical Society. <a href="https://books.google.com/books?id=eaw-DwAAQBAJ">https://books.google.com/books?id=eaw-DwAAQBAJ</a>.
+</div>
+<div id="ref-steenrod1973write" class="csl-entry" role="doc-biblioentry">
+Steenrod, N. E. 1973. <em>How to Write Mathematics</em>. American Mathematical Soc. <a href="https://books.google.com/books?id=6UypbkweqiwC">https://books.google.com/books?id=6UypbkweqiwC</a>.
 </div>
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{a.smith2023,
   author = {David A. Smith},

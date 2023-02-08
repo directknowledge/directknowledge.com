@@ -120,7 +120,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
     .proof-title {
         font-weight:600;
     }
-    ol li::marker {
+    #quarto-content ol li::marker {
         content: "(" counter(list-item, lower-arabic) ") ";
      }
      .solution:after, .proof:after {
@@ -132,15 +132,6 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
      .blockquote {
         font-weight: 500!important;
         color:#000000!important;
-     }
-     .reveal-viewport #refs, .reveal-full-page #footnotes {
-        display:none!important;
-     }
-     .quarto-title-banner {
-        background-repeat: no-repeat!important;
-        background-position: center center;
-        background-size: cover!important;
-        background-attachment: fixed;
      }
 </style>
 <script type="application/ld+json">
@@ -357,9 +348,11 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
-<section data-visibility="hidden" class="slide d-print-none">
-<p><img src="writing-the-preface-1024.jpeg" class="img-fluid" alt="Writing The Preface of a Mathematics Book"></p>
-</section>
+<div class="d-print-none">
+<p>
+<img src="writing-the-preface-1024.jpeg" class="img-fluid" alt="Writing The Preface of a Mathematics Book">
+</p>
+</div>
 <section class="slide d-none" data-background-video="../intro.mp4"></section>
 <div>
 <p>If you would like any help with understanding this, please contact me at <a href="mailto:david@directknowledge.com">david@directknowledge.com</a>.</p>
