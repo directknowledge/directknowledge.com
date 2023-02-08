@@ -1,0 +1,81 @@
+
+\usepackage{geometry}
+
+\geometry{reset, letterpaper, height=9in, width=6in, hmarginratio=1:1, vmarginratio=1:1, marginparsep=0pt, marginparwidth=0pt, headheight=15pt}
+
+\usepackage{lipsum}
+
+\def\dklogo{\raisebox{-.2\height}{\includegraphics[width=12pt]{../../assets/direct-knowledge-logo-book.png}}\footnotesize{\ Direct Knowledge}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LE]{\thepage}%
+\fancyhead[RE]{\dklogo}%
+\fancyhead[CE]{}%
+\fancyfoot[LE]{}%
+\fancyfoot[RE]{}%
+\fancyfoot[CE]{}%
+\fancyhead[LO]{D. A. Smith}%
+\fancyhead[RO]{\thepage}%
+\fancyhead[CO]{}%
+\fancyfoot[LO]{}%
+\fancyfoot[RO]{}%
+\fancyfoot[CO]{}%
+
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{setspace}
+\linespread{1.25}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx} 
+
+
+\usepackage[most]{tcolorbox} 
+\definecolor{block-gray}{gray}{0.97}
+\newtcolorbox{zitat}[1][]{%
+    colback=block-gray,
+    grow to right by=-10mm,
+    grow to left by=-10mm, 
+    boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{gray},
+    colbacktitle={block-gray},
+    coltitle={black},
+    fonttitle={\large\bfseries},
+    attach title to upper={},
+    #1,
+}
+\renewcommand{\quote}{\zitat}
+\renewcommand{\endquote}{\endzitat}
+
+\def\banner{ {\rule{\linewidth}{0.2pt}}
+    \begin{minipage}[c]{14px}\includegraphics[width=14pt]{../../assets/direct-knowledge-logo-book.png}\end{minipage}
+    \begin{minipage}[c]{150px}Direct Knowledge | Blog \end{minipage}
+}
+
+\usepackage{titling}
+\setlength{\droptitle}{-8ex}
+\pretitle{\vspace{-20pt}\banner\vspace{10pt}\begin{flushleft}\huge\bfseries}
+\posttitle{\par\end{flushleft}}
+\preauthor{\begin{flushleft}\Large}
+\postauthor{,
+    \small{Direct Knowledge, USA}
+    \footnote{email: david@directknowledge.com}
+    \footnote{\copyright \, 2023 \ David A. Smith}
+    \footnote{With authorization, you can freely share and reproduce portions of this work for educational or personal use. Please note that distributing any portion of it in print form requires further permission from its original authors, as does posting online to public servers or mailing lists without prior consent.}
+    \end{flushleft}
+    }
+\predate{\begin{flushleft}}
+\postdate{\end{flushleft}}
+
+\renewenvironment{abstract}
+{\par\noindent\textbf{\abstractname.}\ \ignorespaces \itshape}
+{\par\medskip}
+
+
