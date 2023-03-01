@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.3.191" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+<meta name="author" content="David A. Smith" />
+<meta name="keywords" content="mathematical induction, strong induction, well-ordering, induction principle, finonacci numbers" />
+<meta name="description" content="This tutorial is a complete, step-by-step introduction to mathematical induction so that you can understand it and start using it yourself." />
+
+<title>Tutorials – The Mathematical Induction Equivalence - Direct Knowledge</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+<!-- htmldependencies:E3FAD763 -->
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+    .quarto-title-block .quarto-title-banner,
+    .quarto-title-block .quarto-title-banner h1,
+    .quarto-title-block .quarto-title-banner h2,
+    .quarto-title-block .quarto-title-banner h3,
+    .quarto-title-block .quarto-title-banner h4,
+    .quarto-title-block .quarto-title-banner h5,
+    .quarto-title-block .quarto-title-banner h6
+    {
+      color: #FFFFFF;
+background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("mathematical-induction-equivalence.png");;
+    }
+    </style>
+<style>
+@media screen and (max-width: 440px) {
+    .navbar-brand-logo::after {
+        content: 'DK'!important;
+        margin-top: -4px!important;
+    }
+    .navbar-toggler-icon {
+        width:26px!important;
+        height:26px!important;
+    }
+    .navbar-toggler {
+        border:0px!important;
+    }
+    .navbar-title {
+        display:none!important;
+    }
+    .footer-items {
+        display:block!important;
+        margin:40px 0px;
+    }    
+}
+.navbar-title:hover, .navbar a:hover {
+    color:#000000!important;
+}
+.book-title {
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin:-20px -20px 20px -20px;
+    line-height:120%;
+    text-decoration: none!important;
+    display:block;
+}
+@media screen and (max-width: 990px) {
+    .book-title {
+        padding-left: 20px!important;
+    }    
+}
+</style>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      background-repeat: no-repeat!important;
+      background-position: center center;
+      background-size: cover!important;
+      background-attachment: fixed;
+    }
+    .quarto-title-banner .title 
+    {
+        background: none!important;
+    }
+</style>
+  
+<style>
+    .theorem {
+        background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
+        padding:6px 6px 2px 6px;
+        border-left:1px solid rgba(0, 0, 255, 0.22);
+        margin:12px 0px;
+    }
+    .theorem-title strong::after {
+        content:'. ';
+        margin-left:-4px;
+        padding-right:5px;
+    }
+    .lemma {
+        background: linear-gradient(90deg,rgba(188, 201, 168, 0.5), rgba(188, 201, 168, .8));
+    }
+    .corollary {
+        background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
+    }
+    .proposition {
+        background: linear-gradient(90deg,rgba(199, 209, 156, 0.5), rgba(198, 230, 185, 0.8));
+    }
+    .definition {
+        background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
+    }
+    .example {
+        background: linear-gradient(90deg,rgba(255, 255, 204, .5), rgba(255, 255, 204, .8));
+    }
+    .proof-title {
+        font-weight:600;
+    }
+    #quarto-content ol li::marker {
+        content: "(" counter(list-item, lower-arabic) ") ";
+     }
+     .solution:after, .proof:after {
+        margin-top:-44px;
+        margin-bottom:64px;
+        float:right;
+        content: '\25A0';
+     }
+     .blockquote {
+        font-weight: 500!important;
+        color:#000000!important;
+     }
+</style>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://directknowledge.com/",
+                "name": "Home",
+                "image": "https://directknowledge.com/assets/directknowledge-logo.svg"
+            }
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://directknowledge.com/tutorials/",
+                "name": "Blog",
+                "image": "https://directknowledge.com/assets/lets-math-mug.png"
+            }
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@id": "https://directknowledge.com/tutorials/mathematical-induction-equivalence/",
+                "name": "The Mathematical Induction Equivalence",
+                "image": "https://directknowledge.com/tutorials/slug/mathematical-induction-equivalence.png"
+            }
+        }]
+    }
+</script>
+
+<script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"Article",
+      "name":"The Mathematical Induction Equivalence",
+      "headline":"This tutorial is a complete, step-by-step introduction to mathematical induction so that you can understand it and start using it yourself.",
+      "description": "In this tutorial, we’ll take a close look at the principle of mathematical induction and see how it works. We’ll also work through plenty of examples so that you can get a better understanding of this vital principle. Toward the end, we prove the mathematical induction equivalence, investigate sequences, and provide several exercises. The prerequisites for this tutorial are knowledge of the properties of addition and multiplication and a basic understanding of summation notation and prime numbers. If you are learning how to write mathematical proofs this tutorial is for you.",
+      "url":"https://directknowledge.com",
+      "keywords":"mathematical induction strong induction natural numbers well-ordering induction principle finonacci numbers",
+      "image":{
+          "@type":"ImageObject",
+          "url":"https://directknowledge.com/tutorials/mathematical-induction-equivalence/mathematical-induction-equivalence-1024.png",
+          "width":"1080",
+          "height":"720"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://directknowledge.com/tutorials/mathematical-induction-equivalence/"
+      },
+      "publisher":{
+          "@type":"Organization",
+          "name":"The Mathematical Induction Equivalence",
+          "url":"https://directknowledge.com",
+          "logo":{
+              "@type":"ImageObject",
+              "url":"https://directknowledge.com/assets/directknowledge-logo.svg",
+              "width":"512",
+              "height":"512"
+          }
+      },
+      "dateCreated":"Thursday, February 9, 2023",
+      "datePublished":"Thursday, February 9, 2023",
+       "author":"David A. Smith",
+      "creator":"David A. Smith",
+      "dateModified":"Thursday, February 9, 2023",
+      "articleSection":"tutorials"
+    }
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="/index.html" class="navbar-brand navbar-brand-logo">
+    <img src="/../assets/directknowledge-logo.svg" alt="Direct Knowledge Logo" class="navbar-logo" />
+    </a>
+    <a class="navbar-brand" href="/index.html">
+    <span class="navbar-title">Direct Knowledge</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+  aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
+  onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Books</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
+        <li>
+    <a class="dropdown-item" href="/../basic-set-theory/" rel="" target=""><i 
+  class="bi bi-book" 
+  role="img" 
+  aria-label="Basic Set Theory Book" 
+>
+</i> 
+ <span class="dropdown-text">Basic Set Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/../learning-number-theory/" rel="" target=""><i 
+  class="bi bi-book" 
+  role="img" 
+  aria-label="Learning Linear Algebra Book" 
+>
+</i> 
+ <span class="dropdown-text">Learning Number Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/../learning-linear-algebra/" rel="" target=""><i 
+  class="bi bi-book" 
+  role="img" 
+  aria-label="Learning Linear Algebra Book" 
+>
+</i> 
+ <span class="dropdown-text">Learning Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/../single-variable-calculus/" rel="" target=""><i 
+  class="bi bi-book" 
+  role="img" 
+  aria-label="Single Variable Calculus Book" 
+>
+</i> 
+ <span class="dropdown-text">Single Variable Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/../multivariable-calculus/" rel="" target=""><i 
+  class="bi bi-book" 
+  role="img" 
+  aria-label="Multivariable Calculus Book" 
+>
+</i> 
+ <span class="dropdown-text">Multivariable Calculus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-articles" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Articles</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-articles">    
+        <li>
+    <a class="dropdown-item" href="/../blog/" rel="" target=""><i 
+  class="bi bi-journal" 
+  role="img" 
+  aria-label="Personal Blog" 
+>
+</i> 
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/../tutorials/" rel="" target=""><i 
+  class="bi bi-journal" 
+  role="img" 
+  aria-label="Tutorials" 
+>
+</i> 
+ <span class="dropdown-text">Tutorials</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/../research/" rel="" target=""><i 
+  class="bi bi-journal" 
+  role="img" 
+  aria-label="Research Articles" 
+>
+</i> 
+ <span class="dropdown-text">Research</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/" rel="" target=""><i 
+  class="bi bi-youtube" 
+  role="img" 
+  aria-label="YouTube" 
+>
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/directknowledge" rel="" target=""><i 
+  class="bi bi-github" 
+  role="img" 
+  aria-label="GitHub" 
+>
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <div id="quarto-toc-target"></div>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+  <div class="quarto-title-banner">
+    <div class="quarto-title column-body">
+      <h1 class="title">The Mathematical Induction Equivalence</h1>
+            <p class="subtitle lead">The Definitive Beginner’s Guide</p>
+                  <div>
+        <div class="description">
+          This tutorial is a complete, step-by-step introduction to mathematical induction so that you can understand it and start using it yourself.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Tutorials</div>
+              </div>
+                  </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://directknowledge.com/about.html">David A. Smith</a> </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://directknowledge.com">
+              Direct Knowledge
+              </a>
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Thursday, February 9, 2023</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">Thursday, February 9, 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  <div>
+    <div class="abstract">
+      <div class="abstract-title">Abstract</div>
+      In this tutorial, we’ll take a close look at the principle of mathematical induction and see how it works. We’ll also work through plenty of examples so that you can get a better understanding of this vital principle. Toward the end, we prove the mathematical induction equivalence, investigate sequences, and provide several exercises. The prerequisites for this tutorial are knowledge of the properties of addition and multiplication and a basic understanding of summation notation and prime numbers. If you are learning how to write mathematical proofs this tutorial is for you.
+    </div>
+  </div>
+  
+  </header>
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-principle-of-mathematical-induction" id="toc-the-principle-of-mathematical-induction"><span class="toc-section-number">1</span> <span class="header-section-number">1</span> The Principle of Mathematical Induction</a>
+  <ul>
+  <li><a href="#first-examples" id="toc-first-examples"><span class="toc-section-number">1.1</span> <span class="header-section-number">1.1</span> First Examples</a></li>
+  <li><a href="#the-principle-of-strong-induction" id="toc-the-principle-of-strong-induction"><span class="toc-section-number">1.2</span> <span class="header-section-number">1.2</span> The Principle of Strong Induction</a></li>
+  <li><a href="#ordering-the-natural-numbers" id="toc-ordering-the-natural-numbers"><span class="toc-section-number">1.3</span> <span class="header-section-number">1.3</span> Ordering the Natural Numbers</a></li>
+  <li><a href="#the-well-ordering-principle" id="toc-the-well-ordering-principle"><span class="toc-section-number">1.4</span> <span class="header-section-number">1.4</span> The Well-Ordering Principle</a></li>
+  </ul></li>
+  </ul>
+</nav>
+<p>
+<img src="mathematical-induction-equivalence.png" class="img-fluid" alt="Mathematical Induction Equivalence The Definitive Beginner’s Guide">
+</p>
+<section id="the-principle-of-mathematical-induction" class="level2" data-number="1">
+<h2 data-number="1"><span class="header-section-number">1</span> The Principle of Mathematical Induction</h2>
+<p>Mathematical induction can be challenging, especially for beginners. That’s why I made this tutorial – so you can become skilled. So let’s start learning about mathematical induction.</p>
+<p>The idea behind mathematical induction (or just <strong>induction</strong>) is simple: we prove that the statement holds for the first element in a well-ordered set (this is called the <strong>base case</strong>), and then we prove that if the statement holds for any given element in the set, it must also hold for the next element in the set (this is called the <strong>inductive step</strong>). By showing these two steps, the base case and the inductive step, it follows by mathematical induction that the statement holds for all elements in the set. This process can be used to prove statements involving natural numbers and is basically used throughout mathematics.</p>
+<section id="first-examples" class="level3" data-number="1.1">
+<h3 data-number="1.1"><span class="header-section-number">1.1</span> First Examples</h3>
+<p>The most basic form of mathematical induction is called <strong>natural induction</strong>. This type of induction can be used to prove statements involving the natural numbers <span class="math display">\[\begin{equation*}
+\mathbb{N}=\{0,1,2,3,\ldots\}.
+\end{equation*}\]</span> To use natural induction, we first need to prove the statement for the first natural number, which is 0. This is called the base case.</p>
+<p>On the other hand, we also use mathematical induction to prove statements involving the natural numbers <span class="math display">\[\begin{equation*}
+\mathbb{Z}^+ =\{1,2,3,\ldots\}.
+\end{equation*}\]</span> In using this method, the base case is at 1. Now whichever of these two methods you wish to use, the next step is the same.</p>
+<p>Next, we assume that the statement is true for some number <span class="math inline">\(k.\)</span> This is called the <strong>induction hypothesis</strong>. Finally, we must prove that the statement is also true for the next number, <span class="math inline">\(k+1.\)</span> This is called the induction step.</p>
+<p>If we can successfully complete these two steps (base case and inductive step), then we have written a mathematical proof based on the principle of mathematical induction. The Principle of Mathematical Induction is the following statement.</p>
+<blockquote>
+<p><strong>Principle Mathematical Induction</strong>. If <span class="math inline">\(P\)</span> is <span class="math inline">\(\textbf{a subset}\)</span> of the natural numbers with the properties:</p>
+<ul>
+<li><span class="math inline">\(0 \in P\)</span>, and</li>
+<li>for all <span class="math inline">\(k\in \mathbb{N}\)</span>, <span class="math inline">\(k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>,</li>
+</ul>
+<p>then <span class="math inline">\(P\)</span> is <span class="math inline">\(\textbf{the set}\)</span> of the natural numbers.</p>
+</blockquote>
+<p>The advantage of mathematical induction is that it gives us a procedure to change the <strong>is a subset</strong> in the hypothesis to <strong>is the set</strong> in the conclusion.</p>
+<p>Before better understanding the foundations of mathematical induction, let’s work through some examples and see how it works.</p>
+<div id="exm-add-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 </strong></span>Prove that for all natural numbers <span class="math inline">\(n\)</span>, <span class="math display">\[\begin{equation}\label{eq-add-sum}
+\sum_{i=0}^n i =\frac{n(n+1)}{2}.
+\end{equation}\]</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of natural numbers for which <span class="math inline">\(\eqref{eq-add-sum}\)</span> is true. When <span class="math inline">\(n=0\)</span> the LHS<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> of <span class="math inline">\(\eqref{eq-add-sum}\)</span> is <span class="math inline">\(0\)</span> and the RHS of <span class="math inline">\(\eqref{eq-add-sum}\)</span> is also 0. In other words, since <span class="math inline">\(0=0=0(1)/2\)</span> we see that <span class="math inline">\(0\in P.\)</span> Now the induction hypothesis is: assume <span class="math inline">\(k\in P.\)</span> Then we find, <span class="math display">\[\begin{align}
+\sum_{i=0}^{k+1} i
+&amp; =\sum_{i=0}^{k} i+(k+1) \label{twostep} \\
+&amp; =\frac{k(k+1)}{2} +(k+1) \label{threestep} =\frac{(k+1)(k+2)}{2}.
+\end{align}\]</span> Notice that the <strong>induction hypothesis</strong> is used in moving from steps <span class="math inline">\(\eqref{twostep}\)</span> to <span class="math inline">\(\eqref{threestep}\)</span>. So we have shown that <span class="math inline">\(k+1\in P.\)</span> By mathematical induction <span class="math inline">\(P=\mathbb{N}\)</span> as desired.</p>
+</div>
+<p>In the next example, I leave out the reference to the set <span class="math inline">\(P\)</span>.</p>
+<div id="exm-sum-of-squares" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 </strong></span>Prove that for all natural numbers <span class="math inline">\(n\)</span>, <span class="math display">\[\begin{equation}
+\label{eq-sum-of-squares}
+\sum _{i=0}^n i^2=\frac{n(2n+1)(n+1)}{6}.
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For <span class="math inline">\(n=0,\)</span> we consider the LHS and the RHS as follows,<br />
+<span class="math display">\[\begin{equation}
+0=\sum _{i=0}^0 i^2=\frac{0(2(0)+1)(0+1)}{6}=0
+\end{equation}\]</span> and so the base case holds. Assume that <span class="math inline">\(\eqref{eq-sum-of-squares}\)</span> is true for some natural number <span class="math inline">\(k,\)</span> we need to show that <span class="math display">\[\begin{equation}
+\sum _{i=1}^{k+1} i^2=\frac{(k+1)(2k+2)(k+2)}{6}
+\end{equation}\]</span> holds. We have <span class="math display">\[\begin{align}
+\sum _{i=1}^{k+1} i^2
+&amp; =(k+1)^2+\sum _{i=1}^k i^2 \\
+&amp; =(k+1)^2+\frac{k(2k+1)(k+1)}{6} \\
+&amp; =\frac{(k+1)(2k+2)(k+2)}{6}.
+\end{align}\]</span> Therefore, by mathematical induction <span class="math inline">\(\eqref{eq-sum-of-squares}\)</span> holds for all natural numbers <span class="math inline">\(n.\)</span></p>
+</div>
+<p>In any proof by induction, we must not forget to show that <span class="math inline">\(0\)</span> is in <span class="math inline">\(P\)</span>. Even if we show that the truth of <span class="math inline">\(k\)</span> in <span class="math inline">\(P\)</span> implies that <span class="math inline">\(k+1\)</span> is in <span class="math inline">\(P\)</span>, if <span class="math inline">\(0\)</span> is not in <span class="math inline">\(P,\)</span> then we cannot conclude that <span class="math inline">\(P\)</span> is the set of natural numbers. For example, let <span class="math inline">\(P\)</span> be the set of all natural numbers that satisfy: <span class="math display">\[\begin{equation}
+\label{eq-falseq}
+n+(n+1)=2n.
+\end{equation}\]</span></p>
+<p>Suppose <span class="math inline">\(k\)</span> satisfies, <span class="math inline">\(\eqref{eq-falseq}\)</span>. Using this we have <span class="math display">\[\begin{align*}
+(k+1)+(k+2) &amp; =k+(k+1)+2 \\
+&amp; =2k+2 \\
+&amp; = 2(k+1)
+\end{align*}\]</span> and thus <span class="math inline">\(k+1\)</span> also satisfies <span class="math inline">\(\eqref{eq-falseq}\)</span>. So, if <span class="math inline">\(1\)</span> satisfies <span class="math inline">\(\eqref{eq-falseq}\)</span> then, it would follow that <span class="math inline">\(\eqref{eq-falseq}\)</span> is true for all natural numbers <span class="math inline">\(n\)</span>. However, <span class="math inline">\(0\)</span> does not satisfy <span class="math inline">\(\eqref{eq-falseq}\)</span>. In fact, obviously, <span class="math inline">\(\eqref{eq-falseq}\)</span> is false for all natural numbers <span class="math inline">\(n\)</span>. We conclude that the basis step is a <strong>necessary</strong> part of any proof by mathematical induction.</p>
+<p>Now that we have established that a base case is required when using mathematical induction. It is now natural to ask: does the base case need to start at the first natural number 0.</p>
+</section>
+<section id="the-principle-of-strong-induction" class="level3" data-number="1.2">
+<h3 data-number="1.2"><span class="header-section-number">1.2</span> The Principle of Strong Induction</h3>
+<p>The principle of strong (mathematical) induction is also a method of proof and is frequently useful in the theory of numbers. This principle can also be used to prove statements about arays, sequences, and many other structures. Familiarity with this type of argument is essential to subsequent work.</p>
+<div id="thm-principle-of-strong-induction" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Principle of Strong Induction) </strong></span>A set of positive integers that contains the integer 1, and that has the property: for every positive integer <span class="math inline">\(n,\)</span> if the set contains <span class="math inline">\(1,2,\ldots,n,\)</span> then it also contains the integer <span class="math inline">\(n+1\)</span>; must be the set of all positive integers.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(P\)</span> be the set with the stated properties and let <span class="math inline">\(S\)</span> be the set consisting of all positive integers not in <span class="math inline">\(P.\)</span> Assuming that <span class="math inline">\(S\)</span> is nonempty, we can choose <span class="math inline">\(n\)</span> to be the least integer in <span class="math inline">\(S\)</span> by the Well-Ordering Principle. Since <span class="math inline">\(1\)</span> is in <span class="math inline">\(P\)</span> and <span class="math inline">\(n\)</span> is not in <span class="math inline">\(P\)</span>, we know that <span class="math inline">\(n&gt;1\)</span>. Further, notice that none of the integers <span class="math inline">\(1,2,3,\ldots,n-1\)</span> lies in <span class="math inline">\(S\)</span>, so that in fact, they are in <span class="math inline">\(P\)</span>. Then by the second property, <span class="math inline">\(n=(n-1)+1\)</span> is in <span class="math inline">\(P,\)</span> which contradicts <span class="math inline">\(n\)</span> is not in <span class="math inline">\(P\)</span>. Thus, <span class="math inline">\(S\)</span> is empty and <span class="math inline">\(P\)</span> must be the set of all positive integers.</p>
+</div>
+<div id="exm-strong-induction-postage" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 </strong></span>Show that any amount of postage more than 1-cent can be formed just using 2-cent and 3-cent stamps.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Notice that 2-cent and 3-cent stamps can be formed using 2-cent and 3-cent stamps, so the base case is obvious. Let <span class="math inline">\(k\)</span> be a natural number with <span class="math inline">\(k\geq 1\)</span>. For an induction hypothesis (strong), assume that any amount of postage up to <span class="math inline">\(k\)</span>-cents can be formed using 2-cent and 3-cent stamps. Then using <span class="math inline">\(k+1 = k-1+ 2\)</span>, and the fact that <span class="math inline">\(2\)</span> is a 2-cent stamp and <span class="math inline">\(k-1\)</span> can be formed using 2-cent and 3-cent stamps, we see that <span class="math inline">\(k+1\)</span> can be formed using 2-cent and 3-cent stamps. Hence by strong induction, any amount can be formed using 2-cent and 3-cent stamps.</p>
+</div>
+<p>Recall that the assumption that the statement is true for some number <span class="math inline">\(n=k\)</span> is referred to as the induction hypothesis. Sometimes the role that 0 plays in the principle of mathematical induction will be replaced by some other natural number, say <span class="math inline">\(a,\)</span> in such instances mathematical induction establishes the statement for all natural numbers <span class="math inline">\(n\geq a.\)</span></p>
+<p>Let <span class="math inline">\(a\)</span> be a natural number. Consider the set defined by <span class="math display">\[\begin{equation}
+\mathbb{N}_a = \{k\in \mathbb{N}:k\geq a\}.
+\end{equation}\]</span> In other words, <span class="math display">\[\begin{equation}
+\mathbb{N}_a = \{a,a+1,a+2,a+3, \ldots \}.
+\end{equation}\]</span> Using this set notation we can formalize variations of mathematical induction as follows.</p>
+<p>Notice that whenever <span class="math inline">\(a=0\)</span>, we have the Principle of Mathematical Induction as stated previously.</p>
+</section>
+<section id="ordering-the-natural-numbers" class="level3" data-number="1.3">
+<h3 data-number="1.3"><span class="header-section-number">1.3</span> Ordering the Natural Numbers</h3>
+<p>Now we are looking for orderings on the natural numbers. Afterwards, we’ll explain the connection between mathematical induction and these orderings.</p>
+<p>Recall a relation <span class="math inline">\(R\)</span> is a set of ordered pairs. In this tutorial we’ll restrict our attention to relations on the set of natural numbers.</p>
+<ul>
+<li>A relation <span class="math inline">\(R\)</span> is reflexive on <span class="math inline">\(\mathbb{N}\)</span> whenever <span class="math inline">\(aRa\)</span>, for all <span class="math inline">\(a\)</span> in <span class="math inline">\(\mathbb{N}\)</span>.</li>
+<li>A relation <span class="math inline">\(R\)</span> is antisymmetric on <span class="math inline">\(\mathbb{N}\)</span> whenever <span class="math inline">\(aRb\)</span> and <span class="math inline">\(bRa\)</span> implies <span class="math inline">\(a=b\)</span>, for all <span class="math inline">\(a,b\)</span> in <span class="math inline">\(\mathbb{N}\)</span>.</li>
+<li>A relation <span class="math inline">\(R\)</span> is transitive on <span class="math inline">\(\mathbb{N}\)</span> whenever <span class="math inline">\(aRb\)</span> and <span class="math inline">\(bRc\)</span> implies <span class="math inline">\(aRc\)</span>, for all <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{N}\)</span>.</li>
+</ul>
+<p>We call a relation <span class="math inline">\(R\)</span> a <strong>partial ordering</strong> whenever it is <strong>reflexive</strong>, <strong>antisymmetric</strong>, and <strong>transitive</strong>.</p>
+<p>Here are the orderings we’ll be interested in first.</p>
+<div id="def-less-than-divides" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>Let <span class="math inline">\(\mathbb{N}\)</span> be the set of natural numbers.</p>
+<ol type="1">
+<li>The relation <span class="math inline">\(\leq\)</span> is defined on <span class="math inline">\(\mathbb{N}\)</span> by <span class="math inline">\(a\leq b\)</span> if and only if there exists a natural number <span class="math inline">\(c\)</span> such that <span class="math inline">\(b=a+c.\)</span> If <span class="math inline">\(a\leq b\)</span> we say <span class="math inline">\(a\)</span> is <strong>less than or equal to</strong> <span class="math inline">\(b\)</span> or we say <span class="math inline">\(b\)</span> is <strong>greater than or equal to</strong> <span class="math inline">\(a.\)</span></li>
+<li>The relation <span class="math inline">\(\vert\)</span> is defined on <span class="math inline">\(\mathbb{N}\)</span> by <span class="math inline">\(a|b\)</span> if and only if <span class="math inline">\(a\neq 0\)</span> and there exists a natural number <span class="math inline">\(c\)</span> such that <span class="math inline">\(b=ac.\)</span> If <span class="math inline">\(a\vert b\)</span> we say that <span class="math inline">\(a\)</span> <strong>divides</strong> <span class="math inline">\(b\)</span> or we say that <span class="math inline">\(a\)</span> is a <strong>factor</strong> of <span class="math inline">\(b.\)</span></li>
+<li>Let <span class="math inline">\(c\)</span> be a nonzero natural number. The relation <span class="math inline">\(\stackrel{*}{\rightarrow}_c\)</span> is defined on <span class="math inline">\(\mathbb{N}\)</span> by <span class="math inline">\(a\rightarrow_c b\)</span> if and only if there exists a natural number <span class="math inline">\(m\)</span> such that <span class="math inline">\(a=b+mc\)</span> and <span class="math inline">\(a\leq b.\)</span> If <span class="math inline">\(a\rightarrow_c b\)</span> we say that <strong><span class="math inline">\(a\)</span> reduces to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(c.\)</span></strong></li>
+</ol>
+</div>
+<div id="lem-partial-orderings-on-natural-numbers" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1 </strong></span>The relations <span class="math inline">\(\leq\)</span> and <span class="math inline">\(\vert\)</span> are partial orderings on <span class="math inline">\(\mathbb{N}.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Firstly, we’ll show that <span class="math inline">\(\leq\)</span> is an ordering. If <span class="math inline">\(a\)</span> is a natural number, then <span class="math inline">\(a+0 = a\)</span> and so <span class="math inline">\(a\leq a\)</span> by definition of <span class="math inline">\(\leq\)</span>. In other words <span class="math inline">\(\leq\)</span> is reflexive. Notice the ordering is antisymmetric also. To see this suppose that <span class="math inline">\(a\leq b\)</span> and <span class="math inline">\(b\leq a\)</span>. Then there exists natural numbers <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> such that <span class="math inline">\(a+n = b\)</span> and <span class="math inline">\(b+m = a\)</span>. From this we see that <span class="math display">\[\begin{equation}
+\label{additive-antisymmetric}
+b=a+n=(b+m)+n=b+(m+n)
+\end{equation}\]</span> which yields that <span class="math inline">\(n=m=0\)</span>, and hence <span class="math inline">\(a=b\)</span> as needed. To show that <span class="math inline">\(\leq\)</span> is transitive assume that <span class="math inline">\(a\leq b\)</span> and <span class="math inline">\(b\leq c\)</span> where <span class="math inline">\(a,b,c\)</span> are natural numbers. Then there exists natural numbers <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> such that <span class="math inline">\(a+n = b\)</span> and <span class="math inline">\(b+m = c\)</span>. From this we see that <span class="math display">\[\begin{equation}
+\label{additive-transitive}
+c=b+m=(a+n)+m=a+(n+m)
+\end{equation}\]</span> which yields that <span class="math inline">\(a\leq c\)</span>. Secondly, we’ll show that <span class="math inline">\(\vert\)</span> is an ordering. First, notice that <span class="math inline">\(|\)</span> is reflexive because if <span class="math inline">\(a\)</span> is a natural number then <span class="math inline">\(a|a\)</span> since <span class="math inline">\(a=1(a)\)</span>. To show that <span class="math inline">\(|\)</span> is antisymmetric, suppose <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b|a\)</span>. Then there exists natural numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(b=m a\)</span> and <span class="math inline">\(a=n b\)</span> and so we have <span class="math display">\[\begin{equation}
+\label{multiplicative-antisymmetric}
+b=ma=m(nb)=(mn)b.
+\end{equation}\]</span> Thus, <span class="math inline">\(nm=1\)</span> and so in particular <span class="math inline">\(n=1.\)</span> Whence, <span class="math inline">\(a=b\)</span> as desired. To show that <span class="math inline">\(|\)</span> is transitive, suppose <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b|c.\)</span> Then there exists natural numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(b=m a\)</span> and <span class="math inline">\(c=nb\)</span> and so we find <span class="math display">\[\begin{equation}
+\label{multiplicative-transitive}
+c=nb=n(ma)=(nm)a.
+\end{equation}\]</span> Since <span class="math inline">\(nm\)</span> is a natural number, we see that <span class="math inline">\(a|c\)</span> as desired.</p>
+</div>
+<p>Notice the similarities between <span class="math inline">\(\eqref{additive-antisymmetric}\)</span> and <span class="math inline">\(\eqref{multiplicative-antisymmetric}\)</span> and also between <span class="math inline">\(\eqref{additive-transitive}\)</span> and <span class="math inline">\(\eqref{multiplicative-transitive}\)</span>.</p>
+<p>Before looking at these orderings in more detail, let’s see more examples of mathematical induction.</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 </strong></span>Show that <span class="math inline">\(n!&gt;n\)</span> is true for for all natrural numbers <span class="math inline">\(n\)</span> with <span class="math inline">\(n\geq 3\)</span>.</p>
+</div>
+<p>::: {.solution} So our base case is <span class="math inline">\(n=3\)</span>. Let’s prove that <span class="math inline">\(n!&gt;n\)</span> for all <span class="math inline">\(n\geq 3\)</span>. Since <span class="math inline">\(3!=1\cdot 2\cdot 3=6&gt;3\)</span> we see that the base case holds. Now assume that for some positive natural numbers <span class="math inline">\(k\)</span> greater than 3, that <span class="math inline">\(k!&gt;k.\)</span> Then we see that <span class="math display">\[\begin{align*}
+(k+1)! =k!(k+1) &gt;k(k+1) &gt;k+1
+\end{align*}\]</span> Therefore, by mathematical induction, <span class="math inline">\(n!&gt;n\)</span> for all <span class="math inline">\(n\geq 3\)</span>. ::: {.solution}</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 </strong></span>Prove that <span class="math inline">\(2^{n-1}&gt;n\)</span> for all natural numbers <span class="math inline">\(n\geq 3.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Since <span class="math inline">\(4=2^{3-1}=2^2=4&gt;3\)</span> the statement is true for <span class="math inline">\(n=3.\)</span> Assume that the result is true for a natural number <span class="math inline">\(n,\)</span> we need to show that <span class="math inline">\(2^{(n+1)-1}&gt;n+1\)</span> holds. Starting from <span class="math inline">\(2^{n-1}&gt;n\)</span> we multiply by 2 to obtain <span class="math inline">\(2^n&gt;2n.\)</span> But <span class="math inline">\(2n=n+n&gt;n+1\)</span> since <span class="math inline">\(n\geq 3.\)</span> Therefore by mathematical induction, <span class="math inline">\(2^{(n+1)-1}&gt;2n&gt;n+1\)</span> for all natural numbers <span class="math inline">\(n\geq 3\)</span> as desired.</p>
+</div>
+<div id="exm-zero-is-least" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 </strong></span>Show that <span class="math inline">\(0 \leq n\)</span> for all natural numbers <span class="math inline">\(n\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P=\{n\in \mathbb{N} \mid 0 \leq n \}\)</span>. Notice that <span class="math inline">\(0\in P\)</span> because <span class="math inline">\(\leq\)</span> is reflexive. Asssume that <span class="math inline">\(k\in P\)</span>. By transivivity and that <span class="math inline">\(0\leq k \leq k+1\)</span> it follows that <span class="math inline">\(0\leq k+1.\)</span> By mathematical induction <span class="math inline">\(P=\mathbb{N}\)</span> as needed.</p>
+</div>
+<div id="exm-ordering-one" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 </strong></span>Prove that <span class="math inline">\(n\leq 2^n\)</span> for all natural numbers <span class="math inline">\(n.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(P\)</span> be the set of all natural numbers for which <span class="math inline">\(n\leq 2^n\)</span> is true. Since <span class="math inline">\(0\leq 1=2^0\)</span> is true, <span class="math inline">\(0\in P.\)</span> Assume <span class="math inline">\(k\in P\)</span> and <span class="math inline">\(k&gt;0\)</span>. Then <span class="math inline">\(k\leq 2^k\)</span> is true and since <span class="math display">\[\begin{align}
+k+1 \leq k+k = 2k \leq (2) 2^k = 2^{k+1}
+\end{align}\]</span> it follows <span class="math inline">\(k+1\in P.\)</span> Thus, for all <span class="math inline">\(k\in P\)</span>, <span class="math inline">\(k\in P\)</span> implies <span class="math inline">\(k+1\in P\)</span> is true and so by mathematical induction <span class="math inline">\(P=\mathbb{N}\)</span> as desired.</p>
+</div>
+<div id="exm-div-powers" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be natural numbers. Prove that <span class="math inline">\(a|b\)</span> if and only if <span class="math inline">\(a^n|b^n\)</span> for all natural numbers <span class="math inline">\(n.\)</span></p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>We will use mathematical induction. Since <span class="math inline">\(a|b\)</span> certainly implies <span class="math inline">\(a|b,\)</span> the case for <span class="math inline">\(k=1\)</span> is trivial. Assume that <span class="math inline">\(a^k|b^k\)</span> holds for some natural number <span class="math inline">\(k&gt;1\)</span>. Then there exists a natural number <span class="math inline">\(m\)</span> such that <span class="math inline">\(b^k=m a^k.\)</span> Then <span class="math display">\[\begin{equation}
+b^{k+1}=b b^k
+=b \left(m a^k\right)
+=(b m )a^k
+=(m&#39; a m )a^k
+=M a^{k+1}
+\end{equation}\]</span> where <span class="math inline">\(m&#39;\)</span> and <span class="math inline">\(M\)</span> are natural numbers. Whence, <span class="math inline">\(a^{k+1}|b^{k+1}\)</span> as desired.</p>
+</div>
+<p>The strict part of a relation <span class="math inline">\(R\)</span> is the relation <span class="math inline">\(R\)</span> minus the ordered pairs <span class="math inline">\((a,a)\)</span> for any <span class="math inline">\(a.\)</span> In set notation we can write the strict part <span class="math inline">\(R^s\)</span> of a relation <span class="math inline">\(R\)</span> as follows <span class="math display">\[
+R^s = \{(a,b) \mid aRb \text{ and } a\neq b \}.
+\]</span> So for example, <span class="math inline">\(2&lt;3\)</span> and <span class="math inline">\(3&lt;45\)</span> where <span class="math inline">\(&lt;\)</span> is the notation for the strict part of <span class="math inline">\(\leq.\)</span> From <a href="#exm-zero-is-least">Example 6</a> we can see that <span class="math inline">\(0&lt;n\)</span> for all nonzero natural numbers <span class="math inline">\(n\)</span>.</p>
+<div id="lem-trichotomy" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2 (Trichotomy) </strong></span>For any natural numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, exactly one of the following is true: <span class="math display">\[\begin{equation}
+\label{eq-trichotomy}
+a &lt; b, \quad a = b, \quad \text{ or } \quad b &lt; a.
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We will first show that at most one can be true and then show that at least one must be true.</p>
+<p>(1): Assume that <span class="math inline">\(a=b\)</span>. Then neither <span class="math inline">\(a&lt;b\)</span> nor <span class="math inline">\(b&lt;a\)</span> can hold by definition of the strict part. Assume that <span class="math inline">\(a\neq b\)</span>. If <span class="math inline">\(a&lt;b\)</span> and <span class="math inline">\(b&lt;a\)</span>, then <span class="math inline">\(a\leq b\)</span> and <span class="math inline">\(b\leq a\)</span> by definition of the strict part. By antisymmetry of <span class="math inline">\(\leq\)</span>, we see that <span class="math inline">\(a=b\)</span>, contrary to the case assumption. All cases considered at most one can be true from <span class="math inline">\(\eqref{eq-trichotomy}\)</span>.</p>
+<p>(2): Consider the set <span class="math display">\[
+P =\{ a\in \mathbb{N} \mid \text{ for all } b\in \mathbb{N}, a &lt; b, a=b, \text{ or } b &lt; a \}
+\]</span> we will show by induction that <span class="math inline">\(P=\mathbb{N}\)</span>. Notice that <span class="math inline">\(0\in P\)</span> since either <span class="math inline">\(b=0\)</span> or otherwise <span class="math inline">\(0&lt;b\)</span> holds as seen above. Assume that <span class="math inline">\(k\in P\)</span>. The induction hypothesis is that one of the following must hold <span class="math display">\[\begin{equation}
+\label{eq-trichotomy-hypothesis}
+k &lt; b, \quad k = b, \quad \text{ or } \quad b &lt; k
+\end{equation}\]</span> for all natural numbers <span class="math inline">\(b\)</span>. Let <span class="math inline">\(c\)</span> be a natural number. If <span class="math inline">\(c=k\)</span>, then <span class="math inline">\(c &lt; k+1\)</span> as wanted. On the other hand, if <span class="math inline">\(c\neq k\)</span>, then either <span class="math inline">\(k&lt;c\)</span> or <span class="math inline">\(c&lt;k\)</span> (by induction hypothesis). In the case <span class="math inline">\(k &lt; c\)</span>, then either <span class="math inline">\(c=k+1\)</span> or <span class="math inline">\(k+1 &lt; c.\)</span> In the case <span class="math inline">\(c &lt; k\)</span>, then <span class="math inline">\(c &lt; k+1\)</span> by transitivity. All cases considered we have shown that <span class="math display">\[\begin{equation}
+\label{eq-trichotomy-hypothesis-two}
+k+1 &lt; c, \quad k+1 = c, \quad \text{ or } \quad c &lt; k+1
+\end{equation}\]</span> for all natural numbers <span class="math inline">\(c\)</span>. Hence <span class="math inline">\(k+1\in P\)</span> as needed.</p>
+</div>
+<p>A partial ordering that satisfies the <strong>trichotomy property</strong>, namely, exactly one of the following must hold: <span class="math inline">\(a &lt; b,\)</span> <span class="math inline">\(a = b,\)</span> or <span class="math inline">\(b &lt; a\)</span> is called a <strong>total ordering</strong>. So notice that from <a href="#lem-trichotomy">Lemma 2</a> we can say <span class="math inline">\(\leq\)</span> is an example of a partial ordering that is also a total ordering.</p>
+<div id="exm-div-trich" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 </strong></span>Show that the divisibility relation is not a total ordering on <span class="math inline">\(\mathbb{N}\)</span>.</p>
+</div>
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Consider 3 and 7. Notice that none of these are true: <span class="math inline">\(3|7\)</span>, <span class="math inline">\(7|3\)</span>, nor <span class="math inline">\(3=7\)</span>. In fact, we can say the same for any two distinct primes.</p>
+</div>
+<p>In <a href="#lem-ordering-props">Lemma 3</a> we see that the less than relation <span class="math inline">\(\leq\)</span> is an extension of the divisibility relation. We also see that both relations are compatabile with the operations in which they were originally defined.</p>
+<div id="lem-ordering-props" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 3 </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be natural numbers.</p>
+<ol type="1">
+<li>If <span class="math inline">\(a|b\)</span>, then <span class="math inline">\(a\leq b\)</span>.</li>
+<li>For all natural numbers <span class="math inline">\(c\)</span>, <span class="math inline">\(a\leq b\)</span> if and only if <span class="math inline">\(a+c\leq b+c\)</span>.</li>
+<li>For all nonzero natural numbers <span class="math inline">\(c\)</span>, <span class="math inline">\(a|b\)</span> if and only if <span class="math inline">\(ac|bc.\)</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(1): Suppose <span class="math inline">\(a|b\)</span>. Then there exists a natural number <span class="math inline">\(c\)</span> such that <span class="math inline">\(b = ac\)</span>. If <span class="math inline">\(c=1\)</span>, then <span class="math inline">\(a\leq b\)</span> is immediate. Otherwise, there exists a natural number <span class="math inline">\(d\)</span> such that <span class="math inline">\(c=1+d\)</span>. Hence <span class="math inline">\(b=a (1+d)=a +ad\)</span> where <span class="math inline">\(ad\)</span> is a natural number. Thus <span class="math inline">\(a\leq b\)</span>.</p>
+<p>(2): Suppose <span class="math inline">\(a\leq b\)</span>. Then there exists an natural number <span class="math inline">\(n\)</span> such that <span class="math inline">\(b=a+n.\)</span> By substitution we find, <span class="math display">\[
+b+c=(a+n)+c=(a+c)+n.
+\]</span> So <span class="math inline">\(a+c\leq b+c\)</span> as needed.</p>
+<p>Conversely, suppose that <span class="math inline">\(a+c\leq b+c\)</span>. If <span class="math inline">\(a=b\)</span>, then <span class="math inline">\(a\leq b\)</span> as needed. Assume that <span class="math inline">\(a\neq b\)</span>, By <a href="#lem-trichotomy">Lemma 2</a> we have <span class="math inline">\(a &lt; b\)</span> or <span class="math inline">\(b &lt; a\)</span>. If <span class="math inline">\(b &lt; a\)</span>, then <span class="math inline">\(b\leq a\)</span> and by the first part <span class="math inline">\(b+c \leq a+c\)</span>. Hence by antisymmetry, <span class="math inline">\(a+c = b+c\)</span> and so <span class="math inline">\(a=b\)</span> contrary to case assumption. Therefore, <span class="math inline">\(a &lt; b\)</span> which yields <span class="math inline">\(a\leq b\)</span> in this case as well.</p>
+<p>(3): Suppose <span class="math inline">\(a|b\)</span>. Then there exists a natural number <span class="math inline">\(n\)</span> such that <span class="math inline">\(b=an.\)</span> By substitution we find, <span class="math display">\[
+bc=(an)c=(ac)n.
+\]</span> Since <span class="math inline">\(c\neq 0\)</span>, it follows that <span class="math inline">\(ac\neq 0\)</span>, and so <span class="math inline">\(ac|bc\)</span> as needed.</p>
+<p>Conversely, suppose that <span class="math inline">\(ac|bc\)</span>. If <span class="math inline">\(a=0\)</span>, then <span class="math inline">\(ac=0\)</span> contrary to <span class="math inline">\(ac\neq 0\)</span> by definition of divisibility. Hence <span class="math inline">\(a\neq 0\)</span>. Further there exists a natural number <span class="math inline">\(d\)</span> such that <span class="math inline">\(bc=acd.\)</span> Case <span class="math inline">\(b &lt; ad\)</span>: There exists a natural number <span class="math inline">\(e&gt;0\)</span> such that <span class="math inline">\(ad = b+e\)</span> so that <span class="math inline">\(bc=(b+e)c=bc+ec.\)</span> This yields <span class="math inline">\(bc &lt; bc\)</span> and so this case can not happen. Case <span class="math inline">\(ad &lt; b\)</span>: There exists a natural number <span class="math inline">\(f&gt;0\)</span> such that <span class="math inline">\(b = ad+f\)</span> so that <span class="math inline">\(bc = acd+fc=bc+fc.\)</span> This yields <span class="math inline">\(bc &lt; bc\)</span> and so this case can not happen either. By <a href="#lem-trichotomy">Lemma 2</a> we find that <span class="math inline">\(b=ad\)</span> and so <span class="math inline">\(a|b\)</span> as needed.</p>
+</div>
+<p>We say a natural number <span class="math inline">\(n\)</span> is a <strong>linear combination</strong> of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> if there exists natural numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> such that <span class="math inline">\(n=ax+by\)</span>. For example, <span class="math inline">\(7\)</span> is a linear combination of <span class="math inline">\(3\)</span> and <span class="math inline">\(2\)</span> since <span class="math inline">\(7=2(2)+1(3)\)</span>. Notice that by <a href="#lem-lincombdiv">Lemma 4</a> we can say that that if an natural number divides to other natural numbers, then it divides any linear combination of these two natural numbers.</p>
+<div id="lem-lincombdiv" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 4 (Linear Combinations) </strong></span>Let <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> be natural numbers. If <span class="math inline">\(c|a\)</span> and <span class="math inline">\(c|b,\)</span> then <span class="math inline">\(c|(xa+yb)\)</span> for any natural numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(c|a\)</span> and <span class="math inline">\(c|b\)</span>. Then there exists natural numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(a=m c\)</span> and <span class="math inline">\(b=n c.\)</span> Assume <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are arbitrary natural numbers. We have <span class="math display">\[
+xa+yb=x(m c)+y(n c)= c(x m+ y n)
+\]</span> Since <span class="math inline">\(x m+ y n \in \mathbb{N}\)</span> we see that <span class="math inline">\(c|(xa+yb)\)</span> as desired.</p>
+</div>
+</section>
+<section id="the-well-ordering-principle" class="level3" data-number="1.4">
+<h3 data-number="1.4"><span class="header-section-number">1.4</span> The Well-Ordering Principle</h3>
+<p>The Well-Ordering Principle is an important statement concerning the ordering on the natural numbers and can be used to prove mathematical statements. The Well-Ordering Principle is the following statement.</p>
+<blockquote>
+<p><strong>Well-Ordering Principle</strong>. Every nonempty set of natural numbers has a least element.</p>
+</blockquote>
+<p>In other words, no matter how a subset of natural numbers is defined, as long as it is nonempty, the Well-Ordering Principle guarantees us, that it must have a least element.</p>
+<p>One of the most important statements in number theory is the Well-Ordering Principle. This principle states that every non-empty set of natural numbers contains a smallest element. In other words, there is no infinite sequence of natural numbers in which each number is smaller than the one before it. The Well-Ordering Principle is often used to prove results by contradiction. This makes it a very powerful tool for mathematical reasoning. Now it’s time to show that strong induction implies the Well-Ordering Principle.</p>
+<div id="thm-strong-induction-implies-well-ordering-principle" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 </strong></span><span class="math inline">\(SFI\Rightarrow WOP\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume, for a contradiction, there exists a nonempty set of natural numbers <span class="math inline">\(S\)</span> with no least element. Let <span class="math inline">\(P\)</span> be the set of natural numbers for which <span class="math inline">\(n\notin S\)</span> is true. Because <span class="math inline">\(0\)</span> is the least element of all natural numbers, <span class="math inline">\(0\notin S\)</span> and so <span class="math inline">\(0\in P\)</span>. Assume <span class="math inline">\(0,1,\ldots,k\in P\)</span>. If <span class="math inline">\(k+1\in S\)</span> then <span class="math inline">\(k+1\)</span> is the least element of <span class="math inline">\(S\)</span>. However, <span class="math inline">\(S\)</span> has no least element and thus <span class="math inline">\(k+1\notin S\)</span>. Thus, <span class="math inline">\(k+1\in P\)</span> and so by Strong Induction, <span class="math inline">\(P=\mathbb{N}\)</span>. This contradiction shows <span class="math inline">\(S\)</span> can not exist. Therefore, <span class="math inline">\(S=\mathbb{N}\)</span>.</p>
+</div>
+<p>Notice that only <span class="math inline">\(SFI\Rightarrow WOP\)</span> was proven above. The converse statement, namely <span class="math inline">\(WOP\Rightarrow SFI\)</span> is left for the reader as an exercise.</p>
+<p>Okay, so we have proven that <span class="math inline">\(WOP\Rightarrow PMI \Rightarrow SFI \Rightarrow WOP\)</span>. This means, logically speaking that, <span class="math inline">\(WOP\Leftrightarrow PMI \Leftrightarrow SFI\)</span>, and so all three theorems above are proven.</p>
+<div id="lem-division-algorithm" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 5 (Division Algorithm) </strong></span>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are nonzero natural numbers, then there are unique positive natural numbers <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> such that <span class="math display">\[
+a=b q+r \qquad \text{and} \qquad 0\leq r&lt;b.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>First we prove existence. Let <span class="math inline">\(b\)</span> be an arbitrary natural number greater than <span class="math inline">\(0\)</span> and let <span class="math inline">\(S\)</span> be the set of multiples of <span class="math inline">\(b\)</span> that are greater than <span class="math inline">\(a\)</span>, namely,<br />
+<span class="math display">\[S=\{b i \mid i\in \mathbb{N} \text{ and } b i &gt; a \}.\]</span></p>
+<p>Notice <span class="math inline">\(S\)</span> is nonempty since <span class="math inline">\(ab&gt;a\)</span>. By the Well-Ordering Axiom, <span class="math inline">\(S\)</span> must contain a least element, say <span class="math inline">\(bk\)</span>. Since <span class="math inline">\(k\not= 0\)</span>, there exists a natural number <span class="math inline">\(q\)</span> such that <span class="math inline">\(k=q+1\)</span>. Notice <span class="math inline">\(b q\leq a\)</span> since <span class="math inline">\(bk\)</span> is the least multiple of <span class="math inline">\(b\)</span> greater than <span class="math inline">\(a\)</span>. Thus there exists a natural number <span class="math inline">\(r\)</span> such that <span class="math inline">\(a=bq+r\)</span>. Notice <span class="math inline">\(0\leq r\)</span>. Assume, <span class="math inline">\(r\geq b\)</span>. Then there exists a natural number <span class="math inline">\(m\geq 0\)</span> such that <span class="math inline">\(b+m=r\)</span>. By substitution, <span class="math inline">\(a=b(q+1)+m\)</span> and so <span class="math inline">\(bk=b(q+1)\leq a\)</span>. This contradiction shows <span class="math inline">\(r&lt;b\)</span> as needed.</p>
+<p>Now we prove uniqueness. Suppose <span class="math display">\[
+a=bq_1 +r_1, \quad
+a=b q_2+r_2, \quad
+0\leq r_1&lt;b, \quad
+0\leq r_2&lt;b.
+\]</span> If <span class="math inline">\(q_1=q_2\)</span> then <span class="math inline">\(r_1=r_2\)</span>. Assume <span class="math inline">\(q_1&lt;q_2\)</span>. Then <span class="math inline">\(q_2=q_1+n\)</span> for some natural number <span class="math inline">\(n&gt;0\)</span>. This implies <span class="math display">\[
+r_1=a-b q_1=bq_2+r_2-b q_1=b n +r_2\geq b n\geq b
+\]</span> which is contrary to <span class="math inline">\(r_1&lt;b\)</span>. Thus <span class="math inline">\(q_1&lt;q_2\)</span> cannot happen. Similarly, <span class="math inline">\(q_2 &lt; q_1\)</span> cannot happen either, and thus <span class="math inline">\(q_1=q_2\)</span> as desired.</p>
+</div>
+<div id="lem-bezouts-identity" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 6 (Bezout’s Identity) </strong></span>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be natural numbers, not both zero. Then <span class="math inline">\((a,b)=a m +b n\)</span> for some natural numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are natural numbers and w.l.o.g. assume <span class="math inline">\(a\neq 0\)</span>. Consider the set<br />
+<span class="math display">\[
+S=\{a x+b y \mid a x+b y&gt;0, \, x \text{ and } y \text{ are natural numbers}\}.
+\]</span> Since <span class="math inline">\(S\)</span> is nonempty, because <span class="math inline">\(|a|\)</span> is in <span class="math inline">\(S,\)</span> the Well-Ordering Axiom yields a least positive natural number <span class="math inline">\(d\)</span> such that <span class="math inline">\(d=a m+b n\)</span> for some natural numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n.\)</span> The idea is to show that <span class="math inline">\(d=(a,b).\)</span> To do this we use the Division Algorithm obtaining <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> such that <span class="math inline">\(a=q d+r\)</span> where <span class="math inline">\(0\leq r&lt;d.\)</span> If <span class="math inline">\(r&gt;0,\)</span> then <span class="math inline">\(r\)</span> is in <span class="math inline">\(S\)</span> because <span class="math display">\[
+r=a-q d=a-q(a m+b n)=a(1-q m)+b(-q n).
+\]</span><br />
+But we can not have <span class="math inline">\(r\)</span> is in S because <span class="math inline">\(r&lt;d\)</span> and <span class="math inline">\(d\)</span> is the least in <span class="math inline">\(S.\)</span> Therefore <span class="math inline">\(r=0\)</span> and so <span class="math inline">\(d|a.\)</span> Using the same argument with <span class="math inline">\(a\)</span> replaced by <span class="math inline">\(b,\)</span> it is shown that <span class="math inline">\(d|b.\)</span> To show <span class="math inline">\(d=(a,b)\)</span> it remains to show that <span class="math inline">\(d\)</span> is greater than any other common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b;\)</span> and so let <span class="math inline">\(c\)</span> be a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b.\)</span> Then, <span class="math inline">\(c\mid a m+b n\)</span> that is <span class="math inline">\(c\mid d\)</span> and so <span class="math inline">\(d\geq c.\)</span></p>
+</div>
+<p>Recall a natural number greater than 1 is called <strong>prime</strong> whenever it has no divisors other than 1 or itself.</p>
+<div id="lem-prime-characterization" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 7 (Prime Characterization) </strong></span>Let <span class="math inline">\(p\)</span> be natural number greater than <span class="math inline">\(1\)</span>. Then <span class="math inline">\(p\)</span> is a prime if and only if <span class="math display">\[\begin{equation}
+\label{eq-prime-characterization}
+p|nm \implies p|n \text{ or } p|m
+\end{equation}\]</span> for all natural numbers <span class="math inline">\(n\)</span> and <span class="math inline">\(m.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Assume that <span class="math inline">\(p\)</span> is a prime number and that <span class="math inline">\(n,m\)</span> are natural numbers. Suppose that <span class="math inline">\(p|nm\)</span>. Then there exists a natural number <span class="math inline">\(k\)</span> such that <span class="math inline">\(nm=pk\)</span>. Assume further that <span class="math inline">\(p\)</span> does not divide <span class="math inline">\(n\)</span>. In particular, <span class="math inline">\(p\neq n\)</span> and so either <span class="math inline">\(p&lt;n\)</span> or <span class="math inline">\(n&lt;p\)</span> by <a href="#lem-trichotomy">Lemma 2</a>.</p>
+<p>Conversely, suppose <span class="math inline">\(\eqref{eq-prime-characterization}\)</span> holds for all natural numbers <span class="math inline">\(n\)</span> and <span class="math inline">\(m.\)</span> To show that <span class="math inline">\(p\)</span> is prime assume that <span class="math inline">\(d|p\)</span>. Then <span class="math inline">\(p=d t\)</span> for some natural number <span class="math inline">\(t.\)</span> In particular, notice that <span class="math inline">\(p|dt\)</span> because <span class="math inline">\(dt=p(1).\)</span> Hence, by <span class="math inline">\(\eqref{eq-prime-characterization}\)</span> we have <span class="math inline">\(p|d\)</span> or <span class="math inline">\(p|t\)</span>. Case <span class="math inline">\(p|d\)</span>: there exists a natural number <span class="math inline">\(s\)</span> such that <span class="math inline">\(d=p s\)</span> and so <span class="math inline">\(p=dt=pst\)</span>. In this case, <span class="math inline">\(s=1\)</span> and so <span class="math inline">\(d=p\)</span>. Case <span class="math inline">\(p|t\)</span>: there exists a natural number <span class="math inline">\(t\)</span> such that <span class="math inline">\(t=p k\)</span> for some natural number <span class="math inline">\(k\)</span> and so <span class="math inline">\(p = d t = d p k = p (dk),\)</span> and so <span class="math inline">\(d=1\)</span>. Therefore, the only divisors of <span class="math inline">\(p\)</span> are <span class="math inline">\(1\)</span> and <span class="math inline">\(p\)</span>, and so <span class="math inline">\(p\)</span> is prime.</p>
+</div>
+<div id="lem-prime-divides" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 8 </strong></span>Prove if <span class="math inline">\(p\)</span> is a prime number, <span class="math inline">\(a_1,\)</span> <span class="math inline">\(a_2, \ldots ,a_n\)</span> are natural numbers, and <span class="math inline">\(p\left|a_1a_2\cdots a_n\right. ,\)</span> then <span class="math inline">\(p \left| a_i \right.\)</span> for some <span class="math inline">\(1\leq i\leq n.\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The statement is clearly true when <span class="math inline">\(n=1\)</span> and <span class="math inline">\(n=2\)</span> follows from <a href="#lem-prime-characterization">Lemma 7</a>. Assume the statement is true for <span class="math inline">\(n=k,\)</span> and suppose <span class="math inline">\(p\left|a_1a_2\cdot \cdot \cdot a_ka_{k+1}.\right.\)</span> Then by <a href="#lem-prime-characterization">Lemma 7</a>, <span class="math inline">\(p\left|a_1a_2\cdots a_k\right.\)</span> or <span class="math inline">\(p\left|a_{k+1}.\right.\)</span> If <span class="math inline">\(p\left|a_{k+1}\right.\)</span>, the statement is proven. If not, then by the induction hypothesis there is some <span class="math inline">\(0\leq i\leq k\)</span> such that <span class="math inline">\(p | a_i\)</span>. Therefore, there is some <span class="math inline">\(0\leq i\leq k+1\)</span> such that <span class="math inline">\(p | a_i\)</span> as desired.</p>
+</div>
+<div id="lem-prime-factorization" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 9 </strong></span>Every natural number greater than 1 is a product of primes.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Consider the set <span class="math inline">\(S\)</span> consisting of all positive natural numbers greater than 1 that are not a product of primes. Assume for a contradiction that <span class="math inline">\(S\)</span> is not empty, then by the Well-Ordering Principle there is a least element, say <span class="math inline">\(m\)</span>. Because <span class="math inline">\(m\)</span> has no prime divisors and <span class="math inline">\(m\)</span> divides <span class="math inline">\(m\)</span>, we see that <span class="math inline">\(m\)</span> is not prime. Thus, <span class="math inline">\(m=a b\)</span> where <span class="math inline">\(1&lt;a&lt;m\)</span> and <span class="math inline">\(1&lt;b&lt;m\)</span>. Since <span class="math inline">\(m\)</span> is the least element in <span class="math inline">\(S\)</span>, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are products of primes; and thus so is <span class="math inline">\(m\)</span>. This contradiction shows that <span class="math inline">\(S\)</span> is empty and so every natural number greater than <span class="math inline">\(1\)</span> is a product of primes.</p>
+</div>
+<p>The <strong>Fundamental Theorem of Arithmetic</strong>, also called the <strong>unique factorization theorem</strong> or the unique-prime-factorization theorem, states that every natural number greater than 1 is either is prime itself or is the product of prime numbers, and that, although the order of the primes in the second case is arbitrary, the primes themselves are not.</p>
+<div id="lem-fundamental-theorem-of-arithmetic" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 10 (Fundamental Theorem of Arithmetic) </strong></span>Every natural number greater than 1 can be written uniquely in the form <span class="math display">\[\begin{equation}
+n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}
+\end{equation}\]</span> where <span class="math inline">\(p_1 &lt; p_2 &lt; \cdots &lt; p_k\)</span> are prime numbers and <span class="math inline">\(e_1, e_2, \ldots, e_k\)</span> are natural numbers.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Every natural number has a prime factorization by <a href="#lem-prime-factorization">Lemma 9</a>. Thus existence is proven. Now we prove uniqueness. If there is an natural number greater than 1 for which the factorization is not unique, then by the Well-Ordering Principle there exists a smallest such natural number, say <span class="math inline">\(m.\)</span> Assume that <span class="math inline">\(m\)</span> has two prime factorizations say <span class="math display">\[\begin{equation}
+m=p_1{}^{\alpha _1}p_2^{\alpha _2}\cdots p_s^{\alpha _s}
+\qquad \text{and}\qquad
+m=q_1^{\beta _1}q_2^{\beta _2}\cdots  q_t^{\beta _t},
+\end{equation}\]</span> where <span class="math display">\[\begin{equation}
+p_1 &lt; p_2 &lt; \cdots &lt; p_s
+\qquad
+q_1 &lt; q_2 &lt; \cdots &lt; q_t
+\end{equation}\]</span> and the <span class="math inline">\(\alpha _i\)</span> and <span class="math inline">\(\beta _j\)</span> are all positive for <span class="math inline">\(0\leq i\leq s\)</span> and <span class="math inline">\(0\leq j\leq t.\)</span> By <a href="#lem-prime-divides">Lemma 8</a>, <span class="math display">\[\begin{equation}
+q_1\mid p_{i^\star} \text{ for some } 1\leq  i^\star\leq  s
+\quad \text{ and } \quad
+p_1\mid q_{j^\star} \text{ for some } 1\leq j^\star\leq t.
+\end{equation}\]</span> Since all the numbers <span class="math inline">\(p_i\)</span> and <span class="math inline">\(q_j\)</span> are prime, we must have <span class="math inline">\(q_1=p_{i^\star}\)</span> and <span class="math inline">\(p_1=q_{j^\star}.\)</span> Then <span class="math inline">\(i^\star=j^\star=1\)</span> since <span class="math display">\[\begin{equation}
+q_1\leq q_{j^\star}=p_1\leq p_{i^\star}=q_1.
+\end{equation}\]</span> Let <span class="math inline">\(u\)</span> be the natural number defined as <span class="math display">\[\begin{equation}
+u=\frac{m}{p_1}=\frac{m}{q_1}=p_1{}^{\alpha _1-1}p_2{}^{\alpha _2}\cdot \cdot \cdot p_s{}^{\alpha _s}=q_1{}^{\beta _1-1}q_2{}^{\beta_2}\cdot \cdot \cdot q_t{}^{\beta _t}.
+\end{equation}\]</span> If <span class="math inline">\(u=1,\)</span> then <span class="math inline">\(m=p_1\)</span> has a unique factorization contrary to hypothesis. If <span class="math inline">\(u&gt;1,\)</span> then <span class="math inline">\(u&lt;m\)</span> and <span class="math inline">\(u\)</span> has two factorizations. Both cases reveal that <span class="math inline">\(m\)</span> can not exist as desired.</p>
+</div>
+<p>Mathematical induction is a technique used to prove that a certain property holds for all natural numbers. The Well-Ordering Principle states that every non-empty set of natural numbers contains a smallest element. We will now prove that the Well-Ordering Principle implies mathematical induction.</p>
+<div id="thm-well-ordering-principle-implies-mathematical-induction" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 </strong></span><span class="math inline">\(WOP\Rightarrow PMI\)</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(P\)</span> be a subset of natural numbers with <span class="math inline">\(0\in P\)</span> and the property, for all natural numbers <span class="math inline">\(k\)</span>, <span class="math inline">\(k\in P\)</span> implies <span class="math inline">\(k+1\in P\)</span>. Assume, for a contradiction, there exists a nonempty set <span class="math inline">\(S\)</span> containing the natural numbers not in <span class="math inline">\(P\)</span>. By WOP, <span class="math inline">\(S\)</span> has a least natural number, <span class="math inline">\(s\)</span>. Since <span class="math inline">\(0\in P\)</span>, <span class="math inline">\(s\neq 0\)</span>. Thus there exists a natural number <span class="math inline">\(t\)</span> such that <span class="math inline">\(t+1=s\)</span>. Notice <span class="math inline">\(t\not\in S\)</span> since <span class="math inline">\(t&lt;s\)</span>. Thus <span class="math inline">\(t\in P\)</span> and so <span class="math inline">\(s=t+1\in P\)</span>. This contradiction shows <span class="math inline">\(S\)</span> cannot exist, meaning <span class="math inline">\(P=\mathbb{N}\)</span> as desired.</p>
+</div>
+<p>As an exercise for the reader, you should try proving that <span class="math inline">\(PMI\Rightarrow WOP\)</span>. After trying that, read on.</p>
+<p>As discussed above, there are several variations of mathematical induction. Now we would like to show that these are equivalent also. Recall we use the notation <span class="math display">\[\begin{equation}
+N_a = \{k\in \mathbb{N}: k\geq a\}
+\end{equation}\]</span> where <span class="math inline">\(a\)</span> is a natural number.</p>
+<div id="thm-mathematical-induction-equivalence" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 (Mathematical Induction Equivalence) </strong></span>Let <span class="math inline">\(a\)</span> be a fixed natural number. The following statements are logically equivalent.</p>
+<ol type="1">
+<li>Every nonempty set of <span class="math inline">\(\mathbb{N}_a\)</span> has a least element.</li>
+<li>If <span class="math inline">\(a\in P\subseteq\mathbb{N}_a\)</span> and for all <span class="math inline">\(k\in \mathbb{N}_a\)</span>, <span class="math inline">\(k \in P\)</span> implies <span class="math inline">\(k+1 \in P\)</span>, then <span class="math inline">\(P=\mathbb{N}_a\)</span>.</li>
+<li>If <span class="math inline">\(a\in P\subseteq\mathbb{N}_a\)</span> and for all <span class="math inline">\(k\in \mathbb{N}_a\)</span>, <span class="math inline">\(a,a+1,\ldots,a+k \in P\)</span> implies <span class="math inline">\(a+k+1 \in P\)</span>, then <span class="math inline">\(P=\mathbb{N}_a\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\((1)\Rightarrow (2)\)</span>: Let <span class="math inline">\(P\subseteq \mathbb{N}_a\)</span> with <span class="math inline">\(a\in P\)</span> and the property, for all natural numbers <span class="math inline">\(k\)</span>, <span class="math inline">\(k\in P\)</span> implies <span class="math inline">\(k+1\in P\)</span>. Assume, for a contradiction, there exists a nonempty subset <span class="math inline">\(S\)</span> of <span class="math inline">\(\mathbb{N}_a\)</span> containing the natural numbers not in <span class="math inline">\(P\)</span>. By the Well-Ordering Principle, <span class="math inline">\(S\)</span> has a least natural number, <span class="math inline">\(s\)</span>. Since <span class="math inline">\(a\in P\)</span>, <span class="math inline">\(s\neq a\)</span>. Further, since <span class="math inline">\(s\in S\subseteq \mathbb{N}_a\)</span> we know that <span class="math inline">\(s&gt;a\)</span>. Thus there exists a natural number <span class="math inline">\(t\)</span> such that <span class="math inline">\(t+1=a\)</span>. Notice <span class="math inline">\(t\not\in S\)</span> since <span class="math inline">\(t&lt;s\)</span>. Thus <span class="math inline">\(t\in P\)</span> and so <span class="math inline">\(s=t+1\in P\)</span>. This contradiction shows <span class="math inline">\(S\)</span> cannot exist, meaning <span class="math inline">\(P=\mathbb{N}_a\)</span> as desired.</p>
+<p><span class="math inline">\((2)\Rightarrow (3)\)</span>: Let <span class="math inline">\(S\)</span> be a set of natural numbers with <span class="math inline">\(a\in S\)</span> and the property, for all natural numbers <span class="math inline">\(k\)</span>, <span class="math inline">\(a,a+1,\ldots,a+k\in S\)</span> implies <span class="math inline">\(a+k+1\in S\)</span>. Let <span class="math inline">\(P\)</span> be the set of natural numbers for which <span class="math inline">\(a,a+1, \ldots, a+n\in S\)</span> is true. Notice <span class="math inline">\(a\in P\)</span> since <span class="math inline">\(a\in S\)</span>. Assume <span class="math inline">\(k\in P\)</span>. Then <span class="math inline">\(a,a+1, \ldots, a+k\in S\)</span>. Thus <span class="math inline">\(a,a+1,\ldots, a+k, a+k+1\in S\)</span> meaning <span class="math inline">\(a+k+1\in P\)</span>. Hence, <span class="math inline">\(P=\mathbb{N}_a\)</span>. By definition of <span class="math inline">\(P\)</span>, <span class="math inline">\(S=\mathbb{N}_a\)</span> as desired.</p>
+<p><span class="math inline">\((3)\Rightarrow (1)\)</span>: Assume, for a contradiction, there exists a nonempty subset <span class="math inline">\(S\)</span> of <span class="math inline">\(\mathbb{N}_a\)</span> with no least element. Let <span class="math inline">\(P\)</span> be the set of natural numbers for which <span class="math inline">\(n\notin S\)</span> is true. Because <span class="math inline">\(a\)</span> is the least element of all elements in <span class="math inline">\(\mathbb{N}_a\)</span>, <span class="math inline">\(a\notin S\)</span> and so <span class="math inline">\(a\in P\)</span>. Assume <span class="math inline">\(a,a+1,\ldots,a+k\in P\)</span>. If <span class="math inline">\(a+k+1\in S\)</span> then <span class="math inline">\(a+k+1\)</span> is the least element of <span class="math inline">\(S\)</span>. However, <span class="math inline">\(S\)</span> has no least element and thus <span class="math inline">\(a+k+1\notin S\)</span>. Thus, <span class="math inline">\(a+k+1\in P\)</span> and so <span class="math inline">\(P=\mathbb{N}_a\)</span>. This contradiction shows <span class="math inline">\(S\)</span> can not exist.</p>
+</div>
+<p>If you would like any help with understanding this, please contact me at <a href="mailto:david@directknowledge.com">david@directknowledge.com</a>.</p>
+</section>
+</section>
+<section id="additional-formats" class="level2 unlisted unnumbered appendix">
+<h2 class="unlisted unnumbered appendix">Additional Formats</h2>
+<ul>
+<li>Print (PDF) <a href="mathematical-induction-equivalence.pdf" target="_blank">The Mathematical Induction Equivalence</a></li>
+<li>Source code (LaTeX) <a href="mathematical-induction-equivalence.tex" target="_blank">The Mathematical Induction Equivalence</a></li>
+<li>Slideshow (RevealJS) <a href="mathematical-induction-equivalence.html" target="_blank">The Mathematical Induction Equivalence</a></li>
+</ul>
+<div id="quarto-navigation-envelope" class="hidden">
+<p><span class="hidden" data-render-id="quarto-int-sidebar-title">Tutorials</span> <span class="hidden" data-render-id="quarto-int-navbar-title">Direct Knowledge</span> <span class="hidden" data-render-id="quarto-int-navbar:Books">Books</span> <span class="hidden" data-render-id="quarto-int-navbar:Basic Set Theory">Basic Set Theory</span> <span class="hidden" data-render-id="quarto-int-navbar:Learning Number Theory">Learning Number Theory</span> <span class="hidden" data-render-id="quarto-int-navbar:Learning Linear Algebra">Learning Linear Algebra</span> <span class="hidden" data-render-id="quarto-int-navbar:Single Variable Calculus">Single Variable Calculus</span> <span class="hidden" data-render-id="quarto-int-navbar:Multivariable Calculus">Multivariable Calculus</span> <span class="hidden" data-render-id="quarto-int-navbar:Articles">Articles</span> <span class="hidden" data-render-id="quarto-int-navbar:Blog">Blog</span> <span class="hidden" data-render-id="quarto-int-navbar:Tutorials">Tutorials</span> <span class="hidden" data-render-id="quarto-int-navbar:Research">Research</span> <span class="hidden" data-render-id="quarto-int-navbar:About">About</span> <span class="hidden" data-render-id="footer-center-https://directknowledge.com">© Copyright 2023, All Rights Reserved. DirectKnowledge.com</span></p>
+</div>
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden" data-render-id="quarto-metatitle">The Mathematical Induction Equivalence - Direct Knowledge</span> <span class="hidden" data-render-id="quarto-twittercardtitle">The Mathematical Induction Equivalence - Direct Knowledge</span> <span class="hidden" data-render-id="quarto-ogcardtitle">The Mathematical Induction Equivalence - Direct Knowledge</span> <span class="hidden" data-render-id="quarto-metasitename">Tutorials</span> <span class="hidden" data-render-id="quarto-twittercarddesc">This tutorial is a complete, step-by-step introduction to mathematical induction so that you can understand it and start using it yourself.</span> <span class="hidden" data-render-id="quarto-ogcardddesc">This tutorial is a complete, step-by-step introduction to mathematical induction so that you can understand it and start using it yourself.</span></p>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>LHS is shorthand for left hand side, similarly for RHS<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Direct Knowledge",
+    "url": "https://diretcknowledge.com",
+    "logo": "https://directknowledge.com/assets/directknowledge-logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+    {
+    "@type": "Person",
+    "name": "David Andrew Smith"
+    },
+    {
+    "@type": "Person",
+    "name": "David A. Smith"
+    } ],
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Worth",
+    "addressRegion": "Texas",
+    "addressCountry": "United States"
+    },
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@directknowledge.com"
+    },
+    "sameAs": [
+    "https://youtube.com/@directknowledge",
+    "https://github.com/directknowledge/"
+    ]
+    }
+</script>
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+          "name": "Direct Knowledge",
+        "url": "https://directknowledge.com"
+    }
+</script>
+<script>
+MathJax = {
+  tex: {
+    tags: 'ams',
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    processRefs: true,
+    processEnvironments: true,
+    packages: {'[+]': ['newcommand']},
+    processEnvironments: true,
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+console.log("MaxJax Initalizing");
+</script>
+  
+<script>
+var xtimes = 1;
+console.log(xtimes);
+
+ActiveMaxJax = function() {
+  if( xtimes == 1 ) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
+    xtimes = 0;
+    console.log(xtimes);
+  } 
+};
+
+window.addEventListener("scroll", function() { ActiveMaxJax(); });
+window.addEventListener("click", function() { ActiveMaxJax(); });
+window.addEventListener("mousemove", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+window.addEventListener("touchstart", function() { ActiveMaxJax(); });
+window.addEventListener("keydown", function() { ActiveMaxJax(); });
+console.log("MaxJax Initialization Complete");
+
+</script>
+<script>
+// Load the script after the user scrolls, moves the mouse, or touches the screen
+document.addEventListener('scroll', initGTMOnEvent);
+document.addEventListener('mousemove', initGTMOnEvent);
+document.addEventListener('touchstart', initGTMOnEvent);
+
+// Or, load the script after 2 seconds
+document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 2000); });
+
+// Initializes Google Tag Manager in response to an event
+function initGTMOnEvent (event) {
+	initGTM();
+	event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+
+// Initializes Google Tag Manager
+function initGTM () {
+	if (window.gtmDidInit) {
+	  // Don't load again
+	  return false;
+	}
+
+	window.gtmDidInit = true;
+	
+	// Create the script
+	const script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.onload = () => { 
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'G-899QW82HQV');
+	}
+	script.src = 'https://www.googletagmanager.com/gtag/js?id=G-899QW82HQV';
+	
+	// We are still deferring the script
+	script.defer = true;
+	
+	// Append the script to the body of the document
+	document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
+
+<script id = "quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/directknowledge\.com\/tutorials/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://directknowledge.com">
+ &copy; Copyright 2023, All Rights Reserved. DirectKnowledge.com
+    </a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

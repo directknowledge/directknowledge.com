@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.191">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="David A. Smith">
 <meta name="keywords" content="mathematics, writing, publishing">
@@ -39,18 +39,19 @@ div.csl-indent {
   margin-left: 2em;
 }
 </style>
-<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -65,7 +66,14 @@ div.csl-indent {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-    .quarto-title-block .quarto-title-banner {
+    .quarto-title-block .quarto-title-banner,
+    .quarto-title-block .quarto-title-banner h1,
+    .quarto-title-block .quarto-title-banner h2,
+    .quarto-title-block .quarto-title-banner h3,
+    .quarto-title-block .quarto-title-banner h4,
+    .quarto-title-block .quarto-title-banner h5,
+    .quarto-title-block .quarto-title-banner h6
+    {
       color: #FFFFFF;
 background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-mathematics-1024.jpeg");;
     }
@@ -110,6 +118,19 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 }
 </style>
 <style>
+    .quarto-title-block .quarto-title-banner {
+      background-repeat: no-repeat!important;
+      background-position: center center;
+      background-size: cover!important;
+      background-attachment: fixed;
+    }
+    .quarto-title-banner .title 
+    {
+        background: none!important;
+    }
+</style>
+  
+<style>
     .theorem {
         background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
         padding:6px 6px 2px 6px;
@@ -128,7 +149,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
         background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
     }
     .proposition {
-        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+        background: linear-gradient(90deg,rgba(199, 209, 156, 0.5), rgba(198, 230, 185, 0.8));
     }
     .definition {
         background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
@@ -205,7 +226,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
       },
       "publisher":{
           "@type":"Organization",
-          "name":"Blog",
+          "name":"Writing Mathematics",
           "url":"https://directknowledge.com",
           "logo":{
               "@type":"ImageObject",
@@ -222,7 +243,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
       "articleSection":"blog"
     }
     </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  
 <meta property="og:title" content="Writing Mathematics - Direct Knowledge">
 <meta property="og:description" content="One of the greatest challenges for students is learning to express mathematics fluently and accurately.">
 <meta property="og:image" content="https://directknowledge.com/blog/writing-mathematics/writing-mathematics-1024.jpeg">
@@ -248,57 +269,74 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Books</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
         <li>
-    <a class="dropdown-item" href="../../basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+    <a class="dropdown-item" href="../../basic-set-theory/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
 </i> 
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+    <a class="dropdown-item" href="../../learning-number-theory/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+    <a class="dropdown-item" href="../../learning-linear-algebra/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+    <a class="dropdown-item" href="../../single-variable-calculus/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
 </i> 
  <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+    <a class="dropdown-item" href="../../multivariable-calculus/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
 </i> 
  <span class="dropdown-text">Multivariable Calculus</span></a>
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-articles" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Articles</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-articles">    
+        <li>
+    <a class="dropdown-item" href="../../blog/" rel="" target=""><i class="bi bi-journal" role="img" aria-label="Personal Blog">
+</i> 
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorials/" rel="" target=""><i class="bi bi-journal" role="img" aria-label="Tutorials">
+</i> 
+ <span class="dropdown-text">Tutorials</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../research/" rel="" target=""><i class="bi bi-journal" role="img" aria-label="Research Articles">
+</i> 
+ <span class="dropdown-text">Research</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../blog/">
- <span class="menu-text">Blog</span></a>
-  </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/" rel="" target=""><i class="bi bi-youtube" role="img" aria-label="YouTube">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/directknowledge" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -325,7 +363,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
     <div class="quarto-title-meta-heading">Affiliation</div>
     
       <div class="quarto-title-meta-contents">
-      <a href="https://directknowledge.com/about.html">David A. Smith</a> 
+      <p class="author"><a href="https://directknowledge.com/about.html">David A. Smith</a> </p>
     </div>
       <div class="quarto-title-meta-contents">
           <p class="affiliation">
@@ -380,24 +418,16 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
-<div class="d-print-none">
 <p>
 <img src="writing-mathematics-1024.jpeg" class="img-fluid" alt="Writing Mathematics How I Write Mathematics">
 </p>
-</div>
-<section class="slide d-none" data-background-video="../intro.mp4"></section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<div>
 <p>One of the greatest challenges for students is learning to express mathematics fluently and accurately. Trying to decipher complex formulas or explaining mathematical ideas in writing can be a daunting task, even for those with an advanced understanding of mathematics. However, mastering this skill can result in tremendous rewards. Expressing mathematical ideas effectively through written language provides us with a greater understanding and appreciation of the subject, not only from an academic perspective but from its relevance to our daily lives as well. It’s important to understand that although making sense of mathematics on paper may seem difficult at first, it’s worth pursuing because developing this proficiency can help tremendously in class discussions and exams while also providing insights into real-world problems we might face on a regular basis.</p>
-</div>
-<div>
-<div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/QhBV2K1lHMw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/QhBV2K1lHMw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="what-makes-writing-mathematics-different" class="level2">
 <h2 class="anchored" data-anchor-id="what-makes-writing-mathematics-different">What Makes Writing Mathematics Different?</h2>
-<div>
 <p>Writing mathematics is an artful combination of two distinct languages, natural and mathematics. Natural language offers the writer numerous expression possibilities but can be ambiguous. In contrast, writing with mathematical symbols requires clarity yet allows succinctness when conveying complex concepts. Accurate language is a necessity when it comes to mathematics. To properly communicate your thoughts and opinions, ensure that each word carries the correct connotation you intend for them to have.</p>
 <blockquote class="blockquote">
 <p>The precision of words is essential in math-based conversations.</p>
@@ -406,11 +436,9 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 <p>Writing mathematics has rules – some narrow, others broad. Small conventions relate to sentence structure (including punctuation) and are easily verifiable. Broader ones involve general style and strategies that depend on the author’s discretion. For a full primer on mathematical writing see <span class="citation" data-cites="krantz2017primer">Krantz (<a href="#ref-krantz2017primer" role="doc-biblioref">2017</a>)</span>.</p>
 <p>Crafting an effective document takes more than just following a few simple rules; it requires mastering composition. This skillfulness is where the art of writing comes in, with broad and deep strategies for your entire work. It’s all about connection: linking individual sentences together for clarity and flow while adhering to specific sentence structure regulations like commas or mathematical terminologies. At its most complex level, these interrelated requirements can create intricate webs that are both precise yet engaging – and (if followed) can result in a masterpiece.</p>
 <p>Now it’s time to dive into each of <strong>the five levels for writing mathematics</strong>: sentence, paragraph, section, document, and beyond.</p>
-</div>
 </section>
 <section id="sentence-level" class="level2">
 <h2 class="anchored" data-anchor-id="sentence-level">Sentence Level</h2>
-<div>
 <p>Breaking complex mathematical ideas into more accessible parts is essential for effective communication. Using the right voice and symbols in your writing is crucial for success.</p>
 <blockquote class="blockquote">
 <p>These small details can make comprehension natural – but mastering them is fundamental when creating potent written works.</p>
@@ -438,11 +466,9 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 <p>If <span class="math inline">\(A\)</span> is <strong>the</strong> subset of the natural numbers <span class="math inline">\(\mathbb{N}\)</span> with the following two properties: <span class="math inline">\(i\)</span>) 0 is in <span class="math inline">\(A\)</span> and <span class="math inline">\(ii\)</span>) for all <span class="math inline">\(k\)</span> in <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(k\in A\)</span> implies <span class="math inline">\(k+1\in A\)</span>, then <span class="math inline">\(A\)</span> is <strong>a</strong> set of natural numbers.</p>
 </blockquote>
 <p>In mathematics, precision is everything. For more on these rules see <span class="citation" data-cites="knuth1989mathematical">Knuth et al. (<a href="#ref-knuth1989mathematical" role="doc-biblioref">1989</a>)</span>.</p>
-</div>
 </section>
 <section id="paragraph-level" class="level2">
 <h2 class="anchored" data-anchor-id="paragraph-level">Paragraph Level</h2>
-<div>
 <p>Crafting the perfect opening paragraph is essential to grabbing a reader’s attention and inviting them on an engaging journey through your prose. To do so, divide your work into linear segments to be presented in a hierarchical development for ease of comprehension. Retain an even flow by keeping notation and terms familiar while avoiding lengthy explanations or eloquent phrasing that could confuse readers. Furthermore, provide previews of upcoming topics before diving deeper into the content so they can prepare themselves mentally as you write. Adding visuals where appropriate will also aid understanding – use examples and counterexamples along with suggestive references when necessary to maximize clarity without sacrificing creativity.</p>
 <ol type="1">
 <li>Begin a paragraph with your best sentence to ensure that readers stay hooked.</li>
@@ -457,11 +483,9 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 <li>Write a paragraph that flows logically from sentence to sentence to eliminate confusion.</li>
 </ol>
 <p>Mathematics writing requires you to effectively communicate your thought process and convince the reader that your conclusions are valid. A first-rate mathematical exposition should provide precise explanations while also being persuasive enough to satisfy a skeptical audience.</p>
-</div>
 </section>
 <section id="section-level" class="level2">
 <h2 class="anchored" data-anchor-id="section-level">Section Level</h2>
-<div>
 <p>Crafting a clear and concise section requires consistent information, deliberate structure, and reader-minded readability.</p>
 <ol type="1">
 <li><p><strong>Commmunicate</strong>. While writing, the writer must envision what areas of confusion could arise for their reader and strive to ensure that these are addressed. This foresight is crucial in order to effectively communicate with readers; otherwise it risks creating misunderstandings instead of a meaningful exchange. To ensure accuracy and clarity, having an audience in mind while writing is not simply beneficial but necessary.</p></li>
@@ -474,7 +498,6 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 <p>Be strategically efficient.</p>
 </blockquote>
 <p>Crafting a perfect section for your chapter is no easy feat. It requires the careful placement of each element – from preliminary discussions to lemmas, proofs and more – into an order that both makes sense logically while also being effectively digested by readers. The ideal outcome presents detail in such a way so as to capture attention, yet surprise them with unexpected connections between elements. All parts fit together like pieces of a puzzle, forming an explanation or argument far greater than its individual components.</p>
-</div>
 <div class="notes">
 <ol type="1">
 <li>While writing, the writer must envision what areas of confusion could arise for their reader and strive to ensure that these are addressed. This foresight is crucial in order to effectively communicate with readers; otherwise it risks creating misunderstandings instead of a meaningful exchange. To ensure accuracy and clarity, having an audience in mind while writing is not simply beneficial but necessary.</li>
@@ -487,7 +510,6 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 </section>
 <section id="document-level" class="level2">
 <h2 class="anchored" data-anchor-id="document-level">Document Level</h2>
-<div>
 <p>Establishing an introduction that introduces the important theorems, provides insight into what matters, and previews what’s to come can “hook” readers in for further exploration. Make sure your document has these components.</p>
 <p><strong>Research</strong>. To effectively communicate your mathematics, it’s essential to take into account the background knowledge of your intended audience. Do the research necessary to know your audience. This may mean teaching classes, going to workshops, collaborating on documents, refereeing journals, or even reading education journals that specialize in learning about your audience. While you are accomplishing this research, keep in mind the following three points.</p>
 <p>Firstly, don’t let unfamiliar terminology confuse them; provide additional explanation as needed for clarity and comprehension. Secondly, consider adding appendices when discussing more complex or specialized topics that may require deeper context in order to be fully understood by less experienced readers. Thirdly, presenting too much detail can be overwhelming for those without an expert’s understanding; however, avoiding explanations altogether risks leaving readers feeling lost or confused.</p>
@@ -504,20 +526,15 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 <blockquote class="blockquote">
 <p>Research your audience and organize for them.</p>
 </blockquote>
-</div>
 </section>
 <section id="and-beyond" class="level2">
 <h2 class="anchored" data-anchor-id="and-beyond">And Beyond</h2>
-<div>
 <p>By reflecting my own personal tastes, this article offers unique insights into the art of mathematical writing. Although some may not agree or share similar opinions, I believe many people will find it valuable and meaningful. While it may not satisfy all readers looking to learn more about this topic, I trust that many have come here seeking a connection between their passions and mine. If you are looking for more on this topic see <span class="citation" data-cites="halmos1970write">Halmos (<a href="#ref-halmos1970write" role="doc-biblioref">1970</a>)</span>, <span class="citation" data-cites="steenrod1973write">Steenrod (<a href="#ref-steenrod1973write" role="doc-biblioref">1973</a>)</span>, and <span class="citation" data-cites="higham1998handbook">Higham (<a href="#ref-higham1998handbook" role="doc-biblioref">1998</a>)</span>.</p>
 <blockquote class="blockquote">
 <p>While it might be hard to get started, writing mathematics is an invaluable skill that requires patience and dedication. <strong>But if you put in the work your mastery of mathematical exposition can be a force of change that improves lives</strong>.</p>
 </blockquote>
 <p>Finally, I’d like to mention that this is where many beginners believe math ends – with books and articles (documents). But writing your research program, (turning your suspicions, conjectures, unproven ideas, and theories into written words) should be started as soon as possible. Turning your ideas into written mathematics can enable you to harness this force of change.</p>
-</div>
-<div>
 <p>If you would like any help with understanding this, please contact me at <a href="mailto:david@directknowledge.com">david@directknowledge.com</a>.</p>
-</div>
 </section>
 <div id="quarto-appendix" class="default"><section id="additional-formats" class="level2 unlisted unnumbered appendix"><h2 class="quarto-appendix-heading">Additional Formats</h2><div class="quarto-appendix-contents">
 <ul>
@@ -604,17 +621,12 @@ Knowledge. January 28, 2023. <a href="https://directknowledge.com/blog/writing-m
 <script>
 MathJax = {
   tex: {
+    tags: 'ams',
     inlineMath: [['$', '$'], ['\\(', '\\)']],
     processRefs: true,
     processEnvironments: true,
-    tags: 'ams',
     packages: {'[+]': ['newcommand']},
     processEnvironments: true,
-      macros: {
-        N: "{\\mathbb{N}}",
-        Z: "{\\mathbb{Z}}",
-        qed: "{\\square}"
-      }
   },
   svg: {
     fontCache: 'global'
@@ -776,6 +788,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -819,7 +917,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -842,15 +940,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script src="../site_libs/quarto-html/zenscroll-min.js"></script>
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 </body></html>

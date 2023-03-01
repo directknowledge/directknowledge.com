@@ -102,9 +102,6 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\usepackage{setspace}
-\linespread{1.25}
-
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -155,6 +152,13 @@
 {\par\noindent\textbf{\abstractname.}\ \ignorespaces \itshape}
 {\par\medskip}
 
+
+
+
+\usepackage{setspace}
+\linespread{1.25}
+\AtEndEnvironment{solution}{\vspace{-1.5\baselineskip}\hfill\qedsymbol}
+\AtEndEnvironment{proof}{\vspace{-1.5\baselineskip}}
 
 \makeatletter
 \makeatother
@@ -241,7 +245,7 @@ publish interactive, programmable, and full-media mathematical
 experiences on the web? Find out by reading the acknowledgements listed
 below.
 \end{abstract}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners, interior hidden, frame hidden, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, breakable, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
 
 \hypertarget{introduction}{%
 \subsection{Introduction}\label{introduction}}
@@ -254,9 +258,9 @@ I have implemented.\footnote{If you are interested in the reasons why
   Math on the Web} (see \textcite{brainhayes}).}
 
 It is impossible to overstate the importance of those who helped bring
-\protect\hyperlink{mathematics-books-on-the-web}{these books into their
-completed form}. I am deeply grateful for their generous contributions
-and would like to express my sincere appreciation here.
+\href{https://directknowledge.com/}{these books into their completed
+form}. I am deeply grateful for their generous contributions and would
+like to express my sincere appreciation here.
 
 \hypertarget{mathjax}{%
 \subsection{MathJax}\label{mathjax}}

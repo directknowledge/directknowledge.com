@@ -102,9 +102,6 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\usepackage{setspace}
-\linespread{1.25}
-
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -155,6 +152,13 @@
 {\par\noindent\textbf{\abstractname.}\ \ignorespaces \itshape}
 {\par\medskip}
 
+
+
+
+\usepackage{setspace}
+\linespread{1.25}
+\AtEndEnvironment{solution}{\vspace{-1.5\baselineskip}\hfill\qedsymbol}
+\AtEndEnvironment{proof}{\vspace{-1.5\baselineskip}}
 
 \makeatletter
 \makeatother
@@ -243,9 +247,27 @@ establishing tone, introducing yourself as an author, outlining any
 goals you have for the work and highlighting key topics that are
 discussed.
 \end{abstract}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, frame hidden, enhanced, sharp corners, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, breakable, boxrule=0pt, sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
+\hypertarget{how-is-the-preface-of-a-mathematics-book-different-from-others}{%
+\subsection{How Is the Preface of a Mathematics Book Different From
+Others}\label{how-is-the-preface-of-a-mathematics-book-different-from-others}}
 
+\hypertarget{who-is-the-preface-written-for}{%
+\subsection{Who Is the Preface Written
+For}\label{who-is-the-preface-written-for}}
+
+\hypertarget{what-should-go-into-a-preface}{%
+\subsection{What Should Go Into A
+Preface}\label{what-should-go-into-a-preface}}
+
+\hypertarget{what-should-not-go-into-a-preface}{%
+\subsection{What Should Not Go Into A
+Preface}\label{what-should-not-go-into-a-preface}}
+
+\hypertarget{the-preface-of-a-newer-edition}{%
+\subsection{The Preface Of A Newer
+Edition}\label{the-preface-of-a-newer-edition}}
 
 
 \printbibliography

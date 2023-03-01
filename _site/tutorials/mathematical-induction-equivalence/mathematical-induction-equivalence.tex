@@ -1,0 +1,1202 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  twoside,
+  12pt,
+  letterpaper]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\usepackage{geometry}
+
+\geometry{reset, letterpaper, height=9in, width=6in, hmarginratio=1:1, vmarginratio=1:1, marginparsep=0pt, marginparwidth=0pt, headheight=15pt}
+
+\usepackage{lipsum}
+
+\def\dklogo{\raisebox{-.2\height}{\includegraphics[width=12pt]{../../assets/direct-knowledge-logo-book.png}}\footnotesize{\ Direct Knowledge}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LE]{\thepage}%
+\fancyhead[RE]{\dklogo}%
+\fancyhead[CE]{}%
+\fancyfoot[LE]{}%
+\fancyfoot[RE]{}%
+\fancyfoot[CE]{}%
+\fancyhead[LO]{D. A. Smith}%
+\fancyhead[RO]{\thepage}%
+\fancyhead[CO]{}%
+\fancyfoot[LO]{}%
+\fancyfoot[RO]{}%
+\fancyfoot[CO]{}%
+
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx} 
+
+
+\usepackage[most]{tcolorbox} 
+\definecolor{block-gray}{gray}{0.97}
+\newtcolorbox{zitat}[1][]{%
+    colback=block-gray,
+    grow to right by=-10mm,
+    grow to left by=-10mm, 
+    boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{gray},
+    colbacktitle={block-gray},
+    coltitle={black},
+    fonttitle={\large\bfseries},
+    attach title to upper={},
+    #1,
+}
+\renewcommand{\quote}{\zitat}
+\renewcommand{\endquote}{\endzitat}
+
+\def\banner{ {\rule{\linewidth}{0.2pt}}
+    \begin{minipage}[c]{14px}\includegraphics[width=14pt]{../../assets/direct-knowledge-logo-book.png}\end{minipage}
+    \begin{minipage}[c]{150px}Direct Knowledge | Tutorials \end{minipage}
+}
+
+\usepackage{titling}
+\setlength{\droptitle}{-8ex}
+\pretitle{\vspace{-20pt}\banner\vspace{10pt}\begin{flushleft}\huge\bfseries}
+\posttitle{\par\end{flushleft}}
+\preauthor{\begin{flushleft}}
+\postauthor{,
+    \small{Direct Knowledge, USA}
+    \footnote{email: david@directknowledge.com}
+    \footnote{\copyright \, 2023 \ David A. Smith}
+    \footnote{With authorization, you can freely share and reproduce portions of this work for educational or personal use. Please note that distributing any portion of it in print form requires further permission from its original authors, as does posting online to public servers or mailing lists without prior consent.}
+    \end{flushleft}
+    }
+\predate{\begin{flushleft}}
+\postdate{\end{flushleft}}
+
+\renewenvironment{abstract}
+{\par\noindent\textbf{\abstractname.}\ \ignorespaces \itshape}
+{\par\medskip}
+
+
+\usepackage{setspace}
+\linespread{1.25}
+\AtEndEnvironment{solution}{\vspace{-1.5\baselineskip}\hfill\qedsymbol}
+\AtEndEnvironment{proof}{\vspace{-1.25\baselineskip}}
+
+
+
+
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[section]
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\AtBeginDocument{\renewcommand*{\proofname}{Proof}}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[citestyle = authoryear]{biblatex}
+\addbibresource{../references.bib}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={The Mathematical Induction Equivalence},
+  pdfauthor={David A. Smith},
+  pdfkeywords={mathematical induction, strong induction, well-ordering,
+induction principle, finonacci numbers},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{The Mathematical Induction Equivalence}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{The Definitive Beginner's Guide}
+\author{David A. Smith}
+\date{Thursday, February 9, 2023}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+In this tutorial, we'll take a close look at the principle of
+mathematical induction and see how it works. We'll also work through
+plenty of examples so that you can get a better understanding of this
+vital principle. Toward the end, we prove the mathematical induction
+equivalence, investigate sequences, and provide several exercises. The
+prerequisites for this tutorial are knowledge of the properties of
+addition and multiplication and a basic understanding of summation
+notation and prime numbers. If you are learning how to write
+mathematical proofs this tutorial is for you.
+\end{abstract}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced, interior hidden, breakable, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Table of contents}
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\hypertarget{the-principle-of-mathematical-induction}{%
+\section{The Principle of Mathematical
+Induction}\label{the-principle-of-mathematical-induction}}
+
+Mathematical induction can be challenging, especially for beginners.
+That's why I made this tutorial -- so you can become skilled. So let's
+start learning about mathematical induction.
+
+The idea behind mathematical induction (or just \textbf{induction}) is
+simple: we prove that the statement holds for the first element in a
+well-ordered set (this is called the \textbf{base case}), and then we
+prove that if the statement holds for any given element in the set, it
+must also hold for the next element in the set (this is called the
+\textbf{inductive step}). By showing these two steps, the base case and
+the inductive step, it follows by mathematical induction that the
+statement holds for all elements in the set. This process can be used to
+prove statements involving natural numbers and is basically used
+throughout mathematics.
+
+\hypertarget{first-examples}{%
+\subsection{First Examples}\label{first-examples}}
+
+The most basic form of mathematical induction is called \textbf{natural
+induction}. This type of induction can be used to prove statements
+involving the natural numbers \begin{equation*}
+\mathbb{N}=\{0,1,2,3,\ldots\}.
+\end{equation*} To use natural induction, we first need to prove the
+statement for the first natural number, which is 0. This is called the
+base case.
+
+On the other hand, we also use mathematical induction to prove
+statements involving the natural numbers \begin{equation*}
+\mathbb{Z}^+ =\{1,2,3,\ldots\}.
+\end{equation*} In using this method, the base case is at 1. Now
+whichever of these two methods you wish to use, the next step is the
+same.
+
+Next, we assume that the statement is true for some number \(k.\) This
+is called the \textbf{induction hypothesis}. Finally, we must prove that
+the statement is also true for the next number, \(k+1.\) This is called
+the induction step.
+
+If we can successfully complete these two steps (base case and inductive
+step), then we have written a mathematical proof based on the principle
+of mathematical induction. The Principle of Mathematical Induction is
+the following statement.
+
+\begin{quote}
+\textbf{Principle Mathematical Induction}. If \(P\) is
+\(\textbf{a subset}\) of the natural numbers with the properties:
+
+\begin{itemize}
+\tightlist
+\item
+  \(0 \in P\), and
+\item
+  for all \(k\in \mathbb{N}\), \(k \in P\) implies \(k+1 \in P\),
+\end{itemize}
+
+then \(P\) is \(\textbf{the set}\) of the natural numbers.
+\end{quote}
+
+The advantage of mathematical induction is that it gives us a procedure
+to change the \textbf{is a subset} in the hypothesis to \textbf{is the
+set} in the conclusion.
+
+Before better understanding the foundations of mathematical induction,
+let's work through some examples and see how it works.
+
+\begin{example}[]\protect\hypertarget{exm-add-sum}{}\label{exm-add-sum}
+
+Prove that for all natural numbers \(n\),
+\begin{equation}\label{eq-add-sum}
+\sum_{i=0}^n i =\frac{n(n+1)}{2}.
+\end{equation}
+
+\end{example}
+
+\begin{solution}
+
+Let \(P\) be the set of natural numbers for which \eqref{eq-add-sum} is
+true. When \(n=0\) the LHS\footnote{LHS is shorthand for left hand side,
+  similarly for RHS} of \eqref{eq-add-sum} is \(0\) and the RHS of
+\eqref{eq-add-sum} is also 0. In other words, since \(0=0=0(1)/2\) we
+see that \(0\in P.\) Now the induction hypothesis is: assume \(k\in P.\)
+Then we find, \begin{align}
+\sum_{i=0}^{k+1} i
+& =\sum_{i=0}^{k} i+(k+1) \label{twostep} \\ 
+& =\frac{k(k+1)}{2} +(k+1) \label{threestep} =\frac{(k+1)(k+2)}{2}.
+\end{align} Notice that the \textbf{induction hypothesis} is used in
+moving from steps \eqref{twostep} to \eqref{threestep}. So we have shown
+that \(k+1\in P.\) By mathematical induction \(P=\mathbb{N}\) as
+desired.
+
+\end{solution}
+
+In the next example, I leave out the reference to the set \(P\).
+
+\begin{example}[]\protect\hypertarget{exm-sum-of-squares}{}\label{exm-sum-of-squares}
+
+Prove that for all natural numbers \(n\), \begin{equation}
+\label{eq-sum-of-squares}
+\sum _{i=0}^n i^2=\frac{n(2n+1)(n+1)}{6}. 
+\end{equation}
+
+\end{example}
+
+\begin{proof}
+
+For \(n=0,\) we consider the LHS and the RHS as follows,\\
+\begin{equation}
+0=\sum _{i=0}^0 i^2=\frac{0(2(0)+1)(0+1)}{6}=0
+\end{equation} and so the base case holds. Assume that
+\eqref{eq-sum-of-squares} is true for some natural number \(k,\) we need
+to show that \begin{equation}
+\sum _{i=1}^{k+1} i^2=\frac{(k+1)(2k+2)(k+2)}{6}
+\end{equation} holds. We have \begin{align}
+\sum _{i=1}^{k+1} i^2
+& =(k+1)^2+\sum _{i=1}^k i^2 \\
+& =(k+1)^2+\frac{k(2k+1)(k+1)}{6} \\
+& =\frac{(k+1)(2k+2)(k+2)}{6}.
+\end{align} Therefore, by mathematical induction
+\eqref{eq-sum-of-squares} holds for all natural numbers \(n.\)
+
+\end{proof}
+
+In any proof by induction, we must not forget to show that \(0\) is in
+\(P\). Even if we show that the truth of \(k\) in \(P\) implies that
+\(k+1\) is in \(P\), if \(0\) is not in \(P,\) then we cannot conclude
+that \(P\) is the set of natural numbers. For example, let \(P\) be the
+set of all natural numbers that satisfy: \begin{equation}
+\label{eq-falseq}
+n+(n+1)=2n. 
+\end{equation}
+
+Suppose \(k\) satisfies, \eqref{eq-falseq}. Using this we have
+\begin{align*} 
+(k+1)+(k+2) & =k+(k+1)+2 \\ 
+& =2k+2 \\ 
+& = 2(k+1)
+\end{align*} and thus \(k+1\) also satisfies \eqref{eq-falseq}. So, if
+\(1\) satisfies \eqref{eq-falseq} then, it would follow that
+\eqref{eq-falseq} is true for all natural numbers \(n\). However, \(0\)
+does not satisfy \eqref{eq-falseq}. In fact, obviously,
+\eqref{eq-falseq} is false for all natural numbers \(n\). We conclude
+that the basis step is a \textbf{necessary} part of any proof by
+mathematical induction.
+
+Now that we have established that a base case is required when using
+mathematical induction. It is now natural to ask: does the base case
+need to start at the first natural number 0.
+
+\hypertarget{the-principle-of-strong-induction}{%
+\subsection{The Principle of Strong
+Induction}\label{the-principle-of-strong-induction}}
+
+The principle of strong (mathematical) induction is also a method of
+proof and is frequently useful in the theory of numbers. This principle
+can also be used to prove statements about arays, sequences, and many
+other structures. Familiarity with this type of argument is essential to
+subsequent work.
+
+\begin{theorem}[Principle of Strong
+Induction]\protect\hypertarget{thm-principle-of-strong-induction}{}\label{thm-principle-of-strong-induction}
+
+A set of positive integers that contains the integer 1, and that has the
+property: for every positive integer \(n,\) if the set contains
+\(1,2,\ldots,n,\) then it also contains the integer \(n+1\); must be the
+set of all positive integers.
+
+\end{theorem}
+
+\begin{proof}
+
+Let \(P\) be the set with the stated properties and let \(S\) be the set
+consisting of all positive integers not in \(P.\) Assuming that \(S\) is
+nonempty, we can choose \(n\) to be the least integer in \(S\) by the
+Well-Ordering Principle. Since \(1\) is in \(P\) and \(n\) is not in
+\(P\), we know that \(n>1\). Further, notice that none of the integers
+\(1,2,3,\ldots,n-1\) lies in \(S\), so that in fact, they are in \(P\).
+Then by the second property, \(n=(n-1)+1\) is in \(P,\) which
+contradicts \(n\) is not in \(P\). Thus, \(S\) is empty and \(P\) must
+be the set of all positive integers.
+
+\end{proof}
+
+\begin{example}[]\protect\hypertarget{exm-strong-induction-postage}{}\label{exm-strong-induction-postage}
+
+Show that any amount of postage more than 1-cent can be formed just
+using 2-cent and 3-cent stamps.
+
+\end{example}
+
+\begin{solution}
+
+Notice that 2-cent and 3-cent stamps can be formed using 2-cent and
+3-cent stamps, so the base case is obvious. Let \(k\) be a natural
+number with \(k\geq 1\). For an induction hypothesis (strong), assume
+that any amount of postage up to \(k\)-cents can be formed using 2-cent
+and 3-cent stamps. Then using \(k+1 = k-1+ 2\), and the fact that \(2\)
+is a 2-cent stamp and \(k-1\) can be formed using 2-cent and 3-cent
+stamps, we see that \(k+1\) can be formed using 2-cent and 3-cent
+stamps. Hence by strong induction, any amount can be formed using 2-cent
+and 3-cent stamps.
+
+\end{solution}
+
+Recall that the assumption that the statement is true for some number
+\(n=k\) is referred to as the induction hypothesis. Sometimes the role
+that 0 plays in the principle of mathematical induction will be replaced
+by some other natural number, say \(a,\) in such instances mathematical
+induction establishes the statement for all natural numbers \(n\geq a.\)
+
+Let \(a\) be a natural number. Consider the set defined by
+\begin{equation}
+\mathbb{N}_a = \{k\in \mathbb{N}:k\geq a\}.
+\end{equation} In other words, \begin{equation}
+\mathbb{N}_a = \{a,a+1,a+2,a+3, \ldots \}.
+\end{equation} Using this set notation we can formalize variations of
+mathematical induction as follows.
+
+Notice that whenever \(a=0\), we have the Principle of Mathematical
+Induction as stated previously.
+
+\begin{theorem}[General Form of Mathematical
+Induction]\protect\hypertarget{thm-mathematical-induction-equivalence}{}\label{thm-mathematical-induction-equivalence}
+
+Let \(a\) be a fixed natural number. The following statements are
+logically equivalent.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If \(a\in P\subseteq\mathbb{N}_a\) and for all \(k\in \mathbb{N}_a\),
+  \(k \in P\) implies \(k+1 \in P\), then \(P=\mathbb{N}_a\).
+\item
+  If \(a\in P\subseteq\mathbb{N}_a\) and for all \(k\in \mathbb{N}_a\),
+  \(a,a+1,\ldots,a+k \in P\) implies \(a+k+1 \in P\), then
+  \(P=\mathbb{N}_a\).
+\end{enumerate}
+
+\end{theorem}
+
+\begin{proof}
+
+\((1)\Rightarrow (2)\): Let \(S\) be a set of natural numbers with
+\(a\in S\) and the property, for all natural numbers \(k\),
+\(a,a+1,\ldots,a+k\in S\) implies \(a+k+1\in S\). Let \(P\) be the set
+of natural numbers for which \(a,a+1, \ldots, a+n\in S\) is true. Notice
+\(a\in P\) since \(a\in S\). Assume \(k\in P\). Then
+\(a,a+1, \ldots, a+k\in S\). Thus \(a,a+1,\ldots, a+k, a+k+1\in S\)
+meaning \(a+k+1\in P\). Hence, \(P=\mathbb{N}_a\). By definition of
+\(P\), \(S=\mathbb{N}_a\) as desired.
+
+\((2)\Rightarrow (0)\): Assume, for a contradiction, there exists a
+nonempty subset \(S\) of \(\mathbb{N}_a\) with no least element. Let
+\(P\) be the set of natural numbers for which \(n\notin S\) is true.
+Because \(a\) is the least element of all elements in \(\mathbb{N}_a\),
+\(a\notin S\) and so \(a\in P\). Assume \(a,a+1,\ldots,a+k\in P\). If
+\(a+k+1\in S\) then \(a+k+1\) is the least element of \(S\). However,
+\(S\) has no least element and thus \(a+k+1\notin S\). Thus,
+\(a+k+1\in P\) and so \(P=\mathbb{N}_a\). This contradiction shows \(S\)
+can not exist.
+
+\end{proof}
+
+\hypertarget{ordering-the-natural-numbers}{%
+\subsection{Ordering the Natural
+Numbers}\label{ordering-the-natural-numbers}}
+
+Now we are looking for orderings on the natural numbers. Afterwards,
+we'll explain the connection between mathematical induction and these
+orderings.
+
+Recall a relation \(R\) is a set of ordered pairs. In this tutorial
+we'll restrict our attention to relations on the set of natural numbers.
+
+\begin{itemize}
+\tightlist
+\item
+  A relation \(R\) is reflexive on \(\mathbb{N}\) whenever \(aRa\), for
+  all \(a\) in \(\mathbb{N}\).
+\item
+  A relation \(R\) is antisymmetric on \(\mathbb{N}\) whenever \(aRb\)
+  and \(bRa\) implies \(a=b\), for all \(a,b\) in \(\mathbb{N}\).
+\item
+  A relation \(R\) is transitive on \(\mathbb{N}\) whenever \(aRb\) and
+  \(bRc\) implies \(aRc\), for all \(a,b,c\) in \(\mathbb{N}\).
+\end{itemize}
+
+We call a relation \(R\) a \textbf{partial ordering} whenever it is
+\textbf{reflexive}, \textbf{antisymmetric}, and \textbf{transitive}.
+
+Here are the orderings we'll be interested in first.
+
+\begin{definition}[]\protect\hypertarget{def-less-than-divides}{}\label{def-less-than-divides}
+
+Let \(\mathbb{N}\) be the set of natural numbers.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The relation \(\leq\) is defined on \(\mathbb{N}\) by \(a\leq b\) if
+  and only if there exists a natural number \(c\) such that \(b=a+c.\)
+  If \(a\leq b\) we say \(a\) is \textbf{less than or equal to} \(b\) or
+  we say \(b\) is \textbf{greater than or equal to} \(a.\)
+\item
+  The relation \(\vert\) is defined on \(\mathbb{N}\) by \(a|b\) if and
+  only if \(a\neq 0\) and there exists a natural number \(c\) such that
+  \(b=ac.\) If \(a\vert b\) we say that \(a\) \textbf{divides} \(b\) or
+  we say that \(a\) is a \textbf{factor} of \(b.\)
+\item
+  Let \(c\) be a natural number. The relation
+  \(\overset{*}{\longrightarrow}_c\) is defined on \(\mathbb{N}\) by
+  \(a\overset{*}{\longrightarrow}_c b\) if and only if there exists a
+  natural number \(m\) such that \(a=b+mc\) and \(a\leq b.\) If
+  \(a\overset{*}{\longrightarrow}_c b\) we say that \textbf{\(a\)
+  reduces to \(b\) modulo \(c.\)}
+\end{enumerate}
+
+\end{definition}
+
+\begin{lemma}[]\protect\hypertarget{lem-partial-orderings-on-natural-numbers}{}\label{lem-partial-orderings-on-natural-numbers}
+
+The relations \(\leq\) and \(\vert\) are partial orderings on
+\(\mathbb{N}.\) Moreover, for any natural number \(c\) the relation
+\(\overset{*}{\longrightarrow}_c\) is a partial ordering on
+\(\mathbb{N}.\)
+
+\end{lemma}
+
+\begin{proof}
+
+Firstly, we'll show that \(\leq\) is an ordering. If \(a\) is a natural
+number, then \(a+0 = a\) and so \(a\leq a\) by definition of \(\leq\).
+In other words \(\leq\) is reflexive. Notice the ordering is
+antisymmetric also. To see this suppose that \(a\leq b\) and
+\(b\leq a\). Then there exists natural numbers \(n\) and \(m\) such that
+\(a+n = b\) and \(b+m = a\). From this we see that \begin{equation}
+\label{additive-antisymmetric}
+b=a+n=(b+m)+n=b+(m+n)
+\end{equation} which yields that \(n=m=0\), and hence \(a=b\) as needed.
+To show that \(\leq\) is transitive assume that \(a\leq b\) and
+\(b\leq c\) where \(a,b,c\) are natural numbers. Then there exists
+natural numbers \(n\) and \(m\) such that \(a+n = b\) and \(b+m = c\).
+From this we see that \begin{equation}
+\label{additive-transitive}
+c=b+m=(a+n)+m=a+(n+m)
+\end{equation} which yields that \(a\leq c\). Secondly, we'll show that
+\(\vert\) is an ordering. First, notice that \(|\) is reflexive because
+if \(a\) is a natural number then \(a|a\) since \(a=1(a)\). To show that
+\(|\) is antisymmetric, suppose \(a|b\) and \(b|a\). Then there exists
+natural numbers \(m\) and \(n\) such that \(b=m a\) and \(a=n b\) and so
+we have \begin{equation}
+\label{multiplicative-antisymmetric}
+b=ma=m(nb)=(mn)b.
+\end{equation} Thus, \(nm=1\) and so in particular \(n=1.\) Whence,
+\(a=b\) as desired. To show that \(|\) is transitive, suppose \(a|b\)
+and \(b|c.\) Then there exists natural numbers \(m\) and \(n\) such that
+\(b=m a\) and \(c=nb\) and so we find \begin{equation}
+\label{multiplicative-transitive}
+c=nb=n(ma)=(nm)a.
+\end{equation} Since \(nm\) is a natural number, we see that \(a|c\) as
+desired.
+
+\end{proof}
+
+Notice the similarities between \eqref{additive-antisymmetric} and
+\eqref{multiplicative-antisymmetric} and also between
+\eqref{additive-transitive} and \eqref{multiplicative-transitive}.
+
+Before looking at these orderings in more detail, let's see more
+examples of mathematical induction.
+
+\begin{example}[]\protect\hypertarget{exm-factorial}{}\label{exm-factorial}
+
+Show that \(n!>n\) is true for for all natrural numbers \(n\) with
+\(n\geq 3\).
+
+\end{example}
+
+\begin{solution}
+
+So our base case is \(n=3\). Let's prove that \(n!>n\) for all
+\(n\geq 3\). Since \(3!=1\cdot 2\cdot 3=6>3\) we see that the base case
+holds. Now assume that for some positive natural numbers \(k\) greater
+than 3, that \(k!>k.\) Then we see that \begin{align*} 
+(k+1)! =k!(k+1) >k(k+1) >k+1
+\end{align*} Therefore, by mathematical induction, \(n!>n\) for all
+\(n\geq 3\).
+
+\end{solution}
+
+\begin{example}[]\protect\hypertarget{exm-exp}{}\label{exm-exp}
+
+Prove that \(2^{n-1} > n\) for all natural numbers \(n\geq 3.\)
+
+\end{example}
+
+\begin{solution}
+
+Since \(4=2^{3-1}=2^2=4>3\) the statement is true for \(n=3.\) Assume
+that the result is true for a natural number \(n,\) we need to show that
+\(2^{(n+1)-1}>n+1\) holds. Starting from \(2^{n-1}>n\) we multiply by 2
+to obtain \(2^n>2n.\) But \(2n=n+n>n+1\) since \(n\geq 3.\) Therefore by
+mathematical induction, \(2^{(n+1)-1}>2n>n+1\) for all natural numbers
+\(n\geq 3\) as desired.
+
+\end{solution}
+
+\begin{example}[]\protect\hypertarget{exm-zero-is-least}{}\label{exm-zero-is-least}
+
+Show that \(0 \leq n\) for all natural numbers \(n\).
+
+\end{example}
+
+\begin{solution}
+
+Let \(P=\{n\in \mathbb{N} \mid 0 \leq n \}\). Notice that \(0\in P\)
+because \(\leq\) is reflexive. Asssume that \(k\in P\). By transivivity
+and that \(0\leq k \leq k+1\) it follows that \(0\leq k+1.\) By
+mathematical induction \(P=\mathbb{N}\) as needed.
+
+\end{solution}
+
+\begin{example}[]\protect\hypertarget{exm-ordering-one}{}\label{exm-ordering-one}
+
+Prove that \(n\leq 2^n\) for all natural numbers \(n.\)
+
+\end{example}
+
+\begin{solution}
+
+Let \(P\) be the set of all natural numbers for which \(n\leq 2^n\) is
+true. Since \(0\leq 1=2^0\) is true, \(0\in P.\) Assume \(k\in P\) and
+\(k>0\). Then \(k\leq 2^k\) is true and since \begin{align}
+k+1 \leq k+k = 2k \leq (2) 2^k = 2^{k+1}
+\end{align} it follows \(k+1\in P.\) Thus, for all \(k\in P\),
+\(k\in P\) implies \(k+1\in P\) is true and so by mathematical induction
+\(P=\mathbb{N}\) as desired.
+
+\end{solution}
+
+\begin{example}[]\protect\hypertarget{exm-div-powers}{}\label{exm-div-powers}
+
+Let \(a\) and \(b\) be natural numbers. Prove that \(a|b\) if and only
+if \(a^n|b^n\) for all natural numbers \(n.\)
+
+\end{example}
+
+\begin{solution}
+
+We will use mathematical induction. Since \(a|b\) certainly implies
+\(a|b,\) the case for \(k=1\) is trivial. Assume that \(a^k|b^k\) holds
+for some natural number \(k>1\). Then there exists a natural number
+\(m\) such that \(b^k=m a^k.\) Then \begin{equation}
+b^{k+1}=b b^k
+=b \left(m a^k\right)
+=(b m )a^k
+=(m' a m )a^k
+=M a^{k+1}
+\end{equation} where \(m'\) and \(M\) are natural numbers. Whence,
+\(a^{k+1}|b^{k+1}\) as desired.
+
+\end{solution}
+
+The strict part of a relation \(R\) is the relation \(R\) minus the
+ordered pairs \((a,a)\) for any \(a.\) In set notation we can write the
+strict part \(R^s\) of a relation \(R\) as follows \[
+R^s = \{(a,b) \mid aRb \text{ and } a\neq b \}.
+\] So for example, \(2<3\) and \(3<45\) where \(<\) is the notation for
+the strict part of \(\leq.\) From Example~\ref{exm-zero-is-least} we can
+see that \(0<n\) for all nonzero natural numbers \(n\).
+
+\begin{lemma}[Trichotomy]\protect\hypertarget{lem-trichotomy}{}\label{lem-trichotomy}
+
+For any natural numbers \(a\) and \(b\), exactly one of the following is
+true: \begin{equation}
+\label{eq-trichotomy}
+a < b, \quad a = b, \quad \text{ or } \quad b < a.
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+
+We will first show that at most one can be true and then show that at
+least one must be true.
+
+(1): Assume that \(a=b\). Then neither \(a<b\) nor \(b<a\) can hold by
+definition of the strict part. Assume that \(a\neq b\). If \(a<b\) and
+\(b<a\), then \(a\leq b\) and \(b\leq a\) by definition of the strict
+part. By antisymmetry of \(\leq\), we see that \(a=b\), contrary to the
+case assumption. All cases considered at most one can be true from
+\eqref{eq-trichotomy}.
+
+(2): Consider the set \[
+P =\{ a\in \mathbb{N} \mid \text{ for all } b\in \mathbb{N}, a < b, a=b, \text{ or } b < a \}
+\] we will show by induction that \(P=\mathbb{N}\). Notice that
+\(0\in P\) since either \(b=0\) or otherwise \(0<b\) holds as seen
+above. Assume that \(k\in P\). The induction hypothesis is that one of
+the following must hold \begin{equation}
+\label{eq-trichotomy-hypothesis}
+k < b, \quad k = b, \quad \text{ or } \quad b < k
+\end{equation} for all natural numbers \(b\). Let \(c\) be a natural
+number. If \(c=k\), then \(c < k+1\) as wanted. On the other hand, if
+\(c\neq k\), then either \(k<c\) or \(c<k\) (by induction hypothesis).
+In the case \(k < c\), then either \(c=k+1\) or \(k+1 < c.\) In the case
+\(c < k\), then \(c < k+1\) by transitivity. All cases considered we
+have shown that \begin{equation}
+\label{eq-trichotomy-hypothesis-two}
+k+1 < c, \quad k+1 = c, \quad \text{ or } \quad c < k+1
+\end{equation} for all natural numbers \(c\). Hence \(k+1\in P\) as
+needed.
+
+\end{proof}
+
+A partial ordering that satisfies the \textbf{trichotomy property},
+namely, exactly one of the following must hold: \(a < b,\) \(a = b,\) or
+\(b < a\) is called a \textbf{total ordering}. So notice that from
+Lemma~\ref{lem-trichotomy} we can say \(\leq\) is an example of a
+partial ordering that is also a total ordering.
+
+\begin{example}[]\protect\hypertarget{exm-div-trich}{}\label{exm-div-trich}
+
+Show that the divisibility relation is not a total ordering on
+\(\mathbb{N}\).
+
+\end{example}
+
+\begin{solution}
+
+Consider 3 and 7. Notice that none of these are true: \(3|7\), \(7|3\),
+nor \(3=7\). In fact, we can say the same for any two distinct primes.
+
+\end{solution}
+
+In Lemma~\ref{lem-ordering-props} we see that the less than relation
+\(\leq\) is an extension of the divisibility relation. We also see that
+both relations are compatabile with the operations in which they were
+originally defined.
+
+\begin{lemma}[]\protect\hypertarget{lem-ordering-props}{}\label{lem-ordering-props}
+
+Let \(a\) and \(b\) be natural numbers.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If \(a|b\), then \(a\leq b\).
+\item
+  For all natural numbers \(c\), \(a\leq b\) if and only if
+  \(a+c\leq b+c\).
+\item
+  For all nonzero natural numbers \(c\), \(a|b\) if and only if
+  \(ac|bc.\)
+\end{enumerate}
+
+\end{lemma}
+
+\begin{proof}
+
+(1): Suppose \(a|b\). Then there exists a natural number \(c\) such that
+\(b = ac\). If \(c=1\), then \(a\leq b\) is immediate. Otherwise, there
+exists a natural number \(d\) such that \(c=1+d\). Hence
+\(b=a (1+d)=a +ad\) where \(ad\) is a natural number. Thus \(a\leq b\).
+
+(2): Suppose \(a\leq b\). Then there exists an natural number \(n\) such
+that \(b=a+n.\) By substitution we find, \[
+b+c=(a+n)+c=(a+c)+n.
+\] So \(a+c\leq b+c\) as needed.
+
+Conversely, suppose that \(a+c\leq b+c\). If \(a=b\), then \(a\leq b\)
+as needed. Assume that \(a\neq b\), By Lemma~\ref{lem-trichotomy} we
+have \(a < b\) or \(b < a\). If \(b < a\), then \(b\leq a\) and by the
+first part \(b+c \leq a+c\). Hence by antisymmetry, \(a+c = b+c\) and so
+\(a=b\) contrary to case assumption. Therefore, \(a < b\) which yields
+\(a\leq b\) in this case as well.
+
+(3): Suppose \(a|b\). Then there exists a natural number \(n\) such that
+\(b=an.\) By substitution we find, \[
+bc=(an)c=(ac)n.
+\] Since \(c\neq 0\), it follows that \(ac\neq 0\), and so \(ac|bc\) as
+needed.
+
+Conversely, suppose that \(ac|bc\). If \(a=0\), then \(ac=0\) contrary
+to \(ac\neq 0\) by definition of divisibility. Hence \(a\neq 0\).
+Further there exists a natural number \(d\) such that \(bc=acd.\) Case
+\(b < ad\): There exists a natural number \(e>0\) such that \(ad = b+e\)
+so that \(bc=(b+e)c=bc+ec.\) This yields \(bc < bc\) and so this case
+can not happen. Case \(ad < b\): There exists a natural number \(f>0\)
+such that \(b = ad+f\) so that \(bc = acd+fc=bc+fc.\) This yields
+\(bc < bc\) and so this case can not happen either. By
+Lemma~\ref{lem-trichotomy} we find that \(b=ad\) and so \(a|b\) as
+needed.
+
+\end{proof}
+
+We say a natural number \(n\) is a \index{linear combination}
+\textbf{linear combination} of \(a\) and \(b\) if there exists natural
+numbers \(x\) and \(y\) such that \(n=ax+by\). For example, \(7\) is a
+linear combination of \(3\) and \(2\) since \(7=2(2)+1(3)\). Notice that
+by Lemma~\ref{lem-lincombdiv} we can say that that if an natural number
+divides to other natural numbers, then it divides any linear combination
+of these two natural numbers.
+
+\begin{lemma}[Linear
+Combinations]\protect\hypertarget{lem-lincombdiv}{}\label{lem-lincombdiv}
+
+Let \(a\), \(b\), and \(c\) be natural numbers. If \(c|a\) and \(c|b,\)
+then \(c|(xa+yb)\) for any natural numbers \(x\) and \(y\).
+
+\end{lemma}
+
+\begin{proof}
+
+Suppose \(c|a\) and \(c|b\). Then there exists natural numbers \(m\) and
+\(n\) such that \(a=m c\) and \(b=n c.\) Assume \(x\) and \(y\) are
+arbitrary natural numbers. We have \[
+xa+yb=x(m c)+y(n c)= c(x m+ y n)
+\] Since \(x m+ y n \in \mathbb{N}\) we see that \(c|(xa+yb)\) as
+desired.
+
+\end{proof}
+
+\hypertarget{the-well-ordering-principle}{%
+\subsection{The Well-Ordering
+Principle}\label{the-well-ordering-principle}}
+
+The Well-Ordering Principle is an important statement concerning the
+ordering on the natural numbers and can be used to prove mathematical
+statements. The Well-Ordering Principle is the following statement.
+
+\begin{quote}
+\textbf{Well-Ordering Principle}. Every nonempty set of natural numbers
+has a least element.
+\end{quote}
+
+In other words, no matter how a subset of natural numbers is defined, as
+long as it is nonempty, the Well-Ordering Principle guarantees us, that
+it must have a least element.
+
+One of the most important statements in number theory is the
+Well-Ordering Principle. This principle states that every non-empty set
+of natural numbers contains a smallest element. In other words, there is
+no infinite sequence of natural numbers in which each number is smaller
+than the one before it. The Well-Ordering Principle is often used to
+prove results by contradiction. This makes it a very powerful tool for
+mathematical reasoning. Now it's time to show that strong induction
+implies the Well-Ordering Principle.
+
+\begin{theorem}[]\protect\hypertarget{thm-strong-induction-implies-well-ordering-principle}{}\label{thm-strong-induction-implies-well-ordering-principle}
+
+\(SFI\Rightarrow WOP\)
+
+\end{theorem}
+
+\begin{proof}
+
+Assume, for a contradiction, there exists a nonempty set of natural
+numbers \(S\) with no least element. Let \(P\) be the set of natural
+numbers for which \(n\notin S\) is true. Because \(0\) is the least
+element of all natural numbers, \(0\notin S\) and so \(0\in P\). Assume
+\(0,1,\ldots,k\in P\). If \(k+1\in S\) then \(k+1\) is the least element
+of \(S\). However, \(S\) has no least element and thus \(k+1\notin S\).
+Thus, \(k+1\in P\) and so by Strong Induction, \(P=\mathbb{N}\). This
+contradiction shows \(S\) can not exist. Therefore, \(S=\mathbb{N}\).
+
+\end{proof}
+
+Notice that only \(SFI\Rightarrow WOP\) was proven above. The converse
+statement, namely \(WOP\Rightarrow SFI\) is left for the reader as an
+exercise.
+
+Okay, so we have proven that
+\(WOP\Rightarrow PMI \Rightarrow SFI \Rightarrow WOP\). This means,
+logically speaking that, \(WOP\Leftrightarrow PMI \Leftrightarrow SFI\),
+and so all three theorems above are proven.
+
+\begin{lemma}[Division
+Algorithm]\protect\hypertarget{lem-division-algorithm}{}\label{lem-division-algorithm}
+
+If \(a\) and \(b\) are nonzero natural numbers, then there are unique
+positive natural numbers \(q\) and \(r\) such that \[
+a=b q+r \qquad \text{and} \qquad 0\leq r<b.
+\]
+
+\end{lemma}
+
+\begin{proof}
+
+First we prove existence. Let \(b\) be an arbitrary natural number
+greater than \(0\) and let \(S\) be the set of multiples of \(b\) that
+are greater than \(a\), namely,\\
+\[S=\{b i \mid i\in \mathbb{N} \text{ and } b i > a \}.\]
+
+Notice \(S\) is nonempty since \(ab>a\). By the Well-Ordering Axiom,
+\(S\) must contain a least element, say \(bk\). Since \(k\not= 0\),
+there exists a natural number \(q\) such that \(k=q+1\). Notice
+\(b q\leq a\) since \(bk\) is the least multiple of \(b\) greater than
+\(a\). Thus there exists a natural number \(r\) such that \(a=bq+r\).
+Notice \(0\leq r\). Assume, \(r\geq b\). Then there exists a natural
+number \(m\geq 0\) such that \(b+m=r\). By substitution, \(a=b(q+1)+m\)
+and so \(bk=b(q+1)\leq a\). This contradiction shows \(r<b\) as needed.
+
+Now we prove uniqueness. Suppose \[
+a=bq_1 +r_1, \quad
+a=b q_2+r_2, \quad
+0\leq r_1<b, \quad 
+0\leq r_2<b. 
+\] If \(q_1=q_2\) then \(r_1=r_2\). Assume \(q_1<q_2\). Then
+\(q_2=q_1+n\) for some natural number \(n>0\). This implies \[
+r_1=a-b q_1=bq_2+r_2-b q_1=b n +r_2\geq b n\geq b
+\] which is contrary to \(r_1<b\). Thus \(q_1<q_2\) cannot happen.
+Similarly, \(q_2 < q_1\) cannot happen either, and thus \(q_1=q_2\) as
+desired.
+
+\end{proof}
+
+\begin{lemma}[Bezout's
+Identity]\protect\hypertarget{lem-bezouts-identity}{}\label{lem-bezouts-identity}
+
+Let \(a\) and \(b\) be natural numbers, not both zero. Then
+\((a,b)=a m +b n\) for some natural numbers \(m\) and \(n\).
+
+\end{lemma}
+
+\begin{proof}
+
+Assume \(a\) and \(b\) are natural numbers and w.l.o.g. assume
+\(a\neq 0\). Consider the set\\
+\[
+S=\{a x+b y \mid a x+b y>0, \, x \text{ and } y \text{ are natural numbers}\}.
+\] Since \(S\) is nonempty, because \(|a|\) is in \(S,\) the
+Well-Ordering Axiom yields a least positive natural number \(d\) such
+that \(d=a m+b n\) for some natural numbers \(m\) and \(n.\) The idea is
+to show that \(d=(a,b).\) To do this we use the Division Algorithm
+obtaining \(q\) and \(r\) such that \(a=q d+r\) where \(0\leq r<d.\) If
+\(r>0,\) then \(r\) is in \(S\) because \[
+r=a-q d=a-q(a m+b n)=a(1-q m)+b(-q n).
+\]\\
+But we can not have \(r\) is in S because \(r<d\) and \(d\) is the least
+in \(S.\) Therefore \(r=0\) and so \(d|a.\) Using the same argument with
+\(a\) replaced by \(b,\) it is shown that \(d|b.\) To show \(d=(a,b)\)
+it remains to show that \(d\) is greater than any other common divisor
+of \(a\) and \(b;\) and so let \(c\) be a common divisor of \(a\) and
+\(b.\) Then, \(c\mid a m+b n\) that is \(c\mid d\) and so \(d\geq c.\)
+
+\end{proof}
+
+Recall a natural number greater than 1 is called \textbf{prime} whenever
+it has no divisors other than 1 or itself.
+
+\begin{lemma}[Prime
+Characterization]\protect\hypertarget{lem-prime-characterization}{}\label{lem-prime-characterization}
+
+Let \(p\) be natural number greater than \(1\). Then \(p\) is a prime if
+and only if \begin{equation}
+\label{eq-prime-characterization}
+p|nm \implies p|n \text{ or } p|m
+\end{equation} for all natural numbers \(n\) and \(m.\)
+
+\end{lemma}
+
+\begin{proof}
+
+Assume that \(p\) is a prime number and that \(n,m\) are natural
+numbers. Suppose that \(p|nm\). Then there exists a natural number \(k\)
+such that \(nm=pk\). Assume further that \(p\) does not divide \(n\). In
+particular, \(p\neq n\) and so either \(p<n\) or \(n<p\) by
+Lemma~\ref{lem-trichotomy}.
+
+Conversely, suppose \eqref{eq-prime-characterization} holds for all
+natural numbers \(n\) and \(m.\) To show that \(p\) is prime assume that
+\(d|p\). Then \(p=d t\) for some natural number \(t.\) In particular,
+notice that \(p|dt\) because \(dt=p(1).\) Hence, by
+\eqref{eq-prime-characterization} we have \(p|d\) or \(p|t\). Case
+\(p|d\): there exists a natural number \(s\) such that \(d=p s\) and so
+\(p=dt=pst\). In this case, \(s=1\) and so \(d=p\). Case \(p|t\): there
+exists a natural number \(t\) such that \(t=p k\) for some natural
+number \(k\) and so \(p = d t = d p k = p (dk),\) and so \(d=1\).
+Therefore, the only divisors of \(p\) are \(1\) and \(p\), and so \(p\)
+is prime.
+
+\end{proof}
+
+\begin{lemma}[]\protect\hypertarget{lem-prime-divides}{}\label{lem-prime-divides}
+
+Prove if \(p\) is a prime number, \(a_1,\) \(a_2, \ldots ,a_n\) are
+natural numbers, and \(p\left|a_1a_2\cdots a_n\right. ,\) then
+\(p \left| a_i \right.\) for some \(1\leq i\leq n.\)
+
+\end{lemma}
+
+\begin{proof}
+
+The statement is clearly true when \(n=1\) and \(n=2\) follows from
+Lemma~\ref{lem-prime-characterization}. Assume the statement is true for
+\(n=k,\) and suppose
+\(p\left|a_1a_2\cdot \cdot \cdot a_ka_{k+1}.\right.\) Then by
+Lemma~\ref{lem-prime-characterization},
+\(p\left|a_1a_2\cdots a_k\right.\) or \(p\left|a_{k+1}.\right.\) If
+\(p\left|a_{k+1}\right.\), the statement is proven. If not, then by the
+induction hypothesis there is some \(0\leq i\leq k\) such that
+\(p | a_i\). Therefore, there is some \(0\leq i\leq k+1\) such that
+\(p | a_i\) as desired.
+
+\end{proof}
+
+\begin{lemma}[]\protect\hypertarget{lem-prime-factorization}{}\label{lem-prime-factorization}
+
+Every natural number greater than 1 is a product of primes.
+
+\end{lemma}
+
+\begin{proof}
+
+Consider the set \(S\) consisting of all positive natural numbers
+greater than 1 that are not a product of primes. Assume for a
+contradiction that \(S\) is not empty, then by the Well-Ordering
+Principle there is a least element, say \(m\). Because \(m\) has no
+prime divisors and \(m\) divides \(m\), we see that \(m\) is not prime.
+Thus, \(m=a b\) where \(1<a<m\) and \(1<b<m\). Since \(m\) is the least
+element in \(S\), \(a\) and \(b\) are products of primes; and thus so is
+\(m\). This contradiction shows that \(S\) is empty and so every natural
+number greater than \(1\) is a product of primes.
+
+\end{proof}
+
+The \textbf{Fundamental Theorem of Arithmetic}, also called the
+\textbf{unique factorization theorem} or the unique-prime-factorization
+theorem, states that every natural number greater than 1 is either is
+prime itself or is the product of prime numbers, and that, although the
+order of the primes in the second case is arbitrary, the primes
+themselves are not.
+
+\begin{lemma}[Fundamental Theorem of
+Arithmetic]\protect\hypertarget{lem-fundamental-theorem-of-arithmetic}{}\label{lem-fundamental-theorem-of-arithmetic}
+
+Every natural number greater than 1 can be written uniquely in the form
+\begin{equation}
+n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}
+\end{equation} where \(p_1 < p_2 < \cdots < p_k\) are prime numbers and
+\(e_1, e_2, \ldots, e_k\) are natural numbers.
+
+\end{lemma}
+
+\begin{proof}
+
+Every natural number has a prime factorization by
+Lemma~\ref{lem-prime-factorization}. Thus existence is proven. Now we
+prove uniqueness. If there is an natural number greater than 1 for which
+the factorization is not unique, then by the Well-Ordering Principle
+there exists a smallest such natural number, say \(m.\) Assume that
+\(m\) has two prime factorizations say \begin{equation}
+m=p_1{}^{\alpha _1}p_2^{\alpha _2}\cdots p_s^{\alpha _s}
+\qquad \text{and}\qquad 
+m=q_1^{\beta _1}q_2^{\beta _2}\cdots  q_t^{\beta _t},
+\end{equation} where \begin{equation}
+p_1 < p_2 < \cdots < p_s
+\qquad 
+q_1 < q_2 < \cdots < q_t
+\end{equation} and the \(\alpha _i\) and \(\beta _j\) are all positive
+for \(0\leq i\leq s\) and \(0\leq j\leq t.\) By
+Lemma~\ref{lem-prime-divides}, \begin{equation}
+q_1\mid p_{i^\star} \text{ for some } 1\leq  i^\star\leq  s 
+\quad \text{ and } \quad 
+p_1\mid q_{j^\star} \text{ for some } 1\leq j^\star\leq t.
+\end{equation} Since all the numbers \(p_i\) and \(q_j\) are prime, we
+must have \(q_1=p_{i^\star}\) and \(p_1=q_{j^\star}.\) Then
+\(i^\star=j^\star=1\) since \begin{equation}
+q_1\leq q_{j^\star}=p_1\leq p_{i^\star}=q_1.
+\end{equation} Let \(u\) be the natural number defined as
+\begin{equation}
+u=\frac{m}{p_1}=\frac{m}{q_1}=p_1{}^{\alpha _1-1}p_2{}^{\alpha _2}\cdot \cdot \cdot p_s{}^{\alpha _s}=q_1{}^{\beta _1-1}q_2{}^{\beta_2}\cdot \cdot \cdot q_t{}^{\beta _t}.
+\end{equation} If \(u=1,\) then \(m=p_1\) has a unique factorization
+contrary to hypothesis. If \(u>1,\) then \(u<m\) and \(u\) has two
+factorizations. Both cases reveal that \(m\) can not exist as desired.
+
+\end{proof}
+
+Mathematical induction is a technique used to prove that a certain
+property holds for all natural numbers. The Well-Ordering Principle
+states that every non-empty set of natural numbers contains a smallest
+element. We will now prove that the Well-Ordering Principle implies
+mathematical induction.
+
+\begin{theorem}[]\protect\hypertarget{thm-well-ordering-principle-implies-mathematical-induction}{}\label{thm-well-ordering-principle-implies-mathematical-induction}
+
+\(WOP\Rightarrow PMI\)
+
+\end{theorem}
+
+\begin{proof}
+
+Let \(P\) be a subset of natural numbers with \(0\in P\) and the
+property, for all natural numbers \(k\), \(k\in P\) implies
+\(k+1\in P\). Assume, for a contradiction, there exists a nonempty set
+\(S\) containing the natural numbers not in \(P\). By WOP, \(S\) has a
+least natural number, \(s\). Since \(0\in P\), \(s\neq 0\). Thus there
+exists a natural number \(t\) such that \(t+1=s\). Notice \(t\not\in S\)
+since \(t<s\). Thus \(t\in P\) and so \(s=t+1\in P\). This contradiction
+shows \(S\) cannot exist, meaning \(P=\mathbb{N}\) as desired.
+
+\end{proof}
+
+As an exercise for the reader, you should try proving that
+\(PMI\Rightarrow WOP\). After trying that, read on.
+
+As discussed above, there are several variations of mathematical
+induction. Now we would like to show that these are equivalent also.
+Recall we use the notation \begin{equation}
+N_a = \{k\in \mathbb{N}: k\geq a\}
+\end{equation} where \(a\) is a natural number.
+
+
+\printbibliography
+
+
+
+\thispagestyle{empty}
+
+
+\end{document}

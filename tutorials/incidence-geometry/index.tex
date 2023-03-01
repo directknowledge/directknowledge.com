@@ -1,0 +1,2026 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  twoside,
+  12pt,
+  letterpaper,
+  fleqn]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\usepackage{geometry}
+
+\geometry{reset, letterpaper, height=9in, width=6in, hmarginratio=1:1, vmarginratio=1:1, marginparsep=0pt, marginparwidth=0pt, headheight=15pt}
+
+\usepackage{lipsum}
+
+\def\dklogo{\raisebox{-.2\height}{\includegraphics[width=12pt]{../../assets/direct-knowledge-logo-book.png}}\footnotesize{\ Direct Knowledge}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LE]{\thepage}%
+\fancyhead[RE]{\dklogo}%
+\fancyhead[CE]{}%
+\fancyfoot[LE]{}%
+\fancyfoot[RE]{}%
+\fancyfoot[CE]{}%
+\fancyhead[LO]{D. A. Smith}%
+\fancyhead[RO]{\thepage}%
+\fancyhead[CO]{}%
+\fancyfoot[LO]{}%
+\fancyfoot[RO]{}%
+\fancyfoot[CO]{}%
+
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx} 
+
+
+\usepackage[most]{tcolorbox} 
+\definecolor{block-gray}{gray}{0.97}
+\newtcolorbox{zitat}[1][]{%
+    colback=block-gray,
+    grow to right by=-10mm,
+    grow to left by=-10mm, 
+    boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{gray},
+    colbacktitle={block-gray},
+    coltitle={black},
+    fonttitle={\large\bfseries},
+    attach title to upper={},
+    #1,
+}
+\renewcommand{\quote}{\zitat}
+\renewcommand{\endquote}{\endzitat}
+
+\def\banner{ {\rule{\linewidth}{0.2pt}}
+    \begin{minipage}[c]{14px}\includegraphics[width=14pt]{../../assets/direct-knowledge-logo-book.png}\end{minipage}
+    \begin{minipage}[c]{150px}Direct Knowledge | Tutorials \end{minipage}
+}
+
+\usepackage{titling}
+\setlength{\droptitle}{-8ex}
+\pretitle{\vspace{-20pt}\banner\vspace{10pt}\begin{flushleft}\huge\bfseries}
+\posttitle{\par\end{flushleft}}
+\preauthor{\begin{flushleft}}
+\postauthor{,
+    \small{Direct Knowledge, USA}
+    \footnote{email: david@directknowledge.com}
+    \footnote{\copyright \, 2023 \ David A. Smith}
+    \footnote{With authorization, you can freely share and reproduce portions of this work for educational or personal use. Please note that distributing any portion of it in print form requires further permission from its original authors, as does posting online to public servers or mailing lists without prior consent.}
+    \end{flushleft}
+    }
+\predate{\begin{flushleft}}
+\postdate{\end{flushleft}}
+
+\renewenvironment{abstract}
+{\par\noindent\textbf{\abstractname.}\ \ignorespaces \itshape}
+{\par\medskip}
+
+
+\usepackage{setspace}
+\linespread{1.25}
+\AtEndEnvironment{solution}{\vspace{-1.5\baselineskip}\hfill\qedsymbol}
+\AtEndEnvironment{proof}{\vspace{-1.25\baselineskip}}
+
+
+
+
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{remark}
+\AtBeginDocument{\renewcommand*{\proofname}{Proof}}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[citestyle = authoryear]{biblatex}
+\addbibresource{../references.bib}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Incidence Geometry},
+  pdfauthor={David A. Smith},
+  pdfkeywords={incidence geometry, point, line, incidence, geometry},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Incidence Geometry}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{and How to Write Rigorous Proofs}
+\author{David A. Smith}
+\date{Thursday, February 9, 2023}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, frame hidden, enhanced, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, interior hidden, sharp corners]}{\end{tcolorbox}}\fi
+
+Incidence geometry is one of the most important branches of mathematics.
+It deals with the properties and relationships between points and lines.
+We'll will take a closer look at the different aspects of incidence
+geometry and see what readers can expect to learn from it.
+
+First, we study the three Incidence Axioms as laid out by David Hilbert
+in his infamous work \emph{Foundations of Geometry}. We prove several
+elementary statements using these incidence axioms.~ Then we discuss the
+possibility of adding an additional axiom to the system: a parallel
+postulate.~ To motivate the discussion, we work through a few finite
+models of incidence axioms, as we demonstrate the independence of the
+proposed parallel postulates. Next, we define the Affine Plane:
+basically the Incidence Axioms plus a parallel postulate. Then we
+explore the basics of finite affine planes and end with the major open
+problem in finite geometry. ~
+
+\hypertarget{what-do-we-need-for-the-foundations-of-geometry}{%
+\subsection{What do we need for the foundations of
+geometry?}\label{what-do-we-need-for-the-foundations-of-geometry}}
+
+Incidence geometry is based on the relationships between points and
+lines. The incidence axioms are a set of principles that govern these
+objects and their relationship.
+
+The first incidence axiom states that any two points can be connected by
+a unique line. The second incidence axiom states that any two lines
+intersect at a unique point. The third incidence axiom states that there
+exist three non-collinear points. These three incidence axioms are the
+foundation for all of the incidence geometry.
+
+One might think that all we need for geometry is a straightedge and
+compass, but incidence geometry shows us that this isn't the case. In
+incidence geometry, we don't use any measurements; instead, we only look
+at how objects are related to one another. This means that we can
+explore geometry without worrying about numbers or angles. So, what do
+we need for the foundations of incidence geometry? Simply a few basic
+concepts: \textbf{points}, \textbf{lines}, and an \textbf{incidence
+relation}. With these concepts in hand, we can begin to investigate the
+fascinating world of geometry.
+
+\hypertarget{what-do-we-need-to-do-geometry}{%
+\subsection{What do we need to do
+geometry?}\label{what-do-we-need-to-do-geometry}}
+
+The short answer is \textbf{The Axiomatic Method}. But let's give a few
+details but what we mean by this.
+
+\hypertarget{the-axiomatic-method}{%
+\subsubsection{The Axiomatic Method}\label{the-axiomatic-method}}
+
+An axiomatic system must contain a set of technical terms that are
+deliberately chosen as \textbf{undefined terms} and are subject to the
+interpretation of the reader. All other technical terms of the system
+are \textbf{defined terms} whose definition rely upon the undefined
+terms. The \textbf{axioms} of the system are a set of statements dealing
+with the defined and undefined terms and will remain unproven. The word
+postulate is a synonym and is often used in place of the word axiom.
+
+All other statements must be logical consequences of the axioms. These
+derived statements are called the \textbf{theorems} of the axiomatic
+system.
+
+Thus, in order to follow the axiomatic method, and do any type of
+mathematics, we require the following:
+
+\begin{itemize}
+\tightlist
+\item
+  Mutual understanding of the meaning of the words and symbols used in
+  the discourse.
+\item
+  Acceptance of certain statements called axioms or postulates without
+  further justification.
+\item
+  Agreement on how and when one statement ``follows logically'' from
+  another, i.e., agreement on certain rules of logic.
+\end{itemize}
+
+Here is more information about what I mean by this:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  No unstated assumptions may be used in a proof.
+\item
+  The following are the six types of justifications allowed for
+  statements in proofs:
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  By hypothesis
+\item
+  By axiom
+\item
+  By theorem
+\item
+  By definition
+\item
+  By step
+\item
+  By rule of logic
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  To prove a statement \(P\implies Q\) assume the negation of statement
+  \(Q\) (RAA hypothesis) and deduce an absurd statement, using the
+  hypothesis \(P\) if needed in your deduction.
+\item
+  The statement \(\neg (\neg P)\) means the same as \(P\).
+\item
+  The statement \(\neg (P\implies Q)\) means the same as
+  \(P\land \neg Q\).
+\item
+  The statement \(\neg(P\land Q)\) means the same as
+  \(\neg P \lor \neg Q\).
+\item
+  The statement \(\neg(\forall x P(x))\) means the same as
+  \(\exists x \neg P(x)\).
+\item
+  The statement \(\neg(\exists x P(x))\) means the same as
+  \(\forall x \neg P(x)\).
+\item
+  If \(P\implies Q\) and \(P\) are steps in a proof, then \(Q\) is a
+  justifiable step.
+\item
+  \((P\implies Q) \land (Q\implies R) \implies (P\implies R)\)
+\item
+  \((P\land Q)\implies P\) and \((P\land Q)\implies Q\)
+\item
+  \((\neg Q \implies \neg P)\Longleftrightarrow (P\implies Q)\)
+\item
+  For every statement \(P\), \(P\lor \neg P\) is a valid step in a
+  proof.
+\item
+  Suppose the disjunction of statements \(P_1\) or \(P_2\) or \(\ldots\)
+  or \(P_n\) is already a valid step in a proof. Suppose that proofs of
+  \(Q\) are carried out from each of the case assumptions \(P_1\),
+  \(P_2\), \(\ldots\), \(P_n.\) Then \(Q\) can be concluded as a valid
+  step in the proof (proof by cases).
+\item
+  \(\forall X \, (X=X)\)
+\item
+  \(\forall X \, \forall Y \, (X=Y \Longleftrightarrow Y=X)\)
+\item
+  \(\forall X \, \forall Y \, \forall Z \, ( (X=Y) \land (Y=Z) ) \implies (X=Z)\)
+\item
+  If \(X=Y\) and \(P(X)\) is a statement about \(X\), then
+  \(P(X)=P(Y)\).
+\end{enumerate}
+
+\hypertarget{properties-of-an-axiomatic-system}{%
+\subsection{Properties of an Axiomatic
+System}\label{properties-of-an-axiomatic-system}}
+
+Axiomatic systems have properties the most essential of which is
+\textbf{consistency}. An axiomatic system is consistent provided any
+theorem which can be proven using the system can never logically
+contradict any of the axioms or previously proved theorems. An
+individual axiom is \textbf{independent} if it cannot be proven by use
+of the other axioms. An axiomatic system is independent provided each of
+its axioms is independent. An axiom set must also be \textbf{complete}.
+We must have enough axioms that every theorem that can possibly be
+stated using the terms and axioms of the system can be proven either
+true or false.
+
+\hypertarget{incidence-planes}{%
+\subsection{Incidence Planes}\label{incidence-planes}}
+
+There are many expressions used to describe \textbf{incidence} (for
+example, \textbf{a line passes through a point}, \textbf{a point lies on
+a line}, or \textbf{two lines intersect at a point}. However, the term
+\textbf{incidence} is preferred because it does not have the additional
+connotations that these other terms have.
+
+\hypertarget{axioms-and-definitions}{%
+\subsubsection{Axioms and Definitions}\label{axioms-and-definitions}}
+
+Let \textbf{point}, \textbf{line}, and \textbf{incidence} be undefined
+terms. Collectively the following three axioms are called the
+\textbf{Incidence Axioms}.
+
+\begin{definition}[]\protect\hypertarget{def-incidence-plane}{}\label{def-incidence-plane}
+
+An \textbf{incidence plane} consists of a set of points, and a set of
+lines, satisfying the axioms:
+
+\end{definition}
+
+\begin{itemize}
+\tightlist
+\item
+  (A1) For every two distinct points \(A\) and \(B\) there exists a
+  unique line \(l\) incident with \(A\) and \(B\), and is denoted by
+  \(l(A,B)\), or sometimes by \(\overleftrightarrow{AB}\).
+\item
+  (A2) For every line \(l\) there exist at least two distinct points
+  incident with \(l\).
+\item
+  (A3) There exist three distinct points with the property that no line
+  is incident with all three of them.
+\end{itemize}
+
+\begin{definition}[]\protect\hypertarget{def-collinear-concurrent}{}\label{def-collinear-concurrent}
+
+Three or more points (lines) are called \textbf{collinear}
+(\textbf{concurrent}) if there exists a line (point) incident with all
+of them.
+
+\end{definition}
+
+We use the terms \textbf{noncollinear} and \textbf{nonconcurrent} to
+mean not collinear and not concurrent, respectively. Lines \(l\) and
+\(m\) are called \textbf{equal}, denoted by \(l=m\), if every point
+incident with \(l\) is also incident with \(m\), and conversely.
+
+\begin{definition}[]\protect\hypertarget{def-parallel}{}\label{def-parallel}
+
+Lines \(l\) and \(m\) are called \textbf{parallel}, denoted by
+\(l\parallel m\), whenever \(l\neq m\) and they have no points in
+common.
+
+\end{definition}
+
+Here are some examples using logic rules. In the following, we denote
+\(P \vert l\) to mean point \(P\) is incidence with line \(l\).
+
+(A1) For every point \(P\) and for every point \(Q\) not equal to \(P\),
+there exists a unique line \(l\) incident with \(P\) and \(Q.\)
+
+\[\forall P\, \forall Q\, ((P\neq Q)\implies \exists ! \, l (P|l \land Q| l))\]
+
+The negation is:
+
+\[\exists P \, \exists Q\, \left[ P\neq Q \land ( (\exists l \, \exists m \, (l\neq m \land P|l \land Q|l)) \lor (\neg \, \exists l \, (P|l \land Q|l) ) ) \right]\]
+
+(A2) For every line \(l\), there exists at least two distinct points
+incident with \(l\).
+
+\[\forall l\, \exists P \, \exists Q \, (P\neq Q \land (P|l \land Q|l))\]
+
+The negation is:
+
+\[\forall l\, \exists P \, \exists Q \, (P=Q \lor ( \neg P|l \lor \neg Q|l))\]
+
+(A3) There exist three distinct points with the property that no line is
+incident with all three of them.
+
+\[\exists P\, \exists Q\, \exists R\, (P\neq Q \land P\neq R \land Q\neq R) \land \neg \, \exists l\, (P|l \land Q|l \land R|l)\]
+
+The negation is:
+
+\[\forall P\, \forall Q\, \forall R\, (P=Q \lor P= R \lor Q = R) \lor  \exists l\, (P|l \land Q|l \land R|l)\]
+
+\begin{theorem}[]\protect\hypertarget{thm-one-col}{}\label{thm-one-col}
+
+If two distinct lines are not parallel, then they have a unique point in
+common.
+
+\end{theorem}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1538}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3846}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4615}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Step
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Statement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Justification
+\end{minipage} \\
+\midrule()
+\endhead
+1 & \(l \neq m\) & hypothesis \\
+2 & \(l\) and \(m\) are not \(\parallel\) & hypothesis \\
+3 & there exists a point \(P\) that lies on \(l\) and \(m\) & negation
+of \(parallel\) \\
+4 & there exists a point \(Q\) incident with \(l\) and \(m\) with
+\(Q\neq P\) & RAA hypothesis \\
+5 & \(l = m\) & (A1) \\
+6 & \(\Leftrightarrow\) & Steps (1) and (5) \\
+7 & \(P\) is unique & RAA conclusion \\
+\bottomrule()
+\end{longtable}
+
+\begin{theorem}[]\protect\hypertarget{thm-two-col}{}\label{thm-two-col}
+
+There exist three distinct lines that are nonconcurrent.
+
+\end{theorem}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1538}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3846}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4615}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Step
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Statement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Justification
+\end{minipage} \\
+\midrule()
+\endhead
+1 & \(A,\) \(B,\) and \(C\) are distinct noncollinear points & Axiom
+3 \\
+2 & there exists a line \(l(AB)\) incident with \(A\) and \(B\) & Axiom
+1 \\
+3 & there exists a line \(l(BC)\) incident with \(B\) and \(C\) & Axiom
+1 \\
+4 & there exists a line \(l(AC)\) incident with \(A\) and \(C\) & Axiom
+1 \\
+5 & \(l(AB)=l(BC)\) & RAA Hypothesis \\
+6 & \(A,\) \(B,\) and \(C\) are collinear & Steps 2, 3, 5 \\
+7 & \(\rightarrow \leftarrow\) & Steps 1, 6 \\
+8 & \(l(AB)\neq l(BC)\) & RAA Conclusion \\
+9 & \(l(AB)=l(AC)\) & RAA Hypothesis \\
+10 & \(A,\) \(B,\) and \(C\) are collinear & Steps 2, 4, 9 \\
+11 & \(\rightarrow \leftarrow\) & Steps 1, 10 \\
+12 & \(l(AB)\neq l(AC)\) & RAA Conclusion \\
+13 & \(l(AC)=l(BC)\) & RAA Hypothesis \\
+14 & \(A,\) \(B,\) and \(C\) are collinear & Steps 3, 4, 13 \\
+15 & \(\rightarrow \leftarrow\) & Steps 1, 14 \\
+16 & \(l(AC)\neq l(BC)\) & RAA Conclusion \\
+17 & lines \(l(AB),\) \(l(BC),\) \(l(AC)\) are three distinct lines &
+Steps 8, 12, 16 \\
+18 & there exists a point \(X\) incident with all three lines \(l(AB),\)
+\(l(BC),\) \(l(AC)\) & RAA Hypothesis \\
+19 & one and only one must hold: \(X=A\) or \(X\neq A\) & Law of
+Excluded Middle \\
+20 & \(X=A\) & Case 1 \\
+21 & \(A\) is incident with all three lines \(l(AB),\) \(l(BC),\)
+\(l(AC)\) & Steps 18, 20 \\
+22 & \(A,\) \(B,\) \(C\) are collinear & Definition of Collinear \\
+23 & \(\rightarrow \leftarrow\) & Steps 1, 22 \\
+24 & \(X\neq A\) & Case 2 \\
+25 & lines \(l(AB)\) and \(l(AC)\) are not parallel & Definition of
+Parallel Lines \\
+26 & \(X=A\) & Theorem 1 \\
+27 & \(\rightarrow \leftarrow\) & Steps 24, 26 \\
+28 & there does not exist a point \(X\) incident with all three lines
+\(l(AB),\) \(l(BC),\) \(l(AC)\) & RAA Conclusion \\
+29 & lines \(l(AB),\) \(l(BC),\) \(l(AC)\) are nonconcurrent &
+Definition of nonconcurrent \\
+\bottomrule()
+\end{longtable}
+
+\begin{theorem}[]\protect\hypertarget{thm-five-col}{}\label{thm-five-col}
+
+For every point \(A,\) there is at least one line not passing through
+\(A.\)
+
+\end{theorem}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1538}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3846}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4615}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Step
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Statement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Justification
+\end{minipage} \\
+\midrule()
+\endhead
+1 & \(A\) is a point & Hypothesis \\
+2 & every line passes through \(A\) & RAA Hypothesis \\
+3 & there exists 3 noncollinear points \(E,\) \(D,\) \(F\) & Axiom 3 \\
+4 & there exists a line \(l(ED)\) incident with \(E\) and \(D\) & Axiom
+1 \\
+5 & there exists a line \(l(DF)\) incident with \(D\) and \(F\) & Axiom
+1 \\
+6 & one and only one must hold: \(A=D\) or \(A\neq D\) & Law of Excluded
+Middle \\
+7 & \(A\neq D\) & Case 1 \\
+8 & \(A\) and \(D\) are incident with \(l(ED)\) and \(l(DF)\) & Steps 2,
+4, 5 \\
+9 & \(l(ED)\)= \(l(DF)\) & Axiom 1 \\
+10 & \(F\) is incident with \(l(ED)\) & Definition of Equal Lines \\
+11 & \(E,\) \(D,\) and \(F\) are collinear & Definition of collinear \\
+12 & \(\rightarrow \leftarrow\) & Steps 3 and 11 \\
+13 & \(A=D\) & Case 2 \\
+14 & every line is incident with \(D\) & Steps 2, 13 \\
+15 & there exists a line \(l(EF)\) incident with \(E\) and \(F\) & Axiom
+1 \\
+16 & \(D\) is incident with \(l(EF)\) & Axiom 1 \\
+17 & \(E,\) \(D,\) and \(F\) are collinear & Definition of Collinear \\
+18 & \(\rightarrow \leftarrow\) & Steps 3, 17 \\
+19 & there exists a line not incident with \(A\) & RAA conclusion \\
+\bottomrule()
+\end{longtable}
+
+\hypertarget{basic-theorems}{%
+\subsection{Basic Theorems}\label{basic-theorems}}
+
+Some of the theorems below have a column proof in the appendix. For the
+theorems that do not have a column proof the reader is urge to provide
+one.
+
+\begin{theorem}[]\protect\hypertarget{thm-one}{}\label{thm-one}
+
+If two distinct lines are not parallel, then they have a unique point in
+common.
+
+\end{theorem}
+
+\begin{proof}
+
+Suppose \(l\) and \(m\) are distinct lines. Since \(l\) and \(m\) are
+not parallel, there exists a point incidence with both of them, say
+\(P.\) Let \(Q\) be a point incident with both of them. Assume
+\(P\neq Q.\) By axiom (A1), it follows that \(l=m,\) contrary to
+hypothesis. Hence, \(P=Q\) and so \(P\) is unique. \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-two}{}\label{thm-two}
+
+There exist three distinct lines that are nonconcurrent.
+
+\end{theorem}
+
+\begin{proof}
+
+By Axiom 3, there exists three distinct noncolinear points, say
+\(A, B, C.\) By Axiom 1, we have lines \(l(AB),\) \(l(BC),\) and
+\(l(AC).\) If any one of these lines is equal to another, then all three
+points are collinear. Hence, these three lines are distinct. Assume for
+a contradiction that there exists a point \(X\) incident with all three
+lines. If \(X,\) then \(A, B, C\) are collinear contrary to hypothesis.
+If \(X\neq A,\) then distinct lines \(l(AB)\) and \(l(AC)\) do not have
+a unique point in common, contrary to Theorem 1. Hence, \(X\) does not
+exists. Therefore, the lines \(l(AB),\) \(l(BC),\) and \(l(AC)\) are
+nonconcurrent. \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-three}{}\label{thm-three}
+
+Every point is incident with at least one line.
+
+\end{theorem}
+
+\begin{proof}
+
+Suppose that \(P\) is a point that no line is incidence with. By (A3),
+there exists three distinct noncolinear points, say \(A, B, C.\) Without
+loss of generality, say \(P\neq A,\) and so by (A1) we see that there
+exists a line incident with \(P,\) contrary to hypothesis. \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-four}{}\label{thm-four}
+
+Every line has at least one point not incident with it.
+
+\end{theorem}
+
+\begin{proof}
+
+Suppose there exists a line, say \(l,\) that is incident with every
+point. By (A3), there exists three distinct noncolinear points, say
+\(A, B, C,\) contrary to hypothesis. \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-five}{}\label{thm-five}
+
+Every point has at least one line not incident with it.
+
+\end{theorem}
+
+\begin{proof}
+
+Assume for a contradiction that \(A\) is a point that every line is
+incident with. By (A3), there exists three distinct noncolinear points,
+say \(E, D, F.\) By (A1), we then see that \(A\) is incident with the
+three lines \(l(ED),\) \(l(DF),\) and \(l(EF).\) If \(A=D,\) then
+\(E, D, F\) are incident with line \(l(EF).\) If \(A\neq D,\) then
+\(l(ED)=l(DF)=l(AD)\) by (A1). Hence, \(E, D, F\) are incident with line
+\(l(AD).\) This contradiction shows that there exists a line that is not
+incident with \(A.\) \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-six}{}\label{thm-six}
+
+Every point is incident with at least two distinct lines.
+
+\end{theorem}
+
+\begin{proof}
+
+Let \(P\) be a point. By Axiom 3, there exists three distinct
+noncolinear points, say \(A, B, C.\) Since \(A, B, C\) are noncollinear,
+it follows that \(l(AB),\) \(l(AC),\) and \(l(BC)\) are three distinct
+lines. Suppose that \(P\) is one of these points, \(A,\) \(B,\) or
+\(C.\) Without loss of generality, say \(A.\) By (A1), it follows that
+\(l(AB)\) and \(l(AC)\) are two distinct lines that are incident with
+\(P.\) Suppose that \(P,\) \(A, B, C\) are four distinct points. By
+(A1), there exists lines \(l(AP)\) incident with \(A\) and \(P,\)
+\(l(BP)\) incident with \(B\) and \(P,\) and there exists \(l(CP)\)
+incident with \(C\) and \(P.\) If \(l(AP)=l(BP)=l(CP),\) then
+\(A, B, C\) are collinear. Hence, there are at least two lines passing
+through \(P.\) \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-seven}{}\label{thm-seven}
+
+If \(C\) is incident with \(l(AB)\) and distinct from \(A\) and \(B,\)
+then \(l(CA)=l(BC)=l(AB).\)
+
+\end{theorem}
+
+\begin{proof}
+
+By (A1), it follows \(l(CA)=l(AB)\) since \(C\) and \(A\) are distinct
+and incident with \(l(AB).\) By (A1), it follows \(l(BC)=l(AB)\) since
+\(C\) and \(B\) are distinct and incident with \(l(AB).\) Hence
+\(l(CA)=l(BC)=l(AB).\) \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-eight}{}\label{thm-eight}
+
+If \(l(AB)=l(AC)\) and \(B\) and \(C\) are distinct, then
+\(l(AB)=l(BC).\)
+
+\end{theorem}
+
+\begin{proof}
+
+By (A1), it follows \(l(AB)=l(BC)\) since \(C\) and \(B\) are distinct
+and incident with \(l(AB).\) \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-nine}{}\label{thm-nine}
+
+If \(l\) is any line, then there exists lines \(m\) and \(n\) such that
+\(l,\) \(m,\) and \(n\) are distinct and both \(m\) and \(n\) have a
+point in common with \(l.\)
+
+\end{theorem}
+
+\begin{proof}
+
+Suppose that \(l\) is a line. By Theorem 4 , there exists a point \(P\)
+not incident with \(l.\) By (A2), there exists points \(A\) and \(B\)
+both incident with \(l.\) Then \(A\neq P\) and \(B\neq P,\) since \(A\)
+and \(B\) are incident with \(l\) and \(P\) is not incident with \(l.\)
+By (A1), there exists lines \(m:=l(AP)\) and \(n:=l(BP)\) and both of
+these lines have a point in common with \(l.\) Clearly, \(l,\) \(m,\)
+and \(n\) are distinct lines.\(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-ten}{}\label{thm-ten}
+
+If \(A\) is any point, then there exist points \(B\) and \(C\) such that
+\(A,\) \(B,\) and \(C\) are noncollinear.
+
+\end{theorem}
+
+\begin{proof}
+
+Let \(A\) be a point. By Theorem 5 , there exists a line not incident
+with \(A,\) call it \(l.\) By (A2), there exists two distinct points
+\(B\) and \(C\) incident with line \(l.\) Assume for a contradiction
+that \(A,\) \(B,\) and \(C\) are collinear to line \(m.\) By (A1),
+\(m=l\) and so \(A\) is incident with \(l.\) This contradiction show
+that \(A,\) \(B,\) and \(C\) can not be collinear. \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-eleven}{}\label{thm-eleven}
+
+If \(A\) and \(B\) are two distinct points, then there exists a point
+\(C\) such that \(A,\) \(B,\) and \(C\) are noncollinear.
+
+\end{theorem}
+
+\begin{proof}
+
+Let \(A\) and \(B\) be two distinct points. By (A1), there exists line
+\(l=l(AB),\) and by Theorem 4 there exists a points \(C\) not incident
+with \(l.\) Assume for a contradiction that \(A,\) \(B,\) and \(C\) are
+collinear to line \(m.\) By (A1), \(m=l\) and so \(C\) is incident with
+\(l,\) contrary to hypothesis. This contradiction show that \(A,\)
+\(B,\) and \(C\) can not be collinear. \(\square\)
+
+\end{proof}
+
+\hypertarget{parallelism}{%
+\subsection{Parallelism}\label{parallelism}}
+
+Consider the following statement:
+
+\begin{quote}
+In a plane, given a line and a point not on it, at most one line
+parallel to the given line can be drawn through the point.
+\end{quote}
+
+This statement is historical called \textbf{Playfair's axiom} (named
+after the Scottish mathematician John Playfair) and is an axiom that can
+be used instead of the fifth postulate of Euclid (the Parallel
+postulate) when working with Euclidean geometry.
+
+\begin{quote}
+In David Hilbert's book, \textbf{Foundations of Geometry} (1899), he
+provided a new set of axioms for Euclidean geometry using Playfair's
+axiom instead of Euclid's version.
+\end{quote}
+
+Here are three additional statements we will consider. These are not new
+axioms for incidence geometry. Rather they are additional statements
+that may or may not be satisfied by a particular model for incidence
+geometry.
+
+\begin{itemize}
+\tightlist
+\item
+  (\textbf{Elliptic Parallel Property}) For any line \(l\) and any point
+  \(P\) not incident with \(l,\) there exist no lines incident with
+  \(P\) that are parallel to \(l.\)
+\item
+  (\textbf{Euclidean Parallel Property}) For any line \(l\) and any
+  point \(P\) not incident with \(l,\) there exists exactly one line
+  incident with \(P\) that is parallel to \(l.\)
+\item
+  (\textbf{Hyperbolic Parallel Property}) For any line \(l\) and any
+  point \(P\) not incident with \(l,\) there exists more than one line
+  incident with \(P\) parallel to \(l.\)
+\end{itemize}
+
+Can any of these three statements be proven from the Incidence Axioms?
+If not, how would one show that and which one should we take as an
+additional axiom?
+
+Before we answer such questions let's consider three basic properties of
+parallelism, namely the reflexive, symmetric, and transitive properties.
+
+\begin{definition}[]\protect\hypertarget{def-parallel}{}\label{def-parallel}
+
+Let \(l\sim m\) mean ``line \(l\) is parallel to line \(m\) or equal to
+\(m\)''.
+
+\end{definition}
+
+\begin{proposition}[]\protect\hypertarget{prp-one}{}\label{prp-one}
+
+Parallelism is reflexive and symmetric. More precisely, the following
+hold:
+
+\begin{itemize}
+\tightlist
+\item
+  (\textbf{reflexive}) if \(l\) is a line, then \(l \parallel l\); and
+\item
+  (\textbf{symmetric}) if \(l\) and \(m\) are lines, then
+  \(l \parallel m\) implies \(m \parallel l.\)
+\end{itemize}
+
+\end{proposition}
+
+\begin{proposition}[Parallelism is
+Transitive]\protect\hypertarget{prp-two}{}\label{prp-two}
+
+If the Euclidean Parallel Property holds, then \(\sim\) is an
+equivalence relation.
+
+\end{proposition}
+
+\begin{proof}
+
+Assume that the Euclidean Parallel Property holds. Suppose \(l\sim m\)
+and \(m\sim n.\) Also suppose that \(l\sim n\) does not hold. Since
+\(\neg(l\sim n),\) we have \(l\neq n\) and by Theorem 1, there exists a
+point \(P\) incident with lines \(l\) and \(n.\) Notice that \(l=m\) and
+\(m=n\) can not happen since \(l\neq n.\) Suppose that \(l=m\) and
+\(m \parallel n.\) Then \(P\) lies on \(n, l,\) and \(m\) which can not
+occur because \(m \parallel n.\) Similarly, \(m=n\) and
+\(l \parallel m\) can not occur. The remaining case, of
+\(l \parallel m\) and \(m \parallel n\) can not occur either since the
+Euclidean Parallel Property holds. All cases considered, it follows that
+if \(l\sim m\) and \(m\sim n,\) then \(l\sim n\) must hold. Therefore,
+\(\sim\) is reflexive, symmetric, and transitive as needed.\(\square\)
+
+\end{proof}
+
+We will now see that none of these parallel properties can be proven
+from the Incidence Axioms. Moreover, you might have noticed that, at
+most one of them can hold at any given time.
+
+\hypertarget{models-of-finite-incidence-planes}{%
+\section{Models of Finite Incidence
+Planes}\label{models-of-finite-incidence-planes}}
+
+Any collection of points and lines which satisfies the Incident Axioms
+(A1), (A2), (A3) is called an \textbf{incidence geometry}. In this
+section we give several concrete examples (\textbf{models}) of incidence
+geometry.
+
+\hypertarget{three-point-geometry}{%
+\subsection{Three-Point Geometry}\label{three-point-geometry}}
+
+In Three-Point Geometry, we interpret a point to be one of the symbols
+\(A,\) \(B,\) or \(C\) and a line to consist of exactly two points.
+Explicitly,
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule()
+\(l_1\) & \(l_2\) & \(l_3\) \\
+\midrule()
+\endhead
+\(A\) & \(A\) & \(B\) \\
+\(B\) & \(C\) & \(C\) \\
+\bottomrule()
+\end{longtable}
+
+Notice the following hold: - Each point is incident with two lines. -
+There are no parallel lines, and so the Elliptic Parallel Property
+holds. \(\square\)
+
+Any collection of points and lines which satisfies the Incident Axioms
+is called an \textbf{incidence geometry}.
+
+Is incidence geometry consistent? To answer this question, let's
+hypothesize that incidence geometry is inconsistent. Then the statement:
+
+\begin{quote}
+if points \(A\) and \(B\) are distinct, then \(A\) and \(B\) are the
+same point
+\end{quote}
+
+could be proven. If such a proof existed in incidence geometry then it
+would hold in any model of it. In particular, a proof of such a
+statement would hold in Three-Point Geometry. However, this is
+impossible since there are exactly three distinct points. Therefore, we
+can conclude, that incidence geometry is consistent. This is an example
+of how a model can serve as evidence of the consistency of an axiomatic
+system.
+
+\hypertarget{four-point-geometry}{%
+\subsection{Four-Point Geometry}\label{four-point-geometry}}
+
+In Four-Point Geometry, we interpret the symbols \(A,\) \(B,\) \(C,\)
+and \(D\) to be points and there are precisely six lines each of which
+consists of only two distinct points as follows.
+
+\begin{longtable}[]{@{}llllll@{}}
+\toprule()
+\(l_1\) & \(l_2\) & \(l_3\) & \(l_4\) & \(l_5\) & \(l_6\) \\
+\midrule()
+\endhead
+\(A\) & \(A\) & \(A\) & \(B\) & \(B\) & \(C\) \\
+\(B\) & \(C\) & \(D\) & \(C\) & \(D\) & \(D\) \\
+\bottomrule()
+\end{longtable}
+
+Notice the following hold: - Each point is incident with three lines. -
+Each distinct line has exactly one line parallel to it and so the
+Euclidean Parallel Property holds. \(\square\)
+
+\hypertarget{five-point-geometry}{%
+\subsection{Five-Point Geometry}\label{five-point-geometry}}
+
+In Five-Point Geometry, we interpret the symbols \(A,\) \(B,\) \(C,\)
+\(D,\) and \(E\) to be points and there are precisely ten lines each of
+which consists of only two distinct points as follows.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\(l_1\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_2\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_3\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_4\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_5\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_6\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_7\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_8\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_9\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_{10}\)
+\end{minipage} \\
+\midrule()
+\endhead
+\(A\) & \(B\) & \(C\) & \(D\) & \(A\) & \(B\) & \(B\) & \(A\) & \(C\) &
+\(A\) \\
+\(B\) & \(C\) & \(D\) & \(E\) & \(C\) & \(D\) & \(E\) & \(D\) & \(E\) &
+\(E\) \\
+\bottomrule()
+\end{longtable}
+
+Notice the following hold: - Each line is incident with exactly two
+points. - Each point is incident with four lines. - Each distinct line
+has exactly three lines parallel to it. - The Hyperbolic Parallel
+Property holds. \(\square\)
+
+\textbf{Remark}. Notice that, in Three-Point Geometry the Elliptic
+Parallel Property is true, in Four-Point Geometry the Euclidean Parallel
+Property is true, and in Five-Point Geometry the Hyperbolic Parallel
+Property is true. Thus Three-Point, Four Point, and Five-Point
+geometries reveal that the three Parallel Properties are all independent
+from the Incidence Axioms.
+
+\hypertarget{fanos-geometry}{%
+\subsection{Fano's Geometry}\label{fanos-geometry}}
+
+The Italian mathematician Gino Fano developed the first finite geometry.
+He produced a finite three dimensional space with 15 points, 35 lines
+and 15 planes, in which each line had only three points on it. He did
+this while working on proving the independence of his set of axioms for
+his \(n\)-dimensional geometry. The planes in this space (now known as
+Fano planes) consist of seven points and seven lines.
+
+\begin{example}[]\protect\hypertarget{exm-ano-geometry}{}\label{exm-ano-geometry}
+
+The following interpretation, called Fano's Geometry, is a model for
+incidence geometry. Each point is one of the seven symbols \(A,\) \(B,\)
+\(C,\) \(D,\) \(E,\) \(F\) or \(G\) and a point \(P\) is incident with a
+line \(l\) means \(l\) consists only of the point \(P\) and two other
+distinct points. There are exactly seven lines where each line consists
+of exactly three points and shown.
+
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule()
+\(l_1\) & \(l_2\) & \(l_3\) & \(l_4\) & \(l_5\) & \(l_6\) & \(l_7\) \\
+\midrule()
+\endhead
+A & A & A & B & C & C & E \\
+B & G & E & G & G & F & B \\
+C & F & D & D & E & D & F \\
+\bottomrule()
+\end{longtable}
+
+The following statements are true in Fano's geometry: - the Elliptic
+Parallel Property holds, - each point is incident with exactly three
+lines, and - for every two distinct points there are exactly two lines
+that are not incident with these points. \(\square\)
+
+\end{example}
+
+\hypertarget{youngs-geometry}{%
+\subsection{Young's Geometry}\label{youngs-geometry}}
+
+The following interpretation, called Young's Geometry, is a model for
+incidence geometry. Each point is one of the nine symbols \(A,\) \(B,\)
+\(C,\) \(D,\) \(E,\) \(F,\) \(G,\) \(H,\) \(I\) and a point \(P\) is
+incident with a line \(l\) means \(l\) consists only of the point \(P\)
+and two other distinct points. There are exactly twelve lines where each
+line consists of exactly three points and shown.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\(l_1\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_2\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_3\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_4\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_5\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_6\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_7\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_8\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_9\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_{10}\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(l_{11}\)
+\end{minipage} \\
+\midrule()
+\endhead
+\(A\) & \(A\) & \(A\) & \(A\) & \(B\) & \(B\) & \(B\) & \(C\) & \(C\) &
+\(C\) & \(D\) \\
+\(B\) & \(D\) & \(E\) & \(F\) & \(D\) & \(E\) & \(F\) & \(D\) & \(E\) &
+\(F\) & \(E\) \\
+\(C\) & \(G\) & \(H\) & \(I\) & \(H\) & \(I\) & \(G\) & \(I\) & \(G\) &
+\(H\) & \(F\) \\
+\bottomrule()
+\end{longtable}
+
+The following statements are true in Young's geometry: - each point is
+incident with exactly four lines, - for every two distinct points there
+are exactly five lines that are not incident with these points, and -
+the Euclidean Parallel Property holds. \(\square\)
+
+\hypertarget{hand-shake-geometry}{%
+\subsection{Hand-Shake Geometry}\label{hand-shake-geometry}}
+
+\begin{definition}[]\protect\hypertarget{def-hand-shake}{}\label{def-hand-shake}
+
+A \textbf{hand-shake plane} is an incidence plane for which every line
+has exactly two points.
+
+\end{definition}
+
+In the three examples above we see that a three (four, five) point
+hand-shake geometry satisfies the Elliptic (Euclidean, Hyperbolic)
+Parallel Property.
+
+\begin{proposition}[]\protect\hypertarget{prp-three}{}\label{prp-three}
+
+A hand-shake plane with more than five points satisfies the Hyperbolic
+Parallel Property.
+
+\end{proposition}
+
+\begin{proof}
+
+Suppose that \(l\) is a line and \(P\) is a point not incident with
+\(l.\) Then there exists points \(A\) and \(B\) on line \(l\) that are
+not \(P,\) say \(l=\{A,B\}.\) Further, since there are least five
+points, there exists points \(Q\) and \(R\) that are not \(A,\) \(B,\)
+nor \(P.\) Then lines \(m=\{P,Q\}\) and \(n=\{P,R\}\) are lines parallel
+to \(l\) that are incident with \(P.\) \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-hand-shank-plane}{}\label{thm-hand-shank-plane}
+
+In a hand-shank plane with \(n\) points, there are exactly
+\(\frac{(n-1)n}{2}\) lines.
+
+\end{theorem}
+
+\begin{proof}
+
+The hand-shake incidence geometry with \(n\) points has
+
+\[1+2+\cdots + (n-2)+(n-1)= \frac{(n-1)n}{2}.\]
+
+To see this we notice that we can connect the first point to the other
+\((n-1)\) points. Disregarding this point, we connect the second point
+to \((n-2)\) different points, and so on. The last line to be considered
+is between the \((n-1)\)-th and the \(n\)-th point \(\square\)
+
+\end{proof}
+
+\hypertarget{straight-fan-geometry}{%
+\subsection{Straight-Fan Geometry}\label{straight-fan-geometry}}
+
+\begin{definition}[]\protect\hypertarget{def-straight-fan}{}\label{def-straight-fan}
+
+A \textbf{straight-fan plane} is an incidence plane will all but one
+point incident with exactly one line.
+
+\end{definition}
+
+\begin{definition}[]\protect\hypertarget{def-quadrilateral}{}\label{def-quadrilateral}
+
+Four distinct points, no three of which are incident, are said to be a
+\textbf{quadrangle}. Four distinct lines, no three of which are incident
+with a point, are said to be a \textbf{quadrilateral}.
+
+\end{definition}
+
+\begin{theorem}[]\protect\hypertarget{thm-straight-fan-quadrilateral}{}\label{thm-straight-fan-quadrilateral}
+
+An incident plane that satisfies the Elliptic Parallel Property is
+either a straight-fan plane or a quadrangle exists.
+
+\end{theorem}
+
+\begin{proof}
+
+We assume the Elliptic Parallel Property holds, but no quadrangle
+exists. Notice that the three-point incidence geometry is a
+straight-fan. We now assume at least four points exist, and so take any
+four points of the given incidence plane. Since no quadrangle exists, we
+can assume that the three points \(A,\) \(B,\) \(C\) are incident with
+line \(l.\) By Theorem 4, there exists a point \(P\) not on the line
+\(l.\)
+
+Assume towards a contradiction that two distinct points \(Q\) both are
+not incident with \(l.\) The lines \(l(PQ)\) and \(l\) are incident,
+either in one of the three points \(A,\) \(B,\) \(C,\) or still another
+point. WLOG assume the intersection point \(A'\) is different from both
+\(B\) and \(C.\) Because no quadrangle exists, of the four points \(B,\)
+\(C,\) \(P,\) \(Q\) at least three are incident with a line. This could
+be points \(P,\) \(Q,\) \(B\) or \(P,\) \(Q,\) \(C.\) Both cases are
+impossible, since the lines \(l(PQ)\) and \(l =l(BC)\) are incident only
+in point \(A'\) which is not \(B\) nor \(C.\) Therefore, there exists
+exactly one point \(P\) not incident with line \(l,\) as desired.
+\(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-straight-fan-plane}{}\label{thm-straight-fan-plane}
+
+Every straight-fan plane satisfies the Elliptic Parallel Property.
+
+\end{theorem}
+
+\begin{proof}
+
+In a straight-fan plane, all points except one are incident with one
+line, call it line \(l.\) Clearly, every line must be incident with this
+line, and so there are no parallel lines. It then follows that the
+Elliptic Parallel Property must hold. \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-straight-fan-points-lines}{}\label{thm-straight-fan-points-lines}
+
+In a straight-fan plane with \(n\) points, there are exactly \(n\)
+lines.
+
+\end{theorem}
+
+\begin{proof}
+
+Notice there is one line \(l\) with \(n-1\) points, and only one point
+\(P\) not incident with \(l.\) There are \(n-1\) lines with two points
+each of which connects \(P\) to a different point on the line \(l.\)
+\(\square\)
+
+\end{proof}
+
+\hypertarget{introduction-to-affine-planes}{%
+\section{Introduction to Affine
+Planes}\label{introduction-to-affine-planes}}
+
+Leonhard Euler, in 1748, introduced the term \textbf{affine} in his
+(extremely) influential book \emph{Introductio in analysin infinitorum}
+(volume 2, chapter XVIII).
+
+\hypertarget{definitions-and-propositions}{%
+\subsection{Definitions and
+Propositions}\label{definitions-and-propositions}}
+
+We will now switch out Incidence Axiom (A2) and replace it with the
+Euclidean Parallel Property. By the way, sometimes this statement is
+called Playfair's Axiom, hence the abbreviation (PA).
+
+\begin{definition}[]\protect\hypertarget{def-affine-plane}{}\label{def-affine-plane}
+
+An \textbf{affine plane} consists of a set of points, and a set of
+lines, satisfying the axioms:
+
+\end{definition}
+
+\begin{itemize}
+\tightlist
+\item
+  (A1) Every two distinct points are incident with a unique line.
+\item
+  (PA) (Euclidean Parallel Property) If a point \(P\) is not incident
+  with a line \(l,\) there exists exactly one line \(m\) incident with
+  \(P\) that is parallel to \(l.\)
+\item
+  (A3) There exists three distinct points that are not incident with the
+  same line.
+\end{itemize}
+
+Surprise! In an affine plane, we get the Incidence Axiom (A2) back (for
+free).
+
+\begin{proposition}[Affine
+Plane]\protect\hypertarget{prp-twodispointaff}{}\label{prp-twodispointaff}
+
+In an affine plane, the Euclidean Parallel Property and the Incidence
+Axioms hold.
+
+\end{proposition}
+
+\begin{proof}
+
+It remains to prove (A2) that there are at least two distinct points on
+every line. To do so, suppose that \(l\) is a line. By (A3) there exists
+three distinct points \(A,\) \(B,\) and \(C\) that are not incident with
+the same line. By (A1), there exists lines \(l(AB),\) \(l(AC),\) and
+\(l(BC).\) If \(l\) is one of these lines, then \(l\) is incident with
+two distinct points. Hence we assume that \(l\) is not any of these
+lines. If \(l\) is incident with any two of these three points, then we
+are finished.
+
+Case 1: Assume that \(l\) is incident with at most one of these points,
+say point \(A.\) Since \(A,\) \(B,\) \(C\) are noncollinear, \(B\) is
+not incident with \(l(AC).\) By (PA) there exists unique line \(m\)
+incident with \(B\) that is parallel to \(l(AC).\) Case 1.1: Suppose
+\(l \parallel m\) and \(l \parallel l(BC).\) Since both \(m\) and
+\(l(BC)\) pass through \(B\) and are parallel to \(l,\) (PA) yields
+\(m=l(BC).\) So that \(C\) lies on \(m.\) However, \(m \parallel l(AC)\)
+shows that this case can not happen. Case 1.2: Suppose
+\(l\not\parallel m.\) So \(l\) and \(m\) have a point in common, say
+\(D.\) If \(A=D,\) then by (A1), \(m=l(AB).\) However, since
+\(m \parallel l(AC)\) we can not have \(m=l(AB).\) Thus \(A\neq D,\) and
+so \(l\) has two distinct points on it. Case 1.3: Suppose
+\(l\not\parallel l(BC).\) So \(l\) and \(l(BC)\) have a point in common,
+say \(D.\) Notice that if \(A=D,\) then \(A, B, C\) are collinear to
+\(l(BC).\) Thus \(A\neq D,\) and so \(l\) has two distinct points on it.
+We conclude case 1 with: line \(l\) has two distinct points on it. (See
+\eqref{fig:twopoints})
+
+Case 2: Assume that \(A,\) \(B,\) and \(C\) are not incident with \(l.\)
+Case 2.1: Suppose that \(l \parallel l(BC).\) If \(l allell(AB),\) then
+\(l(BC)=l(AB)\) by (P4). However, this case can not happen because
+\(A,\) \(B,\) and \(C\) are noncollinear. Hence \(l(AB)\) and \(l\) are
+incident with a point, say \(P.\) If \(l allell(AC),\) then \(l(BC)\)
+and \(l(AC)\) by (P4). However, this case can not happen because \(A,\)
+\(B,\) and \(C\) are noncollinear. Hence \(l(AC)\) and \(l\) are
+incident with a point, say \(Q.\) Notice that \(P\neq A\) and
+\(Q\neq A\) since \(P, Q\) are incident with \(l\) and \(A\) is not.
+Hence, if \(P=Q,\) then \(l(AC)=l(AB)\) contrary to the assumption that
+\(A,\) \(B,\) and \(C\) are noncollinear. Whence \(l\) is incident with
+distinct points \(P\) and \(Q.\) The case 2.2 for \(l \parallel l(AC)\)
+and case 2.3 for \(l \parallel l(AB)\) are entirely similar. Case 2.4:
+Now suppose that \(l\) is not parallel to any of these lines. Then
+\(l(AB)\) and \(l\) are incident at \(P\) and \(l(AC)\) are incident at
+\(Q.\) As we found above \(P\neq Q,\) and so again \(l\) is incident
+with distinct points \(P\) and \(Q.\) \(\square\)
+
+\end{proof}
+
+\textbf{Remark}. By \textbf{Affine Plane}, it follows that Theorem 1
+through Theorem 11 are theorems in any affine plane.
+
+\begin{proposition}[]\protect\hypertarget{prp-five}{}\label{prp-five}
+
+In an affine plane, if a line is incident with, and distinct from, one
+of two distinct parallel lines, then it is also incident with the other.
+
+\end{proposition}
+
+\begin{proof}
+
+Let \(l, m\) and \(n\) be three distinct lines. Assume that
+\(l \parallel m\) and line \(n\) is incident with \(m.\) By Theorem 1,
+there is only one point \(P\) incident with both \(n\) and \(m.\) If
+\(l \parallel n,\) then \(n=m\) by (P4). Hence \(l\not \parallel n\) and
+so \(n\) must meet line \(l.\) \(\square\)
+
+\end{proof}
+
+\begin{proposition}[]\protect\hypertarget{prp-five}{}\label{prp-five}
+
+\label{parequiv} In an affine plane, parallelism is an equivalence
+relation.
+
+\end{proposition}
+
+\begin{proof}
+
+By \textbf{Parallelism is Transitive} and
+\eqref{twodispointaff}.\(\square\)
+
+\end{proof}
+
+\begin{definition}[]\protect\hypertarget{def-pencil}{}\label{def-pencil}
+
+A \textbf{pencil} is a set consisting of a line, together with all lines
+parallel to it, that is, an equivalence class of parallel lines under
+parallelism.
+
+\end{definition}
+
+\begin{proposition}[]\protect\hypertarget{prp-five}{}\label{prp-five}
+
+\label{threepencils} In an affine plane, there are at least three
+pencils of parallel lines.
+
+\end{proposition}
+
+\begin{proof}
+
+There exists three noncollinear points, say \(A,\) \(B,\) and \(C.\) As
+in Theorem 2 , \(l(AB),\) \(l(AC),\) and \(l(BC)\) are three distinct
+nonconcurrent lines. By (PA), any line \(l\) parallel to \(l(AB)\) must
+intersect \(l(AC),\) and \(l(BC)\) because \(A,\) \(B,\) and \(C\) are
+noncollinear. Hence \(l\) is only in the pencil corresponding to
+\(l(AB).\) Similarly for the other cases. Therefore, there are at least
+three distinct pencils of parallel lines. \(\square\)
+
+\end{proof}
+
+\begin{proposition}[]\protect\hypertarget{prp-bijection}{}\label{prp-bijection}
+
+In an affine plane, all lines have the same cardinality.
+
+\end{proposition}
+
+\begin{proof}
+
+Assume \(l\neq m\) since otherwise the result is obvious. By Theorem 1 ,
+it follows that either \(l\) and \(m\) have a unique point \(O\) in
+common (case 1) or that \(l\) and \(m\) are parallel (case 2). (See
+\eqref{fig:bijection})
+
+Case 1: There exists points \(A\) and \(A'\) on \(l\) and \(m,\)
+respectively, such that \(A\neq O\) and \(A'\neq O\); and there exists a
+line \(l(AA').\) Let \(X\) be a point on \(l\) different from \(A\) and
+\(O.\) There exists a unique line \(k\) through \(X\) and parallel to
+\(l(AA').\) Suppose that \(k \parallel m.\) Then by (P4), \(m=l(AA')\)
+since both lines \(m\) and \(l(AA')\) pass through \(A'\) and are
+parallel to \(k.\) Hence \(k \parallel m\) can not happen. By Theorem 1,
+it follows that \(k\) intersects \(m\) at a unique point, which we will
+call \(X'.\) Thus it is easy to see that the function \(f:l\to m\)
+prescribed by \(f(O)=O,\) \(f(A)=A',\) and \(f(X)=X'\) is well-defined.
+
+To show \(f\) is a surjective assume point \(C\) lies on \(m.\) If
+\(C=O\) or \(C=A',\) then \(f(O)=C\) or \(f(A)=C\) as needed,
+respectively. Assume \(C\) is distinct from \(O\) and \(A'.\) By (P4),
+there exists a line \(k'\) passing through \(C\) and parallel to
+\(l(AA').\) Suppose that \(k' \parallel l.\) Then \(l\) and \(l(AA')\)
+pass through \(A\) and are parallel to \(k'\) so by (P4), \(l=l(AA'),\)
+which can not happen. Hence it follows that \(k'\) can not be parallel
+to \(l,\) and so \(k'\) intersects \(l\) at a single point \(C'.\) Then
+it follows \(f(C')=C,\) and so \(f\) is surjective.
+
+Now assume there exists points \(B\) and \(C\) on \(l\) such that
+\(f(B)=f(C)=D.\) Since both \(l(BB')\) and \(l(CC')\) are parallel to
+\(l(AA')\) and both contain \(D,\) we have \(l(BB')=l(CC'):=k''\) by
+(P4). By Theorem 1, \(k''\) and \(l\) have a unique point in common, so
+\(B=C\) as needed.\\
+Therefore, \(f\) is one-to-one.
+
+Case 2: Assume \(l \parallel m.\) Let \(O\) lie on \(l\) and \(O'\) lie
+on \(m.\) It follows that \(l\) and \(l(OO')\) are incident at \(O,\) so
+by case 1 there is a bijection \(f\) from \(l\) to \(l(OO').\) Similarly
+there is a bijection \(g\) between \(l(OO')\) and \(m.\) Therefore
+\(g\circ f\) is a bijection of \(l\) and \(m.\) \(\square\)
+
+\end{proof}
+
+\hypertarget{finite-affine-planes}{%
+\subsection{Finite Affine Planes}\label{finite-affine-planes}}
+
+A \textbf{finite affine plane} is an affine plane with a finite number
+of points. A finite affine plane with \(n^2\) points is said to have
+\textbf{order} \(n.\)
+
+\begin{proposition}[]\protect\hypertarget{prp-five}{}\label{prp-five}
+
+In a finite affine plane, there exists an integer \(n\geq 2\) such that
+
+\begin{itemize}
+\tightlist
+\item
+  the total number of points is exactly \(n^2,\)
+\item
+  every point is incident with exactly \(n+1\) lines,
+\item
+  every pencil contains exactly \(n\) lines,
+\item
+  there are exactly \(n^2+n\) lines, and
+\item
+  there are exactly \(n+1\) pencils of parallel lines.
+\end{itemize}
+
+\end{proposition}
+
+\begin{proof}
+
+\eqref{fapone}: There is at least one line, and by \eqref{Bijection},
+there are \(n\) points on it, say \(l=\{A_1, \dots, A_n\}.\) There
+exists a point \(B\) not on \(l\) and consider \(l(A_1B)=m_1.\) For
+\(i=2, \ldots, ,n\) we use the Euclidean Parallel Property to define
+\(m_i\) to be the unique line through \(A_i\) parallel to \(m_1.\) Each
+of these lines \(m_1,\ldots, , m_n\) has \(n\) points, there are \(n\)
+of these lines, and no pair of lines has a point in common. Therefore,
+the number of points in \(\mathcal{P}\) is at least \(n^2.\) If \(P\) is
+any point in \(\mathcal{P},\) then either \(P\) is on \(m_1\) or there
+is a line \(k\) through \(P\) parallel to \(m_1.\) In the latter case
+\(k\) must intersect \(l\) at one of the points \(A_2, \ldots, A_n,\)
+because if not then \(l \parallel k,\) \(m_1 \parallel k,\) and both of
+them passes through \(A_1\) means \(l=m_1.\) Therefore, we have
+\(k=m_i\) for some \(i.\) Thus every point in \(\mathcal{P}\) lies on
+one of the lines \(m_i,\) and in fact \(\mathcal{P}\) has exactly
+\(n^2\) points.
+
+\eqref{faptwo}: Suppose that \(B\) is an arbitrary point, and
+\(l=\{A_1,\ldots, A_n\}\) is a line not containing \(B.\) By (A1) and
+Theorem 1, the lines \(l_i=l(BA_i)\) (for \(i=1,\ldots,n)\) and the line
+\(l_{n+1},\) the line through \(B\) parallel to \(l\) (by (PA)), are all
+distinct. Further, any line through \(B\) intersects \(l\) (and
+therefore is one of the \(l_i\)) or is parallel to \(l\) (and therefore
+is \(l_{n+1}\)). (See \eqref{fig:pencil})
+
+\eqref{fapthree}: Suppose that \(l\) is any line, \(C_1\) is a point on
+\(l,\) and \(C_2\) is a point not on \(l.\) Then the points of the line
+\(l(C_1C_2)\) can be written as \(C_1, \ldots, C_n.\) For
+\(i=2, \ldots, n,\) let \(l_i\) be the line through \(C_i\) parallel to
+\(l,\) as shown in \eqref{fig:pencil}. These \(n-1\) lines are all
+different, since the points \(C_2, \dots, C_n\) are distinct. If \(k\)
+is any line parallel to \(l,\) then \(k\) must intersect \(l(C_1C_2),\)
+since \(l\) is the only line containing \(C_1\) which is parallel to
+\(k.\) Therefore \(k\cap l(C_1C_2)=C_i\) for some \(i,\) so \(k=l.\)
+Consequently the lines \(l_2,\ldots, l_n\) are the only lines parallel
+to \(l.\) (See \eqref{fig:pencil})
+
+\eqref{fapfour}: Finally, suppose that \(B\) is any point, and
+\(l_1,\ldots, l_{n+1}\) are the \(n+1\) lines containing \(B.\) Each of
+these lines is in a pencil consisting of \(n\) lines, so the lines
+through \(B,\) together with the lines parallel through them, account
+for \(n(n+1)\) distinct lines. For any line \(m,\) either \(B\) lies on
+\(m\) (in which case \(m\) has been counted) or there is a line
+containing \(B\) and parallel to \(m\) (in which case \(m\) has also
+been counted). Therefore there are \(n(n+1)\) lines in \(\mathcal{L}.\)
+
+\eqref{fapfive}: Since each of the \(n(n+1)\) lines is in one and only
+one pencil, and each pencil contains \(n\) lines, there are \(n+1\)
+pencils. \(\square\)
+
+\end{proof}
+
+\hypertarget{introduction-to-projective-planes}{%
+\section{Introduction to Projective
+Planes}\label{introduction-to-projective-planes}}
+
+Now it's our turn in investigate the Elliptic Parallel Property more.
+
+\hypertarget{definitions-and-propositions-1}{%
+\subsubsection{Definitions and
+Propositions}\label{definitions-and-propositions-1}}
+
+\begin{definition}[]\protect\hypertarget{def-projective-plane}{}\label{def-projective-plane}
+
+A \textbf{projective plane} consists of a set of points, and a set of
+lines, satisfying the axioms:
+
+\begin{itemize}
+\tightlist
+\item
+  (P1) Every two distinct points (lines) are incident with a unique line
+  (point).
+\item
+  (P2) There exists four distinct points no three of which are
+  collinear.
+\end{itemize}
+
+\end{definition}
+
+\begin{proposition}[]\protect\hypertarget{prp-twodispointpro}{}\label{prp-twodispointpro}
+
+In a projective plane, the Elliptic Parallel Property and the Incidence
+Axioms hold.
+
+\end{proposition}
+
+\begin{proof}
+
+To prove that the Elliptic Parallel Property holds assume that \(l\) is
+a line and \(P\) is a point not incident with \(l.\) Suppose that \(m\)
+is a line parallel to \(l\) that is incident with \(P.\) If \(l=m,\)
+then \(P\) is on \(l\) contary to hypothesis. Hence \(l\neq m\) and then
+by (P1), \(l\) and \(m\) have point in common. Hence \(m\) does not
+exist and so the Elliptic Parallel Property holds.
+
+By (P1) every two distinct points determines a unique line, and so (A1)
+holds.
+
+By (P2) there exists four distinct points, say \(A,\) \(B,\) \(C,\) and
+\(D,\) no three of which are collinear. In particular, \(A,\) \(B,\) are
+\(C\) noncollinear, and so (A3) holds.
+
+To prove that (A2) holds, assume that \(l\) is a line. By (P2), there
+exists four distinct points \(A,\) \(B,\) \(C,\) and \(D,\) no three of
+which are collinear. By (P1), there exists a line incident with \(A\)
+and \(B,\) say \(l(AB).\) By (P1), there exists a line incident with
+\(A\) and \(C,\) say \(l(AC).\) If \(l=l(AB)\) or \(l=l(AC),\) then
+\(l\) is incident with two distinct point as needed. Assume that
+\(\neq l(AB)\) and \(l\neq l(AC).\) By (P1), there exists points
+\(E, F\) incident with \(l.\) If \(E=F,\) then \(l(AB)=l(AC)\) by (P1),
+which can not happen. Whence \(E\neq F\) and so (A2) holds. \(\square\)
+
+\end{proof}
+
+\textbf{Remark}. By (Proposition~\ref{prp-twodispointpro}), it follows
+that Theorem 1 through Theorem 11 are propositions in any projective
+plane.
+
+\begin{proposition}[]\protect\hypertarget{prp-threecon}{}\label{prp-threecon}
+
+In a projective plane, there exist four distinct lines no three of which
+are concurrent.
+
+\end{proposition}
+
+\begin{proof}
+
+By (P2) there exists four distinct points, \(A,\) \(B,\) \(C,\) and
+\(D\) no three of which are collinear.\\
+By (P1) there exists lines \(l(AB),\) \(l(BC),\) \(l(CD),\) and
+\(l(DA).\) Assume that three of them are concurrent, WLOG, say
+\(l(AB),\) \(l(AD),\) and \(l(CD).\) By definition of concurrent and by
+(P1), there exists a unique point in common to these lines, say \(E.\)
+Now \(A\) is incident \(l(AB),\) \(l(AD)\) and so by Theorem 1 ,
+\(E=A.\) Similarly, \(D\) is incident \(l(AD),\) \(l(CD)\) and so by
+Theorem 1 , \(E=D.\) Now since \(A=D\) is contrary to hypothesis, we see
+that no three of these lines can be concurrent. \(\square\)
+
+\end{proof}
+
+\begin{proposition}[]\protect\hypertarget{prp-threepoints}{}\label{prp-threepoints}
+
+In a projective plane, every line is incident with at least three
+points.
+
+\end{proposition}
+
+\begin{proof}
+
+Suppose there exists a line \(l\) incident with only two points, say
+\(l=\{P,Q\}.\) By \eqref{threecon}, there exists four distinct points
+\(A,\) \(B,\) \(C,\) and \(D\) no three of which are collinear and there
+exists four distinct lines \(l(AB),\) \(l(BC),\) \(l(CD),\) and
+\(l(DA)\) no three of which are concurrent. By (P1) each of these four
+lines are incident with \(l\) and this must occur at \(P\) or \(Q\) by
+hypothesis. Since no three of these lines are concurrent, two of these
+lines, say \(l(AB)\) and \(l(CD)\) are incident with \(l\) at \(P\) and
+two of these lines, say \(l(BC)\) and \(l(DA)\) are incident with \(l\)
+at \(Q.\) By (P1), there exists a line \(l(AC)\) and is incident with
+\(l.\) If \(l(AC)\) is incident with \(l\) at \(P,\) then \(A,\) \(B,\)
+and \(C\) are collinear because \(l(AC)=l(AB)\) by (P1). If \(l(AC)\) is
+incident with \(l\) at \(Q,\) then \(A,\) \(B,\) and \(C\) are collinear
+because \(l(AC)=l(AB)\) by (P1). Whence our hypothesis of only two
+points on \(l\) is a contradiction and so the result follows by
+\eqref{twodispointpro}. \(\square\)
+
+\end{proof}
+
+\begin{example}[]\protect\hypertarget{exm-fanoplane}{}\label{exm-fanoplane}
+
+~
+
+\begin{itemize}
+\tightlist
+\item
+  There are exactly seven lines where each line consists of exactly
+  three points.
+\item
+  The Elliptic Parallel Property holds.
+\item
+  Each point is incident with exactly three lines.
+\item
+  For every two distinct points there are exactly two lines that are not
+  incident with these points.
+\end{itemize}
+
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule()
+\(l_1\) & \(l_2\) & \(l_3\) & \(l_4\) & \(l_5\) & \(l_6\) & \(l_7\) \\
+\midrule()
+\endhead
+A & A & A & B & B & C & C \\
+B & D & F & D & E & D & E \\
+C & E & G & F & G & G & F \\
+\bottomrule()
+\end{longtable}
+
+\end{example}
+
+\begin{theorem}[]\protect\hypertarget{thm-neitherone}{}\label{thm-neitherone}
+
+In a projective plane, for any two distinct lines there exist a point
+not incident with either of them.
+
+\end{theorem}
+
+\begin{proof}
+
+Assume on the contrary that every point is incident with two distinct
+lines \(l\) and \(m.\) There exists four distinct points \(A,\) \(B,\)
+\(C,\) and \(D\) no three of which are collinear. Now since any three of
+these points are not incident with the same line but all points are
+incident with either \(m\) or \(n,\) it follows that two of these
+points, say \(A\) and \(B\) are incident with \(l\) and the others are
+incident with \(m.\) By (P1), lines \(l(AC)\) and \(l(BD)\) are incident
+with a unique point, say \(X.\)
+
+Suppose \(X\) is incident with \(l.\) Since \(l\) is incident with \(A\)
+and \(B,\) \(l=l(AB).\) Thus \(X\) is incident with \(l(AB).\) Since
+\(A,\) \(B,\) and \(C\) are noncollinear, \(l(AB)\neq l(AC)\) and thus,
+since \(X\) is incident with \(l(AC),\) \(X\) must be the unique point
+incident with lines \(l(AB)\) and \(l(AC).\) But \(A\) is also incident
+with both these lines. Thus \(X=A.\) However, this is impossible since
+\(X\) is incident with the line \(l(BD)\) and \(A,\) \(B,\) and \(D\)
+are noncollinear. Hence \(X\) is not incident with \(l.\) The case for
+\(X\) is not incident with \(m\) is similar. \(\square\)
+
+\end{proof}
+
+\begin{proposition}[]\protect\hypertarget{prp-probijection}{}\label{prp-probijection}
+
+In a projective plane, all lines have the same cardinality.
+
+\end{proposition}
+
+\begin{proof}
+
+Suppose that \(l\) and \(m\) are lines. By
+(Theorem~\ref{thm-neitherone}), there is a point \(O\) not incident with
+either line.
+
+For any point \(X\) incident with \(l\) prescribe a point \(X^*\)
+incident with \(m\) using that \(O\neq X\) and \(l(OX)\) is incident
+with a unique point \(X^*\) on \(m\) because \(l(OX)\neq m.\) Similarly,
+for any point \(Y\) incident with \(m\) prescribe a point \(Y^*\)
+incident with \(l\) using that \(O\neq Y\) and \(l(OY)\) is incident
+with a unique point \(Y^*\) on \(l\) because \(l(OY)\neq l.\)
+
+Suppose that \(X\) is incident with \(l,\) that \(X^*\) is incident with
+\(m,\) and that \(X^{**}\) is incident with \(l\) prescribed above,
+respectively. It remains to show that \(X=X^{**}.\) If \(X\neq X^{**},\)
+then \(l(OX)=l(XX^{**})=l(OX^{**})=l\) contrary to the hypothesis that
+\(O\) is not incident with \(l.\) \(\square\)
+
+\end{proof}
+
+\begin{theorem}[]\protect\hypertarget{thm-biptln}{}\label{thm-biptln}
+
+In a projective plane, if \(l\) is any line and \(P\) is any point, then
+there is a bijection between the points incident with \(l\) and the
+lines incident with \(P.\)
+
+\end{theorem}
+
+\begin{proof}
+
+Suppose that \(P\) is a point and \(l\) is a line. For case one, assume
+\(P\) is not incident with \(l.\) In the proof of \eqref{probijection},
+a bijection between the points incident with \(l\) and lines incident
+with \(P\) is proven to exist.
+
+For a second case, assume that \(P\) is incident with \(l.\) By
+\eqref{threecon}, there exists a line \(m\) such that \(P\) is not
+incident with \(m.\) By case one, there is a bijection between the lines
+incident with \(P\) and the points of \(m.\)\\
+By \eqref{probijection}, there is a bijection between the points of
+\(m\) and the points of \(l.\) The composition of these bijections is
+the desired one. \(\square\)
+
+\end{proof}
+
+\hypertarget{finite-projective-planes}{%
+\subsubsection{Finite Projective
+Planes}\label{finite-projective-planes}}
+
+A \textbf{finite projective plane} is a projective plane with a finite
+number of points. A finite projective plane with \(n^2+n+1\) points is
+said to have \textbf{order} \(n.\)
+
+\begin{proposition}[]\protect\hypertarget{prp-fpp}{}\label{prp-fpp}
+
+In a finite projective plane, there exists an integer \(n\geq 2\) such
+that
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  every point (line) is incident with exactly \(n+1\) lines (points),
+  and
+\item
+  there are exactly \(n^2+n+1\) points (lines).
+\end{enumerate}
+
+\end{proposition}
+
+\begin{proof}
+
+By (Theorem~\ref{thm-biptln}), all lines have the same number of points,
+call this number \(n+1.\)
+
+(1): Let \(P\) be a point. By Theorem 5 , there exists aline \(l\) not
+incident with \(P.\) Let \(Q_1, \ldots, Q_{n+1}\) be the points incident
+with \(l.\) If \(l(PQ_1)\) and \(i\neq j,\) then \(P, Q_i, Q_j\) are
+distinct. So we have \(n+1\) lines incited with \(P,\) and so a
+contradiction. The lines \(l(PQ_1), \ldots, l(PQ_{n+1)}\) are distinct.
+So we have \(n+1\) lines incident with \(P.\) Now suppose that \(m\) is
+any line indent with \(P.\) Then \(m\) must be incident with \(l,\) say
+at \(Q_i.\) Then \(P\) and \(Q_i\) both are incident with \(m\) and
+\(l(PQ_1).\) This show that there are exactly \(n+1\) lines through
+\(P.\)
+
+(2): Let \(P\) be a point. By \eqref{fppone}, there are \(n+1\) lines
+incident with \(P.\) Since any two points are incident with a unique
+line, every point except \(P\) is incident with exactly one of these
+lines. By \eqref{fppone}, each of these lines is incident with \(n\)
+points distinct from \(P.\) Thus the total number of points is
+\((n+1)n+1\) as needed. \(\square\)
+
+\end{proof}
+
+\hypertarget{affine-to-projective}{%
+\subsection{Affine to Projective}\label{affine-to-projective}}
+
+Suppose that \((\mathcal{P},\mathcal{L})\) is an affine plane. For each
+pencil \(\phi\) of parallel lines, prescribe a symbol \(X_\phi.\) The
+symbols \(X_\phi\) are called \textbf{points at infinity}. Let \[
+\mathcal{P}'
+=\mathcal{P}\cup 
+\{X_\phi \mid \phi \text{ is a pencil of parallel lines in $\mathcal{L}$}\}. 
+\] For each \(l\in \mathcal{L},\) prescribe \(l'=l\cup \{X_\phi\},\)
+where \(\phi\) is the unique pencil containing \(l.\) Let \[
+l_{\infty}=\{X_{\phi} \mid \phi \text{ is a pencil of a parallel lines in $\mathcal{L}$} \}.
+\] Finally, prescribe
+\(\mathcal{L}'=\{l' \mid l \in \mathcal{L}\}\cup \{l_{\infty}\}.\)
+
+\begin{theorem}[]\protect\hypertarget{thm-}{}\label{thm-}
+
+If \((\mathcal{P},\mathcal{L})\) is an affine plane, then
+\((\mathcal{P}',\mathcal{L}')\) is a projective plane.
+
+\end{theorem}
+
+\begin{proof}
+
+(P1): Let \(P\) and \(Q\) be two disinfect points in \(\mathcal{P}'.\)
+If \(P, Q\in \mathcal{P},\) then there is unique (affine) line \(l\)
+incident with \(P\) and \(Q,\) therefore the line \(l'\) is the unique
+projective line incident with them. If \(P\in \mathcal{P}\) and
+\(Q=X_{\phi},\) then \(P\) is incident with a unique affine line \(l\)
+in pencil \(\phi,\) and so the unique projective line incident with
+\(P\) and \(Q\) is \(l'.\) The unique line incident with two points
+\(X_\phi\) and \(X_\theta\) is \(l_\infty.\)
+
+(P1): Notice that lines of the form \(l'\) and \(m'\) were either formed
+by augmenting intersecting affine lines \(l\) and \(m,\) in which case
+they still intersect as projective lines, or they were formed from
+parallel lines \(l\) and \(m,\) contained in some pencil \(\phi.\) Thus
+the lines \(l'\) and \(m'\) intersect in \(X_\phi.\) The line \(l'\)
+contains \(X_\phi\) where \(\phi\) is the pencil containing \(l\); thus
+\(l'\cap l_{\infty}=X_\phi.\)
+
+(P2): Since there are at least two points incident with every line
+\(l,\) there are at least three points on every projective line \(l'.\)
+By \eqref{threepencils}, every affine plane contains at least three
+pencils of parallel lines, \(l_{\infty}\) contains at least three
+points. By Theorem 2 , there are at least two lines in every affine
+plane, there are at least two lines in \(\mathcal{L}'.\) Hence there are
+at least three points on each line; there are at least two lines.
+Therefore (P2) must hold. \(\square\)
+
+\end{proof}
+
+\begin{example}[]\protect\hypertarget{exm-four-oints}{}\label{exm-four-oints}
+
+Recall the affine plane from \textbf{4 Points} using
+\(\mathcal{P}=\{A, B, C, D\}\) and
+\(\mathcal{L}=\{l_1, l_2, l_3, l_4, l_5, l_6\}.\)
+
+\begin{longtable}[]{@{}llllll@{}}
+\toprule()
+\(l_1\) & \(l_2\) & \(l_3\) & \(l_4\) & \(l_5\) & \(l_6\) \\
+\midrule()
+\endhead
+A & A & A & B & B & C \\
+B & C & D & C & D & D \\
+\bottomrule()
+\end{longtable}
+
+We can embed this plane \((\mathcal{P},\mathcal{L})\) into a projective
+plane \((\mathcal{P}',\mathcal{L}').\) First we determine the pencils
+\([l_1]=\{l_1, l_6\},\) \([l_2]=\{l_2, l_5\},\) \([l_3]=\{l_3, l_4\}.\)
+We set \(\mathcal{P}'=\mathcal{P}\cup \{X_1, X_2, X_3\}\) and we form
+the lines for the new plane:
+
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule()
+\(l_1\) & \(l_2\) & \(l_3\) & \(l_4\) & \(l_5\) & \(l_6\) &
+\(l_{\infty}\) \\
+\midrule()
+\endhead
+\(X_1\) & A & A & B & B & \(X_1\) & \(X_1\) \\
+A & C & D & C & D & C & \(X_2\) \\
+B & \(X_2\) & \(X_3\) & \(X_3\) & \(X_2\) & D & \(X_3\) \\
+\bottomrule()
+\end{longtable}
+
+\end{example}
+
+\hypertarget{projective-to-affine}{%
+\subsection{Projective to Affine}\label{projective-to-affine}}
+
+Removing a line and all its points from a projective plane results in an
+affine plane. Specifically, suppose we are given a projective plane
+\((\mathcal{P}',\mathcal{L}').\) Choose any line from \(\mathcal{L},\)
+and call it \(l_{\infty}.\) Prescribe \[
+\mathcal{P}=\{P\mid P\in \mathcal{P}', P\notin l_{\infty}\}
+=\mathcal{P}'\setminus l_{\infty}.
+\] For each line \(l'\neq l_{\infty},\) prescribe \[
+l=\{P\mid P\in l', P\notin l_{\infty}\}=l'\setminus (l'\cap l_{\infty}).
+\] Let \(\mathcal{L}=\{l\mid l'\in \mathcal{L}', l'\neq l_{\infty}\}.\)
+
+\begin{theorem}[]\protect\hypertarget{thm-projective-plane}{}\label{thm-projective-plane}
+
+If \((\mathcal{P}',\mathcal{L}')\) is a projective plane, then
+\((\mathcal{P},\mathcal{L})\) is an affine plane.
+
+\end{theorem}
+
+\begin{proof}
+
+(see \textcite{MR1344447}) Any two distinct points of \(\mathcal{P}'\)
+are incident with a unique line \(l'.\) If the points remains in
+\(\mathcal{P},\) they are still incident with line \(l,\) and only
+incident with line \(l,\) so \ref{A1} holds. Suppose that
+\(l'\cap l_{\infty}=Q\in \mathcal{P}'.\) Let \(m'=l(PQ).\) Then
+\(l'\cap m'=Q.\) Thus \(l\cap m\) is empty, and \(m\) is the unique line
+containing \(P\) and parallel to \(l.\) Hence \ref{A2} holds. Since each
+line in \(\mathcal{L}'\) contains at least three points, each line in
+\(\mathcal{L}\) contains at least two points. Since there are at least
+three lines in \(\mathcal{L}',\) there are at least two lines remaining
+in \(\mathcal{L},\) and so \ref{A3} holds. Thus
+\((\mathcal{P},\mathcal{L})\) is an affine plane. \(\square\)
+
+\end{proof}
+
+
+\printbibliography
+
+
+
+\thispagestyle{empty}
+
+
+\end{document}

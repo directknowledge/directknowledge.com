@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.191">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="David A. Smith">
 <meta name="keywords" content="mathematics, writing, publishing">
@@ -20,18 +20,19 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -46,7 +47,14 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-    .quarto-title-block .quarto-title-banner {
+    .quarto-title-block .quarto-title-banner,
+    .quarto-title-block .quarto-title-banner h1,
+    .quarto-title-block .quarto-title-banner h2,
+    .quarto-title-block .quarto-title-banner h3,
+    .quarto-title-block .quarto-title-banner h4,
+    .quarto-title-block .quarto-title-banner h5,
+    .quarto-title-block .quarto-title-banner h6
+    {
       color: #FFFFFF;
 background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-the-preface-1024.jpeg");;
     }
@@ -91,6 +99,19 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 }
 </style>
 <style>
+    .quarto-title-block .quarto-title-banner {
+      background-repeat: no-repeat!important;
+      background-position: center center;
+      background-size: cover!important;
+      background-attachment: fixed;
+    }
+    .quarto-title-banner .title 
+    {
+        background: none!important;
+    }
+</style>
+  
+<style>
     .theorem {
         background: linear-gradient(90deg,rgba(200, 217, 234, .5), rgba(200, 217, 234, .8));
         padding:6px 6px 2px 6px;
@@ -109,7 +130,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
         background: linear-gradient(90deg,rgba(248, 197, 240, 0.5), rgba(248, 197, 240, .8));
     }
     .proposition {
-        background: linear-gradient(90deg,rgba(248, 210, 219, 0.5), rgba(248, 210, 219, .8));
+        background: linear-gradient(90deg,rgba(199, 209, 156, 0.5), rgba(198, 230, 185, 0.8));
     }
     .definition {
         background: linear-gradient(90deg,rgba(210, 180, 140, .5), rgba(210, 180, 140, .8));
@@ -186,7 +207,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
       },
       "publisher":{
           "@type":"Organization",
-          "name":"Blog",
+          "name":"Writing The Preface",
           "url":"https://directknowledge.com",
           "logo":{
               "@type":"ImageObject",
@@ -228,57 +249,74 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-books" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Books</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-books">    
         <li>
-    <a class="dropdown-item" href="../../basic-set-theory/"><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
+    <a class="dropdown-item" href="../../basic-set-theory/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Basic Set Theory Book">
 </i> 
  <span class="dropdown-text">Basic Set Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../learning-number-theory/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+    <a class="dropdown-item" href="../../learning-number-theory/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Number Theory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../learning-linear-algebra/"><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
+    <a class="dropdown-item" href="../../learning-linear-algebra/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Learning Linear Algebra Book">
 </i> 
  <span class="dropdown-text">Learning Linear Algebra</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../single-variable-calculus/"><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
+    <a class="dropdown-item" href="../../single-variable-calculus/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Single Variable Calculus Book">
 </i> 
  <span class="dropdown-text">Single Variable Calculus</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../multivariable-calculus/"><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
+    <a class="dropdown-item" href="../../multivariable-calculus/" rel="" target=""><i class="bi bi-book" role="img" aria-label="Multivariable Calculus Book">
 </i> 
  <span class="dropdown-text">Multivariable Calculus</span></a>
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-articles" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Articles</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-articles">    
+        <li>
+    <a class="dropdown-item" href="../../blog/" rel="" target=""><i class="bi bi-journal" role="img" aria-label="Personal Blog">
+</i> 
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorials/" rel="" target=""><i class="bi bi-journal" role="img" aria-label="Tutorials">
+</i> 
+ <span class="dropdown-text">Tutorials</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../research/" rel="" target=""><i class="bi bi-journal" role="img" aria-label="Research Articles">
+</i> 
+ <span class="dropdown-text">Research</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../blog/">
- <span class="menu-text">Blog</span></a>
-  </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/"><i class="bi bi-youtube" role="img" aria-label="YouTube">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/" rel="" target=""><i class="bi bi-youtube" role="img" aria-label="YouTube">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/directknowledge"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/directknowledge" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -305,7 +343,7 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
     <div class="quarto-title-meta-heading">Affiliation</div>
     
       <div class="quarto-title-meta-contents">
-      <a href="https://directknowledge.com/about.html">David A. Smith</a> 
+      <p class="author"><a href="https://directknowledge.com/about.html">David A. Smith</a> </p>
     </div>
       <div class="quarto-title-meta-contents">
           <p class="affiliation">
@@ -344,19 +382,39 @@ background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url("writing-
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-is-the-preface-of-a-mathematics-book-different-from-others" id="toc-how-is-the-preface-of-a-mathematics-book-different-from-others" class="nav-link active" data-scroll-target="#how-is-the-preface-of-a-mathematics-book-different-from-others"><span class="toc-section-number">1</span>  How Is the Preface of a Mathematics Book Different From Others</a></li>
+  <li><a href="#who-is-the-preface-written-for" id="toc-who-is-the-preface-written-for" class="nav-link" data-scroll-target="#who-is-the-preface-written-for"><span class="toc-section-number">2</span>  Who Is the Preface Written For</a></li>
+  <li><a href="#what-should-go-into-a-preface" id="toc-what-should-go-into-a-preface" class="nav-link" data-scroll-target="#what-should-go-into-a-preface"><span class="toc-section-number">3</span>  What Should Go Into A Preface</a></li>
+  <li><a href="#what-should-not-go-into-a-preface" id="toc-what-should-not-go-into-a-preface" class="nav-link" data-scroll-target="#what-should-not-go-into-a-preface"><span class="toc-section-number">4</span>  What Should Not Go Into A Preface</a></li>
+  <li><a href="#the-preface-of-a-newer-edition" id="toc-the-preface-of-a-newer-edition" class="nav-link" data-scroll-target="#the-preface-of-a-newer-edition"><span class="toc-section-number">5</span>  The Preface Of A Newer Edition</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/directknowledge/directknowledge.com/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
-<div class="d-print-none">
 <p>
 <img src="writing-the-preface-1024.jpeg" class="img-fluid" alt="Writing The Preface of a Mathematics Book">
 </p>
-</div>
-<section class="slide d-none" data-background-video="../intro.mp4"></section>
-<div>
+<section id="how-is-the-preface-of-a-mathematics-book-different-from-others" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="how-is-the-preface-of-a-mathematics-book-different-from-others"><span class="header-section-number">1</span> How Is the Preface of a Mathematics Book Different From Others</h2>
+</section>
+<section id="who-is-the-preface-written-for" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="who-is-the-preface-written-for"><span class="header-section-number">2</span> Who Is the Preface Written For</h2>
+</section>
+<section id="what-should-go-into-a-preface" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="what-should-go-into-a-preface"><span class="header-section-number">3</span> What Should Go Into A Preface</h2>
+</section>
+<section id="what-should-not-go-into-a-preface" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="what-should-not-go-into-a-preface"><span class="header-section-number">4</span> What Should Not Go Into A Preface</h2>
+</section>
+<section id="the-preface-of-a-newer-edition" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="the-preface-of-a-newer-edition"><span class="header-section-number">5</span> The Preface Of A Newer Edition</h2>
 <p>If you would like any help with understanding this, please contact me at <a href="mailto:david@directknowledge.com">david@directknowledge.com</a>.</p>
-</div>
+</section>
 <div id="quarto-appendix" class="default"><section id="additional-formats" class="level2 unlisted unnumbered appendix"><h2 class="quarto-appendix-heading">Additional Formats</h2><div class="quarto-appendix-contents">
 <ul>
 <li>Print (PDF) <a href="writing-the-preface.pdf" target="_blank">Writing The Preface</a></li>
@@ -426,17 +484,12 @@ Knowledge. January 31, 2023. <a href="https://directknowledge.com/blog/writing-t
 <script>
 MathJax = {
   tex: {
+    tags: 'ams',
     inlineMath: [['$', '$'], ['\\(', '\\)']],
     processRefs: true,
     processEnvironments: true,
-    tags: 'ams',
     packages: {'[+]': ['newcommand']},
     processEnvironments: true,
-      macros: {
-        N: "{\\mathbb{N}}",
-        Z: "{\\mathbb{Z}}",
-        qed: "{\\square}"
-      }
   },
   svg: {
     fontCache: 'global'
@@ -598,6 +651,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -641,7 +780,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -664,15 +803,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script src="../site_libs/quarto-html/zenscroll-min.js"></script>
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 </body></html>
