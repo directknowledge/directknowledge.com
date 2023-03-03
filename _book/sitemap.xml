@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://directknowledge.com/index.html</loc>
+    <lastmod>2023-03-03T02:24:22.965Z</lastmod>
+  </url>
+  <url>
     <loc>https://directknowledge.com/references.html</loc>
-    <lastmod>2023-03-03T02:01:52.068Z</lastmod>
+    <lastmod>2023-03-03T02:24:22.966Z</lastmod>
   </url>
   <url>
     <loc>https://directknowledge.com/hardcover.pdf</loc>
-    <lastmod>2023-03-03T02:01:52.012Z</lastmod>
+    <lastmod>2023-03-03T02:24:22.907Z</lastmod>
   </url>
 </urlset>
