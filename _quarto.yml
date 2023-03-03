@@ -8,8 +8,6 @@ project:
     - assets
   post-render: 
     - html_revise.py
-  render: 
-    - "*.qmd"
 
 book:
   title: "Direct Knowledge"
@@ -18,6 +16,9 @@ book:
   output-file: "hardcover"
   chapters:
     - index.qmd
+    #- functions-and-relations.qmd
+    #- connection-theory.qmd
+    #- concept-theory.qmd
     - references.qmd
   site-url: https://directknowledge.com
   page-navigation: true

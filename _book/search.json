@@ -4,6 +4,41 @@
     "href": "index.html",
     "title": "Direct Knowledge",
     "section": "",
-    "text": "Preface\nA new book!"
+    "text": "Preface"
+  },
+  {
+    "objectID": "index.html#writing-philosophy",
+    "href": "index.html#writing-philosophy",
+    "title": "Direct Knowledge",
+    "section": "Writing Philosophy",
+    "text": "Writing Philosophy\nTo be a successful writer, according to Halmos (1970), you must possess an inherent confidence and have something to say. You also need the capacity to think critically (and creatively) in order to create powerful arguments when conveying ideas; these are key elements necessary for writing mathematics clearly and effectively. For more on this, read Knuth et al. (1989).\nWriting mathematics is an artful combination of two distinct languages, natural and mathematics. Natural language offers the writer numerous expression possibilities, but can be ambiguous. In contrast, writing with mathematical symbols requires clarity yet allows succinctness when conveying complex concepts. Accurate language is a necessity when it comes to mathematics. To comprehend mathematically expressed ideas, readers must take their time and read the content several times, while allowing themselves ample pauses for contemplation along the way. Further, mathematics writing often serves as reference material, which necessitates that its contents should ideally be accessed piece by piece upon demand rather than require deep immersion into text volumes at once.\nWriting mathematics has rules – some narrow, others broad. Small conventions relate to sentence structure (including punctuation) and are easily verifiable. Broader ones involve general style and strategies that depend on the author’s discretion. For a full primer on mathematical writing, see Krantz (2017).\nCrafting an effective book takes more than just following a few simple rules; it requires mastering composition. This skillfulness is where the art of writing comes in, with broad and deep strategies for your entire work. It’s all about connection: linking individual sentences together for clarity and flow while adhering to specific sentence structure regulations like commas or mathematical terminologies. At its most complex level, these interrelated requirements can create intricate webs that are both precise yet engaging – and (if followed) can result in a masterpiece."
+  },
+  {
+    "objectID": "index.html#about-the-author",
+    "href": "index.html#about-the-author",
+    "title": "Direct Knowledge",
+    "section": "About the Author",
+    "text": "About the Author\nI examine the foundations of mathematics and computer science to uncover fascinating new ideas that can unlock solutions for modern challenges. My goal is to inspire people around the world into action that can constructively shape our future. A spark of inspiration from which they can create something bigger than themselves.\nAs a retired mathematics lecturer with over 15 years of experience educating students at the University of Texas at Arlington, I am passionate about learning and advancing everyone’s knowledge in mathematics. I received a Bachelor of Science in Mathematics in December 1996 and a Masters of Science in Mathematics in December 2000, both at the University of Texas at Arlington. My mission is to make it accessible for people everywhere to learn mathematics, whenever and however they want.\nMy professional and academic careers revolve around advancing knowledge for myself and others.\nDavid A. Smith  Fort Worth, Texas"
+  },
+  {
+    "objectID": "index.html#other-resources",
+    "href": "index.html#other-resources",
+    "title": "Direct Knowledge",
+    "section": "Other Resources",
+    "text": "Other Resources\nThis book is paired with my YouTube channel where I discuss the main ideas in this book. These videos can be found here on this site as video embeds, so you can read, write, and watch all in one place."
+  },
+  {
+    "objectID": "index.html#update-history",
+    "href": "index.html#update-history",
+    "title": "Direct Knowledge",
+    "section": "Update History",
+    "text": "Update History\nHere is where I keep a log of the majors changes as I finish writing the book.\n\nFirst draft of preface published on 3/03/2023.\nFirst draft published on 3/04/2023.\n\n\n\n\n\nHalmos, Paul R. 1970. “How to Write Mathematics.” L’enseignement Mathématique 16 (2): 123–52.\n\n\nKnuth, D. E., T. Larrabee, P. M. Roberts, P. M. Roberts, and Mathematical Association of America. 1989. Mathematical Writing. MAA Notes. Mathematical Association of America. https://books.google.bs/books?id=dDOehHMbUMcC.\n\n\nKrantz, S. G. 2017. A Primer of Mathematical Writing. Miscellaneous Books. American Mathematical Society. https://books.google.com/books?id=eaw-DwAAQBAJ."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Halmos, Paul R. 1970. “How to Write Mathematics.”\nL’enseignement Mathématique 16 (2): 123–52.\n\n\nKnuth, D. E., T. Larrabee, P. M. Roberts, P. M. Roberts, and\nMathematical Association of America. 1989. Mathematical\nWriting. MAA Notes. Mathematical Association of America. https://books.google.bs/books?id=dDOehHMbUMcC.\n\n\nKrantz, S. G. 2017. A Primer of Mathematical Writing.\nMiscellaneous Books. American Mathematical Society. https://books.google.com/books?id=eaw-DwAAQBAJ."
   }
 ]
