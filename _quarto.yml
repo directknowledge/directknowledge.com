@@ -6,8 +6,8 @@ project:
   type: book
   resources: 
     - assets
-  post-render: 
-    - html_revise.py
+  #post-render: 
+    #- html_revise.py
 
 book:
   title: "Direct Knowledge"
