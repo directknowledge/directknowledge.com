@@ -6,3 +6,4 @@ _html
 _tex
 .tex
 .qmd
+html_revise.py
