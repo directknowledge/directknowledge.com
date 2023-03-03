@@ -1,10 +1,8 @@
-
 /.quarto/
 .quarto
 .DS_Store
 /.luarc.json
 _html
 _tex
-
-# Book Files
-Basic-Set-Theory-Paperback.pdf
+.tex
+.qmd
