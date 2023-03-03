@@ -7,16 +7,17 @@ project:
   resources: 
     - assets
   post-render: 
-    - _webtools/html_revise.py
+    - html_revise.py
+  render: 
+    - "*.qmd"
 
 book:
   title: "Direct Knowledge"
   author: "David A. Smith"
-  date: "3/2/2023"
+  #date: "3/2/2023"
+  output-file: "hardcover"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
     - references.qmd
   site-url: https://directknowledge.com
   page-navigation: true
@@ -36,12 +37,6 @@ book:
       - href: https://www.youtube.com/channel/UCi_E35l9kKfrxoQJRMbgMsg/
         icon: youtube
         aria-label: YouTube
-      #- href: https://github.com/directknowledge
-        #icon: github
-        #aria-label: GitHub
-      - href: ../about.html
-        icon: person-circle
-        aria-label: About
   description: "Direct Knowledge: On the theory of connections, concepts, and geometry"
   favicon: assets/favicon.ico
   open-graph: true
@@ -80,10 +75,18 @@ format:
       - _html/organization.html
       - _html/website.html
       - _html/mathjax.html
-      - _html/analytics.html
-
-metadata-files:
-  - _meta/_book-hardcover.yml
-  #- _meta/_book-paperback.yml
+      #- _html/analytics.html
+  pdf:
+    keep-tex: true
+    toc: false
+    documentclass: book
+    classoption: [10pt,reqno,twopage,openany]
+    include-in-header: 
+      - _tex/packages.tex
+      - _tex/commands.tex
+    include-before-body:
+      - _tex/titlepage-hardcover.tex
+    include-after-body: 
+      - _tex/makeindex.tex
 
 
