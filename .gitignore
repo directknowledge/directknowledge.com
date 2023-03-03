@@ -4,6 +4,6 @@
 /.luarc.json
 _html
 _tex
-.tex
-.qmd
-html_revise.py
+*.tex
+*.qmd
+*.py
