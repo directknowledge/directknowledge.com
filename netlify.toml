@@ -19,38 +19,3 @@
       form-action 'self';
       frame-src https://www.youtube.com/embed/ 
     '''
-
-[[redirects]]
-  from = "https://directknowledge.com/basicsettheory"
-  to = "https://directknowledge.com/basic-set-theory/"
-  status = 301
-
-[[redirects]]
-  from = "https://directknowledge.com/learningnumbertheory"
-  to = "https://directknowledge.com/learning-number-theory/"
-  status = 301
-
-[[redirects]]
-  from = "https://directknowledge.com/learninglinearalgebra"
-  to = "https://directknowledge.com/learning-linear-algebra/"
-  status = 301
-
-[[redirects]]
-  from = "https://directknowledge.com/exploringcalculus"
-  to = "https://directknowledge.com/exploring-calculus/"
-  status = 301
-
-[[redirects]]
-  from = "https://directknowledge.com/multivariablecalculcus"
-  to = "https://directknowledge.com/multivariable-calculcus/"
-  status = 301
-
-[[redirects]]
-  from = "https://directknowledge.com/polynomial-congruences/"
-  to = "https://directknowledge.com/learning-number-theory/polynomial-congruences.html"
-  status = 301
-
-[[redirects]]
-  from = "https://directknowledge.com/writing"
-  to = "localhost:8000/blog/writing-mathematics/"
-  status = 301

@@ -1,0 +1,79 @@
+
+% Geometry
+\usepackage[includefoot]{geometry}
+\geometry{
+paperwidth=6in,
+paperheight=9in,
+inner=.75in, % inside margin 
+outer=.5in, % outside margin
+bindingoffset=0.35in, % gutter
+top=0.85in, % .75in is okay but kinda to close to cuts, try .85in
+bottom=0.25in, % looks good on kdp
+twoside
+}
+\linespread{1}
+
+% Math
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage{graphicx} 
+
+
+% Header/Footer
+\usepackage{fancyhdr}
+
+\fancypagestyle{toc}{%
+    \fancyhf{}%
+    \fancyhead[RO]{\thepage}%
+    \fancyhead[LO]{\textsl{Contents}}%
+    \fancyhead[LE]{\thepage}%
+    \fancyhead[RE]{\textsl{Contents}}%
+}
+
+\fancypagestyle{preface}{%
+    \fancyhf{}%
+    \fancyhead[RO]{\thepage}%
+    \fancyhead[LO]{\textsl{Preface}}%
+    \fancyhead[LE]{\thepage}%
+    \fancyhead[RE]{\textsl{Preface}}%
+}
+
+\fancypagestyle{fancy}{%
+    \fancyhf{}%
+    \fancyhead{}
+    \fancyfoot{}
+    \rhead[]{\small{\textsf{\thesection. \rightmark \hfill \thepage}}}
+    \lhead[\small{\textsf{\thepage \hfill Chapter \thechapter. \leftmark}}]{}
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+
+
+% Titlepage
+\usepackage{afterpage}
+\usepackage{anyfontsize}
+
+% Links & References
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={black},
+    citecolor={black},
+    urlcolor={black}
+}
+
+\usepackage{tocloft}
+\cftpagenumbersoff{part}
+\renewcommand{\cftchapfont}{\normalsize\scshape}
+
+\usepackage{lipsum}
+
+
+
+
+\usepackage{makeidx}
+\makeindex
+
