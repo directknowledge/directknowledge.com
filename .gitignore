@@ -3,35 +3,8 @@
 .quarto
 .DS_Store
 /.luarc.json
-
-__basicsettheory
-__learninglinearalgebra
-__learningnumbertheory
-__multivariablecalculus
-__singlevariablecalculus
-_webtools
-_meta
 _html
-intro.mp4
-index.qmd
-about.qmd
-404.qmd
+_tex
 
 # Book Files
 Basic-Set-Theory-Paperback.pdf
-Basic-Set-Theory-Hardcover.pdf
-Basic-Set-Theory-Epub.pdf
-Learning-Linear-Algebra-Paperback.pdf
-Learning-Linear-Algebra-Hardcover.pdf
-Learning-Linear-Algebra-Epub.pdf
-Learning-Number-Theory-Paperback.pdf
-Learning-Number-Theory-Hardcover.pdf
-Learning-Number-Theory-Epub.pdf
-Single-Variable-Calculus-Paperback.pdf
-Single-Variable-Calculus-Hardcover.pdf
-Single-Variable-Calculus-Epub.pdf
-Multivariable-Calculus-Paperback.pdf
-Multivariable-Calculus-Hardcover.pdf
-Multivariable-Calculus-Epub.pdf
-
-
